@@ -19,7 +19,7 @@ class WorldBorder(models.Model):
     objects = models.GeoManager()
 
     def __unicode__(self):
-        return self.name + 'sfsdf'
+        return self.name + 'sfsssdf'
 
 # Auto-generated `LayerMapping` dictionary for WorldBorder model
 worldborder_mapping = {
