@@ -118,5 +118,5 @@ LOGGING = {
 }
 
 
-MEDIA_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-media')
-STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static')
+MEDIA_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-media/media')
+STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static/static')
