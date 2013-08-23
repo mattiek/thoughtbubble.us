@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
+BASE_ROOT = os.path.join(SITE_ROOT, '../..')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
@@ -114,3 +116,7 @@ LOGGING = {
             },
         }
 }
+
+
+MEDIA_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-media')
+STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static')
