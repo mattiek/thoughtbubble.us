@@ -41,6 +41,7 @@ INSTALLED_APPS = (
     'neighborhood',
     'cities',
     'csvimport',
+    'gunicorn',
 )
 
 MIDDLEWARE_CLASSES = (
