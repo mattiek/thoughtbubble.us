@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-main.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block content %}
+    <div id="wrapper" class="large-12">
+        <div class="scale"></div>
+        <div id="illustration">
+            <ul id="login-nav">
+                <li>join/login</li>
+            </ul>
+            <ul id="nav">
+                <li>idea</li>
+                <li>explore</li>
+                <li>about</li>
+            </ul>
+
+            <img id="logo" src="{{ STATIC_URL }}images/thoughtbubble.us-logo.png" alt=""/>
+
+        </div>
+        <div class="scale"></div>
+    </div>
+
+{% endblock %}

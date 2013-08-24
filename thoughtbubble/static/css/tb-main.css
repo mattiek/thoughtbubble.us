@@ -1,0 +1,34 @@
+#illustration {
+    background: url(../images/thoughtbubble-illustration.jpg) no-repeat no-repeat;
+    background-size: 100%;
+    height: 695px;
+    width: 911px;
+    margin: 0 auto;
+}
+
+#logo {
+    margin: 35px 0 0 35px;
+}
+
+.scale {
+    background: url(../images/scale-8.png) no-repeat no-repeat;
+    background-size: 100%;
+    height: 7px;
+    width: 911px;
+    margin: 0 auto;
+}
+
+#nav,
+#login-nav {
+    color: #4585c3; /* text color */
+    font-family: "MuseoSans", sans-serif;
+    font-size: 18px;
+    display: inline;
+    list-style-type: none;
+    float:right;
+}
+
+#nav li,
+#login-nav li {
+    display: inline-block;
+}

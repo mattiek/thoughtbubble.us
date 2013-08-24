@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}Thoughtbubble{% endblock %}</title>
+
+    <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />
+
+    <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>
+    {% block head %}
+    {% endblock %}
+</head>
+<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}">
+{% block content %}
+{% endblock %}
+<script src="{{ STATIC_URL }}js/jquery.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.alerts.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.clearing.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.cookie.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.dropdown.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.forms.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.joyride.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.magellan.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.orbit.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.placeholder.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.reveal.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.section.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.tooltips.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.topbar.js"></script>
+<script src="{{ STATIC_URL }}js/foundation/foundation.interchange.js"></script>
+<script>
+    $(document).foundation();
+</script>
+</body>
+</html>
