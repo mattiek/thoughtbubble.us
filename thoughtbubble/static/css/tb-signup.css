@@ -52,3 +52,30 @@ input[type="text"] {
     border-radius: 5px;
     font-family: 'MuseoSans';
 }
+
+#id_captcha {
+    list-style: none;
+}
+
+#id_captcha li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+#id_captcha li:first-child {
+    margin-left: 15px;
+}
+
+#captcha-question {
+    color: #727171; /* text color */
+    font-family: "MuseoSans", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.terms-and-conditions {
+    color: #727171; /* text color */
+    font-family: "MuseoSans", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}

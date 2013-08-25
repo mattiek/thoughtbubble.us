@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load classnames %}
 
 {% block title %}
     Signup
@@ -20,7 +21,20 @@
 
                 </div>
                 {% for field in form %}
-                    {{ field  }}
+                    {% if field.field|classname == 'ChoiceField' %}
+                        <p id="captcha-question">to make sure you are human, please click on the {{ captcha_answer }}</p>
+                        <ul id="{{ field.auto_id }}">
+                        {% for choice in field.field.choices %}
+                            <li>
+                                <img src="{{ STATIC_URL }}images/{{ choice.1 }}" alt=""/>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% elif field.field|classname == 'BooleanField' %}
+                        {{ field  }} <span class="terms-and-conditions">I accept the <a href="">Terms and Conditions</a></span>
+                    {% else %}
+                        {{ field  }}
+                    {% endif %}
                 {% endfor %}
                 <input type="submit" class="submit" value="create profile"/>
             </div>

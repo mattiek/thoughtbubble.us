@@ -4,7 +4,7 @@ from django.forms import ModelForm
 from models import *
 
 class SignupForm(ModelForm):
-    confirm = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'Confirm'}))
+    confirm = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'retype password'}))
     captcha = forms.ChoiceField(choices=[])
     accept_tos = forms.BooleanField(widget=forms.CheckboxInput )
 
@@ -17,10 +17,10 @@ class SignupForm(ModelForm):
                   'password',
         ]
         widgets = {
-            'username': forms.TextInput(attrs={'placeholder': 'Username'}),
-            'location': forms.TextInput(attrs={'placeholder': 'Location'}),
-            'email': forms.EmailInput(attrs={'placeholder': 'Email'}),
-            'password': forms.PasswordInput(attrs={'placeholder': 'Password'}),
+            'username': forms.TextInput(attrs={'placeholder': 'username'}),
+            'location': forms.TextInput(attrs={'placeholder': 'location'}),
+            'email': forms.EmailInput(attrs={'placeholder': 'email'}),
+            'password': forms.PasswordInput(attrs={'placeholder': 'password'}),
             }
 
     def __init__(self, captcha_choices, *args, **kwargs):
