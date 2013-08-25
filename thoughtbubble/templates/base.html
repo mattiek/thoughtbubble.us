@@ -11,30 +11,75 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/nav.css" />
 
     <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>
     {% block head %}
     {% endblock %}
 </head>
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}">
+{% block navstart %}
+    <div id="wrapper" class="large-12">
+        <div class="scale"></div>
+        <div id="illustration">
+            <ul id="login-nav">
+                <li><a href="{% url "signup" %}">join</a></li>
+                <li>|</li>
+                <li>login</li>
+            </ul>
+            <ul id="nav">
+                <li>idea</li>
+                <li>explore</li>
+                <li>about</li>
+            </ul>
+
+            <a href="{% url "home" %}"><img id="logo" src="{{ STATIC_URL }}images/thoughtbubble.us-logo.png" alt=""/></a>
+
+                {% block primarynav %}
+                    <ul id="primary-nav">
+                        <li>explore</li>
+                        <li>add</li>
+                    </ul>
+                {% endblock %}
+        </div>
+        <div id="home-container">
+{% endblock %}
 {% block content %}
 {% endblock %}
+{% block navend %}
+        <div id="footer"></div>
+        <div id="sub-footer">
+            <ul>
+                <li>ideas</li>
+                <li>projects</li>
+                <li>about</li>
+                <li>terms</li>
+                <li>partners</li>
+                <li>rules</li>
+                <li>terms</li>
+                <li>FAQs</li>
+                <li>news</li>
+                <li>privacy</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}
 <script src="{{ STATIC_URL }}js/jquery.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.alerts.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.clearing.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.cookie.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.dropdown.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.forms.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.joyride.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.magellan.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.orbit.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.placeholder.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.reveal.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.section.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.tooltips.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.topbar.js"></script>
-<script src="{{ STATIC_URL }}js/foundation/foundation.interchange.js"></script>
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.alerts.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.clearing.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.cookie.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.dropdown.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.forms.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.joyride.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.magellan.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.orbit.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.placeholder.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.reveal.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.section.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.tooltips.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.topbar.js"></script>#}
+{#<script src="{{ STATIC_URL }}js/foundation/foundation.interchange.js"></script>#}
 <script>
     $(document).foundation();
 </script>

@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'cities',
     'csvimport',
     'gunicorn',
+    'south',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -122,3 +123,5 @@ LOGGING = {
 
 MEDIA_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-media/media')
 STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static/static')
+
+AUTH_USER_MODEL = 'thoughtbubble.ThoughtbubbleUser'

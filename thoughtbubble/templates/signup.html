@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-signup.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+            <div id="form-wrapper">
+                <div id="add-photo">
+
+                </div>
+                {% for field in form %}
+                    {{ field  }}
+                {% endfor %}
+                <input type="submit" class="submit" value="create profile"/>
+            </div>
+{% endblock %}
