@@ -53,7 +53,7 @@
     font-size: 27px;
     list-style-type: none;
     clear: both;
-    margin: 0 auto;
+    margin: 40px auto 0;
     width: 300px;
 }
 
@@ -82,4 +82,27 @@
 
 #sub-footer li {
     display: inline-block;
+}
+
+#primary-nav li.icon-explore {
+    background: url(../images/button-explore.png) no-repeat;
+    background-position: 0 0;
+}
+
+#primary-nav li.icon-explore:hover {
+    background-position: 0 -42px;
+}
+
+#primary-nav li.icon-add {
+    background: url(../images/button-add.png) no-repeat;
+}
+
+#primary-nav li {
+    text-indent:50px;
+    margin-left: 50px;
+    height: 38px;
+}
+
+#primary-nav li:first-child {
+    margin-left: 0px;
 }
