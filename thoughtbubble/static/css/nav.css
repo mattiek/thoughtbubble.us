@@ -108,3 +108,10 @@
 #primary-nav li:first-child {
     margin-left: 0px;
 }
+
+#login-nav li:first-child {
+    background-image: url(../images/icon-person.png);
+    background-repeat: no-repeat;
+    text-indent: 15px;
+    background-position-y: 50%;
+}

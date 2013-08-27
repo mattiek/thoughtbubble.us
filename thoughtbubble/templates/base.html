@@ -23,9 +23,13 @@
         <div class="scale"></div>
         <div id="illustration">
             <ul id="login-nav">
-                <li><a href="{% url "signup" %}">join</a></li>
-                <li>|</li>
-                <li>login</li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url "signup" %}">{{ user }}</a></li>
+                {% else %}
+                    <li><a href="{% url "signup" %}">join</a></li>
+                    <li>|</li>
+                    <li>login</li>
+                {% endif %}
             </ul>
             <ul id="nav">
                 <li>idea</li>
@@ -81,7 +85,9 @@
 {#<script src="{{ STATIC_URL }}js/foundation/foundation.topbar.js"></script>#}
 {#<script src="{{ STATIC_URL }}js/foundation/foundation.interchange.js"></script>#}
 <script>
-    $(document).foundation();
+{#    $(document).foundation();#}
 </script>
 </body>
+{% block footerscripts %}
+{% endblock %}
 </html>

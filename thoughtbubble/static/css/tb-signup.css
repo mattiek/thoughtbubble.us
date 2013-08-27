@@ -53,16 +53,16 @@ input[type="text"] {
     font-family: 'MuseoSans';
 }
 
-#id_captcha {
+#id_captcha_choicefield {
     list-style: none;
 }
 
-#id_captcha li {
+#id_captcha_choicefield li {
     display: inline-block;
     margin-left: 60px;
 }
 
-#id_captcha li:first-child {
+#id_captcha_choicefield li:first-child {
     margin-left: 15px;
 }
 
