@@ -3,6 +3,8 @@ from django.db import models
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
     )
+from neighborhood.models import Neighborhood
+
 
 class ThoughtbubbleUserManager(BaseUserManager):
     def create_user(self,
@@ -60,3 +62,5 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
     def __unicode__(self):
         return self.get_short_name()
+
+

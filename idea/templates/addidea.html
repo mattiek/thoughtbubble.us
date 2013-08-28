@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Add an Idea
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addidea.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="form-wrapper">
+        <form action="{% url 'addidea' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="large-2 columns">I want </div><div class="large-10 small-6 columns">{{ form.name}}</div>
+            </div>
+            <div class="row">
+                <div class="large-7 columns">{{ form.what_kind }}</div><div class="large-5 small-6 columns">{{ form.what_for }}</div>
+            </div>
+            <div class="row">
+                <div class="large-7 columns">{{ form.where }}</div><div class="large-5 small-6 columns"></div>
+            </div>
+            <div class="row">
+                <div class="large-7 columns">{{ form.description }}</div><div class="large-5 small-6 columns">Similar</div>
+            </div>
+
+            <input type="submit" class="submit" value="post"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-addidea.js"></script>
+{% endblock %}

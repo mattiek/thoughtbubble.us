@@ -44,9 +44,11 @@ INSTALLED_APPS = (
     'world',
     'neighborhood',
     'cities',
+    'idea',
     'csvimport',
     'gunicorn',
     'south',
+    'widget_tweaks',
 )
 
 MIDDLEWARE_CLASSES = (
