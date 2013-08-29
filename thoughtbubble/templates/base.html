@@ -41,7 +41,7 @@
 
                 {% block primarynav %}
                     <ul id="primary-nav">
-                        <li class="icon-explore">explore</li>
+                        <a href="{% url "explore" %}"><li class="icon-explore">explore</li></a>
                         <a href="{% url "addidea" %}"><li class="icon-add">add</li></a>
                     </ul>
                 {% endblock %}
