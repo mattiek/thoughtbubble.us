@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'world',
     'neighborhood',
     'cities',
+    'location',
     'idea',
     'csvimport',
     'gunicorn',
@@ -127,3 +128,5 @@ MEDIA_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-media/me
 STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static/static')
 
 AUTH_USER_MODEL = 'thoughtbubble.ThoughtbubbleUser'
+
+MAPQUEST_KEY = 'Fmjtd%7Cluub250ylu%2Ca2%3Do5-9uzl16'

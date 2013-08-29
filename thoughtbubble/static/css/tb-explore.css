@@ -1,0 +1,22 @@
+#illustration {
+    background: #c9eaf7 no-repeat no-repeat;
+    background-size: 100%;
+    height: 150px;
+    width: 930px;
+    margin: 0 auto;
+}
+
+#footer {
+    margin: 10px 0 0 0;
+}
+
+#home-container {
+    margin: 0 auto;
+    width: 930px;
+}
+
+#map {
+    width:100%;
+    height:640px;
+    background-color: #b5e2b3;
+}

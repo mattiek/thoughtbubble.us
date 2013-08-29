@@ -24,6 +24,9 @@
     width: 322px;
     color: #fff;
     font-family: 'MuseoSans';
+
+    float: right;
+    margin-right: 120px;
 }
 
 #form-wrapper {
@@ -49,6 +52,11 @@ input[type="email"],
 input[type="text"] {
     /*width: 324px;*/
     height: 25px;
+    border-radius: 5px;
+    font-family: 'MuseoSans';
+}
+
+textarea {
     border-radius: 5px;
     font-family: 'MuseoSans';
 }

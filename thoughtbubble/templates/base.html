@@ -33,7 +33,7 @@
             </ul>
             <ul id="nav">
                 <li>idea</li>
-                <li>explore</li>
+                <li><a href="{% url "explore" %}">explore</a></li>
                 <li>about</li>
             </ul>
 
@@ -42,7 +42,7 @@
                 {% block primarynav %}
                     <ul id="primary-nav">
                         <li class="icon-explore">explore</li>
-                        <li class="icon-add"><a href="{% url "addidea" %}">add</a></li>
+                        <a href="{% url "addidea" %}"><li class="icon-add">add</li></a>
                     </ul>
                 {% endblock %}
         </div>
@@ -59,12 +59,13 @@
                 <li>about</li>
                 <li>terms</li>
                 <li>partners</li>
-                <li>rules</li>
+                <li class="second">rules</li>
                 <li>terms</li>
                 <li>FAQs</li>
                 <li>news</li>
                 <li>privacy</li>
             </ul>
+        <p>&copy;2013, Thoughtbubble.us. All rights reserved.</p>
         </div>
     </div>
 {% endblock %}

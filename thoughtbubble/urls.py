@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^signup/?$', 'thoughtbubble.views.signup', name='signup'),
     url(r'^idea/', include('idea.urls')),
     url(r'^logout/?$', 'thoughtbubble.views.logout', name='logout'),
+    url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
 

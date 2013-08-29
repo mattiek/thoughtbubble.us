@@ -6,12 +6,17 @@ from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login
 
 def home(request):
-
     return render(request, 'home.html')
+
 
 def logout(request):
     django_logout(request)
     return redirect('home')
+
+
+def explore(request):
+    return render(request, 'explore.html')
+
 
 def signup(request):
     register_captcha = 'register_captchas1234'

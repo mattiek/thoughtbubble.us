@@ -76,6 +76,8 @@
     color: #4585c3; /* text color */
     font-family: "Museo Sans", sans-serif;
     font-size: 12px;
+    width: 320px;
+    margin: 55px auto 0;
 }
 
 #sub-footer ul {
@@ -84,8 +86,17 @@
 
 #sub-footer li {
     display: inline-block;
+    margin-right: 25px;
+    line-height: 25px;
 }
 
+#sub-footer p {
+    text-align: center;
+}
+
+#sub-footer li.second {
+    margin-left: 20px;
+}
 #primary-nav li.icon-explore {
     background: url(../images/button-explore.png) no-repeat;
     background-position: 0 0;

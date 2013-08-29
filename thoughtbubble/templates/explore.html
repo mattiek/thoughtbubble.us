@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Add an Idea
+{% endblock %}
+
+{% block head %}
+    <link href="http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-explore.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="map">
+
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script src="http://api.tiles.mapbox.com/mapbox.js/v1.0.0/mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+{% endblock %}
