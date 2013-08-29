@@ -20,7 +20,6 @@
                 <form action="{% url 'signup' %}" method="POST">
                 {% csrf_token %}
                     <div id="add-photo">
-
                     </div>
                     {% for field in form %}
                         {% if field.field|classname == 'ChoiceField' %}
@@ -46,5 +45,6 @@
 {% endblock %}
 
 {% block footerscripts %}
+<script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-signup.js"></script>
 {% endblock %}
