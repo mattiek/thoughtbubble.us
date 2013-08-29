@@ -18,6 +18,10 @@ def explore(request):
     return render(request, 'explore.html')
 
 
+def privacy(request):
+    return render(request, 'privacy.html')
+
+
 def signup(request):
     register_captcha = 'register_captchas1234'
     if not request.session.get(register_captcha):
