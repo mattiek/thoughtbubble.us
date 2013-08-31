@@ -8,7 +8,7 @@ from widgets import FilePicker
 class SignupForm(forms.Form):
 
 
-    profile_picture = forms.ImageField(widget=FilePicker)
+    profile_picture = forms.ImageField(widget=FilePicker, required=False)
     username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}),)
     location = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'location'}),)
     email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}))

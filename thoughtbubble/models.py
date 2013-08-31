@@ -64,7 +64,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 class ThoughtbubbleUserProfile(models.Model):
     user = models.ForeignKey(ThoughtbubbleUser)
     location = models.CharField(max_length=50, default="", null=True, blank=True)
-    profile_picture = models.ImageField(upload_to="profiles")
+    profile_picture = models.ImageField(upload_to="profiles", null=True, blank=True)
 
     def __unicode__(self):
         return "{0}'s profile" % (self.user.username,)

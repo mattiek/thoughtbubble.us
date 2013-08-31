@@ -25,6 +25,7 @@ def privacy(request):
 def signup(request):
     register_captcha = 'register_captchas1234'
     if not request.session.get(register_captcha):
+        # TODO: Create a lot more options
         x = [ ('guitarist','guitarist.png', ),
         ('hot dog trunk','hot-dog-truck.png', ),
         ('jimmy the dinosaur','jimmy-the-dinosaur.png', ), ]
@@ -42,11 +43,13 @@ def signup(request):
             # create user here
             user = ThoughtbubbleUser.objects.create_user(cleaned_data['username'],
                                                          cleaned_data['email'],
-                                                         cleaned_data['location'],
                                                          cleaned_data['password'])
-            user.save()
             django_logout(request)
             user = authenticate(username=cleaned_data['username'], email= cleaned_data['email'], password=cleaned_data['password'])
+
+            # Create initial profile for the user
+            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'])
+
             login(request, user)
             return redirect('home')
     else:
