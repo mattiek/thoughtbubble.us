@@ -9,8 +9,15 @@ class Neighborhood(models.Model):
     geom = models.MultiPolygonField(srid=4326)
     objects = models.GeoManager()
 
+    center = models.PointField(null=True, blank=True)
+
     def __unicode__(self):
         return "%s - %s, %s" % (self.name,self.city,self.state,)
+
+    def save(self, *args, **kwargs):
+        self.center = self.geom.centroid
+        super(Neighborhood, self).save(*args, **kwargs)
+
 
 # Auto-generated `LayerMapping` dictionary for Neighborhood model
 neighborhood_mapping = {
