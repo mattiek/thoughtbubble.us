@@ -18,6 +18,12 @@ $(document).ready(function() {
                 map.markerLayer.setGeoJSON(data.results);
             }
         );
+
+        map.markerLayer.on('click', function(e) {
+            map.panTo(e.layer.getLatLng());
+        })
     });
+
+
 });
 //})
