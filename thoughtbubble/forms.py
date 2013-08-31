@@ -3,9 +3,12 @@ from django import forms
 from django.forms import ModelForm
 from models import *
 from utils import *
+from widgets import FilePicker
 
 class SignupForm(forms.Form):
 
+
+    profile_picture = forms.ImageField(widget=FilePicker)
     username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}),)
     location = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'location'}),)
     email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}))
@@ -13,6 +16,8 @@ class SignupForm(forms.Form):
     confirm = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'retype password'}))
     captcha = forms.ChoiceField(choices=[])
     accept_tos = forms.BooleanField(widget=forms.CheckboxInput )
+
+
     answer = []
 
 

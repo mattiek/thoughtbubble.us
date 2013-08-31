@@ -10,7 +10,6 @@ class ThoughtbubbleUserManager(BaseUserManager):
     def create_user(self,
                     username,
                     email,
-                    location=None,
                     password=None):
         if not username:
             msg = 'Users must have a username'
@@ -18,8 +17,7 @@ class ThoughtbubbleUserManager(BaseUserManager):
 
         user = self.model(
             username=username,
-            email=ThoughtbubbleUserManager.normalize_email(email),
-            location=location
+            email=ThoughtbubbleUserManager.normalize_email(email)
         )
 
         user.set_password(password)
@@ -44,7 +42,6 @@ class ThoughtbubbleUserManager(BaseUserManager):
 class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
     username = models.CharField(max_length=25, default="", unique=True, db_index=True)
     email = models.CharField(max_length=254, default="", unique=True)
-    location = models.CharField(max_length=50, default="", null=True, blank=True)
     is_active = models.BooleanField(default=True)
     is_admin = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
@@ -62,5 +59,14 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
     def __unicode__(self):
         return self.get_short_name()
+
+
+class ThoughtbubbleUserProfile(models.Model):
+    user = models.ForeignKey(ThoughtbubbleUser)
+    location = models.CharField(max_length=50, default="", null=True, blank=True)
+    profile_picture = models.ImageField(upload_to="profiles")
+
+    def __unicode__(self):
+        return "{0}'s profile" % (self.user.username,)
 
 

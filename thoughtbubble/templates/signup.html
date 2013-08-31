@@ -19,8 +19,6 @@
             <div id="form-wrapper">
                 <form action="{% url 'signup' %}" method="POST">
                 {% csrf_token %}
-                    <div id="add-photo">
-                    </div>
                     {% for field in form %}
                         {% if field.field|classname == 'ChoiceField' %}
                             <p id="captcha-question">to make sure you are human, please click on the {{ captcha_answer.0 }}</p>
