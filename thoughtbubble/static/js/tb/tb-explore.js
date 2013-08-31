@@ -1,7 +1,5 @@
 var map = TB.Map.map();
 
-
-
 $(document).ready(function() {
     map.on('ready', function() {
         $.get(

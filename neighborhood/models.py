@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+import json as JSON
 
 class Neighborhood(models.Model):
     state = models.CharField(max_length=2)
@@ -17,6 +18,9 @@ class Neighborhood(models.Model):
     def save(self, *args, **kwargs):
         self.center = self.geom.centroid
         super(Neighborhood, self).save(*args, **kwargs)
+
+    def getCenter(self):
+        return JSON.loads(self.center.geojson)
 
 
 # Auto-generated `LayerMapping` dictionary for Neighborhood model

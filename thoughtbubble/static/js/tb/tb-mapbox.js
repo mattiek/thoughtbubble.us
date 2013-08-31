@@ -82,6 +82,10 @@ if ("undefined" === typeof TB) {
             return map;
         }
 
+        var panTo = function(coords) {
+            map.panTo(coords);
+        }
+
         return {
             "map"               : get_map,
             "drawn_object"      : drawn_object,
@@ -92,7 +96,8 @@ if ("undefined" === typeof TB) {
             "init"              : init,
             "edit"              : edit,
             "undo"              : undo,
-            "clear"             : clear
+            "clear"             : clear,
+            "panTo"             : panTo
         };
 
     }());
