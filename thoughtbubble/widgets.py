@@ -16,6 +16,9 @@ class FilePicker(Widget):
     def render(self, name, value, attrs=None):
         if value is None: value = ''
         final_attrs = self.build_attrs(attrs, name=name)
+        if not final_attrs.has_key('class'):
+            final_attrs['class'] = ''
+        final_attrs['class'] += ' file-picker-input'
         return format_html('<div{0}>\r\n{1}</div>',
                            flatatt(final_attrs),
                            force_text(value))
