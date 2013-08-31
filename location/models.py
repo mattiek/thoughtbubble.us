@@ -43,4 +43,4 @@ class Location(models.Model):
     objects = models.GeoManager()
 
     def __unicode__(self):
-        return "%s - %s" % (self.name,self.city_and_state,)
+        return "%s - %s" % (self.name,self.city,)

@@ -17,3 +17,16 @@ class CityViewset(viewsets.ModelViewSet):
         state = self.request.GET.get('state','')
         return City.objects.filter(name__icontains=name, state_code__icontains=state)
 
+
+class CityTypeaheadViewset(viewsets.ModelViewSet):
+    serializer_class = CitySerializer
+    queryset = City.objects.none()
+    paginate_by = None
+
+    def get_queryset(self):
+        name = self.request.GET.get('city','')
+        state = self.request.GET.get('state','')
+        max_results = self.request.GET.get('max','10')
+        offset = self.request.GET.get('offset','0')
+        return City.objects.filter(name__icontains=name, state_code__icontains=state)[offset:max_results]
+
