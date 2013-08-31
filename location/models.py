@@ -1,5 +1,6 @@
 from django.contrib.gis.db import models
 from cities.models import City
+import json as JSON
 
 class LocationType(models.Model):
     name = models.CharField(max_length=255)
@@ -34,7 +35,6 @@ class Location(models.Model):
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
 
-
     about = models.TextField(null=True, blank=True)
 
     what_kind = models.ForeignKey(LocationType)
@@ -44,3 +44,40 @@ class Location(models.Model):
 
     def __unicode__(self):
         return "%s - %s" % (self.name,self.city,)
+
+    def save(self, *args, **kwargs):
+        self.latitude = self.geom[0]
+        self.longitude = self.geom[1]
+        super(Location, self).save(*args, **kwargs)
+
+    def getGeoJSON(self):
+        return self.geom.geojson
+
+    def getGeometry(self):
+        return JSON.loads(self.geom.geojson)
+
+    def getFeature(self):
+        return 'Feature'
+
+    def getProperties(self):
+        properties = {}
+        properties['title'] = ''
+        properties['icon'] = {
+            "iconUrl": "http://placekitten.com/50/50",
+            "iconSize": [50, 50], # size of the icon
+            "iconAnchor": [25, 25], # point of the icon which will correspond to marker's location
+             "popupAnchor": [0, -25]  # point from which the popup should open relative to the iconAnchor
+        }
+        return properties
+
+    @property
+    def getMapboxJSON(self):
+        mapbox = {}
+        geometry = JSON.loads(self.getGeoJSON())
+        mapbox['type'] = 'Feature'
+        mapbox['geometry'] = geometry
+        return mapbox
+
+
+
+

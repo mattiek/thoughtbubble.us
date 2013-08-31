@@ -78,8 +78,12 @@ if ("undefined" === typeof TB) {
 
         };
 
+        var get_map = function() {
+            return map;
+        }
+
         return {
-            "map"               : map,
+            "map"               : get_map,
             "drawn_object"      : drawn_object,
             "default_lat"       : default_lat,
             "default_lng"       : default_lng,
@@ -94,7 +98,7 @@ if ("undefined" === typeof TB) {
     }());
 
 
-    $(document).ready(function(){
+//    $(document).ready(function(){
         var has_map = $("#map").length > 0;
         var is_drawable = has_map && $("#map").hasClass("drawable");
 
@@ -105,6 +109,6 @@ if ("undefined" === typeof TB) {
             }
         }
 
-    });
+//    });
 
 })(jQuery);
