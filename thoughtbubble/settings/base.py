@@ -50,6 +50,8 @@ INSTALLED_APPS = (
     'gunicorn',
     'south',
     'widget_tweaks',
+    'rest_framework',
+    'api',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -130,3 +132,7 @@ STATIC_ROOT = os.path.join(os.path.join(BASE_ROOT, '..'), 'thoughtbubble-static/
 AUTH_USER_MODEL = 'thoughtbubble.ThoughtbubbleUser'
 
 MAPQUEST_KEY = 'Fmjtd%7Cluub250ylu%2Ca2%3Do5-9uzl16'
+
+REST_FRAMEWORK = {
+    'PAGINATE_BY': 10
+}

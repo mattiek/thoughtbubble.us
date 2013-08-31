@@ -34,11 +34,12 @@ class Location(models.Model):
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
 
+
     about = models.TextField(null=True, blank=True)
 
     what_kind = models.ForeignKey(LocationType)
 
-    # geom = models.MultiPolygonField(srid=4326)
+    geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 
     def __unicode__(self):

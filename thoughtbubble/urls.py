@@ -13,8 +13,6 @@ urlpatterns = patterns('',
     url(r'^privacy-policy/?$', 'thoughtbubble.views.privacy', name='privacy'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
-
-
-
+    url(r'^api/', include('api.urls')),
 )
 
