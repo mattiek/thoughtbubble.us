@@ -106,3 +106,24 @@ form .row .row.second-row {
     width: 100%;
     height: 265px;
 }
+
+#id_what_kind_choicefield {
+    list-style-type: none;
+}
+
+#id_what_kind_choicefield li {
+    line-height: 1;
+    float: left;
+    background-color: #49c5dd;
+    margin-left: 10px;
+}
+
+#id_what_kind_choicefield li:first-child {
+    margin-left: 0px;
+}
+
+#id_what_kind_choicefield li a {
+    display: block;
+    width: 24px;
+    height: 24px;
+}

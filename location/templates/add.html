@@ -36,13 +36,13 @@
                     {{ form.zip }}
                     <p>What is it?</p>
 
-                    <input type="hidden" value="" id="{{ form.what_kind.field.auto_id }}" name="{{ form.what_kind.field.name }}" />
+                    <input type="hidden" value="" id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.field.name }}" />
 
-                    <ul id="{{ field.auto_id }}_choicefield">
+                    <ul id="{{ form.what_kind.auto_id }}_choicefield">
                         {% for choice in form.what_kind.field.choices %}
                             <li>
                                 {% with maki=makis|getdict:choice.1 %}
-                                    <a href="#" class="maki-icon {{ maki }}">{{ choice.1 }}</a>
+                                    <a href="#" class="maki-icon {{ maki }}"></a>
                                 {% endwith %}
                             </li>
                         {% endfor %}
