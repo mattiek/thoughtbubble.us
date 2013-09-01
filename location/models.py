@@ -2,8 +2,20 @@ from django.contrib.gis.db import models
 from cities.models import City
 import json as JSON
 
+MAKI_CHOICES = (
+    ('garden', 'Garden'),
+    ('rocket', 'Rocket'),
+    ('art-gallery', 'Art Gallery'),
+    ('shop', 'shop'),
+    ('fast-food', 'Fast Food'),
+    ('bar', 'Bar'),
+    ('grocery', 'Grocery'),
+    ('cinema', 'Cinema'),
+    ('baseball', 'Baseball'),
+)
 class LocationType(models.Model):
     name = models.CharField(max_length=255)
+    # maki_class = models.CharField(max_length=40, choices=MAKI_CHOICES)
 
     def __unicode__(self):
         return self.name

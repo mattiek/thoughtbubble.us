@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Add a Feature
+{% endblock %}
+
+{% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addfeature.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="form-wrapper">
+        <form action="{% url 'addidea' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="large-6 small-6 columns">
+                    {{ form.name}}
+                    <p>address or latitude/longitude</p>
+                    {{ form.address }}
+                    {{ form.city_and_state }}
+                    {{ form.zip }}
+                    <p>What is it?</p>
+                    {{ form.what_kind }}
+                </div>
+                <div class="large-6 small-6 columns">
+                    <div id="map"></div>
+                    {{ form.latitude }}
+                    {{ form.longitude }}
+                </div>
+            </div>
+
+            <input type="submit" class="submit" value="post"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
+{% endblock %}
