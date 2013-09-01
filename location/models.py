@@ -15,7 +15,7 @@ MAKI_CHOICES = (
 )
 class LocationType(models.Model):
     name = models.CharField(max_length=255)
-    # maki_class = models.CharField(max_length=40, choices=MAKI_CHOICES)
+    maki_class = models.CharField(max_length=40, choices=MAKI_CHOICES, default="rocket")
 
     def __unicode__(self):
         return self.name
