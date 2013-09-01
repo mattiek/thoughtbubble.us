@@ -52,6 +52,7 @@ INSTALLED_APPS = (
     'widget_tweaks',
     'rest_framework',
     'api',
+    'floppyforms',
 )
 
 MIDDLEWARE_CLASSES = (

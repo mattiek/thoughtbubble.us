@@ -1,0 +1,13 @@
+<ul>
+   {% for group_name, choices in optgroups %}
+       <input type="hidden" id="{{ attrs.id }}" name="{{ name }}" value="" />
+    {% for choice in choices %}
+        <li>
+            <label for="{{ attrs.id }}_{{ forloop.counter }}">
+                <button id="{{ attrs.id }}_{{ forloop.counter }}" class="maki {{ choice.1.maki_class }}" value="{{ choice.0 }}" name="{{ name }}"{% if required %} required{% endif %}{% if choice.0 in value %} checked{% endif %} />
+                {{ choice.1 }}
+            </label>
+        </li>
+    {% endfor %}
+   {% endfor %}
+</ul>

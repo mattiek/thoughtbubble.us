@@ -1,9 +1,11 @@
-from django.forms.widgets import Widget, TextInput
+from django.forms.widgets import Widget, TextInput, RadioChoiceInput, ChoiceInput
 from django.utils import datetime_safe, formats, six
 from django.utils.html import conditional_escape, format_html
 from django.utils.encoding import force_text, python_2_unicode_compatible
 from django.forms.util import flatatt
 from django.contrib.admin.widgets import *
+
+from floppyforms.widgets import RadioSelect
 
 
 class FilePicker(Widget):
@@ -79,3 +81,7 @@ class TypeAheadAdminWidget(AdminTextInputWidget):
         final_attrs['id'] += '_tt'
         final_attrs['name'] += '_tt'
         return format_html('<input{0} /><input{1} />', flatatt(real_final_atts), flatatt(final_attrs))
+
+
+class SometimeWidget(ChoiceInput):
+    template_name = 'widgets/sometime.html'

@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from models import Location
+from models import Location, LocationType
 from serializers import LocationSerializer
 from rest_framework import viewsets
 from django.shortcuts import render
@@ -20,4 +20,11 @@ class LocationViewset(viewsets.ModelViewSet):
 
 def addlocation(request):
     form = AddLocationForm()
-    return render(request, 'add.html', {'form': form})
+    makis = {}
+    for i in LocationType.objects.all():
+        makis[i.name] = i.maki_class
+
+    # makis = MAKI_CHOICES
+
+    return render(request, 'add.html', {'form': form,
+                                        'makis': makis})

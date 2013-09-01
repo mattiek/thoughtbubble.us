@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load classnames %}
+{% load getdict %}
 {% load widget_tweaks %}
 
 {% block title %}
@@ -13,6 +14,7 @@
   <![endif]-->
     <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addfeature.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
 {% endblock %}
 
 {% block bodyid %}home{% endblock %}
@@ -33,7 +35,18 @@
                     {{ form.city_and_state }}
                     {{ form.zip }}
                     <p>What is it?</p>
-                    {{ form.what_kind }}
+
+                    <input type="hidden" value="" id="{{ form.what_kind.field.auto_id }}" name="{{ form.what_kind.field.name }}" />
+
+                    <ul id="{{ field.auto_id }}_choicefield">
+                        {% for choice in form.what_kind.field.choices %}
+                            <li>
+                                {% with maki=makis|getdict:choice.1 %}
+                                    <a href="#" class="maki-icon {{ maki }}">{{ choice.1 }}</a>
+                                {% endwith %}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 <div class="large-6 small-6 columns">
                     <div id="map"></div>
