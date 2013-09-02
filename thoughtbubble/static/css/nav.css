@@ -126,3 +126,8 @@
     text-indent: 15px;
     background-position-y: 50%;
 }
+
+#home-container {
+    width: 930px;
+    margin: 0 auto;
+}
