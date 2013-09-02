@@ -69,6 +69,6 @@ class ThoughtbubbleUserProfile(models.Model):
     profile_picture = models.ImageField(upload_to="profiles", null=True, blank=True)
 
     def __unicode__(self):
-        return "{0}'s profile" % (self.user.username,)
+        return "%s's profile" % (self.user.username,)
 
 
