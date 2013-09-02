@@ -21,9 +21,10 @@ if ("undefined" === typeof TB) {
 
 
         var init = function(){
-            map = L.mapbox.map('map', default_map)
+            map = L.mapbox.map('map', default_map, {zoomControl: false })
                 .setView([default_lat, default_lng], default_zoom);
 
+            new L.Control.Zoom({ position: 'topright' }).addTo(map);
             map.on('ready', function() {
 
             });
