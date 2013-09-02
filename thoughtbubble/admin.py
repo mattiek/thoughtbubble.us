@@ -85,3 +85,4 @@ class ThoughtbubbleUserAdmin(UserAdmin):
 
 
 admin.site.register(ThoughtbubbleUser, ThoughtbubbleUserAdmin)
+admin.site.register(ThoughtbubbleUserProfile)
