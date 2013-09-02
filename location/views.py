@@ -26,5 +26,6 @@ def addlocation(request):
 
     # makis = MAKI_CHOICES
 
+
     return render(request, 'add.html', {'form': form,
                                         'makis': makis})

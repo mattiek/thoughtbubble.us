@@ -11,7 +11,7 @@ class LocationAdminForm(forms.ModelForm):
 
 
 class AddLocationForm(forms.ModelForm):
-    news = forms.Textarea()
+    news = forms.CharField(widget=forms.Textarea)
     news_picture1 = forms.ImageField()
     picture1 = forms.TextInput()
 
@@ -24,6 +24,7 @@ class AddLocationForm(forms.ModelForm):
             'city_and_state': forms.TextInput(attrs={'placeholder':'columbus, oh'}),
             'zip': forms.TextInput(attrs={'placeholder':'43201'}),
             # 'what_kind': SometimeWidget(choice=((1,'sfd'),(2,'dsfds'))),
+            # 'what_kind': forms.Select(empty_label=None),
             'longitude': forms.TextInput(attrs={'placeholder':'39.958860'}),
             'latitude': forms.TextInput(attrs={'placeholder':'-82.998657'}),
         }

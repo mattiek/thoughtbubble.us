@@ -30,11 +30,24 @@ $(document).ready(function() {
         }
         else
             featureGroup.addLayer(e.layer);
+//            console.log(e.layer._latlng);
+            var latlng = e.layer._latlng;
+            $('#id_longitude').val(latlng.lng);
+            $('#id_latitude').val(latlng.lat);
     });
 
     map.on('draw:deleted', function(e) {
         // done after save
     });
 
+
+    // What kinds
+    $('#id_what_kind_choicefield a').on('click', function(e) {
+        e.preventDefault();
+        $('#id_what_kind_choicefield a').each(function() {
+           $(this).removeClass('selected');
+        });
+        $(e.currentTarget).addClass('selected');
+    });
+
 });
-//})
