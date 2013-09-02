@@ -22,6 +22,9 @@ def privacy(request):
     return render(request, 'privacy.html')
 
 
+def dashboard(request):
+    return render(request, 'accounts/dashboard.html')
+
 def signup(request):
     register_captcha = 'register_captchas1234'
     if not request.session.get(register_captcha):

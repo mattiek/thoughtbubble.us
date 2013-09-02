@@ -7,6 +7,7 @@ urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'thoughtbubble.views.home', name='home'),
     url(r'^signup/?$', 'thoughtbubble.views.signup', name='signup'),
+    url(r'^dashboard/?$', 'thoughtbubble.views.dashboard', name='dashboard'),
     url(r'^ideas/', include('idea.urls')),
     url(r'^locations/', include('location.urls')),
     url(r'^logout/?$', 'thoughtbubble.views.logout', name='logout'),

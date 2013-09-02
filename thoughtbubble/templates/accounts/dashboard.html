@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load getdict %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-dashboard.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="form-wrapper">
+        <form action="{% url 'addidea' %}" method="POST">
+            {% csrf_token %}
+            <div class="row">
+                <div class="large-offset-1 large-2 small-2 columns">
+                    <div id="picture">
+
+                    </div>
+                </div>
+                <div class="large-9 small-10 columns">
+                    <div class="row">
+                        <div class="large-12 small-12 columns user-info">
+                            {{user.first}} {{user.last}} | columbus oh
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 small-12 columns user-stats">
+                            <span class="orange">0</span> ideas <span class="orange">0</span> ideas supported <span
+                                class="orange">0</span> communities joined
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 small-12 columns">
+                    {{ form.about }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 small-12 columns">
+                    {{ form.news }}
+                </div>
+            </div>
+
+            <input type="submit" class="submit" value="post"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-dashboard.js"></script>
+{% endblock %}

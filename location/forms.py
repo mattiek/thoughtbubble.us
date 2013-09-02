@@ -11,6 +11,10 @@ class LocationAdminForm(forms.ModelForm):
 
 
 class AddLocationForm(forms.ModelForm):
+    news = forms.Textarea()
+    news_picture1 = forms.ImageField()
+    picture1 = forms.TextInput()
+
     class Meta:
         model = Location
         exclude = ['images','links',]
