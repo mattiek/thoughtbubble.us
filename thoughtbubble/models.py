@@ -63,8 +63,8 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
 class ThoughtbubbleUserProfile(models.Model):
     user = models.ForeignKey(ThoughtbubbleUser)
-    # first_name = models.CharField(max_length=50, default="", null=True, blank=True)
-    # last_name = models.CharField(max_length=50, default="", null=True, blank=True)
+    first_name = models.CharField(max_length=50, default="", null=True, blank=True)
+    last_name = models.CharField(max_length=50, default="", null=True, blank=True)
     location = models.CharField(max_length=50, default="", null=True, blank=True)
     profile_picture = models.ImageField(upload_to="profiles", null=True, blank=True)
 
