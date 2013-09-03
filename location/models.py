@@ -55,11 +55,12 @@ class Location(models.Model):
     objects = models.GeoManager()
 
     def __unicode__(self):
-        return "%s - %s" % (self.name,self.city,)
+        return "%s - %s" % (self.name,self.city_and_state,)
 
     def save(self, *args, **kwargs):
-        self.latitude = self.geom[0]
-        self.longitude = self.geom[1]
+        if self.geom:
+            self.latitude = self.geom[0]
+            self.longitude = self.geom[1]
         super(Location, self).save(*args, **kwargs)
 
     def getGeoJSON(self):
@@ -74,12 +75,16 @@ class Location(models.Model):
     def getProperties(self):
         properties = {}
         properties['title'] = ''
-        properties['icon'] = {
-            "iconUrl": "http://placekitten.com/50/50",
-            "iconSize": [50, 50], # size of the icon
-            "iconAnchor": [25, 25], # point of the icon which will correspond to marker's location
-             "popupAnchor": [0, -25]  # point from which the popup should open relative to the iconAnchor
-        }
+        properties['marker-size'] = 'medium'
+        properties['marker-color'] = '#f0a'
+        properties['marker-icon'] = self.what_kind.maki_class if self.what_kind else 'Z'
+
+        # properties['icon'] = {
+        #     "iconUrl": "http://placekitten.com/50/50",
+        #     "iconSize": [50, 50], # size of the icon
+        #     "iconAnchor": [25, 25], # point of the icon which will correspond to marker's location
+        #      "popupAnchor": [0, -25]  # point from which the popup should open relative to the iconAnchor
+        # }
         return properties
 
     @property

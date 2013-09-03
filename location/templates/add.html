@@ -25,8 +25,13 @@
 {% block content %}
 
     <div id="form-wrapper">
-        <form action="{% url 'addidea' %}" method="POST">
+        <form action="{% url 'addlocation' %}" method="POST">
             {% csrf_token %}
+            <div class="row">
+                <div class="large-12 small-12 columns">
+                    {{ form.errors }}
+                </div>
+            </div>
             <div class="row">
                 <div class="large-6 small-6 columns">
                     {{ form.name}}
@@ -36,18 +41,20 @@
                     {{ form.zip }}
                     <p class="copy">What is it?</p>
 
-                    <input type="hidden" value="" id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.field.name }}" />
+                    <input type="hidden" value="{{ form.what_kind.value }}"
+                           id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.name }}" />
 
                     <ul id="{{ form.what_kind.auto_id }}_choicefield">
                         {% for choice in form.what_kind.field.choices %}
-{#                            Get rid of the blank choice #}
-                            {% if choice.0 %}
-                            <li {% if forloop.counter0 == 5 %}class="second"{% endif %}>
+                            <li {% if forloop.counter0 == 4 %}class="second"{% endif %}>
                                 {% with maki=makis|getdict:choice.1 %}
-                                    <a href="#" class="maki-icon {{ maki }}"></a>
+                                    <a href="#"
+                                       data-value="{{ choice.0 }}"
+                                       class="{% if form.what_kind.value == choice.0|stringformat:'s' %}selected{% endif %} maki-icon {{ maki }}">
+
+                                    </a>
                                 {% endwith %}
                             </li>
-                            {% endif %}
                         {% endfor %}
                     </ul>
                 </div>
@@ -156,4 +163,29 @@
     <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
+
+    {% if form.latitude.value and form.longitude.value %}
+
+        <script type="text/javascript">
+            TB.Map.Draw.featureGroup.addLayer(L.mapbox.markerLayer({
+                // this feature is in the GeoJSON format: see geojson.org
+                // for the full specification
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    // coordinates here are in longitude, latitude order because
+                    // x, y is the standard for GeoJSON and many formats
+                    coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
+                },
+                properties: {
+                    title: 'A Single Marker',
+                    description: 'Just one of me',
+                    // one can customize markers by adding simplestyle properties
+                    // http://mapbox.com/developers/simplestyle/
+{#                    'marker-size': 'large',#}
+{#                    'marker-color': '#f0a'#}
+                }
+            }));
+        </script>
+    {% endif %}
 {% endblock %}

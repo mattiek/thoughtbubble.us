@@ -5,6 +5,7 @@ from serializers import LocationSerializer
 from rest_framework import viewsets
 from django.shortcuts import render
 from forms import AddLocationForm
+from django.contrib.gis.geos import GEOSGeometry
 
 from rest_framework import generics
 
@@ -19,7 +20,23 @@ class LocationViewset(viewsets.ModelViewSet):
 
 
 def addlocation(request):
-    form = AddLocationForm()
+    if request.POST:
+        form = AddLocationForm(request.POST)
+        if form.is_valid():
+            s = Location(
+                name=form.cleaned_data['name'],
+                address=form.cleaned_data['address'],
+                city_and_state=form.cleaned_data['city_and_state'],
+                zip=form.cleaned_data['zip'],
+                what_kind=form.cleaned_data['what_kind'],
+                latitude=form.cleaned_data['latitude'],
+                longitude=form.cleaned_data['longitude'],
+            )
+
+            s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
+            s.save()
+    else:
+        form = AddLocationForm()
     makis = {}
     for i in LocationType.objects.all():
         makis[i.name] = i.maki_class

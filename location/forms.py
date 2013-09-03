@@ -2,7 +2,7 @@ from django.contrib.gis import forms
 from thoughtbubble.widgets import TypeAheadAdminWidget, SometimeWidget
 from django.contrib.gis import admin
 from floppyforms.widgets import RadioSelect
-from models import Location
+from models import Location, LocationType
 
 class LocationAdminForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
@@ -10,10 +10,46 @@ class LocationAdminForm(forms.ModelForm):
         self.fields['city'].widget = TypeAheadAdminWidget()
 
 
-class AddLocationForm(forms.ModelForm):
-    news = forms.CharField(widget=forms.Textarea)
-    news_picture1 = forms.ImageField()
-    picture1 = forms.TextInput()
+
+class AddLocationForm(forms.Form):
+
+    name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'title'}),)
+    address = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    city_and_state = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    zip = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    # city = models.ForeignKey(City, null=True, blank=True)
+    latitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    longitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+
+    about = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
+
+    what_kind = forms.ModelChoiceField(queryset=LocationType.objects.all(), empty_label=None)
+
+    # geom = models.PointField(srid=4326, null=True, blank=True)
+    # objects = models.GeoManager()
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(AddLocationForm, self).clean()
+
+        name = cleaned_data.get("name")
+        address = cleaned_data.get("address")
+        city_and_state = cleaned_data.get("city_and_state")
+        zip = cleaned_data.get("zip")
+        latitude = cleaned_data.get("latitude")
+        longitude = cleaned_data.get("longitude")
+        what_kind = cleaned_data.get("what_kind")
+
+        return cleaned_data
+
+    def __init__(self, *args, **kwargs):
+        super(AddLocationForm, self).__init__(*args, **kwargs)
+
+
+
+class AddLocationSForm(forms.ModelForm):
+    # news = forms.CharField(widget=forms.Textarea)
+    # news_picture1 = forms.ImageField()
+    # picture1 = forms.TextInput()
 
     class Meta:
         model = Location
@@ -28,3 +64,7 @@ class AddLocationForm(forms.ModelForm):
             'longitude': forms.TextInput(attrs={'placeholder':'39.958860'}),
             'latitude': forms.TextInput(attrs={'placeholder':'-82.998657'}),
         }
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(AddLocationForm, self).clean()
+        a = 1
