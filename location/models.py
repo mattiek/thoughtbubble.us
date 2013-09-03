@@ -74,7 +74,7 @@ class Location(models.Model):
 
     def getProperties(self):
         properties = {}
-        properties['title'] = ''
+        properties['title'] = self.name
         properties['marker-size'] = 'medium'
         properties['marker-color'] = '#f0a'
         properties['marker-icon'] = self.what_kind.maki_class if self.what_kind else 'Z'
