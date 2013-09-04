@@ -19,14 +19,24 @@ var doit = function() {
     );
 }
 
-$(document).ready(function() {
-    map.on('ready', function() {
-        setTimeout(doit, 100);
-        map.markerLayer.on('click', function(e) {
+//$(document).ready(function() {
+//    map.on('ready', function() {
+//        setTimeout(doit, 100);
+//        map.markerLayer.on('click', function(e) {
+//            map.panTo(e.layer.getLatLng());
+//        });
+//    });
+//
+//
+//});
+
+$.ajax({
+    url:  '/api/v1/locations/.json',
+    dataType: 'json',
+    success: function load(d) {
+        var markers = L.mapbox.markerLayer(d.results).addTo(map);
+        markers.on('click', function(e) {
             map.panTo(e.layer.getLatLng());
         });
-    });
-
-
+    }
 });
-//})
