@@ -1,11 +1,11 @@
 from django.db import models
 from neighborhood.models import Neighborhood
 
-FOR_CHOICES = (
+FOR_CHOICES = [
     ('live', 'live'),
     ('work', 'work'),
     ('play', 'play'),
-)
+]
 
 
 class IdeaType(models.Model):

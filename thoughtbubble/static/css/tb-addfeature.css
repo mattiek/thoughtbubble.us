@@ -146,10 +146,6 @@ form .row .row.second-row {
     font-size: 15px;
 }
 
-form .row .row .columns.no-padding {
-    padding: 0;
-}
-
 #latitude {
     margin-top: 15px;
 }

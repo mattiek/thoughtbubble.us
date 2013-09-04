@@ -131,3 +131,8 @@
     width: 930px;
     margin: 0 auto;
 }
+
+form .row .columns.no-padding,
+form .row .row .columns.no-padding {
+    padding: 0;
+}

@@ -7,6 +7,9 @@
 {% endblock %}
 
 {% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addidea.css" />
 {% endblock %}
 
@@ -21,15 +24,15 @@
         <form action="{% url 'addidea' %}" method="POST">
             {% csrf_token %}
             <div class="row">
-                <div class="large-2 columns">I want </div>
-                <div class="large-10 small-6 columns">{{ form.name}}</div>
+                <div class="large-2 columns"><p class="copy">I want</p></div>
+                <div class="large-10 small-6 columns no-padding">{{ form.name}}</div>
             </div>
             <div class="row">
-                <div class="large-7 columns">{{ form.what_kind }}</div>
-                <div class="large-5 small-6 columns">{{ form.what_for }}</div>
+                <div class="large-7 columns">{{ form.what_kind|attr:"data-placeholder:It's a ..." }}</div>
+                <div class="large-5 small-6 columns">{{ form.what_for|attr:"data-placeholder:For ..." }}</div>
             </div>
             <div class="row">
-                <div class="large-7 columns">{{ form.where }}</div>
+                <div class="large-7 columns">{{ form.where|attr:"data-placeholder:It should be in ..." }}</div>
                 <div class="large-5 small-6 columns"></div>
             </div>
             <div class="row">

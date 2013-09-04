@@ -9,27 +9,6 @@ if(has_map){
 }
 var map = TB.Map.map();
 
-var doit = function() {
-    $.get(
-        '/api/v1/locations/.json',
-        function(data) {
-            //Add features to the map
-            map.markerLayer.setGeoJSON(data.results);
-        }
-    );
-}
-
-//$(document).ready(function() {
-//    map.on('ready', function() {
-//        setTimeout(doit, 100);
-//        map.markerLayer.on('click', function(e) {
-//            map.panTo(e.layer.getLatLng());
-//        });
-//    });
-//
-//
-//});
-
 $.ajax({
     url:  '/api/v1/locations/.json',
     dataType: 'json',
