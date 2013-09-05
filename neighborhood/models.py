@@ -22,6 +22,43 @@ class Neighborhood(models.Model):
     def getCenter(self):
         return JSON.loads(self.center.geojson)
 
+    def getGeometry(self):
+        json = self.geom.geojson
+
+        extent = self.geom.extent
+        geojson = {}
+        geojson['type'] = 'MultiPolygon'
+        geojson['coordinates'] = [[[
+            [extent[0], extent[1]],
+            [extent[2], extent[1]],
+            [extent[2], extent[3]],
+            [extent[0], extent[3]],
+            [extent[0], extent[1]],
+            ]]]
+        # return geojson
+        return JSON.loads(json)
+
+    def getType(self):
+        return 'Feature'
+
+    def getProperties(self):
+        return []
+
+    def getExtent(self):
+        extent = self.geom.extent
+        geojson = {}
+        geojson['type'] = 'Polygon'
+        geojson['coordinates'] = [
+            [extent[0], extent[1]],
+            [extent[2], extent[1]],
+            [extent[2], extent[3]],
+            [extent[0], extent[3]],
+            [extent[0], extent[1]],
+            ]
+        return extent
+
+
+
 
 # Auto-generated `LayerMapping` dictionary for Neighborhood model
 neighborhood_mapping = {

@@ -8,6 +8,7 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
     geometry = serializers.CharField(source='getGeometry', read_only=True)
     properties = serializers.CharField(source='getProperties', read_only=True)
 
+    results_field = 'features'
     class Meta:
         model = Location
         fields = ('id', 'name', 'geometry', 'type', 'properties')

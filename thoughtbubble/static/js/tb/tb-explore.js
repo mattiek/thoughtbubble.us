@@ -19,3 +19,11 @@ $.ajax({
         });
     }
 });
+
+$.ajax({
+    url: '/api/v1/neighborhoods/.json?city=columbus',
+    dataType: 'json',
+    success: function load(d) {
+        var states = L.geoJson(d).addTo(map);
+    }
+});
