@@ -12,7 +12,7 @@ var options = {
 };
 
 $('#id_profile_picture').imagePreviewInput({ resize: 30 * 1024, decode: true, quality: 0.5 }).on('load', function(e, data) {
-    var $preview = $('#id_profile_picture').css('display', 'inline-block'),
+    var $preview = $(e.target).css('display', 'inline-block'),
         $img = $preview.find('img');
     if (!$img.length) {
         $img = $('<img/>').appendTo($preview);

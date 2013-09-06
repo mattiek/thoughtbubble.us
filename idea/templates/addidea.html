@@ -21,7 +21,7 @@
 {% block content %}
 
     <div id="form-wrapper">
-        <form action="{% url 'addidea' %}" method="POST">
+        <form enctype="multipart/form-data" action="{% url 'addidea' %}" method="POST">
             {% csrf_token %}
             <div class="row">
                 <div class="large-2 columns"><p class="copy">I want</p></div>
@@ -36,7 +36,11 @@
                 <div class="large-5 small-6 columns"></div>
             </div>
             <div class="row">
-                <div class="large-7 columns">{{ form.description }}</div>
+                <div class="large-7 columns"><p class="copy additional">I imagine something like this:</p></div>
+                <div class="large-5 columns"><p class="copy additional">Similar to this:</p></div>
+            </div>
+            <div class="row">
+                <div class="large-7 columns">{{ form.description|add_class:"auto-hint"|attr:"title:type something here about your idea..." }}</div>
                 <div class="large-5 small-6 columns">
                     <div class="row">
                         <div class="large-5 columns">
@@ -68,5 +72,6 @@
 {% endblock %}
 
 {% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-addidea.js"></script>
 {% endblock %}

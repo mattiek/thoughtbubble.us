@@ -59,6 +59,8 @@ input[type="text"] {
 textarea {
     border-radius: 5px;
     font-family: 'MuseoSans';
+    min-height: 200px;
+    max-width: 100%;
 }
 
 #id_captcha_choicefield {
@@ -93,9 +95,9 @@ textarea {
     height: 79px;
     border-radius: 10px;
     background-color: #dadbdc;
-    background-image: url(../images/add-photo.png);
+    background-image: url(../images/polaroid-camera-composite.png);
     background-repeat: no-repeat;
-    background-position: 57px 57px
+    background-position: 23px 24px
 }
 
 form .row .row.second-row {
@@ -106,7 +108,9 @@ form .row .row.second-row {
     color: #6d6d6d; /* text color */
     font-family: "Museo Sans", sans-serif;
     font-size: 15px;
-    text-align: right;
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 0px;
 }
 
 #id_what_for {
@@ -133,4 +137,8 @@ form .row .row.second-row {
 
 .chosen-container {
     margin-bottom: 15px;
+}
+
+.auto-hint {
+    color: #aaa;
 }
