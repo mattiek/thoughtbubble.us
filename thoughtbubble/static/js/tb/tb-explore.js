@@ -1,6 +1,8 @@
 var has_map = $("#map").length > 0;
 var is_drawable = has_map && $("#map").hasClass("drawable");
 
+var neighborhoods = neighborhoods || {};
+
 if(has_map){
     TB.Map.init();
     if(is_drawable){
@@ -11,10 +13,10 @@ var map = TB.Map.map();
 
 var previous_layer = null;
 
-function highlightFeature(e) {
-    var layer = e.layer;
-
+function highlightFeature(layer) {
     layer.setStyle({
+        stroke: true,
+        fill: true,
         weight: 5,
         color: '#E27B05',
         dashArray: '',
@@ -27,10 +29,12 @@ function highlightFeature(e) {
 
     if (previous_layer) {
         previous_layer.setStyle({
-            weight: 5,
+            stroke: false,
+            fill: false,
+            weight: 1,
             color: '#03f',
             dashArray: '',
-            fillOpacity: 0.2
+            fillOpacity: 0
         });
     }
     previous_layer = layer;
@@ -51,10 +55,27 @@ $.ajax({
     url: '/api/v1/neighborhoods/.json?city=columbus',
     dataType: 'json',
     success: function load(d) {
-        var states = L.geoJson(d).addTo(map);
-        states.on('click', function(e) {
-            highlightFeature(e);
-            map.fitBounds(e.layer._latlngs);
-        });
+        var hoods = L.geoJson(d,{
+            style: function (feature) {
+                return {stroke: false, fill: false};
+            },
+            onEachFeature: function (feature, layer) {
+               neighborhoods[feature.id] = layer;
+        }
+        }).addTo(map);
+//        hoods.on('click', function(e) {
+////            console.log(e.layer.id);
+//            highlightFeature(e);
+//            map.fitBounds(e.layer._latlngs);
+//        });
     }
 });
+
+$('#minisplore-wrapper').baron();
+
+$('#minisplore a').on('click', function(e){
+    var id = $(e.target).attr('data-id');
+    var layer = neighborhoods[id];
+    highlightFeature(layer);
+    map.fitBounds(layer);
+})

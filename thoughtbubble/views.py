@@ -15,7 +15,9 @@ def logout(request):
 
 
 def explore(request):
-    return render(request, 'explore.html')
+    d = {}
+    d['neighborhoods'] = Neighborhood.objects.filter(city='Columbus').order_by('name')
+    return render(request, 'explore.html', d)
 
 
 def privacy(request):

@@ -21,6 +21,7 @@
 {% block content %}
 
     <div id="form-wrapper">
+    {{ form.errors }}
         <form enctype="multipart/form-data" action="{% url 'addidea' %}" method="POST">
             {% csrf_token %}
             <div class="row">

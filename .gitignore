@@ -1,3 +1,4 @@
 *.pyc
 *.iml
 thoughtbubble/settings/local.py
+media

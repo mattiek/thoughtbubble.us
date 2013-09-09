@@ -26,10 +26,23 @@
     <div id="map">
 
     </div>
+    <div id="minisplore">
+        <h3>community</h3>
+        <div id="minisplore-wrapper">
+            <ul>
+                {% for hood in neighborhoods %}
+                    <li><a href="#" data-id="{{ hood.id }}">{{ hood.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+    </div>
 {% endblock %}
 
 {% block footerscripts %}
     <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
 {% endblock %}

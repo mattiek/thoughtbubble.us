@@ -64,6 +64,7 @@
 			var $this = $(this);
 			var $input = $('<input/>')
 				.attr('type', 'file')
+                .attr('name', $this.attr('name'))
 				.css({
 					cursor: $this.css('cursor'),
 					opacity: 0,
