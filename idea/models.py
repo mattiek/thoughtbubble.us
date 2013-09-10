@@ -1,6 +1,7 @@
 from django.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import md5_for_file
+from supportering.models import Support
 import os
 import hashlib
 
@@ -59,6 +60,8 @@ class Idea(models.Model):
 
     images = models.ManyToManyField(IdeaImage)
     links = models.ManyToManyField(IdeaLink)
+
+    support = models.ManyToManyField(Support)
 
     def __unicode__(self):
         return self.name

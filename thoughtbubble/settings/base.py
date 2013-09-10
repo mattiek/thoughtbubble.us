@@ -53,6 +53,8 @@ INSTALLED_APPS = (
     'rest_framework',
     'api',
     'floppyforms',
+    'supportering',
+    'commenteering',
 )
 
 MIDDLEWARE_CLASSES = (

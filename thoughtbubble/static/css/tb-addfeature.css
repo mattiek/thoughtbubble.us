@@ -191,6 +191,7 @@ form .row .row.second-row {
     position: relative;
 }
 
+.news-text,
 .about-text {
     min-height: 77px;
 }

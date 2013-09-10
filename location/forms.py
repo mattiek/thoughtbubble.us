@@ -22,6 +22,7 @@ class AddLocationForm(forms.Form):
     longitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
 
     about = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
+    news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
 
     what_kind = forms.ModelChoiceField(queryset=LocationType.objects.all(), empty_label=None)
 
@@ -38,6 +39,8 @@ class AddLocationForm(forms.Form):
         latitude = cleaned_data.get("latitude")
         longitude = cleaned_data.get("longitude")
         what_kind = cleaned_data.get("what_kind")
+        news = cleaned_data.get("news")
+        about = cleaned_data.get("about")
 
         return cleaned_data
 
