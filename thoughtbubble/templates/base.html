@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/magnific-popup.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/nav.css" />
+
 
     <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/jquery.magnific-popup.min.js"></script>
     {% block head %}
     {% endblock %}
 </head>
@@ -29,7 +32,7 @@
                 {% else %}
                     <li><a href="{% url "signup" %}">join</a></li>
                     <li>|</li>
-                    <li>login</li>
+                    <li><a id="login" class="open-popup-link" href="#login-overlay">login</a></li>
                 {% endif %}
             </ul>
             <ul id="nav">
@@ -52,7 +55,9 @@
 {% block content %}
 {% endblock %}
 {% block navend %}
-        <div id="footer"></div>
+        <div id="footer">
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
         <div id="sub-footer">
             <ul>
                 <li>ideas</li>
@@ -71,25 +76,21 @@
     </div>
 {% endblock %}
 
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.alerts.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.clearing.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.cookie.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.dropdown.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.forms.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.joyride.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.magellan.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.orbit.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.placeholder.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.reveal.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.section.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.tooltips.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.topbar.js"></script>#}
-{#<script src="{{ STATIC_URL }}js/foundation/foundation.interchange.js"></script>#}
 <script>
 {#    $(document).foundation();#}
 </script>
+<div id="login-overlay" class="white-popup mfp-hide">
+    <h6>login with</h6>
+
+    <form action="/login" method="POST">
+        {% csrf_token %}
+        {{ loginform.email }}
+        {{ loginform.password }}
+        <input type="submit"/>
+    </form>
+</div>
 </body>
+<script src="{{ STATIC_URL }}js/tb/tb-global.js"></script>
 {% block footerscripts %}
 {% endblock %}
 </html>

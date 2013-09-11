@@ -136,3 +136,19 @@ form .row .columns.no-padding,
 form .row .row .columns.no-padding {
     padding: 0;
 }
+
+#login-overlay {
+    width: 415px;
+    height: 388px;
+    background-color: #49c4dd;
+    color: #ffffff;
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
+}

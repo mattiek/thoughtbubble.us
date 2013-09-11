@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 
-from forms import SignupForm
+from forms import SignupForm, LoginForm
 import random
 from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login
 
 def home(request):
-    return render(request, 'home.html')
+    d = {}
+    d['loginform'] = LoginForm()
+    return render(request, 'home.html', d)
 
 
 def logout(request):
@@ -23,6 +25,8 @@ def explore(request):
 def privacy(request):
     return render(request, 'privacy.html')
 
+def login(request):
+    return render(request, 'home.html')
 
 def dashboard(request):
     return render(request, 'accounts/dashboard.html')
@@ -41,7 +45,7 @@ def signup(request):
     s = request.session.get(register_captcha)
 
     if request.POST:
-        form = SignupForm(request.POST, captcha_choices=s['choices'], answer=s['answer']) # A form bound to the POST data
+        form = SignupForm(request.POST, request.FILES, captcha_choices=s['choices'], answer=s['answer']) # A form bound to the POST data
         if form.is_valid():
             cleaned_data = form.cleaned_data
 

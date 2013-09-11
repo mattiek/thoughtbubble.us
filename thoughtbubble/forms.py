@@ -47,6 +47,7 @@ class SignupForm(forms.Form):
         if not accept_tos:
             raise forms.ValidationError("You must accept the terms and conditions before registering.")
 
+        cleaned_data = dict(cleaned_data.items() + self.files.items())
         return cleaned_data
 
     def __init__(self, *args, **kwargs):
@@ -58,3 +59,10 @@ class SignupForm(forms.Form):
 
 
 
+class LoginForm(forms.Form):
+    email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}))
+    password = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(LoginForm, self).clean()
+        return cleaned_data
