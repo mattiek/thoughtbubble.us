@@ -6,9 +6,7 @@ from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login
 
 def home(request):
-    d = {}
-    d['loginform'] = LoginForm()
-    return render(request, 'home.html', d)
+    return render(request, 'home.html')
 
 
 def logout(request):
@@ -26,6 +24,11 @@ def privacy(request):
     return render(request, 'privacy.html')
 
 def login(request):
+    if request.POST:
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            pass
+
     return render(request, 'home.html')
 
 def dashboard(request):
