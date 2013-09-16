@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from forms import SignupForm, LoginForm
 import random
 from models import *
-from django.contrib.auth import authenticate, logout as django_logout, login
+from django.contrib.auth import authenticate, logout as django_logout, login as django_login
 
 def home(request):
     return render(request, 'home.html')
@@ -27,12 +27,31 @@ def login(request):
     if request.POST:
         form = LoginForm(request.POST)
         if form.is_valid():
-            pass
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            username = ''
+            try:
+                username = ThoughtbubbleUser.objects.get(email=email)
+                if username:
+                    username = username.username
+            except:
+                pass
 
-    return render(request, 'home.html')
+            user = authenticate(username=username, password=password)
+            if (user):
+                django_login(request, user)
+
+
+    return redirect('home')
 
 def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+        try:
+            profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
+        except:
+            profile = ThoughtbubbleUserProfile.objects.create(user=request.user).save()
+        d = {}
+        d['profile'] = profile
+        return render(request, 'accounts/dashboard.html', d)
 
 def signup(request):
     register_captcha = 'register_captchas1234'

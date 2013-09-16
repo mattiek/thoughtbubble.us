@@ -28,7 +28,7 @@
         <div id="illustration">
             <ul id="login-nav">
                 {% if user.is_authenticated %}
-                    <li><a href="{% url "signup" %}">{{ user }}</a></li>
+                    <li><a href="{% url "dashboard" %}">{{ user }}</a></li>
                 {% else %}
                     <li><a href="{% url "signup" %}">join</a></li>
                     <li>|</li>

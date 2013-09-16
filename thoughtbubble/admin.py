@@ -60,13 +60,13 @@ class ThoughtbubbleUserAdmin(UserAdmin):
     list_display = ('username', 'is_staff',)
     list_filter = ('is_staff', 'is_superuser',
                    'is_active', 'groups',)
-    search_fields = ('username', 'location',)
+    search_fields = ('username',)
     ordering = ('username',)
     filter_horizontal = ('groups', 'user_permissions',)
     fieldsets = (
         (None, {'fields': ('username', 'email', 'password',)}),
-        ('Personal info', {'fields':
-                               ('location',)}),
+        # ('Personal info', {'fields':
+        #                        ('location',)}),
         ('Permissions', {'fields': ('is_active',
                                     'is_staff',
                                     'is_superuser',

@@ -17,3 +17,7 @@ def addidea(request):
         form = AddIdeaForm()
 
     return render(request, 'addidea.html', {'form': form})
+
+
+def listideas(request):
+    pass

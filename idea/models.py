@@ -68,3 +68,6 @@ class Idea(models.Model):
 
     def save(self, *args, **kwargs):
         super(Idea, self).save(*args, **kwargs)
+
+    def get_title(self):
+        return "%s in %s for %s" % (self.name, self.where, self.what_for)
