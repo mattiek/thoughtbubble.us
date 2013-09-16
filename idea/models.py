@@ -38,7 +38,11 @@ class IdeaImage(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __unicode__(self):
-        return self.img
+        if self.name:
+            return self.name
+        else:
+            return 'Img'
+        return self.name
 
 
 class IdeaLink(models.Model):
