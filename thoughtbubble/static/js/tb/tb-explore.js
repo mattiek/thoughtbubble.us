@@ -74,8 +74,11 @@ $.ajax({
 $('#minisplore-wrapper').baron();
 
 $('#minisplore a').on('click', function(e){
+    e.preventDefault();
     var id = $(e.target).attr('data-id');
     var layer = neighborhoods[id];
     highlightFeature(layer);
     map.fitBounds(layer);
+    var $i = $('#idea-nav');
+    $i.attr('href', $i.attr('data-href') + '/' + id);
 })

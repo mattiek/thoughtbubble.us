@@ -36,7 +36,7 @@
                 {% endif %}
             </ul>
             <ul id="nav">
-                <li>idea</li>
+                <li><a id="idea-nav" data-href="{% url "addidea" %}" href="{% url "addidea" %}">idea</a></li>
                 <li><a href="{% url "explore" %}">explore</a></li>
                 <li>about</li>
             </ul>
@@ -50,6 +50,15 @@
                     </ul>
                 {% endblock %}
         </div>
+{#    Messages #}
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{#    End Messages #}
         <div id="home-container">
 {% endblock %}
 {% block content %}
