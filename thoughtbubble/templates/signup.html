@@ -20,7 +20,7 @@
                  {% if form.errors %}
                     <div>{{ form.errors }}</div>
                 {% endif %}
-                <form action="{% url 'signup' %}" method="POST">
+                <form action="{% url 'signup' %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}
                     {% for field in form %}
                         {% if field.field|classname == 'ChoiceField' %}

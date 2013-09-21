@@ -1,6 +1,6 @@
 from django.db import models
 from neighborhood.models import Neighborhood
-from thoughtbubble.utils import md5_for_file
+from thoughtbubble.utils import path_and_rename
 from supportering.models import Support
 import os
 import hashlib
@@ -12,20 +12,6 @@ FOR_CHOICES = [
 ]
 
 
-def path_and_rename(path):
-    def wrapper(instance, filename):
-        ext = filename.split('.')[-1]
-        chunks = instance.img.chunks()
-        md5 = hashlib.md5()
-        for data in chunks:
-            if not data:
-                break
-            md5.update(data)
-
-        return os.path.join(path, "{}.{}".format(md5.hexdigest(),ext))
-    return wrapper
-
-
 class IdeaType(models.Model):
     name = models.CharField(max_length=255)
 
@@ -34,7 +20,7 @@ class IdeaType(models.Model):
 
 
 class IdeaImage(models.Model):
-    img = models.ImageField(upload_to=path_and_rename('sli'))
+    img = models.ImageField(upload_to=path_and_rename('ideas'))
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __unicode__(self):

@@ -4,6 +4,7 @@ from forms import SignupForm, LoginForm
 import random
 from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login as django_login
+from thoughtbubble.utils import path_and_rename
 
 def home(request):
     return render(request, 'home.html')
@@ -44,6 +45,7 @@ def login(request):
 
     return redirect('home')
 
+
 def dashboard(request):
         try:
             profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
@@ -52,6 +54,7 @@ def dashboard(request):
         d = {}
         d['profile'] = profile
         return render(request, 'accounts/dashboard.html', d)
+
 
 def signup(request):
     register_captcha = 'register_captchas1234'
@@ -79,9 +82,9 @@ def signup(request):
             user = authenticate(username=cleaned_data['username'], email= cleaned_data['email'], password=cleaned_data['password'])
 
             # Create initial profile for the user
-            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'])
+            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'], profile_picture=cleaned_data['profile_picture'])
 
-            login(request, user)
+            django_login(request, user)
             return redirect('home')
     else:
         form = SignupForm(captcha_choices=s['choices'], answer=s['answer'])

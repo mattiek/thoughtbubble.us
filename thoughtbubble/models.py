@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from thoughtbubble.utils import path_and_rename2
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
     )
@@ -66,7 +67,7 @@ class ThoughtbubbleUserProfile(models.Model):
     first_name = models.CharField(max_length=50, default="", null=True, blank=True)
     last_name = models.CharField(max_length=50, default="", null=True, blank=True)
     location = models.CharField(max_length=50, default="", null=True, blank=True)
-    profile_picture = models.ImageField(upload_to="profiles", null=True, blank=True)
+    profile_picture = models.ImageField(upload_to=path_and_rename2('profiles'), null=True, blank=True)
 
     def __unicode__(self):
         return "%s's profile" % (self.user.username,)
