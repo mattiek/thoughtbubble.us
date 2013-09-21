@@ -79,3 +79,17 @@ input[type="text"] {
     font-size: 12px;
     font-style: italic;
 }
+
+#id_captcha_choicefield li.captcha_select {
+    border: 3px solid #f3812b;
+    border-radius: 10px;
+    padding: 3px;
+}
+
+#id_captcha_choicefield img {
+    max-height: 50px;
+}
+
+#id_captcha_choicefield li {
+    padding: 6px;
+}

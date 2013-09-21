@@ -1,6 +1,8 @@
 
 
 $('#id_captcha_choicefield img').click(function(e) {
+    $('#id_captcha_choicefield li').removeClass('captcha_select');
+    $(e.target).parent().addClass('captcha_select');
     $('#id_captcha').val($(e.target).attr('data-choice'));
 })
 
