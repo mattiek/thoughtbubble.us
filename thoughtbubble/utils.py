@@ -2,10 +2,10 @@ from thoughtbubble.models import *
 import os
 import hashlib
 
-def path_and_rename(path):
+def path_and_rename(path, attr):
     def wrapper(instance, filename):
         ext = filename.split('.')[-1]
-        chunks = instance.img.chunks()
+        chunks = getattr(instance, attr).chunks()
         md5 = hashlib.md5()
         for data in chunks:
             if not data:
@@ -16,18 +16,6 @@ def path_and_rename(path):
     return wrapper
 
 
-def path_and_rename2(path):
-    def wrapper(instance, filename):
-        ext = filename.split('.')[-1]
-        chunks = instance.profile_picture.chunks()
-        md5 = hashlib.md5()
-        for data in chunks:
-            if not data:
-                break
-            md5.update(data)
-
-        return os.path.join(path, "{}.{}".format(md5.hexdigest(),ext))
-    return wrapper
 
 def md5_for_file(f, block_size=2**20):
     md5 = hashlib.md5()

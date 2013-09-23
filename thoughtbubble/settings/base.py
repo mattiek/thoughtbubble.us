@@ -55,6 +55,7 @@ INSTALLED_APPS = (
     'floppyforms',
     'supportering',
     'commenteering',
+    'community',
 )
 
 MIDDLEWARE_CLASSES = (

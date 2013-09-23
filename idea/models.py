@@ -19,26 +19,6 @@ class IdeaType(models.Model):
         return self.name
 
 
-class IdeaImage(models.Model):
-    img = models.ImageField(upload_to=path_and_rename('ideas'))
-    name = models.CharField(max_length=255, blank=True, null=True)
-
-    def __unicode__(self):
-        if self.name:
-            return self.name
-        else:
-            return 'Img'
-        return self.name
-
-
-class IdeaLink(models.Model):
-    url = models.URLField()
-    name = models.CharField(max_length=255, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.url
-
-
 class Idea(models.Model):
     name = models.CharField(max_length=255)
 
@@ -47,9 +27,6 @@ class Idea(models.Model):
     what_kind = models.ForeignKey(IdeaType)
     what_for = models.CharField(max_length=20, choices=FOR_CHOICES)
     where = models.ForeignKey(Neighborhood)
-
-    images = models.ManyToManyField(IdeaImage)
-    links = models.ManyToManyField(IdeaLink)
 
     support = models.ManyToManyField(Support)
 
@@ -61,3 +38,25 @@ class Idea(models.Model):
 
     def get_title(self):
         return "%s in %s for %s" % (self.name, self.where, self.what_for)
+
+
+
+class IdeaImage(models.Model):
+    idea = models.ForeignKey(Idea)
+    img = models.ImageField(upload_to=path_and_rename('ideas','img'))
+    name = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        if self.name:
+            return self.name
+        else:
+            return 'Img'
+
+
+class IdeaLink(models.Model):
+    idea = models.ForeignKey(Idea)
+    url = models.URLField()
+    name = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.url
