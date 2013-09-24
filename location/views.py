@@ -15,7 +15,7 @@ class LocationViewset(viewsets.ModelViewSet):
     queryset = Location.objects.none()
 
     def get_queryset(self):
-        name = self.request.GET.get('city','')
+        name = self.request.GET.get('metro','')
         return Location.objects.filter(name__icontains=name)
 
 

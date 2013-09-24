@@ -5,6 +5,7 @@ import random
 from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login as django_login
 from thoughtbubble.utils import path_and_rename
+from community.models import Community
 
 def home(request):
     return render(request, 'home.html')
@@ -17,7 +18,13 @@ def logout(request):
 
 def explore(request):
     d = {}
-    d['neighborhoods'] = Neighborhood.objects.filter(city='Columbus').order_by('name')
+    d['communities'] = Community.objects.filter().order_by('neighborhood__name')
+
+    d['metros'] = {
+        'current': 'Columbus',
+        'list': Neighborhood.objects.values_list('city','state').distinct(),
+    }
+
     return render(request, 'explore.html', d)
 
 

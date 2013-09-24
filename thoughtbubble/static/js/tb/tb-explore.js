@@ -14,6 +14,18 @@ var map = TB.Map.map();
 var previous_layer = null;
 
 function highlightFeature(layer) {
+
+    if (previous_layer) {
+        previous_layer.setStyle({
+            stroke: false,
+            fill: false,
+            weight: 1,
+            color: '#03f',
+            dashArray: '',
+            fillOpacity: 0
+        });
+    }
+
     layer.setStyle({
         stroke: true,
         fill: true,
@@ -27,16 +39,7 @@ function highlightFeature(layer) {
         layer.bringToFront();
     }
 
-    if (previous_layer) {
-        previous_layer.setStyle({
-            stroke: false,
-            fill: false,
-            weight: 1,
-            color: '#03f',
-            dashArray: '',
-            fillOpacity: 0
-        });
-    }
+
     previous_layer = layer;
 }
 
@@ -52,7 +55,7 @@ $.ajax({
 });
 
 $.ajax({
-    url: '/api/v1/neighborhoods/.json?city=columbus',
+    url: '/api/v1/communities/.json?metro=columbus',
     dataType: 'json',
     success: function load(d) {
         var hoods = L.geoJson(d,{
@@ -81,4 +84,17 @@ $('#minisplore a').on('click', function(e){
     map.fitBounds(layer);
     var $i = $('#idea-nav');
     $i.attr('href', $i.attr('data-href') + '/' + id);
+})
+
+$('#metrodifier').on('change', function(e) {
+    $.ajax(
+        {
+            url: '/api/v1/cities/.json?city=' + e.target.value + '&state=oh',
+            dataType: 'json',
+            success: function goto(d) {
+                console.log(d);
+                var city = d.results[0];
+                map.panTo([city.latitude, city.longitude]);
+            }
+        });
 })

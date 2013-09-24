@@ -30,14 +30,20 @@
         <h3>community</h3>
         <div id="minisplore-wrapper">
             <ul>
-                {% for hood in neighborhoods %}
-                    <li><a href="#" data-id="{{ hood.id }}">{{ hood.name }}</a></li>
+                {% for community in communities %}
+                    <li><a href="#" data-id="{{ community.id }}">{{ community.neighborhood.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
-
-
     </div>
+
+    <select name="metrodifier" id="metrodifier">
+        {% for metro in metros.list %}
+            <option value="{{ metro.0 }}"
+                    {% if metro.0 == metros.current %}selected{%  endif %}
+                    >{{ metro.0 }}, {{ metro.1 }}</option>
+        {% endfor %}
+    </select>
 {% endblock %}
 
 {% block footerscripts %}
