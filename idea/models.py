@@ -2,6 +2,7 @@ from django.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
 from supportering.models import Support
+from thoughtbubble.models import ThoughtbubbleUser
 import os
 import hashlib
 
@@ -28,7 +29,9 @@ class Idea(models.Model):
     what_for = models.CharField(max_length=20, choices=FOR_CHOICES)
     where = models.ForeignKey(Neighborhood)
 
-    support = models.ManyToManyField(Support)
+    user = models.ForeignKey(ThoughtbubbleUser, null=True)
+
+    # support = models.ManyToManyField(Support)
 
     def __unicode__(self):
         return self.name

@@ -56,6 +56,7 @@ INSTALLED_APPS = (
     'supportering',
     'commenteering',
     'community',
+    'project',
     'social.apps.django_app.default',
 )
 
