@@ -58,6 +58,12 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
     def get_short_name(self):
         return self.username
 
+    def get_profile(self):
+        return self.thoughtbubbleuserprofile_set.all()[0]
+
+    def get_profile_picture(self):
+        return self.get_profile().profile_picture.url
+
     def __unicode__(self):
         return self.get_short_name()
 
