@@ -65,7 +65,14 @@
 {% endblock %}
 {% block navend %}
         <div id="footer">
-            <a href="{% url 'logout' %}">Logout</a>
+            <div id="footer-wrap">
+                <ul>
+                    <li><a id="footer-logout" href="{% url 'logout' %}">Logout</a></li>
+                    <li><a id="footer-twitter" href="{% url 'logout' %}"></a></li>
+                    <li><a id="footer-facebook" href="{% url 'logout' %}"></a></li>
+                    <li><a id="footer-linkedin" href="{% url 'logout' %}"></a></li>
+                </ul>
+            </div>
         </div>
         <div id="sub-footer">
             <ul>
