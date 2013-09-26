@@ -1,0 +1,291 @@
+#illustration {
+  background: url(../images/thoughtbubble-illustration.jpg) no-repeat no-repeat;
+  background-size: 100%;
+  height: 695px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+#nav,
+#login-nav {
+  color: #4585c3; /* text color */
+  font-family: "MuseoSans", sans-serif;
+  font-size: 18px;
+  display: inline;
+  list-style-type: none;
+  float:right;
+
+  li {
+    display: inline-block;
+    margin-top: 90px;
+  }
+}
+
+#login-nav {
+  margin-right: 70px;
+  display: block;
+}
+
+
+#nav {
+  li {
+    margin-right: 50px;
+  }
+}
+
+#login-nav {
+  li {
+    margin-right: 0px;
+  }
+}
+
+.scale {
+  background: url(../images/scale-8.png) no-repeat no-repeat;
+  background-size: 100%;
+  height: 7px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+#logo {
+  margin: 35px 0 0 35px;
+  width: 288px;
+  height: 80px;
+}
+
+#primary-nav {
+  color: #4585c3; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 27px;
+  list-style-type: none;
+  clear: both;
+  margin: 40px auto 0;
+  width: 300px;
+}
+
+#primary-nav {
+  li {
+    display: inline-block;
+  }
+}
+
+#sub-footer {
+  margin: 50px 0 0 0;
+  color: #4585c3; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+  width: 320px;
+  margin: 55px auto 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 25px;
+      line-height: 25px;
+
+      &.second {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+#primary-nav {
+  li {
+    text-indent:50px;
+    margin-left: 50px;
+    height: 38px;
+
+    &.icon-explore {
+      background: url(../images/button-explore.png) no-repeat;
+      background-position: 0 0;
+
+      &:hover {
+        background-position: 0 -42px;
+      }
+    }
+
+    &.icon-add {
+      background: url(../images/button-add.png) no-repeat;
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+
+#login-nav li:first-child {
+  background-image: url(../images/icon-person.png);
+  background-repeat: no-repeat;
+  text-indent: 15px;
+  background-position-y: 50%;
+}
+
+#home-container {
+  width: 930px;
+  margin: 0 auto;
+}
+
+form .row .columns.no-padding,
+form .row .row .columns.no-padding {
+  padding: 0;
+}
+
+#login-overlay {
+  width: 415px;
+  height: 430px;
+  background-color: #49c4dd;
+  color: #ffffff;
+}
+
+#login-overlay h6 {
+  margin-top: 70px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: normal;
+}
+
+#login-overlay .oauths {
+  margin: 30px 0;
+  height: 60px;
+}
+
+#login-overlay input[type="password"],
+#login-overlay input[type="email"],
+#login-overlay input[type="text"] {
+  width: 365px;
+  height: 45px;
+  border-radius: 10px;
+  font-family: 'MuseoSans';
+  margin: 0 auto 10px;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 1px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+
+#login-overlay .submit {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+  border: none;
+
+  height: 45px;
+  width: 365px;
+  color: #fff;
+  font-family: 'MuseoSans';
+  margin: 0 auto;
+  display: block;
+}
+
+.mfp-close-btn-in .mfp-close {
+  color: #f47d21;
+  background-color: #ffffff;
+  width: 26px;
+  height: 28px;
+  opacity: 1;
+  line-height: 28px;
+  margin: 0px;
+  top: 8px;
+  right: 8px;
+  border-radius: 7px;
+  border: 1px solid #cccccc;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+#forgot-password {
+  display: block;
+  color: #FFFFFF;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 10px;
+  font-weight: 100;
+}
+
+#footer {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px; /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  width: 100%;
+  background-color: #49c3dd; /* layer fill content */
+
+  margin: 60px 0 0 0;
+
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 13px auto 10px;
+
+    li {
+      float: left;
+      list-style-type: none;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0px;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+#footer-wrap {
+  margin: 0 auto;
+  width: 179px;
+}
+
+#footer-logout {
+  background: url(../images/user-logout-icon.png) no-repeat 0;
+  text-indent: 13px;
+  display: block;
+  color: #fff; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 13px;
+}
+
+#footer-twitter {
+  background: url(../images/twitter-cloud.png);
+  width: 23px;
+  height: 22px;
+  display: block;
+}
+
+#footer-facebook {
+  background: url(../images/facebook-cloud.png);
+  width: 28px;
+  height: 19px;
+  display: block;
+}
+
+#footer-linkedin {
+  background: url(../images/linkedin-cloud.png);
+  width: 22px;
+  height: 21px;
+  display: block;
+}

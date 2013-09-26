@@ -1,14 +1,17 @@
+/* line 1, ../../scss/admin/location.scss */
 .form-row.field-city {
-    overflow: visible;
+  overflow: visible;
 }
 
+/* line 5, ../../scss/admin/location.scss */
 .form-row.field-city .tt-suggestion p {
-    margin-left: 0px;
-    padding-left: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
 }
 
+/* line 10, ../../scss/admin/location.scss */
 .tt-dropdown-menu {
-    width: 100%;
-    background-color: #fff;
-    border: solid 1px #000;
+  width: 100%;
+  background-color: #fff;
+  border: solid 1px #000;
 }

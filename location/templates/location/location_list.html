@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Location List
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-back/location/list.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+   {% for location in location_list %}
+        <div class="idea-cap">
+            {{ location.name }}
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-addidea.js"></script>
+{% endblock %}

@@ -9,6 +9,8 @@ from django.contrib.gis.geos import GEOSGeometry
 
 from rest_framework import generics
 
+from vanilla import ListView, DetailView
+
 
 class LocationViewset(viewsets.ModelViewSet):
     serializer_class = LocationSerializer
@@ -46,3 +48,7 @@ def addlocation(request):
 
     return render(request, 'add.html', {'form': form,
                                         'makis': makis})
+
+
+class LocationList(ListView):
+    model = Location

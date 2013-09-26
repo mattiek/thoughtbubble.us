@@ -3,7 +3,7 @@ from forms import AddIdeaForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink
 from neighborhood.models import Neighborhood
 from django.contrib import messages
-
+from vanilla import ListView
 
 def addidea(request, id=None):
     if request.POST:
@@ -64,5 +64,5 @@ def addidea(request, id=None):
     return render(request, 'addidea.html', d)
 
 
-def listideas(request):
-    pass
+class IdeaList(ListView):
+    model = Idea

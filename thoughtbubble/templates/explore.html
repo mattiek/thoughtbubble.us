@@ -13,7 +13,7 @@
   <![endif]-->
 
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-explore.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css-back/tb-explore.css" />
 {% endblock %}
 
 {% block bodyid %}home{% endblock %}
@@ -33,6 +33,7 @@
                 {% for community in communities %}
                     <li><a href="#" data-id="{{ community.neighborhood.id }}">{{ community.neighborhood.name }}</a></li>
                 {% endfor %}
+                    <li><a href="#" id="anywhere">anywhere else</a></li>
             </ul>
         </div>
     </div>
@@ -51,4 +52,5 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
+
 {% endblock %}

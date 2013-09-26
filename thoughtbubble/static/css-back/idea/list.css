@@ -1,0 +1,168 @@
+#illustration {
+    background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
+    background-size: 100%;
+    height: 238px;
+    width: 930px;
+    margin: 0 auto;
+}
+
+.submit {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px; /* border radius */
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box; /* prevents bg color from leaking outside the border */
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+); /* layer fill content */
+    background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+    background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+    background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+    background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%); /* layer fill content */
+    border: none;
+
+    height: 33px;
+    width: 322px;
+    color: #fff;
+    font-family: 'MuseoSans';
+
+    float: right;
+    margin-right: 120px;
+}
+
+#form-wrapper {
+    width:600px;
+    margin: 0 auto;
+}
+
+#add-photo {
+    width: 80px;
+    height: 79px;
+    border-radius: 10px;
+    background-color: #dadbdc;
+    margin-left: -100px;
+    position: absolute;
+    background-image: url(../../images/add-photo.png);
+    background-repeat: no-repeat;
+    background-position: 57px 57px
+}
+
+
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+    /*width: 324px;*/
+    height: 25px;
+    border-radius: 5px;
+    font-family: 'MuseoSans';
+}
+
+textarea {
+    border-radius: 5px;
+    font-family: 'MuseoSans';
+    min-height: 200px;
+    max-width: 100%;
+}
+
+#id_captcha_choicefield {
+    list-style: none;
+}
+
+#id_captcha_choicefield li {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+#id_captcha_choicefield li:first-child {
+    margin-left: 15px;
+}
+
+#captcha-question {
+    color: #727171; /* text color */
+    font-family: "MuseoSans", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.terms-and-conditions {
+    color: #727171; /* text color */
+    font-family: "MuseoSans", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.file-picker-input {
+    width: 80px;
+    height: 79px;
+    border-radius: 10px;
+    background-color: #dadbdc;
+    background-image: url(../../images/polaroid-camera-composite.png);
+    background-repeat: no-repeat;
+    background-position: 23px 24px
+}
+
+form .row .row.second-row {
+    margin-top: 15px;
+}
+
+.copy {
+    color: #6d6d6d; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 0px;
+}
+
+#id_what_for {
+    width: 228px;
+}
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+    color: #6d6d6d; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 15px;
+}
+
+.chosen-container-single .chosen-default {
+    color: #bbb;
+}
+
+.chosen-container-single .chosen-single div b {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+}
+
+.chosen-container {
+    margin-bottom: 15px;
+}
+
+.auto-hint {
+    color: #aaa;
+}
+
+.idea-cap {
+    color: #7a7a7a; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 17px;
+    width: 576px;
+    height: 113px;
+    margin: 0 auto;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    background: #daf3f8; /* Old browsers */
+    background: -moz-linear-gradient(left,  #daf3f8 80%, #fef8ee 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(80%,#daf3f8), color-stop(80%,#fef8ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* IE10+ */
+    background: linear-gradient(to right,  #daf3f8 80%,#fef8ee 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 ); /* IE6-9 */
+}
+
+.left-idea-cap {
+    padding-top: 30px;
+    margin-left: 20px;
+}

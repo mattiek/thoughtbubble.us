@@ -134,10 +134,15 @@ $('#minisplore a').on('click', function(e){
     var layer = neighborhoods[id];
     highlightFeature(layer);
     map.fitBounds(layer);
+
+    // Rewrite idea create link
     var $i = $('#idea-nav');
     $i.attr('href', $i.attr('data-href') + '/' + id);
-})
 
+});
+
+
+// Metro selection
 $('#metrodifier').on('change', function(e) {
     $.ajax(
         {
@@ -149,4 +154,4 @@ $('#metrodifier').on('change', function(e) {
                 map.panTo([city.latitude, city.longitude]);
             }
         });
-})
+});
