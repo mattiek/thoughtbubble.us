@@ -25,7 +25,7 @@ class CustomPaginationSerializer(pagination.BasePaginationSerializer):
     results_field = 'features'
 
 
-class NeighborhoodSerializer(serializers.HyperlinkedModelSerializer):
+class NeighborhoodSerializer(serializers.ModelSerializer):
     center = serializers.CharField(source='getCenter', read_only=True)
     geometry = serializers.CharField(source='getGeometry')
     properties = serializers.CharField(source='getProperties', read_only=True)
@@ -33,7 +33,8 @@ class NeighborhoodSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Neighborhood
-        fields = ('id', 'name', 'city', 'state', 'county', 'center', 'geometry', 'type', 'properties')
+        fields = ('id', 'name', 'city', 'state', 'county', 'center', 'geometry', 'type', 'properties', 'community')
+        depth = 1 # Nested object
 
     @property
     def data(self):

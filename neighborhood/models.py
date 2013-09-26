@@ -42,7 +42,17 @@ class Neighborhood(models.Model):
         return 'Feature'
 
     def getProperties(self):
-        return []
+
+        props = {}
+
+        props['title'] = self.name
+        props['icon'] = {
+            "iconUrl": "http://placekitten.com/50/50",
+            "iconSize": [50, 50],
+            "iconAnchor": [25, 25],
+            "popupAnchor": [0, -25]
+        }
+        return props
 
     def getExtent(self):
         extent = self.geom.extent

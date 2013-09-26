@@ -3,6 +3,15 @@ var is_drawable = has_map && $("#map").hasClass("drawable");
 
 var neighborhoods = neighborhoods || {};
 
+//var reg_icon =  L.icon({
+//    "iconUrl": "/static/images/map-point.png",
+//    "iconSize": [26, 33], // size of the icon
+//    "iconAnchor": [13, 30], // point of the icon which will correspond to marker's location
+//    "popupAnchor": [0, -25]  // point from which the popup should open relative to the iconAnchor
+//    });
+//
+
+
 if(has_map){
     TB.Map.init();
     if(is_drawable){
@@ -55,9 +64,18 @@ $.ajax({
 });
 
 $.ajax({
-    url: '/api/v1/communities/.json?metro=columbus',
+    url: '/api/v1/neighborhoods/.json?metro=columbus',
     dataType: 'json',
     success: function load(d) {
+
+        // Set a custom icon on each marker based on feature properties
+//        map.markerLayer.on('layeradd', function(e) {
+//            var marker = e.layer,
+//                feature = marker.feature;
+//
+//            marker.setIcon(L.icon(feature.properties.icon));
+//        });
+
         var hoods = L.geoJson(d,{
             style: function (feature) {
                 return {stroke: false, fill: false};
@@ -66,6 +84,40 @@ $.ajax({
                neighborhoods[feature.id] = layer;
         }
         }).addTo(map);
+
+        var geoJson = [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-75.00, 40]
+            },
+            "properties": {
+                "title": "Small kitten",
+                "icon": {
+                    "iconUrl": "http://placekitten.com/50/50",
+                    "iconSize": [50, 50], // size of the icon
+                    "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
+                    "popupAnchor": [0, -25]  // point from which the popup should open relative to the iconAnchor
+                }
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-74.00, 40]
+            },
+            "properties": {
+                "title": "Big kitten",
+                "icon": {
+                    "iconUrl": "http://placekitten.com/100/100",
+                    "iconSize": [100, 100],
+                    "iconAnchor": [50, 50],
+                    "popupAnchor": [0, -55]
+                }
+            }
+        }];
+
+//        map.markerLayer.setGeoJSON(d.features);
 //        hoods.on('click', function(e) {
 ////            console.log(e.layer.id);
 //            highlightFeature(e);
