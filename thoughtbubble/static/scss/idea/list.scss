@@ -163,6 +163,59 @@ form .row .row.second-row {
 }
 
 .left-idea-cap {
-    padding-top: 30px;
-    margin-left: 20px;
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 440px;
+  float: left;
+
+  .supporting {
+    width: (151px / 2);
+    height: (44px / 2);
+    background: url(../../images/support.png) no-repeat 0 100%;
+    display: block;
+    float: left;
+  }
+
+  .commenting {
+    width: 65px;
+    height: 22px;
+    background: url(../../images/comment.png) no-repeat 0;
+    display: block;
+    float: left;
+  }
+
+  span {
+    color: #7b7b7b; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 10px;
+  }
+
+  .sharing {
+    display: inline-block;
+    list-style-type: none;
+    
+    li {
+      
+      
+    }
+  }
+
+}
+
+.right-idea-cap {
+ float:right;
+  width: 20%;
+
+  table {
+    background: transparent;
+    border: none;
+
+    tr {
+      &.even,
+      &.alt,
+      &:nth-of-type(even) {
+        background: transparent;
+      }
+    }
+  }
 }

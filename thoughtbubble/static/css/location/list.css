@@ -171,31 +171,3 @@ form .row .row.second-row {
 .auto-hint {
   color: #aaa;
 }
-
-/* line 146, ../../scss/location/list.scss */
-.idea-cap {
-  color: #7a7a7a;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 17px;
-  width: 576px;
-  height: 113px;
-  border-radius: 20px;
-  margin-bottom: 15px;
-  background: #daf3f8;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* IE10+ */
-  background: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 );
-  /* IE6-9 */
-}

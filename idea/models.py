@@ -42,6 +42,12 @@ class Idea(models.Model):
     def get_title(self):
         return "%s in %s for %s" % (self.name, self.where, self.what_for)
 
+    def comment_count(self):
+        return 0
+
+    def support_count(self):
+        return 0
+
 
 
 class IdeaImage(models.Model):
