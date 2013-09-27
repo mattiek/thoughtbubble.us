@@ -22,8 +22,8 @@
         <div class="idea-cap">
             <div class="left-idea-cap">
                 <p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p>
-                <a class="supporting" href="#"></a>
-                <a class="commenting" href="#"></a>
+                <a class="supporting" data-id="{{ idea.id }}" href="#"></a>
+                <a class="commenting" data-id="{{ idea.id }}" href="#"></a>
                 <span>share</span>
                 <ul class="sharing">
                     <li><a class="fb-idea" href="#facebook"></a></li>
@@ -43,7 +43,7 @@
                     </tr>
                     <tr>
                         <td></td>
-                        <td>add x days ago</td>
+                        <td>add {{ idea.get_days_since_added }} days ago</td>
                     </tr>
                 </table>
             </div>
@@ -54,5 +54,5 @@
 
 {% block footerscripts %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-addidea.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
 {% endblock %}

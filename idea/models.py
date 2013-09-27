@@ -1,10 +1,13 @@
 from django.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
-from supportering.models import Support
 from thoughtbubble.models import ThoughtbubbleUser
 import os
 import hashlib
+import datetime
+from django.utils.timezone import now
+
+from supportering.models import AbstractSupport
 
 FOR_CHOICES = [
     ('live', 'live'),
@@ -20,6 +23,7 @@ class IdeaType(models.Model):
         return self.name
 
 
+
 class Idea(models.Model):
     name = models.CharField(max_length=255)
 
@@ -30,6 +34,9 @@ class Idea(models.Model):
     where = models.ForeignKey(Neighborhood)
 
     user = models.ForeignKey(ThoughtbubbleUser, null=True)
+
+    date_created = models.DateTimeField(auto_now_add=True, default=now())
+    date_modified = models.DateTimeField(auto_now=True, default=now())
 
     # support = models.ManyToManyField(Support)
 
@@ -46,9 +53,15 @@ class Idea(models.Model):
         return 0
 
     def support_count(self):
-        return 0
+        return IdeaSupport.objects.filter(idea=self).count()
+
+    def get_days_since_added(self):
+        d = now() - self.date_created
+        return d.days
 
 
+class IdeaSupport(AbstractSupport):
+    idea = models.ForeignKey(Idea)
 
 class IdeaImage(models.Model):
     idea = models.ForeignKey(Idea)

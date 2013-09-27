@@ -1,6 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
 from forms import AddIdeaForm
-from models import Idea, IdeaType, IdeaImage, IdeaLink
+from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
 from django.contrib import messages
 from vanilla import ListView
@@ -66,3 +66,13 @@ def addidea(request, id=None):
 
 class IdeaList(ListView):
     model = Idea
+
+
+def support_idea(request, id):
+    try:
+        g = IdeaSupport.objects.get(user=request.user, idea=id)
+        g.delete()
+        return HttpResponse("removed")
+    except:
+        IdeaSupport.objects.create(user=request.user, idea=id)
+        return HttpResponse("added")
