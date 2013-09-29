@@ -2,6 +2,7 @@ from django import forms
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.contrib.flatpages.models import FlatPage
 
 from .models import *
 
@@ -84,5 +85,13 @@ class ThoughtbubbleUserAdmin(UserAdmin):
     )
 
 
+
+class FlatPageAdmin(admin.ModelAdmin):
+    class Media:
+        js = ("//tinymce.cachefly.net/4.0/tinymce.min.js","js/tb/flatpage.js",)
+
 admin.site.register(ThoughtbubbleUser, ThoughtbubbleUserAdmin)
 admin.site.register(ThoughtbubbleUserProfile)
+
+admin.site.unregister(FlatPage)
+admin.site.register(FlatPage, FlatPageAdmin)
