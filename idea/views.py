@@ -3,7 +3,7 @@ from forms import AddIdeaForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
 from django.contrib import messages
-from vanilla import ListView
+from vanilla import ListView, DetailView
 
 def addidea(request, id=None):
     if request.POST:
@@ -67,6 +67,21 @@ def addidea(request, id=None):
 class IdeaList(ListView):
     model = Idea
 
+    def get_queryset(self):
+        community = self.kwargs.get('community', None)
+        city = self.kwargs.get('city', None)
+        state = self.kwargs.get('state', None)
+        if community:
+            return Idea.objects.filter(where__city__iexact=city,where__state__iexact=state,where__name__iexact=community)
+        if city and state:
+            return Idea.objects.filter(where__city__iexact=city,where__state__iexact=state)
+        if state:
+            return Idea.objects.filter(where__state__iexact=state)
+        return Idea.objects.filter()
+
+
+class IdeaDetail(DetailView):
+    model = Idea
 
 def support_idea(request, id):
     try:

@@ -24,7 +24,7 @@ class AddLocationForm(forms.Form):
     about = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
     news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
 
-    what_kind = forms.ModelChoiceField(queryset=LocationType.objects.all(), empty_label=None)
+    # what_kind = forms.ModelChoiceField(queryset=LocationType.objects.all(), empty_label=None, required=False)
 
     # geom = models.PointField(srid=4326, null=True, blank=True)
     # objects = models.GeoManager()
@@ -38,7 +38,7 @@ class AddLocationForm(forms.Form):
         zip = cleaned_data.get("zip")
         latitude = cleaned_data.get("latitude")
         longitude = cleaned_data.get("longitude")
-        what_kind = cleaned_data.get("what_kind")
+        # what_kind = cleaned_data.get("what_kind")
         news = cleaned_data.get("news")
         about = cleaned_data.get("about")
 

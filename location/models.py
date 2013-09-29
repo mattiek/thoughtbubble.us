@@ -1,6 +1,7 @@
 from django.contrib.gis.db import models
 from cities.models import City
 import json as JSON
+from django.contrib.gis.geos import GEOSGeometry
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -49,7 +50,7 @@ class Location(models.Model):
 
     about = models.TextField(null=True, blank=True)
 
-    what_kind = models.ForeignKey(LocationType)
+    what_kind = models.ForeignKey(LocationType, null=True, blank=True)
 
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
@@ -58,6 +59,8 @@ class Location(models.Model):
         return "%s - %s" % (self.name,self.city_and_state,)
 
     def save(self, *args, **kwargs):
+        if not self.geom:
+            self.geom = GEOSGeometry('POINT(%s %s)' % (self.latitude, self.longitude,))
         if self.geom:
             self.latitude = self.geom[0]
             self.longitude = self.geom[1]

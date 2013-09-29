@@ -29,12 +29,12 @@
     <div id="minisplore">
         <h3>community</h3>
         <div id="minisplore-wrapper">
-            <ul>
-                {% for community in communities %}
-                    <li><a href="#" data-id="{{ community.neighborhood.id }}">{{ community.neighborhood.name }}</a></li>
-                {% endfor %}
-                    <li><a href="#" id="anywhere">anywhere else</a></li>
-            </ul>
+                <ul>
+                    {% for community in communities %}
+                        <li><a href="#" data-id="{{ community.neighborhood.id }}">{{ community.neighborhood.name }}</a></li>
+                    {% endfor %}
+                        <li><a href="#" id="anywhere">anywhere else</a></li>
+                </ul>
         </div>
     </div>
 
@@ -50,6 +50,7 @@
 {% block footerscripts %}
     <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jcarousellite.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
 

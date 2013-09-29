@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Idea List
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/list.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="large-2 columns">{{ idea.support_count }} support this</div>
+        <div class="large-6 small-6 columns no-padding"></div>
+        <div class="large-1 small-6 columns no-padding"><a class="supporting" data-id="{{ idea.id }}" href="#"></a></div>
+        <div class="large-1 small-6 columns no-padding"><a class="dislike" data-id="{{ idea.id }}" href="#"></a></div>
+        <div class="large-2 columns">
+            <span>share</span>
+            <ul class="sharing">
+                <li><a class="fb-idea" href="#facebook"></a></li>
+                <li><a class="fb-twitter" href="#twitter"></a></li>
+                <li><a class="fb-linkedin" href="#linkedin"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="large-12 columns">We want {{ idea.name }} in {{ idea.where.name }}, {{ idea.where.city }}</div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">It's a {{ idea.what_kind }} for {{ idea.what_for }}</div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">I imagine something like this:</div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">{{ idea.description }}</div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">Links: </div>
+    </div>
+
+{#    <div class="row">#}
+{#        <div class="large-12 columns">news </div>#}
+{#    </div>#}
+{##}
+{#    <div class="row">#}
+{#        <div class="large-3 small-2 columns">#}
+{#            <div id="add-news-image">#}
+{##}
+{#            </div>#}
+{#        </div>#}
+{#        <div class="large-8 small-8 columns">#}
+{#            {{ form.news|add_class:"news-text" }}#}
+{#        </div>#}
+{#        <div class="large-1 small-1 columns pos-rel">#}
+{##}
+{#        </div>#}
+{#    </div>#}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}
