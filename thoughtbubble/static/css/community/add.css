@@ -108,9 +108,10 @@
   background-position: 57px 57px;
 }
 
-/* line 98, ../../scss/community/add.scss */
+/* line 99, ../../scss/community/add.scss */
 input[type="password"],
 input[type="email"],
+input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
@@ -118,7 +119,7 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 105, ../../scss/community/add.scss */
+/* line 106, ../../scss/community/add.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -126,23 +127,23 @@ textarea {
   max-width: 100%;
 }
 
-/* line 112, ../../scss/community/add.scss */
+/* line 113, ../../scss/community/add.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 116, ../../scss/community/add.scss */
+/* line 117, ../../scss/community/add.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 121, ../../scss/community/add.scss */
+/* line 122, ../../scss/community/add.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 125, ../../scss/community/add.scss */
+/* line 126, ../../scss/community/add.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -151,7 +152,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 132, ../../scss/community/add.scss */
+/* line 133, ../../scss/community/add.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -160,7 +161,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 139, ../../scss/community/add.scss */
+/* line 140, ../../scss/community/add.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -171,12 +172,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 149, ../../scss/community/add.scss */
+/* line 150, ../../scss/community/add.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 153, ../../scss/community/add.scss */
+/* line 154, ../../scss/community/add.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -187,12 +188,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 162, ../../scss/community/add.scss */
+/* line 163, ../../scss/community/add.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 167, ../../scss/community/add.scss */
+/* line 168, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -202,12 +203,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 173, ../../scss/community/add.scss */
+/* line 174, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 177, ../../scss/community/add.scss */
+/* line 178, ../../scss/community/add.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -215,17 +216,17 @@ form .row .row.second-row {
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 184, ../../scss/community/add.scss */
+/* line 185, ../../scss/community/add.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 188, ../../scss/community/add.scss */
+/* line 189, ../../scss/community/add.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 192, ../../scss/community/add.scss */
+/* line 193, ../../scss/community/add.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -254,14 +255,14 @@ form .row .row.second-row {
   /* IE6-9 */
 }
 
-/* line 211, ../../scss/community/add.scss */
+/* line 212, ../../scss/community/add.scss */
 .left-idea-cap {
   padding-top: 30px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 217, ../../scss/community/add.scss */
+/* line 218, ../../scss/community/add.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -269,7 +270,7 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 225, ../../scss/community/add.scss */
+/* line 226, ../../scss/community/add.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -277,35 +278,35 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 233, ../../scss/community/add.scss */
+/* line 234, ../../scss/community/add.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 239, ../../scss/community/add.scss */
+/* line 240, ../../scss/community/add.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 251, ../../scss/community/add.scss */
+/* line 252, ../../scss/community/add.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
 }
-/* line 255, ../../scss/community/add.scss */
+/* line 256, ../../scss/community/add.scss */
 .right-idea-cap table {
   background: transparent;
   border: none;
 }
-/* line 262, ../../scss/community/add.scss */
+/* line 263, ../../scss/community/add.scss */
 .right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
   background: transparent;
 }
 
-/* line 271, ../../scss/community/add.scss */
+/* line 272, ../../scss/community/add.scss */
 #community-logo,
 #news-photo,
 .picture {
@@ -318,17 +319,17 @@ form .row .row.second-row {
   background-position: 57px 57px;
 }
 
-/* line 281, ../../scss/community/add.scss */
+/* line 282, ../../scss/community/add.scss */
 .picture {
   float: left;
   margin-left: 20px;
 }
-/* line 285, ../../scss/community/add.scss */
+/* line 286, ../../scss/community/add.scss */
 .picture:first-child {
   margin-left: 0px;
 }
 
-/* line 290, ../../scss/community/add.scss */
+/* line 291, ../../scss/community/add.scss */
 .feature {
   width: 135px;
   height: 20px;
@@ -345,12 +346,19 @@ form .row .row.second-row {
   text-align: center;
 }
 
-/* line 306, ../../scss/community/add.scss */
+/* line 307, ../../scss/community/add.scss */
 #news #news-photo {
   float: left;
   margin-right: 20px;
 }
-/* line 311, ../../scss/community/add.scss */
+/* line 312, ../../scss/community/add.scss */
 #news textarea {
   width: 490px;
+}
+
+/* line 317, ../../scss/community/add.scss */
+.submit-all {
+  padding: 5px 100px;
+  margin: 0 auto;
+  display: block;
 }

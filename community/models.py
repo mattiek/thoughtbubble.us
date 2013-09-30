@@ -22,7 +22,7 @@ class Community(models.Model):
 
     curator = models.ForeignKey(ThoughtbubbleUser, related_name="community_curator", null=True, blank=True)
 
-    members = models.ManyToManyField(ThoughtbubbleUser)
+    members = models.ManyToManyField(ThoughtbubbleUser, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Communities"

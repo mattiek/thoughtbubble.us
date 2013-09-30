@@ -3,6 +3,7 @@ from django.shortcuts import render, HttpResponse, redirect
 from serializers import CommunitySerializer, CustomPaginationSerializer
 from rest_framework import viewsets
 from vanilla import DetailView, CreateView, UpdateView, ListView
+from django.core.urlresolvers import reverse_lazy, reverse
 
 class CommunityViewset(viewsets.ModelViewSet):
     serializer_class = CommunitySerializer
@@ -19,16 +20,20 @@ class CommunityList(ListView):
     model = Community
 
 
-class CommunityUpdate(UpdateView):
-    model = Community
-
-
 class CommunityCreate(CreateView):
     model = Community
 
 
 class CommunityDetail(DetailView):
     model = Community
+
+class CommunityUpdate(UpdateView):
+    model = Community
+    # success_url = reverse_lazy('community_detail')
+
+    # def get_success_url(self, *args, **kwargs):
+    #     # super(UpdateView, self).get_success_url(*args, **kwargs)
+    #     return reverse('community_detail', kwargs=self.kwargs)
 
 
 def join(request, state, city, pk):

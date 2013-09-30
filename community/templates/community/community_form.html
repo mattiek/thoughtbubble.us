@@ -17,6 +17,12 @@
 {% endblock %}
 
 {% block content %}
+    <form method="POST" action="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">
+        {% csrf_token %}
+        <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
+        <input type="hidden" name="curator" value="{{ form.curator.value }}"/>
+
+    {{ form.errors }}
     <div class="row">
         <div class="large-2 columns push-3">
             <img id="community-logo" src="{{ community.get_logo }}" alt=""/>
@@ -30,7 +36,7 @@
                     title
                 </div>
                 <div class="large-5 pull-4 columns">
-                    <input type="text"/>
+                    {{ form.title }}
                 </div>
             </div>
 
@@ -39,7 +45,7 @@
                     website
                 </div>
                 <div class="large-5 pull-4 columns">
-                    <input type="text"/>
+                    {{ form.website }}
                 </div>
             </div>
 
@@ -48,7 +54,7 @@
                     facebook
                 </div>
                 <div class="large-5 pull-4 columns">
-                    <input type="text"/>
+                    {{ form.facebook_url }}
                 </div>
             </div>
 
@@ -57,7 +63,7 @@
                     twitter
                 </div>
                 <div class="large-5 pull-4 columns">
-                    <input type="text"/>
+                    {{ form.twitter_url }}
                 </div>
             </div>
 
@@ -66,7 +72,7 @@
                     linkedin
                 </div>
                 <div class="large-5 pull-4 columns">
-                    <input type="text"/>
+                    {{ form.linkedin_url }}
                 </div>
             </div>
         </div>
@@ -76,9 +82,8 @@
     <div class="row">
         <div class="large-1 columns">about</div>
         <div class="large-10 columns">
-            <textarea></textarea>
+            {{ form.about }}
         </div>
-        <div class="large-1 columns">save</div>
     </div>
 
     {#    News #}
@@ -88,7 +93,9 @@
             <div id="news-photo"></div>
             <textarea></textarea>
         </div>
-        <div class="large-2 columns">save</div>
+        <div class="large-2 columns">
+            <a href="#" class="orange">save</a>
+        </div>
     </div>
 
 
@@ -117,14 +124,13 @@
         </div>
     </div>
 
-
     <div class="row">
         <div class="large-12 columns">
-            {{ community.about }}
+            <input type="submit" class="orange submit-all" value="update all"/>
         </div>
     </div>
 
-
+    </form>
 {% endblock %}
 
 {% block footerscripts %}

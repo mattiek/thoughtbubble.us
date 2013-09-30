@@ -22,6 +22,10 @@
             <img src="{{ community.get_logo }}" alt=""/>
         </div>
     </div>
+
+    {% if community.curator == request.user %}
+        <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
+    {% endif %}
     <div class="row title">
             <span id="header">{{ community.title }}</span>
             <ul class="sharing">
@@ -38,7 +42,9 @@
     </div>
     <div class="row">
         <div class="actions">
-            <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">join</a>
+            <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
+                {% if request.user in community.members.all %}un{% endif %}join
+            </a>
             <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">ideas</a>
             <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">explore</a>
             <a href="#" class="orange s-button">add</a>

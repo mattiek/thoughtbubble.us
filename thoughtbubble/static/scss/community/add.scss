@@ -95,6 +95,7 @@
 
 input[type="password"],
 input[type="email"],
+input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
@@ -311,4 +312,10 @@ form .row .row.second-row {
   textarea {
     width: 490px;
   }
+}
+
+.submit-all {
+  padding: 5px 100px;
+  margin: 0 auto;
+  display: block;
 }
