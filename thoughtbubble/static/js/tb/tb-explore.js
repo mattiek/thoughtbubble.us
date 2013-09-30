@@ -130,7 +130,8 @@ $('#minisplore-wrapper').baron();
 
 $('#minisplore a').on('click', function(e){
     e.preventDefault();
-    var id = $(e.target).attr('data-id');
+    var id = $(e.target).attr('data-id'),
+        cid = $(e.target).attr('data-community');
     var layer = neighborhoods[id];
     highlightFeature(layer);
     map.fitBounds(layer);
@@ -138,6 +139,28 @@ $('#minisplore a').on('click', function(e){
     // Rewrite idea create link
     var $i = $('#idea-nav');
     $i.attr('href', $i.attr('data-href') + '/' + id);
+
+    // Get to Explore 2
+    // TODO: Animate this
+
+    $('#minisplore').hide();
+    $('#communisplore').empty().show();
+    $.ajax(
+        {
+            url: '/api/v1/locations/.json?community=' + id,
+            dataType: 'json',
+            success: function(data) {
+                for (x in data.results) {
+                        var loc = data.results[x];
+                        var $i = $('<section/>').html('<h3>' + loc.name + '</h3>');
+                        $('#communisplore').append($i);
+                }
+                $v = $('<div/>').addClass('ending');
+                $('#communisplore').append($v);
+                setScroll();
+            }
+        }
+    );
 
 });
 
@@ -155,3 +178,52 @@ $('#metrodifier').on('change', function(e) {
             }
         });
 });
+
+
+
+var setScroll = function() {
+    // Array of story section elements.
+    var sections = document.getElementsByTagName('section');
+
+    // Helper to set the active section.
+    var setActive = function(index, ease) {
+        _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
+        sections[index].className += ' active';
+        return true;
+    };
+
+    // Bind to scroll events to find the active section.
+    $('#communisplore').on( "scroll",function(e) {
+//        _(function() {
+        // IE 8
+        if (window.pageYOffset === undefined) {
+            var y = document.documentElement.scrollTop;
+            var h = document.documentElement.clientHeight;
+        } else {
+            var y = window.pageYOffset;
+            var h = window.innerHeight;
+        }
+
+        var y = $(e.target).scrollTop(),
+            h = $(e.target).height();
+
+
+        // If scrolled to the very top of the page set the first section active.
+        if (y === 0) return setActive(0, true);
+
+        // Otherwise, conditionally determine the extent to which page must be
+        // scrolled for each section. The first section that matches the current
+        // scroll position wins and exits the loop early.
+        var memo = 0;
+        var buffer = (h * 0.3333);
+        var active = _(sections).any(function(el, index) {
+            memo += el.offsetHeight;
+            return y < (memo-buffer) ? setActive(index, true) : false;
+        });
+
+        // If no section was set active the user has scrolled past the last section.
+        // Set the last section active.
+        if (!active) setActive(sections.length - 1, true);
+//    }).debounce(10);
+    });
+}

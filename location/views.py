@@ -18,6 +18,9 @@ class LocationViewset(viewsets.ModelViewSet):
     queryset = Location.objects.none()
 
     def get_queryset(self):
+        community = self.request.GET.get('community',None)
+        if community:
+            return Location.objects.filter(community=community)
         name = self.request.GET.get('metro','')
         return Location.objects.filter(name__icontains=name)
 

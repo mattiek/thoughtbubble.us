@@ -261,31 +261,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 240, ../scss/nav.scss */
+/* line 239, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 245, ../scss/nav.scss */
+/* line 244, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 250, ../scss/nav.scss */
+/* line 249, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 258, ../scss/nav.scss */
+/* line 257, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   width: 179px;
 }
 
-/* line 263, ../scss/nav.scss */
+/* line 262, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -296,7 +296,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 272, ../scss/nav.scss */
+/* line 271, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -304,7 +304,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 279, ../scss/nav.scss */
+/* line 278, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -312,7 +312,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 286, ../scss/nav.scss */
+/* line 285, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;

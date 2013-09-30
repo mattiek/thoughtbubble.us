@@ -60,7 +60,11 @@ INSTALLED_APPS = (
     'community',
     'project',
     'social.apps.django_app.default',
+    'threadedcomments',
+    'django.contrib.comments',
 )
+
+COMMENTS_APP = 'threadedcomments'
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',

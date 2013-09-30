@@ -2,6 +2,8 @@ from django.contrib.gis.db import models
 from cities.models import City
 import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
+from community.models import Community
+from neighborhood.models import Neighborhood
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -55,6 +57,8 @@ class Location(models.Model):
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 
+    community = models.ForeignKey(Neighborhood, null=True, blank=True)
+
     def __unicode__(self):
         return "%s - %s" % (self.name,self.city_and_state,)
 
@@ -64,6 +68,13 @@ class Location(models.Model):
         if self.geom:
             self.latitude = self.geom[0]
             self.longitude = self.geom[1]
+
+        # Put in the correct Community
+        s = Neighborhood.objects.filter(geom__contains=self.geom)
+        if s:
+            self.community = s[0]
+
+
         super(Location, self).save(*args, **kwargs)
 
     def getGeoJSON(self):
