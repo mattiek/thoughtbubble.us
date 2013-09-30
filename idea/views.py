@@ -3,7 +3,7 @@ from forms import AddIdeaForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
 from django.contrib import messages
-from vanilla import ListView, DetailView
+from vanilla import ListView, DetailView, CreateView, DeleteView
 
 def addidea(request, id=None):
     if request.POST:
@@ -84,10 +84,21 @@ class IdeaDetail(DetailView):
     model = Idea
 
 def support_idea(request, id):
+    if not request.user:
+        return HttpResponse('none')
+
     try:
-        g = IdeaSupport.objects.get(user=request.user, idea=id)
+        idea = Idea.objects.get(pk=id)
+    except:
+        return HttpResponse('none')
+
+    try:
+        g = IdeaSupport.objects.get(user=request.user, idea=idea)
         g.delete()
         return HttpResponse("removed")
     except:
-        IdeaSupport.objects.create(user=request.user, idea=id)
+        IdeaSupport.objects.create(user=request.user, idea=idea)
         return HttpResponse("added")
+
+
+

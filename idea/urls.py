@@ -4,6 +4,7 @@ from views import IdeaList, IdeaDetail
 urlpatterns = patterns('idea.views',
    url(r'^add/?$', 'addidea', name='addidea'),
    url(r'^add/(?P<id>\d+)/?$', 'addidea', name='addidea'),
+   url(r'^support/(?P<id>\d+)/?$', 'support_idea', name='support_idea'),
    url(r'^$', IdeaList.as_view(), name='idea_list'),
    url(r'^(?P<state>\w+)/?$', IdeaList.as_view(), name='idea_list'),
    url(r'^(?P<state>\w+)/(?P<city>\w+)/?$', IdeaList.as_view(), name='idea_list'),
