@@ -16,7 +16,7 @@ def logout(request):
     return redirect('home')
 
 
-def explore(request):
+def explore(request, state=None, city=None, community=None):
     d = {}
     d['communities'] = Community.objects.filter().order_by('neighborhood__name')
 

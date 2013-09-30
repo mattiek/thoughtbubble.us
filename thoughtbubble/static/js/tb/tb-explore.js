@@ -57,11 +57,26 @@ $.ajax({
     dataType: 'json',
     success: function load(d) {
         var markers = L.mapbox.markerLayer(d.results).addTo(map);
-        markers.on('click', function(e) {
-            map.panTo(e.layer.getLatLng());
+        // Add features to the map
+        markers.eachLayer(function(marker) {
+
+            var feature = marker.feature;
+
+            // Create custom popup content
+            var popupContent =  '<a class="popup" href="' + feature.properties.link + '">' +
+                '   <h3>' + feature.properties.title + '</h3>' +
+                '</a>';
+
+            // http://leafletjs.com/reference.html#popup
+            marker.bindPopup(popupContent,{
+                closeButton: false
+//                minWidth: 320
+            });
         });
+
     }
 });
+
 
 $.ajax({
     url: '/api/v1/neighborhoods/.json?metro=columbus',
@@ -85,37 +100,12 @@ $.ajax({
         }
         }).addTo(map);
 
-        var geoJson = [{
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-75.00, 40]
-            },
-            "properties": {
-                "title": "Small kitten",
-                "icon": {
-                    "iconUrl": "http://placekitten.com/50/50",
-                    "iconSize": [50, 50], // size of the icon
-                    "iconAnchor": [25, 25], // point of the icon which will correspond to marker's location
-                    "popupAnchor": [0, -25]  // point from which the popup should open relative to the iconAnchor
-                }
-            }
-        }, {
-            "type": "Feature",
-            "geometry": {
-                "type": "Point",
-                "coordinates": [-74.00, 40]
-            },
-            "properties": {
-                "title": "Big kitten",
-                "icon": {
-                    "iconUrl": "http://placekitten.com/100/100",
-                    "iconSize": [100, 100],
-                    "iconAnchor": [50, 50],
-                    "popupAnchor": [0, -55]
-                }
-            }
-        }];
+        hoods.eachLayer(function(e) {
+            var marker = e;
+//            var feature = marker.feature;
+//            marker.setIcon(L.icon(feature.properties.icon));
+        });
+
 
 //        map.markerLayer.setGeoJSON(d.features);
 //        hoods.on('click', function(e) {
@@ -144,7 +134,13 @@ $('#minisplore a').on('click', function(e){
     // TODO: Animate this
 
     $('#minisplore').hide();
-    $('#communisplore').empty().show();
+
+    $section = $('<section/>').addClass('header').html('<a href="' + $(e.target).attr('href') + '">' +
+        '<h3>' + $(e.target).text() + '</h3>' +
+        '</a>' +
+        '');
+
+    $('#communisplore').empty().append($section).show();
     $.ajax(
         {
             url: '/api/v1/locations/.json?community=' + id,
@@ -227,3 +223,11 @@ var setScroll = function() {
 //    }).debounce(10);
     });
 }
+
+
+
+
+
+
+///
+// Bad

@@ -38,7 +38,8 @@ class Idea(models.Model):
     date_created = models.DateTimeField(auto_now_add=True, default=now())
     date_modified = models.DateTimeField(auto_now=True, default=now())
 
-    # support = models.ManyToManyField(Support)
+
+    member = models.ForeignKey(ThoughtbubbleUser, related_name='member_idea_creator', null=True, blank=True)
 
     def __unicode__(self):
         return self.name

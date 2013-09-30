@@ -4,6 +4,7 @@ import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
 from community.models import Community
 from neighborhood.models import Neighborhood
+from django.core.urlresolvers import reverse
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -62,6 +63,10 @@ class Location(models.Model):
     def __unicode__(self):
         return "%s - %s" % (self.name,self.city_and_state,)
 
+    def get_absolute_url(self):
+        return reverse('location_detail', args=[str(self.id)])
+
+
     def save(self, *args, **kwargs):
         if not self.geom:
             self.geom = GEOSGeometry('POINT(%s %s)' % (self.latitude, self.longitude,))
@@ -92,6 +97,7 @@ class Location(models.Model):
         properties['marker-size'] = 'medium'
         properties['marker-color'] = '#f0a'
         properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
+        properties['link'] = self.get_absolute_url()
 
         # properties['icon'] = {
         #     "iconUrl": "http://placekitten.com/50/50",

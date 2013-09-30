@@ -31,7 +31,10 @@
         <div id="minisplore-wrapper">
                 <ul>
                     {% for community in communities %}
-                        <li><a href="#" data-id="{{ community.neighborhood.id }}" data-community="{{ community.id }}">{{ community.neighborhood.name }}</a></li>
+                        <li><a href="{{ community.get_absolute_url }}"
+                               data-id="{{ community.neighborhood.id }}"
+                               data-community="{{ community.id }}"
+                                >{{ community.neighborhood.name }}</a></li>
                     {% endfor %}
                         <li><a href="#" id="anywhere">anywhere else</a></li>
                 </ul>

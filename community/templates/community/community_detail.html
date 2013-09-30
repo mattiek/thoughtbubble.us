@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Community Detail
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/community/detail.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="large-12 columns">
+            <img src="{{ community.get_logo }}" alt=""/>
+        </div>
+    </div>
+    <div class="row title">
+            <span id="header">{{ community.title }}</span>
+            <ul class="sharing">
+                <li><a class="fb-idea" href="#facebook"></a></li>
+                <li><a class="fb-twitter" href="#twitter"></a></li>
+                <li><a class="fb-linkedin" href="#linkedin"></a></li>
+            </ul>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="actions">
+            <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">join</a>
+            <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">ideas</a>
+            <a href="#" class="orange s-button">explore</a>
+            <a href="#" class="orange s-button">add</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-12 columns">
+            {{ community.about }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="large-2 columns">
+            <span>share</span>
+            <ul class="sharing">
+                <li><a class="fb-idea" href="#facebook"></a></li>
+                <li><a class="fb-twitter" href="#twitter"></a></li>
+                <li><a class="fb-linkedin" href="#linkedin"></a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}

@@ -57,6 +57,11 @@ class LocationViewset(viewsets.ModelViewSet):
 class LocationList(ListView):
     model = Location
 
+
+class LocationDetail(DetailView):
+    model = Location
+
+
 class LocationCreate(CreateView):
     model = Location
     form_class = AddLocationForm

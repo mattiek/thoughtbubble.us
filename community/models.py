@@ -1,7 +1,9 @@
 from django.contrib.gis.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
+from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
+from django.core.urlresolvers import reverse
 
 
 
@@ -18,10 +20,20 @@ class Community(models.Model):
 
     about = models.TextField(null=True, blank=True)
 
+    curator = models.ForeignKey(ThoughtbubbleUser, related_name="community_curator", null=True, blank=True)
 
+    members = models.ManyToManyField(ThoughtbubbleUser)
 
     class Meta:
         verbose_name_plural = "Communities"
+
+    def get_logo(self):
+        if self.logo:
+            return self.logo.url
+        return ''
+
+    def get_absolute_url(self):
+        return reverse('community_detail', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
 
 
 class CommunityNews(models.Model):
