@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Community Detail
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/community/add.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="large-2 columns push-3">
+            <img id="community-logo" src="{{ community.get_logo }}" alt=""/>
+        </div>
+        <div class="large-6 columns pull-1">
+
+
+
+            <div class="row">
+                <div class="large-3 columns">
+                    title
+                </div>
+                <div class="large-5 pull-4 columns">
+                    <input type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-3 columns">
+                    website
+                </div>
+                <div class="large-5 pull-4 columns">
+                    <input type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-3 columns">
+                    facebook
+                </div>
+                <div class="large-5 pull-4 columns">
+                    <input type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-3 columns">
+                    twitter
+                </div>
+                <div class="large-5 pull-4 columns">
+                    <input type="text"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-3 columns">
+                    linkedin
+                </div>
+                <div class="large-5 pull-4 columns">
+                    <input type="text"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {#    About #}
+    <div class="row">
+        <div class="large-1 columns">about</div>
+        <div class="large-10 columns">
+            <textarea></textarea>
+        </div>
+        <div class="large-1 columns">save</div>
+    </div>
+
+    {#    News #}
+    <div id="news" class="row">
+        <div class="large-1 columns">news</div>
+        <div class="large-8 columns">
+            <div id="news-photo"></div>
+            <textarea></textarea>
+        </div>
+        <div class="large-2 columns">save</div>
+    </div>
+
+
+    {#    Pictures #}
+    <div class="row addpad">
+        <div class="large-1 columns">pictures</div>
+        <div class="large-11 columns">
+            <div class="picture"></div>
+            <div class="picture"></div>
+        </div>
+    </div>
+
+    {#    Partners #}
+    <div class="row addpad">
+        <div class="large-1 columns">partners</div>
+        <div class="large-11 columns">
+            <div class="picture"></div>
+        </div>
+    </div>
+
+    {#    Features #}
+    <div class="row addpad">
+        <div class="large-1 columns">features</div>
+        <div class="large-11 columns">
+            <div class="feature">add a feature</div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="large-12 columns">
+            {{ community.about }}
+        </div>
+    </div>
+
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}

@@ -40,7 +40,7 @@
         <div class="actions">
             <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">join</a>
             <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">ideas</a>
-            <a href="#" class="orange s-button">explore</a>
+            <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">explore</a>
             <a href="#" class="orange s-button">add</a>
         </div>
     </div>

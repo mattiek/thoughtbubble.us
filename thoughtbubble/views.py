@@ -16,7 +16,7 @@ def logout(request):
     return redirect('home')
 
 
-def explore(request, state=None, city=None, community=None):
+def explore(request, state=None, city=None, pk=None):
     d = {}
     d['communities'] = Community.objects.filter().order_by('neighborhood__name')
 
@@ -24,6 +24,9 @@ def explore(request, state=None, city=None, community=None):
         'current': 'Columbus',
         'list': Neighborhood.objects.values_list('city','state').distinct(),
     }
+
+    if pk:
+        d['exploring'] = Community.objects.get(pk=pk)
 
     return render(request, 'explore.html', d)
 

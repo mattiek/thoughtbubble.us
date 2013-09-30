@@ -3,15 +3,6 @@ var is_drawable = has_map && $("#map").hasClass("drawable");
 
 var neighborhoods = neighborhoods || {};
 
-//var reg_icon =  L.icon({
-//    "iconUrl": "/static/images/map-point.png",
-//    "iconSize": [26, 33], // size of the icon
-//    "iconAnchor": [13, 30], // point of the icon which will correspond to marker's location
-//    "popupAnchor": [0, -25]  // point from which the popup should open relative to the iconAnchor
-//    });
-//
-
-
 if(has_map){
     TB.Map.init();
     if(is_drawable){
@@ -118,10 +109,9 @@ $.ajax({
 
 $('#minisplore-wrapper').baron();
 
-$('#minisplore a').on('click', function(e){
-    e.preventDefault();
-    var id = $(e.target).attr('data-id'),
-        cid = $(e.target).attr('data-community');
+
+var minmin = function(id, cid, href, communityName) {
+
     var layer = neighborhoods[id];
     highlightFeature(layer);
     map.fitBounds(layer);
@@ -135,8 +125,8 @@ $('#minisplore a').on('click', function(e){
 
     $('#minisplore').hide();
 
-    $section = $('<section/>').addClass('header').html('<a href="' + $(e.target).attr('href') + '">' +
-        '<h3>' + $(e.target).text() + '</h3>' +
+    $section = $('<section/>').addClass('header').html('<a href="' + href + '">' +
+        '<h3>' + communityName + '</h3>' +
         '</a>' +
         '');
 
@@ -147,17 +137,29 @@ $('#minisplore a').on('click', function(e){
             dataType: 'json',
             success: function(data) {
                 for (x in data.results) {
-                        var loc = data.results[x];
-                        var $i = $('<section/>').html('<h3>' + loc.name + '</h3>');
-                        $('#communisplore').append($i);
+                    var loc = data.results[x];
+                    var $i = $('<section/>').html('<h3>' + loc.name + '</h3>');
+                    $('#communisplore').append($i);
                 }
                 $v = $('<div/>').addClass('ending');
                 $('#communisplore').append($v);
-                setScroll();
+                setScrollExplore();
             }
         }
     );
+}
 
+$('#minisplore a').on('click', function(e){
+    e.preventDefault();
+
+    var id = $(e.target).attr('data-id'),
+        cid = $(e.target).attr('data-community');
+    minmin(
+        id,
+        cid,
+        $(e.target).attr('href'),
+        $(e.target).text()
+    );
 });
 
 
@@ -177,7 +179,7 @@ $('#metrodifier').on('change', function(e) {
 
 
 
-var setScroll = function() {
+var setScrollExplore = function() {
     // Array of story section elements.
     var sections = document.getElementsByTagName('section');
 
@@ -224,10 +226,3 @@ var setScroll = function() {
     });
 }
 
-
-
-
-
-
-///
-// Bad
