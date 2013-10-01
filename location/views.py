@@ -87,6 +87,6 @@ class LocationCreate(CreateView):
             community = Community.objects.get(pk=comm)
             context['action_url'] = reverse('addlocation', args=[comm,])
             context['community'] = community
-            self.form.fields['where'].initial = community
+            # self.form.fields['where'].initial = community
         # context['is_admin'] = self.request.user.is_admin
         return context
