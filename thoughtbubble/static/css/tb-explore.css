@@ -180,47 +180,47 @@ section.active {
 section.active .extended {
   display: block;
 }
+/* line 160, ../scss/tb-explore.scss */
+section p {
+  margin: 10px 0;
+}
 
-/* line 162, ../scss/tb-explore.scss */
+/* line 167, ../scss/tb-explore.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
   text-decoration: none;
   font-weight: normal;
+  margin: 0;
 }
 
-/* line 170, ../scss/tb-explore.scss */
+/* line 176, ../scss/tb-explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 171, ../scss/tb-explore.scss */
+/* line 177, ../scss/tb-explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 172, ../scss/tb-explore.scss */
+/* line 178, ../scss/tb-explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 173, ../scss/tb-explore.scss */
+/* line 179, ../scss/tb-explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 174, ../scss/tb-explore.scss */
+/* line 180, ../scss/tb-explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 175, ../scss/tb-explore.scss */
-p {
-  margin: 0px;
-}
-
-/* line 177, ../scss/tb-explore.scss */
+/* line 182, ../scss/tb-explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -230,13 +230,13 @@ p {
   padding: 5px 10px;
 }
 
-/* line 184, ../scss/tb-explore.scss */
+/* line 189, ../scss/tb-explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 189, ../scss/tb-explore.scss */
+/* line 194, ../scss/tb-explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -245,7 +245,7 @@ p {
   margin: 0px auto 20px;
 }
 
-/* line 195, ../scss/tb-explore.scss */
+/* line 200, ../scss/tb-explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }

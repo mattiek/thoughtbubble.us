@@ -99,6 +99,8 @@ class Location(models.Model):
         # properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
         properties['link'] = self.get_absolute_url()
 
+        properties['about'] = self.about
+
         # properties['icon'] = {
         #     "iconUrl": "http://placekitten.com/50/50",
         #     "iconSize": [50, 50], # size of the icon

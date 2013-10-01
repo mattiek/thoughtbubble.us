@@ -156,6 +156,11 @@ section {
       display: block;
     }
   }
+
+  p {
+    margin: 10px 0;
+  }
+
 }
 
 section a {
@@ -163,6 +168,7 @@ section a {
     color: #53b8d1; /* text color */
     text-decoration:none;
     font-weight: normal;
+    margin: 0;
   }
   //text-shadow:rgba(64,64,64,1) 0px 0px 4px;
 }
@@ -172,7 +178,6 @@ section.active small { color:#aaa; }
 h1 { font-size:2em; line-height:1em; }
 h2 { font-size:1.3333em; }
 h1,h2 { margin:0px 0px 10px; }
-p { margin:0px; }
 
 .scroll {
   position:absolute;

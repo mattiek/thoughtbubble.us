@@ -23,6 +23,7 @@ function highlightFeature(layer) {
             stroke: false,
             fill: false,
             weight: 1,
+//            color: '#03f',
             color: '#03f',
             dashArray: '',
             fillOpacity: 0
@@ -32,8 +33,9 @@ function highlightFeature(layer) {
     layer.setStyle({
         stroke: true,
         fill: true,
-        weight: 5,
-        color: '#E27B05',
+        weight: 3,
+//        color: '#E27B05',
+        color: '#CCC',
         dashArray: '',
         fillOpacity: 0.5
     });
@@ -156,7 +158,8 @@ var minmin = function(id, cid, href, communityName) {
                                     name: loc.name,
                                     link: loc.properties.link,
                                     longitude: loc.geometry.coordinates[0],
-                                    latitude: loc.geometry.coordinates[1]
+                                    latitude: loc.geometry.coordinates[1],
+                                    description: loc.properties.about
                     }
                     var html    = section_template(context);
 
