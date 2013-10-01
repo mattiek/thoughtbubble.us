@@ -2,6 +2,7 @@
 {% load classnames %}
 {% load getdict %}
 {% load widget_tweaks %}
+{% load ideacountables %}
 
 {% block title %}
     Dashboard
@@ -19,7 +20,7 @@
 {% block content %}
 
     <div id="form-wrapper">
-        <form action="{% url 'addidea' %}" method="POST">
+        <form action="{% url 'user_dashboard' %}" method="POST">
             {% csrf_token %}
             <div class="row">
                 <div class="large-offset-1 large-2 small-2 columns">
@@ -35,7 +36,7 @@
                     </div>
                     <div class="row">
                         <div class="large-12 small-12 columns user-stats">
-                            <span class="orange">0</span> ideas <span class="orange">0</span> ideas supported <span
+                            <span class="orange">{{ user|idea_count }}</span> ideas <span class="orange">0</span> ideas supported <span
                                 class="orange">0</span> communities joined
                         </div>
                     </div>
@@ -54,9 +55,14 @@
                 </div>
             </div>
 
-            <input type="submit" class="submit" value="post"/>
+{#            <input type="submit" class="submit" value="post"/>#}
         </form>
     </div>
+
+    {% for idea in ideas %}
+        {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+
 {% endblock %}
 
 {% block footerscripts %}

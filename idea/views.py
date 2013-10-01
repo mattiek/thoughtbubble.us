@@ -37,6 +37,7 @@ def addidea(request, id=None):
                         what_kind=data['what_kind'],
                         where=data['where'],
                         what_for=data['what_for'],
+                        user=request.user
                         )
             idea.save()
 
@@ -86,7 +87,7 @@ class IdeaDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(IdeaDetail,self).get_context_data(**kwargs)
-        context['supported'] = IdeaSupport.objects.filter(idea=self.model.objects.get(),user=self.request.user)
+        context['supported'] = IdeaSupport.objects.filter(idea=self.model.objects.get(pk=self.kwargs['pk']),user=self.request.user)
         return context
 
 

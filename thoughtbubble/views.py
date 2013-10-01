@@ -6,6 +6,7 @@ from models import *
 from django.contrib.auth import authenticate, logout as django_logout, login as django_login
 from thoughtbubble.utils import path_and_rename
 from community.models import Community
+from idea.models import Idea, IdeaSupport
 
 def home(request):
     return render(request, 'home.html')
@@ -63,6 +64,14 @@ def dashboard(request):
             profile = ThoughtbubbleUserProfile.objects.create(user=request.user).save()
         d = {}
         d['profile'] = profile
+
+        filter = request.GET.get('filter',None)
+
+        if filter == 'support':
+            d['ideas'] = [x.idea for x in IdeaSupport.objects.filter(user=request.user).order_by('-date_created')]
+        else:
+            d['ideas'] = Idea.objects.filter(user=request.user).order_by('-date_created')
+
         return render(request, 'accounts/dashboard.html', d)
 
 

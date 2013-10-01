@@ -40,7 +40,7 @@ class Idea(models.Model):
     date_modified = models.DateTimeField(auto_now=True, default=now())
 
 
-    member = models.ForeignKey(ThoughtbubbleUser, related_name='member_idea_creator', null=True, blank=True)
+    # member = models.ForeignKey(ThoughtbubbleUser, related_name='member_idea_creator', null=True, blank=True)
 
     def __unicode__(self):
         return self.name
@@ -64,6 +64,7 @@ class Idea(models.Model):
 
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)
+
 
 class IdeaImage(models.Model):
     idea = models.ForeignKey(Idea)

@@ -59,7 +59,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         return self.username
 
     def get_profile(self):
-        return self.thoughtbubbleuserprofile_set.all()[0]
+        return self.thoughtbubbleuserprofile
 
     def get_profile_picture(self):
         pic = self.get_profile().profile_picture
@@ -72,7 +72,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
 
 class ThoughtbubbleUserProfile(models.Model):
-    user = models.ForeignKey(ThoughtbubbleUser)
+    user = models.OneToOneField(ThoughtbubbleUser)
     first_name = models.CharField(max_length=50, default="", null=True, blank=True)
     last_name = models.CharField(max_length=50, default="", null=True, blank=True)
     location = models.CharField(max_length=50, default="", null=True, blank=True)
