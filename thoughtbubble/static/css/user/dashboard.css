@@ -89,17 +89,51 @@
   font-size: 11px;
 }
 
-/* line 3, ../../scss/location/detail.scss */
-#illustration {
-  background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
+/* line 1, ../../scss/partials/_sharing.scss */
+.sharing {
+  list-style-type: none;
+  display: inline-block;
+}
+/* line 4, ../../scss/partials/_sharing.scss */
+.sharing li {
+  display: inline-block;
+}
+/* line 7, ../../scss/partials/_sharing.scss */
+.sharing li span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  vertical-align: middle;
+}
+/* line 14, ../../scss/partials/_sharing.scss */
+.sharing li a {
+  display: block;
+}
+/* line 18, ../../scss/partials/_sharing.scss */
+.sharing li a.share-fb {
+  background: url(../../images/small-blue-facebook.png) no-repeat;
   background-size: 100%;
-  height: 238px;
-  width: 930px;
-  margin: 0 auto;
+  width: 18px;
+  height: 15px;
+}
+/* line 25, ../../scss/partials/_sharing.scss */
+.sharing li a.share-twitter {
+  background: url(../../images/small-blue-twitter.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+/* line 32, ../../scss/partials/_sharing.scss */
+.sharing li a.share-linkedin {
+  background: url(../../images/small-blue-linkedin.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
 }
 
-/* line 11, ../../scss/location/detail.scss */
-.submit {
+/* line 1, ../../scss/partials/_buttons.scss */
+.orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -119,21 +153,51 @@
   background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   /* layer fill content */
   border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 5, ../../scss/user/dashboard.scss */
+#illustration {
+  background: url(../images/illustration-ship.jpg) no-repeat no-repeat;
+  background-size: 100%;
+  height: 238px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+/* line 13, ../../scss/user/dashboard.scss */
+.submit {
   height: 33px;
   width: 322px;
-  color: #fff;
-  font-family: 'MuseoSans';
   float: right;
   margin-right: 120px;
 }
 
-/* line 34, ../../scss/location/detail.scss */
+/* line 21, ../../scss/user/dashboard.scss */
 #form-wrapper {
-  width: 600px;
+  width: 650px;
   margin: 0 auto;
 }
 
-/* line 39, ../../scss/location/detail.scss */
+/* line 26, ../../scss/user/dashboard.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -141,153 +205,38 @@
   background-color: #dadbdc;
   margin-left: -100px;
   position: absolute;
-  background-image: url(../../images/add-photo.png);
+  background-image: url(../images/add-photo.png);
   background-repeat: no-repeat;
   background-position: 57px 57px;
 }
 
-/* line 54, ../../scss/location/detail.scss */
-input[type="password"],
-input[type="email"],
-input[type="text"] {
-  /*width: 324px;*/
-  height: 25px;
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-}
-
-/* line 61, ../../scss/location/detail.scss */
-textarea {
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-  min-height: 200px;
-  max-width: 100%;
-}
-
-/* line 68, ../../scss/location/detail.scss */
-#id_captcha_choicefield {
-  list-style: none;
-}
-
-/* line 72, ../../scss/location/detail.scss */
-#id_captcha_choicefield li {
-  display: inline-block;
-  margin-left: 60px;
-}
-
-/* line 77, ../../scss/location/detail.scss */
-#id_captcha_choicefield li:first-child {
-  margin-left: 15px;
-}
-
-/* line 81, ../../scss/location/detail.scss */
-#captcha-question {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 88, ../../scss/location/detail.scss */
-.terms-and-conditions {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 95, ../../scss/location/detail.scss */
-.file-picker-input {
+/* line 39, ../../scss/user/dashboard.scss */
+#picture {
   width: 80px;
   height: 79px;
   border-radius: 10px;
   background-color: #dadbdc;
-  background-image: url(../../images/polaroid-camera-composite.png);
   background-repeat: no-repeat;
-  background-position: 23px 24px;
+  background-position: 57px 57px;
 }
 
-/* line 105, ../../scss/location/detail.scss */
-form .row .row.second-row {
-  margin-top: 15px;
-}
-
-/* line 109, ../../scss/location/detail.scss */
-.copy {
-  color: #6d6d6d;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 15px;
-  text-align: left;
-  text-indent: 10px;
-  margin-bottom: 0px;
-}
-
-/* line 118, ../../scss/location/detail.scss */
-#id_what_for {
-  width: 228px;
-}
-
-/* line 123, ../../scss/location/detail.scss */
-.chosen-container-single .chosen-default,
-.chosen-container-single .chosen-single,
-.chosen-container-single .chosen-drop .chosen-results li {
-  color: #6d6d6d;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 15px;
-}
-
-/* line 129, ../../scss/location/detail.scss */
-.chosen-container-single .chosen-default {
-  color: #bbb;
-}
-
-/* line 133, ../../scss/location/detail.scss */
-.chosen-container-single .chosen-single div b {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
-}
-
-/* line 140, ../../scss/location/detail.scss */
-.chosen-container {
-  margin-bottom: 15px;
-}
-
-/* line 144, ../../scss/location/detail.scss */
-.auto-hint {
-  color: #aaa;
-}
-
-/* line 148, ../../scss/location/detail.scss */
-#map {
-  width: 100%;
-  height: 265px;
-}
-
-/* line 153, ../../scss/location/detail.scss */
-#header {
-  background: #33bdd4;
-  color: #ffffff;
-  font-family: 'MuseoSans';
-  line-height: 33px;
-  width: 100%;
-  border-radius: 10px;
-  padding: 0 20px;
-  text-align: center;
-  padding: 20px;
-  font-size: 23px;
-  margin-bottom: 20px;
-}
-
-/* line 167, ../../scss/location/detail.scss */
-.about {
+/* line 48, ../../scss/user/dashboard.scss */
+.user-info {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
-  font-size: 38px/2;
+  font-size: 24px;
+}
+
+/* line 54, ../../scss/user/dashboard.scss */
+.user-stats {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 19px;
+}
+
+/* line 60, ../../scss/user/dashboard.scss */
+.emphasis {
+  color: #f47e23;
 }

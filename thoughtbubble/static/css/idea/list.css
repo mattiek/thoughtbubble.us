@@ -1,4 +1,4 @@
-/* line 2, ../../scss/idea/_idea.scss */
+/* line 2, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -27,56 +27,69 @@
   /* IE6-9 */
 }
 
-/* line 21, ../../scss/idea/_idea.scss */
+/* line 21, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .left-idea-cap {
   padding-top: 30px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 27, ../../scss/idea/_idea.scss */
+/* line 27, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
   display: block;
   float: left;
 }
-/* line 35, ../../scss/idea/_idea.scss */
+/* line 35, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
   display: block;
   float: left;
 }
-/* line 43, ../../scss/idea/_idea.scss */
+/* line 43, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 49, ../../scss/idea/_idea.scss */
+/* line 49, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 61, ../../scss/idea/_idea.scss */
+/* line 61, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
 }
-/* line 65, ../../scss/idea/_idea.scss */
+/* line 65, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .right-idea-cap table {
   background: transparent;
   border: none;
 }
-/* line 72, ../../scss/idea/_idea.scss */
+/* line 72, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
 .right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
   background: transparent;
 }
 
-/* line 1, ../../scss/partials/_buttons.scss */
+/* line 81, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/idea/_idea.scss */
+.supporting,
+.dislike,
+.commenting {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 1, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_buttons.scss */
 .orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -100,14 +113,14 @@
   color: #FFFFFF;
   font-family: 'MuseoSans';
 }
-/* line 17, ../../scss/partials/_buttons.scss */
+/* line 17, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_buttons.scss */
 .orange.activated {
   color: #f9c98c;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 23, ../../scss/partials/_buttons.scss */
+/* line 23, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -118,16 +131,16 @@
   font-size: 11px;
 }
 
-/* line 1, ../../scss/partials/_sharing.scss */
+/* line 1, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing {
   list-style-type: none;
   display: inline-block;
 }
-/* line 4, ../../scss/partials/_sharing.scss */
+/* line 4, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li {
   display: inline-block;
 }
-/* line 7, ../../scss/partials/_sharing.scss */
+/* line 7, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li span {
   color: #7b7b7b;
   /* text color */
@@ -135,25 +148,25 @@
   font-size: 10px;
   vertical-align: middle;
 }
-/* line 14, ../../scss/partials/_sharing.scss */
+/* line 14, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li a {
   display: block;
 }
-/* line 18, ../../scss/partials/_sharing.scss */
+/* line 18, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li a.share-fb {
   background: url(../../images/small-blue-facebook.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 25, ../../scss/partials/_sharing.scss */
+/* line 25, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li a.share-twitter {
   background: url(../../images/small-blue-twitter.png) no-repeat;
   background-size: 100%;
   width: 15px;
   height: 15px;
 }
-/* line 32, ../../scss/partials/_sharing.scss */
+/* line 32, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_sharing.scss */
 .sharing li a.share-linkedin {
   background: url(../../images/small-blue-linkedin.png) no-repeat;
   background-size: 100%;
@@ -161,7 +174,7 @@
   height: 15px;
 }
 
-/* line 3, ../../scss/partials/_chosen.scss */
+/* line 3, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_chosen.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -171,12 +184,12 @@
   font-size: 15px;
 }
 
-/* line 9, ../../scss/partials/_chosen.scss */
+/* line 9, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_chosen.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 13, ../../scss/partials/_chosen.scss */
+/* line 13, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_chosen.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -184,12 +197,12 @@
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 20, ../../scss/partials/_chosen.scss */
+/* line 20, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_chosen.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 24, ../../scss/partials/_chosen.scss */
+/* line 24, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_chosen.scss */
 .auto-hint {
   color: #aaa;
 }
@@ -243,20 +256,7 @@
   margin-bottom: 20px;
 }
 
-/* line 50, ../../scss/idea/list.scss */
-.supporting,
-.dislike,
-.commenting {
-  display: block;
-  float: left;
-  width: 75px;
-  height: 25px;
-  line-height: 25px;
-  text-align: center;
-  font-size: 11px;
-}
-
-/* line 60, ../../scss/idea/list.scss */
+/* line 49, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }
