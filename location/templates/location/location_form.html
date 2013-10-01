@@ -39,24 +39,24 @@
                     {{ form.address }}
                     {{ form.city_and_state }}
                     {{ form.zip }}
-                    <p class="copy">What is it?</p>
-
-                    <input type="hidden" value="{{ form.what_kind.value }}"
-                           id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.name }}" />
-
-                    <ul id="{{ form.what_kind.auto_id }}_choicefield">
-                        {% for choice in form.what_kind.field.choices %}
-                            <li {% if forloop.counter0 == 4 %}class="second"{% endif %}>
-                                {% with maki=makis|getdict:choice.1 %}
-                                    <a href="#"
-                                       data-value="{{ choice.0 }}"
-                                       class="{% if form.what_kind.value == choice.0|stringformat:'s' %}selected{% endif %} maki-icon {{ maki }}">
-
-                                    </a>
-                                {% endwith %}
-                            </li>
-                        {% endfor %}
-                    </ul>
+{#                    <p class="copy">What is it?</p>#}
+{##}
+{#                    <input type="hidden" value="{{ form.what_kind.value }}"#}
+{#                           id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.name }}" />#}
+{##}
+{#                    <ul id="{{ form.what_kind.auto_id }}_choicefield">#}
+{#                        {% for choice in form.what_kind.field.choices %}#}
+{#                            <li {% if forloop.counter0 == 4 %}class="second"{% endif %}>#}
+{#                                {% with maki=makis|getdict:choice.1 %}#}
+{#                                    <a href="#"#}
+{#                                       data-value="{{ choice.0 }}"#}
+{#                                       class="{% if form.what_kind.value == choice.0|stringformat:'s' %}selected{% endif %} maki-icon {{ maki }}">#}
+{##}
+{#                                    </a>#}
+{#                                {% endwith %}#}
+{#                            </li>#}
+{#                        {% endfor %}#}
+{#                    </ul>#}
                 </div>
                 <div class="large-6 small-6 columns">
                     <div class="row">

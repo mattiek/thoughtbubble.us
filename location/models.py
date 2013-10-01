@@ -96,7 +96,7 @@ class Location(models.Model):
         properties['title'] = self.name
         properties['marker-size'] = 'medium'
         properties['marker-color'] = '#f0a'
-        properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
+        # properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
         properties['link'] = self.get_absolute_url()
 
         # properties['icon'] = {

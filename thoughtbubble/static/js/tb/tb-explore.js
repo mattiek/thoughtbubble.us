@@ -87,7 +87,8 @@ $.ajax({
                 return {stroke: false, fill: false};
             },
             onEachFeature: function (feature, layer) {
-               neighborhoods[feature.id] = layer;
+               neighborhoods[feature.id] = {layer: layer,
+                                            feature: feature};
         }
         }).addTo(map);
 
@@ -112,10 +113,12 @@ $('#minisplore-wrapper').baron();
 
 var minmin = function(id, cid, href, communityName) {
 
-    var layer = neighborhoods[id];
-    highlightFeature(layer);
-    map.fitBounds(layer);
+    var layer = neighborhoods[id].layer,
+        feature = neighborhoods[id].feature;
 
+    highlightFeature(layer);
+//    map.fitBounds(layer);
+    map.setView([feature.center.coordinates[1],feature.center.coordinates[0]] , 16);
     // Rewrite idea create link
     var $i = $('#idea-nav');
     $i.attr('href', $i.attr('data-href') + '/' + id);
@@ -130,6 +133,9 @@ var minmin = function(id, cid, href, communityName) {
         '</a>' +
         '');
 
+    $section.attr('data-longitude',feature.center.coordinates[0]);
+    $section.attr('data-latitude',feature.center.coordinates[1]);
+
     $('#communisplore').empty().append($section).show();
     $.ajax(
         {
@@ -138,7 +144,9 @@ var minmin = function(id, cid, href, communityName) {
             success: function(data) {
                 for (x in data.results) {
                     var loc = data.results[x];
-                    var $i = $('<section/>').html('<h3>' + loc.name + '</h3>');
+                    var $i = $('<section/>').html('<a href="' + loc.properties.link + '"><h3>' + loc.name + '</h3></a>');
+                    $i.attr('data-longitude',loc.geometry.coordinates[0]);
+                    $i.attr('data-latitude',loc.geometry.coordinates[1]);
                     $('#communisplore').append($i);
                 }
                 $v = $('<div/>').addClass('ending');
@@ -187,6 +195,8 @@ var setScrollExplore = function() {
     var setActive = function(index, ease) {
         _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
         sections[index].className += ' active';
+        $section = $(sections[index]);
+        map.panTo([$section.attr('data-latitude'), $section.attr('data-longitude')]);
         return true;
     };
 
