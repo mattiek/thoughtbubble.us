@@ -5,20 +5,9 @@
         <a class="commenting orange" data-id="{{ idea.id }}" href="#">comment</a>
         {% include "widgets/sharing.html" %}
     </div>
-    <div class="right-idea-cap">
-        <table>
-            <tr>
-                <td>{{ idea.support_count }}</td>
-                <td>supporters</td>
-            </tr>
-            <tr>
-                <td>{{ idea.comment_count }}</td>
-                <td>comments</td>
-            </tr>
-            <tr>
-                <td></td>
-                <td>added {{ idea.get_days_since_added }} days ago</td>
-            </tr>
-        </table>
-    </div>
+    <ul class="right-idea-cap">
+        <li><span class="emphasis support-star">{{ idea.support_count }}</span> supporters</li>
+        <li><span class="emphasis comments-bubble">{{ idea.comment_count }}</span> comments</li>
+        <li>added {{ idea.get_days_since_added }} days ago</li>
+    </ul>
 </div>

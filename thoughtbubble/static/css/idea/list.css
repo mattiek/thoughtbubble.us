@@ -1,4 +1,4 @@
-/* line 2, ../../scss/idea/_idea.scss */
+/* line 3, ../../scss/idea/_idea.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -27,56 +27,86 @@
   /* IE6-9 */
 }
 
-/* line 21, ../../scss/idea/_idea.scss */
+/* line 22, ../../scss/idea/_idea.scss */
 .left-idea-cap {
   padding-top: 30px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 27, ../../scss/idea/_idea.scss */
+/* line 28, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
   display: block;
   float: left;
 }
-/* line 35, ../../scss/idea/_idea.scss */
+/* line 36, ../../scss/idea/_idea.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
   display: block;
   float: left;
 }
-/* line 43, ../../scss/idea/_idea.scss */
+/* line 44, ../../scss/idea/_idea.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 49, ../../scss/idea/_idea.scss */
+/* line 50, ../../scss/idea/_idea.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 61, ../../scss/idea/_idea.scss */
+/* line 62, ../../scss/idea/_idea.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
-}
-/* line 65, ../../scss/idea/_idea.scss */
-.right-idea-cap table {
-  background: transparent;
-  border: none;
+  list-style-type: none;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  color: #797878;
+  /* text color */
+  padding-top: 29px;
+  padding-left: 20px;
 }
 /* line 72, ../../scss/idea/_idea.scss */
-.right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
-  background: transparent;
+.right-idea-cap li {
+  margin-top: 5px;
+}
+/* line 75, ../../scss/idea/_idea.scss */
+.right-idea-cap li:first-child {
+  margin-top: 0px;
+}
+/* line 80, ../../scss/idea/_idea.scss */
+.right-idea-cap .emphasis {
+  color: #f37d23;
+  /* text color */
+  background: #FFF;
+  border-radius: 7px;
+  padding: 2px 7px;
+}
+/* line 88, ../../scss/idea/_idea.scss */
+.right-idea-cap .support-star {
+  background-image: url('../../images/orange-star.png?1380665340');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 96, ../../scss/idea/_idea.scss */
+.right-idea-cap .comments-bubble {
+  background-image: url('../../images/orange-comment.png?1380665664');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
 }
 
-/* line 81, ../../scss/idea/_idea.scss */
+/* line 107, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {

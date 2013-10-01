@@ -1,3 +1,4 @@
+@import "compass";
 
 .idea-cap {
   color: #7a7a7a; /* text color */
@@ -61,18 +62,43 @@
 .right-idea-cap {
   float:right;
   width: 20%;
+  list-style-type: none;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  color: #797878; /* text color */
+  padding-top: 29px;
+  padding-left: 20px;
 
-  table {
-    background: transparent;
-    border: none;
+  li {
+    margin-top: 5px;
 
-    tr {
-      &.even,
-      &.alt,
-      &:nth-of-type(even) {
-        background: transparent;
-      }
+    &:first-child {
+      margin-top: 0px;
     }
+  }
+
+  .emphasis {
+    color: #f37d23; /* text color */
+    background: #FFF;
+    border-radius: 7px;
+    padding: 2px 7px;
+
+  }
+
+  .support-star {
+    background-image: image-url("orange-star.png");
+    background-repeat: no-repeat;
+    background-size: 9px;
+    background-position: 15% 45%;
+    padding-left: 15px;
+  }
+
+  .comments-bubble {
+    background-image: image-url("orange-comment.png");
+    background-repeat: no-repeat;
+    background-size: 9px;
+    background-position: 15% 45%;
+    padding-left: 15px;
   }
 }
 
