@@ -10,25 +10,7 @@ def addidea(request, id=None):
     if request.POST:
         form = AddIdeaForm(request.POST,request.FILES)
         if form.is_valid():
-            pic1 = IdeaImage(img=form.cleaned_data['pic1'])
-            pic2 = IdeaImage(img=form.cleaned_data['pic2'])
-            pic3 = IdeaImage(img=form.cleaned_data['pic3'])
-            pic4 = IdeaImage(img=form.cleaned_data['pic4'])
-            pics = []
 
-            # TODO: More elegant
-            if pic1.img:
-                pic1.save()
-                pics.append(pic1)
-            if pic2.img:
-                pic2.save()
-                pics.append(pic2)
-            if pic3.img:
-                pic3.save()
-                pics.append(pic3)
-            if pic4.img:
-                pic4.save()
-                pics.append(pic4)
             data = form.cleaned_data
 
             idea = Idea(
@@ -41,17 +23,33 @@ def addidea(request, id=None):
                         )
             idea.save()
 
-            # TODO: bulk_create
-            if pic1.img:
-                idea.images.add(pic1)
-            if pic2.img:
-                idea.images.add(pic2)
-            if pic3.img:
-                idea.images.add(pic3)
-            if pic4.img:
-                idea.images.add(pic4)
+            pic1 = IdeaImage(idea=idea,img=form.cleaned_data['pic1'])
+            pic2 = IdeaImage(idea=idea,img=form.cleaned_data['pic2'])
+            pic3 = IdeaImage(idea=idea,img=form.cleaned_data['pic3'])
+            pic4 = IdeaImage(idea=idea,img=form.cleaned_data['pic4'])
+            pics = []
 
-            idea.save()
+            # TODO: More elegant
+            if pic1.img:
+                pic1.save()
+            if pic2.img:
+                pic2.save()
+            if pic3.img:
+                pic3.save()
+            if pic4.img:
+                pic4.save()
+            #
+            # # TODO: bulk_create
+            # if pic1.img:
+            #     idea.images.add(pic1)
+            # if pic2.img:
+            #     idea.images.add(pic2)
+            # if pic3.img:
+            #     idea.images.add(pic3)
+            # if pic4.img:
+            #     idea.images.add(pic4)
+            #
+            # idea.save()
 
             messages.add_message(request, messages.INFO, 'Idea Saved.')
 
