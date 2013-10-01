@@ -58,6 +58,8 @@ def login(request):
 
 
 def dashboard(request):
+        if not request.user.is_authenticated():
+            return redirect('home')
         try:
             profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
         except:

@@ -319,3 +319,9 @@ form .row .row .columns.no-padding {
   height: 21px;
   display: block;
 }
+
+/* line 293, ../scss/nav.scss */
+#page-wrapper {
+  margin: 0 auto;
+  width: 600px;
+}

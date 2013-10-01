@@ -17,89 +17,90 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="large-12 columns">
-            <img src="{{ community.get_logo }}" alt=""/>
-        </div>
-    </div>
-
-    {% if community.curator == request.user or request.user.is_superuser %}
-        <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
-    {% endif %}
-    <div class="row title">
-            <div id="header">{{ community.title }}
-                {% include "widgets/sharing.html" %}
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="large-12 columns">
+                <img src="{{ community.get_logo }}" alt=""/>
             </div>
-    </div>
-    <div class="row">
-        <div class="large-12 columns">
-            <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
         </div>
 
-    </div>
-    <div class="row">
-        <div class="actions">
-            {% if request.user in community.members.all %}
-                <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
-                    joined
-                </a>
-            {% else %}
-                <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
-                    join
-                </a>
-            {% endif %}
-
-            <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.neighborhood.name %}" class="orange s-button">ideas</a>
-            <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">explore</a>
-            <a href="#" class="orange s-button">add</a>
+        {% if community.curator == request.user or request.user.is_superuser %}
+            <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
+        {% endif %}
+        <div class="row title">
+                <div id="header">{{ community.title }}
+                    {% include "widgets/sharing.html" %}
+                </div>
         </div>
-    </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
+            </div>
 
-{#    About #}
-    <div class="row">
-        <div id="about" class="large-12 columns large-blue">
-            {{ community.about }}
         </div>
-    </div>
-    <div class="row">
-        <div class="large-2 push-10 columns">
-           {% include "widgets/sharing.html" %}
-        </div>
-    </div>
+        <div class="row">
+            <div class="actions">
+                {% if request.user in community.members.all %}
+                    <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
+                        joined
+                    </a>
+                {% else %}
+                    <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
+                        join
+                    </a>
+                {% endif %}
 
-    {#    News #}
-    <div class="row">
-        <div class="large-1 columns">news</div>
-    </div>
-    <div id="news" class="row">
-        <div class="large-2 columns">
-            <div id="news-photo"></div>
+                <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.neighborhood.name %}" class="orange s-button">ideas</a>
+                <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="blue s-button">explore</a>
+                <a href="#" class="blue s-button">add</a>
+            </div>
         </div>
 
-        <div class="large-10 columns">
-            <img id="news-photo"/>
-            <div id="news-photos"></div>
+    {#    About #}
+        <div class="row">
+            <div id="about" class="large-12 columns large-blue">
+                {{ community.about }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="large-3 push-9 columns">
+               {% include "widgets/sharing.html" %}
+            </div>
+        </div>
+
+        {#    News #}
+        <div class="row">
+            <div class="large-1 columns">news</div>
+        </div>
+        <div id="news" class="row">
+            <div class="large-2 columns">
+                <div id="news-photo"></div>
+            </div>
+
+            <div class="large-10 columns">
+                <img id="news-photo"/>
+                <div id="news-photos"></div>
+            </div>
+        </div>
+
+
+        {#    Pictures #}
+        <div class="row addpad">
+            <div class="large-1 columns">pictures</div>
+            <div class="large-11 columns">
+                <div class="picture"></div>
+                <div class="picture"></div>
+            </div>
+        </div>
+
+        {#    Partners #}
+        <div class="row addpad">
+            <div class="large-1 columns">partners</div>
+            <div class="large-11 columns">
+                <div class="picture"></div>
+            </div>
         </div>
     </div>
-
-
-    {#    Pictures #}
-    <div class="row addpad">
-        <div class="large-1 columns">pictures</div>
-        <div class="large-11 columns">
-            <div class="picture"></div>
-            <div class="picture"></div>
-        </div>
-    </div>
-
-    {#    Partners #}
-    <div class="row addpad">
-        <div class="large-1 columns">partners</div>
-        <div class="large-11 columns">
-            <div class="picture"></div>
-        </div>
-    </div>
-
 {% endblock %}
 
 {% block footerscripts %}

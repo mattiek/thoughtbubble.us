@@ -164,6 +164,37 @@
 }
 
 /* line 23, ../../scss/partials/_buttons.scss */
+.blue {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background: #8dd9f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
+  /* IE6-9 */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+
+/* line 42, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
