@@ -84,6 +84,11 @@ class IdeaList(ListView):
 class IdeaDetail(DetailView):
     model = Idea
 
+    def get_context_data(self, **kwargs):
+        context = super(IdeaDetail,self).get_context_data(**kwargs)
+        context['supported'] = IdeaSupport.objects.filter(idea=self.model.objects.get(),user=self.request.user)
+        return context
+
 
 class IdeaCreate(CreateView):
     model = Idea

@@ -23,8 +23,12 @@
             <span class="support">{{ idea.support_count }}</span> support this
         </div>
         <div class="large-7 small-6 columns no-padding">
-            <a class="supporting orange" href="{% url 'support_idea_from_detail' idea.id %}">support</a>
-            <a class="dislike orange" href="#"></a>
+            {% if supported %}
+                <a class="supporting orange supported" href="{% url 'support_idea_from_detail' idea.id %}">supported</a>
+            {% else %}
+                <a class="supporting orange" href="{% url 'support_idea_from_detail' idea.id %}">support</a>
+            {% endif %}
+            <a class="dislike orange" href="#">dislike</a>
 
             <ul class="sharing">
                 <li><span>share</span></li>
