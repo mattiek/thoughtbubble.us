@@ -1,13 +1,47 @@
-/* line 1, ../../scss/community/detail.scss */
-#illustration {
-  background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
+/* line 1, ../../scss/partials/_sharing.scss */
+.sharing {
+  list-style-type: none;
+  display: inline-block;
+}
+/* line 4, ../../scss/partials/_sharing.scss */
+.sharing li {
+  display: inline-block;
+}
+/* line 7, ../../scss/partials/_sharing.scss */
+.sharing li span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  vertical-align: middle;
+}
+/* line 14, ../../scss/partials/_sharing.scss */
+.sharing li a {
+  display: block;
+}
+/* line 18, ../../scss/partials/_sharing.scss */
+.sharing li a.share-fb {
+  background: url(../../images/small-blue-facebook.png) no-repeat;
   background-size: 100%;
-  height: 238px;
-  width: 930px;
-  margin: 0 auto;
+  width: 18px;
+  height: 15px;
+}
+/* line 25, ../../scss/partials/_sharing.scss */
+.sharing li a.share-twitter {
+  background: url(../../images/small-blue-twitter.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+/* line 32, ../../scss/partials/_sharing.scss */
+.sharing li a.share-linkedin {
+  background: url(../../images/small-blue-linkedin.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
 }
 
-/* line 9, ../../scss/community/detail.scss */
+/* line 1, ../../scss/partials/_buttons.scss */
 .orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -32,7 +66,53 @@
   font-family: 'MuseoSans';
 }
 
-/* line 26, ../../scss/community/detail.scss */
+/* line 3, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+}
+
+/* line 10, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 17, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 1, ../../scss/partials/_global.scss */
+.large-blue {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 38px/2;
+}
+
+/* line 6, ../../scss/community/detail.scss */
+#illustration {
+  background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
+  background-size: 100%;
+  height: 238px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+/* line 15, ../../scss/community/detail.scss */
 .s-button {
   height: 33px;
   line-height: 33px;
@@ -41,36 +121,36 @@
   margin-left: 20px;
   text-align: center;
 }
-/* line 34, ../../scss/community/detail.scss */
+/* line 23, ../../scss/community/detail.scss */
 .s-button:first-child {
   margin-left: 0px;
 }
 
-/* line 39, ../../scss/community/detail.scss */
+/* line 28, ../../scss/community/detail.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
   font-family: 'MuseoSans';
-  height: 33px;
   line-height: 33px;
-  width: 100%;
+  width: 463px;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 10px 20px;
+  margin: 0 auto 10px;
 }
 
-/* line 50, ../../scss/community/detail.scss */
+/* line 39, ../../scss/community/detail.scss */
 .centered {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-/* line 57, ../../scss/community/detail.scss */
+/* line 46, ../../scss/community/detail.scss */
 .row.title {
   text-align: center;
 }
 
-/* line 62, ../../scss/community/detail.scss */
+/* line 51, ../../scss/community/detail.scss */
 #cta {
   color: #7b7b7b;
   /* text color */
@@ -79,19 +159,19 @@
   text-align: center;
 }
 
-/* line 69, ../../scss/community/detail.scss */
+/* line 58, ../../scss/community/detail.scss */
 .actions {
   margin: 0 auto;
   width: 463px;
 }
 
-/* line 74, ../../scss/community/detail.scss */
+/* line 63, ../../scss/community/detail.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 79, ../../scss/community/detail.scss */
+/* line 68, ../../scss/community/detail.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -104,75 +184,12 @@
   background-position: 57px 57px;
 }
 
-/* line 94, ../../scss/community/detail.scss */
-input[type="password"],
-input[type="email"],
-input[type="text"] {
-  /*width: 324px;*/
-  height: 25px;
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-}
-
-/* line 101, ../../scss/community/detail.scss */
-textarea {
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-  min-height: 200px;
-  max-width: 100%;
-}
-
-/* line 108, ../../scss/community/detail.scss */
-#id_captcha_choicefield {
-  list-style: none;
-}
-
-/* line 112, ../../scss/community/detail.scss */
-#id_captcha_choicefield li {
-  display: inline-block;
-  margin-left: 60px;
-}
-
-/* line 117, ../../scss/community/detail.scss */
-#id_captcha_choicefield li:first-child {
-  margin-left: 15px;
-}
-
-/* line 121, ../../scss/community/detail.scss */
-#captcha-question {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 128, ../../scss/community/detail.scss */
-.terms-and-conditions {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 135, ../../scss/community/detail.scss */
-.file-picker-input {
-  width: 80px;
-  height: 79px;
-  border-radius: 10px;
-  background-color: #dadbdc;
-  background-image: url(../../images/polaroid-camera-composite.png);
-  background-repeat: no-repeat;
-  background-position: 23px 24px;
-}
-
-/* line 145, ../../scss/community/detail.scss */
+/* line 80, ../../scss/community/detail.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 149, ../../scss/community/detail.scss */
+/* line 84, ../../scss/community/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -183,40 +200,37 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 158, ../../scss/community/detail.scss */
+/* line 93, ../../scss/community/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 163, ../../scss/community/detail.scss */
-.chosen-container-single .chosen-default,
-.chosen-container-single .chosen-single,
-.chosen-container-single .chosen-drop .chosen-results li {
-  color: #6d6d6d;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 15px;
+/* line 98, ../../scss/community/detail.scss */
+.sharing {
+  margin: 0px 0px 0px 15px;
 }
-
-/* line 169, ../../scss/community/detail.scss */
-.chosen-container-single .chosen-default {
-  color: #bbb;
+/* line 102, ../../scss/community/detail.scss */
+.sharing li span {
+  display: none;
 }
-
-/* line 173, ../../scss/community/detail.scss */
-.chosen-container-single .chosen-single div b {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+/* line 106, ../../scss/community/detail.scss */
+.sharing li a.share-fb {
+  background: url(../../images/facebook-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 21px;
+  height: 15px;
 }
-
-/* line 180, ../../scss/community/detail.scss */
-.chosen-container {
-  margin-bottom: 15px;
+/* line 112, ../../scss/community/detail.scss */
+.sharing li a.share-twitter {
+  background: url(../../images/twitter-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 15px;
 }
-
-/* line 184, ../../scss/community/detail.scss */
-.auto-hint {
-  color: #aaa;
+/* line 118, ../../scss/community/detail.scss */
+.sharing li a.share-linkedin {
+  background: url(../../images/linkedin-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 15px;
 }

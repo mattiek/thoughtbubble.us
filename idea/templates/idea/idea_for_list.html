@@ -3,12 +3,7 @@
         <a href="{% url 'idea_detail' idea.where.community.state idea.where.community.city idea.where.community.name idea.id %}"><p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p></a>
         <a class="supporting" data-id="{{ idea.id }}" href="#"></a>
         <a class="commenting" data-id="{{ idea.id }}" href="#"></a>
-        <span>share</span>
-        <ul class="sharing">
-            <li><a class="fb-idea" href="#facebook"></a></li>
-            <li><a class="fb-twitter" href="#twitter"></a></li>
-            <li><a class="fb-linkedin" href="#linkedin"></a></li>
-        </ul>
+        {% include "widgets/sharing.html" %}
     </div>
     <div class="right-idea-cap">
         <table>

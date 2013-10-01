@@ -1,0 +1,25 @@
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+}
+
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px
+}
