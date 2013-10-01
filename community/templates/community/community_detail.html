@@ -39,9 +39,16 @@
     </div>
     <div class="row">
         <div class="actions">
-            <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
-                {% if request.user in community.members.all %}un{% endif %}join
-            </a>
+            {% if request.user in community.members.all %}
+                <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
+                    joined
+                </a>
+            {% else %}
+                <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
+                    join
+                </a>
+            {% endif %}
+
             <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.neighborhood.name %}" class="orange s-button">ideas</a>
             <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">explore</a>
             <a href="#" class="orange s-button">add</a>

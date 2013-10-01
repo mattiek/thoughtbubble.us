@@ -7,6 +7,7 @@ import os
 import hashlib
 import datetime
 from django.utils.timezone import now
+from django.core.urlresolvers import reverse
 
 from supportering.models import AbstractSupport
 
@@ -60,6 +61,15 @@ class Idea(models.Model):
     def get_days_since_added(self):
         d = now() - self.date_created
         return d.days
+
+    def get_support_url(self):
+        return reverse('support_idea',args=[self.id,])
+
+    def get_absolute_url(self):
+        return reverse('idea_detail', args=[self.where.community.state,
+                                            self.where.community.city,
+                                            self.where.community.name,
+                                            self.id])
 
 
 class IdeaSupport(AbstractSupport):

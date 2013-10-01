@@ -24,7 +24,7 @@
         </div>
         <div class="large-7 small-6 columns no-padding">
             {% if supported %}
-                <a class="supporting orange supported" href="{% url 'support_idea_from_detail' idea.id %}">supported</a>
+                <a class="supporting orange activated" href="{% url 'support_idea_from_detail' idea.id %}">supported</a>
             {% else %}
                 <a class="supporting orange" href="{% url 'support_idea_from_detail' idea.id %}">support</a>
             {% endif %}

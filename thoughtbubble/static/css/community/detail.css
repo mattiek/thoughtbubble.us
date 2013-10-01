@@ -65,6 +65,23 @@
   color: #FFFFFF;
   font-family: 'MuseoSans';
 }
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
 
 /* line 3, ../../scss/partials/_inputs.scss */
 input[type="password"],
@@ -205,30 +222,35 @@ form .row .row.second-row {
   width: 228px;
 }
 
-/* line 98, ../../scss/community/detail.scss */
-.sharing {
+/* line 97, ../../scss/community/detail.scss */
+#about {
+  margin: 30px 0;
+}
+
+/* line 103, ../../scss/community/detail.scss */
+#header .sharing {
   margin: 0px 0px 0px 15px;
 }
-/* line 102, ../../scss/community/detail.scss */
-.sharing li span {
+/* line 107, ../../scss/community/detail.scss */
+#header .sharing li span {
   display: none;
 }
-/* line 106, ../../scss/community/detail.scss */
-.sharing li a.share-fb {
+/* line 111, ../../scss/community/detail.scss */
+#header .sharing li a.share-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 15px;
 }
-/* line 112, ../../scss/community/detail.scss */
-.sharing li a.share-twitter {
+/* line 117, ../../scss/community/detail.scss */
+#header .sharing li a.share-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 118, ../../scss/community/detail.scss */
-.sharing li a.share-linkedin {
+/* line 123, ../../scss/community/detail.scss */
+#header .sharing li a.share-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;

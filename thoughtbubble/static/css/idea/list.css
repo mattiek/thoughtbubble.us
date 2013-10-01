@@ -38,7 +38,6 @@
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
-  background: url(../../images/support.png) no-repeat 0 100%;
   display: block;
   float: left;
 }
@@ -46,7 +45,6 @@
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
-  background: url(../../images/comment.png) no-repeat 0;
   display: block;
   float: left;
 }
@@ -101,6 +99,23 @@
   border: none;
   color: #FFFFFF;
   font-family: 'MuseoSans';
+}
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
 }
 
 /* line 1, ../../scss/partials/_sharing.scss */
@@ -189,122 +204,6 @@
 }
 
 /* line 14, ../../scss/idea/list.scss */
-.submit {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  /* border radius */
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  /* prevents bg color from leaking outside the border */
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-  /* layer fill content */
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  border: none;
-  height: 33px;
-  width: 322px;
-  color: #fff;
-  font-family: 'MuseoSans';
-  float: right;
-  margin-right: 120px;
-}
-
-/* line 37, ../../scss/idea/list.scss */
-#form-wrapper {
-  width: 600px;
-  margin: 0 auto;
-}
-
-/* line 42, ../../scss/idea/list.scss */
-#add-photo {
-  width: 80px;
-  height: 79px;
-  border-radius: 10px;
-  background-color: #dadbdc;
-  margin-left: -100px;
-  position: absolute;
-  background-image: url(../../images/add-photo.png);
-  background-repeat: no-repeat;
-  background-position: 57px 57px;
-}
-
-/* line 57, ../../scss/idea/list.scss */
-input[type="password"],
-input[type="email"],
-input[type="text"] {
-  /*width: 324px;*/
-  height: 25px;
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-}
-
-/* line 64, ../../scss/idea/list.scss */
-textarea {
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-  min-height: 200px;
-  max-width: 100%;
-}
-
-/* line 71, ../../scss/idea/list.scss */
-#id_captcha_choicefield {
-  list-style: none;
-}
-
-/* line 75, ../../scss/idea/list.scss */
-#id_captcha_choicefield li {
-  display: inline-block;
-  margin-left: 60px;
-}
-
-/* line 80, ../../scss/idea/list.scss */
-#id_captcha_choicefield li:first-child {
-  margin-left: 15px;
-}
-
-/* line 84, ../../scss/idea/list.scss */
-#captcha-question {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 91, ../../scss/idea/list.scss */
-.terms-and-conditions {
-  color: #727171;
-  /* text color */
-  font-family: "MuseoSans", sans-serif;
-  font-size: 12px;
-  font-style: italic;
-}
-
-/* line 98, ../../scss/idea/list.scss */
-.file-picker-input {
-  width: 80px;
-  height: 79px;
-  border-radius: 10px;
-  background-color: #dadbdc;
-  background-image: url(../../images/polaroid-camera-composite.png);
-  background-repeat: no-repeat;
-  background-position: 23px 24px;
-}
-
-/* line 108, ../../scss/idea/list.scss */
-form .row .row.second-row {
-  margin-top: 15px;
-}
-
-/* line 112, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -315,12 +214,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 121, ../../scss/idea/list.scss */
+/* line 23, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 126, ../../scss/idea/list.scss */
+/* line 28, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
@@ -329,24 +228,25 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   font-size: 38px/2;
 }
-/* line 133, ../../scss/idea/list.scss */
+/* line 35, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 139, ../../scss/idea/list.scss */
+/* line 41, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 141, ../../scss/idea/list.scss */
+/* line 43, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 147, ../../scss/idea/list.scss */
+/* line 50, ../../scss/idea/list.scss */
 .supporting,
-.dislike {
+.dislike,
+.commenting {
   display: block;
   float: left;
   width: 75px;
@@ -355,15 +255,8 @@ form .row .row.second-row {
   text-align: center;
   font-size: 11px;
 }
-/* line 156, ../../scss/idea/list.scss */
-.supporting.supported,
-.dislike.supported {
-  color: #f9c98c;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-}
 
-/* line 162, ../../scss/idea/list.scss */
+/* line 60, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }

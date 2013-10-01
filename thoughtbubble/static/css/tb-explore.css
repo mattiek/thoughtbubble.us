@@ -22,6 +22,23 @@
   color: #FFFFFF;
   font-family: 'MuseoSans';
 }
+/* line 17, ../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
 
 /* line 3, ../scss/tb-explore.scss */
 #illustration {
