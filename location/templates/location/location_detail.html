@@ -101,7 +101,7 @@
                     url: "{{ location.get_api_detail_url }}",
                     dataType: "json",
                     success: function(d) {
-                        var markers = L.mapbox.markerLayer(d.results).addTo(map);
+                        var markers = L.mapbox.markerLayer(d).addTo(map);
                         // Add features to the map
                     }
                 });
