@@ -13,6 +13,9 @@ var map = TB.Map.map();
 
 var previous_layer = null;
 
+var section_source   = $("#section-template").html();
+var section_template = Handlebars.compile(section_source);
+
 function highlightFeature(layer) {
 
     if (previous_layer) {
@@ -117,8 +120,9 @@ var minmin = function(id, cid, href, communityName) {
         feature = neighborhoods[id].feature;
 
     highlightFeature(layer);
-//    map.fitBounds(layer);
+    //    map.fitBounds(layer);
     map.setView([feature.center.coordinates[1],feature.center.coordinates[0]] , 16);
+
     // Rewrite idea create link
     var $i = $('#idea-nav');
     $i.attr('href', $i.attr('data-href') + '/' + id);
@@ -128,15 +132,18 @@ var minmin = function(id, cid, href, communityName) {
 
     $('#minisplore').hide();
 
-    $section = $('<section/>').addClass('header').html('<a href="' + href + '">' +
-        '<h3>' + communityName + '</h3>' +
-        '</a>' +
-        '');
+    var context = {
+        name: communityName,
+        link: href,
+        longitude: feature.center.coordinates[0],
+        latitude: feature.center.coordinates[1]
+    }
+    var html    = section_template(context);
 
-    $section.attr('data-longitude',feature.center.coordinates[0]);
-    $section.attr('data-latitude',feature.center.coordinates[1]);
+    $section = $(html).addClass('header');
 
     $('#communisplore').empty().append($section).show();
+
     $.ajax(
         {
             url: '/api/v1/locations/.json?community=' + id,
@@ -144,10 +151,16 @@ var minmin = function(id, cid, href, communityName) {
             success: function(data) {
                 for (x in data.results) {
                     var loc = data.results[x];
-                    var $i = $('<section/>').html('<a href="' + loc.properties.link + '"><h3>' + loc.name + '</h3></a>');
-                    $i.attr('data-longitude',loc.geometry.coordinates[0]);
-                    $i.attr('data-latitude',loc.geometry.coordinates[1]);
-                    $('#communisplore').append($i);
+
+                    var context = {
+                                    name: loc.name,
+                                    link: loc.properties.link,
+                                    longitude: loc.geometry.coordinates[0],
+                                    latitude: loc.geometry.coordinates[1]
+                    }
+                    var html    = section_template(context);
+
+                    $('#communisplore').append($(html));
                 }
                 $v = $('<div/>').addClass('ending');
                 $('#communisplore').append($v);

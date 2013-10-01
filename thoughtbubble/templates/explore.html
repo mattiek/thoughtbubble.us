@@ -52,6 +52,17 @@
                     >{{ metro.0 }}, {{ metro.1 }}</option>
         {% endfor %}
     </select>
+
+    {% verbatim %}
+    <script id="section-template" type="text/x-handlebars-template">
+        <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
+            <a href="{{ link }}">
+                <h3>{{ name }}</h3>
+            </a>
+        </section>
+    </script>
+    {% endverbatim %}
+
 {% endblock %}
 
 {% block footerscripts %}

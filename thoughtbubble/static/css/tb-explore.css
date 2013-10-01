@@ -118,7 +118,7 @@
   height: 640px;
 }
 
-/* line 106, ../scss/tb-explore.scss */
+/* line 110, ../scss/tb-explore.scss */
 article {
   width: 33.3333%;
   min-width: 320px;
@@ -127,7 +127,7 @@ article {
   padding-bottom: 33.3333%;
 }
 
-/* line 113, ../scss/tb-explore.scss */
+/* line 117, ../scss/tb-explore.scss */
 section {
   padding: 40px;
   margin-left: 40px;
@@ -137,7 +137,7 @@ section {
   -webkit-transition: background 500ms, color 500ms;
 }
 
-/* line 122, ../scss/tb-explore.scss */
+/* line 126, ../scss/tb-explore.scss */
 section,
 section a {
   color: #888;
@@ -146,44 +146,44 @@ section a {
   text-shadow: #404040 0px 0px 4px;
 }
 
-/* line 128, ../scss/tb-explore.scss */
+/* line 132, ../scss/tb-explore.scss */
 section.active {
-  background: #222;
+  background: #cdcdcd;
   color: #eee;
 }
 
-/* line 132, ../scss/tb-explore.scss */
+/* line 136, ../scss/tb-explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 133, ../scss/tb-explore.scss */
+/* line 137, ../scss/tb-explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 134, ../scss/tb-explore.scss */
+/* line 138, ../scss/tb-explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 135, ../scss/tb-explore.scss */
+/* line 139, ../scss/tb-explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 136, ../scss/tb-explore.scss */
+/* line 140, ../scss/tb-explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 137, ../scss/tb-explore.scss */
+/* line 141, ../scss/tb-explore.scss */
 p {
   margin: 0px;
 }
 
-/* line 139, ../scss/tb-explore.scss */
+/* line 143, ../scss/tb-explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -193,13 +193,13 @@ p {
   padding: 5px 10px;
 }
 
-/* line 146, ../scss/tb-explore.scss */
+/* line 150, ../scss/tb-explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 151, ../scss/tb-explore.scss */
+/* line 155, ../scss/tb-explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -208,7 +208,7 @@ p {
   margin: 0px auto 20px;
 }
 
-/* line 157, ../scss/tb-explore.scss */
+/* line 161, ../scss/tb-explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }

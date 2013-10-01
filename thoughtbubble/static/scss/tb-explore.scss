@@ -103,6 +103,10 @@
   height: 640px;
 }
 
+
+
+// Sherlock
+
 article {
   width:33.3333%;
   min-width:320px;
@@ -126,7 +130,7 @@ section a {
   text-shadow:rgba(64,64,64,1) 0px 0px 4px;
 }
 section.active {
-  background:#222;
+  background: #cdcdcd;
   color:#eee;
 }
 section.active a { color:#eee; }

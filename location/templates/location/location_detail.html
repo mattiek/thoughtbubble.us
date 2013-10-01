@@ -23,7 +23,7 @@
 
 {% block content %}
 
-    {% if community.curator == request.user %}
+    {% if community.curator == request.user or request.user.is_superuser %}
         <h1><a href="{% url 'location_update' location.id %}">admin</a></h1>
     {% endif %}
 
