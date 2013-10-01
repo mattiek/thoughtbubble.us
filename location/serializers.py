@@ -9,6 +9,20 @@ class LocationSerializer(serializers.HyperlinkedModelSerializer):
     properties = serializers.CharField(source='getProperties', read_only=True)
 
     results_field = 'features'
+
     class Meta:
         model = Location
         fields = ('id', 'name', 'geometry', 'type', 'properties')
+
+
+    # @property
+    # def data(self):
+    #     df = super(LocationSerializer, self).data
+    #     if self.object:
+    #         return df
+    #     else:
+    #         m = {
+    #             "type": "FeatureCollection",
+    #             "features": df,
+    #             }
+    #         return m

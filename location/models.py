@@ -66,6 +66,9 @@ class Location(models.Model):
     def get_absolute_url(self):
         return reverse('location_detail', args=[str(self.id)])
 
+    def get_api_detail_url(self):
+        return reverse('locations-detail',args=[self.id,])
+
 
     def save(self, *args, **kwargs):
         if not self.geom:
