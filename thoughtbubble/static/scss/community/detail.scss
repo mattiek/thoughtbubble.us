@@ -94,32 +94,38 @@ form .row .row.second-row {
   width: 228px;
 }
 
-// Overrides
-.sharing {
-  margin: 0px 0px 0px 15px;
+#about {
+  margin: 30px 0;
+}
 
-  li {
-    span {
-      display: none;
-    }
-    a {
-      &.share-fb {
-        background: url(../../images/facebook-cloud.png) no-repeat;
-        background-size: 100%;
-        width: 21px;
-        height: 15px;
+// Overrides
+#header {
+  .sharing {
+    margin: 0px 0px 0px 15px;
+
+    li {
+      span {
+        display: none;
       }
-      &.share-twitter {
-        background: url(../../images/twitter-cloud.png) no-repeat;
-        background-size: 100%;
-        width: 18px;
-        height: 15px;
-      }
-      &.share-linkedin {
-        background: url(../../images/linkedin-cloud.png) no-repeat;
-        background-size: 100%;
-        width: 18px;
-        height: 15px;
+      a {
+        &.share-fb {
+          background: url(../../images/facebook-cloud.png) no-repeat;
+          background-size: 100%;
+          width: 21px;
+          height: 15px;
+        }
+        &.share-twitter {
+          background: url(../../images/twitter-cloud.png) no-repeat;
+          background-size: 100%;
+          width: 18px;
+          height: 15px;
+        }
+        &.share-linkedin {
+          background: url(../../images/linkedin-cloud.png) no-repeat;
+          background-size: 100%;
+          width: 18px;
+          height: 15px;
+        }
       }
     }
   }

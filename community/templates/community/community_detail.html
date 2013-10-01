@@ -42,24 +42,54 @@
             <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
                 {% if request.user in community.members.all %}un{% endif %}join
             </a>
-            <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">ideas</a>
+            <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.neighborhood.name %}" class="orange s-button">ideas</a>
             <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">explore</a>
             <a href="#" class="orange s-button">add</a>
         </div>
     </div>
+
+{#    About #}
     <div class="row">
-        <div class="large-12 columns large-blue">
+        <div id="about" class="large-12 columns large-blue">
             {{ community.about }}
         </div>
     </div>
     <div class="row">
+        <div class="large-2 push-10 columns">
+           {% include "widgets/sharing.html" %}
+        </div>
+    </div>
+
+    {#    News #}
+    <div class="row">
+        <div class="large-1 columns">news</div>
+    </div>
+    <div id="news" class="row">
         <div class="large-2 columns">
-            <span>share</span>
-            <ul class="sharing">
-                <li><a class="fb-idea" href="#facebook"></a></li>
-                <li><a class="fb-twitter" href="#twitter"></a></li>
-                <li><a class="fb-linkedin" href="#linkedin"></a></li>
-            </ul>
+            <div id="news-photo"></div>
+        </div>
+
+        <div class="large-10 columns">
+            <img id="news-photo"/>
+            <div id="news-photos"></div>
+        </div>
+    </div>
+
+
+    {#    Pictures #}
+    <div class="row addpad">
+        <div class="large-1 columns">pictures</div>
+        <div class="large-11 columns">
+            <div class="picture"></div>
+            <div class="picture"></div>
+        </div>
+    </div>
+
+    {#    Partners #}
+    <div class="row addpad">
+        <div class="large-1 columns">partners</div>
+        <div class="large-11 columns">
+            <div class="picture"></div>
         </div>
     </div>
 

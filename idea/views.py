@@ -74,11 +74,14 @@ class IdeaList(ListView):
         city = self.kwargs.get('city', None)
         state = self.kwargs.get('state', None)
         if community:
-            return Idea.objects.filter(where__city__iexact=city,where__state__iexact=state,where__name__iexact=community)
+            return Idea.objects.filter(where__community__city__iexact=city,
+                                       where__community__state__iexact=state,
+                                       where__community__name__iexact=community)
         if city and state:
-            return Idea.objects.filter(where__city__iexact=city,where__state__iexact=state)
+            return Idea.objects.filter(where__community__city__iexact=city,
+                                       where__community__state__iexact=state)
         if state:
-            return Idea.objects.filter(where__state__iexact=state)
+            return Idea.objects.filter(where__community__state__iexact=state)
         return Idea.objects.filter()
 
 
