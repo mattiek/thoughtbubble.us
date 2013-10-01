@@ -50,9 +50,16 @@
         <div class="large-12 columns">Links: </div>
     </div>
 
-{#    <div class="row">#}
-{#        <div class="large-12 columns">news </div>#}
-{#    </div>#}
+    <div class="row">
+        <div class="large-12 columns">photos </div>
+    </div>
+        <div class="row">
+            <div class="large-12 columns">
+                {% for picture in pictures %}
+                    <img src="{{ picture.img.url }}" alt=""/>
+                {% endfor %}
+            </div>
+        </div>
 {##}
 {#    <div class="row">#}
 {#        <div class="large-3 small-2 columns">#}
