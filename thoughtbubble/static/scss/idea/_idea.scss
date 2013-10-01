@@ -75,3 +75,15 @@
     }
   }
 }
+
+.supporting,
+.dislike,
+.commenting {
+  display:block;
+  float:left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
