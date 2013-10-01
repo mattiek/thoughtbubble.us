@@ -118,7 +118,32 @@
   height: 640px;
 }
 
-/* line 110, ../scss/tb-explore.scss */
+/* line 106, ../scss/tb-explore.scss */
+.orange {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+
+/* line 126, ../scss/tb-explore.scss */
 article {
   width: 33.3333%;
   min-width: 320px;
@@ -127,63 +152,75 @@ article {
   padding-bottom: 33.3333%;
 }
 
-/* line 117, ../scss/tb-explore.scss */
+/* line 134, ../scss/tb-explore.scss */
 section {
-  padding: 40px;
+  padding: 10px;
   margin-left: 40px;
   position: relative;
   transition: background 500ms, color 500ms;
   -moz-transition: background 500ms, color 500ms;
   -webkit-transition: background 500ms, color 500ms;
+  background: #FFFFFF;
+  border-radius: 10px;
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  margin-bottom: 10px;
 }
-
-/* line 126, ../scss/tb-explore.scss */
-section,
-section a {
-  color: #888;
-  color: rgba(128, 128, 128, 0);
-  text-decoration: none;
-  text-shadow: #404040 0px 0px 4px;
+/* line 147, ../scss/tb-explore.scss */
+section .extended {
+  display: none;
 }
-
-/* line 132, ../scss/tb-explore.scss */
+/* line 151, ../scss/tb-explore.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
+/* line 155, ../scss/tb-explore.scss */
+section.active .extended {
+  display: block;
+}
 
-/* line 136, ../scss/tb-explore.scss */
+/* line 162, ../scss/tb-explore.scss */
+section a h4 {
+  color: #53b8d1;
+  /* text color */
+  text-decoration: none;
+  font-weight: normal;
+}
+
+/* line 170, ../scss/tb-explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 137, ../scss/tb-explore.scss */
+/* line 171, ../scss/tb-explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 138, ../scss/tb-explore.scss */
+/* line 172, ../scss/tb-explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 139, ../scss/tb-explore.scss */
+/* line 173, ../scss/tb-explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 140, ../scss/tb-explore.scss */
+/* line 174, ../scss/tb-explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 141, ../scss/tb-explore.scss */
+/* line 175, ../scss/tb-explore.scss */
 p {
   margin: 0px;
 }
 
-/* line 143, ../scss/tb-explore.scss */
+/* line 177, ../scss/tb-explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -193,13 +230,13 @@ p {
   padding: 5px 10px;
 }
 
-/* line 150, ../scss/tb-explore.scss */
+/* line 184, ../scss/tb-explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 155, ../scss/tb-explore.scss */
+/* line 189, ../scss/tb-explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -208,7 +245,7 @@ p {
   margin: 0px auto 20px;
 }
 
-/* line 161, ../scss/tb-explore.scss */
+/* line 195, ../scss/tb-explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }

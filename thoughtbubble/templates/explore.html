@@ -57,8 +57,16 @@
     <script id="section-template" type="text/x-handlebars-template">
         <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
             <a href="{{ link }}">
-                <h3>{{ name }}</h3>
+                <h4>{{ name }}</h4>
             </a>
+            <div class="extended">
+                <p>{{ description }}</p>
+                <div class="share">
+                    <a class="orange" href="{{ add_idea }}">add idea</a>
+                    <a class="orange" href="find_ideas">find ideas</a>
+                    <a class="orange" href="{{ share }}">share</a>
+                </div>
+            </div>
         </section>
     </script>
     {% endverbatim %}

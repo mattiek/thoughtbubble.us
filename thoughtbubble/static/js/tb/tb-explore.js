@@ -140,7 +140,7 @@ var minmin = function(id, cid, href, communityName) {
     }
     var html    = section_template(context);
 
-    $section = $(html).addClass('header');
+    $section = $(html).addClass('header active');
 
     $('#communisplore').empty().append($section).show();
 
