@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from forms import AddIdeaForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
@@ -107,5 +107,11 @@ def support_idea(request, id):
         IdeaSupport.objects.create(user=request.user, idea=idea)
         return HttpResponse("added")
 
+
+def support_idea_from_detail(request,id):
+    support_idea(request,id)
+    idea = Idea.objects.get(pk=id)
+    return redirect('idea_detail', idea.where.community.state,
+                    idea.where.community.city, idea.where.community.name, id)
 
 
