@@ -39,8 +39,8 @@ class LocationDetail(DetailView):
         context = super(LocationDetail, self).get_context_data(**kwargs)
 
         id = self.kwargs.get('pk',None)
-        if id:
-            context['community'] = Community.objects.get(pk=id)
+        # if id:
+        #     context['community'] = Community.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
 
         context['ideas'] = Idea.objects.filter(where=Location.objects.get(pk=self.kwargs['pk']))
