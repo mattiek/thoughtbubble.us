@@ -72,7 +72,7 @@ class Location(models.Model):
     def get_api_detail_url(self):
         return reverse('locations-detail',args=[self.id,])
 
-
+s
     def save(self, *args, **kwargs):
         if not self.geom:
             self.geom = GEOSGeometry('POINT(%s %s)' % (self.latitude, self.longitude,))

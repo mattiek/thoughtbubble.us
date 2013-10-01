@@ -51,7 +51,8 @@ def addidea(request, id=None):
             #
             # idea.save()
 
-            messages.add_message(request, messages.INFO, 'Idea Saved.')
+            messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
+            return redirect(idea.get_location_url())
 
     else:
         form = AddIdeaForm()

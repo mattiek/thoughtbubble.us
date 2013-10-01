@@ -71,7 +71,6 @@ class Idea(models.Model):
                                             self.where.community.name,
                                             self.id])
 
-
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)
 
