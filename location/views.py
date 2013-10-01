@@ -7,10 +7,12 @@ from django.shortcuts import render, redirect
 from forms import AddLocationForm
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib import messages
-
+from community.models import Community
+from django.core.urlresolvers import reverse
 from rest_framework import generics
+from idea.models import Idea
 
-from vanilla import ListView, DetailView, CreateView
+from vanilla import ListView, DetailView, CreateView, UpdateView
 
 
 class LocationViewset(viewsets.ModelViewSet):
@@ -25,34 +27,6 @@ class LocationViewset(viewsets.ModelViewSet):
         return Location.objects.filter(name__icontains=name)
 
 
-# def addlocation(request):
-#     if request.POST:
-#         form = AddLocationForm(request.POST)
-#         if form.is_valid():
-#             s = Location(
-#                 name=form.cleaned_data['name'],
-#                 address=form.cleaned_data['address'],
-#                 city_and_state=form.cleaned_data['city_and_state'],
-#                 zip=form.cleaned_data['zip'],
-#                 # what_kind=form.cleaned_data['what_kind'],
-#                 latitude=form.cleaned_data['latitude'],
-#                 longitude=form.cleaned_data['longitude'],
-#             )
-#
-#             s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
-#             s.save()
-#     else:
-#         form = AddLocationForm()
-#     makis = {}
-#     for i in LocationType.objects.all():
-#         makis[i.name] = i.maki_class
-#
-#     # makis = MAKI_CHOICES
-#
-#
-#     return render(request, 'add.html', {'form': form,
-#                                         'makis': makis})
-
 
 class LocationList(ListView):
     model = Location
@@ -60,6 +34,29 @@ class LocationList(ListView):
 
 class LocationDetail(DetailView):
     model = Location
+
+    def get_context_data(self, **kwargs):
+        context = super(LocationDetail, self).get_context_data(**kwargs)
+
+        id = self.kwargs.get('pk',None)
+        if id:
+            context['community'] = Community.objects.get(pk=id)
+            # context['is_admin'] = self.request.user.is_admin
+
+        context['ideas'] = Idea.objects.filter(where=Location.objects.get(pk=self.kwargs['pk']))
+        return context
+
+
+class LocationUpdate(UpdateView):
+    model = Location
+
+    def get_context_data(self, **kwargs):
+        context = super(LocationUpdate, self).get_context_data(**kwargs)
+        context['action_url'] = reverse('location_update', args=[self.kwargs['pk'],])
+        if kwargs.get('id',None):
+            self.form.fields['where'].initial = Location.objects.get(pk=id)
+            # context['is_admin'] = self.request.user.is_admin
+        return context
 
 
 class LocationCreate(CreateView):
@@ -81,3 +78,11 @@ class LocationCreate(CreateView):
         s.save()
         messages.info(self.request, '%s created.' % s.name)
         return redirect('addlocation')
+
+    def get_context_data(self, **kwargs):
+        context = super(LocationCreate, self).get_context_data(**kwargs)
+        context['action_url'] = reverse('addlocation')
+        if kwargs.get('id',None):
+            self.form.fields['where'].initial = Location.objects.get(pk=id)
+        # context['is_admin'] = self.request.user.is_admin
+        return context

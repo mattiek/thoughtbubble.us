@@ -36,7 +36,7 @@
                 {% endif %}
             </ul>
             <ul id="nav">
-                <li><a id="idea-nav" data-href="{% url "addidea" %}" href="{% url "addidea" %}">idea</a></li>
+                <li><a id="idea-nav" data-href="{% url "addidea" %}" href="{% if location %}{% url "addidea" location.id %}{% else %}{% url "addidea" %}{% endif %}">idea</a></li>
                 <li><a href="{% url "explore" %}">explore</a></li>
                 <li>about</li>
             </ul>

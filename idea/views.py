@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse
 from forms import AddIdeaForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
+from location.models import Location
 from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
 
@@ -59,7 +60,7 @@ def addidea(request, id=None):
     d = {'form': form}
 
     if id:
-        form.fields['where'].initial = Neighborhood.objects.get(pk=id)
+        form.fields['where'].initial = Location.objects.get(pk=id)
 
     return render(request, 'addidea.html', d)
 
@@ -82,6 +83,12 @@ class IdeaList(ListView):
 
 class IdeaDetail(DetailView):
     model = Idea
+
+
+class IdeaCreate(CreateView):
+    model = Idea
+    form_class = AddIdeaForm
+
 
 def support_idea(request, id):
     if not request.user:

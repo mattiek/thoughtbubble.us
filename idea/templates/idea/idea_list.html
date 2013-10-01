@@ -19,35 +19,7 @@
 {% block content %}
 
     {% for idea in idea_list %}
-        <div class="idea-cap">
-            <div class="left-idea-cap">
-                <p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p>
-                <a class="supporting" data-id="{{ idea.id }}" href="#"></a>
-                <a class="commenting" data-id="{{ idea.id }}" href="#"></a>
-                <span>share</span>
-                <ul class="sharing">
-                    <li><a class="fb-idea" href="#facebook"></a></li>
-                    <li><a class="fb-twitter" href="#twitter"></a></li>
-                    <li><a class="fb-linkedin" href="#linkedin"></a></li>
-                </ul>
-            </div>
-            <div class="right-idea-cap">
-                <table>
-                    <tr>
-                        <td>{{ idea.support_count }}</td>
-                        <td>supporters</td>
-                    </tr>
-                    <tr>
-                        <td>{{ idea.comment_count }}</td>
-                        <td>comments</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>added {{ idea.get_days_since_added }} days ago</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+        {% include 'idea/idea_for_list.html' %}
     {% endfor %}
 
 {% endblock %}

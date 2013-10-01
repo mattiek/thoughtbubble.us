@@ -12,8 +12,7 @@
     <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.ie.css' rel='stylesheet' />
   <![endif]-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addfeature.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/location/detail.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
 {% endblock %}
 
@@ -24,176 +23,75 @@
 
 {% block content %}
 
-    {% if messages %}
-        <ul class="messages">
-            {% for message in messages %}
-                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-            {% endfor %}
-        </ul>
+    {% if community.curator == request.user %}
+        <h1><a href="{% url 'location_update' location.id %}">admin</a></h1>
     {% endif %}
 
-    <div id="form-wrapper">
-        <form action="{% url 'addlocation' %}" method="POST">
-            {% csrf_token %}
-            <div class="row">
-                <div class="large-12 small-12 columns">
-                    {{ form.errors }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="large-6 small-6 columns">
-                    {{ form.name}}
-                    <p class="copy">address or latitude/longitude</p>
-                    {{ form.address }}
-                    {{ form.city_and_state }}
-                    {{ form.zip }}
-                    <p class="copy">What is it?</p>
-
-                    <input type="hidden" value="{{ form.what_kind.value }}"
-                           id="{{ form.what_kind.auto_id }}" name="{{ form.what_kind.name }}" />
-
-                    <ul id="{{ form.what_kind.auto_id }}_choicefield">
-                        {% for choice in form.what_kind.field.choices %}
-                            <li {% if forloop.counter0 == 4 %}class="second"{% endif %}>
-                                {% with maki=makis|getdict:choice.1 %}
-                                    <a href="#"
-                                       data-value="{{ choice.0 }}"
-                                       class="{% if form.what_kind.value == choice.0|stringformat:'s' %}selected{% endif %} maki-icon {{ maki }}">
-
-                                    </a>
-                                {% endwith %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="large-6 small-6 columns">
-                    <div class="row">
-                        <div id="map"></div>
-                    </div>
-                    <div id="latitude" class="row">
-                        <div class="large-3 columns no-padding">
-                            <label id="lat_label" class="copy" for="{{ form.latitude.auto_id }}">latitude</label>
-                        </div>
-                        <div class="large-9 columns no-padding">
-                            {{ form.latitude }}
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="large-3 columns no-padding">
-                            <label id="long_label" class="copy" for="{{ form.longitude.auto_id }}">longitude</label>
-                        </div>
-                        <div class="large-9 columns no-padding">
-                            {{ form.longitude }}
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-1 small-1 columns">
-                    <p class="copy">about</p>
-                </div>
-                <div class="large-10 small-10 columns">
-                    {{ form.about|add_class:"about-text" }}
-                </div>
-                <div class="large-1 small-1 columns pos-rel">
-                    <ul class="save-edit-list">
-                        <li>
-                            <a class="submit-type" href="#">edit</a>
-                        </li>
-                        <li>
-                            <a class="submit-type" href="#">save</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-1 small-1 columns">
-                    <p class="copy">news</p>
-                </div>
-                <div class="large-2 small-2 columns">
-                    <div id="add-news-image">
-
-                    </div>
-                </div>
-                <div class="large-8 small-8 columns">
-                    {{ form.news|add_class:"news-text" }}
-                </div>
-                <div class="large-1 small-1 columns pos-rel">
-                    <ul class="save-edit-list">
-                        <li>
-                            <a class="submit-type" href="#">edit</a>
-                        </li>
-                        <li>
-                            <a class="submit-type" href="#">save</a>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-
-
-            <div class="row">
-                <div class="large-1 small-1 columns">
-                    <span class="copy">pictures</span>
-                </div>
-                <div class="large-2 small-2 columns">
-                    <div class="picture">
-
-                    </div>
-                </div>
-                <div class="large-2 small-2 columns">
-                    <div class="picture">
-
-                    </div>
-                </div>
-                <div class="large-7 small-7 columns">
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-12 small-12 columns">
-                    <input type="submit" class="submit" value="create location"/>
-                </div>
-            </div>
-        </form>
+    <div class="row title">
+        <div id="header">{{ location.name }}</div>
     </div>
+
+    <div class="row">
+        <div class="large-6 columns about">{{ location.about }}</div>
+        <div class="large-6 columns">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    {#    News #}
+
+    <div id="news" class="row">
+        <div class="row">
+            <div class="large-12 columns">news</div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <img src="" alt=""/>
+                <h3>some title</h3>
+            </div>
+            <div class="large-2 columns">
+                <a href="#" class="orange"></a>
+            </div>
+        </div>
+    </div>
+
+    {#    Pictures #}
+    <div class="row addpad">
+            <div class="row">
+                <div class="large-12 columns">pictures</div>
+            </div>
+            <div class="row">
+                <div class="large-12 columns">
+                    <img src="" alt=""/>
+                    <img src="" alt=""/>
+                    <img src="" alt=""/>
+                </div>
+            </div>
+    </div>
+
+    {#    Partners #}
+    <div class="row addpad">
+        <div class="row">
+            <div class="large-12 columns">partners</div>
+        </div>
+        <div class="row">
+            <div class="large-12 columns">
+                <img src="" alt=""/>
+                <img src="" alt=""/>
+                <img src="" alt=""/>
+            </div>
+        </div>
+    </div>
+
+{#    Ideas #}
+    {% for idea in ideas %}
+            {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+
 {% endblock %}
 
 {% block footerscripts %}
     <script src='//api.tiles.mapbox.com/mapbox.js/v1.3.1/mapbox.js'></script>
-    <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
-
-    {% if form.latitude.value and form.longitude.value %}
-
-        <script type="text/javascript">
-            TB.Map.Draw.featureGroup.addLayer(L.mapbox.markerLayer({
-                // this feature is in the GeoJSON format: see geojson.org
-                // for the full specification
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    // coordinates here are in longitude, latitude order because
-                    // x, y is the standard for GeoJSON and many formats
-                    coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
-                },
-                properties: {
-                    title: 'A Single Marker',
-                    description: 'Just one of me',
-                    // one can customize markers by adding simplestyle properties
-                    // http://mapbox.com/developers/simplestyle/
-                    {#                    'marker-size': 'large',#}
-                    {#                    'marker-color': '#f0a'#}
-                }
-            }));
-        </script>
-    {% endif %}
 {% endblock %}

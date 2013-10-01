@@ -2,6 +2,7 @@ from django.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
 from thoughtbubble.models import ThoughtbubbleUser
+from location.models import Location
 import os
 import hashlib
 import datetime
@@ -31,7 +32,7 @@ class Idea(models.Model):
 
     what_kind = models.ForeignKey(IdeaType)
     what_for = models.CharField(max_length=20, choices=FOR_CHOICES)
-    where = models.ForeignKey(Neighborhood)
+    where = models.ForeignKey(Location)
 
     user = models.ForeignKey(ThoughtbubbleUser, null=True)
 

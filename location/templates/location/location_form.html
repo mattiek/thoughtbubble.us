@@ -25,7 +25,7 @@
 {% block content %}
 
     <div id="form-wrapper">
-        <form action="{% url 'addlocation' %}" method="POST">
+        <form action="{{ action_url }}" method="POST">
             {% csrf_token %}
             <div class="row">
                 <div class="large-12 small-12 columns">
