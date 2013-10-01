@@ -325,3 +325,8 @@ form .row .row .columns.no-padding {
   margin: 0 auto;
   width: 600px;
 }
+
+/* line 298, ../scss/nav.scss */
+h4.message {
+  text-align: center;
+}

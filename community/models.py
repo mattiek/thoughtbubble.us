@@ -27,6 +27,9 @@ class Community(models.Model):
     class Meta:
         verbose_name_plural = "Communities"
 
+    def __unicode__(self):
+        return "%s Community" % self.title
+
     def get_logo(self):
         if self.logo:
             return self.logo.url
