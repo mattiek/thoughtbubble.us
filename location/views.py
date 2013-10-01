@@ -52,10 +52,11 @@ class LocationUpdate(UpdateView):
 
     def get_context_data(self, **kwargs):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
-        context['action_url'] = reverse('location_update', args=[self.kwargs['pk'],])
+        location = Location.objects.get(pk=self.kwargs['id'])
+        context['action_url'] = reverse('location_update', args=[self.kwargs['id'],])
+        context['community'] = Community.objects.get(neighborhood=location.community)
         if kwargs.get('id',None):
-            self.form.fields['where'].initial = Location.objects.get(pk=id)
-            # context['is_admin'] = self.request.user.is_admin
+            self.form.fields['where'].initial = location
         return context
 
 
@@ -81,8 +82,10 @@ class LocationCreate(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(LocationCreate, self).get_context_data(**kwargs)
-        context['action_url'] = reverse('addlocation')
+        location = Location.objects.get(pk=self.kwargs['id'])
+        context['action_url'] = reverse('location_update', args=[self.kwargs['id'],])
+        context['community'] = Community.objects.get(neighborhood=location.community)
         if kwargs.get('id',None):
-            self.form.fields['where'].initial = Location.objects.get(pk=id)
+            self.form.fields['where'].initial = location
         # context['is_admin'] = self.request.user.is_admin
         return context

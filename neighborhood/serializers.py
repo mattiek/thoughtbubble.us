@@ -39,8 +39,11 @@ class NeighborhoodSerializer(serializers.ModelSerializer):
     @property
     def data(self):
         df = super(NeighborhoodSerializer, self).data
-        m = {
-            "type": "FeatureCollection",
-            "features": df,
-        }
-        return m
+        if self.object:
+            return df
+        else:
+            m = {
+                "type": "FeatureCollection",
+                "features": df,
+            }
+            return m

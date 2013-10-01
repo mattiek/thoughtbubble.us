@@ -23,7 +23,6 @@
 {% endblock %}
 
 {% block content %}
-
     <div id="form-wrapper">
         <form action="{{ action_url }}" method="POST">
             {% csrf_token %}
@@ -164,6 +163,37 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
 
+    {% if community %}
+        <script type="text/javascript">
+            var neighborhoods = neighborhoods || {};
+
+            $(document).ready(function() {
+                $.ajax({
+                    url: "{{ community.neighborhood.get_api_detail_url }}",
+                    dataType: "json",
+                    success: function(d) {
+                        var hoods = L.geoJson(d,{
+                            style: function (feature) {
+                                return {stroke: false, fill: true};
+                            },
+                            onEachFeature: function (feature, layer) {
+                                neighborhoods[feature.id] = {layer: layer,
+                                    feature: feature};
+                            }
+                        }).addTo(map);
+
+                        map.fitBounds(neighborhoods[{{ community.neighborhood.id }}].layer);
+                        hoods.eachLayer(function(e) {
+                            var marker = e;
+    //            var feature = marker.feature;
+    //            marker.setIcon(L.icon(feature.properties.icon));
+                        });
+                    }
+                });
+            });
+
+        </script>
+    {% endif %}
     {% if form.latitude.value and form.longitude.value %}
 
         <script type="text/javascript">

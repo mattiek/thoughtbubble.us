@@ -102,14 +102,6 @@ $.ajax({
 //            var feature = marker.feature;
 //            marker.setIcon(L.icon(feature.properties.icon));
         });
-
-
-//        map.markerLayer.setGeoJSON(d.features);
-//        hoods.on('click', function(e) {
-////            console.log(e.layer.id);
-//            highlightFeature(e);
-//            map.fitBounds(e.layer._latlngs);
-//        });
     }
 });
 

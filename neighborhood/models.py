@@ -1,5 +1,6 @@
 from django.contrib.gis.db import models
 import json as JSON
+from django.core.urlresolvers import reverse
 
 class Neighborhood(models.Model):
     state = models.CharField(max_length=2)
@@ -18,6 +19,9 @@ class Neighborhood(models.Model):
     def save(self, *args, **kwargs):
         self.center = self.geom.centroid
         super(Neighborhood, self).save(*args, **kwargs)
+
+    def get_api_detail_url(self):
+        return reverse('neighborhoods-detail',args=[self.id,])
 
     def getCenter(self):
         return JSON.loads(self.center.geojson)

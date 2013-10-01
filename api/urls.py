@@ -7,10 +7,12 @@ from community.views import CommunityViewset
 import location
 
 router = routers.DefaultRouter()
-router.register(r'locations', location.views.LocationViewset)
+# api = router.SimpleRouter()
+
+router.register(r'locations', location.views.LocationViewset, base_name="locations")
 router.register(r'cities', CityViewset)
 router.register(r'cities-typeahead', CityTypeaheadViewset)
-router.register(r'neighborhoods', NeighborhoodViewset)
+router.register(r'neighborhoods', NeighborhoodViewset, base_name="neighborhoods")
 router.register(r'communities', CommunityViewset)
 
 urlpatterns = patterns('',

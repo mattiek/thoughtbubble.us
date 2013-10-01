@@ -1,4 +1,4 @@
-@import 'partials/buttons';
+@import '../partials/buttons';
 
 #illustration {
     background: #c9eaf7 no-repeat no-repeat;
@@ -73,7 +73,7 @@
 #minisplore li {
     font-size: 16px;
     margin-bottom: 10px;
-    background: url(../images/orange-arrow.png) no-repeat 0;
+    background: url(../../images/orange-arrow.png) no-repeat 0;
     background-position: 90%;
 }
 
@@ -183,3 +183,13 @@ h1,h2 { margin:0px 0px 10px; }
   margin:0px auto 20px;
 }
 .cover.active:before { background:url(sprite.png) 0px -120px no-repeat; }
+
+.share {
+  a {
+    margin-left:10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

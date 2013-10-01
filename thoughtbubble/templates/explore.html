@@ -13,7 +13,7 @@
   <![endif]-->
 
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-explore.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />
 {% endblock %}
 
 {% block bodyid %}home{% endblock %}
@@ -62,10 +62,11 @@
             <div class="extended">
                 <p>{{ description }}</p>
                 <div class="share">
-                    <a class="orange" href="{{ add_idea }}">add idea</a>
-                    <a class="orange" href="{{ find_ideas }}">find ideas</a>
-                    <a class="orange" href="{{ share }}">share</a>
+                    <a class="orange buttonize" href="{{ add_idea }}">add idea</a>
+                    <a class="orange buttonize" href="{{ find_ideas }}">find ideas</a>
+                    <a class="orange buttonize" href="{{ share }}">share</a>
                 </div>
+                <div style="clear:both;"></div>
             </div>
         </section>
     </script>
