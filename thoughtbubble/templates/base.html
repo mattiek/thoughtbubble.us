@@ -39,7 +39,7 @@
             <ul id="nav">
                 <li><a id="idea-nav" data-href="{% url "addidea" %}" href="{% if location %}{% url "addidea" location.id %}{% else %}{% url "addidea" %}{% endif %}">idea</a></li>
                 <li><a href="{% url "explore" %}">explore</a></li>
-                <li>about</li>
+                <li><a href="/about">about</a></li>
             </ul>
 
             <a href="{% url "home" %}"><img id="logo" src="{{ STATIC_URL }}images/thoughtbubble.us-logo.png" alt=""/></a>
@@ -75,15 +75,15 @@
         </div>
         <div id="sub-footer">
             <ul>
-                <li>ideas</li>
-                <li>projects</li>
-                <li>about</li>
-                <li>terms</li>
-                <li>partners</li>
-                <li class="second">rules</li>
-                <li>terms</li>
-                <li>FAQs</li>
-                <li>news</li>
+                <li><a href="/ideas">ideas</a></li>
+                <li><a href="/projects">projects</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/terms">terms</a></li>
+                <li><a href="/partners">partners</a></li>
+                <li class="second"><a href="/rules">rules</a></li>
+                <li><a href="/terms">terms</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/news">news</a></li>
                 <li><a href="{% url 'privacy' %}">privacy</a></li>
             </ul>
         <p>&copy;2013, Thoughtbubble.us. All rights reserved.</p>
