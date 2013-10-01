@@ -1,0 +1,40 @@
+.sharing {
+  list-style-type: none;
+  display: inline-block;
+  li {
+    display: inline-block;
+
+    span {
+      color: #7b7b7b; /* text color */
+      font-family: "Museo Sans", sans-serif;
+      font-size: 10px;
+      vertical-align: middle;
+
+    }
+    a {
+
+      display: block;
+
+      &.share-fb {
+        background: url(../../images/small-blue-facebook.png) no-repeat;
+        background-size: 100%;
+        width: 18px;
+        height: 15px;
+      }
+
+      &.share-twitter {
+        background: url(../../images/small-blue-twitter.png) no-repeat;
+        background-size: 100%;
+        width: 15px;
+        height: 15px;
+      }
+
+      &.share-linkedin {
+        background: url(../../images/small-blue-linkedin.png) no-repeat;
+        background-size: 100%;
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

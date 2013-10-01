@@ -1,6 +1,6 @@
 <div class="idea-cap">
     <div class="left-idea-cap">
-        <p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p>
+        <a href="{% url 'idea_detail' idea.where.community.state idea.where.community.city idea.where.community.name idea.id %}"><p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p></a>
         <a class="supporting" data-id="{{ idea.id }}" href="#"></a>
         <a class="commenting" data-id="{{ idea.id }}" href="#"></a>
         <span>share</span>

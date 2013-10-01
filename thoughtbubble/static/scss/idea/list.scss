@@ -1,4 +1,6 @@
 @import "idea/idea";
+@import "buttons";
+@import "sharing";
 
 #illustration {
     background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
@@ -144,3 +146,32 @@ form .row .row.second-row {
 .auto-hint {
     color: #aaa;
 }
+
+#idea-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  color: #6d6d6d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 38px / 2;
+
+  b {
+    color: #53b8d1; /* text color */
+  }
+
+}
+
+.row {
+  margin-bottom: 5px;
+  &.extrapad {
+    margin-bottom: 20px;
+  }
+}
+
+.supporting,
+.dislike {
+  display:block;
+  float:left;
+  width: 75px;
+  height: 25px;
+}
+

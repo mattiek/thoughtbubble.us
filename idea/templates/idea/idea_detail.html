@@ -17,33 +17,35 @@
 {% endblock %}
 
 {% block content %}
-
+    <div id="idea-wrapper">
     <div class="row">
-        <div class="large-2 columns">{{ idea.support_count }} support this</div>
-        <div class="large-6 small-6 columns no-padding"></div>
-        <div class="large-1 small-6 columns no-padding"><a class="supporting" data-id="{{ idea.id }}" href="#"></a></div>
-        <div class="large-1 small-6 columns no-padding"><a class="dislike" data-id="{{ idea.id }}" href="#"></a></div>
-        <div class="large-2 columns">
-            <span>share</span>
+        <div class="large-5 columns">
+            <span class="support">{{ idea.support_count }}</span> support this
+        </div>
+        <div class="large-7 small-6 columns no-padding">
+            <a class="supporting orange" href="{% url 'support_idea' idea.id %}">support</a>
+            <a class="dislike orange" href="#"></a>
+
             <ul class="sharing">
-                <li><a class="fb-idea" href="#facebook"></a></li>
-                <li><a class="fb-twitter" href="#twitter"></a></li>
-                <li><a class="fb-linkedin" href="#linkedin"></a></li>
+                <li><span>share</span></li>
+                <li><a class="share-fb" href="#facebook"></a></li>
+                <li><a class="share-twitter" href="#twitter"></a></li>
+                <li><a class="share-linkedin" href="#linkedin"></a></li>
             </ul>
         </div>
     </div>
 
-    <div class="row">
-        <div class="large-12 columns">We want {{ idea.name }} in {{ idea.where.name }}, {{ idea.where.city }}</div>
+    <div class="row extrapad">
+        <div class="large-12 columns">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
     </div>
-    <div class="row">
-        <div class="large-12 columns">It's a {{ idea.what_kind }} for {{ idea.what_for }}</div>
+    <div class="row  extrapad">
+        <div class="large-12 columns">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
     </div>
     <div class="row">
         <div class="large-12 columns">I imagine something like this:</div>
     </div>
-    <div class="row">
-        <div class="large-12 columns">{{ idea.description }}</div>
+    <div class="row extrapad">
+        <div class="large-12 columns"><b>{{ idea.description }}</b></div>
     </div>
     <div class="row">
         <div class="large-12 columns">Links: </div>
@@ -66,7 +68,7 @@
 {##}
 {#        </div>#}
 {#    </div>#}
-
+    </div>
 {% endblock %}
 
 {% block footerscripts %}
