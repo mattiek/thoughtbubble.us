@@ -118,8 +118,8 @@ var minmin = function(id, cid, href, communityName) {
     map.setView([feature.center.coordinates[1],feature.center.coordinates[0]] , 16);
 
     // Rewrite idea create link
-    var $i = $('#idea-nav');
-    $i.attr('href', $i.attr('data-href') + '/' + id);
+//    var $i = $('#idea-nav');
+//    $i.attr('href', $i.attr('data-href') + '/' + id);
 
     // Get to Explore 2
     // TODO: Animate this
