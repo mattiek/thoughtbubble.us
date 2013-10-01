@@ -14,12 +14,12 @@ class LocationAdminForm(forms.ModelForm):
 class AddLocationForm(forms.Form):
 
     name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'title'}),)
-    address = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
-    city_and_state = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
-    zip = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    address = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'address'}), required=False)
+    city_and_state = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'city and state'}), required=False)
+    zip = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'zip code'}), required=False)
     # city = models.ForeignKey(City, null=True, blank=True)
-    latitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
-    longitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}), required=False)
+    latitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'latitude'}), required=False)
+    longitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'longitude'}), required=False)
 
     about = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
     news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
