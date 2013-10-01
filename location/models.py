@@ -61,7 +61,10 @@ class Location(models.Model):
     community = models.ForeignKey(Neighborhood, null=True, blank=True)
 
     def __unicode__(self):
-        return "%s - %s" % (self.name,self.city_and_state,)
+        if self.community:
+            return "%s in %s" % (self.name,self.community.name,)
+        else:
+            return "%s [no community]"
 
     def get_absolute_url(self):
         return reverse('location_detail', args=[str(self.id)])
