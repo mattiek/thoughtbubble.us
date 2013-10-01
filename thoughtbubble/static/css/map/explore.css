@@ -1,0 +1,277 @@
+/* line 1, ../../scss/partials/_buttons.scss */
+.orange {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 3, ../../scss/map/explore.scss */
+#illustration {
+  background: #c9eaf7 no-repeat no-repeat;
+  background-size: 100%;
+  height: 150px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+/* line 11, ../../scss/map/explore.scss */
+#footer {
+  margin: 10px 0 0 0;
+  clear: both;
+}
+
+/* line 16, ../../scss/map/explore.scss */
+#home-container {
+  margin: 0 auto;
+  width: 930px;
+  position: relative;
+}
+
+/* line 22, ../../scss/map/explore.scss */
+#map {
+  width: 100%;
+  height: 640px;
+  background-color: #b5e2b3;
+}
+
+/* line 29, ../../scss/map/explore.scss */
+#minisplore {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 40px;
+  z-index: 99;
+  color: #fff;
+  padding: 10px;
+  background: #fff;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 23px;
+  width: 294px;
+  height: 223px;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+  text-indent: 20px;
+  overflow: hidden;
+}
+
+/* line 54, ../../scss/map/explore.scss */
+#minisplore h3 {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 23px;
+  margin: 0px;
+}
+
+/* line 61, ../../scss/map/explore.scss */
+#minisplore-wrapper {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 180px;
+}
+
+/* line 67, ../../scss/map/explore.scss */
+#minisplore ul {
+  background-color: white;
+  display: block;
+  margin-bottom: 0px;
+}
+
+/* line 73, ../../scss/map/explore.scss */
+#minisplore li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  background: url(../../images/orange-arrow.png) no-repeat 0;
+  background-position: 90%;
+}
+
+/* line 80, ../../scss/map/explore.scss */
+#metrodifier {
+  position: relative;
+  width: 220px;
+  float: right;
+}
+
+/* line 86, ../../scss/map/explore.scss */
+#communisplore {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 640px;
+  /*overflow: scroll;*/
+}
+
+/* line 95, ../../scss/map/explore.scss */
+#communisplore {
+  overflow-y: scroll;
+  /* -webkit-overflow-scrolling: touch; */
+  /* uncomment to accelerate scrolling on iOS */
+}
+
+/* line 99, ../../scss/map/explore.scss */
+#communisplore::-webkit-scrollbar {
+  /* Prevents webkit cross-direction scrolling bug */
+  width: 0;
+}
+
+/* line 103, ../../scss/map/explore.scss */
+#communisplore div.ending {
+  width: 100%;
+  height: 640px;
+}
+
+/* line 111, ../../scss/map/explore.scss */
+article {
+  width: 33.3333%;
+  min-width: 320px;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 33.3333%;
+}
+
+/* line 119, ../../scss/map/explore.scss */
+section {
+  padding: 10px;
+  margin-left: 40px;
+  position: relative;
+  transition: background 500ms, color 500ms;
+  -moz-transition: background 500ms, color 500ms;
+  -webkit-transition: background 500ms, color 500ms;
+  background: #FFFFFF;
+  border-radius: 10px;
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  margin-bottom: 10px;
+}
+/* line 132, ../../scss/map/explore.scss */
+section .extended {
+  display: none;
+}
+/* line 136, ../../scss/map/explore.scss */
+section.active {
+  background: #cdcdcd;
+  color: #eee;
+}
+/* line 140, ../../scss/map/explore.scss */
+section.active .extended {
+  display: block;
+}
+/* line 145, ../../scss/map/explore.scss */
+section p {
+  margin: 10px 0;
+}
+
+/* line 152, ../../scss/map/explore.scss */
+section a h4 {
+  color: #53b8d1;
+  /* text color */
+  text-decoration: none;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 161, ../../scss/map/explore.scss */
+section.active a {
+  color: #eee;
+}
+
+/* line 162, ../../scss/map/explore.scss */
+section.active small {
+  color: #aaa;
+}
+
+/* line 163, ../../scss/map/explore.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* line 164, ../../scss/map/explore.scss */
+h2 {
+  font-size: 1.3333em;
+}
+
+/* line 165, ../../scss/map/explore.scss */
+h1, h2 {
+  margin: 0px 0px 10px;
+}
+
+/* line 167, ../../scss/map/explore.scss */
+.scroll {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+/* line 174, ../../scss/map/explore.scss */
+.colophon {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 179, ../../scss/map/explore.scss */
+.cover:before {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto 20px;
+}
+
+/* line 185, ../../scss/map/explore.scss */
+.cover.active:before {
+  background: url(sprite.png) 0px -120px no-repeat;
+}
+
+/* line 188, ../../scss/map/explore.scss */
+.share a {
+  margin-left: 10px;
+}
+/* line 191, ../../scss/map/explore.scss */
+.share a:first-child {
+  margin-left: 0;
+}
