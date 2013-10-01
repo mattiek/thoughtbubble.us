@@ -23,7 +23,7 @@
         </div>
     </div>
 
-    {% if community.curator == request.user %}
+    {% if community.curator == request.user or request.user.is_superuser %}
         <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
     {% endif %}
     <div class="row title">
