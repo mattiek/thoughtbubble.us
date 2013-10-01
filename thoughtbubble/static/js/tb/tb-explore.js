@@ -31,13 +31,13 @@ function highlightFeature(layer) {
     }
 
     layer.setStyle({
-        stroke: true,
+        stroke: false,
         fill: true,
         weight: 3,
 //        color: '#E27B05',
-        color: '#CCC',
+        color: '#444',
         dashArray: '',
-        fillOpacity: 0.5
+        fillOpacity: 0.2
     });
 
     if (!L.Browser.ie && !L.Browser.opera) {
