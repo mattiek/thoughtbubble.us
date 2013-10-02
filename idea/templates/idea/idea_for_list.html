@@ -1,3 +1,4 @@
+{% load threadedcomments_tags %}
 <div class="idea-cap">
     <div class="left-idea-cap">
         <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p></a>
@@ -7,7 +8,7 @@
     </div>
     <ul class="right-idea-cap">
         <li><span class="emphasis support-star">{{ idea.support_count }}</span> supporters</li>
-        <li><span class="emphasis comments-bubble">{{ idea.comment_count }}</span> comments</li>
+        <li><span class="emphasis comments-bubble">{% get_comment_count for idea as comment_count %} {{ comment_count }}</span> comments</li>
         <li>added {{ idea.get_days_since_added }} days ago</li>
     </ul>
 </div>

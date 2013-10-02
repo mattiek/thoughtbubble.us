@@ -1,0 +1,15 @@
+<div id="form-comment">
+    <form action="/comments/post/" method="post">{% csrf_token %}
+        {{ form.comment }}
+        {{ form.content_type }}
+        {{ form.object_pk }}
+        {{ form.timestamp }}
+        {{ form.security_hash }}
+        {{ form.parent }}
+        {{ form.honeypot }}
+        <input type="hidden" name="next" value="{{ idea.get_absolute_url }}" />
+            <a href="#submit" class="orange buttonize submit_comment">comment</a>
+        <div style="clear:both"></div>
+{#            <a href="#c0" id="cancel_reply">cancel reply</a>#}
+    </form>
+</div>

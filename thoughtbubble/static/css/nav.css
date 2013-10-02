@@ -330,3 +330,8 @@ form .row .row .columns.no-padding {
 h4.message {
   text-align: center;
 }
+
+/* line 302, ../scss/nav.scss */
+#id_honeypot {
+  display: none;
+}

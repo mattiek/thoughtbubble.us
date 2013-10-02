@@ -1,0 +1,21 @@
+.comments {
+  ul {
+    list-style-type: none;
+
+
+  }
+
+  .comment_li {
+    margin-top: 10px;
+  }
+
+  .comment_text {
+    border: 1px solid #d8f1f6;
+    border-radius: 5px;
+
+    .comment_meta {
+      float: right;
+      margin-right: 5px;
+    }
+  }
+}

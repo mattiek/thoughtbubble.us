@@ -281,7 +281,26 @@
   color: #aaa;
 }
 
-/* line 6, ../../scss/idea/list.scss */
+/* line 2, ../../scss/partials/_comments.scss */
+.comments ul {
+  list-style-type: none;
+}
+/* line 8, ../../scss/partials/_comments.scss */
+.comments .comment_li {
+  margin-top: 10px;
+}
+/* line 12, ../../scss/partials/_comments.scss */
+.comments .comment_text {
+  border: 1px solid #d8f1f6;
+  border-radius: 5px;
+}
+/* line 16, ../../scss/partials/_comments.scss */
+.comments .comment_text .comment_meta {
+  float: right;
+  margin-right: 5px;
+}
+
+/* line 7, ../../scss/idea/list.scss */
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -290,7 +309,7 @@
   margin: 0 auto;
 }
 
-/* line 14, ../../scss/idea/list.scss */
+/* line 15, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -301,12 +320,12 @@
   margin-bottom: 0px;
 }
 
-/* line 23, ../../scss/idea/list.scss */
+/* line 24, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 28, ../../scss/idea/list.scss */
+/* line 29, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
@@ -315,22 +334,28 @@
   font-family: "Museo Sans", sans-serif;
   font-size: 38px/2;
 }
-/* line 35, ../../scss/idea/list.scss */
+/* line 36, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 41, ../../scss/idea/list.scss */
+/* line 42, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 43, ../../scss/idea/list.scss */
+/* line 44, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 49, ../../scss/idea/list.scss */
+/* line 50, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
+}
+
+/* line 54, ../../scss/idea/list.scss */
+#id_comment {
+  border: 1px solid #d8f1f6;
+  border-radius: 10px;
 }

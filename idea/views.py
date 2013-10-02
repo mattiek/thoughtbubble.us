@@ -5,6 +5,7 @@ from neighborhood.models import Neighborhood
 from location.models import Location
 from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
+from django.contrib.comments.views.comments import post_comment
 
 def addidea(request, id=None):
     if request.POST:

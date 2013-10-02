@@ -4,7 +4,7 @@
 
 {% block extrahead %}
 {{ block.super }}
-    <meta http-equiv="Refresh" content="5; url={{ comment.content_object.get_absolute_url }}#c{{ comment.id }}" />
+    <meta http-equiv="Refresh" content="0; url={{ comment.content_object.get_absolute_url }}#c{{ comment.id }}" />
 {% endblock %}
 
 {% block content %}
