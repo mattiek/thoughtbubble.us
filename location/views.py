@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from models import Location, LocationType
+from models import Location, LocationType, LocationNews, LocationImage
 from serializers import LocationSerializer
 from rest_framework import viewsets
 from django.shortcuts import render, redirect
@@ -42,8 +42,10 @@ class LocationDetail(DetailView):
         # if id:
         #     context['community'] = Community.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
-
-        context['ideas'] = Idea.objects.filter(where=Location.objects.get(pk=self.kwargs['pk']))
+        location = Location.objects.get(pk=id)
+        context['ideas'] = Idea.objects.filter(where=location)
+        context['news'] = LocationNews.objects.filter(location=location).order_by('-date_created')
+        context['pictures'] = LocationImage.objects.filter(location=location).order_by('-date_created')
         return context
 
 

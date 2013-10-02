@@ -48,5 +48,8 @@ class CommunityNews(models.Model):
     img = models.ImageField(upload_to="communities/news", null=True, blank=True)
     content = models.TextField(null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Community News"
+
     def __unicode__(self):
         return self.name

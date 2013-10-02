@@ -59,6 +59,7 @@ INSTALLED_APPS = (
     'commenteering',
     'community',
     'project',
+    'partner',
     'social.apps.django_app.default',
     'threadedcomments',
     'django.contrib.comments',

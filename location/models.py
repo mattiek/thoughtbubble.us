@@ -5,6 +5,7 @@ from django.contrib.gis.geos import GEOSGeometry
 from community.models import Community
 from neighborhood.models import Neighborhood
 from django.core.urlresolvers import reverse
+from partner.models import Partner
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -20,26 +21,6 @@ MAKI_CHOICES = (
 class LocationType(models.Model):
     name = models.CharField(max_length=255)
     maki_class = models.CharField(max_length=40, choices=MAKI_CHOICES, default="rocket")
-
-    def __unicode__(self):
-        return self.name
-
-
-class LocationImage(models.Model):
-    img = models.ImageField(upload_to="locations")
-    name = models.CharField(max_length=255, blank=True, null=True)
-
-    def __unicode__(self):
-        return self.img
-
-
-class LocationNews(models.Model):
-    name = models.CharField(max_length=255, null=True, blank=True)
-    img = models.ImageField(upload_to="news", null=True, blank=True)
-    content = models.TextField(null=True, blank=True)
-
-    date_created = models.DateTimeField(auto_now_add=True)
-    date_modified = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return self.name
@@ -62,6 +43,8 @@ class Location(models.Model):
     objects = models.GeoManager()
 
     community = models.ForeignKey(Neighborhood, null=True, blank=True)
+
+    partners = models.ManyToManyField(Partner, null=True, blank=True)
 
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
@@ -131,4 +114,26 @@ class Location(models.Model):
 
 
 
+class LocationNews(models.Model):
+    location = models.ForeignKey(Location)
+    name = models.CharField(max_length=255, null=True, blank=True)
+    img = models.ImageField(upload_to="news", null=True, blank=True)
+    content = models.TextField(null=True, blank=True)
 
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return self.name
+
+    class Meta:
+        verbose_name_plural = "Location News"
+
+
+class LocationImage(models.Model):
+    location = models.ForeignKey(Location)
+    img = models.ImageField(upload_to="locations")
+    name = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        return self.img

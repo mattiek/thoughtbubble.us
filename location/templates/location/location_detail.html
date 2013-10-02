@@ -102,7 +102,7 @@
                     dataType: "json",
                     success: function(d) {
                         var markers = L.mapbox.markerLayer(d).addTo(map);
-                        map.setView([d.geometry.coordinates[1],d.geometry.coordinates[0]],13);
+                        map.setView([d.geometry.coordinates[1],d.geometry.coordinates[0]],15);
                     }
                 });
             });
