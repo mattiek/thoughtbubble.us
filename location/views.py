@@ -44,7 +44,7 @@ class LocationDetail(DetailView):
             # context['is_admin'] = self.request.user.is_admin
         location = Location.objects.get(pk=id)
         context['ideas'] = Idea.objects.filter(where=location)
-        context['news'] = LocationNews.objects.filter(location=location).order_by('-date_created')
+        context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
         context['pictures'] = LocationImage.objects.filter(location=location).order_by('-date_created')
         return context
 

@@ -42,12 +42,13 @@
 
     <div id="news" class="row">
         <div class="row">
-            <div class="large-12 columns">news</div>
+            <div class="large-12 columns small-heading">news</div>
         </div>
         <div class="row">
             <div class="large-12 columns">
-                <img src="" alt=""/>
-                <h3>some title</h3>
+
+                {% include 'widgets/news_feed.html' %}
+
             </div>
             <div class="large-2 columns">
                 <a href="#" class="orange"></a>
@@ -58,7 +59,7 @@
     {#    Pictures #}
     <div class="row addpad">
             <div class="row">
-                <div class="large-12 columns">pictures</div>
+                <div class="large-12 columns small-heading">pictures</div>
             </div>
             <div class="row">
                 <div class="large-12 columns">
@@ -72,7 +73,7 @@
     {#    Partners #}
     <div class="row addpad">
         <div class="row">
-            <div class="large-12 columns">partners</div>
+            <div class="large-12 columns small-heading">partners</div>
         </div>
         <div class="row">
             <div class="large-12 columns">

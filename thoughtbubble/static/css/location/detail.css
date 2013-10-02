@@ -248,7 +248,67 @@
   height: 15px;
 }
 
-/* line 5, ../../scss/location/detail.scss */
+/* line 1, ../../scss/partials/_news_feed.scss */
+ol.slats {
+  list-style-type: none;
+}
+/* line 4, ../../scss/partials/_news_feed.scss */
+ol.slats li {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #eee;
+}
+/* line 8, ../../scss/partials/_news_feed.scss */
+ol.slats li:last-child {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+/* line 13, ../../scss/partials/_news_feed.scss */
+ol.slats li h3 {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 19px;
+  line-height: 19px;
+}
+/* line 19, ../../scss/partials/_news_feed.scss */
+ol.slats li h3 .date {
+  margin-left: 15px;
+}
+/* line 23, ../../scss/partials/_news_feed.scss */
+ol.slats li img {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 4px;
+  height: 80px;
+  width: 80px;
+}
+/* line 34, ../../scss/partials/_news_feed.scss */
+ol.slats li p {
+  margin: 0 0 0 76px;
+  line-height: 1.4;
+  color: #6c6d70;
+  /* text color */
+  font-family: "Helvetica";
+  font-size: 11px;
+}
+/* line 43, ../../scss/partials/_news_feed.scss */
+ol.slats li p span.meta {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+/* line 2, ../../scss/partials/_common_tb.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 7, ../../scss/location/detail.scss */
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -257,7 +317,7 @@
   margin: 0 auto;
 }
 
-/* line 13, ../../scss/location/detail.scss */
+/* line 15, ../../scss/location/detail.scss */
 .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -286,13 +346,13 @@
   margin-right: 120px;
 }
 
-/* line 36, ../../scss/location/detail.scss */
+/* line 38, ../../scss/location/detail.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 41, ../../scss/location/detail.scss */
+/* line 43, ../../scss/location/detail.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -305,7 +365,7 @@
   background-position: 57px 57px;
 }
 
-/* line 56, ../../scss/location/detail.scss */
+/* line 58, ../../scss/location/detail.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -315,7 +375,7 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 63, ../../scss/location/detail.scss */
+/* line 65, ../../scss/location/detail.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -323,23 +383,23 @@ textarea {
   max-width: 100%;
 }
 
-/* line 70, ../../scss/location/detail.scss */
+/* line 72, ../../scss/location/detail.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 74, ../../scss/location/detail.scss */
+/* line 76, ../../scss/location/detail.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 79, ../../scss/location/detail.scss */
+/* line 81, ../../scss/location/detail.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 83, ../../scss/location/detail.scss */
+/* line 85, ../../scss/location/detail.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -348,7 +408,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 90, ../../scss/location/detail.scss */
+/* line 92, ../../scss/location/detail.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -357,7 +417,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 97, ../../scss/location/detail.scss */
+/* line 99, ../../scss/location/detail.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -368,12 +428,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 107, ../../scss/location/detail.scss */
+/* line 109, ../../scss/location/detail.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 111, ../../scss/location/detail.scss */
+/* line 113, ../../scss/location/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -384,12 +444,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 120, ../../scss/location/detail.scss */
+/* line 122, ../../scss/location/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 125, ../../scss/location/detail.scss */
+/* line 127, ../../scss/location/detail.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -399,12 +459,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 131, ../../scss/location/detail.scss */
+/* line 133, ../../scss/location/detail.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 135, ../../scss/location/detail.scss */
+/* line 137, ../../scss/location/detail.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -412,23 +472,23 @@ form .row .row.second-row {
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 142, ../../scss/location/detail.scss */
+/* line 144, ../../scss/location/detail.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 146, ../../scss/location/detail.scss */
+/* line 148, ../../scss/location/detail.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 150, ../../scss/location/detail.scss */
+/* line 152, ../../scss/location/detail.scss */
 #map {
   width: 100%;
   height: 265px;
 }
 
-/* line 155, ../../scss/location/detail.scss */
+/* line 157, ../../scss/location/detail.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
@@ -443,7 +503,7 @@ form .row .row.second-row {
   margin-bottom: 20px;
 }
 
-/* line 169, ../../scss/location/detail.scss */
+/* line 171, ../../scss/location/detail.scss */
 .about {
   color: #53b8d1;
   /* text color */

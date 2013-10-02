@@ -1,11 +1,11 @@
 <ol class="slats">
 {% for news in news_feed %}
     <li class="group">
-        <a href="#">
+{#        <a href="#">#}
             <img src="{{ news.img.url }}" alt="thumbnail" />
-            <h3>{{ news.name }}</h3>
+            <h3>{{ news.name }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
             <p>{{ news.content }}</p>
-        </a>
+{#        </a>#}
     </li>
 {% endfor %}
 </ol>
