@@ -38,6 +38,9 @@ class LocationNews(models.Model):
     img = models.ImageField(upload_to="news", null=True, blank=True)
     content = models.TextField(null=True, blank=True)
 
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
     def __unicode__(self):
         return self.name
 
@@ -59,6 +62,10 @@ class Location(models.Model):
     objects = models.GeoManager()
 
     community = models.ForeignKey(Neighborhood, null=True, blank=True)
+
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
 
     def __unicode__(self):
         if self.community:

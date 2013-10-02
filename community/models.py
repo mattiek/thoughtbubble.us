@@ -24,6 +24,9 @@ class Community(models.Model):
 
     members = models.ManyToManyField(ThoughtbubbleUser, null=True, blank=True)
 
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
+
     class Meta:
         verbose_name_plural = "Communities"
 

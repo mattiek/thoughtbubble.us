@@ -77,6 +77,8 @@ class ThoughtbubbleUserProfile(models.Model):
     last_name = models.CharField(max_length=50, default="", null=True, blank=True)
     location = models.CharField(max_length=50, default="", null=True, blank=True)
     profile_picture = models.ImageField(upload_to=path_and_rename('profiles', 'profile_picture'), null=True, blank=True)
+    date_created = models.DateTimeField(auto_now_add=True)
+    date_modified = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
         return "%s's profile" % (self.user.username,)

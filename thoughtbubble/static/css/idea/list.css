@@ -38,30 +38,43 @@
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
+  line-height: 22px;
   display: block;
   float: left;
+  border-radius: 5px;
+  margin-right: 10px;
 }
-/* line 36, ../../scss/idea/_idea.scss */
+/* line 37, ../../scss/idea/_idea.scss */
+.left-idea-cap .supporting i {
+  background-image: url('../../images/white-star.png?1380669755');
+  background-repeat: no-repeat;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 46, ../../scss/idea/_idea.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
+  line-height: 22px;
   display: block;
   float: left;
+  border-radius: 5px;
+  margin-right: 10px;
 }
-/* line 44, ../../scss/idea/_idea.scss */
+/* line 58, ../../scss/idea/_idea.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 50, ../../scss/idea/_idea.scss */
+/* line 64, ../../scss/idea/_idea.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 62, ../../scss/idea/_idea.scss */
+/* line 76, ../../scss/idea/_idea.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
@@ -73,15 +86,15 @@
   padding-top: 29px;
   padding-left: 20px;
 }
-/* line 72, ../../scss/idea/_idea.scss */
+/* line 86, ../../scss/idea/_idea.scss */
 .right-idea-cap li {
   margin-top: 5px;
 }
-/* line 75, ../../scss/idea/_idea.scss */
+/* line 89, ../../scss/idea/_idea.scss */
 .right-idea-cap li:first-child {
   margin-top: 0px;
 }
-/* line 80, ../../scss/idea/_idea.scss */
+/* line 94, ../../scss/idea/_idea.scss */
 .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -89,7 +102,7 @@
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 88, ../../scss/idea/_idea.scss */
+/* line 102, ../../scss/idea/_idea.scss */
 .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -97,7 +110,7 @@
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 96, ../../scss/idea/_idea.scss */
+/* line 110, ../../scss/idea/_idea.scss */
 .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1380665664');
   background-repeat: no-repeat;
@@ -106,7 +119,7 @@
   padding-left: 15px;
 }
 
-/* line 107, ../../scss/idea/_idea.scss */
+/* line 121, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {

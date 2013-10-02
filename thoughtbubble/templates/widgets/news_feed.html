@@ -1,0 +1,11 @@
+<ol class="slats">
+{% for news in news_feed %}
+    <li class="group">
+        <a href="#">
+            <img src="{{ news.img.url }}" alt="thumbnail" />
+            <h3>{{ news.name }}</h3>
+            <p>{{ news.content }}</p>
+        </a>
+    </li>
+{% endfor %}
+</ol>
