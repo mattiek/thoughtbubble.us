@@ -198,9 +198,10 @@ article {
   position: relative;
   padding-top: 40px;
   padding-bottom: 33.3333%;
+  width: 100%;
 }
 
-/* line 119, ../../scss/map/explore.scss */
+/* line 120, ../../scss/map/explore.scss */
 section {
   padding: 10px;
   margin-left: 40px;
@@ -214,26 +215,27 @@ section {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   margin-bottom: 10px;
+  width: 265px;
 }
-/* line 132, ../../scss/map/explore.scss */
+/* line 134, ../../scss/map/explore.scss */
 section .extended {
   display: none;
 }
-/* line 136, ../../scss/map/explore.scss */
+/* line 138, ../../scss/map/explore.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 140, ../../scss/map/explore.scss */
+/* line 142, ../../scss/map/explore.scss */
 section.active .extended {
   display: block;
 }
-/* line 145, ../../scss/map/explore.scss */
+/* line 147, ../../scss/map/explore.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 152, ../../scss/map/explore.scss */
+/* line 154, ../../scss/map/explore.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -242,33 +244,33 @@ section a h4 {
   margin: 0;
 }
 
-/* line 161, ../../scss/map/explore.scss */
+/* line 163, ../../scss/map/explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 162, ../../scss/map/explore.scss */
+/* line 164, ../../scss/map/explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 163, ../../scss/map/explore.scss */
+/* line 165, ../../scss/map/explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 164, ../../scss/map/explore.scss */
+/* line 166, ../../scss/map/explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 165, ../../scss/map/explore.scss */
+/* line 167, ../../scss/map/explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 167, ../../scss/map/explore.scss */
+/* line 169, ../../scss/map/explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -278,13 +280,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 174, ../../scss/map/explore.scss */
+/* line 176, ../../scss/map/explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 179, ../../scss/map/explore.scss */
+/* line 181, ../../scss/map/explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -293,16 +295,16 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 185, ../../scss/map/explore.scss */
+/* line 187, ../../scss/map/explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 188, ../../scss/map/explore.scss */
+/* line 190, ../../scss/map/explore.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 191, ../../scss/map/explore.scss */
+/* line 193, ../../scss/map/explore.scss */
 .share a:first-child {
   margin-left: 0;
 }
