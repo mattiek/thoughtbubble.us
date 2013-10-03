@@ -160,6 +160,10 @@ var minmin = function(id, cid, href, communityName) {
                 $v = $('<div/>').addClass('ending');
                 $('#communisplore').append($v);
                 setScrollExplore();
+                map.dragging.disable();
+                map.touchZoom.disable();
+                map.doubleClickZoom.disable();
+                map.scrollWheelZoom.disable();
             }
         }
     );
