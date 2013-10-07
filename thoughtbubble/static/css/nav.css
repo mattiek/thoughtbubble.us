@@ -217,9 +217,10 @@ form .row .row .columns.no-padding {
   font-family: 'MuseoSans';
   margin: 0 auto;
   display: block;
+  float: none;
 }
 
-/* line 203, ../scss/nav.scss */
+/* line 204, ../scss/nav.scss */
 .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -236,7 +237,7 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-/* line 219, ../scss/nav.scss */
+/* line 220, ../scss/nav.scss */
 #forgot-password {
   display: block;
   color: #FFFFFF;
@@ -246,7 +247,7 @@ form .row .row .columns.no-padding {
   font-weight: 100;
 }
 
-/* line 228, ../scss/nav.scss */
+/* line 229, ../scss/nav.scss */
 #footer {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -261,31 +262,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 239, ../scss/nav.scss */
+/* line 240, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 244, ../scss/nav.scss */
+/* line 245, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 249, ../scss/nav.scss */
+/* line 250, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 257, ../scss/nav.scss */
+/* line 258, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   width: 179px;
 }
 
-/* line 262, ../scss/nav.scss */
+/* line 263, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -296,7 +297,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 271, ../scss/nav.scss */
+/* line 272, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -304,7 +305,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 278, ../scss/nav.scss */
+/* line 279, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -312,7 +313,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 285, ../scss/nav.scss */
+/* line 286, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -320,18 +321,18 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 293, ../scss/nav.scss */
+/* line 294, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 298, ../scss/nav.scss */
+/* line 299, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 302, ../scss/nav.scss */
+/* line 303, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }

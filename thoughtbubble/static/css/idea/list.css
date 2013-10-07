@@ -281,23 +281,65 @@
   color: #aaa;
 }
 
-/* line 2, ../../scss/partials/_comments.scss */
+/* line 4, ../../scss/partials/_comments.scss */
 .comments ul {
   list-style-type: none;
 }
-/* line 8, ../../scss/partials/_comments.scss */
+/* line 10, ../../scss/partials/_comments.scss */
 .comments .comment_li {
   margin-top: 10px;
 }
-/* line 12, ../../scss/partials/_comments.scss */
+/* line 14, ../../scss/partials/_comments.scss */
 .comments .comment_text {
   border: 1px solid #d8f1f6;
   border-radius: 5px;
+  color: #adafb3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  font-style: italic;
+  text-indent: 10px;
 }
-/* line 16, ../../scss/partials/_comments.scss */
+/* line 23, ../../scss/partials/_comments.scss */
 .comments .comment_text .comment_meta {
   float: right;
   margin-right: 5px;
+}
+
+/* line 30, ../../scss/partials/_comments.scss */
+.talkbubble {
+  width: 45px;
+  height: 40px;
+  background: url("../../images/greenhouse-88.png");
+  position: relative;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+}
+/* line 39, ../../scss/partials/_comments.scss */
+.talkbubble.talkleft::after {
+  content: "";
+  position: absolute;
+  left: 74%;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-left: 46px solid transparent;
+  border-bottom: 43px solid transparent;
+  background: url("../../images/greenhouse-88.png");
+}
+/* line 52, ../../scss/partials/_comments.scss */
+.talkbubble.talkright::before {
+  content: "";
+  position: absolute;
+  right: 74%;
+  top: 0px;
+  width: 0;
+  height: 0;
+  border-top: 0px solid transparent;
+  border-right: 46px solid red;
+  border-bottom: 43px solid transparent;
 }
 
 /* line 7, ../../scss/idea/list.scss */

@@ -161,6 +161,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'django.core.context_processors.static',
     'django.contrib.messages.context_processors.messages',
     'thoughtbubble.processors.login_form',
+    'thoughtbubble.processors.domain_host',
     'social.apps.django_app.context_processors.backends',
     'social.apps.django_app.context_processors.login_redirect',
 ]

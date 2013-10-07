@@ -65,7 +65,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         pic = self.get_profile().profile_picture
         if pic:
             return pic.url
-        return None
+        return ""
 
     def __unicode__(self):
         return self.get_short_name()
@@ -82,5 +82,6 @@ class ThoughtbubbleUserProfile(models.Model):
 
     def __unicode__(self):
         return "%s's profile" % (self.user.username,)
+
 
 

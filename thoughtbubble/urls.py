@@ -1,5 +1,6 @@
 from django.conf.urls import patterns, include, url
-
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.gis import admin
 admin.autodiscover()
 
@@ -21,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('api.urls')),
     url('', include('social.apps.django_app.urls', namespace='social')),
-    url('', include('django.contrib.flatpages.urls')),
-)
 
+) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += patterns('', url('', include('django.contrib.flatpages.urls')),)

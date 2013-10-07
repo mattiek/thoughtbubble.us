@@ -91,7 +91,8 @@ class IdeaDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(IdeaDetail,self).get_context_data(**kwargs)
         idea = self.model.objects.get(pk=self.kwargs['pk'])
-        context['supported'] = IdeaSupport.objects.filter(idea=idea,user=self.request.user)
+        if self.request.user.is_authenticated():
+            context['supported'] = IdeaSupport.objects.filter(idea=idea,user=self.request.user)
         context['pictures'] = idea.ideaimage_set.all()
         return context
 
@@ -102,7 +103,7 @@ class IdeaCreate(CreateView):
 
 
 def support_idea(request, id):
-    if not request.user:
+    if not request.user.is_authenticated():
         return HttpResponse('none')
 
     try:

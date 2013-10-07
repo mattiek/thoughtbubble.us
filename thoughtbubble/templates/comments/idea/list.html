@@ -11,12 +11,13 @@
     <ul>{% endif %}
         <li class="comment_li" id="c{{ comment.id }}">{# c## is used by the absolute URL of the Comment model, so keep that as it is. #}
             <div class="comment">
+                <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
                 <div class="comment_text">
                     <div class="comment_meta">
                         <a href="#c{{ comment.id }}" data-comment-id="{{ comment.id }}" class="comment_reply_link">r</a>
                     </div>
 
-                    {{ comment.user_name }}: "{{ comment.comment }}"
+                    {{ comment.user.username }}: "{{ comment.comment }}"
                 </div>
             </div>
             {% for close in comment.close %}</li></ul>{% endfor %}
