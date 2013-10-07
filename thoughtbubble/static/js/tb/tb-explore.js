@@ -208,7 +208,8 @@ var setScrollExplore = function() {
         _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
         sections[index].className += ' active';
         $section = $(sections[index]);
-        map.panTo([$section.attr('data-latitude'), $section.attr('data-longitude')]);
+        //map.panTo([$section.attr('data-latitude'), $section.attr('data-longitude')]);
+        map.setView([$section.attr('data-latitude'), $section.attr('data-longitude')],14);
         return true;
     };
 
