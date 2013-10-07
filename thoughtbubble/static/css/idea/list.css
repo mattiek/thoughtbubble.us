@@ -285,11 +285,27 @@
 .comments ul {
   list-style-type: none;
 }
-/* line 10, ../../scss/partials/_comments.scss */
+/* line 12, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft img {
+  float: left;
+}
+/* line 16, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft .comment_text {
+  margin-left: 6%;
+}
+/* line 22, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright img {
+  float: right;
+}
+/* line 26, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright .comment_text {
+  margin-right: 6%;
+}
+/* line 31, ../../scss/partials/_comments.scss */
 .comments .comment_li {
   margin-top: 10px;
 }
-/* line 14, ../../scss/partials/_comments.scss */
+/* line 35, ../../scss/partials/_comments.scss */
 .comments .comment_text {
   border: 1px solid #d8f1f6;
   border-radius: 5px;
@@ -299,47 +315,21 @@
   font-size: 10px;
   font-style: italic;
   text-indent: 10px;
+  width: 94%;
+  padding: 5px 0px;
 }
-/* line 23, ../../scss/partials/_comments.scss */
+/* line 47, ../../scss/partials/_comments.scss */
 .comments .comment_text .comment_meta {
   float: right;
   margin-right: 5px;
 }
 
-/* line 30, ../../scss/partials/_comments.scss */
-.talkbubble {
-  width: 45px;
-  height: 40px;
-  background: url("../../images/greenhouse-88.png");
-  position: relative;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-}
-/* line 39, ../../scss/partials/_comments.scss */
-.talkbubble.talkleft::after {
-  content: "";
-  position: absolute;
-  left: 74%;
-  top: 0px;
-  width: 0;
-  height: 0;
-  border-top: 0px solid transparent;
-  border-left: 46px solid transparent;
-  border-bottom: 43px solid transparent;
-  background: url("../../images/greenhouse-88.png");
-}
-/* line 52, ../../scss/partials/_comments.scss */
-.talkbubble.talkright::before {
-  content: "";
-  position: absolute;
-  right: 74%;
-  top: 0px;
-  width: 0;
-  height: 0;
-  border-top: 0px solid transparent;
-  border-right: 46px solid red;
-  border-bottom: 43px solid transparent;
+/* line 54, ../../scss/partials/_comments.scss */
+.comment_reply_link {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background: url('../../images/reply-arrow.png?1381111258');
 }
 
 /* line 7, ../../scss/idea/list.scss */

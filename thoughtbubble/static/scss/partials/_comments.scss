@@ -7,6 +7,27 @@
 
   }
 
+  .comment {
+    &.bubbleleft {
+      img {
+        float: left;
+      }
+
+      .comment_text {
+        margin-left: 6%;
+      }
+    }
+
+    &.bubbleright {
+      img {
+        float: right;
+      }
+
+      .comment_text {
+        margin-right: 6%;
+      }
+    }
+  }
   .comment_li {
     margin-top: 10px;
   }
@@ -19,6 +40,9 @@
     font-size: 10px;
     font-style: italic;
     text-indent: 10px;
+    width: 94%;
+    //float: left;
+    padding: 5px 0px;
 
     .comment_meta {
       float: right;
@@ -27,37 +51,9 @@
   }
 }
 
-.talkbubble {
-  width: 45px;
-  height: 40px;
-  background: url('../../images/greenhouse-88.png');
-  position: relative;
-  -moz-border-radius: 20px;
-  -webkit-border-radius: 20px;
-  border-radius: 20px;
-
-  &.talkleft::after {
-    content: "";
-    position: absolute;
-    left: 74%;
-    top: 0px;
-    width: 0;
-    height: 0;
-    border-top: 0px solid transparent;
-    border-left: 46px solid transparent;
-    border-bottom: 43px solid transparent;
-    background: url('../../images/greenhouse-88.png');
-  }
-
-  &.talkright::before {
-    content: "";
-    position: absolute;
-    right: 74%;
-    top: 0px;
-    width: 0;
-    height: 0;
-    border-top: 0px solid transparent;
-    border-right: 46px solid red;
-    border-bottom: 43px solid transparent;
-  }
+.comment_reply_link {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background: image-url('reply-arrow.png');
 }

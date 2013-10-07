@@ -6,15 +6,15 @@
 
 <div class="comments">
     {% for comment in comment_list|fill_tree|annotate_tree %}
-        {% ifchanged comment.parent_id %}{% else %}</li>{% endifchanged %}
+        {% ifchanged comment.parent_id %}{% cycle 'bubbleleft' 'bubbleright' as bubbleside silent %}{% else %}</li>{% endifchanged %}
         {% if not comment.open and not comment.close %}</li>{% endif %}{% if comment.open %}
     <ul>{% endif %}
         <li class="comment_li" id="c{{ comment.id }}">{# c## is used by the absolute URL of the Comment model, so keep that as it is. #}
-            <div class="comment">
-                <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
+            <div class="comment {{ bubbleside }}">
+                <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask-{{ bubbleside }}.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
                 <div class="comment_text">
                     <div class="comment_meta">
-                        <a href="#c{{ comment.id }}" data-comment-id="{{ comment.id }}" class="comment_reply_link">r</a>
+                        <a href="#c{{ comment.id }}" data-comment-id="{{ comment.id }}" class="comment_reply_link"></a>
                     </div>
 
                     {{ comment.user.username }}: "{{ comment.comment }}"
