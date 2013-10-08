@@ -1,0 +1,432 @@
+/* line 3, ../../scss/idea/_idea.scss */
+.idea-cap {
+  color: #7a7a7a;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  width: 576px;
+  height: 113px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background: #daf3f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* IE10+ */
+  background: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 22, ../../scss/idea/_idea.scss */
+.left-idea-cap {
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 440px;
+  float: left;
+}
+/* line 28, ../../scss/idea/_idea.scss */
+.left-idea-cap .supporting {
+  width: 75.5px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+/* line 37, ../../scss/idea/_idea.scss */
+.left-idea-cap .supporting i {
+  background-image: url('../../images/white-star.png?1380669755');
+  background-repeat: no-repeat;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 46, ../../scss/idea/_idea.scss */
+.left-idea-cap .commenting {
+  width: 65px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+/* line 58, ../../scss/idea/_idea.scss */
+.left-idea-cap span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+}
+/* line 64, ../../scss/idea/_idea.scss */
+.left-idea-cap .sharing {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* line 76, ../../scss/idea/_idea.scss */
+.right-idea-cap {
+  float: right;
+  width: 20%;
+  list-style-type: none;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  color: #797878;
+  /* text color */
+  padding-top: 29px;
+  padding-left: 20px;
+}
+/* line 86, ../../scss/idea/_idea.scss */
+.right-idea-cap li {
+  margin-top: 5px;
+}
+/* line 89, ../../scss/idea/_idea.scss */
+.right-idea-cap li:first-child {
+  margin-top: 0px;
+}
+/* line 94, ../../scss/idea/_idea.scss */
+.right-idea-cap .emphasis {
+  color: #f37d23;
+  /* text color */
+  background: #FFF;
+  border-radius: 7px;
+  padding: 2px 7px;
+}
+/* line 102, ../../scss/idea/_idea.scss */
+.right-idea-cap .support-star {
+  background-image: url('../../images/orange-star.png?1380665340');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 110, ../../scss/idea/_idea.scss */
+.right-idea-cap .comments-bubble {
+  background-image: url('../../images/orange-comment.png?1380665664');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+
+/* line 121, ../../scss/idea/_idea.scss */
+.supporting,
+.dislike,
+.commenting {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 1, ../../scss/partials/_buttons.scss */
+.orange {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.blue {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background: #8dd9f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
+  /* IE6-9 */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+
+/* line 42, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 1, ../../scss/partials/_sharing.scss */
+.sharing {
+  list-style-type: none;
+  display: inline-block;
+}
+/* line 4, ../../scss/partials/_sharing.scss */
+.sharing li {
+  display: inline-block;
+}
+/* line 7, ../../scss/partials/_sharing.scss */
+.sharing li span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  vertical-align: middle;
+}
+/* line 14, ../../scss/partials/_sharing.scss */
+.sharing li a {
+  display: block;
+}
+/* line 18, ../../scss/partials/_sharing.scss */
+.sharing li a.share-fb {
+  background: url(../../images/small-blue-facebook.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 15px;
+}
+/* line 25, ../../scss/partials/_sharing.scss */
+.sharing li a.share-twitter {
+  background: url(../../images/small-blue-twitter.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+/* line 32, ../../scss/partials/_sharing.scss */
+.sharing li a.share-linkedin {
+  background: url(../../images/small-blue-linkedin.png) no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 3, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 9, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-default {
+  color: #bbb;
+}
+
+/* line 13, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+}
+
+/* line 20, ../../scss/partials/_chosen.scss */
+.chosen-container {
+  margin-bottom: 15px;
+}
+
+/* line 24, ../../scss/partials/_chosen.scss */
+.auto-hint {
+  color: #aaa;
+}
+
+/* line 3, ../../scss/partials/_comments.scss */
+.comments {
+  clear: both;
+}
+/* line 5, ../../scss/partials/_comments.scss */
+.comments ul {
+  list-style-type: none;
+}
+/* line 13, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft img {
+  float: left;
+}
+/* line 17, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft .comment_text {
+  margin-left: 6%;
+}
+/* line 23, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright img {
+  float: right;
+}
+/* line 27, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright .comment_text {
+  margin-right: 6%;
+}
+/* line 32, ../../scss/partials/_comments.scss */
+.comments .comment_li {
+  margin-top: 10px;
+}
+/* line 36, ../../scss/partials/_comments.scss */
+.comments .comment_text {
+  border: 1px solid #d8f1f6;
+  border-radius: 5px;
+  color: #adafb3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  font-style: italic;
+  text-indent: 10px;
+  width: 94%;
+  padding: 5px 0px;
+}
+/* line 48, ../../scss/partials/_comments.scss */
+.comments .comment_text .comment_meta {
+  float: right;
+  margin-right: 5px;
+}
+
+/* line 55, ../../scss/partials/_comments.scss */
+.comment_reply_link {
+  display: block;
+  width: 11px;
+  height: 10px;
+  background: url('../../images/reply-arrow.png?1381111258');
+}
+
+/* line 62, ../../scss/partials/_comments.scss */
+.comments_length {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+}
+/* line 67, ../../scss/partials/_comments.scss */
+.comments_length p {
+  float: left;
+  margin-left: 40px;
+}
+/* line 71, ../../scss/partials/_comments.scss */
+.comments_length p:first-child {
+  margin-left: 0;
+}
+
+/* line 7, ../../scss/idea/detail.scss */
+#illustration {
+  background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
+  background-size: 100%;
+  height: 238px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+/* line 15, ../../scss/idea/detail.scss */
+.copy {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 24, ../../scss/idea/detail.scss */
+#id_what_for {
+  width: 228px;
+}
+
+/* line 29, ../../scss/idea/detail.scss */
+#idea-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 38px/2;
+}
+/* line 36, ../../scss/idea/detail.scss */
+#idea-wrapper b {
+  color: #53b8d1;
+  /* text color */
+}
+
+/* line 42, ../../scss/idea/detail.scss */
+.row {
+  margin-bottom: 5px;
+}
+/* line 44, ../../scss/idea/detail.scss */
+.row.extrapad {
+  margin-bottom: 20px;
+}
+
+/* line 50, ../../scss/idea/detail.scss */
+.support {
+  color: #f3812b;
+}
+
+/* line 54, ../../scss/idea/detail.scss */
+#id_comment {
+  border: 1px solid #d8f1f6;
+  border-radius: 10px;
+}
+
+/* line 59, ../../scss/idea/detail.scss */
+.news {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 65, ../../scss/idea/detail.scss */
+.dislike.blue {
+  margin: 0 20px;
+}
+
+/* line 69, ../../scss/idea/detail.scss */
+#comments {
+  margin-top: 50px;
+}
