@@ -1,4 +1,5 @@
 {% load threadedcomments_tags %}
+{% load set_var %}
 
 <div class="comments_length">
     <p>{{ comment_list|length }} Comments</p>
@@ -6,9 +7,23 @@
 
 <div class="comments">
     {% for comment in comment_list|fill_tree|annotate_tree %}
-        {% ifchanged comment.parent_id %}{% cycle 'bubbleleft' 'bubbleright' as bubbleside silent %}{% else %}</li>{% endifchanged %}
-        {% if not comment.open and not comment.close %}</li>{% endif %}{% if comment.open %}
-    <ul>{% endif %}
+        {% ifchanged comment.parent_id %}
+            {% else %}
+            </li>
+        {% endifchanged %}
+        {% if not comment.open and not comment.close %}
+            </li>
+        {% endif %}
+            {% if comment.open %}
+                <ul>
+                {% if comment.parent_id == None %}
+                    {% set bubbleside = 'bubbleleft' %}
+                {% elif bubbleside == 'bubbleleft' %}
+                    {% set bubbleside = 'bubbleright' %}
+                {% else %}
+                    {% set bubbleside = 'bubbleleft' %}
+                {% endif %}
+            {% endif %}
         <li class="comment_li" id="c{{ comment.id }}">{# c## is used by the absolute URL of the Comment model, so keep that as it is. #}
             <div class="comment {{ bubbleside }}">
                 <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask-{{ bubbleside }}.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
@@ -21,6 +36,5 @@
                 </div>
             </div>
             {% for close in comment.close %}</li></ul>{% endfor %}
-
     {% endfor %}
 </div>
