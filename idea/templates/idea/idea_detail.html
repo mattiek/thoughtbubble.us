@@ -9,7 +9,7 @@
 
 {% block head %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/list.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/detail.css" />
 {% endblock %}
 
 {% block bodyid %}home{% endblock %}
@@ -29,7 +29,7 @@
             {% else %}
                 <a class="supporting orange" href="{% url 'support_idea_from_detail' idea.id %}">support</a>
             {% endif %}
-            <a class="dislike orange" href="#">dislike</a>
+            <a class="dislike blue" href="#">dislike</a>
 
             {% include "widgets/sharing.html" %}
         </div>
@@ -48,19 +48,34 @@
         <div class="large-12 columns"><b>{{ idea.description }}</b></div>
     </div>
     <div class="row">
-        <div class="large-12 columns">Links: </div>
+        <div class="large-12 columns">Links:
+
+        {% for link in idea.idealink_set.all %}
+            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if not forloop.last %},{% endif %}
+        {% endfor %}
+        </div>
     </div>
 
+{#    <div class="row">#}
+{#        <div class="large-12 columns news">news </div>#}
+{#    </div>#}
+{#    <div class="row">#}
+{#        <div class="large-12 columns">#}
+{#            {% for news in news_feed %}#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    </div>#}
+
+
     <div class="row">
-        <div class="large-12 columns">photos </div>
-    </div>
-        <div class="row">
-            <div class="large-12 columns">
-                {% for picture in pictures %}
-                    <img src="{{ picture.img.url }}" alt=""/>
-                {% endfor %}
-            </div>
+        <div class="large-12 columns">
+            {% for picture in pictures %}
+                <img src="{{ picture.img.url }}" alt=""/>
+            {% endfor %}
         </div>
+    </div>
+
+
 {##}
 {#    <div class="row">#}
 {#        <div class="large-3 small-2 columns">#}

@@ -2,7 +2,8 @@
 {% load set_var %}
 
 <div class="comments_length">
-    <p>{{ comment_list|length }} Comments</p>
+    <p>comments</p>
+    <p>view more comments ({{ comment_list|length }})</p>
 </div>
 
 <div class="comments">
@@ -29,6 +30,7 @@
                 <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask-{{ bubbleside }}.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
                 <div class="comment_text">
                     <div class="comment_meta">
+                        <a href="#c{{ comment.id }}" data-comment-id="{{ comment.id }}" class="comment_support"></a>
                         <a href="#c{{ comment.id }}" data-comment-id="{{ comment.id }}" class="comment_reply_link"></a>
                     </div>
 

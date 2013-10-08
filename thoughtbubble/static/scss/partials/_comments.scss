@@ -1,6 +1,7 @@
 @import "compass";
 
 .comments {
+  clear: both;
   ul {
     list-style-type: none;
 
@@ -56,4 +57,19 @@
   width: 11px;
   height: 10px;
   background: image-url('reply-arrow.png');
+}
+
+.comments_length {
+  color: #53b8d1; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+
+  p {
+    float: left;
+    margin-left: 40px;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+  }
 }
