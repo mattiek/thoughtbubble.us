@@ -71,7 +71,36 @@
   font-size: 11px;
 }
 
-/* line 3, ../../scss/map/explore.scss */
+/* line 3, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+}
+
+/* line 10, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 17, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 4, ../../scss/map/explore.scss */
 #illustration {
   background: #c9eaf7 no-repeat no-repeat;
   background-size: 100%;
@@ -80,27 +109,27 @@
   margin: 0 auto;
 }
 
-/* line 11, ../../scss/map/explore.scss */
+/* line 12, ../../scss/map/explore.scss */
 #footer {
   margin: 10px 0 0 0;
   clear: both;
 }
 
-/* line 16, ../../scss/map/explore.scss */
+/* line 17, ../../scss/map/explore.scss */
 #home-container {
   margin: 0 auto;
   width: 930px;
   position: relative;
 }
 
-/* line 22, ../../scss/map/explore.scss */
+/* line 23, ../../scss/map/explore.scss */
 #map {
   width: 100%;
   height: 640px;
   background-color: #b5e2b3;
 }
 
-/* line 29, ../../scss/map/explore.scss */
+/* line 30, ../../scss/map/explore.scss */
 #minisplore {
   position: absolute;
   left: 20px;
@@ -122,7 +151,7 @@
   text-indent: 20px;
   overflow: visible;
 }
-/* line 52, ../../scss/map/explore.scss */
+/* line 53, ../../scss/map/explore.scss */
 #minisplore h3 {
   color: #53b8d1;
   /* text color */
@@ -130,18 +159,19 @@
   font-size: 23px;
   margin: 0px;
 }
-/* line 59, ../../scss/map/explore.scss */
+/* line 60, ../../scss/map/explore.scss */
 #minisplore #anywhere-entry {
-  max-width: 200px;
+  width: 100%;
+  color: #c6c6c6;
 }
-/* line 63, ../../scss/map/explore.scss */
+/* line 66, ../../scss/map/explore.scss */
 #minisplore ul {
   background-color: white;
   display: block;
   margin-bottom: 0px;
   list-style-type: none;
 }
-/* line 70, ../../scss/map/explore.scss */
+/* line 73, ../../scss/map/explore.scss */
 #minisplore li {
   font-size: 16px;
   margin-bottom: 10px;
@@ -149,14 +179,14 @@
   background-position: 90%;
 }
 
-/* line 86, ../../scss/map/explore.scss */
+/* line 89, ../../scss/map/explore.scss */
 #metrodifier {
   position: relative;
   width: 220px;
   float: right;
 }
 
-/* line 92, ../../scss/map/explore.scss */
+/* line 95, ../../scss/map/explore.scss */
 #communisplore {
   display: none;
   position: absolute;
@@ -168,18 +198,18 @@
   /* -webkit-overflow-scrolling: touch; */
   /* uncomment to accelerate scrolling on iOS */
 }
-/* line 100, ../../scss/map/explore.scss */
+/* line 103, ../../scss/map/explore.scss */
 #communisplore div.ending {
   width: 100%;
   height: 640px;
 }
-/* line 107, ../../scss/map/explore.scss */
+/* line 110, ../../scss/map/explore.scss */
 #communisplore::-webkit-scrollbar {
   /* Prevents webkit cross-direction scrolling bug */
   width: 0;
 }
 
-/* line 114, ../../scss/map/explore.scss */
+/* line 117, ../../scss/map/explore.scss */
 article {
   width: 33.3333%;
   min-width: 320px;
@@ -189,7 +219,7 @@ article {
   width: 100%;
 }
 
-/* line 123, ../../scss/map/explore.scss */
+/* line 126, ../../scss/map/explore.scss */
 section {
   padding: 10px;
   margin-left: 40px;
@@ -205,25 +235,25 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 137, ../../scss/map/explore.scss */
+/* line 140, ../../scss/map/explore.scss */
 section .extended {
   display: none;
 }
-/* line 141, ../../scss/map/explore.scss */
+/* line 144, ../../scss/map/explore.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 145, ../../scss/map/explore.scss */
+/* line 148, ../../scss/map/explore.scss */
 section.active .extended {
   display: block;
 }
-/* line 150, ../../scss/map/explore.scss */
+/* line 153, ../../scss/map/explore.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 157, ../../scss/map/explore.scss */
+/* line 160, ../../scss/map/explore.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -232,33 +262,33 @@ section a h4 {
   margin: 0;
 }
 
-/* line 166, ../../scss/map/explore.scss */
+/* line 169, ../../scss/map/explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 167, ../../scss/map/explore.scss */
+/* line 170, ../../scss/map/explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 168, ../../scss/map/explore.scss */
+/* line 171, ../../scss/map/explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 169, ../../scss/map/explore.scss */
+/* line 172, ../../scss/map/explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 170, ../../scss/map/explore.scss */
+/* line 173, ../../scss/map/explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 172, ../../scss/map/explore.scss */
+/* line 175, ../../scss/map/explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -268,13 +298,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 179, ../../scss/map/explore.scss */
+/* line 182, ../../scss/map/explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 184, ../../scss/map/explore.scss */
+/* line 187, ../../scss/map/explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -283,21 +313,21 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 190, ../../scss/map/explore.scss */
+/* line 193, ../../scss/map/explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 193, ../../scss/map/explore.scss */
+/* line 196, ../../scss/map/explore.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 196, ../../scss/map/explore.scss */
+/* line 199, ../../scss/map/explore.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 204, ../../scss/map/explore.scss */
+/* line 207, ../../scss/map/explore.scss */
 .tt-dropdown-menu {
   position: absolute;
   z-index: 99;
@@ -308,11 +338,22 @@ h1, h2 {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 16px;
-  width: 294px;
+  width: 100%;
   border-radius: 5px;
   -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
   box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
   text-indent: 20px;
   overflow: visible;
+}
+/* line 227, ../../scss/map/explore.scss */
+.tt-dropdown-menu p {
+  margin-bottom: 5px;
+}
+
+/* line 232, ../../scss/map/explore.scss */
+.twitter-typeahead {
+  display: block !important;
+  width: 87%;
+  margin: 0 auto;
 }

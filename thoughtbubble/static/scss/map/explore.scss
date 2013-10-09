@@ -1,4 +1,5 @@
-@import '../partials/buttons';
+@import 'partials/buttons';
+@import "partials/inputs";
 
 #illustration {
     background: #c9eaf7 no-repeat no-repeat;
@@ -57,7 +58,9 @@
   }
 
   #anywhere-entry {
-    max-width: 200px;
+    //max-width: 200px;
+    width: 100%;
+    color: #c6c6c6;
   }
 
   ul {
@@ -210,7 +213,7 @@ h1,h2 { margin:0px 0px 10px; }
   color: #b6b6b7; /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 16px;
-  width: 294px;
+  width: 100%;
   //height: 223px;
   border-radius: 5px;
 
@@ -220,4 +223,14 @@ h1,h2 { margin:0px 0px 10px; }
 
   text-indent: 20px;
   overflow: visible;
+
+  p {
+    margin-bottom: 5px;
+  }
+}
+
+.twitter-typeahead {
+  display: block !important;
+  width: 87%;
+  margin: 0 auto;
 }
