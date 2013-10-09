@@ -139,7 +139,13 @@
                 e.preventDefault();
                 $(e.target).parent().submit();
             });
-        })
+        });
+
+
+        //Subscribe to events
+    $(document.body).on('support:count', function(e){
+       $('.support-number').html(e.count);
+    });
 
     </script>
 {% endblock %}

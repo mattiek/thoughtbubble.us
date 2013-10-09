@@ -10,10 +10,12 @@ $('a.supporting').on('click', function(e){
         success: function(data) {
             if (data.status == 'removed') {
                 $target.removeClass('activated');
-                $('.support-number').html(data.count);
+                $(document.body).trigger({type: 'support:count', target: $target, count: data.count});
+//                $('.support-number').html(data.count);
             } else if (data.status == 'added') {
                 $target.addClass('activated');
-                $('.support-number').html(data.count);
+//                $('.support-number').html(data.count);
+                $(document.body).trigger({type: 'support:count', target: $target, count: data.count});
             } else {
 
             }
