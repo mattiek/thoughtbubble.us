@@ -39,7 +39,7 @@
     font-family: "Museo Sans", sans-serif;
     font-size: 23px;
     width: 294px;
-    height: 223px;
+    //height: 223px;
     border-radius: 5px;
 
     -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
@@ -47,35 +47,41 @@
     box-shadow:         7px 7px 5px rgba(0, 0, 0, 0.2);
 
     text-indent: 20px;
-    overflow: hidden;
+    overflow: visible;
 
-}
-
-#minisplore h3 {
+  h3 {
     color: #53b8d1; /* text color */
     font-family: "Museo Sans", sans-serif;
     font-size: 23px;
     margin: 0px;
-}
+  }
 
-#minisplore-wrapper {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 180px;
-}
+  #anywhere-entry {
+    max-width: 200px;
+  }
 
-#minisplore ul {
+  ul {
     background-color: white;
     display: block;
     margin-bottom: 0px;
-}
+    list-style-type: none;
+  }
 
-#minisplore li {
+  li {
     font-size: 16px;
     margin-bottom: 10px;
     background: url(../../images/orange-arrow.png) no-repeat 0;
     background-position: 90%;
+  }
+
 }
+
+#minisplore-wrapper {
+    //overflow-y: scroll;
+    //overflow-x: hidden;
+    //height: 180px;
+}
+
 
 #metrodifier {
     position: relative;
@@ -90,21 +96,18 @@
   left: 0px;
   height: 640px;
   /*overflow: scroll;*/
-}
 
-#communisplore {
+  div.ending {
+    width: 100%;
+    height: 640px;
+  }
   overflow-y: scroll;
   /* -webkit-overflow-scrolling: touch; *//* uncomment to accelerate scrolling on iOS */
-}
-#communisplore::-webkit-scrollbar { /* Prevents webkit cross-direction scrolling bug */
-  width: 0;
-}
 
-#communisplore div.ending {
-  width: 100%;
-  height: 640px;
+  &::-webkit-scrollbar { /* Prevents webkit cross-direction scrolling bug */
+    width: 0;
+  }
 }
-
 
 // Sherlock
 
@@ -194,4 +197,27 @@ h1,h2 { margin:0px 0px 10px; }
       margin-left: 0;
     }
   }
+}
+
+
+// twitter typahead
+.tt-dropdown-menu {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  padding: 10px;
+  background: #fff;
+  color: #b6b6b7; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 16px;
+  width: 294px;
+  //height: 223px;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 7px 7px 5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow:    7px 7px 5px rgba(0, 0, 0, 0.2);
+  box-shadow:         7px 7px 5px rgba(0, 0, 0, 0.2);
+
+  text-indent: 20px;
+  overflow: visible;
 }

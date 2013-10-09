@@ -31,12 +31,12 @@
         <div id="minisplore-wrapper">
                 <ul>
                     {% for community in communities %}
-                        <li><a href="{{ community.get_absolute_url }}"
+                        <li><a class="community" href="{{ community.get_absolute_url }}"
                                data-id="{{ community.neighborhood.id }}"
                                data-community="{{ community.id }}"
                                 >{{ community.neighborhood.name }}</a></li>
                     {% endfor %}
-                        <li><a href="#" id="anywhere">anywhere else</a></li>
+                        <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>
                 </ul>
         </div>
     </div>
@@ -79,6 +79,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jcarousellite.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/typeahead.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
 

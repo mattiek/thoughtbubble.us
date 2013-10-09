@@ -105,7 +105,7 @@ $.ajax({
     }
 });
 
-$('#minisplore-wrapper').baron();
+//$('#minisplore-wrapper').baron();
 
 
 var minmin = function(id, cid, href, communityName) {
@@ -169,7 +169,7 @@ var minmin = function(id, cid, href, communityName) {
     );
 }
 
-$('#minisplore a').on('click', function(e){
+$('#minisplore a.community').on('click', function(e){
     e.preventDefault();
 
     var id = $(e.target).attr('data-id'),
@@ -249,3 +249,27 @@ var setScrollExplore = function() {
     });
 }
 
+
+$('#anywhere-else').on('click', function(e){
+    e.preventDefault();
+    if ($('#anywhere-entry').length)
+        $('#anywhere-entry').remove();
+    else {
+        $('#minisplore').append('<input id="anywhere-entry" type="text" />');
+        $('#anywhere-entry').typeahead(
+            {
+                name: 'name',
+                valueKey: 'name',
+                prefetch: '/api/v1/cities-typeahead/.json',
+                remote: '/api/v1/cities-typeahead/.json?city=%QUERY'
+            }
+        ).bind('typeahead:selected', function (obj, datum) {
+                $('#id_city').val(datum.id);
+            }).bind('typeahead:autocompleted', function (obj, datum) {
+                $('#id_city').val(datum.id);
+            });
+
+    }
+
+
+});
