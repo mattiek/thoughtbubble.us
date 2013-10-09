@@ -41,6 +41,23 @@
       background-position: 15% 45%;
       padding-left: 15px;
     }
+
+    .unsupported {
+      display: block;
+    }
+    .supported {
+      display: none;
+    }
+
+
+    &.activated {
+      .unsupported {
+        display: none;
+      }
+      .supported {
+        display: block;
+      }
+    }
   }
 
   .commenting {
@@ -55,11 +72,11 @@
 
   }
 
-  span {
-    color: #7b7b7b; /* text color */
-    font-family: "Museo Sans", sans-serif;
-    font-size: 10px;
-  }
+  //span {
+  //  color: #7b7b7b; /* text color */
+  //  font-family: "Museo Sans", sans-serif;
+  //  font-size: 10px;
+  //}
 
   .sharing {
     display: inline-block;

@@ -16,3 +16,7 @@ def get_idea_support_count(value):
 @register.filter(name='communities_joined_count')
 def get_idea_support_count(value):
     return Community.objects.filter(members=value).count()
+
+@register.filter(name='is_supported_by_user')
+def is_supported(value, arg):
+    return IdeaSupport.objects.filter(user=arg, idea=value).count()

@@ -6,6 +6,7 @@ from location.models import Location
 from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
 from django.contrib.comments.views.comments import post_comment
+import json as JSON
 
 def addidea(request, id=None):
     if request.POST:
@@ -103,22 +104,26 @@ class IdeaCreate(CreateView):
 
 
 def support_idea(request, id):
-    if not request.user.is_authenticated():
-        return HttpResponse('none')
+    result = {'status':'none'}
+    noStatus = {'status':'none'}
+    removedStatus = {'status':'removed'}
+    addedStatus = {'status':'added'}
 
-    try:
-        idea = Idea.objects.get(pk=id)
-    except:
-        return HttpResponse('none')
+    if request.user.is_authenticated():
+        try:
+            idea = Idea.objects.get(pk=id)
+            try:
+                g = IdeaSupport.objects.get(user=request.user, idea=idea)
+                g.delete()
+                result['status'] = 'removed'
+            except:
+                IdeaSupport.objects.create(user=request.user, idea=idea)
+                result['status'] = 'added'
+            result['count'] = idea.support_count()
+        except:
+            pass
 
-    try:
-        g = IdeaSupport.objects.get(user=request.user, idea=idea)
-        g.delete()
-        return HttpResponse("removed")
-    except:
-        IdeaSupport.objects.create(user=request.user, idea=idea)
-        return HttpResponse("added")
-
+    return HttpResponse(JSON.dumps(result), mimetype='application/json')
 
 def support_idea_from_detail(request,id):
     support_idea(request,id)

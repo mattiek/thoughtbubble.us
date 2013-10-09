@@ -47,7 +47,7 @@
 }
 
 
-.support {
+.support-number {
   color: #f3812b;
 }
 
@@ -68,4 +68,31 @@
 
 #comments {
   margin-top: 50px;
+}
+
+i {
+  background-image: image-url("white-star.png");
+  background-repeat: no-repeat;
+  //background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+
+.supporting {
+  .unsupported {
+    display: block;
+  }
+  .supported {
+    display: none;
+  }
+
+
+  &.activated {
+    .unsupported {
+      display: none;
+    }
+    .supported {
+      display: block;
+    }
+  }
 }
