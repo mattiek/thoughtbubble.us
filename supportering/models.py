@@ -13,6 +13,6 @@ class AbstractSupport(models.Model):
         abstract = True
 
 
-class CommentSupport(models.Model):
+class CommentSupport(AbstractSupport):
     comment = models.ForeignKey(Comment)
 

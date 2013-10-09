@@ -299,7 +299,7 @@
   list-style-type: none;
 }
 /* line 13, ../../scss/partials/_comments.scss */
-.comments .comment.bubbleleft img {
+.comments .comment.bubbleleft img.talkbubb {
   float: left;
 }
 /* line 17, ../../scss/partials/_comments.scss */
@@ -307,7 +307,7 @@
   margin-left: 6%;
 }
 /* line 23, ../../scss/partials/_comments.scss */
-.comments .comment.bubbleright img {
+.comments .comment.bubbleright img.talkbubb {
   float: right;
 }
 /* line 27, ../../scss/partials/_comments.scss */
@@ -337,14 +337,6 @@
   margin-right: 5px;
 }
 
-/* line 55, ../../scss/partials/_comments.scss */
-.comment_reply_link {
-  display: block;
-  width: 11px;
-  height: 10px;
-  background: url('../../images/reply-arrow.png?1381111258');
-}
-
 /* line 62, ../../scss/partials/_comments.scss */
 .comments_length {
   color: #53b8d1;
@@ -360,6 +352,20 @@
 /* line 71, ../../scss/partials/_comments.scss */
 .comments_length p:first-child {
   margin-left: 0;
+}
+
+/* line 77, ../../scss/partials/_comments.scss */
+.comment_support {
+  color: #f37d23;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+}
+/* line 83, ../../scss/partials/_comments.scss */
+.comment_support img {
+  vertical-align: initial;
+  margin-right: 3px;
 }
 
 /* line 7, ../../scss/idea/list.scss */

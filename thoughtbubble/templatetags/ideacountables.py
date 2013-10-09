@@ -1,7 +1,7 @@
 from django import template
 from idea.models import Idea, IdeaSupport
 from community.models import Community
-
+from supportering.models import CommentSupport
 
 register = template.Library()
 
@@ -20,3 +20,7 @@ def get_idea_support_count(value):
 @register.filter(name='is_supported_by_user')
 def is_supported(value, arg):
     return IdeaSupport.objects.filter(user=arg, idea=value).count()
+
+@register.filter(name='comment_support_count')
+def comment_support_count(value):
+    return CommentSupport.objects.filter(comment=value).count()

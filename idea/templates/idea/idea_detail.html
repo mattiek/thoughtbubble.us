@@ -142,10 +142,36 @@
         });
 
 
+        $('.comment_support').on('click', function(e) {
+            e.preventDefault();
+            $target = $(e.target);
+            while (!$target.attr('href'))
+                $target = $target.parent();
+
+            $.ajax({
+                url: $target.attr('href'),
+                success: function(data) {
+                    if (data.status == 'removed') {
+                        $target.removeClass('activated');
+                        $(document.body).trigger({type: 'comment:support:count', target: $target, count: data.count});
+                    } else if (data.status == 'added') {
+                        $target.addClass('activated');
+                        $(document.body).trigger({type: 'comment:support:count', target: $target, count: data.count});
+                    } else {
+
+                    }
+                }
+            })
+        });
+
         //Subscribe to events
-    $(document.body).on('support:count', function(e){
+    $(document.body).on('idea:support:count', function(e){
        $('.support-number').html(e.count);
     });
+
+        $(document.body).on('comment:support:count', function(e){
+            $('span',e.target).html(e.count);
+        });
 
     </script>
 {% endblock %}

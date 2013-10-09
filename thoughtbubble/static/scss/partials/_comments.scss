@@ -10,7 +10,7 @@
 
   .comment {
     &.bubbleleft {
-      img {
+      img.talkbubb {
         float: left;
       }
 
@@ -20,7 +20,7 @@
     }
 
     &.bubbleright {
-      img {
+      img.talkbubb {
         float: right;
       }
 
@@ -53,10 +53,10 @@
 }
 
 .comment_reply_link {
-  display: block;
-  width: 11px;
-  height: 10px;
-  background: image-url('reply-arrow.png');
+  //display: block;
+  //width: 11px;
+  //height: 10px;
+  //background: image-url('reply-arrow.png');
 }
 
 .comments_length {
@@ -71,5 +71,17 @@
     &:first-child {
       margin-left: 0;
     }
+  }
+}
+
+.comment_support {
+  color: #f37d23; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+
+  img {
+    vertical-align: initial;
+    margin-right: 3px;
   }
 }
