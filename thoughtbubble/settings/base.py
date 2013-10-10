@@ -60,9 +60,17 @@ INSTALLED_APPS = (
     'community',
     'project',
     'partner',
-    'social.apps.django_app.default',
+    # 'social.apps.django_app.default',
     'threadedcomments',
+    'avatar',
     'django.contrib.comments',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    # ... include the providers you want to enable:
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.linkedin',
+    'allauth.socialaccount.providers.twitter',
 )
 
 COMMENTS_APP = 'threadedcomments'
@@ -74,7 +82,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
+    # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
 
 ROOT_URLCONF = 'thoughtbubble.urls'
@@ -162,17 +170,26 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'django.contrib.messages.context_processors.messages',
     'thoughtbubble.processors.login_form',
     'thoughtbubble.processors.domain_host',
-    'social.apps.django_app.context_processors.backends',
-    'social.apps.django_app.context_processors.login_redirect',
+    "allauth.account.context_processors.account",
+    "allauth.socialaccount.context_processors.socialaccount",
+    # 'social.apps.django_app.context_processors.backends',
+    # 'social.apps.django_app.context_processors.login_redirect',
 ]
 
-
 AUTHENTICATION_BACKENDS = (
-    'social.backends.twitter.TwitterOAuth',
-    'social.backends.linkedin.LinkedinOAuth2',
-    'social.backends.facebook.FacebookOAuth2',
-    'django.contrib.auth.backends.ModelBackend',
+# Needed to login by username in Django admin, regardless of `allauth`
+"django.contrib.auth.backends.ModelBackend",
+
+# `allauth` specific authentication methods, such as login by e-mail
+"allauth.account.auth_backends.AuthenticationBackend",
 )
+
+# AUTHENTICATION_BACKENDS = (
+#     'social.backends.twitter.TwitterOAuth',
+#     'social.backends.linkedin.LinkedinOAuth2',
+#     'social.backends.facebook.FacebookOAuth2',
+#     'django.contrib.auth.backends.ModelBackend',
+# )
 
 SITE_ID = 1
 
@@ -180,3 +197,8 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
 )
+
+SOCIALACCOUNT_AUTO_SIGNUP=False
+ACCOUNT_EMAIL_REQUIRED=True
+ACCOUNT_EMAIL_VERIFICATION="none"
+SOCIALACCOUNT_ADAPTER="thoughtbubble.views.MySocialAdapter"

@@ -1,3 +1,4 @@
+{% load socialaccount %}
 <!DOCTYPE html>
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
@@ -68,7 +69,7 @@
         <div id="footer">
             <div id="footer-wrap">
                 <ul>
-                    <li><a id="footer-logout" href="{% url 'logout' %}">Logout</a></li>
+                    <li><a id="footer-logout" href="{% url 'account_logout' %}">Logout</a></li>
                     <li><a id="footer-twitter" href="{% url 'logout' %}"></a></li>
                     <li><a id="footer-facebook" href="{% url 'logout' %}"></a></li>
                     <li><a id="footer-linkedin" href="{% url 'logout' %}"></a></li>
@@ -98,7 +99,11 @@
 </script>
 <div id="login-overlay" class="white-popup mfp-hide">
     <h6>login with</h6>
-    <div class="oauths"></div>
+    <div class="oauths">
+        <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
+        <a href="{% provider_login_url "linkedin" method="oauth2" %}">LinkedIn OAuth2</a>
+        <a href="{% provider_login_url "twitter" %}">Twitter Connect</a>
+    </div>
     <form action="/login" method="POST">
         {% csrf_token %}
         {{ loginform.email }}

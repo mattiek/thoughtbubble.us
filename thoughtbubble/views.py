@@ -8,6 +8,30 @@ from thoughtbubble.utils import path_and_rename
 from community.models import Community
 from idea.models import Idea, IdeaSupport
 
+from django.views.generic.edit import FormView
+from django.core.urlresolvers import reverse, reverse_lazy
+
+from allauth.socialaccount.forms import DisconnectForm
+
+from django.contrib import messages
+
+from allauth.account.adapter import get_adapter as get_account_adapter
+from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
+
+class MyDisconnectForm(DisconnectForm):
+    cleaned_data = {}
+
+
+class MySocialAdapter(DefaultSocialAccountAdapter):
+    def get_connect_redirect_url(self, request, socialaccount):
+        """
+        Returns the default URL to redirect to after successfully
+        connecting a social account.
+        """
+        assert request.user.is_authenticated()
+        url = reverse('user_dashboard')
+        return url
+
 def home(request):
     return render(request, 'home.html')
 
@@ -74,6 +98,9 @@ def dashboard(request):
         else:
             d['ideas'] = Idea.objects.filter(user=request.user).order_by('-date_created')
 
+
+
+
         return render(request, 'accounts/dashboard.html', d)
 
 
@@ -111,3 +138,39 @@ def signup(request):
         form = SignupForm(captcha_choices=s['choices'], answer=s['answer'])
 
     return render(request, 'signup.html', {'form': form, 'captcha_answer': s['answer']})
+
+
+class MyConnectionsView(FormView):
+    template_name = "accounts/dashboard.html"
+    form_class = DisconnectForm
+    success_url = reverse_lazy("user_dashboard")
+
+    def get_form_kwargs(self):
+        kwargs = super(MyConnectionsView, self).get_form_kwargs()
+        kwargs["request"] = self.request
+        return kwargs
+
+    def form_valid(self, form):
+        get_account_adapter().add_message(self.request,
+                                          messages.INFO,
+                                          'socialaccount/messages/'
+                                          'account_disconnected.txt')
+        form.save()
+        return super(MyConnectionsView, self).form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super(MyConnectionsView,self).get_context_data(**kwargs)
+        try:
+            profile = ThoughtbubbleUserProfile.objects.get(user=self.request.user)
+        except:
+            profile = ThoughtbubbleUserProfile.objects.create(user=self.request.user).save()
+        context['profile'] = profile
+
+        filter = self.request.GET.get('filter',None)
+
+        if filter == 'support':
+            context['ideas'] = [x.idea for x in IdeaSupport.objects.filter(user=self.request.user).order_by('-date_created')]
+        else:
+            context['ideas'] = Idea.objects.filter(user=self.request.user).order_by('-date_created')
+
+        return context
