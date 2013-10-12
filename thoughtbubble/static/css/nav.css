@@ -76,13 +76,13 @@
 
 /* line 72, ../scss/nav.scss */
 #sub-footer {
-  margin: 50px 0 0 0;
   color: #4585c3;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 12px;
-  width: 320px;
-  margin: 55px auto 0;
+  text-align: center;
+  width: 100%;
+  margin: 20px auto 0;
 }
 /* line 80, ../scss/nav.scss */
 #sub-footer ul {
@@ -93,10 +93,6 @@
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
-}
-/* line 88, ../scss/nav.scss */
-#sub-footer ul li.second {
-  margin-left: 20px;
 }
 /* line 94, ../scss/nav.scss */
 #sub-footer p {

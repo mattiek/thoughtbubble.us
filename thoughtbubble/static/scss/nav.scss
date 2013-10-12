@@ -70,12 +70,12 @@
 }
 
 #sub-footer {
-  margin: 50px 0 0 0;
   color: #4585c3; /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 12px;
-  width: 320px;
-  margin: 55px auto 0;
+  text-align: center;
+  width: 100%;
+  margin: 20px auto 0;
 
   ul {
     list-style: none;
@@ -85,9 +85,9 @@
       margin-right: 25px;
       line-height: 25px;
 
-      &.second {
-        margin-left: 20px;
-      }
+      //&.second {
+      //  margin-left: 20px;
+      //}
     }
   }
 

@@ -5,6 +5,7 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
     )
 from neighborhood.models import Neighborhood
+from avatar.models import Avatar
 
 
 class ThoughtbubbleUserManager(BaseUserManager):
@@ -62,9 +63,9 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         return self.thoughtbubbleuserprofile
 
     def get_profile_picture(self):
-        pic = self.get_profile().profile_picture
-        if pic:
-            return pic.url
+        avatar = Avatar.objects.get(user=self,primary=True)
+        if avatar and avatar.avatar:
+            return avatar.avatar.url
         return ""
 
     def __unicode__(self):
