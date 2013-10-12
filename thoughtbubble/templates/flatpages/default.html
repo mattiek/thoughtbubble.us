@@ -16,17 +16,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
-        <div class="large-3 columns">
+        <div class="left-column">
             <img src="{{ STATIC_URL }}images/greenhouse-88.png" id="greenhouse" alt=""/>
             <img src="{{ STATIC_URL }}images/guitarist-85.png" id="guitarist" alt=""/>
             <img src="{{ STATIC_URL }}images/hotdogtruck-82.png" id="hotdogtruck" alt=""/>
         </div>
-        <div class="large-8 columns">
+        <div class="right-column">
             {{ flatpage.content }}
          </div>
-        <div class="large-1"></div>
-    </div>
+        <div class="clr"></div>
 {% endblock %}
 
 {% block footerscripts %}

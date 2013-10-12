@@ -18,11 +18,9 @@
 
 {% block content %}
     <div id="page-wrapper">
-        <div class="row">
-            <div class="large-12 columns">
+            <div class="">
                 <img src="{{ community.get_logo }}" alt=""/>
             </div>
-        </div>
 
         {% if community.curator == request.user or request.user.is_superuser %}
             <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
@@ -32,13 +30,9 @@
                     {% include "widgets/sharing.html" %}
                 </div>
         </div>
-        <div class="row">
-            <div class="large-12 columns">
-                <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
-            </div>
 
-        </div>
-        <div class="row">
+        <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
+
             <div class="actions">
                 {% if request.user in community.members.all %}
                     <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
@@ -54,52 +48,33 @@
                 <a href="{% url 'explore' object.neighborhood.state object.neighborhood.city object.id %}" class="blue s-button">explore</a>
                 <a href="#" class="blue s-button">add</a>
             </div>
-        </div>
 
     {#    About #}
-        <div class="row">
-            <div id="about" class="large-12 columns large-blue">
+            <div id="about" class="large-blue">
                 {{ community.about }}
             </div>
-        </div>
-        <div class="row">
-            <div class="large-3 push-9 columns">
+
+            <div class="">
                {% include "widgets/sharing.html" %}
             </div>
-        </div>
 
         {#    News #}
-        <div class="row">
-            <div class="large-1 columns">news</div>
-        </div>
-        <div id="news" class="row">
-            <div class="large-2 columns">
+            <div class="">news</div>
+        <div id="news">
                 <div id="news-photo"></div>
-            </div>
-
-            <div class="large-10 columns">
                 <img id="news-photo"/>
                 <div id="news-photos"></div>
-            </div>
         </div>
 
 
         {#    Pictures #}
-        <div class="row addpad">
-            <div class="large-1 columns">pictures</div>
-            <div class="large-11 columns">
-                <div class="picture"></div>
-                <div class="picture"></div>
-            </div>
-        </div>
+        <div class="">pictures</div>
+        <div class="picture"></div>
+        <div class="picture"></div>
 
         {#    Partners #}
-        <div class="row addpad">
-            <div class="large-1 columns">partners</div>
-            <div class="large-11 columns">
-                <div class="picture"></div>
-            </div>
-        </div>
+        <div class="">partners</div>
+        <div class="picture"></div>
     </div>
 {% endblock %}
 

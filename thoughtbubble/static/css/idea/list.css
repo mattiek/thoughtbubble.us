@@ -26,15 +26,19 @@
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 );
   /* IE6-9 */
 }
+/* line 21, ../../scss/idea/_idea.scss */
+.idea-cap a {
+  text-decoration: none;
+}
 
-/* line 22, ../../scss/idea/_idea.scss */
+/* line 26, ../../scss/idea/_idea.scss */
 .left-idea-cap {
-  padding-top: 30px;
+  padding-top: 10px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 28, ../../scss/idea/_idea.scss */
+/* line 32, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -44,30 +48,30 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 37, ../../scss/idea/_idea.scss */
+/* line 41, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 45, ../../scss/idea/_idea.scss */
+/* line 49, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting .unsupported {
   display: block;
 }
-/* line 48, ../../scss/idea/_idea.scss */
+/* line 52, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting .supported {
   display: none;
 }
-/* line 54, ../../scss/idea/_idea.scss */
+/* line 58, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting.activated .unsupported {
   display: none;
 }
-/* line 57, ../../scss/idea/_idea.scss */
+/* line 61, ../../scss/idea/_idea.scss */
 .left-idea-cap .supporting.activated .supported {
   display: block;
 }
-/* line 63, ../../scss/idea/_idea.scss */
+/* line 67, ../../scss/idea/_idea.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -77,33 +81,34 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 81, ../../scss/idea/_idea.scss */
+/* line 85, ../../scss/idea/_idea.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
+  margin-top: 0px;
 }
 
-/* line 93, ../../scss/idea/_idea.scss */
+/* line 98, ../../scss/idea/_idea.scss */
 .right-idea-cap {
   float: right;
-  width: 20%;
   list-style-type: none;
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
   color: #797878;
   /* text color */
-  padding-top: 29px;
-  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 0px;
 }
-/* line 103, ../../scss/idea/_idea.scss */
+/* line 108, ../../scss/idea/_idea.scss */
 .right-idea-cap li {
   margin-top: 5px;
 }
-/* line 106, ../../scss/idea/_idea.scss */
+/* line 111, ../../scss/idea/_idea.scss */
 .right-idea-cap li:first-child {
   margin-top: 0px;
 }
-/* line 111, ../../scss/idea/_idea.scss */
+/* line 116, ../../scss/idea/_idea.scss */
 .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -111,7 +116,7 @@
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 119, ../../scss/idea/_idea.scss */
+/* line 124, ../../scss/idea/_idea.scss */
 .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -119,7 +124,7 @@
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 127, ../../scss/idea/_idea.scss */
+/* line 132, ../../scss/idea/_idea.scss */
 .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1380665664');
   background-repeat: no-repeat;
@@ -128,7 +133,7 @@
   padding-left: 15px;
 }
 
-/* line 138, ../../scss/idea/_idea.scss */
+/* line 143, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -229,7 +234,7 @@
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
-  vertical-align: middle;
+  vertical-align: super;
 }
 /* line 14, ../../scss/partials/_sharing.scss */
 .sharing li a {

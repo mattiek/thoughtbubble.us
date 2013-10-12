@@ -13,7 +13,7 @@
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
-  vertical-align: middle;
+  vertical-align: super;
 }
 /* line 14, ../../scss/partials/_sharing.scss */
 .sharing li a {

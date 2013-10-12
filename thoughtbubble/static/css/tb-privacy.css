@@ -41,3 +41,14 @@ p {
   color: #58595b;
   text-align: justify;
 }
+
+/* line 40, ../scss/tb-privacy.scss */
+.left-column {
+  width: 25%;
+  float: left;
+}
+
+/* line 49, ../scss/tb-privacy.scss */
+.clr {
+  clear: both;
+}

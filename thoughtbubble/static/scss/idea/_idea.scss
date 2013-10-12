@@ -17,10 +17,14 @@
   background: -ms-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* IE10+ */
   background: linear-gradient(to right,  #daf3f8 80%,#fef8ee 80%); /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 ); /* IE6-9 */
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .left-idea-cap {
-  padding-top: 30px;
+  padding-top: 10px;
   margin-left: 20px;
   width: 440px;
   float: left;
@@ -81,6 +85,7 @@
   .sharing {
     display: inline-block;
     list-style-type: none;
+    margin-top: 0px;
 
     li {
 
@@ -92,13 +97,13 @@
 
 .right-idea-cap {
   float:right;
-  width: 20%;
   list-style-type: none;
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
   color: #797878; /* text color */
-  padding-top: 29px;
-  padding-left: 20px;
+  padding-top: 25px;
+  padding-right: 15px;
+  padding-left: 0px;
 
   li {
     margin-top: 5px;

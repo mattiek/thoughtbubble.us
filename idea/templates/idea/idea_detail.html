@@ -20,80 +20,29 @@
 
 {% block content %}
     <div id="idea-wrapper">
-    <div class="row">
-        <div class="large-5 columns">
-            <span class="support-number">{{ idea.support_count }}</span> support this
+        <span class="support-number">{{ idea.support_count }}</span> support this
+
+        <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+        <a class="dislike blue" href="#">dislike</a>
+
+        {% include "widgets/sharing.html" %}
+
+        <div class="">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
+        <div class="">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
+        <div class="">I imagine something like this:</div>
+        <div class=""><b>{{ idea.description }}</b></div>
+        <div class="">Links:
+            {% for link in idea.idealink_set.all %}
+                <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if not forloop.last %},{% endif %}
+            {% endfor %}
         </div>
-        <div class="large-7 small-6 columns no-padding">
 
-            <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-
-{#            {% if supported %}#}
-{#                <a class="supporting orange activated" href="{% url 'support_idea_from_detail' idea.id %}">supported</a>#}
-{#            {% else %}#}
-{#                <a class="supporting orange" href="{% url 'support_idea_from_detail' idea.id %}">support</a>#}
-{#            {% endif %}#}
-            <a class="dislike blue" href="#">dislike</a>
-
-            {% include "widgets/sharing.html" %}
-        </div>
-    </div>
-
-    <div class="row extrapad">
-        <div class="large-12 columns">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
-    </div>
-    <div class="row  extrapad">
-        <div class="large-12 columns">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
-    </div>
-    <div class="row">
-        <div class="large-12 columns">I imagine something like this:</div>
-    </div>
-    <div class="row extrapad">
-        <div class="large-12 columns"><b>{{ idea.description }}</b></div>
-    </div>
-    <div class="row">
-        <div class="large-12 columns">Links:
-
-        {% for link in idea.idealink_set.all %}
-            <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if not forloop.last %},{% endif %}
-        {% endfor %}
-        </div>
-    </div>
-
-{#    <div class="row">#}
-{#        <div class="large-12 columns news">news </div>#}
-{#    </div>#}
-{#    <div class="row">#}
-{#        <div class="large-12 columns">#}
-{#            {% for news in news_feed %}#}
-{#            {% endfor %}#}
-{#        </div>#}
-{#    </div>#}
-
-
-    <div class="row">
-        <div class="large-12 columns">
+        <div>
             {% for picture in pictures %}
                 <img src="{{ picture.img.url }}" alt=""/>
             {% endfor %}
         </div>
-    </div>
 
-
-{##}
-{#    <div class="row">#}
-{#        <div class="large-3 small-2 columns">#}
-{#            <div id="add-news-image">#}
-{##}
-{#            </div>#}
-{#        </div>#}
-{#        <div class="large-8 small-8 columns">#}
-{#            {{ form.news|add_class:"news-text" }}#}
-{#        </div>#}
-{#        <div class="large-1 small-1 columns pos-rel">#}
-{##}
-{#        </div>#}
-{#    </div>#}
 
 {#    Comments #}
         <div class="comments_wrapper" id="comments">
