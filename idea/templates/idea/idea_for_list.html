@@ -3,11 +3,7 @@
 <div class="idea-cap">
     <div class="left-idea-cap">
         <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ idea.where.name }} for {{ idea.what_for }}</p></a>
-        {% if user.is_authenticated %}
-            <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-        {% else %}
-            <a class="supporting orange" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-        {% endif %}
+        <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
         <a class="commenting orange" data-id="{{ idea.id }}" href="{{ idea.get_absolute_url }}#comments">comment</a>
         {% include "widgets/sharing.html" %}
     </div>
