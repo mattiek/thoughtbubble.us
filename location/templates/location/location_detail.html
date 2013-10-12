@@ -31,56 +31,35 @@
         <div id="header">{{ location.name }}</div>
     </div>
 
-    <div class="row">
-        <div class="large-6 columns about">{{ location.about }}</div>
-        <div class="large-6 columns">
+        <div class="about">{{ location.about }}</div>
+        <div class="">
             <div id="map"></div>
         </div>
-    </div>
 
     {#    News #}
 
-    <div id="news" class="row">
-        <div class="row">
-            <div class="large-12 columns small-heading">news</div>
-        </div>
-        <div class="row">
-            <div class="large-12 columns">
+    <div id="news">
+        <div class="small-heading">news</div>
 
-                {% include 'widgets/news_feed.html' %}
+        {% include 'widgets/news_feed.html' %}
 
-            </div>
-            <div class="large-2 columns">
                 <a href="#" class="orange"></a>
-            </div>
-        </div>
     </div>
 
     {#    Pictures #}
-    <div class="row addpad">
-            <div class="row">
-                <div class="large-12 columns small-heading">pictures</div>
-            </div>
-            <div class="row">
-                <div class="large-12 columns">
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                    <img src="" alt=""/>
-                </div>
-            </div>
-    </div>
+        <div class="large-12 columns small-heading">pictures</div>
+        <div class="large-12 columns">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
 
     {#    Partners #}
-    <div class="row addpad">
-        <div class="row">
-            <div class="large-12 columns small-heading">partners</div>
-        </div>
-        <div class="row">
-            <div class="large-12 columns">
-                <img src="" alt=""/>
-                <img src="" alt=""/>
-                <img src="" alt=""/>
-            </div>
+        <div class="large-12 columns small-heading">partners</div>
+        <div class="large-12 columns">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
         </div>
     </div>
 

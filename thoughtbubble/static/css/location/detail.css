@@ -510,14 +510,13 @@ form .row .row.second-row {
   line-height: 33px;
   width: 100%;
   border-radius: 10px;
-  padding: 0 20px;
+  padding: 20px 0px;
   text-align: center;
-  padding: 20px;
   font-size: 23px;
   margin-bottom: 20px;
 }
 
-/* line 171, ../../scss/location/detail.scss */
+/* line 170, ../../scss/location/detail.scss */
 .about {
   color: #53b8d1;
   /* text color */
