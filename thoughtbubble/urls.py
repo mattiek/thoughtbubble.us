@@ -3,7 +3,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.gis import admin
 
-from views import MyConnectionsView
+from views import MyConnectionsView, UserProfileFormView
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -28,6 +29,7 @@ urlpatterns = patterns('',
     (r'^accounts/', include('allauth.urls')),
     (r'^avatar/', include('avatar.urls')),
     url(r'^accounts/profile/?$', MyConnectionsView.as_view(), name='user_dashboard'),
+    url(r'^accounts/update/?$', UserProfileFormView.as_view(), name='user_profile_update'),
 
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

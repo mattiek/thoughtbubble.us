@@ -76,6 +76,23 @@ class SignupForm(forms.Form):
 
 
 
+class UserProfileForm(forms.Form):
+    first_name = forms.CharField(max_length=50,required=False)
+    last_name = forms.CharField(max_length=50,required=False)
+    location = forms.CharField(max_length=50,required=False)
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(UserProfileForm, self).clean()
+        first_name = cleaned_data['first_name']
+        last_name = cleaned_data['last_name']
+        location = cleaned_data['location']
+        return cleaned_data
+
+
+class AvatarForm(forms.Form):
+    pass
+
+
 class LoginForm(forms.Form):
     email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}))
     password = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'password'}))

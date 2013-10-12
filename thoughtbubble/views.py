@@ -18,6 +18,13 @@ from django.contrib import messages
 from allauth.account.adapter import get_adapter as get_account_adapter
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 
+from vanilla.views import FormView as VanillaFormView
+
+from braces.views import AjaxResponseMixin, JSONResponseMixin
+
+from forms import UserProfileForm
+
+
 class MyDisconnectForm(DisconnectForm):
     cleaned_data = {}
 
@@ -173,4 +180,15 @@ class MyConnectionsView(FormView):
         else:
             context['ideas'] = Idea.objects.filter(user=self.request.user).order_by('-date_created')
 
+        u_form = UserProfileForm()
+        u_form.fields['first_name'].initial = profile.first_name
+        u_form.fields['last_name'].initial = profile.last_name
+        u_form.fields['location'].initial = profile.location
+        context['update_form'] = u_form
+
         return context
+
+
+class UserProfileFormView(VanillaFormView,AjaxResponseMixin, JSONResponseMixin):
+    form_class = UserProfileForm
+    template_name = "accounts/update.html"

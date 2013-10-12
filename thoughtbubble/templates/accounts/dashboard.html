@@ -39,6 +39,8 @@
                     <div class="row">
                         <div class="large-11 small-11 columns user-info">
                             {{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}} | {{profile.location|default:"unknown"}}
+                            {{ update_form.first_name }} {{ update_form.last_name }} {{ update_form.location }}
+                            s
                         </div>
                         <div class="large-1 small-1 columns">
                             <a class="buttonize orange" href="">edit</a>

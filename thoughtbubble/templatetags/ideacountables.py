@@ -7,14 +7,20 @@ register = template.Library()
 
 @register.filter(name='idea_count')
 def idea_count(value):
+    if not value.is_authenticated():
+        return 0
     return Idea.objects.filter(user=value).count()
 
 @register.filter(name='idea_support_count')
 def get_idea_support_count(value):
+    if not value.is_authenticated():
+        return 0
     return IdeaSupport.objects.filter(user=value).count()
 
 @register.filter(name='communities_joined_count')
 def communities_joined_count(value):
+    if not value.is_authenticated():
+        return 0
     return Community.objects.filter(members=value).count()
 
 @register.filter(name='is_supported_by_user')
