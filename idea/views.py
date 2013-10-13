@@ -125,7 +125,7 @@ class IdeaCreate(CreateView):
     form_class = AddIdeaForm
 
 
-def support_idea(request, id):
+def support_idea(request, state, city, id):
     result = {'status':'none'}
     noStatus = {'status':'none'}
     removedStatus = {'status':'removed'}

@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'thoughtbubble.views.home', name='home'),
+    url(r'^(?P<state>\w+)/(?P<city>[-%\w ]+)/?$', 'thoughtbubble.views.home', name='home'),
     url(r'^signup/?$', 'thoughtbubble.views.signup', name='signup'),
 
     # url(r'^accounts/profile/?$', 'thoughtbubble.views.dashboard', name='user_dashboard'),

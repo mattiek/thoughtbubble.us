@@ -39,7 +39,11 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
         url = reverse('user_dashboard')
         return url
 
-def home(request):
+def home(request, state=None, city=None):
+    if not state or not city:
+        return redirect( reverse('home',  args=[request.session['exploring_state'],
+                                                request.session['exploring_city'],
+                                            ]))
     return render(request, 'home.html')
 
 
