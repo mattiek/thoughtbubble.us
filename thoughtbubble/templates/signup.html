@@ -18,7 +18,12 @@
 
             <div id="form-wrapper">
                  {% if form.errors %}
-                    <div>{{ form.errors }}</div>
+                    <div class="error-box">
+                    <h3>Errors</h3>
+                        {% for field, error in form.errors.items %}
+                            {{ error }}
+                        {% endfor %}
+                    </div>
                 {% endif %}
                 <form action="{% url 'signup' %}" enctype="multipart/form-data" method="POST">
                 {% csrf_token %}

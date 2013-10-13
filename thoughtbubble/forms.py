@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from models import *
 from utils import *
 from widgets import FilePicker
+import re
 
 def email_exists(email):
     try:
@@ -26,13 +27,13 @@ class SignupForm(forms.Form):
 
 
     profile_picture = forms.ImageField(widget=FilePicker, required=False)
-    username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}),)
+    username = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'username'}),error_messages={'required':'A username is required.'})
     location = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'location'}),)
-    email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}))
-    password = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'password'}))
-    confirm = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'retype password'}))
-    captcha = forms.ChoiceField(choices=[])
-    accept_tos = forms.BooleanField(widget=forms.CheckboxInput )
+    email = forms.CharField(max_length=254,widget=forms.EmailInput(attrs={'placeholder': 'email'}),error_messages={'required':'An email is required.'})
+    password = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'password'}),error_messages={'required':'A password is required.'})
+    confirm = forms.CharField(max_length=50, widget=forms.PasswordInput(attrs={'placeholder': 'retype password'}),error_messages={'required':'You must confirm your password.'})
+    captcha = forms.ChoiceField(choices=[],error_messages={'required':'You are required to try the captcha.'})
+    accept_tos = forms.BooleanField(widget=forms.CheckboxInput,error_messages={'required':'You are required to accept the terms.'} )
 
 
     answer = []
@@ -49,11 +50,15 @@ class SignupForm(forms.Form):
         accept_tos = cleaned_data.get("accept_tos")
         captcha = cleaned_data.get("captcha")
 
+        re_match = re.match('\w+',username)
         if email_exists(email):
             raise forms.ValidationError("That email has already been used to create an account. Try another one.")
 
         if username_exists(username):
             raise forms.ValidationError("That username has already been used to create an account. Try another one.")
+
+        if not re_match or re_match.group(0) != username:
+            raise forms.ValidationError("Usernames can only include letters, numbers and underscores. ")
 
         if captcha != self.answer[0]:
             raise forms.ValidationError("You flunked the human test.")

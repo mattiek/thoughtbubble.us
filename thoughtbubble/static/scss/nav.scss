@@ -328,3 +328,42 @@ ul {
 p {
   margin-top: 0px;
 }
+
+.error-box {
+  -moz-border-radius: 6px / 5px;
+  -webkit-border-radius: 6px / 5px;
+  border-radius: 6px / 5px; /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: #fff; /* layer fill content */
+  -moz-box-shadow: 2px 2px 11px rgba(1,1,1,.15); /* drop shadow */
+  -webkit-box-shadow: 2px 2px 11px rgba(1,1,1,.15); /* drop shadow */
+  box-shadow: 2px 2px 11px rgba(1,1,1,.15); /* drop shadow */
+  color: #656464; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+
+  h3 {
+    color: #f37d23; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 26px;
+    margin: 0;
+  }
+
+  .close-button {
+    color: #f47d21;
+    background-color: #ffffff;
+    width: 26px;
+    height: 28px;
+    opacity: 1;
+    line-height: 28px;
+    margin: 0px;
+    top: 8px;
+    right: 8px;
+    border-radius: 7px;
+    border: 1px solid #cccccc;
+    font-weight: 100;
+    font-size: 24px;
+  }
+}
