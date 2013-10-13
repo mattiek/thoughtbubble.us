@@ -13,6 +13,11 @@ def domain_host(request):
 def exploring(request):
     city = request.session.get('exploring_city', None)
     state =  request.session.get('exploring_state', None)
+
+    if not city or not state:
+        city = 'Columbus'
+        state = 'OH'
+
     obj = City.objects.filter(name__iexact=city, state_code__iexact=state)
     if obj:
         obj = obj[0]

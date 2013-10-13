@@ -51,12 +51,8 @@
                 {% endif %}
             </ul>
             <ul id="nav">
-                <li><a id="idea-nav" data-href="{% url "idea_list" %}" href="{% url "idea_list" %}">ideas</a></li>
-                {% if exploring_state and exploring_city %}
-                    <li><a href="{% url "explore" exploring_state exploring_city %}">explore</a></li>
-                {% else %}
-                    <li><a href="{% url "explore" %}">explore</a></li>
-                {% endif %}
+                <li><a id="idea-nav" data-href="{% url "idea_list" exploring_state exploring_city %}" href="{% url "idea_list" exploring_state exploring_city %}">ideas</a></li>
+                <li><a href="{% url "explore" exploring_state exploring_city %}">explore</a></li>
                 <li><a href="/about">about</a></li>
             </ul>
 
@@ -64,8 +60,8 @@
 
                 {% block primarynav %}
                     <ul id="primary-nav">
-                        <a href="{% url "explore" %}"><li class="icon-explore">explore</li></a>
-                        <a href="{% url "addidea" %}"><li class="icon-add">add</li></a>
+                        <a href="{% url "explore" exploring_state exploring_city %}"><li class="icon-explore">explore</li></a>
+                        <a href="{% url "addidea" exploring_state exploring_city %}"><li class="icon-add">add</li></a>
                     </ul>
                 {% endblock %}
         </div>
@@ -78,6 +74,7 @@
 {#    End Messages #}
         <div id="home-container">
 {% endblock %}
+
 {% block content %}
 {% endblock %}
 {% block navend %}

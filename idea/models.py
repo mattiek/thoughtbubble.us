@@ -63,7 +63,9 @@ class Idea(models.Model):
         return d.days
 
     def get_support_url(self):
-        return reverse('support_idea',args=[self.id,])
+        return reverse('support_idea',args=[self.where.community.state,
+                                           self.where.community.city,
+                                           self.id])
 
     def get_absolute_url(self):
         return reverse('idea_detail', args=[self.where.community.state,
