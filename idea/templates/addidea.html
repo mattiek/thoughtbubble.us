@@ -22,7 +22,7 @@
 
     <div id="form-wrapper">
         {{ form.errors }}
-        <form enctype="multipart/form-data" action="{% url 'addidea' %}" method="POST">
+        <form enctype="multipart/form-data" action="{% url 'addidea' exploring_state exploring_city %}" method="POST">
             {% csrf_token %}
             <p class="copy want">I want</p>
             <div class="">{{ form.name}}</div>
