@@ -1,4 +1,48 @@
-/* line 1, ../../scss/idea/add.scss */
+/* line 3, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 25, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 32, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 4, ../../scss/idea/add.scss */
 #illustration {
   background: url(../../images/illustration-windturbines.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -7,7 +51,7 @@
   margin: 0 auto;
 }
 
-/* line 9, ../../scss/idea/add.scss */
+/* line 12, ../../scss/idea/add.scss */
 .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -32,17 +76,23 @@
   width: 322px;
   color: #fff;
   font-family: 'MuseoSans';
-  float: right;
-  margin-right: 120px;
+  clear: both;
+  margin: 40px auto;
+  display: block;
 }
 
-/* line 32, ../../scss/idea/add.scss */
+/* line 35, ../../scss/idea/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 37, ../../scss/idea/add.scss */
+/* line 40, ../../scss/idea/add.scss */
+#pictures {
+  width: 200px;
+}
+
+/* line 44, ../../scss/idea/add.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -55,7 +105,7 @@
   background-position: 57px 57px;
 }
 
-/* line 52, ../../scss/idea/add.scss */
+/* line 59, ../../scss/idea/add.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -65,7 +115,7 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 59, ../../scss/idea/add.scss */
+/* line 66, ../../scss/idea/add.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -73,23 +123,23 @@ textarea {
   max-width: 100%;
 }
 
-/* line 66, ../../scss/idea/add.scss */
+/* line 73, ../../scss/idea/add.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 70, ../../scss/idea/add.scss */
+/* line 77, ../../scss/idea/add.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 75, ../../scss/idea/add.scss */
+/* line 82, ../../scss/idea/add.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 79, ../../scss/idea/add.scss */
+/* line 86, ../../scss/idea/add.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -98,7 +148,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 86, ../../scss/idea/add.scss */
+/* line 93, ../../scss/idea/add.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -107,7 +157,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 93, ../../scss/idea/add.scss */
+/* line 100, ../../scss/idea/add.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -118,12 +168,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 103, ../../scss/idea/add.scss */
+/* line 110, ../../scss/idea/add.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 107, ../../scss/idea/add.scss */
+/* line 114, ../../scss/idea/add.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -134,12 +184,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 116, ../../scss/idea/add.scss */
+/* line 123, ../../scss/idea/add.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 121, ../../scss/idea/add.scss */
+/* line 128, ../../scss/idea/add.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -149,12 +199,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 127, ../../scss/idea/add.scss */
+/* line 134, ../../scss/idea/add.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 131, ../../scss/idea/add.scss */
+/* line 138, ../../scss/idea/add.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -162,12 +212,72 @@ form .row .row.second-row {
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 138, ../../scss/idea/add.scss */
+/* line 145, ../../scss/idea/add.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 142, ../../scss/idea/add.scss */
+/* line 149, ../../scss/idea/add.scss */
 .auto-hint {
   color: #aaa;
+}
+
+/* line 154, ../../scss/idea/add.scss */
+.want {
+  width: 80px;
+  float: left;
+}
+
+/* line 159, ../../scss/idea/add.scss */
+#id_name {
+  width: 520px;
+}
+
+/* line 164, ../../scss/idea/add.scss */
+#id_what_kind,
+#id_where {
+  width: 300px;
+  float: left;
+}
+
+/* line 169, ../../scss/idea/add.scss */
+#id_what_for_chosen {
+  margin-left: 60px;
+}
+
+/* line 173, ../../scss/idea/add.scss */
+#id_what_for {
+  width: 218px;
+}
+
+/* line 177, ../../scss/idea/add.scss */
+#id_description {
+  width: 300px;
+}
+
+/* line 181, ../../scss/idea/add.scss */
+.additional {
+  width: 260px;
+  float: left;
+}
+/* line 185, ../../scss/idea/add.scss */
+.additional.fl {
+  width: 340px;
+}
+
+/* line 190, ../../scss/idea/add.scss */
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 197, ../../scss/idea/add.scss */
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+/* line 202, ../../scss/idea/add.scss */
+#id_pic1, #id_pic2 {
+  margin-bottom: 20px;
 }

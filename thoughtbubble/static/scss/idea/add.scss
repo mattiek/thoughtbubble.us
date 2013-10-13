@@ -1,3 +1,6 @@
+@import "compass";
+@import "partials/inputs";
+
 #illustration {
     background: url(../../images/illustration-windturbines.jpg) no-repeat no-repeat;
     background-size: 100%;
@@ -24,14 +27,18 @@
     width: 322px;
     color: #fff;
     font-family: 'MuseoSans';
-
-    float: right;
-    margin-right: 120px;
+    clear: both;
+    margin: 40px auto;
+    display: block;
 }
 
 #form-wrapper {
     width:600px;
     margin: 0 auto;
+}
+
+#pictures {
+  width: 200px;
 }
 
 #add-photo {
@@ -141,4 +148,57 @@ form .row .row.second-row {
 
 .auto-hint {
     color: #aaa;
+}
+
+
+.want {
+  width: 80px;
+  float: left;
+}
+
+#id_name {
+  width: 520px;
+}
+
+#id_what_kind,
+#id_where {
+  width: 300px;
+  float: left;
+}
+
+#id_what_for_chosen {
+  margin-left: 60px;
+}
+
+#id_what_for {
+  width: 218px;
+}
+
+#id_description {
+  width: 300px;
+}
+
+.additional {
+  width: 260px;
+  float: left;
+
+  &.fl {
+    width:340px
+  }
+}
+
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+
+
+}
+
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+#id_pic1, #id_pic2 {
+  margin-bottom: 20px;
 }
