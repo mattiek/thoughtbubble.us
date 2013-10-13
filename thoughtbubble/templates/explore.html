@@ -47,7 +47,7 @@
 
     <select name="metrodifier" id="metrodifier">
         {% for metro in metros.list %}
-            <option value="{{ metro.0 }}"
+            <option data-href="{% url 'explore' metro.1 metro.0 %}" value="{{ metro.0 }}"
                     {% if metro.0 == metros.current %}selected{%  endif %}
                     >{{ metro.0 }}, {{ metro.1 }}</option>
         {% endfor %}

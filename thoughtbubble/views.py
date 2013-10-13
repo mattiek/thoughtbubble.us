@@ -49,6 +49,13 @@ def logout(request):
 
 
 def explore(request, state=None, city=None, pk=None):
+
+    if state:
+        request.session['exploring_state'] = state
+
+    if city:
+        request.session['exploring_city'] = city
+
     d = {}
     d['communities'] = Community.objects.filter().order_by('neighborhood__name')
 

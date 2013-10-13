@@ -185,16 +185,17 @@ $('#minisplore a.community').on('click', function(e){
 
 // Metro selection
 $('#metrodifier').on('change', function(e) {
-    $.ajax(
-        {
-            url: '/api/v1/cities/.json?city=' + e.target.value + '&state=oh',
-            dataType: 'json',
-            success: function goto(d) {
-                console.log(d);
-                var city = d.results[0];
-                map.panTo([city.latitude, city.longitude]);
-            }
-        });
+    window.location.href = $('[value=' + e.target.value +']', e.target).attr('data-href');
+//    $.ajax(
+//        {
+//            url: '/api/v1/cities/.json?city=' + e.target.value + '&state=oh',
+//            dataType: 'json',
+//            success: function goto(d) {
+//                console.log(d);
+//                var city = d.results[0];
+//                map.panTo([city.latitude, city.longitude]);
+//            }
+//        });
 });
 
 
@@ -273,3 +274,19 @@ $('#anywhere-else').on('click', function(e){
 
 
 });
+
+
+// load init
+// Metro selection
+//if (TB.exploring.city && TB.exploring.state) {
+////    $.ajax(
+////        {
+////            url: '/api/v1/cities/.json?city=' + TB.exploring.city + '&state=' + TB.exploring.state,
+////            dataType: 'json',
+////            success: function goto(d) {
+////                console.log(d);
+////                var city = d.results[0];
+////                map.panTo([city.latitude, city.longitude]);
+////            }
+////        });
+//};
