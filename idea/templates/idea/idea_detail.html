@@ -20,12 +20,14 @@
 
 {% block content %}
     <div id="idea-wrapper">
+        <div id="support-this">
+            <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+            <a class="dislike blue" href="#">dislike</a>
+            {% include "widgets/sharing.html" %}
+        </div>
         <span class="support-number">{{ idea.support_count }}</span> support this
 
-        <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-        <a class="dislike blue" href="#">dislike</a>
 
-        {% include "widgets/sharing.html" %}
 
         <div class="">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
         <div class="">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>

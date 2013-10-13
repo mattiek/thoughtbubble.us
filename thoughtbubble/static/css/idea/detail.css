@@ -483,3 +483,13 @@ i {
 .supporting.activated .supported {
   display: block;
 }
+
+/* line 100, ../../scss/idea/detail.scss */
+.sharing {
+  margin: 7px 0 0 0;
+}
+
+/* line 104, ../../scss/idea/detail.scss */
+#support-this {
+  float: right;
+}
