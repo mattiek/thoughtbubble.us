@@ -286,10 +286,10 @@ form .row .row .columns.no-padding {
 /* line 265, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
-  width: 220px;
+  text-align: center;
 }
 
-/* line 270, ../scss/nav.scss */
+/* line 271, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -300,7 +300,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 279, ../scss/nav.scss */
+/* line 280, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -308,7 +308,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 286, ../scss/nav.scss */
+/* line 287, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -316,7 +316,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 293, ../scss/nav.scss */
+/* line 294, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -324,40 +324,40 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 301, ../scss/nav.scss */
+/* line 302, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 306, ../scss/nav.scss */
+/* line 307, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 310, ../scss/nav.scss */
+/* line 311, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 314, ../scss/nav.scss */
+/* line 315, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 318, ../scss/nav.scss */
+/* line 319, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 323, ../scss/nav.scss */
+/* line 324, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 327, ../scss/nav.scss */
+/* line 328, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }

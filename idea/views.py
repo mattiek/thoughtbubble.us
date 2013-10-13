@@ -74,23 +74,23 @@ class IdeaList(ListView):
 
 
     def get_queryset(self):
-        community = self.kwargs.get('community', None)
-        city = self.kwargs.get('city', None)
-        state = self.kwargs.get('state', None)
-        if community:
-            return Idea.objects.filter(where__community__city__iexact=city,
-                                       where__community__state__iexact=state,
-                                       where__community__name__iexact=community)
-        if city and state:
-            return Idea.objects.filter(where__community__city__iexact=city,
-                                       where__community__state__iexact=state)
-        if state:
-            return Idea.objects.filter(where__community__state__iexact=state)
+        self.community = self.kwargs.get('community', None)
+        self.city = self.kwargs.get('city', None)
+        self.state = self.kwargs.get('state', None)
+        if self.community:
+            return Idea.objects.filter(where__community__city__iexact=self.city,
+                                       where__community__state__iexact=self.state,
+                                       where__community__name__iexact=self.community)
+        if self.city and self.state:
+            return Idea.objects.filter(where__community__city__iexact=self.city,
+                                       where__community__state__iexact=self.state)
+        if self.state:
+            return Idea.objects.filter(where__community__state__iexact=self.state)
         return Idea.objects.filter()
 
     def get_context_data(self, **kwargs):
         context = super(IdeaList, self).get_context_data(**kwargs)
-        f = IdeaFilter(self.request.GET, queryset=Idea.objects.all())
+        f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
 
         ordering = self.request.GET.get('order',None)
 

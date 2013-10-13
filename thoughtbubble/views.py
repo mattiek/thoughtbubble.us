@@ -41,8 +41,8 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
 
 def home(request, state=None, city=None):
     if not state or not city:
-        return redirect( reverse('home',  args=[request.session['exploring_state'],
-                                                request.session['exploring_city'],
+        return redirect( reverse('home',  args=[request.session.get('exploring_state','oh'),
+                                                request.session.get('exploring_city','columbus'),
                                             ]))
     return render(request, 'home.html')
 

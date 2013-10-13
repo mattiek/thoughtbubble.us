@@ -440,3 +440,35 @@
   border: 1px solid #d8f1f6;
   border-radius: 10px;
 }
+
+/* line 59, ../../scss/idea/list.scss */
+#filtering {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  width: 570px;
+  margin: 0 auto 20px;
+}
+
+/* line 69, ../../scss/idea/list.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* line 75, ../../scss/idea/list.scss */
+#order, #order_chosen {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 81, ../../scss/idea/list.scss */
+#sort_by {
+  vertical-align: super;
+}

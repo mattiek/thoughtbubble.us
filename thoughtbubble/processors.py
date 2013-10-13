@@ -23,8 +23,8 @@ def exploring(request):
         obj = obj[0]
     d = {
 
-        'exploring_city': city,
-        'exploring_state': state,
+        'exploring_city': city.lower(),
+        'exploring_state': state.lower(),
         'exploring_obj' : obj
     }
     return d

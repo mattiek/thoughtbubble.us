@@ -51,7 +51,9 @@
             {% render_comment_list for idea %}
 
             <div id="wrap_write_comment">
-                {% render_comment_form for idea %}
+                {% if user.is_authenticated %}
+                    {% render_comment_form for idea %}
+                {% endif %}
             </div>
         </div>
     </div>
