@@ -29,11 +29,11 @@
 
 
 
-        <div class="">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
-        <div class="">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
-        <div class="">I imagine something like this:</div>
+        <div class="r">We want <b>{{ idea.name }}</b> in <b>{{ idea.where.name }}</b>, <b>{{ idea.where.city }}</b></div>
+        <div class="r">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
+        <div class="r">I imagine something like this:</div>
         <div class=""><b>{{ idea.description }}</b></div>
-        <div class="">Links:
+        <div class="r">Links:
             {% for link in idea.idealink_set.all %}
                 <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if not forloop.last %},{% endif %}
             {% endfor %}
