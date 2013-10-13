@@ -1,0 +1,12 @@
+<form action="" method="get">
+    <select name="order" id="order">
+        <option value="">-----------</option>
+        <option value="recent" {% if ordering == "recent" %}selected{% endif %}>Recent</option>
+        <option value="support" {% if ordering == "support" %}selected{% endif %}>Most Supported</option>
+    </select>
+    {{ idea_filter.form.where }}
+    <input type="submit" />
+</form>
+{#{% for obj in filter %}#}
+{#    {{ obj.name }} <br/>#}
+{#{% endfor %}#}

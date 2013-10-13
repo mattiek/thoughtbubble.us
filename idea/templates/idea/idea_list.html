@@ -18,7 +18,9 @@
 
 {% block content %}
 
-    {% for idea in idea_list %}
+    {% include 'idea/idea_filter.html' %}
+
+    {% for idea in ideas %}
         {% include 'idea/idea_for_list.html' %}
     {% endfor %}
 

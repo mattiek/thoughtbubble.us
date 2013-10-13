@@ -53,7 +53,7 @@ def explore(request, state=None, city=None, pk=None):
     d['communities'] = Community.objects.filter().order_by('neighborhood__name')
 
     d['metros'] = {
-        'current': 'Columbus',
+        'current': city if city else 'Columbus',
         'list': Neighborhood.objects.values_list('city','state').distinct(),
     }
 
@@ -88,27 +88,24 @@ def login(request):
     return redirect('home')
 
 
-def dashboard(request):
-        if not request.user.is_authenticated():
-            return redirect('home')
-        try:
-            profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
-        except:
-            profile = ThoughtbubbleUserProfile.objects.create(user=request.user).save()
-        d = {}
-        d['profile'] = profile
-
-        filter = request.GET.get('filter',None)
-
-        if filter == 'support':
-            d['ideas'] = [x.idea for x in IdeaSupport.objects.filter(user=request.user).order_by('-date_created')]
-        else:
-            d['ideas'] = Idea.objects.filter(user=request.user).order_by('-date_created')
-
-
-
-
-        return render(request, 'accounts/dashboard.html', d)
+# def dashboard(request):
+#         if not request.user.is_authenticated():
+#             return redirect('home')
+#         try:
+#             profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
+#         except:
+#             profile = ThoughtbubbleUserProfile.objects.create(user=request.user).save()
+#         d = {}
+#         d['profile'] = profile
+#
+#         filter = request.GET.get('filter',None)
+#
+#         if filter == 'support':
+#             d['ideas'] = [x.idea for x in IdeaSupport.objects.filter(user=request.user).order_by('-date_created')]
+#         else:
+#             d['ideas'] = Idea.objects.filter(user=request.user).order_by('-date_created')
+#
+#         return render(request, 'accounts/dashboard.html', d)
 
 
 def signup(request):

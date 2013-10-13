@@ -26,18 +26,27 @@
     <div id="form-wrapper">
         <form action="{{ action_url }}" method="POST">
             {% csrf_token %}
-            <div class="row">
-                <div class="large-12 small-12 columns">
                     {{ form.errors }}
+
+            <div class="right-side">
+                <div id="map"></div>
+                <div id="latitude" class="row">
+                    <label id="lat_label" class="copy" for="{{ form.latitude.auto_id }}">latitude</label>
+                    {{ form.latitude }}
+
                 </div>
+                <label id="long_label" class="copy" for="{{ form.longitude.auto_id }}">longitude</label>
+                {{ form.longitude }}
             </div>
-            <div class="row">
-                <div class="large-6 small-6 columns">
+
+
+            <div class="left-side">
                     {{ form.name}}
                     <p class="copy">address or latitude/longitude</p>
                     {{ form.address }}
                     {{ form.city_and_state }}
                     {{ form.zip }}
+            </div>
 {#                    <p class="copy">What is it?</p>#}
 {##}
 {#                    <input type="hidden" value="{{ form.what_kind.value }}"#}
@@ -56,41 +65,11 @@
 {#                            </li>#}
 {#                        {% endfor %}#}
 {#                    </ul>#}
-                </div>
-                <div class="large-6 small-6 columns">
-                    <div class="row">
-                        <div id="map"></div>
-                    </div>
-                    <div id="latitude" class="row">
-                        <div class="large-3 columns no-padding">
-                            <label id="lat_label" class="copy" for="{{ form.latitude.auto_id }}">latitude</label>
-                        </div>
-                        <div class="large-9 columns no-padding">
-                            {{ form.latitude }}
-                        </div>
 
-                    </div>
 
-                    <div class="row">
-                        <div class="large-3 columns no-padding">
-                            <label id="long_label" class="copy" for="{{ form.longitude.auto_id }}">longitude</label>
-                        </div>
-                        <div class="large-9 columns no-padding">
-                            {{ form.longitude }}
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-1 small-1 columns">
-                    <p class="copy">about</p>
-                </div>
-                <div class="large-10 small-10 columns">
+                    <p class="copy clr">about</p>
                     {{ form.about|add_class:"about-text" }}
-                </div>
-                <div class="large-1 small-1 columns pos-rel">
+                <div class="pos-rel">
 {#                    <ul class="save-edit-list">#}
 {#                        <li>#}
 {#                            <a class="submit-type" href="#">edit</a>#}
@@ -101,21 +80,13 @@
 {#                    </ul>#}
 
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="large-1 small-1 columns">
                     <p class="copy">news</p>
-                </div>
-                <div class="large-2 small-2 columns">
                     <div id="add-news-image">
 
                     </div>
-                </div>
-                <div class="large-8 small-8 columns">
                     {{ form.news|add_class:"news-text" }}
-                </div>
-                <div class="large-1 small-1 columns pos-rel">
+                <div class=" pos-rel">
                     <ul class="save-edit-list">
                         <li>
                             <a class="submit-type" href="#">edit</a>
@@ -126,33 +97,18 @@
                     </ul>
 
                 </div>
-            </div>
 
 
-            <div class="row">
-                <div class="large-1 small-1 columns">
                     <span class="copy">pictures</span>
-                </div>
-                <div class="large-2 small-2 columns">
                     <div class="picture">
 
                     </div>
-                </div>
-                <div class="large-2 small-2 columns">
                     <div class="picture">
 
                     </div>
-                </div>
-                <div class="large-7 small-7 columns">
 
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="large-12 small-12 columns">
                     <input type="submit" class="submit" value="create location"/>
-                </div>
-            </div>
         </form>
     </div>
 {% endblock %}

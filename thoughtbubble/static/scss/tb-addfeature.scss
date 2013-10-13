@@ -1,3 +1,6 @@
+@import "compass";
+@import "partials/inputs";
+
 #illustration {
     background: url(../images/illustration-trees.jpg) no-repeat no-repeat;
     background-size: 100%;
@@ -205,4 +208,20 @@ form .row .row.second-row {
     background-image: url(../images/add-photo.png);
     background-repeat: no-repeat;
     background-position: 57px 57px
+}
+
+#map {
+  width: 400px;
+}
+
+.left-side {
+  float: left;
+}
+
+.right-side {
+  float: right;
+}
+
+.clr {
+  clear: both;
 }

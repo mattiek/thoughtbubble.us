@@ -7,6 +7,8 @@ from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
 from django.contrib.comments.views.comments import post_comment
 import json as JSON
+from filters import IdeaFilter
+from django.db.models import Q, Count
 
 def addidea(request, id=None):
     if request.POST:
@@ -70,6 +72,7 @@ def addidea(request, id=None):
 class IdeaList(ListView):
     model = Idea
 
+
     def get_queryset(self):
         community = self.kwargs.get('community', None)
         city = self.kwargs.get('city', None)
@@ -84,6 +87,25 @@ class IdeaList(ListView):
         if state:
             return Idea.objects.filter(where__community__state__iexact=state)
         return Idea.objects.filter()
+
+    def get_context_data(self, **kwargs):
+        context = super(IdeaList, self).get_context_data(**kwargs)
+        f = IdeaFilter(self.request.GET, queryset=Idea.objects.all())
+
+        ordering = self.request.GET.get('order',None)
+
+        context['ideas'] = self.get_queryset()
+
+        if (ordering == 'support'):
+            context['ideas'] = f.qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
+        else:
+            context['ideas'] = f.qs.order_by('-date_created')
+
+        context['idea_filter'] = f
+
+        context['ordering'] = ordering
+
+        return context
 
 
 class IdeaDetail(DetailView):
