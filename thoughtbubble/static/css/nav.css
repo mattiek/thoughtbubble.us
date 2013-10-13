@@ -163,15 +163,16 @@ form .row .row .columns.no-padding {
   text-align: center;
   color: #ffffff;
   font-weight: normal;
+  font-size: 16px;
 }
 
-/* line 162, ../scss/nav.scss */
+/* line 163, ../scss/nav.scss */
 #login-overlay .oauths {
   margin: 30px 0;
   height: 60px;
 }
 
-/* line 169, ../scss/nav.scss */
+/* line 170, ../scss/nav.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"] {
@@ -182,7 +183,7 @@ form .row .row .columns.no-padding {
   margin: 0 auto 10px;
 }
 
-/* line 177, ../scss/nav.scss */
+/* line 178, ../scss/nav.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -192,7 +193,7 @@ form .row .row .columns.no-padding {
   margin: 20px auto;
 }
 
-/* line 187, ../scss/nav.scss */
+/* line 188, ../scss/nav.scss */
 #login-overlay .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -222,7 +223,7 @@ form .row .row .columns.no-padding {
   float: none;
 }
 
-/* line 210, ../scss/nav.scss */
+/* line 211, ../scss/nav.scss */
 .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -239,7 +240,7 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-/* line 226, ../scss/nav.scss */
+/* line 227, ../scss/nav.scss */
 #forgot-password {
   display: block;
   color: #FFFFFF;
@@ -249,7 +250,7 @@ form .row .row .columns.no-padding {
   font-weight: 100;
 }
 
-/* line 235, ../scss/nav.scss */
+/* line 236, ../scss/nav.scss */
 #footer {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -264,31 +265,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 246, ../scss/nav.scss */
+/* line 247, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 251, ../scss/nav.scss */
+/* line 252, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 256, ../scss/nav.scss */
+/* line 257, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 264, ../scss/nav.scss */
+/* line 265, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   width: 220px;
 }
 
-/* line 269, ../scss/nav.scss */
+/* line 270, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -299,7 +300,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 278, ../scss/nav.scss */
+/* line 279, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -307,7 +308,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 285, ../scss/nav.scss */
+/* line 286, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -315,7 +316,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 292, ../scss/nav.scss */
+/* line 293, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -323,40 +324,40 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 300, ../scss/nav.scss */
+/* line 301, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 305, ../scss/nav.scss */
+/* line 306, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 309, ../scss/nav.scss */
+/* line 310, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 313, ../scss/nav.scss */
+/* line 314, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 317, ../scss/nav.scss */
+/* line 318, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 322, ../scss/nav.scss */
+/* line 323, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 326, ../scss/nav.scss */
+/* line 327, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }

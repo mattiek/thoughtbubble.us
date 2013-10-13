@@ -20,11 +20,18 @@
 
   a {
     text-decoration: none;
+
+    &.orange {
+      color: #ffffff;
+      &:visited {
+        color: #ffffff;
+      }
+    }
   }
 }
 
 .left-idea-cap {
-  padding-top: 10px;
+  padding-top: 25px;
   margin-left: 20px;
   width: 440px;
   float: left;
