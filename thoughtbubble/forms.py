@@ -61,7 +61,7 @@ class SignupForm(forms.Form):
             raise forms.ValidationError("Usernames can only include letters, numbers and underscores. ")
 
         if captcha != self.answer[0]:
-            raise forms.ValidationError("You flunked the human test.")
+            raise forms.ValidationError("You flunked the captcha.")
 
         if password != confirm:
             raise forms.ValidationError("Your password doesn't match your confirmation.")

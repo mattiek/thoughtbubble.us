@@ -1,0 +1,10 @@
+{% if form.errors %}
+    <div class="error-box">
+        <div class="details">
+            <h3>Errors</h3>
+            {% for field, error in form.errors.items %}
+                {{ error }}
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
