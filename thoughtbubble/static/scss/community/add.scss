@@ -299,11 +299,18 @@ form .row .row.second-row {
   background-position: 57px 57px;
   float: right;
   margin-right: 30px;
+
 }
 
 .picture {
   float:left;
-  margin-left: 20px;
+  //margin-left: 20px;
+  line-height: 80px;
+  text-align: center;
+
+  img {
+    vertical-align: middle;
+  }
 
   &:first-child {
     margin-left: 0px;
@@ -399,4 +406,8 @@ form .row .row.second-row {
 
 .clr {
   clear: both;
+}
+
+.cloak {
+  background: #FFFFFF;
 }

@@ -61,7 +61,7 @@
         {#    News #}
         <div id="news">
             <div class="label">news</div>
-            <div id="news-photo"></div>
+            <div id="news-photo" name="news-photo" class="picture"></div>
             <textarea></textarea>
             <a href="#" class="orange buttonize">save</a>
         </div>
@@ -71,7 +71,7 @@
         <div id="pictures">
             <div class="label">pictures</div>
             <div class="pictures-list">
-                <div class="picture"></div>
+                <div id="pic-picture_1" name="pic-picture_1" class="picture" data-index="1" data-prefix="pic"></div>
             </div>
             <div class="clr"></div>
         </div>
@@ -80,7 +80,7 @@
         <div id="partners">
             <div class="label">partners</div>
             <div class="pictures-list">
-                <div class="picture"></div>
+                <div id="partne-picture_1" name="partner-picture_1" class="picture" data-index="1" data-prefix="partner"></div>
             </div>
             <div class="clr"></div>
         </div>
@@ -103,5 +103,5 @@
 
 {% block footerscripts %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-community-admin.js"></script>
 {% endblock %}
