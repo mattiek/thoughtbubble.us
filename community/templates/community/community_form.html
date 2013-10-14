@@ -71,7 +71,21 @@
         <div id="pictures">
             <div class="label">pictures</div>
             <div class="pictures-list">
-                <div id="pic-picture_1" name="pic-picture_1" class="picture" data-index="1" data-prefix="pic"></div>
+                {% if community.get_pictures %}
+                    {% for picture in community.get_pictures %}
+                        <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
+{#                            <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">#}
+                            <div class="cloak">
+                                <img src="{{ picture.url }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
+
+                    </div>
+                {% endif %}
+
             </div>
             <div class="clr"></div>
         </div>

@@ -35,6 +35,10 @@ class CommunityUpdate(UpdateView):
     #     # super(UpdateView, self).get_success_url(*args, **kwargs)
     #     return reverse('community_detail', kwargs=self.kwargs)
 
+    def form_valid(self, form):
+        s = super(CommunityUpdate,self).form_valid(form)
+        return s
+
 
 def join(request, state, city, pk):
 

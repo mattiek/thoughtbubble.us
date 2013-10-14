@@ -41,6 +41,8 @@ class Community(models.Model):
     def get_absolute_url(self):
         return reverse('community_detail', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
 
+    def get_pictures(self):
+        return self.communityimage_set.all()
 
 class CommunityNews(models.Model):
     community = models.ForeignKey(Community)
@@ -53,3 +55,16 @@ class CommunityNews(models.Model):
 
     def __unicode__(self):
         return self.name
+
+
+class CommunityImage(models.Model):
+    community = models.ForeignKey(Community)
+    img = models.ImageField(upload_to=path_and_rename('communities','img'))
+    name = models.CharField(max_length=255, blank=True, null=True)
+
+    def __unicode__(self):
+        if self.name:
+            return self.name
+        else:
+            return 'Img'
+
