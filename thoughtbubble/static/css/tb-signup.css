@@ -32,15 +32,16 @@
   width: 322px;
   color: #fff;
   font-family: 'MuseoSans';
+  margin-top: 30px;
 }
 
-/* line 29, ../scss/tb-signup.scss */
+/* line 30, ../scss/tb-signup.scss */
 #form-wrapper {
   width: 324px;
   margin: 0 auto;
 }
 
-/* line 34, ../scss/tb-signup.scss */
+/* line 35, ../scss/tb-signup.scss */
 #id_profile_picture {
   width: 80px;
   height: 79px;
@@ -53,7 +54,7 @@
   background-position: 57px 57px;
 }
 
-/* line 49, ../scss/tb-signup.scss */
+/* line 50, ../scss/tb-signup.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -78,23 +79,23 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 71, ../scss/tb-signup.scss */
+/* line 72, ../scss/tb-signup.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 75, ../scss/tb-signup.scss */
+/* line 76, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 80, ../scss/tb-signup.scss */
+/* line 81, ../scss/tb-signup.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 84, ../scss/tb-signup.scss */
+/* line 85, ../scss/tb-signup.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -103,7 +104,7 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 91, ../scss/tb-signup.scss */
+/* line 92, ../scss/tb-signup.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -112,19 +113,19 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 98, ../scss/tb-signup.scss */
+/* line 99, ../scss/tb-signup.scss */
 #id_captcha_choicefield li.captcha_select {
   border: 3px solid #f3812b;
   border-radius: 10px;
   padding: 3px;
 }
 
-/* line 104, ../scss/tb-signup.scss */
+/* line 105, ../scss/tb-signup.scss */
 #id_captcha_choicefield img {
   max-height: 50px;
 }
 
-/* line 108, ../scss/tb-signup.scss */
+/* line 109, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   padding: 6px;
 }
