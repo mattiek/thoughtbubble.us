@@ -1,3 +1,7 @@
+@import "compass";
+@import "partials/inputs";
+@import "partials/buttons";
+
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -108,6 +112,22 @@ textarea {
   font-family: 'MuseoSans';
   min-height: 200px;
   max-width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
 #id_captcha_choicefield {
@@ -276,7 +296,9 @@ form .row .row.second-row {
   background-color: #dadbdc;
   background-image: url(../../images/add-photo.png);
   background-repeat: no-repeat;
-  background-position: 57px 57px
+  background-position: 57px 57px;
+  float: right;
+  margin-right: 30px;
 }
 
 .picture {
@@ -310,7 +332,11 @@ form .row .row.second-row {
   }
 
   textarea {
-    width: 490px;
+    width: 416px;
+  }
+
+  .buttonize {
+    float: right;
   }
 }
 
@@ -318,4 +344,59 @@ form .row .row.second-row {
   padding: 5px 100px;
   margin: 0 auto;
   display: block;
+}
+
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+
+  #deets {
+    float:right;
+    width: 478px;
+
+    label {
+      width:70px;
+      display: inline-block;
+      color: #9d9d9d; /* text color */
+      font-family: "Museo Sans", sans-serif;
+      font-size: 15px;
+    }
+
+    input {
+      width: 320px;
+      display: inline;
+    }
+  }
+}
+
+#about {
+  label {
+    color: #9d9d9d; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 15px;
+  }
+}
+.label {
+  color: #9d9d9d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+#about {
+  clear:both;
+
+  #id_about {
+    margin-left: 20px;
+    width: 452px;
+  }
+}
+
+#pictures, #partners, #features {
+  width: 100%;
+  clear: both;
+  margin-top: 20px;
+}
+
+.clr {
+  clear: both;
 }

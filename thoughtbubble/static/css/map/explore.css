@@ -71,9 +71,10 @@
   font-size: 11px;
 }
 
-/* line 3, ../../scss/partials/_inputs.scss */
+/* line 4, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
+input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
@@ -96,7 +97,7 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 25, ../../scss/partials/_inputs.scss */
+/* line 26, ../../scss/partials/_inputs.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -104,7 +105,7 @@ textarea {
   max-width: 100%;
 }
 
-/* line 32, ../../scss/partials/_inputs.scss */
+/* line 33, ../../scss/partials/_inputs.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;

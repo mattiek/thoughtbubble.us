@@ -84,10 +84,13 @@ class LocationCreate(CreateView):
 
     def get_context_data(self, **kwargs):
         context = super(LocationCreate, self).get_context_data(**kwargs)
+
+        state = self.kwargs.get('state',None)
+        city = self.kwargs.get('city',None)
         comm = self.kwargs.get('community',None)
         if comm:
             community = Community.objects.get(pk=comm)
-            context['action_url'] = reverse('addlocation', args=[comm,])
+            context['action_url'] = reverse('addlocation', args=[state,city,comm,])
             context['community'] = community
             # self.form.fields['where'].initial = community
         # context['is_admin'] = self.request.user.is_admin

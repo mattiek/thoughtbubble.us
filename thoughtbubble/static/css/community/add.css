@@ -1,4 +1,122 @@
-/* line 1, ../../scss/community/add.scss */
+/* line 4, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 26, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 33, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 1, ../../scss/partials/_buttons.scss */
+.orange {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+/* line 17, ../../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 23, ../../scss/partials/_buttons.scss */
+.blue {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background: #8dd9f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
+  /* IE6-9 */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+
+/* line 42, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 5, ../../scss/community/add.scss */
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -7,7 +125,7 @@
   margin: 0 auto;
 }
 
-/* line 9, ../../scss/community/add.scss */
+/* line 13, ../../scss/community/add.scss */
 .orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -32,7 +150,7 @@
   font-family: 'MuseoSans';
 }
 
-/* line 26, ../../scss/community/add.scss */
+/* line 30, ../../scss/community/add.scss */
 .s-button {
   height: 33px;
   line-height: 33px;
@@ -41,12 +159,12 @@
   margin-left: 20px;
   text-align: center;
 }
-/* line 34, ../../scss/community/add.scss */
+/* line 38, ../../scss/community/add.scss */
 .s-button:first-child {
   margin-left: 0px;
 }
 
-/* line 39, ../../scss/community/add.scss */
+/* line 43, ../../scss/community/add.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
@@ -58,23 +176,23 @@
   padding: 0 20px;
 }
 
-/* line 50, ../../scss/community/add.scss */
+/* line 54, ../../scss/community/add.scss */
 .centered {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-/* line 57, ../../scss/community/add.scss */
+/* line 61, ../../scss/community/add.scss */
 .row.title {
   text-align: center;
 }
-/* line 61, ../../scss/community/add.scss */
+/* line 65, ../../scss/community/add.scss */
 .row.addpad {
   padding-bottom: 20px;
 }
 
-/* line 66, ../../scss/community/add.scss */
+/* line 70, ../../scss/community/add.scss */
 #cta {
   color: #7b7b7b;
   /* text color */
@@ -83,19 +201,19 @@
   text-align: center;
 }
 
-/* line 73, ../../scss/community/add.scss */
+/* line 77, ../../scss/community/add.scss */
 .actions {
   margin: 0 auto;
   width: 463px;
 }
 
-/* line 78, ../../scss/community/add.scss */
+/* line 82, ../../scss/community/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 83, ../../scss/community/add.scss */
+/* line 87, ../../scss/community/add.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -108,7 +226,7 @@
   background-position: 57px 57px;
 }
 
-/* line 99, ../../scss/community/add.scss */
+/* line 103, ../../scss/community/add.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
@@ -119,31 +237,47 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 106, ../../scss/community/add.scss */
+/* line 110, ../../scss/community/add.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
   min-height: 200px;
   max-width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 113, ../../scss/community/add.scss */
+/* line 133, ../../scss/community/add.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 117, ../../scss/community/add.scss */
+/* line 137, ../../scss/community/add.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 122, ../../scss/community/add.scss */
+/* line 142, ../../scss/community/add.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 126, ../../scss/community/add.scss */
+/* line 146, ../../scss/community/add.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -152,7 +286,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 133, ../../scss/community/add.scss */
+/* line 153, ../../scss/community/add.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -161,7 +295,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 140, ../../scss/community/add.scss */
+/* line 160, ../../scss/community/add.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -172,12 +306,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 150, ../../scss/community/add.scss */
+/* line 170, ../../scss/community/add.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 154, ../../scss/community/add.scss */
+/* line 174, ../../scss/community/add.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -188,12 +322,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 163, ../../scss/community/add.scss */
+/* line 183, ../../scss/community/add.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 168, ../../scss/community/add.scss */
+/* line 188, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -203,12 +337,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 174, ../../scss/community/add.scss */
+/* line 194, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 178, ../../scss/community/add.scss */
+/* line 198, ../../scss/community/add.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -216,17 +350,17 @@ form .row .row.second-row {
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 185, ../../scss/community/add.scss */
+/* line 205, ../../scss/community/add.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 189, ../../scss/community/add.scss */
+/* line 209, ../../scss/community/add.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 193, ../../scss/community/add.scss */
+/* line 213, ../../scss/community/add.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -255,14 +389,14 @@ form .row .row.second-row {
   /* IE6-9 */
 }
 
-/* line 212, ../../scss/community/add.scss */
+/* line 232, ../../scss/community/add.scss */
 .left-idea-cap {
   padding-top: 30px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 218, ../../scss/community/add.scss */
+/* line 238, ../../scss/community/add.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -270,7 +404,7 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 226, ../../scss/community/add.scss */
+/* line 246, ../../scss/community/add.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -278,35 +412,35 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 234, ../../scss/community/add.scss */
+/* line 254, ../../scss/community/add.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 240, ../../scss/community/add.scss */
+/* line 260, ../../scss/community/add.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 252, ../../scss/community/add.scss */
+/* line 272, ../../scss/community/add.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
 }
-/* line 256, ../../scss/community/add.scss */
+/* line 276, ../../scss/community/add.scss */
 .right-idea-cap table {
   background: transparent;
   border: none;
 }
-/* line 263, ../../scss/community/add.scss */
+/* line 283, ../../scss/community/add.scss */
 .right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
   background: transparent;
 }
 
-/* line 272, ../../scss/community/add.scss */
+/* line 292, ../../scss/community/add.scss */
 #community-logo,
 #news-photo,
 .picture {
@@ -317,19 +451,21 @@ form .row .row.second-row {
   background-image: url(../../images/add-photo.png);
   background-repeat: no-repeat;
   background-position: 57px 57px;
+  float: right;
+  margin-right: 30px;
 }
 
-/* line 282, ../../scss/community/add.scss */
+/* line 304, ../../scss/community/add.scss */
 .picture {
   float: left;
   margin-left: 20px;
 }
-/* line 286, ../../scss/community/add.scss */
+/* line 308, ../../scss/community/add.scss */
 .picture:first-child {
   margin-left: 0px;
 }
 
-/* line 291, ../../scss/community/add.scss */
+/* line 313, ../../scss/community/add.scss */
 .feature {
   width: 135px;
   height: 20px;
@@ -346,19 +482,86 @@ form .row .row.second-row {
   text-align: center;
 }
 
-/* line 307, ../../scss/community/add.scss */
+/* line 329, ../../scss/community/add.scss */
 #news #news-photo {
   float: left;
   margin-right: 20px;
 }
-/* line 312, ../../scss/community/add.scss */
+/* line 334, ../../scss/community/add.scss */
 #news textarea {
-  width: 490px;
+  width: 416px;
+}
+/* line 338, ../../scss/community/add.scss */
+#news .buttonize {
+  float: right;
 }
 
-/* line 317, ../../scss/community/add.scss */
+/* line 343, ../../scss/community/add.scss */
 .submit-all {
   padding: 5px 100px;
   margin: 0 auto;
   display: block;
+}
+
+/* line 349, ../../scss/community/add.scss */
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+/* line 353, ../../scss/community/add.scss */
+#form-wrapper #deets {
+  float: right;
+  width: 478px;
+}
+/* line 357, ../../scss/community/add.scss */
+#form-wrapper #deets label {
+  width: 70px;
+  display: inline-block;
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+/* line 365, ../../scss/community/add.scss */
+#form-wrapper #deets input {
+  width: 320px;
+  display: inline;
+}
+
+/* line 373, ../../scss/community/add.scss */
+#about label {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 379, ../../scss/community/add.scss */
+.label {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 385, ../../scss/community/add.scss */
+#about {
+  clear: both;
+}
+/* line 388, ../../scss/community/add.scss */
+#about #id_about {
+  margin-left: 20px;
+  width: 452px;
+}
+
+/* line 394, ../../scss/community/add.scss */
+#pictures, #partners, #features {
+  width: 100%;
+  clear: both;
+  margin-top: 20px;
+}
+
+/* line 400, ../../scss/community/add.scss */
+.clr {
+  clear: both;
 }
