@@ -57,7 +57,15 @@ class Location(models.Model):
             return "%s [no community]"
 
     def get_absolute_url(self):
-        return reverse('location_detail', args=[str(self.id)])
+        state = 'oh'
+        city = 'columbus'
+        if self.community:
+            state = self.community.state
+            city = self.community.city
+
+        return reverse('location_detail', args=[state,
+                                                city,
+                                                    str(self.id)])
 
     def get_api_detail_url(self):
         return reverse('locations-detail',args=[self.id,])

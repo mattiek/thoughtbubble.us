@@ -11,6 +11,10 @@ from filters import IdeaFilter
 from django.db.models import Q, Count
 
 def addidea(request, state, city, id=None):
+    if not request.user.is_authenticated():
+        messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
+        return redirect('home')
+
     if request.POST:
         form = AddIdeaForm(request.POST,request.FILES)
         if form.is_valid():

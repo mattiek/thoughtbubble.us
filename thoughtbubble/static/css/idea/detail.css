@@ -492,9 +492,10 @@ i {
 /* line 104, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
+  width: 280px;
 }
 
-/* line 108, ../../scss/idea/detail.scss */
+/* line 109, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }

@@ -1,0 +1,9 @@
+{% if messages %}
+    <div class="message-box">
+        <div class="details">
+            {% for message in messages %}
+                <h4 class="message">{{ message }}</h4>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

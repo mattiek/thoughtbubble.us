@@ -8,11 +8,24 @@ from thoughtbubble.widgets import FilePicker
 FOR_CHOICES_AND_EMPTY = [('','')] + FOR_CHOICES
 
 class AddIdeaForm(forms.Form):
-    name = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'title'}),)
-    description = forms.CharField(widget=forms.Textarea(),)
-    what_kind = forms.ModelChoiceField(queryset=IdeaType.objects.all(), empty_label='', required=False)
-    where = forms.ModelChoiceField(queryset=Location.objects.filter(community__city='Columbus').order_by('name'), empty_label='')
-    what_for = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY,widget=forms.Select())
+    name = forms.CharField(max_length=50,
+                            error_messages={'required':'A name is required.'},
+                            widget=forms.TextInput(attrs={'placeholder': 'title'}),)
+
+    description = forms.CharField(widget=forms.Textarea(),
+                                  error_messages={'required':'A description is required.'})
+
+    what_kind = forms.ModelChoiceField(queryset=IdeaType.objects.all(),
+                                       empty_label='',
+                                       error_messages={'required':'Tell us what kind of idea this is.'})
+
+    where = forms.ModelChoiceField(queryset=Location.objects.filter(community__city='Columbus').order_by('name'),
+                                   empty_label='',
+                                    error_messages={'required':'You must tell where it is.'})
+
+    what_for = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY,
+                                 error_messages={'required':'Please specify what this is for.'},
+                                 widget=forms.Select())
 
     pic1 = forms.ImageField(widget=FilePicker, required=False)
     pic2 = forms.ImageField(widget=FilePicker, required=False)

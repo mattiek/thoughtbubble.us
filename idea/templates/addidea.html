@@ -21,7 +21,7 @@
 {% block content %}
 
     <div id="form-wrapper">
-        {{ form.errors }}
+        {% include "widgets/errors.html" %}
         <form enctype="multipart/form-data" action="{% url 'addidea' exploring_state exploring_city %}" method="POST">
             {% csrf_token %}
             <p class="copy want">I want</p>

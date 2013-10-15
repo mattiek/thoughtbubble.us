@@ -38,9 +38,12 @@
 
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}">
 {% block navstart %}
-    <div id="wrapper" class="large-12">
+    <div id="wrapper" class="">
         <div class="scale"></div>
         <div id="illustration">
+            {#    Messages #}
+            {% include "widgets/messages.html" %}
+            {#    End Messages #}
             <ul id="login-nav">
                 {% if user.is_authenticated %}
                     <li><a href="{% url "user_dashboard" %}">{{ user }}</a></li>
@@ -65,13 +68,6 @@
                     </ul>
                 {% endblock %}
         </div>
-{#    Messages #}
-    {% if messages %}
-            {% for message in messages %}
-                <h4 class="message">{{ message }}</h4>
-            {% endfor %}
-    {% endif %}
-{#    End Messages #}
         <div id="home-container">
 {% endblock %}
 

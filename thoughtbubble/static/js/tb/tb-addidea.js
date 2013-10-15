@@ -37,7 +37,8 @@ $('#id_pic1, #id_pic2, #id_pic3, #id_pic4').imagePreviewInput({ resize: 30 * 102
     var $preview = $(e.target).css('display', 'inline-block'),
         $img = $preview.find('img');
     if (!$img.length) {
-        $img = $('<img/>').appendTo($preview);
+        $img = $('<div class="cloak"><img/></div>').appendTo($preview);
+        $img = $('img',$img);
     }
 
     $img.attr('src', data);
