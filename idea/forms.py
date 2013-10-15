@@ -27,6 +27,8 @@ class AddIdeaForm(forms.Form):
                                  error_messages={'required':'Please specify what this is for.'},
                                  widget=forms.Select())
 
+    links = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'link examples'}),required=False)
+
     pic1 = forms.ImageField(widget=FilePicker, required=False)
     pic2 = forms.ImageField(widget=FilePicker, required=False)
     pic3 = forms.ImageField(widget=FilePicker, required=False)

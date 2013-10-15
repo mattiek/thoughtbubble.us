@@ -91,8 +91,13 @@ class IdeaImage(models.Model):
 
 class IdeaLink(models.Model):
     idea = models.ForeignKey(Idea)
-    url = models.URLField()
+    url = models.CharField(max_length=1024)
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __unicode__(self):
         return self.url
+
+    def save(self, *args, **kwargs):
+        if not self.name:
+            self.name = self.url
+        return super(IdeaLink, self).save(*args, **kwargs)

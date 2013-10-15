@@ -10,7 +10,7 @@ import json as JSON
 from filters import IdeaFilter
 from django.db.models import Q, Count
 
-def addidea(request, state, city, id=None):
+def addidea(request, state, city, id=None, community=None):
     if not request.user.is_authenticated():
         messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
         return redirect('home')
@@ -35,7 +35,11 @@ def addidea(request, state, city, id=None):
             pic2 = IdeaImage(idea=idea,img=form.cleaned_data['pic2'])
             pic3 = IdeaImage(idea=idea,img=form.cleaned_data['pic3'])
             pic4 = IdeaImage(idea=idea,img=form.cleaned_data['pic4'])
-            pics = []
+
+            link1 = IdeaLink(idea=idea,url=form.cleaned_data['links'])
+
+            if link1:
+                link1.save()
 
             # TODO: More elegant
             if pic1.img:
@@ -46,18 +50,6 @@ def addidea(request, state, city, id=None):
                 pic3.save()
             if pic4.img:
                 pic4.save()
-            #
-            # # TODO: bulk_create
-            # if pic1.img:
-            #     idea.images.add(pic1)
-            # if pic2.img:
-            #     idea.images.add(pic2)
-            # if pic3.img:
-            #     idea.images.add(pic3)
-            # if pic4.img:
-            #     idea.images.add(pic4)
-            #
-            # idea.save()
 
             messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
             return redirect(idea.where.get_absolute_url())
@@ -69,6 +61,12 @@ def addidea(request, state, city, id=None):
 
     if id:
         form.fields['where'].initial = Location.objects.get(pk=id)
+
+    if community:
+        form.fields['where'].initial = Location.objects.get(community__name__iexact=community,
+                                                            community__city__iexact=city,
+                                                            community__state__iexact=state)
+
 
     return render(request, 'addidea.html', d)
 

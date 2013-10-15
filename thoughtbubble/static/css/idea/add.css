@@ -1,4 +1,4 @@
-/* line 4, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_inputs.scss */
+/* line 4, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
@@ -24,7 +24,7 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 26, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_inputs.scss */
+/* line 26, ../../scss/partials/_inputs.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -32,7 +32,7 @@ textarea {
   max-width: 100%;
 }
 
-/* line 33, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_inputs.scss */
+/* line 33, ../../scss/partials/_inputs.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -43,7 +43,7 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 43, /Users/brandon/projects/idea/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/partials/_inputs.scss */
+/* line 43, ../../scss/partials/_inputs.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -284,32 +284,38 @@ form .row .row.second-row {
 .additional {
   width: 260px;
   float: left;
+  margin-bottom: 10px;
 }
-/* line 185, ../../scss/idea/add.scss */
+/* line 186, ../../scss/idea/add.scss */
 .additional.fl {
   width: 340px;
 }
 
-/* line 190, ../../scss/idea/add.scss */
+/* line 191, ../../scss/idea/add.scss */
 .file-picker-input {
   float: left;
   margin-right: 20px;
 }
 
-/* line 197, ../../scss/idea/add.scss */
+/* line 198, ../../scss/idea/add.scss */
 #pictures {
   float: right;
   width: 270px;
 }
 
-/* line 202, ../../scss/idea/add.scss */
-#id_pic1, #id_pic2 {
+/* line 203, ../../scss/idea/add.scss */
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
   margin-bottom: 20px;
 }
 
-/* line 206, ../../scss/idea/add.scss */
+/* line 207, ../../scss/idea/add.scss */
 .cloak {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
+}
+
+/* line 213, ../../scss/idea/add.scss */
+#id_links {
+  width: 180px;
 }

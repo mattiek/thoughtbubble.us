@@ -181,6 +181,7 @@ form .row .row.second-row {
 .additional {
   width: 260px;
   float: left;
+  margin-bottom: 10px;
 
   &.fl {
     width:340px
@@ -199,7 +200,7 @@ form .row .row.second-row {
   width: 270px;
 }
 
-#id_pic1, #id_pic2 {
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
   margin-bottom: 20px;
 }
 
@@ -207,4 +208,8 @@ form .row .row.second-row {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
+}
+
+#id_links {
+  width: 180px;
 }
