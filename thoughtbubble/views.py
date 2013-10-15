@@ -145,7 +145,9 @@ def signup(request):
             user = authenticate(username=cleaned_data['username'], email= cleaned_data['email'], password=cleaned_data['password'])
 
             # Create initial profile for the user
-            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'], profile_picture=cleaned_data['profile_picture'])
+            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'])
+            if cleaned_data['profile_picture']:
+                avatar = Avatar.objects.create(user=user,primary=True, avatar=cleaned_data['profile_picture'])
 
             django_login(request, user)
             return redirect('home')
@@ -164,6 +166,21 @@ class MyConnectionsView(FormView):
         kwargs = super(MyConnectionsView, self).get_form_kwargs()
         kwargs["request"] = self.request
         return kwargs
+
+    def post(self, request, *args, **kwargs):
+        if 'first_name' in request.POST:
+            profile_form = UserProfileForm(request.POST)
+            if profile_form.is_valid():
+                profile = ThoughtbubbleUserProfile.objects.get(user=request.user)
+                cleaned_data =  profile_form.clean()
+                profile.first_name = cleaned_data['first_name']
+                profile.last_name = cleaned_data['last_name']
+                profile.location = cleaned_data['location']
+                profile.save()
+                return redirect('user_dashboard')
+        else:
+            return super(MyConnectionsView, self).post(request, *args, **kwargs)
+
 
     def form_valid(self, form):
         get_account_adapter().add_message(self.request,

@@ -1,6 +1,7 @@
 @import 'idea/idea';
 @import "partials/sharing";
 @import "partials/buttons";
+@import "partials/inputs";
 
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
@@ -42,13 +43,16 @@
   border-radius: 10px;
   background-color: #dadbdc;
   background-repeat: no-repeat;
-  background-position: 57px 57px
+  background-position: 57px 57px;
+  float: left;
+  text-align: center;
 }
 
 .user-info {
   color: #53b8d1; /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .user-stats {
@@ -59,4 +63,45 @@
 
 .emphasis {
   color: #f47e23;
+}
+
+#update-info, #save-button, #cancel-button  {
+  display: none;
+}
+
+#edit-button, #save-button, #cancel-button {
+  float: right;
+  color: #FFFFFF;
+
+  &:visited {
+    color: #FFFFFF;
+  }
+}
+
+#user {
+  margin-left: 120px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+
+  &.editing {
+    #edit-button, .user-info {
+      display: none;
+    }
+    #update-info, #save-button, #cancel-button {
+      display: block;
+    }
+  }
+}
+
+#update-info {
+  color: #9d9d9d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+
+  label {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+  }
 }

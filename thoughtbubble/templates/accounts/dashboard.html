@@ -27,114 +27,94 @@
     <div id="form-wrapper">
 {#        <form action="{% url 'user_dashboard' %}" method="POST">#}
 {#            {% csrf_token %}#}
-            <div class="row">
-                <div class="large-offset-1 large-2 small-2 columns">
-                    <div id="picture">
-                        {% avatar user %}
-                        <a href="{% url 'avatar_change' %}">Change your avatar (demo)</a>
+        <div id="picture">
+            {% avatar user %}
+            <a href="{% url 'avatar_change' %}">update</a>
 {#                        <img src="{{ user.get_profile_picture }}" alt=""/>#}
-                    </div>
+        </div>
+        <div id="user">
+            <a id="edit-button" class="buttonize orange" href="">edit</a>
+            <a id="save-button" class="buttonize orange" href="">save</a>
+            <a id="cancel-button" class="buttonize blue" href="">cancel</a>
+            <div class="user-info">
+                {{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}} | {{profile.location|default:"unknown"}}
+            </div>
+            <form id="update-info" action="" METHOD="POST">
+                {% csrf_token %}
+                {{ update_form.as_p }}
+{#                {{ update_form.first_name }} {{ update_form.last_name }} {{ update_form.location }}#}
+            </form>
+
+            <div class="user-stats">
+                <span class="emphasis">{{ user|idea_count }}</span> ideas
+                <span class="emphasis">{{ user|idea_support_count }}</span> ideas supported
+                <span class="emphasis">{{ user|communities_joined_count }}</span> communities joined
+            </div>
+        </div>
+
+        <form class="uniForm" method="post">
+            {% csrf_token %}
+
+            <fieldset class="blockLabels">
+                {% if form.non_field_errors %}
+                    <div id="errorMsg">{{form.non_field_errors}}</div>
+                {% endif %}
+
+                {% for base_account in form.accounts %}
+                    {% with base_account.get_provider_account as account %}
+                        <div class="ctrlHolder">
+                            <label for="id_account_{{base_account.id}}">
+                                <input id="id_account_{{base_account.id}}" type="radio" name="account" value="{{base_account.id}}"/>
+                                <span class="socialaccount_provider {{base_account.provider}} {{account.get_brand.id}}">{{account.get_brand.name}}</span>
+                                {{account}}
+                            </label>
+                        </div>
+                    {% endwith %}
+                {% endfor %}
+
+                <div class="buttonHolder">
+                    <button type="submit">remove</button>
                 </div>
-                <div class="large-9 small-10 columns">
-                    <div class="row">
-                        <div class="large-11 small-11 columns user-info">
-                            {{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}} | {{profile.location|default:"unknown"}}
-                            {{ update_form.first_name }} {{ update_form.last_name }} {{ update_form.location }}
-                            s
-                        </div>
-                        <div class="large-1 small-1 columns">
-                            <a class="buttonize orange" href="">edit</a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 small-12 columns user-stats">
-                            <span class="emphasis">{{ user|idea_count }}</span> ideas <span class="emphasis">{{ user|idea_support_count }}</span> ideas supported <span
-                                class="emphasis">{{ user|communities_joined_count }}</span> communities joined
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="large-12 small-12 columns">
-                            <form class="uniForm" method="post">
-                                {% csrf_token %}
+            </fieldset>
 
-                                <fieldset class="blockLabels">
-                                    {% if form.non_field_errors %}
-                                        <div id="errorMsg">{{form.non_field_errors}}</div>
-                                    {% endif %}
+        </form>
 
-                                    {% for base_account in form.accounts %}
-                                        {% with base_account.get_provider_account as account %}
-                                            <div class="ctrlHolder">
-                                                <label for="id_account_{{base_account.id}}">
-                                                    <input id="id_account_{{base_account.id}}" type="radio" name="account" value="{{base_account.id}}"/>
-                                                    <span class="socialaccount_provider {{base_account.provider}} {{account.get_brand.id}}">{{account.get_brand.name}}</span>
-                                                    {{account}}
-                                                </label>
-                                            </div>
-                                        {% endwith %}
-                                    {% endfor %}
+        <h2>Add a 3rd Party Account</h2>
 
-                                    <div class="buttonHolder">
-                                        <button type="submit">remove</button>
-                                    </div>
-
-                                </fieldset>
-
-                            </form>
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="large-12 small-12 columns">
-                            <h2>Add a 3rd Party Account</h2>
-
-                            <ul class="socialaccount_providers">
-                            {% with process='connect' %}
-                                {% for provider in socialaccount.providers %}
-                                    {% if provider.id == "openid" %}
-                                        {% for brand in provider.get_brands %}
-                                            <li>
-                                                <a title="{{brand.name}}"
-                                                   class="socialaccount_provider {{provider.id}} {{brand.id}}"
-                                                   href="{% provider_login_url provider.id openid=brand.openid_url process=process %}"
-                                                        >{{brand.name}}</a>
-                                            </li>
-                                        {% endfor %}
-                                    {% endif %}
-                                    <li>
-                                        <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}"
-                                           href="{% provider_login_url provider.id process=process %}">{{provider.name}}</a>
-                                    </li>
-                                {% endfor %}
-                            {% endwith %}
-                            </ul>
+        <ul class="socialaccount_providers">
+        {% with process='connect' %}
+            {% for provider in socialaccount.providers %}
+                {% if provider.id == "openid" %}
+                    {% for brand in provider.get_brands %}
+                        <li>
+                            <a title="{{brand.name}}"
+                               class="socialaccount_provider {{provider.id}} {{brand.id}}"
+                               href="{% provider_login_url provider.id openid=brand.openid_url process=process %}"
+                                    >{{brand.name}}</a>
+                        </li>
+                    {% endfor %}
+                {% endif %}
+                <li>
+                    <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}}"
+                       href="{% provider_login_url provider.id process=process %}">{{provider.name}}</a>
+                </li>
+            {% endfor %}
+        {% endwith %}
+        </ul>
 
 {#                            {% include "socialaccount/snippets/login_extra.html" %}#}
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="large-12 small-12 columns">
-                    {{ form.about }}
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="large-12 small-12 columns">
-                    {{ form.news }}
-                </div>
-            </div>
+        {{ form.about }}
+        {{ form.news }}
 
 {#            <input type="submit" class="submit" value="post"/>#}
 {#        </form>#}
-    </div>
+</div>
 
-    {% for idea in ideas %}
-        {% include 'idea/idea_for_list.html' %}
-    {% endfor %}
+{% for idea in ideas %}
+    {% include 'idea/idea_for_list.html' %}
+{% endfor %}
 
 {% endblock %}
 

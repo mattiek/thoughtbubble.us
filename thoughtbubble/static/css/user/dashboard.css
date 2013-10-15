@@ -270,7 +270,76 @@
   font-size: 11px;
 }
 
-/* line 5, ../../scss/user/dashboard.scss */
+/* line 4, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 26, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 33, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 43, ../../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 6, ../../scss/user/dashboard.scss */
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -279,7 +348,7 @@
   margin: 0 auto;
 }
 
-/* line 13, ../../scss/user/dashboard.scss */
+/* line 14, ../../scss/user/dashboard.scss */
 .submit {
   height: 33px;
   width: 322px;
@@ -287,13 +356,13 @@
   margin-right: 120px;
 }
 
-/* line 21, ../../scss/user/dashboard.scss */
+/* line 22, ../../scss/user/dashboard.scss */
 #form-wrapper {
   width: 650px;
   margin: 0 auto;
 }
 
-/* line 26, ../../scss/user/dashboard.scss */
+/* line 27, ../../scss/user/dashboard.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -306,7 +375,7 @@
   background-position: 57px 57px;
 }
 
-/* line 39, ../../scss/user/dashboard.scss */
+/* line 40, ../../scss/user/dashboard.scss */
 #picture {
   width: 80px;
   height: 79px;
@@ -314,17 +383,20 @@
   background-color: #dadbdc;
   background-repeat: no-repeat;
   background-position: 57px 57px;
+  float: left;
+  text-align: center;
 }
 
-/* line 48, ../../scss/user/dashboard.scss */
+/* line 51, ../../scss/user/dashboard.scss */
 .user-info {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* line 54, ../../scss/user/dashboard.scss */
+/* line 58, ../../scss/user/dashboard.scss */
 .user-stats {
   color: #53b8d1;
   /* text color */
@@ -332,7 +404,52 @@
   font-size: 19px;
 }
 
-/* line 60, ../../scss/user/dashboard.scss */
+/* line 64, ../../scss/user/dashboard.scss */
 .emphasis {
   color: #f47e23;
+}
+
+/* line 68, ../../scss/user/dashboard.scss */
+#update-info, #save-button, #cancel-button {
+  display: none;
+}
+
+/* line 72, ../../scss/user/dashboard.scss */
+#edit-button, #save-button, #cancel-button {
+  float: right;
+  color: #FFFFFF;
+}
+/* line 76, ../../scss/user/dashboard.scss */
+#edit-button:visited, #save-button:visited, #cancel-button:visited {
+  color: #FFFFFF;
+}
+
+/* line 81, ../../scss/user/dashboard.scss */
+#user {
+  margin-left: 120px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+}
+/* line 87, ../../scss/user/dashboard.scss */
+#user.editing #edit-button, #user.editing .user-info {
+  display: none;
+}
+/* line 90, ../../scss/user/dashboard.scss */
+#user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
+  display: block;
+}
+
+/* line 96, ../../scss/user/dashboard.scss */
+#update-info {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+/* line 102, ../../scss/user/dashboard.scss */
+#update-info label {
+  float: left;
+  width: 100px;
+  margin-right: 10px;
 }
