@@ -48,7 +48,13 @@ p {
   float: left;
 }
 
-/* line 49, ../scss/tb-privacy.scss */
+/* line 45, ../scss/tb-privacy.scss */
+.right-column {
+  width: 690px;
+  float: right;
+}
+
+/* line 50, ../scss/tb-privacy.scss */
 .clr {
   clear: both;
 }
