@@ -24,6 +24,8 @@ from braces.views import AjaxResponseMixin, JSONResponseMixin
 
 from forms import UserProfileForm
 
+from django.contrib.flatpages.models import FlatPage
+
 
 class MyDisconnectForm(DisconnectForm):
     cleaned_data = {}
@@ -44,7 +46,12 @@ def home(request, state=None, city=None):
         return redirect( reverse('home',  args=[request.session.get('exploring_state','oh'),
                                                 request.session.get('exploring_city','columbus'),
                                             ]))
-    return render(request, 'home.html')
+    try:
+        copy = FlatPage.objects.get(url='home')
+    except:
+        copy = 'Copy here'
+    d = {'copy': copy}
+    return render(request, 'home.html', d)
 
 
 def logout(request):
