@@ -1,5 +1,5 @@
 /* line 3, ../scss/tb-main.scss */
-.large-heading {
+h1 {
   color: #6fc4d8;
   /* text color */
   font-family: "Museo Sans", sans-serif;
@@ -9,7 +9,7 @@
 }
 
 /* line 11, ../scss/tb-main.scss */
-.large-subcopy {
+h2 {
   color: #8b8b8b;
   /* text color */
   font-family: "Helvetica";
@@ -19,7 +19,7 @@
 }
 
 /* line 19, ../scss/tb-main.scss */
-.small-heading {
+h3 {
   color: #6fc4d8;
   /* text color */
   font-family: "Museo Sans", sans-serif;
@@ -29,7 +29,7 @@
 }
 
 /* line 27, ../scss/tb-main.scss */
-.small-copy {
+p {
   color: #6c6d70;
   /* text color */
   font-family: "Helvetica";
