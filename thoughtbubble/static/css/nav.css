@@ -1,4 +1,4 @@
-/* line 1, ../scss/nav.scss */
+/* line 3, ../scss/nav.scss */
 #illustration {
   background: url(../images/thoughtbubble-illustration.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -7,7 +7,7 @@
   margin: 0 auto;
 }
 
-/* line 10, ../scss/nav.scss */
+/* line 12, ../scss/nav.scss */
 #nav,
 #login-nav {
   color: #4585c3;
@@ -18,35 +18,35 @@
   list-style-type: none;
   float: right;
 }
-/* line 17, ../scss/nav.scss */
+/* line 19, ../scss/nav.scss */
 #nav a,
 #login-nav a {
   text-decoration: none;
 }
-/* line 23, ../scss/nav.scss */
+/* line 25, ../scss/nav.scss */
 #nav li,
 #login-nav li {
   display: inline-block;
   margin-top: 75px;
 }
 
-/* line 29, ../scss/nav.scss */
+/* line 31, ../scss/nav.scss */
 #login-nav {
   margin-right: 70px;
   display: block;
 }
 
-/* line 36, ../scss/nav.scss */
+/* line 38, ../scss/nav.scss */
 #nav li {
   margin-right: 50px;
 }
 
-/* line 42, ../scss/nav.scss */
+/* line 44, ../scss/nav.scss */
 #login-nav li {
   margin-right: 0px;
 }
 
-/* line 47, ../scss/nav.scss */
+/* line 49, ../scss/nav.scss */
 .scale {
   background: url(../images/scale-8.png) no-repeat no-repeat;
   background-size: 100%;
@@ -55,14 +55,14 @@
   margin: 0 auto;
 }
 
-/* line 55, ../scss/nav.scss */
+/* line 57, ../scss/nav.scss */
 #logo {
   margin: 35px 0 0 35px;
   width: 288px;
   height: 80px;
 }
 
-/* line 61, ../scss/nav.scss */
+/* line 63, ../scss/nav.scss */
 #primary-nav {
   color: #4585c3;
   /* text color */
@@ -74,12 +74,12 @@
   width: 300px;
 }
 
-/* line 72, ../scss/nav.scss */
+/* line 74, ../scss/nav.scss */
 #primary-nav li {
   display: inline-block;
 }
 
-/* line 77, ../scss/nav.scss */
+/* line 79, ../scss/nav.scss */
 #sub-footer {
   color: #4585c3;
   /* text color */
@@ -90,46 +90,46 @@
   margin: 20px auto 0;
   text-decoration: none;
 }
-/* line 86, ../scss/nav.scss */
+/* line 88, ../scss/nav.scss */
 #sub-footer ul {
   list-style: none;
 }
-/* line 89, ../scss/nav.scss */
+/* line 91, ../scss/nav.scss */
 #sub-footer ul li {
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
 }
-/* line 100, ../scss/nav.scss */
+/* line 102, ../scss/nav.scss */
 #sub-footer p {
   text-align: center;
 }
 
-/* line 106, ../scss/nav.scss */
+/* line 108, ../scss/nav.scss */
 #primary-nav li {
   text-indent: 50px;
   margin-left: 50px;
   height: 38px;
 }
-/* line 111, ../scss/nav.scss */
+/* line 113, ../scss/nav.scss */
 #primary-nav li.icon-explore {
   background: url(../images/button-explore.png) no-repeat;
   background-position: 0 0;
 }
-/* line 115, ../scss/nav.scss */
+/* line 117, ../scss/nav.scss */
 #primary-nav li.icon-explore:hover {
   background-position: 0 -42px;
 }
-/* line 120, ../scss/nav.scss */
+/* line 122, ../scss/nav.scss */
 #primary-nav li.icon-add {
   background: url(../images/button-add.png) no-repeat;
 }
-/* line 124, ../scss/nav.scss */
+/* line 126, ../scss/nav.scss */
 #primary-nav li:first-child {
   margin-left: 0px;
 }
 
-/* line 131, ../scss/nav.scss */
+/* line 133, ../scss/nav.scss */
 #login-nav li:first-child {
   background-image: url(../images/icon-person.png);
   background-repeat: no-repeat;
@@ -137,27 +137,31 @@
   background-position-y: 50%;
 }
 
-/* line 138, ../scss/nav.scss */
+/* line 140, ../scss/nav.scss */
 #home-container {
   width: 930px;
   margin: 0 auto;
 }
 
-/* line 144, ../scss/nav.scss */
+/* line 146, ../scss/nav.scss */
 form .row .columns.no-padding,
 form .row .row .columns.no-padding {
   padding: 0;
 }
 
-/* line 148, ../scss/nav.scss */
+/* line 150, ../scss/nav.scss */
 #login-overlay {
   width: 415px;
   height: 430px;
   background-color: #49c4dd;
   color: #ffffff;
 }
+/* line 156, ../scss/nav.scss */
+#login-overlay form {
+  text-align: center;
+}
 
-/* line 155, ../scss/nav.scss */
+/* line 161, ../scss/nav.scss */
 #login-overlay h6 {
   margin-top: 70px;
   text-align: center;
@@ -166,13 +170,36 @@ form .row .row .columns.no-padding {
   font-size: 16px;
 }
 
-/* line 163, ../scss/nav.scss */
+/* line 169, ../scss/nav.scss */
 #login-overlay .oauths {
-  margin: 30px 0;
+  margin: 30px auto;
+  width: 195px;
   height: 60px;
 }
+/* line 174, ../scss/nav.scss */
+#login-overlay .oauths a {
+  background: url('../images/join-login-social-media.png?1381964545');
+  display: block;
+  height: 44px;
+  width: 44px;
+  float: left;
+}
+/* line 181, ../scss/nav.scss */
+#login-overlay .oauths a.facebook-oauth {
+  width: 58px;
+}
+/* line 185, ../scss/nav.scss */
+#login-overlay .oauths a.linkedin-oauth {
+  background-position: 44px 0;
+  margin: 0 20px;
+}
+/* line 191, ../scss/nav.scss */
+#login-overlay .oauths a.twitter-oauth {
+  width: 50px;
+  background-position: 124px 0;
+}
 
-/* line 170, ../scss/nav.scss */
+/* line 202, ../scss/nav.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"] {
@@ -183,7 +210,7 @@ form .row .row .columns.no-padding {
   margin: 0 auto 10px;
 }
 
-/* line 178, ../scss/nav.scss */
+/* line 210, ../scss/nav.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -193,7 +220,7 @@ form .row .row .columns.no-padding {
   margin: 20px auto;
 }
 
-/* line 188, ../scss/nav.scss */
+/* line 220, ../scss/nav.scss */
 #login-overlay .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -223,7 +250,7 @@ form .row .row .columns.no-padding {
   float: none;
 }
 
-/* line 211, ../scss/nav.scss */
+/* line 243, ../scss/nav.scss */
 .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -240,7 +267,7 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-/* line 227, ../scss/nav.scss */
+/* line 259, ../scss/nav.scss */
 #forgot-password {
   display: block;
   color: #FFFFFF;
@@ -250,7 +277,7 @@ form .row .row .columns.no-padding {
   font-weight: 100;
 }
 
-/* line 236, ../scss/nav.scss */
+/* line 268, ../scss/nav.scss */
 #footer {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -265,31 +292,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 247, ../scss/nav.scss */
+/* line 279, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 252, ../scss/nav.scss */
+/* line 284, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 257, ../scss/nav.scss */
+/* line 289, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 265, ../scss/nav.scss */
+/* line 297, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 271, ../scss/nav.scss */
+/* line 303, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -300,7 +327,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 280, ../scss/nav.scss */
+/* line 312, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -308,7 +335,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 287, ../scss/nav.scss */
+/* line 319, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -316,7 +343,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 294, ../scss/nav.scss */
+/* line 326, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -324,45 +351,45 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 302, ../scss/nav.scss */
+/* line 334, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 307, ../scss/nav.scss */
+/* line 339, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 311, ../scss/nav.scss */
+/* line 343, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 315, ../scss/nav.scss */
+/* line 347, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 319, ../scss/nav.scss */
+/* line 351, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 324, ../scss/nav.scss */
+/* line 356, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 328, ../scss/nav.scss */
+/* line 360, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }
 
-/* line 332, ../scss/nav.scss */
+/* line 364, ../scss/nav.scss */
 .error-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -392,11 +419,11 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 356, ../scss/nav.scss */
+/* line 388, ../scss/nav.scss */
 .error-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 359, ../scss/nav.scss */
+/* line 391, ../scss/nav.scss */
 .error-box .details h3 {
   color: #f37d23;
   /* text color */
@@ -404,13 +431,13 @@ p {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 366, ../scss/nav.scss */
+/* line 398, ../scss/nav.scss */
 .error-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 373, ../scss/nav.scss */
+/* line 405, ../scss/nav.scss */
 .message-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -440,16 +467,16 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 397, ../scss/nav.scss */
+/* line 429, ../scss/nav.scss */
 .message-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 400, ../scss/nav.scss */
+/* line 432, ../scss/nav.scss */
 .message-box .details h4 {
   font-family: "Museo Sans", sans-serif;
   margin: 10px;
 }
-/* line 405, ../scss/nav.scss */
+/* line 437, ../scss/nav.scss */
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;

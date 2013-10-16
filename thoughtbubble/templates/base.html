@@ -107,9 +107,9 @@
 <div id="login-overlay" class="white-popup mfp-hide">
     <h6>login with</h6>
     <div class="oauths">
-        <a href="{% provider_login_url "facebook" method="oauth2" %}">Facebook OAuth2</a>
-        <a href="{% provider_login_url "linkedin" method="oauth2" %}">LinkedIn OAuth2</a>
-        <a href="{% provider_login_url "twitter" %}">Twitter Connect</a>
+        <a class="facebook-oauth" href="{% provider_login_url "facebook" method="oauth2" %}"></a>
+        <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
+        <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
     </div>
     <form action="/login" method="POST">
         {% csrf_token %}

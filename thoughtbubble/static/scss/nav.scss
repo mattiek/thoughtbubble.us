@@ -1,3 +1,5 @@
+@import "compass";
+
 #illustration {
   background: url(../images/thoughtbubble-illustration.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -150,6 +152,10 @@ form .row .row .columns.no-padding {
   height: 430px;
   background-color: #49c4dd;
   color: #ffffff;
+
+  form {
+    text-align: center;
+  }
 }
 
 #login-overlay h6 {
@@ -161,8 +167,34 @@ form .row .row .columns.no-padding {
 }
 
 #login-overlay .oauths {
-  margin: 30px 0;
+  margin: 30px auto;
+  width: 195px;
   height: 60px;
+
+  a {
+    background: image-url('join-login-social-media.png');
+    display: block;
+    height: 44px;
+    width: 44px;
+    float: left;
+
+    &.facebook-oauth {
+      width: 58px;
+    }
+
+    &.linkedin-oauth {
+      //156
+      background-position: 44px 0;
+      margin: 0 20px;
+    }
+
+    &.twitter-oauth {
+      width: 50px;
+      background-position: 124px 0;
+      //77
+    }
+  }
+
 }
 
 #login-overlay input[type="password"],
