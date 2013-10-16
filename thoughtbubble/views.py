@@ -47,7 +47,7 @@ def home(request, state=None, city=None):
                                                 request.session.get('exploring_city','columbus'),
                                             ]))
     try:
-        copy = FlatPage.objects.get(url='home')
+        copy = FlatPage.objects.get(url='home').content
     except:
         copy = 'Copy here'
     d = {'copy': copy}
