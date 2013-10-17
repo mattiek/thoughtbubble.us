@@ -36,7 +36,7 @@ var setActive = function(index, ease) {
     // Set active class on sections, markers.
 //    _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
     _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
-    sections[index].className += ' active';
+//    sections[index].className += ' active';
     markers[index].element.className += ' active';
 
     // Set a body class for the active section.
