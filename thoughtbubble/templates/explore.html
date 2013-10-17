@@ -34,7 +34,7 @@
                         <li><a class="community" href="{% url 'sherlock' exploring_state exploring_city community.id %}"
                                data-id="{{ community.neighborhood.id }}"
                                data-community="{{ community.id }}"
-                                >{{ community.neighborhood.name }}</a></li>
+                                >{{ community.title }}</a></li>
                     {% endfor %}
                         <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>
                 </ul>
