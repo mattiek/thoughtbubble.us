@@ -68,7 +68,7 @@ class Community(models.Model):
                              },
                          "properties": {
                              "id": location.get_id(),
-                             "zoom": 18
+                             "zoom": 20
                          }
             }
             mapbox.append(geometry)
