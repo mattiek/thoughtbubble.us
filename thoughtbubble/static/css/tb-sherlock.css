@@ -1,0 +1,278 @@
+/* line 1, ../scss/tb-sherlock.scss */
+body {
+  margin: 0px;
+  padding: 0px;
+  font: normal 15px/20px Arial, sans-serif;
+  background: #fff;
+}
+
+/* line 8, ../scss/tb-sherlock.scss */
+#illustration {
+  background: #c9eaf7 no-repeat no-repeat;
+  background-size: 100%;
+  height: 150px;
+  width: 930px;
+  margin: 0 auto;
+}
+
+/* line 15, ../scss/tb-sherlock.scss */
+#home-container {
+  margin: 0 auto;
+  width: 930px;
+  position: relative;
+}
+
+/* line 21, ../scss/tb-sherlock.scss */
+#map {
+  width: 100%;
+  height: 640px;
+  background-color: #b5e2b3;
+}
+
+/* line 27, ../scss/tb-sherlock.scss */
+#sherlock-end {
+  height: 640px;
+}
+
+/* line 31, ../scss/tb-sherlock.scss */
+article {
+  min-width: 320px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 640px;
+  overflow: scroll;
+}
+
+/* line 40, ../scss/tb-sherlock.scss */
+section {
+  padding: 40px;
+  margin-left: 40px;
+  position: relative;
+  transition: background 500ms, color 500ms;
+  -moz-transition: background 500ms, color 500ms;
+  -webkit-transition: background 500ms, color 500ms;
+  color: #888;
+  color: rgba(128, 128, 128, 0);
+  text-decoration: none;
+  text-shadow: #404040 0px 0px 4px;
+}
+/* line 51, ../scss/tb-sherlock.scss */
+section a {
+  color: #888;
+  color: rgba(128, 128, 128, 0);
+  text-decoration: none;
+  text-shadow: #404040 0px 0px 4px;
+}
+/* line 57, ../scss/tb-sherlock.scss */
+section.active {
+  background: #222;
+  color: #eee;
+}
+/* line 60, ../scss/tb-sherlock.scss */
+section.active a {
+  color: #eee;
+}
+/* line 63, ../scss/tb-sherlock.scss */
+section.active small {
+  color: #aaa;
+}
+
+/* line 69, ../scss/tb-sherlock.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* line 74, ../scss/tb-sherlock.scss */
+h2 {
+  font-size: 1.3333em;
+}
+
+/* line 78, ../scss/tb-sherlock.scss */
+h1, h2 {
+  margin: 0px 0px 10px;
+}
+
+/* line 82, ../scss/tb-sherlock.scss */
+p {
+  margin: 0px;
+}
+
+/* line 86, ../scss/tb-sherlock.scss */
+.scroll {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+/* line 95, ../scss/tb-sherlock.scss */
+.colophon {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 101, ../scss/tb-sherlock.scss */
+.cover:before {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto 20px;
+}
+/* line 108, ../scss/tb-sherlock.scss */
+.cover.active:before {
+  background: url(sprite.png) 0px -120px no-repeat;
+}
+
+/* line 121, ../scss/tb-sherlock.scss */
+#map {
+  transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -webkit-transition: opacity 250ms;
+}
+
+/* line 132, ../scss/tb-sherlock.scss */
+.spot {
+  width: 120px;
+  height: 120px;
+  margin: -60px 0px 0px -60px;
+  background: url(sprite.png) 120px 120px no-repeat;
+  position: absolute;
+}
+
+/* line 140, ../scss/tb-sherlock.scss */
+.spot-cover {
+  display: none;
+}
+
+/* line 144, ../scss/tb-sherlock.scss */
+.spot-baker {
+  background-position: -130px 0px;
+}
+/* line 146, ../scss/tb-sherlock.scss */
+.spot-baker.active {
+  background-position: -130px -120px;
+}
+
+/* line 151, ../scss/tb-sherlock.scss */
+.spot-aldgate {
+  background-position: -260px 0px;
+}
+/* line 153, ../scss/tb-sherlock.scss */
+.spot-aldgate.active {
+  background-position: -260px -120px;
+}
+
+/* line 158, ../scss/tb-sherlock.scss */
+.spot-london-bridge {
+  background-position: -390px 0px;
+}
+/* line 160, ../scss/tb-sherlock.scss */
+.spot-london-bridge.active {
+  background-position: -390px -120px;
+}
+
+/* line 165, ../scss/tb-sherlock.scss */
+.spot-woolwich {
+  background-position: -520px 0px;
+}
+/* line 167, ../scss/tb-sherlock.scss */
+.spot-woolwich.active {
+  background-position: -520px -120px;
+}
+
+/* line 172, ../scss/tb-sherlock.scss */
+.spot-gloucester {
+  background-position: -650px 0px;
+}
+/* line 174, ../scss/tb-sherlock.scss */
+.spot-gloucester.active {
+  background-position: -650px -120px;
+}
+
+/* line 179, ../scss/tb-sherlock.scss */
+.spot-caulfield-gardens {
+  background-position: -780px 0px;
+}
+/* line 181, ../scss/tb-sherlock.scss */
+.spot-caulfield-gardens.active {
+  background-position: -780px -120px;
+}
+
+/* line 186, ../scss/tb-sherlock.scss */
+.spot-telegraph {
+  background-position: -910px 0px;
+}
+/* line 188, ../scss/tb-sherlock.scss */
+.spot-telegraph.active {
+  background-position: -910px -120px;
+}
+
+/* line 193, ../scss/tb-sherlock.scss */
+.spot-charing-cross {
+  background-position: -1040px 0px;
+}
+/* line 195, ../scss/tb-sherlock.scss */
+.spot-charing-cross.active {
+  background-position: -1040px -120px;
+}
+
+/* Distinguish the "cover page" visually other sections. */
+/* line 202, ../scss/tb-sherlock.scss */
+body.section-0 #map {
+  opacity: 0.5;
+}
+
+@media (max-width: 640px) {
+  /* line 207, ../scss/tb-sherlock.scss */
+  body {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /* line 211, ../scss/tb-sherlock.scss */
+  article {
+    width: 100%;
+    min-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 200%;
+  }
+
+  /* line 217, ../scss/tb-sherlock.scss */
+  section {
+    text-shadow: none;
+    margin-left: 0px;
+    padding: 30px;
+  }
+  /* line 221, ../scss/tb-sherlock.scss */
+  section.active {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
+
+  /* line 228, ../scss/tb-sherlock.scss */
+  #pane {
+    width: 100%;
+  }
+
+  /* line 231, ../scss/tb-sherlock.scss */
+  #map {
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 150%;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 240, ../scss/tb-sherlock.scss */
+  body {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

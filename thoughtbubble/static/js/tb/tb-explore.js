@@ -169,18 +169,18 @@ var minmin = function(id, cid, href, communityName) {
     );
 }
 
-$('#minisplore a.community').on('click', function(e){
-    e.preventDefault();
-
-    var id = $(e.target).attr('data-id'),
-        cid = $(e.target).attr('data-community');
-    minmin(
-        id,
-        cid,
-        $(e.target).attr('href'),
-        $(e.target).text()
-    );
-});
+//$('#minisplore a.community').on('click', function(e){
+//    e.preventDefault();
+//
+//    var id = $(e.target).attr('data-id'),
+//        cid = $(e.target).attr('data-community');
+//    minmin(
+//        id,
+//        cid,
+//        $(e.target).attr('href'),
+//        $(e.target).text()
+//    );
+//});
 
 
 // Metro selection

@@ -81,6 +81,22 @@ def explore(request, state=None, city=None, pk=None):
     return render(request, 'explore.html', d)
 
 
+def sherlock(request, state=None, city=None, pk=None):
+
+    if state:
+        request.session['exploring_state'] = state
+
+    if city:
+        request.session['exploring_city'] = city
+
+    d = {}
+    d['communities'] = Community.objects.filter().order_by('neighborhood__name')
+
+    d['exploring'] = Community.objects.get(pk=pk)
+
+    return render(request, 'sherlock.html', d)
+
+
 def privacy(request):
     return render(request, 'privacy.html')
 

@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+{% block title %}
+    Add an Idea
+{% endblock %}
+
+{% block head %}
+    <!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/mapbox-v0.6.7.css"/>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mapbox-v0.6.7.js"></script>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-sherlock.css" />
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />#}
+{% endblock %}
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id='pane'><div id='map'></div></div>
+
+    <article id="communisplore">
+        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">
+            <h3>{{ exploring.title }}</h3>
+            <p>{{ exploring.about }}</p>
+            <small class='scroll'>Scroll ▼</small>
+        </section>
+
+        {% for location in exploring.location_set.all %}
+            <section id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
+                <h3>{{ location.name }}</h3>
+                <p>{{ location.about }}</p>
+            </section>
+        {% endfor %}
+        <div id="sherlock-end"></div>
+    </article>
+
+    {% verbatim %}
+    <script id="section-template" type="text/x-handlebars-template">
+        <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
+            <a href="{{ link }}">
+                <h4>{{ name }}</h4>
+            </a>
+            <div class="extended">
+                <p>{{ description }}</p>
+                <div class="share">
+                    <a class="orange buttonize" href="{{ add_idea }}">add idea</a>
+                    <a class="blue buttonize" href="{{ find_ideas }}">find ideas</a>
+                    <a class="blue buttonize" href="{{ share }}">share</a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </section>
+    </script>
+    {% endverbatim %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript">
+        var geojson = {{ exploring.getLocationsGeoJSON|safe }};
+    </script>
+
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb-sherlock.js"></script>
+
+{#    {% if exploring %}#}
+{#        <script type="text/javascript">#}
+{#            minmin(#}
+{#            {{ exploring.neighborhood.id }},#}
+{#            {{ exploring.id }},#}
+{#            '{{ exploring.get_absolute_url }}'#}
+{#            );#}
+{#        </script>#}
+{#    {% endif %}#}
+
+{% endblock %}

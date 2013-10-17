@@ -67,6 +67,8 @@ class LocationCreate(CreateView):
     form_class = AddLocationForm
 
     def form_valid(self, form):
+        comm = self.kwargs.get('community',None)
+        community = Community.objects.get(pk=comm)
         s = Location(
             name=form.cleaned_data['name'],
             address=form.cleaned_data['address'],
@@ -75,12 +77,16 @@ class LocationCreate(CreateView):
             # what_kind=form.cleaned_data['what_kind'],
             latitude=form.cleaned_data['latitude'],
             longitude=form.cleaned_data['longitude'],
+            community=community
             )
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
         messages.info(self.request, '%s created.' % s.name)
-        return redirect('addlocation')
+        return redirect('addlocation', self.kwargs.get('state'),
+                                             self.kwargs.get('city'),
+                                             self.kwargs.get('community'),
+                                             )
 
     def get_context_data(self, **kwargs):
         context = super(LocationCreate, self).get_context_data(**kwargs)

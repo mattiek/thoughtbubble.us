@@ -44,6 +44,39 @@ class Community(models.Model):
     def get_pictures(self):
         return self.communityimage_set.all()
 
+    def get_id(self):
+        return self.title.lower().replace(' ','-')
+
+    def getLocationsGeoJSON(self):
+        mapbox = [{ "geometry": {
+            "type": "Point",
+            "coordinates": [self.neighborhood.center[0], self.neighborhood.center[1]],
+                },
+                    "properties": {
+                        "id": self.get_id(),
+                        "zoom": 17
+                    }
+                  }]
+        locations = self.location_set.all()
+
+        for location in locations:
+            latlng = [location.geom[0], location.geom[1]]
+
+            geometry = { "geometry": {
+                            "type": "Point",
+                            "coordinates": latlng
+                             },
+                         "properties": {
+                             "id": location.get_id(),
+                             "zoom": 17
+                         }
+            }
+            mapbox.append(geometry)
+
+        return JSON.dumps(mapbox)
+
+
+
 class CommunityNews(models.Model):
     community = models.ForeignKey(Community)
     name = models.CharField(max_length=255, null=True, blank=True)

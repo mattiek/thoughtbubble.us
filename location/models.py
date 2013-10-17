@@ -42,7 +42,7 @@ class Location(models.Model):
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 
-    community = models.ForeignKey(Neighborhood, null=True, blank=True)
+    community = models.ForeignKey(Community, null=True, blank=True)
 
     partners = models.ManyToManyField(Partner, null=True, blank=True)
 
@@ -51,21 +51,24 @@ class Location(models.Model):
 
 
     def __unicode__(self):
-        if self.community:
-            return "%s in %s" % (self.name,self.community.name,)
-        else:
-            return "%s [no community]"
+        try:
+            return "%s in %s" % (self.name,self.community.title,)
+        except:
+            return "%s [no community]" % (self.name,)
 
     def get_absolute_url(self):
         state = 'oh'
         city = 'columbus'
         if self.community:
-            state = self.community.state
-            city = self.community.city
+            state = self.community.neighborhood.state
+            city = self.community.neighborhood.city
 
         return reverse('location_detail', args=[state,
                                                 city,
                                                     str(self.id)])
+
+    def get_id(self):
+        return self.name.lower().replace(' ','-')
 
     def get_api_detail_url(self):
         return reverse('locations-detail',args=[self.id,])
@@ -78,9 +81,9 @@ class Location(models.Model):
             self.longitude = self.geom[1]
 
         # Put in the correct Community
-        s = Neighborhood.objects.filter(geom__contains=self.geom)
-        if s:
-            self.community = s[0]
+        # s = Neighborhood.objects.filter(geom__contains=self.geom)
+        # if s:
+        #     self.community = s[0]
 
 
         super(Location, self).save(*args, **kwargs)
@@ -119,6 +122,9 @@ class Location(models.Model):
         mapbox['type'] = 'Feature'
         mapbox['geometry'] = geometry
         return mapbox
+
+
+
 
 
 
