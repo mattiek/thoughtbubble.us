@@ -77,8 +77,8 @@ class Location(models.Model):
         # if not self.geom:
         self.geom = GEOSGeometry('POINT(%s %s)' % (self.longitude, self.latitude,))
         if self.geom:
-            self.latitude = self.geom[0]
-            self.longitude = self.geom[1]
+            self.latitude = self.geom[1]
+            self.longitude = self.geom[0]
 
         # Put in the correct Community
         # s = Neighborhood.objects.filter(geom__contains=self.geom)

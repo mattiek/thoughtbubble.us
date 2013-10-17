@@ -51,6 +51,27 @@ class LocationDetail(DetailView):
 
 class LocationUpdate(UpdateView):
     model = Location
+    # form_class = AddLocationForm
+
+    def form_valid(self, form):
+        comm = self.kwargs.get('pk',None)
+        s = Location.objects.get(pk=comm)
+        s.name=form.cleaned_data['name']
+        s.address=form.cleaned_data['address']
+        s.city_and_state=form.cleaned_data['city_and_state']
+        s.zip=form.cleaned_data['zip']
+            # what_kind=form.cleaned_data['what_kind'],
+        s.latitude=form.cleaned_data['latitude'] # WHY MUST WE SWAP!?!?!
+        s.longitude=form.cleaned_data['longitude']
+
+
+        s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
+        s.save()
+        messages.info(self.request, '%s updated.' % s.name)
+        return redirect('location_update', self.kwargs.get('state'),
+                        self.kwargs.get('city'),
+                        self.kwargs.get('pk'),
+                        )
 
     def get_context_data(self, **kwargs):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
@@ -83,10 +104,10 @@ class LocationCreate(CreateView):
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
         messages.info(self.request, '%s created.' % s.name)
-        return redirect('addlocation', self.kwargs.get('state'),
-                                             self.kwargs.get('city'),
-                                             self.kwargs.get('community'),
-                                             )
+        return redirect('location_update', self.kwargs.get('state'),
+                        self.kwargs.get('city'),
+                        s.id,
+                        )
 
     def get_context_data(self, **kwargs):
         context = super(LocationCreate, self).get_context_data(**kwargs)
