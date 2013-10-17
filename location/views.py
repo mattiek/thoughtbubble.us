@@ -56,7 +56,7 @@ class LocationUpdate(UpdateView):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
         location = Location.objects.get(pk=self.kwargs['pk'])
         context['action_url'] = reverse('location_update', args=[self.kwargs['state'], self.kwargs['city'], self.kwargs['pk'],])
-        context['community'] = Community.objects.get(neighborhood=location.community)
+        context['community'] = location.community
         if kwargs.get('id',None):
             self.form.fields['where'].initial = location
         return context

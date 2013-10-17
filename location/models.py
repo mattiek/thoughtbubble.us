@@ -74,8 +74,8 @@ class Location(models.Model):
         return reverse('locations-detail',args=[self.id,])
 
     def save(self, *args, **kwargs):
-        if not self.geom:
-            self.geom = GEOSGeometry('POINT(%s %s)' % (self.latitude, self.longitude,))
+        # if not self.geom:
+        self.geom = GEOSGeometry('POINT(%s %s)' % (self.longitude, self.latitude,))
         if self.geom:
             self.latitude = self.geom[0]
             self.longitude = self.geom[1]
