@@ -1,3 +1,4 @@
+@import 'compass';
 @import 'partials/buttons';
 @import "partials/inputs";
 
@@ -108,7 +109,7 @@ p {
     margin: 0px auto 20px;
   }
   &.active:before {
-    background: url(sprite.png) 0px -120px no-repeat;
+    background: image-url('featured-community-location.png') 0px 0px no-repeat;
   }
 }
 
@@ -135,8 +136,9 @@ p {
   width: 120px;
   height: 120px;
   margin: -60px 0px 0px -60px;
-  background: url(sprite.png) 120px 120px no-repeat;
+  background: image-url('featured-community-location.png') 0px 0px no-repeat;
   position: absolute;
+
 }
 
 .spot-cover {

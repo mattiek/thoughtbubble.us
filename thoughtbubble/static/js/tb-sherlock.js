@@ -1,15 +1,20 @@
 var tiles = mapbox.layer().tilejson({
     tiles: [ "http://a.tiles.mapbox.com/v3/mattiej.map-5onab1gh/{z}/{x}/{y}.png" ]
 });
+var spotIndex = 0;
 var spots = mapbox.markers.layer()
     // Load up markers from geojson data.
     .features(geojson)
     // Define a new factory function. Takes geojson input and returns a
     // DOM element that represents the point.
     .factory(function(f) {
+
         var el = document.createElement('div');
-        el.className = 'spot spot-' + f.properties.id;
+        if (f.properties.id != geojson[0].properties.id) {
+            el.className = 'spot spot-' + f.properties.id;
+        }
         return el;
+
     });
 
 // Creates the map with tile and marker layers and
