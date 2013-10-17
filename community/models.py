@@ -54,7 +54,7 @@ class Community(models.Model):
                 },
                     "properties": {
                         "id": self.get_id(),
-                        "zoom": 17
+                        "zoom": 20
                     }
                   }]
         locations = self.location_set.all()
