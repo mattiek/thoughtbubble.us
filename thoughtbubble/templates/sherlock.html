@@ -49,7 +49,7 @@
 
         {% for location in exploring.location_set.all %}
             <section id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
-                <a href="{{ location.link }}">
+                <a href="{{ location.get_absolute_url }}">
                     <h4>{{ location.name }}</h4>
                 </a>
                 <div class="extended">
