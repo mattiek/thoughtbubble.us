@@ -25,16 +25,42 @@
     <div id='pane'><div id='map'></div></div>
 
     <article id="communisplore">
-        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">
-            <h3>{{ exploring.title }}</h3>
-            <p>{{ exploring.about }}</p>
-            <small class='scroll'>Scroll ▼</small>
+{#        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">#}
+{#            <h3>{{ exploring.title }}</h3>#}
+{#            <p>{{ exploring.about }}</p>#}
+{#            <small class='scroll'>Scroll ▼</small>#}
+{#        </section>#}
+
+        <section class='active' id="{{ exploring.get_id }}" data-index="0">
+            <a href="{{ exploring.get_absolute_url }}">
+                <h4>{{ exploring.title }}</h4>
+            </a>
+            <div class="extended">
+                <p>{{ exploring.description }}</p>
+                <div class="share">
+                    <a class="orange buttonize" href="{{ location.add_idea }}">add idea</a>
+                    <a class="blue buttonize" href="{{ location.find_ideas }}">find ideas</a>
+                    <a class="blue buttonize" href="{{ location.share }}">share</a>
+                </div>
+                <div style="clear:both;"></div>
+                <small class='scroll'>Scroll ▼</small>
+            </div>
         </section>
 
         {% for location in exploring.location_set.all %}
             <section id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
-                <h3>{{ location.name }}</h3>
-                <p>{{ location.about }}</p>
+                <a href="{{ location.link }}">
+                    <h4>{{ location.name }}</h4>
+                </a>
+                <div class="extended">
+                    <p>{{ location.description }}</p>
+                    <div class="share">
+                        <a class="orange buttonize" href="{{ location.add_idea }}">add idea</a>
+                        <a class="blue buttonize" href="{{ location.find_ideas }}">find ideas</a>
+                        <a class="blue buttonize" href="{{ location.share }}">share</a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
             </section>
         {% endfor %}
         <div id="sherlock-end"></div>

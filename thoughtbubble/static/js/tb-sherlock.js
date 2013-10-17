@@ -29,7 +29,7 @@ var markers = _(sections).map(function(section) {
 // Helper to set the active section.
 var setActive = function(index, ease) {
     // Set active class on sections, markers.
-    _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
+//    _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
     _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
     sections[index].className += ' active';
     markers[index].element.className += ' active';
@@ -80,11 +80,15 @@ var setActive = function(index, ease) {
 setActive(0, false);
 
 var getIntersect = function() {
+    var padding = 80;
    var intersection =  $('#communisplore')[0].getBoundingClientRect().top;
-    var children = _.filter($('#communisplore section'), function(el) { return el.getBoundingClientRect().top <= intersection; });
+    var children = _.filter($('#communisplore section'), function(el) { return (el.getBoundingClientRect().top - padding) <= intersection; });
     var last = $('#communisplore section').last()[0];
-    $('#sherlock-end').css('height',640 - last.clientHeight);
+    $('#sherlock-end').css('height',640 - last.clientHeight - padding);
     var active = _.last(children) || $('#communisplore').children().first();
+    $(active).nextAll().removeClass('active');
+//    $(active).prevAll().addClass('active');
+
     setActive($(active).attr('data-index'),true);
 }
 

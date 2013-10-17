@@ -1,12 +1,146 @@
-/* line 1, ../scss/tb-sherlock.scss */
-body {
-  margin: 0px;
-  padding: 0px;
-  font: normal 15px/20px Arial, sans-serif;
-  background: #fff;
+/* line 1, ../scss/partials/_buttons.scss */
+.orange {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
+  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  /* layer fill content */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+/* line 17, ../scss/partials/_buttons.scss */
+.orange.activated {
+  color: #f9c98c;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
 }
 
-/* line 8, ../scss/tb-sherlock.scss */
+/* line 23, ../scss/partials/_buttons.scss */
+.blue {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  /* border radius */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  /* prevents bg color from leaking outside the border */
+  background: #8dd9f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
+  /* IE6-9 */
+  border: none;
+  color: #FFFFFF;
+  font-family: 'MuseoSans';
+}
+
+/* line 42, ../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 4, ../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 26, ../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 33, ../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 43, ../scss/partials/_inputs.scss */
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 11, ../scss/tb-sherlock.scss */
 #illustration {
   background: #c9eaf7 no-repeat no-repeat;
   background-size: 100%;
@@ -15,26 +149,26 @@ body {
   margin: 0 auto;
 }
 
-/* line 15, ../scss/tb-sherlock.scss */
+/* line 18, ../scss/tb-sherlock.scss */
 #home-container {
   margin: 0 auto;
   width: 930px;
   position: relative;
 }
 
-/* line 21, ../scss/tb-sherlock.scss */
+/* line 24, ../scss/tb-sherlock.scss */
 #map {
   width: 100%;
   height: 640px;
   background-color: #b5e2b3;
 }
 
-/* line 27, ../scss/tb-sherlock.scss */
+/* line 30, ../scss/tb-sherlock.scss */
 #sherlock-end {
   height: 640px;
 }
 
-/* line 31, ../scss/tb-sherlock.scss */
+/* line 34, ../scss/tb-sherlock.scss */
 article {
   min-width: 320px;
   position: absolute;
@@ -44,64 +178,29 @@ article {
   overflow: scroll;
 }
 
-/* line 40, ../scss/tb-sherlock.scss */
-section {
-  padding: 40px;
-  margin-left: 40px;
-  position: relative;
-  transition: background 500ms, color 500ms;
-  -moz-transition: background 500ms, color 500ms;
-  -webkit-transition: background 500ms, color 500ms;
-  color: #888;
-  color: rgba(128, 128, 128, 0);
-  text-decoration: none;
-  text-shadow: #404040 0px 0px 4px;
-}
-/* line 51, ../scss/tb-sherlock.scss */
-section a {
-  color: #888;
-  color: rgba(128, 128, 128, 0);
-  text-decoration: none;
-  text-shadow: #404040 0px 0px 4px;
-}
-/* line 57, ../scss/tb-sherlock.scss */
-section.active {
-  background: #222;
-  color: #eee;
-}
-/* line 60, ../scss/tb-sherlock.scss */
-section.active a {
-  color: #eee;
-}
-/* line 63, ../scss/tb-sherlock.scss */
-section.active small {
-  color: #aaa;
-}
-
-/* line 69, ../scss/tb-sherlock.scss */
+/* line 72, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 74, ../scss/tb-sherlock.scss */
+/* line 77, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 78, ../scss/tb-sherlock.scss */
+/* line 81, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 82, ../scss/tb-sherlock.scss */
+/* line 85, ../scss/tb-sherlock.scss */
 p {
   margin: 0px;
 }
 
-/* line 86, ../scss/tb-sherlock.scss */
+/* line 89, ../scss/tb-sherlock.scss */
 .scroll {
-  position: absolute;
   right: 0px;
   bottom: 0px;
   font-size: 10px;
@@ -109,13 +208,13 @@ p {
   padding: 5px 10px;
 }
 
-/* line 95, ../scss/tb-sherlock.scss */
+/* line 97, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 101, ../scss/tb-sherlock.scss */
+/* line 103, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -123,19 +222,19 @@ p {
   height: 120px;
   margin: 0px auto 20px;
 }
-/* line 108, ../scss/tb-sherlock.scss */
+/* line 110, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 121, ../scss/tb-sherlock.scss */
+/* line 123, ../scss/tb-sherlock.scss */
 #map {
   transition: opacity 250ms;
   -moz-transition: opacity 250ms;
   -webkit-transition: opacity 250ms;
 }
 
-/* line 132, ../scss/tb-sherlock.scss */
+/* line 134, ../scss/tb-sherlock.scss */
 .spot {
   width: 120px;
   height: 120px;
@@ -144,97 +243,97 @@ p {
   position: absolute;
 }
 
-/* line 140, ../scss/tb-sherlock.scss */
+/* line 142, ../scss/tb-sherlock.scss */
 .spot-cover {
   display: none;
 }
 
-/* line 144, ../scss/tb-sherlock.scss */
+/* line 146, ../scss/tb-sherlock.scss */
 .spot-baker {
   background-position: -130px 0px;
 }
-/* line 146, ../scss/tb-sherlock.scss */
+/* line 148, ../scss/tb-sherlock.scss */
 .spot-baker.active {
   background-position: -130px -120px;
 }
 
-/* line 151, ../scss/tb-sherlock.scss */
+/* line 153, ../scss/tb-sherlock.scss */
 .spot-aldgate {
   background-position: -260px 0px;
 }
-/* line 153, ../scss/tb-sherlock.scss */
+/* line 155, ../scss/tb-sherlock.scss */
 .spot-aldgate.active {
   background-position: -260px -120px;
 }
 
-/* line 158, ../scss/tb-sherlock.scss */
+/* line 160, ../scss/tb-sherlock.scss */
 .spot-london-bridge {
   background-position: -390px 0px;
 }
-/* line 160, ../scss/tb-sherlock.scss */
+/* line 162, ../scss/tb-sherlock.scss */
 .spot-london-bridge.active {
   background-position: -390px -120px;
 }
 
-/* line 165, ../scss/tb-sherlock.scss */
+/* line 167, ../scss/tb-sherlock.scss */
 .spot-woolwich {
   background-position: -520px 0px;
 }
-/* line 167, ../scss/tb-sherlock.scss */
+/* line 169, ../scss/tb-sherlock.scss */
 .spot-woolwich.active {
   background-position: -520px -120px;
 }
 
-/* line 172, ../scss/tb-sherlock.scss */
+/* line 174, ../scss/tb-sherlock.scss */
 .spot-gloucester {
   background-position: -650px 0px;
 }
-/* line 174, ../scss/tb-sherlock.scss */
+/* line 176, ../scss/tb-sherlock.scss */
 .spot-gloucester.active {
   background-position: -650px -120px;
 }
 
-/* line 179, ../scss/tb-sherlock.scss */
+/* line 181, ../scss/tb-sherlock.scss */
 .spot-caulfield-gardens {
   background-position: -780px 0px;
 }
-/* line 181, ../scss/tb-sherlock.scss */
+/* line 183, ../scss/tb-sherlock.scss */
 .spot-caulfield-gardens.active {
   background-position: -780px -120px;
 }
 
-/* line 186, ../scss/tb-sherlock.scss */
+/* line 188, ../scss/tb-sherlock.scss */
 .spot-telegraph {
   background-position: -910px 0px;
 }
-/* line 188, ../scss/tb-sherlock.scss */
+/* line 190, ../scss/tb-sherlock.scss */
 .spot-telegraph.active {
   background-position: -910px -120px;
 }
 
-/* line 193, ../scss/tb-sherlock.scss */
+/* line 195, ../scss/tb-sherlock.scss */
 .spot-charing-cross {
   background-position: -1040px 0px;
 }
-/* line 195, ../scss/tb-sherlock.scss */
+/* line 197, ../scss/tb-sherlock.scss */
 .spot-charing-cross.active {
   background-position: -1040px -120px;
 }
 
 /* Distinguish the "cover page" visually other sections. */
-/* line 202, ../scss/tb-sherlock.scss */
+/* line 204, ../scss/tb-sherlock.scss */
 body.section-0 #map {
   opacity: 0.5;
 }
 
 @media (max-width: 640px) {
-  /* line 207, ../scss/tb-sherlock.scss */
+  /* line 209, ../scss/tb-sherlock.scss */
   body {
     font-size: 12px;
     line-height: 16px;
   }
 
-  /* line 211, ../scss/tb-sherlock.scss */
+  /* line 213, ../scss/tb-sherlock.scss */
   article {
     width: 100%;
     min-width: 100%;
@@ -242,13 +341,13 @@ body.section-0 #map {
     padding-bottom: 200%;
   }
 
-  /* line 217, ../scss/tb-sherlock.scss */
+  /* line 219, ../scss/tb-sherlock.scss */
   section {
     text-shadow: none;
     margin-left: 0px;
     padding: 30px;
   }
-  /* line 221, ../scss/tb-sherlock.scss */
+  /* line 223, ../scss/tb-sherlock.scss */
   section.active {
     position: fixed;
     top: 0px;
@@ -256,12 +355,12 @@ body.section-0 #map {
     right: 0px;
   }
 
-  /* line 228, ../scss/tb-sherlock.scss */
+  /* line 230, ../scss/tb-sherlock.scss */
   #pane {
     width: 100%;
   }
 
-  /* line 231, ../scss/tb-sherlock.scss */
+  /* line 233, ../scss/tb-sherlock.scss */
   #map {
     bottom: 0%;
     left: 0%;
@@ -270,9 +369,120 @@ body.section-0 #map {
   }
 }
 @media (min-width: 1280px) {
-  /* line 240, ../scss/tb-sherlock.scss */
+  /* line 242, ../scss/tb-sherlock.scss */
   body {
     font-size: 18px;
     line-height: 24px;
   }
+}
+/* line 248, ../scss/tb-sherlock.scss */
+section {
+  padding: 10px;
+  margin-left: 40px;
+  position: relative;
+  transition: background 500ms, color 500ms;
+  -moz-transition: background 500ms, color 500ms;
+  -webkit-transition: background 500ms, color 500ms;
+  background: #FFFFFF;
+  border-radius: 10px;
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  margin-bottom: 10px;
+  width: 265px;
+}
+/* line 262, ../scss/tb-sherlock.scss */
+section .extended {
+  display: none;
+}
+/* line 265, ../scss/tb-sherlock.scss */
+section .extended p {
+  min-height: 100px;
+}
+/* line 270, ../scss/tb-sherlock.scss */
+section.active {
+  background: #cdcdcd;
+  color: #eee;
+}
+/* line 274, ../scss/tb-sherlock.scss */
+section.active .extended {
+  display: block;
+  text-align: right;
+}
+/* line 280, ../scss/tb-sherlock.scss */
+section p {
+  margin: 10px 0;
+}
+
+/* line 287, ../scss/tb-sherlock.scss */
+section a h4 {
+  color: #53b8d1;
+  /* text color */
+  text-decoration: none;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* line 296, ../scss/tb-sherlock.scss */
+section.active a {
+  color: #eee;
+}
+
+/* line 297, ../scss/tb-sherlock.scss */
+section.active small {
+  color: #aaa;
+}
+
+/* line 298, ../scss/tb-sherlock.scss */
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+/* line 299, ../scss/tb-sherlock.scss */
+h2 {
+  font-size: 1.3333em;
+}
+
+/* line 300, ../scss/tb-sherlock.scss */
+h1, h2 {
+  margin: 0px 0px 10px;
+}
+
+/* line 302, ../scss/tb-sherlock.scss */
+.scroll {
+  right: 0px;
+  bottom: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+/* line 308, ../scss/tb-sherlock.scss */
+.colophon {
+  display: block;
+  margin-top: 10px;
+}
+
+/* line 313, ../scss/tb-sherlock.scss */
+.cover:before {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0px auto 20px;
+}
+
+/* line 319, ../scss/tb-sherlock.scss */
+.cover.active:before {
+  background: url(sprite.png) 0px -120px no-repeat;
+}
+
+/* line 322, ../scss/tb-sherlock.scss */
+.share a {
+  margin-left: 10px;
+}
+/* line 325, ../scss/tb-sherlock.scss */
+.share a:first-child {
+  margin-left: 0;
 }
