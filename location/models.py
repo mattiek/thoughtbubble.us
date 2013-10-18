@@ -73,6 +73,20 @@ class Location(models.Model):
     def get_api_detail_url(self):
         return reverse('locations-detail',args=[self.id,])
 
+    def add_idea_url(self):
+            return reverse('addidea', args=[self.community.neighborhood.state,
+                                            self.community.neighborhood.city,
+                                            self.community.title,
+                                            self.name
+            ])
+
+    def list_ideas_url(self):
+        return reverse('idea_list', args=[self.community.neighborhood.state,
+                                        self.community.neighborhood.city,
+                                        self.community.title,
+                                        self.name
+        ])
+
     def save(self, *args, **kwargs):
         # if not self.geom:
         self.geom = GEOSGeometry('POINT(%s %s)' % (self.longitude, self.latitude,))

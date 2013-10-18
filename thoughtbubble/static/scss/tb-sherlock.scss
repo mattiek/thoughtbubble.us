@@ -262,6 +262,10 @@ section {
   margin-bottom:10px;
   width: 265px;
 
+  &:first-child {
+    //margin-top: 20px;
+  }
+
   .extended {
     display: none;
 

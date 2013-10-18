@@ -71,6 +71,7 @@ class Idea(models.Model):
         return reverse('idea_detail', args=[self.where.community.neighborhood.state,
                                             self.where.community.neighborhood.city,
                                             self.where.community.neighborhood.name,
+                                            self.where.name,
                                             self.id])
 
 class IdeaSupport(AbstractSupport):

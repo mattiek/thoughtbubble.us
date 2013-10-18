@@ -10,7 +10,7 @@ import json as JSON
 from filters import IdeaFilter
 from django.db.models import Q, Count
 
-def addidea(request, state, city, id=None, community=None):
+def addidea(request, state, city, id=None, community=None, location=None):
     if not request.user.is_authenticated():
         messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
         return redirect('home')
@@ -63,9 +63,13 @@ def addidea(request, state, city, id=None, community=None):
         form.fields['where'].initial = Location.objects.get(pk=id)
 
     if community:
-        form.fields['where'].initial = Location.objects.get(community__name__iexact=community,
-                                                            community__city__iexact=city,
-                                                            community__state__iexact=state)
+        d['location'] = Location.objects.get(
+                                            community__title__iexact=community,
+                                            community__neighborhood__city__iexact=city,
+                                            community__neighborhood__state__iexact=state,
+                                            name=location)
+        form.fields['where'].initial = d['location']
+
 
 
     return render(request, 'addidea.html', d)
@@ -80,14 +84,14 @@ class IdeaList(ListView):
         self.city = self.kwargs.get('city', None)
         self.state = self.kwargs.get('state', None)
         if self.community:
-            return Idea.objects.filter(where__community__city__iexact=self.city,
-                                       where__community__state__iexact=self.state,
-                                       where__community__name__iexact=self.community)
+            return Idea.objects.filter(where__community__neighborhood__city__iexact=self.city,
+                                       where__community__neighborhood__state__iexact=self.state,
+                                       where__community__title__iexact=self.community)
         if self.city and self.state:
-            return Idea.objects.filter(where__community__city__iexact=self.city,
-                                       where__community__state__iexact=self.state)
+            return Idea.objects.filter(where__community__neighborhood__city__iexact=self.city,
+                                       where__community__neighborhood__state__iexact=self.state)
         if self.state:
-            return Idea.objects.filter(where__community__state__iexact=self.state)
+            return Idea.objects.filter(where__community__neighborhood__state__iexact=self.state)
         return Idea.objects.filter()
 
     def get_context_data(self, **kwargs):

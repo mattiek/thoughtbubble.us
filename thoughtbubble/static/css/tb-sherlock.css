@@ -391,30 +391,30 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 265, ../scss/tb-sherlock.scss */
+/* line 269, ../scss/tb-sherlock.scss */
 section .extended {
   display: none;
 }
-/* line 268, ../scss/tb-sherlock.scss */
+/* line 272, ../scss/tb-sherlock.scss */
 section .extended p {
   min-height: 100px;
 }
-/* line 273, ../scss/tb-sherlock.scss */
+/* line 277, ../scss/tb-sherlock.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 277, ../scss/tb-sherlock.scss */
+/* line 281, ../scss/tb-sherlock.scss */
 section.active .extended {
   display: block;
   text-align: right;
 }
-/* line 283, ../scss/tb-sherlock.scss */
+/* line 287, ../scss/tb-sherlock.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 290, ../scss/tb-sherlock.scss */
+/* line 294, ../scss/tb-sherlock.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -423,33 +423,33 @@ section a h4 {
   margin: 0;
 }
 
-/* line 299, ../scss/tb-sherlock.scss */
+/* line 303, ../scss/tb-sherlock.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 300, ../scss/tb-sherlock.scss */
+/* line 304, ../scss/tb-sherlock.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 301, ../scss/tb-sherlock.scss */
+/* line 305, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 302, ../scss/tb-sherlock.scss */
+/* line 306, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 303, ../scss/tb-sherlock.scss */
+/* line 307, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 305, ../scss/tb-sherlock.scss */
+/* line 309, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -458,13 +458,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 311, ../scss/tb-sherlock.scss */
+/* line 315, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 316, ../scss/tb-sherlock.scss */
+/* line 320, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -473,16 +473,16 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 322, ../scss/tb-sherlock.scss */
+/* line 326, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 325, ../scss/tb-sherlock.scss */
+/* line 329, ../scss/tb-sherlock.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 328, ../scss/tb-sherlock.scss */
+/* line 332, ../scss/tb-sherlock.scss */
 .share a:first-child {
   margin-left: 0;
 }
