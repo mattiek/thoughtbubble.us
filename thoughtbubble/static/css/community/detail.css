@@ -389,3 +389,8 @@ form .row .row.second-row {
 .news-label {
   clear: both;
 }
+
+/* line 143, ../../scss/community/detail.scss */
+#news, #pictures, #partners {
+  min-height: 100px;
+}

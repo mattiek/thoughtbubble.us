@@ -4,7 +4,7 @@ from models import Location, LocationType, LocationNews, LocationImage
 from serializers import LocationSerializer
 from rest_framework import viewsets
 from django.shortcuts import render, redirect
-from forms import AddLocationForm
+from forms import AddLocationForm, LocationAdminForm
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib import messages
 from community.models import Community
@@ -51,7 +51,7 @@ class LocationDetail(DetailView):
 
 class LocationUpdate(UpdateView):
     model = Location
-    # form_class = AddLocationForm
+    form_class = LocationAdminForm
 
     def form_valid(self, form):
         comm = self.kwargs.get('pk',None)
@@ -61,7 +61,7 @@ class LocationUpdate(UpdateView):
         s.city_and_state=form.cleaned_data['city_and_state']
         s.zip=form.cleaned_data['zip']
             # what_kind=form.cleaned_data['what_kind'],
-        s.latitude=form.cleaned_data['latitude'] # WHY MUST WE SWAP!?!?!
+        s.latitude=form.cleaned_data['latitude']
         s.longitude=form.cleaned_data['longitude']
 
 

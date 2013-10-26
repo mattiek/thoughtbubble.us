@@ -83,32 +83,34 @@
                 </div>
 
                     <p class="copy">news</p>
+            <div class="news pos-rel">
+                <ul class="save-edit-list">
+                    <li>
+                        <a class="submit-type" href="#">edit</a>
+                    </li>
+                    <li>
+                        <a class="submit-type" href="#">save</a>
+                    </li>
+                </ul>
+            </div>
                     <div id="add-news-image">
 
                     </div>
                     {{ form.news|add_class:"news-text" }}
-                <div class=" pos-rel">
-                    <ul class="save-edit-list">
-                        <li>
-                            <a class="submit-type" href="#">edit</a>
-                        </li>
-                        <li>
-                            <a class="submit-type" href="#">save</a>
-                        </li>
-                    </ul>
-
-                </div>
 
 
-                    <span class="copy">pictures</span>
-                    <div class="picture">
 
-                    </div>
+                    <p class="copy">pictures</p>
+                    {% for picture in form.pictures %}
+                        <div class="picture">
+
+                        </div>
+                    {% endfor %}
                     <div class="picture">
 
                     </div>
 
-
+                    <div style="clear:both;"></div>
                     <input type="submit" class="submit" value="create location"/>
         </form>
     </div>

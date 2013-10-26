@@ -5,3 +5,10 @@
 .cloak {
   background: #FFFFFF;
 }
+
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  width: 325px;
+}

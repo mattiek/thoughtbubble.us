@@ -5,9 +5,20 @@ from floppyforms.widgets import RadioSelect
 from models import Location, LocationType
 
 class LocationAdminForm(forms.ModelForm):
+    news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
+
     def __init__(self, *args, **kwargs):
         super(LocationAdminForm, self).__init__(*args, **kwargs)
-        self.fields['city'].widget = TypeAheadAdminWidget()
+        # self.fields['city'].widget = TypeAheadAdminWidget()
+        self.fields['name'].widget =forms.TextInput(attrs={'placeholder': 'title'})
+        self.fields['address'].widget =forms.TextInput(attrs={'placeholder': 'address'})
+        self.fields['city_and_state'].widget =forms.TextInput(attrs={'placeholder': 'city and state'})
+        self.fields['zip'].widget =forms.TextInput(attrs={'placeholder': 'zip code'})
+        self.fields['latitude'].widget =forms.TextInput(attrs={'placeholder': 'latitude'})
+        self.fields['longitude'].widget =forms.TextInput(attrs={'placeholder': 'longitude'})
+
+    class Meta:
+        model = Location
 
 
 

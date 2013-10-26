@@ -30,6 +30,7 @@
 
     display: block;
     margin: 80px auto 0;
+
 }
 
 #form-wrapper {
@@ -156,6 +157,8 @@ form .row .row.second-row {
 #long_label,
 #lat_label {
     line-height: 24px;
+    float: left;
+    min-width: 77px;
 }
 
 .save-edit-list {
@@ -192,11 +195,20 @@ form .row .row.second-row {
 
 .pos-rel {
     position: relative;
+
+  &.news {
+    float: right;
+  }
 }
 
 .news-text,
 .about-text {
     min-height: 77px;
+    width: 100%;
+}
+
+.news-text {
+  width: 610px;
 }
 
 #add-news-image,
@@ -207,7 +219,9 @@ form .row .row.second-row {
     background-color: #dadbdc;
     background-image: url(../images/add-photo.png);
     background-repeat: no-repeat;
-    background-position: 57px 57px
+    background-position: 57px 57px;
+    float: left;
+  margin-right: 10px;
 }
 
 #map {
