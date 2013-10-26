@@ -394,3 +394,12 @@ form .row .row.second-row {
 #news, #pictures, #partners {
   min-height: 100px;
 }
+
+/* line 147, ../../scss/community/detail.scss */
+#community-logo {
+  text-align: center;
+}
+/* line 150, ../../scss/community/detail.scss */
+#community-logo img {
+  max-width: 300px;
+}

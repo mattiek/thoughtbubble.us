@@ -143,3 +143,11 @@ form .row .row.second-row {
 #news, #pictures, #partners {
   min-height: 100px;
 }
+
+#community-logo {
+  text-align: center;
+
+  img {
+    max-width: 300px;
+  }
+}
