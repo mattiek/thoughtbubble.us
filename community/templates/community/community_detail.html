@@ -47,6 +47,7 @@
                 <a href="{% url 'idea_list' object.neighborhood.state object.neighborhood.city object.title %}" class="orange s-button">ideas</a>
                 <a href="{% url 'sherlock' object.neighborhood.state object.neighborhood.city object.id %}" class="blue s-button">explore</a>
                 <a href="#" class="blue s-button">add</a>
+                <div style="clear:both;"></div>
             </div>
 
     {#    About #}
@@ -54,27 +55,30 @@
                 {{ community.about }}
             </div>
 
-            <div class="">
-               {% include "widgets/sharing.html" %}
-            </div>
+           {% include "widgets/sharing.html" %}
 
         {#    News #}
-            <div class="">news</div>
+        <div class="news-label">news</div>
         <div id="news">
-                <div id="news-photo"></div>
-                <img id="news-photo"/>
-                <div id="news-photos"></div>
+                {% include 'widgets/news_feed.html' %}
         </div>
 
 
         {#    Pictures #}
-        <div class="">pictures</div>
-        <div class="picture"></div>
-        <div class="picture"></div>
+        <div class="picture-label">pictures</div>
+        <div id="pictures">
+            {% for picture in community.communityimage_set.all %}
+                <img src="{{ picture.img.url }}" alt=""/>
+            {% endfor %}
+        </div>
 
         {#    Partners #}
-        <div class="">partners</div>
-        <div class="picture"></div>
+        <div class="partner-label">partners</div>
+        <div id="partners">
+            {% for partner in community.partners.all %}
+                <img src="{{ partner.img.url }}" alt=""/>
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}
 

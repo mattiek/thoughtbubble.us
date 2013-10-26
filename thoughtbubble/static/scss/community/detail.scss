@@ -2,6 +2,7 @@
 @import "partials/buttons";
 @import "partials/inputs";
 @import "partials/global";
+@import "partials/news_feed";
 
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
@@ -129,4 +130,12 @@ form .row .row.second-row {
       }
     }
   }
+}
+
+.sharing {
+  float:right;
+}
+
+.news-label {
+  clear: both;
 }

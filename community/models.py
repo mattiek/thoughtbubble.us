@@ -5,6 +5,7 @@ from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
 from django.core.urlresolvers import reverse
 
+from partner.models import Partner
 
 
 class Community(models.Model):
@@ -26,6 +27,8 @@ class Community(models.Model):
 
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+
+    partners = models.ManyToManyField(Partner, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = "Communities"

@@ -191,7 +191,59 @@ textarea {
   font-size: 38px/2;
 }
 
-/* line 6, ../../scss/community/detail.scss */
+/* line 1, ../../scss/partials/_news_feed.scss */
+ol.slats {
+  list-style-type: none;
+}
+/* line 4, ../../scss/partials/_news_feed.scss */
+ol.slats li {
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #eee;
+}
+/* line 8, ../../scss/partials/_news_feed.scss */
+ol.slats li:last-child {
+  margin: 0;
+  padding: 0;
+  border-bottom: none;
+}
+/* line 13, ../../scss/partials/_news_feed.scss */
+ol.slats li h3 {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 19px;
+  line-height: 19px;
+}
+/* line 19, ../../scss/partials/_news_feed.scss */
+ol.slats li h3 .date {
+  margin-left: 15px;
+}
+/* line 23, ../../scss/partials/_news_feed.scss */
+ol.slats li img {
+  float: left;
+  margin: 0 10px 0 0;
+  padding: 4px;
+  height: 80px;
+  width: 80px;
+}
+/* line 34, ../../scss/partials/_news_feed.scss */
+ol.slats li p {
+  margin: 0 0 0 76px;
+  line-height: 1.4;
+  color: #6c6d70;
+  /* text color */
+  font-family: "Helvetica";
+  font-size: 11px;
+}
+/* line 43, ../../scss/partials/_news_feed.scss */
+ol.slats li p span.meta {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+/* line 7, ../../scss/community/detail.scss */
 #illustration {
   background: url(../../images/illustration-ship.jpg) no-repeat no-repeat;
   background-size: 100%;
@@ -200,7 +252,7 @@ textarea {
   margin: 0 auto;
 }
 
-/* line 15, ../../scss/community/detail.scss */
+/* line 16, ../../scss/community/detail.scss */
 .s-button {
   height: 33px;
   line-height: 33px;
@@ -209,12 +261,12 @@ textarea {
   margin-left: 20px;
   text-align: center;
 }
-/* line 23, ../../scss/community/detail.scss */
+/* line 24, ../../scss/community/detail.scss */
 .s-button:first-child {
   margin-left: 0px;
 }
 
-/* line 28, ../../scss/community/detail.scss */
+/* line 29, ../../scss/community/detail.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
@@ -226,19 +278,19 @@ textarea {
   margin: 0 auto 10px;
 }
 
-/* line 39, ../../scss/community/detail.scss */
+/* line 40, ../../scss/community/detail.scss */
 .centered {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-/* line 46, ../../scss/community/detail.scss */
+/* line 47, ../../scss/community/detail.scss */
 .row.title {
   text-align: center;
 }
 
-/* line 51, ../../scss/community/detail.scss */
+/* line 52, ../../scss/community/detail.scss */
 #cta {
   color: #7b7b7b;
   /* text color */
@@ -247,19 +299,19 @@ textarea {
   text-align: center;
 }
 
-/* line 58, ../../scss/community/detail.scss */
+/* line 59, ../../scss/community/detail.scss */
 .actions {
   margin: 0 auto;
   width: 463px;
 }
 
-/* line 63, ../../scss/community/detail.scss */
+/* line 64, ../../scss/community/detail.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 68, ../../scss/community/detail.scss */
+/* line 69, ../../scss/community/detail.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -272,12 +324,12 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 80, ../../scss/community/detail.scss */
+/* line 81, ../../scss/community/detail.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 84, ../../scss/community/detail.scss */
+/* line 85, ../../scss/community/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -288,42 +340,52 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 93, ../../scss/community/detail.scss */
+/* line 94, ../../scss/community/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 97, ../../scss/community/detail.scss */
+/* line 98, ../../scss/community/detail.scss */
 #about {
   margin: 30px 0;
 }
 
-/* line 103, ../../scss/community/detail.scss */
+/* line 104, ../../scss/community/detail.scss */
 #header .sharing {
   margin: 0px 0px 0px 15px;
 }
-/* line 107, ../../scss/community/detail.scss */
+/* line 108, ../../scss/community/detail.scss */
 #header .sharing li span {
   display: none;
 }
-/* line 111, ../../scss/community/detail.scss */
+/* line 112, ../../scss/community/detail.scss */
 #header .sharing li a.share-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 15px;
 }
-/* line 117, ../../scss/community/detail.scss */
+/* line 118, ../../scss/community/detail.scss */
 #header .sharing li a.share-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 123, ../../scss/community/detail.scss */
+/* line 124, ../../scss/community/detail.scss */
 #header .sharing li a.share-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
+}
+
+/* line 135, ../../scss/community/detail.scss */
+.sharing {
+  float: right;
+}
+
+/* line 139, ../../scss/community/detail.scss */
+.news-label {
+  clear: both;
 }
