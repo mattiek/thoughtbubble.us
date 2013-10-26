@@ -19,6 +19,7 @@
     <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/jquery.form.min.js"></script>
     <script src="{{ STATIC_URL }}js/handlebars.js"></script>
     <script src="{{ STATIC_URL }}js/tb/tb-supporting.js"></script>
 
@@ -77,7 +78,7 @@
         <div id="footer">
             <div id="footer-wrap">
                 <ul>
-                    <li><a id="footer-logout" href="{% url 'account_logout' %}">Logout</a></li>
+                    <li><a id="footer-logout" href="#logout-overlay">Logout</a></li>
                     <li><a id="footer-twitter" target="_blank" href="https://twitter.com/thoughtbubbleus"></a></li>
                     <li><a id="footer-facebook" target="_blank" href="https://www.facebook.com/thoughtbubble.us"></a></li>
                     <li><a id="footer-linkedin" target="_blank" href="https://www.linkedin.com/in/kirkmatthew"></a></li>
@@ -111,14 +112,26 @@
         <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
         <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
     </div>
-    <form action="/login" method="POST">
+    <form id="overlay-login-form" action="/login" method="POST">
         {% csrf_token %}
+        <p id="login-error"></p>
         {{ loginform.email }}
         {{ loginform.password }}
         <input type="submit" class="submit" value="login with email" />
         <a id="forgot-password" href="#">forgot your password?</a>
     </form>
 </div>
+
+
+<div id="logout-overlay" class="white-popup mfp-hide">
+    <h6>Account Logout</h6>
+    <form id="overlay-logout-form" action="{% url 'account_logout' %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="submit" value="log me out" />
+    </form>
+</div>
+
+
 
 {#Error#}
 {#<button title="Close (Esc)" type="button" class="mfp-close">×</button>#}

@@ -149,79 +149,83 @@ form .row .row .columns.no-padding {
   padding: 0;
 }
 
-/* line 150, ../scss/nav.scss */
-#login-overlay {
+/* line 151, ../scss/nav.scss */
+#login-overlay,
+#logout-overlay {
   width: 415px;
-  height: 430px;
+  padding-bottom: 30px;
   background-color: #49c4dd;
   color: #ffffff;
 }
-/* line 156, ../scss/nav.scss */
-#login-overlay form {
+/* line 158, ../scss/nav.scss */
+#login-overlay form,
+#logout-overlay form {
   text-align: center;
 }
-
-/* line 161, ../scss/nav.scss */
-#login-overlay h6 {
+/* line 162, ../scss/nav.scss */
+#login-overlay h6,
+#logout-overlay h6 {
   margin-top: 70px;
   text-align: center;
   color: #ffffff;
   font-weight: normal;
   font-size: 16px;
 }
-
-/* line 169, ../scss/nav.scss */
-#login-overlay .oauths {
-  margin: 30px auto;
+/* line 170, ../scss/nav.scss */
+#login-overlay .oauths,
+#logout-overlay .oauths {
+  margin: 30px auto 0px;
   width: 195px;
   height: 60px;
 }
-/* line 174, ../scss/nav.scss */
-#login-overlay .oauths a {
+/* line 175, ../scss/nav.scss */
+#login-overlay .oauths a,
+#logout-overlay .oauths a {
   background: url('../images/join-login-social-media.png?1381964545');
   display: block;
   height: 44px;
   width: 44px;
   float: left;
 }
-/* line 181, ../scss/nav.scss */
-#login-overlay .oauths a.facebook-oauth {
+/* line 182, ../scss/nav.scss */
+#login-overlay .oauths a.facebook-oauth,
+#logout-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 185, ../scss/nav.scss */
-#login-overlay .oauths a.linkedin-oauth {
+/* line 186, ../scss/nav.scss */
+#login-overlay .oauths a.linkedin-oauth,
+#logout-overlay .oauths a.linkedin-oauth {
   background-position: 44px 0;
   margin: 0 20px;
 }
-/* line 191, ../scss/nav.scss */
-#login-overlay .oauths a.twitter-oauth {
+/* line 192, ../scss/nav.scss */
+#login-overlay .oauths a.twitter-oauth,
+#logout-overlay .oauths a.twitter-oauth {
   width: 50px;
   background-position: 124px 0;
 }
-
-/* line 202, ../scss/nav.scss */
+/* line 200, ../scss/nav.scss */
+#login-overlay #login-error,
+#logout-overlay #login-error {
+  height: 30px;
+  margin-bottom: 0px;
+}
+/* line 207, ../scss/nav.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
-#login-overlay input[type="text"] {
+#login-overlay input[type="text"],
+#logout-overlay input[type="password"],
+#logout-overlay input[type="email"],
+#logout-overlay input[type="text"] {
   width: 365px;
   height: 45px;
   border-radius: 10px;
   font-family: 'MuseoSans';
   margin: 0 auto 10px;
 }
-
-/* line 210, ../scss/nav.scss */
-.white-popup {
-  position: relative;
-  background: #FFF;
-  padding: 1px;
-  width: auto;
-  max-width: 500px;
-  margin: 20px auto;
-}
-
-/* line 220, ../scss/nav.scss */
-#login-overlay .submit {
+/* line 215, ../scss/nav.scss */
+#login-overlay .submit,
+#logout-overlay .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -250,7 +254,17 @@ form .row .row .columns.no-padding {
   float: none;
 }
 
-/* line 243, ../scss/nav.scss */
+/* line 242, ../scss/nav.scss */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 1px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+/* line 252, ../scss/nav.scss */
 .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -267,7 +281,7 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-/* line 259, ../scss/nav.scss */
+/* line 268, ../scss/nav.scss */
 #forgot-password {
   display: block;
   color: #FFFFFF;
@@ -277,7 +291,7 @@ form .row .row .columns.no-padding {
   font-weight: 100;
 }
 
-/* line 268, ../scss/nav.scss */
+/* line 277, ../scss/nav.scss */
 #footer {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -292,31 +306,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 279, ../scss/nav.scss */
+/* line 288, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 284, ../scss/nav.scss */
+/* line 293, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 289, ../scss/nav.scss */
+/* line 298, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 297, ../scss/nav.scss */
+/* line 306, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 303, ../scss/nav.scss */
+/* line 312, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -327,7 +341,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 312, ../scss/nav.scss */
+/* line 321, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -335,7 +349,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 319, ../scss/nav.scss */
+/* line 328, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -343,7 +357,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 326, ../scss/nav.scss */
+/* line 335, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -351,45 +365,45 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 334, ../scss/nav.scss */
+/* line 343, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 339, ../scss/nav.scss */
+/* line 348, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 343, ../scss/nav.scss */
+/* line 352, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 347, ../scss/nav.scss */
+/* line 356, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 351, ../scss/nav.scss */
+/* line 360, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 356, ../scss/nav.scss */
+/* line 365, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 360, ../scss/nav.scss */
+/* line 369, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }
 
-/* line 364, ../scss/nav.scss */
+/* line 373, ../scss/nav.scss */
 .error-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -419,11 +433,11 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 388, ../scss/nav.scss */
+/* line 397, ../scss/nav.scss */
 .error-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 391, ../scss/nav.scss */
+/* line 400, ../scss/nav.scss */
 .error-box .details h3 {
   color: #f37d23;
   /* text color */
@@ -431,13 +445,13 @@ p {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 398, ../scss/nav.scss */
+/* line 407, ../scss/nav.scss */
 .error-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 405, ../scss/nav.scss */
+/* line 414, ../scss/nav.scss */
 .message-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -467,16 +481,16 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 429, ../scss/nav.scss */
+/* line 438, ../scss/nav.scss */
 .message-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 432, ../scss/nav.scss */
+/* line 441, ../scss/nav.scss */
 .message-box .details h4 {
   font-family: "Museo Sans", sans-serif;
   margin: 10px;
 }
-/* line 437, ../scss/nav.scss */
+/* line 446, ../scss/nav.scss */
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;

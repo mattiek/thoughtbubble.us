@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 from forms import SignupForm, LoginForm
 import random
@@ -117,9 +117,10 @@ def login(request):
             user = authenticate(username=username, password=password)
             if (user):
                 django_login(request, user)
+                return HttpResponse('{"success":true}',content_type='application/json')
 
 
-    return redirect('home')
+    return HttpResponse('{"success":false}',content_type='application/json')
 
 
 # def dashboard(request):
@@ -229,9 +230,10 @@ class MyConnectionsView(FormView):
             context['ideas'] = Idea.objects.filter(user=self.request.user).order_by('-date_created')
 
         u_form = UserProfileForm()
-        u_form.fields['first_name'].initial = profile.first_name
-        u_form.fields['last_name'].initial = profile.last_name
-        u_form.fields['location'].initial = profile.location
+        if profile:
+            u_form.fields['first_name'].initial = profile.first_name
+            u_form.fields['last_name'].initial = profile.last_name
+            u_form.fields['location'].initial = profile.location
         context['update_form'] = u_form
 
         return context
