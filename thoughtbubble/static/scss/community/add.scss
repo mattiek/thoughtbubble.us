@@ -318,18 +318,32 @@ form .row .row.second-row {
 }
 
 .feature {
-  width: 135px;
+  //width: 135px;
   height: 20px;
   line-height: 20px;
   background-color: #dadbdc;
-  background-image: url(../../images/add-photo.png);
-  background-repeat: no-repeat;
-  background-position: 101%;
+  //background-image: url(../../images/add-photo.png);
+  //background-repeat: no-repeat;
+  //background-position: 101%;
   border-radius: 5px;
   color: #7b7b7b; /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
   text-align: center;
+  float: left;
+  margin: 0 10px 10px 0;
+
+  .feature-cap {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('add-photo.png');
+    background-repeat: no-repeat;
+  }
+
+  span {
+    padding: 0 10px;
+  }
 }
 
 #news {
@@ -402,6 +416,10 @@ form .row .row.second-row {
   width: 100%;
   clear: both;
   margin-top: 20px;
+
+  .label {
+    margin-bottom: 10px;
+  }
 }
 
 .clr {

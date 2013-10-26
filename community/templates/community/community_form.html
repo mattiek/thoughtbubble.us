@@ -104,9 +104,16 @@
             <div class="label">features</div>
             <div class="features-list">
                 {% for location in community.location_set.all %}
-                    <a href="{% url 'location_update' exploring_state exploring_city location.id %}" class="feature">{{ location.name }}</a>
+                    <a href="{% url 'location_update' exploring_state exploring_city location.id %}" class="feature">
+                        <div class="feature-cap"></div>
+                        <span>{{ location.name }}</span>
+                    </a>
                 {% endfor %}
-                <a href="{% url 'addlocation' exploring_state exploring_city community.id %}"class="feature">add a feature</a>
+                <a href="{% url 'addlocation' exploring_state exploring_city community.id %}"class="feature">
+                    <div class="feature-cap"></div>
+                    <span>add a feature</span>
+
+                </a>
             </div>
             <div class="clr"></div>
         </div>

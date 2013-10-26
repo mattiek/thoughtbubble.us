@@ -496,53 +496,63 @@ form .row .row.second-row {
 
 /* line 320, ../../scss/community/add.scss */
 .feature {
-  width: 135px;
   height: 20px;
   line-height: 20px;
   background-color: #dadbdc;
-  background-image: url(../../images/add-photo.png);
-  background-repeat: no-repeat;
-  background-position: 101%;
   border-radius: 5px;
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
   text-align: center;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* line 336, ../../scss/community/add.scss */
+.feature .feature-cap {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../images/add-photo.png?1377395053');
+  background-repeat: no-repeat;
+}
+/* line 344, ../../scss/community/add.scss */
+.feature span {
+  padding: 0 10px;
 }
 
-/* line 336, ../../scss/community/add.scss */
+/* line 350, ../../scss/community/add.scss */
 #news #news-photo {
   float: left;
   margin-right: 20px;
 }
-/* line 341, ../../scss/community/add.scss */
+/* line 355, ../../scss/community/add.scss */
 #news textarea {
   width: 416px;
 }
-/* line 345, ../../scss/community/add.scss */
+/* line 359, ../../scss/community/add.scss */
 #news .buttonize {
   float: right;
 }
 
-/* line 350, ../../scss/community/add.scss */
+/* line 364, ../../scss/community/add.scss */
 .submit-all {
   padding: 5px 100px;
   margin: 0 auto;
   display: block;
 }
 
-/* line 356, ../../scss/community/add.scss */
+/* line 370, ../../scss/community/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
-/* line 360, ../../scss/community/add.scss */
+/* line 374, ../../scss/community/add.scss */
 #form-wrapper #deets {
   float: right;
   width: 478px;
 }
-/* line 364, ../../scss/community/add.scss */
+/* line 378, ../../scss/community/add.scss */
 #form-wrapper #deets label {
   width: 70px;
   display: inline-block;
@@ -551,13 +561,13 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 372, ../../scss/community/add.scss */
+/* line 386, ../../scss/community/add.scss */
 #form-wrapper #deets input {
   width: 320px;
   display: inline;
 }
 
-/* line 380, ../../scss/community/add.scss */
+/* line 394, ../../scss/community/add.scss */
 #about label {
   color: #9d9d9d;
   /* text color */
@@ -565,7 +575,7 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 386, ../../scss/community/add.scss */
+/* line 400, ../../scss/community/add.scss */
 .label {
   color: #9d9d9d;
   /* text color */
@@ -573,29 +583,33 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 392, ../../scss/community/add.scss */
+/* line 406, ../../scss/community/add.scss */
 #about {
   clear: both;
 }
-/* line 395, ../../scss/community/add.scss */
+/* line 409, ../../scss/community/add.scss */
 #about #id_about {
   margin-left: 20px;
   width: 452px;
 }
 
-/* line 401, ../../scss/community/add.scss */
+/* line 415, ../../scss/community/add.scss */
 #pictures, #partners, #features {
   width: 100%;
   clear: both;
   margin-top: 20px;
 }
+/* line 420, ../../scss/community/add.scss */
+#pictures .label, #partners .label, #features .label {
+  margin-bottom: 10px;
+}
 
-/* line 407, ../../scss/community/add.scss */
+/* line 425, ../../scss/community/add.scss */
 .clr {
   clear: both;
 }
 
-/* line 411, ../../scss/community/add.scss */
+/* line 429, ../../scss/community/add.scss */
 .cloak {
   background: #FFFFFF;
 }

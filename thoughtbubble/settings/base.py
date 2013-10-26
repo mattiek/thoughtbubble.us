@@ -71,6 +71,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.linkedin',
     'allauth.socialaccount.providers.twitter',
+    'django_extensions',
 )
 
 COMMENTS_APP = 'threadedcomments'
