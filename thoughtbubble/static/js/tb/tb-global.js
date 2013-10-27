@@ -1,19 +1,9 @@
-//$('#login').on('click', function(e){
-//    e.preventDefault();
-//    var url = $(e.target).attr('href');
-//    $('#login-overlay').lightbox_me({
-//        centered: true,
-//        onLoad: function() {
-//        }
-//    });
-//});
-
 $('#login').magnificPopup({
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
 
-$('#login-overlay .submit').click(function(e) {
+$('#login-overlay .submit.login').click(function(e) {
     e.preventDefault();
     $('#login-error').html('');
     var url = $('#overlay-login-form').attr('action');
@@ -28,16 +18,29 @@ $('#login-overlay .submit').click(function(e) {
     )
 });
 
+$('#login-with-email').click(function(e){
+    e.preventDefault();
+    $('#login-overlay').addClass('reveal-email');
+});
+
 $('.logged-out #primary-add').click(function(e){
     e.preventDefault();
     $('#login').click();
 });
-//$('#footer-logout').click(function(e){
-//
-//
-//});
+
+
+$('#join').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});
 
 $('#footer-logout').magnificPopup({
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
+
+$('#create-an-account').magnificPopup({
+    type:'inline',
+    midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+});
+

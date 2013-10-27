@@ -148,7 +148,8 @@ form .row .row .columns.no-padding {
 }
 
 #login-overlay,
-#logout-overlay {
+#logout-overlay,
+#join-overlay {
   width: 415px;
   //height: 430px;
   padding-bottom: 30px;
@@ -165,6 +166,31 @@ form .row .row .columns.no-padding {
     color: #ffffff;
     font-weight: normal;
     font-size: 16px;
+  }
+
+  #login-with-email,
+  #join-organization,
+  #join-email-account {
+    text-align: center;
+    line-height: 45px;
+  }
+
+  #join-email-account {
+    margin-bottom: 20px;
+  }
+
+  &.reveal-email {
+    #login-with-email {
+      display: none;
+    }
+
+    #overlay-login-form {
+      display: block;
+    }
+  }
+
+  #overlay-login-form {
+    display:none;
   }
 
   .oauths {
@@ -265,7 +291,8 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-#forgot-password {
+#forgot-password,
+#create-an-account {
   display: block;
   color: #FFFFFF;
   text-align: center;
@@ -449,3 +476,4 @@ p {
     }
   }
 }
+

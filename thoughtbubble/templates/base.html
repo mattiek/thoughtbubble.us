@@ -49,7 +49,7 @@
                 {% if user.is_authenticated %}
                     <li><a href="{% url "user_dashboard" %}">{{ user }}</a></li>
                 {% else %}
-                    <li><a href="{% url "signup" %}">join</a></li>
+                    <li><a id="join" class="open-popup-link" href="#join-overlay">join</a></li>
                     <li>|</li>
                     <li><a id="login" class="open-popup-link" href="#login-overlay">login</a></li>
                 {% endif %}
@@ -112,14 +112,29 @@
         <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
         <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
     </div>
+
+    <a href="#overlay-login-form" id="login-with-email" class="submit">login with email</a>
     <form id="overlay-login-form" action="/login" method="POST">
         {% csrf_token %}
         <p id="login-error"></p>
         {{ loginform.email }}
         {{ loginform.password }}
-        <input type="submit" class="submit" value="login with email" />
+        <input type="submit" class="submit login" value="login" />
         <a id="forgot-password" href="#">forgot your password?</a>
     </form>
+    <a href="#join-overlay" id="create-an-account">create an account</a>
+</div>
+
+<div id="join-overlay" class="white-popup mfp-hide">
+    <h6>join with</h6>
+    <div class="oauths">
+        <a class="facebook-oauth" href="{% provider_login_url "facebook" method="oauth2" %}"></a>
+        <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
+        <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
+    </div>
+
+    <a href="{% url 'signup' %}" id="join-email-account" class="submit">create an account with email</a>
+    <a href="#join-organization" id="join-organization" class="submit">create an organization page</a>
 </div>
 
 
