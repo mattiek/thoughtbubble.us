@@ -453,3 +453,8 @@ textarea {
   width: 100px;
   margin-right: 10px;
 }
+
+/* line 109, ../../scss/user/dashboard.scss */
+fieldset {
+  border: none;
+}

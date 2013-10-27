@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load classnames %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-signup.css" />
+{% endblock %}
+
+{% block bodyid %}home{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="form-wrapper">
+        {% include 'widgets/errors.html' %}
+        <form action="" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.field|classname == 'ChoiceField' %}
+                    <p id="captcha-question">to make sure you are human, please click on the {{ captcha_answer.0 }}</p>
+                    <input type="hidden" value="" id="{{ field.auto_id }}" name="{{ field.name }}" />
+
+                    <ul id="{{ field.auto_id }}_choicefield">
+                        {% for choice in field.field.choices %}
+                            <li>
+                                <img src="{{ STATIC_URL }}images/{{ choice.1 }}" data-choice="{{ choice.0 }}" alt=""/>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% elif field.field|classname == 'BooleanField' %}
+                    {{ field  }} <span class="terms-and-conditions">I accept the <a href="">Terms and Conditions</a></span>
+                {% else %}
+                    {{ field  }}
+                {% endif %}
+            {% endfor %}
+            {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+            {% endif %}
+            <input type="submit" class="submit" value="create profile"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-signup.js"></script>
+{% endblock %}
+
+
