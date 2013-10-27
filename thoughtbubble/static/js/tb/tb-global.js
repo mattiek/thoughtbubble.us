@@ -28,6 +28,10 @@ $('#login-overlay .submit').click(function(e) {
     )
 });
 
+$('.logged-out #primary-add').click(function(e){
+    e.preventDefault();
+    $('#login').click();
+});
 //$('#footer-logout').click(function(e){
 //
 //

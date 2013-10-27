@@ -109,7 +109,12 @@
                     </div>
 
                     <div style="clear:both;"></div>
+
+                    {% if update %}
+                        <input type="submit" class="submit" value="update location"/>
+                    {% else %}
                     <input type="submit" class="submit" value="create location"/>
+                    {% endif %}
         </form>
     </div>
 {% endblock %}
@@ -165,8 +170,8 @@
                     coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
                 },
                 properties: {
-                    title: 'A Single Marker',
-                    description: 'Just one of me',
+{#                    title: 'A Single Marker',#}
+{#                    description: 'Just one of me',#}
                     // one can customize markers by adding simplestyle properties
                     // http://mapbox.com/developers/simplestyle/
                     {#                    'marker-size': 'large',#}

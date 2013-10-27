@@ -429,3 +429,22 @@ form .row .row.second-row {
 .cloak {
   background: #FFFFFF;
 }
+
+label[for=id_facebook_url],
+label[for=id_twitter_url],
+label[for=id_linkedin_url] {
+  text-indent: 35px;
+}
+
+
+label[for=id_facebook_url] {
+  background: image-url('small-blue-facebook.png') no-repeat;
+}
+label[for=id_twitter_url] {
+  background: image-url('small-blue-twitter.png') no-repeat;
+
+}
+label[for=id_linkedin_url] {
+  background: image-url('small-blue-linkedin.png') no-repeat;
+
+}

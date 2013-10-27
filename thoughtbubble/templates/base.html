@@ -37,7 +37,7 @@
     {% endblock %}
 </head>
 
-<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}">
+<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}{% if not user.is_authenticated %} logged-out{% else %} logged-in{% endif %}">
 {% block navstart %}
     <div id="wrapper" class="">
         <div class="scale"></div>
@@ -64,8 +64,8 @@
 
                 {% block primarynav %}
                     <ul id="primary-nav">
-                        <a href="{% url "explore" exploring_state exploring_city %}"><li class="icon-explore">explore</li></a>
-                        <a href="{% url "addidea" exploring_state exploring_city %}"><li class="icon-add">add</li></a>
+                        <a id="primary-explore" href="{% url "explore" exploring_state exploring_city %}"><li class="icon-explore">explore</li></a>
+                        <a id="primary-add" href="{% url "addidea" exploring_state exploring_city %}"><li class="icon-add">add</li></a>
                     </ul>
                 {% endblock %}
         </div>
