@@ -25,57 +25,6 @@ if ("undefined" === typeof TB) {
                 .setView([default_lat, default_lng], default_zoom);
 
             new L.Control.Zoom({ position: 'topright' }).addTo(map);
-            map.on('ready', function() {
-
-            });
-        };
-
-        var edit = function(){
-
-            map.setZoom(13);
-
-            map.on('click', function(me) {
-                // var lat = me.latlng.lat;
-                // var lng = me.latlng.lng;
-
-                drawn_object.push(me.latlng);
-                if(drawn_object.length > 2){
-
-                    if(map.hasLayer(drawn_poly)){
-                        map.removeLayer(drawn_poly);
-                    }
-                    drawn_poly = new L.Polygon( drawn_object, polyLineOptions );
-                    map.addLayer(drawn_poly);
-                }
-
-                $("#drawing").text(drawn_object);
-
-            });
-        };
-
-        var undo = function(){
-
-            if(drawn_object.length == 0) return;
-
-            drawn_object.pop();
-            map.removeLayer(drawn_poly);
-
-            if(drawn_object.length > 2){
-                drawn_poly = new L.Polygon( drawn_object, polyLineOptions );
-                map.addLayer(drawn_poly);
-            }
-            $("#drawing").text(drawn_object);
-
-        };
-
-        var clear = function(){
-
-            if(drawn_object.length == 0) return;
-
-            drawn_object = [];
-            map.removeLayer(drawn_poly);
-
-            $("#drawing").text(drawn_object);
 
         };
 
@@ -95,9 +44,6 @@ if ("undefined" === typeof TB) {
             "default_zoom"      : default_zoom,
             "default_map"       : default_map,
             "init"              : init,
-            "edit"              : edit,
-            "undo"              : undo,
-            "clear"             : clear,
             "panTo"             : panTo
         };
 

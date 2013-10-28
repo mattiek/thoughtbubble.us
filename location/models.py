@@ -114,12 +114,19 @@ class Location(models.Model):
     def getProperties(self):
         properties = {}
         properties['title'] = self.name
-        properties['marker-size'] = 'medium'
-        properties['marker-color'] = '#f0a'
+        # properties['marker-size'] = 'medium'
+        # properties['marker-color'] = '#f0a'
         # properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
         properties['link'] = self.get_absolute_url()
 
         properties['about'] = self.about
+
+        properties['icon'] = {
+            "iconUrl": "/static/images/featured-community-location.png",
+            "iconSize": [24, 30],
+            "iconAnchor": [15, 22],
+            "popupAnchor": [0, -25]
+        }
 
         # properties['icon'] = {
         #     "iconUrl": "http://placekitten.com/50/50",
