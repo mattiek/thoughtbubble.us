@@ -26,6 +26,10 @@ from forms import UserProfileForm
 
 from django.contrib.flatpages.models import FlatPage
 
+from avatar.views import _get_avatars
+from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
+
+
 
 class MyDisconnectForm(DisconnectForm):
     cleaned_data = {}
@@ -235,6 +239,23 @@ class MyConnectionsView(FormView):
             u_form.fields['last_name'].initial = profile.last_name
             u_form.fields['location'].initial = profile.location
         context['update_form'] = u_form
+
+        upload_form=UploadAvatarForm
+        p_form=PrimaryAvatarForm
+        avatar, avatars = _get_avatars(self.request.user)
+        if avatar:
+            kwargs = {'initial': {'choice': avatar.id}}
+        else:
+            kwargs = {}
+        context['avatars'] = avatars
+        upload_avatar_form = upload_form(user=self.request.user, **kwargs)
+        primary_avatar_form = p_form(self.request.POST or None,
+                                           avatars=avatars,
+                                       user=self.request.user,
+                                       **kwargs)
+
+        context['upload_avatar_form'] = upload_avatar_form
+        context['primary_avatar_form'] = primary_avatar_form
 
         return context
 

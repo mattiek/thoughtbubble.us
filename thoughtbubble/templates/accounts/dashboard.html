@@ -29,7 +29,7 @@
 {#            {% csrf_token %}#}
         <div id="picture">
             {% avatar user %}
-            <a href="{% url 'avatar_change' %}">update</a>
+            <a href="#update-avatar-overlay">update</a>
 {#                        <img src="{{ user.get_profile_picture }}" alt=""/>#}
         </div>
         <div id="user">
@@ -116,6 +116,24 @@
     {% include 'idea/idea_for_list.html' %}
 {% endfor %}
 
+<div id="update-avatar-overlay" class="white-popup mfp-hide">
+    <p>Your current avatar: </p>
+    {% avatar user %}
+    {% if not avatars %}
+        <p>You haven't uploaded an avatar yet. Please upload one now.</p>
+    {% else %}
+        <form method="POST" action="{% url 'avatar_change' %}">
+            <ul>
+                {{ primary_avatar_form.as_ul }}
+            </ul>
+            <p>{% csrf_token %}<input type="submit" value="Choose new Default" /></p>
+        </form>
+    {% endif %}
+    <form enctype="multipart/form-data" method="POST" action="{% url 'avatar_add' %}">
+        {{ upload_avatar_form.as_p }}
+        <p>{% csrf_token %}<input type="submit" value="Upload New Image" /></p>
+    </form>
+</div>
 {% endblock %}
 
 {% block footerscripts %}

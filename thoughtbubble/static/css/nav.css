@@ -149,32 +149,35 @@ form .row .row .columns.no-padding {
   padding: 0;
 }
 
-/* line 152, ../scss/nav.scss */
+/* line 153, ../scss/nav.scss */
 #login-overlay,
 #logout-overlay,
-#join-overlay {
+#join-overlay,
+#update-avatar-overlay {
   width: 415px;
   padding-bottom: 30px;
   background-color: #49c4dd;
   color: #ffffff;
 }
-/* line 159, ../scss/nav.scss */
+/* line 160, ../scss/nav.scss */
 #login-overlay form,
 #logout-overlay form,
-#join-overlay form {
+#join-overlay form,
+#update-avatar-overlay form {
   text-align: center;
 }
-/* line 163, ../scss/nav.scss */
+/* line 164, ../scss/nav.scss */
 #login-overlay h6,
 #logout-overlay h6,
-#join-overlay h6 {
+#join-overlay h6,
+#update-avatar-overlay h6 {
   margin-top: 70px;
   text-align: center;
   color: #ffffff;
   font-weight: normal;
   font-size: 16px;
 }
-/* line 173, ../scss/nav.scss */
+/* line 174, ../scss/nav.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -183,80 +186,93 @@ form .row .row .columns.no-padding {
 #logout-overlay #join-email-account,
 #join-overlay #login-with-email,
 #join-overlay #join-organization,
-#join-overlay #join-email-account {
+#join-overlay #join-email-account,
+#update-avatar-overlay #login-with-email,
+#update-avatar-overlay #join-organization,
+#update-avatar-overlay #join-email-account {
   text-align: center;
   line-height: 45px;
 }
-/* line 178, ../scss/nav.scss */
+/* line 179, ../scss/nav.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
-#join-overlay #join-email-account {
+#join-overlay #join-email-account,
+#update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 183, ../scss/nav.scss */
+/* line 184, ../scss/nav.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
-#join-overlay.reveal-email #login-with-email {
+#join-overlay.reveal-email #login-with-email,
+#update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 187, ../scss/nav.scss */
+/* line 188, ../scss/nav.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
-#join-overlay.reveal-email #overlay-login-form {
+#join-overlay.reveal-email #overlay-login-form,
+#update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 192, ../scss/nav.scss */
+/* line 193, ../scss/nav.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
-#join-overlay #overlay-login-form {
+#join-overlay #overlay-login-form,
+#update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 196, ../scss/nav.scss */
+/* line 197, ../scss/nav.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
-#join-overlay .oauths {
+#join-overlay .oauths,
+#update-avatar-overlay .oauths {
   margin: 30px auto 0px;
   width: 195px;
   height: 60px;
 }
-/* line 201, ../scss/nav.scss */
+/* line 202, ../scss/nav.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
-#join-overlay .oauths a {
+#join-overlay .oauths a,
+#update-avatar-overlay .oauths a {
   background: url('../images/join-login-social-media.png?1381964545');
   display: block;
   height: 44px;
   width: 44px;
   float: left;
 }
-/* line 208, ../scss/nav.scss */
+/* line 209, ../scss/nav.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
-#join-overlay .oauths a.facebook-oauth {
+#join-overlay .oauths a.facebook-oauth,
+#update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 212, ../scss/nav.scss */
+/* line 213, ../scss/nav.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
-#join-overlay .oauths a.linkedin-oauth {
+#join-overlay .oauths a.linkedin-oauth,
+#update-avatar-overlay .oauths a.linkedin-oauth {
   background-position: 44px 0;
   margin: 0 20px;
 }
-/* line 218, ../scss/nav.scss */
+/* line 219, ../scss/nav.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
-#join-overlay .oauths a.twitter-oauth {
+#join-overlay .oauths a.twitter-oauth,
+#update-avatar-overlay .oauths a.twitter-oauth {
   width: 50px;
   background-position: 124px 0;
 }
-/* line 226, ../scss/nav.scss */
+/* line 227, ../scss/nav.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
-#join-overlay #login-error {
+#join-overlay #login-error,
+#update-avatar-overlay #login-error {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 233, ../scss/nav.scss */
+/* line 234, ../scss/nav.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -265,17 +281,21 @@ form .row .row .columns.no-padding {
 #logout-overlay input[type="text"],
 #join-overlay input[type="password"],
 #join-overlay input[type="email"],
-#join-overlay input[type="text"] {
+#join-overlay input[type="text"],
+#update-avatar-overlay input[type="password"],
+#update-avatar-overlay input[type="email"],
+#update-avatar-overlay input[type="text"] {
   width: 365px;
   height: 45px;
   border-radius: 10px;
   font-family: 'MuseoSans';
   margin: 0 auto 10px;
 }
-/* line 241, ../scss/nav.scss */
+/* line 242, ../scss/nav.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
-#join-overlay .submit {
+#join-overlay .submit,
+#update-avatar-overlay .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -304,7 +324,7 @@ form .row .row .columns.no-padding {
   float: none;
 }
 
-/* line 268, ../scss/nav.scss */
+/* line 269, ../scss/nav.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -314,7 +334,7 @@ form .row .row .columns.no-padding {
   margin: 20px auto;
 }
 
-/* line 278, ../scss/nav.scss */
+/* line 279, ../scss/nav.scss */
 .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -331,7 +351,7 @@ form .row .row .columns.no-padding {
   font-size: 24px;
 }
 
-/* line 295, ../scss/nav.scss */
+/* line 296, ../scss/nav.scss */
 #forgot-password,
 #create-an-account {
   display: block;
@@ -342,7 +362,7 @@ form .row .row .columns.no-padding {
   font-weight: 100;
 }
 
-/* line 304, ../scss/nav.scss */
+/* line 305, ../scss/nav.scss */
 #footer {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -357,31 +377,31 @@ form .row .row .columns.no-padding {
   /* layer fill content */
   margin: 60px 0 0 0;
 }
-/* line 315, ../scss/nav.scss */
+/* line 316, ../scss/nav.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 320, ../scss/nav.scss */
+/* line 321, ../scss/nav.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 325, ../scss/nav.scss */
+/* line 326, ../scss/nav.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
 
-/* line 333, ../scss/nav.scss */
+/* line 334, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 339, ../scss/nav.scss */
+/* line 340, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -392,7 +412,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 348, ../scss/nav.scss */
+/* line 349, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -400,7 +420,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 355, ../scss/nav.scss */
+/* line 356, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -408,7 +428,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 362, ../scss/nav.scss */
+/* line 363, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -416,45 +436,45 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 370, ../scss/nav.scss */
+/* line 371, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 375, ../scss/nav.scss */
+/* line 376, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 379, ../scss/nav.scss */
+/* line 380, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 383, ../scss/nav.scss */
+/* line 384, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 387, ../scss/nav.scss */
+/* line 388, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 392, ../scss/nav.scss */
+/* line 393, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 396, ../scss/nav.scss */
+/* line 397, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }
 
-/* line 400, ../scss/nav.scss */
+/* line 401, ../scss/nav.scss */
 .error-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -484,11 +504,11 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 424, ../scss/nav.scss */
+/* line 425, ../scss/nav.scss */
 .error-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 427, ../scss/nav.scss */
+/* line 428, ../scss/nav.scss */
 .error-box .details h3 {
   color: #f37d23;
   /* text color */
@@ -496,13 +516,13 @@ p {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 434, ../scss/nav.scss */
+/* line 435, ../scss/nav.scss */
 .error-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 441, ../scss/nav.scss */
+/* line 442, ../scss/nav.scss */
 .message-box {
   -moz-border-radius: 6px/5px;
   -webkit-border-radius: 6px/5px;
@@ -532,16 +552,16 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 465, ../scss/nav.scss */
+/* line 466, ../scss/nav.scss */
 .message-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 468, ../scss/nav.scss */
+/* line 469, ../scss/nav.scss */
 .message-box .details h4 {
   font-family: "Museo Sans", sans-serif;
   margin: 10px;
 }
-/* line 473, ../scss/nav.scss */
+/* line 474, ../scss/nav.scss */
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
