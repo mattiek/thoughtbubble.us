@@ -2,6 +2,7 @@ var has_map = $("#map").length > 0;
 
 if(has_map){
     TB.Map.init();
+    TB.Map.loadMapLayer();
 }
 
 var map = TB.Map.map();
@@ -56,13 +57,6 @@ var map = TB.Map.map();
 })(jQuery);
 
 $(document).ready(function() {
-    map.on('ready', function() {
-
-
-    });
-
-
-
     // What kinds
     $('#id_what_kind_choicefield a').on('click', function(e) {
         e.preventDefault();

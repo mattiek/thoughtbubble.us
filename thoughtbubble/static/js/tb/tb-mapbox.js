@@ -12,6 +12,7 @@ if ("undefined" === typeof TB) {
         var default_zoom = 13;
         var default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
         var map;
+        var mapLayer = null;
 
         var drawn_poly;
         var polyLineOptions = {
@@ -21,12 +22,18 @@ if ("undefined" === typeof TB) {
 
 
         var init = function(){
-            map = L.mapbox.map('map', default_map, {zoomControl: false })
+            map = L.mapbox.map('map','', {zoomControl: false })
                 .setView([default_lat, default_lng], default_zoom);
+
 
             new L.Control.Zoom({ position: 'topright' }).addTo(map);
 
         };
+
+        var loadMapLayer = function() {
+            TB.Map.mapLayer = L.mapbox.tileLayer(default_map);
+            map.addLayer(TB.Map.mapLayer);
+        }
 
         var get_map = function() {
             return map;
@@ -44,7 +51,9 @@ if ("undefined" === typeof TB) {
             "default_zoom"      : default_zoom,
             "default_map"       : default_map,
             "init"              : init,
-            "panTo"             : panTo
+            "panTo"             : panTo,
+            "loadMapLayer"      : loadMapLayer,
+            "mapLayer"          : mapLayer
         };
 
     }());

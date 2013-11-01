@@ -4,6 +4,7 @@ var neighborhoods = neighborhoods || {};
 
 if(has_map){
     TB.Map.init();
+    TB.Map.loadMapLayer();
 }
 var map = TB.Map.map();
 
@@ -81,13 +82,23 @@ var experimentalMarkers = function(d) {
             feature = marker.feature;
 
         marker.setIcon(L.icon(feature.properties.icon));
+        // Create custom popup content
+        var popupContent =  '<a class="popup" href="' + feature.properties.link + '">' +
+            '   <h3>' + feature.properties.title + '</h3>' +
+            '</a>';
+
+        // http://leafletjs.com/reference.html#popup
+        marker.bindPopup(popupContent,{
+            closeButton: false
+//                minWidth: 320
+        });
     });
 
 // Add features to the map
     TB.Map.map().markerLayer.setGeoJSON(d.results);
 }
 
-map.on('ready', function() {
+TB.Map.mapLayer.on('ready', function() {
     $.ajax({
         url:  '/api/v1/locations/.json',
         dataType: 'json',
@@ -106,7 +117,6 @@ var getNeighborhoods = function() {
         url: '/api/v1/neighborhoods/.json?metro=columbus',
         dataType: 'json',
         success: function load(d) {
-
 
             var geoJSON = TB.Map.markers.getGeoJSON();
 
