@@ -51,9 +51,9 @@ class Neighborhood(models.Model):
 
         props['title'] = self.name
         props['icon'] = {
-            "iconUrl": "http://placekitten.com/50/50",
-            "iconSize": [50, 50],
-            "iconAnchor": [25, 25],
+            "iconUrl": "/static/images/map-point.png",
+            "iconSize": [26, 33],
+            "iconAnchor": [13, 30],
             "popupAnchor": [0, -25]
         }
         return props

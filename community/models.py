@@ -50,6 +50,20 @@ class Community(models.Model):
     def get_id(self):
         return self.title.lower().replace(' ','-')
 
+    def getProperties(self):
+
+        props = {}
+
+        props['explore'] = reverse('sherlock', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
+        props['title'] = self.title
+        props['icon'] = {
+            "iconUrl": "/static/images/featured-community-location.png",
+            "iconSize": [24, 30],
+            "iconAnchor": [15, 22],
+            "popupAnchor": [0, -25]
+        }
+        return props
+
     def getLocationsGeoJSON(self):
         mapbox = [{ "geometry": {
             "type": "Point",

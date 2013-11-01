@@ -83,7 +83,7 @@ var experimentalMarkers = function(d) {
 
         marker.setIcon(L.icon(feature.properties.icon));
         // Create custom popup content
-        var popupContent =  '<a class="popup" href="' + feature.properties.link + '">' +
+        var popupContent =  '<a class="popup" href="' + feature.properties.explore + '">' +
             '   <h3>' + feature.properties.title + '</h3>' +
             '</a>';
 
@@ -95,16 +95,30 @@ var experimentalMarkers = function(d) {
     });
 
 // Add features to the map
-    TB.Map.map().markerLayer.setGeoJSON(d.results);
+    TB.Map.map().markerLayer.setGeoJSON(d);
 }
 
 TB.Map.mapLayer.on('ready', function() {
     $.ajax({
-        url:  '/api/v1/locations/.json',
+        url:  '/api/v1/communities/.json',
         dataType: 'json',
         success: function load(d) {
 
-            experimentalMarkers(d);
+            // Transform the regions to the centers
+            var dStuff = _.map(d.features, function(obj) {
+                return {
+                    id: obj.id,
+                    properties: obj.properties,
+                    type: obj.type,
+                    geometry: obj.center
+                }
+            });
+
+           var latestD = {
+                type: "FeatureCollection",
+                features: dStuff
+            }
+            experimentalMarkers(latestD);
 
         }
     });

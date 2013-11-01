@@ -29,7 +29,7 @@ class CustomPaginationSerializer(pagination.BasePaginationSerializer):
 class CommunitySerializer(serializers.HyperlinkedModelSerializer):
     center = serializers.CharField(source='neighborhood.getCenter', read_only=True)
     geometry = serializers.CharField(source='neighborhood.getGeometry')
-    properties = serializers.CharField(source='neighborhood.getProperties', read_only=True)
+    properties = serializers.CharField(source='getProperties', read_only=True)
     type = serializers.CharField(source='neighborhood.getType', read_only=True)
 
     neighborhood = NeighborhoodSerializer()
