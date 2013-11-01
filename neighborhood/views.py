@@ -10,4 +10,4 @@ class NeighborhoodViewset(viewsets.ModelViewSet):
 
     def get_queryset(self):
         name = self.request.GET.get('metro','')
-        return Neighborhood.objects.filter(city__icontains=name)
+        return Neighborhood.objects.filter(city__icontains=name, community__isnull=True)

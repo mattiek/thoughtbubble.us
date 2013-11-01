@@ -75,25 +75,30 @@ var workingMarkers = function(d) {
     getNeighborhoods();
 }
 
-var experimentalMarkers = function(d) {
-    // Set a custom icon on each marker based on feature properties
-    TB.Map.map().markerLayer.on('layeradd', function(e) {
-        var marker = e.layer,
-            feature = marker.feature;
+// Set a custom icon on each marker based on feature properties
+TB.Map.map().markerLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
 
-        marker.setIcon(L.icon(feature.properties.icon));
-        // Create custom popup content
-        var popupContent =  '<a class="popup" href="' + feature.properties.explore + '">' +
+    marker.setIcon(L.icon(feature.properties.icon));
+
+    var popupContent;
+    // Create custom popup content
+    if (feature.properties.explore) {
+        popupContent =  '<a class="popup" href="' + feature.properties.explore + '">' +
             '   <h3>' + feature.properties.title + '</h3>' +
             '</a>';
+    } else {
+        popupContent = '<h3>' + feature.properties.title + '</h3>';
+    }
 
-        // http://leafletjs.com/reference.html#popup
-        marker.bindPopup(popupContent,{
-            closeButton: false
-//                minWidth: 320
-        });
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false
     });
+});
 
+var experimentalMarkers = function(d) {
 // Add features to the map
     TB.Map.map().markerLayer.setGeoJSON(d);
 }
@@ -119,11 +124,11 @@ TB.Map.mapLayer.on('ready', function() {
                 features: dStuff
             }
             experimentalMarkers(latestD);
+            getNeighborhoods();
 
         }
     });
 });
-
 
 
 var getNeighborhoods = function() {
@@ -132,11 +137,19 @@ var getNeighborhoods = function() {
         dataType: 'json',
         success: function load(d) {
 
-            var geoJSON = TB.Map.markers.getGeoJSON();
+            // Transform the regions to the centers
+            var dStuff = _.map(d, function(obj) {
+                return {
+                    id: obj.id,
+                    properties: obj.properties,
+                    type: obj.type,
+                    geometry: obj.center
+                }
+            });
 
-            geoJSON = _.union(geoJSON, d);
-            TB.Map.markers.setGeoJSON(geoJSON);
-
+            var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
+            geoJSON.features = _.union(geoJSON.features, dStuff);
+            TB.Map.map().markerLayer.setGeoJSON(geoJSON);
         }
     });
 }
