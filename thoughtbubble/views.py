@@ -1,20 +1,13 @@
-from django.shortcuts import render, redirect, HttpResponse
-
-from forms import SignupForm, LoginForm
 import random
-from models import *
-from django.contrib.auth import authenticate, logout as django_logout, login as django_login
-from thoughtbubble.utils import path_and_rename
-from community.models import Community
-from idea.models import Idea, IdeaSupport
 
+from django.contrib.auth import authenticate, logout as django_logout, login as django_login
 from django.views.generic.edit import FormView
 from django.core.urlresolvers import reverse, reverse_lazy
+from django.contrib.flatpages.models import FlatPage
+from django.contrib import messages
+from django.shortcuts import render, redirect, HttpResponse
 
 from allauth.socialaccount.forms import DisconnectForm
-
-from django.contrib import messages
-
 from allauth.account.adapter import get_adapter as get_account_adapter
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 
@@ -22,13 +15,15 @@ from vanilla.views import FormView as VanillaFormView
 
 from braces.views import AjaxResponseMixin, JSONResponseMixin
 
-from forms import UserProfileForm
-
-from django.contrib.flatpages.models import FlatPage
-
 from avatar.views import _get_avatars
 from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
+from thoughtbubble.utils import path_and_rename
+from community.models import Community
+from idea.models import Idea, IdeaSupport
+from forms import UserProfileForm
+from models import *
+from forms import SignupForm, LoginForm
 
 
 class MyDisconnectForm(DisconnectForm):
@@ -72,7 +67,7 @@ def explore(request, state=None, city=None, pk=None):
         request.session['exploring_city'] = city
 
     d = {}
-    d['communities'] = Community.objects.filter().order_by('neighborhood__name')
+    d['communities'] = Community.objects.filter(neighborhood__city__iexact=city, neighborhood__state__iexact=state).order_by('neighborhood__name')
 
     d['metros'] = {
         'current': city if city else 'Columbus',

@@ -47,3 +47,10 @@ class NeighborhoodSerializer(serializers.ModelSerializer):
                 "features": df,
             }
             return m
+
+
+class NeighborhoodTypeaheadSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Neighborhood
+        fields = ('id', 'name', 'city', 'state', 'county', 'community')
+        depth = 1 # Nested object

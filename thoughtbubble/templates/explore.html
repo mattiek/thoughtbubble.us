@@ -75,6 +75,9 @@
 {% endblock %}
 
 {% block footerscripts %}
+    <script type="text/javascript">
+    window.exploringMetro = "{{ exploring_city }}";
+    </script>
     <script src='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>

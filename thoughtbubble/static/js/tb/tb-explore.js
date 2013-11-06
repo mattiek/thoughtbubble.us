@@ -171,8 +171,8 @@ $('#anywhere-else').on('click', function(e){
             {
                 name: 'name',
                 valueKey: 'name',
-                prefetch: '/api/v1/cities-typeahead/.json',
-                remote: '/api/v1/cities-typeahead/.json?city=%QUERY'
+                prefetch: '/api/v1/neighborhoods-typeahead/.json',
+                remote: '/api/v1/neighborhoods-typeahead/.json?neighborhood=%QUERY&metro=' + window.exploringMetro
             }
         ).bind('typeahead:selected', function (obj, datum) {
                 $('#id_city').val(datum.id);
