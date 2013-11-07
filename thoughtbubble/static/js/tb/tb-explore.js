@@ -163,8 +163,10 @@ $('#metrodifier').on('change', function(e) {
 
 $('#anywhere-else').on('click', function(e){
     e.preventDefault();
-    if ($('#anywhere-entry').length)
+    if ($('#anywhere-entry').length) {
         $('#anywhere-entry').remove();
+        $('.twitter-typeahead').remove();
+    }
     else {
         $('#minisplore').append('<input id="anywhere-entry" type="text" />');
         $('#anywhere-entry').typeahead(

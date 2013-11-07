@@ -27,6 +27,7 @@
                 {% endif %}
             {% endif %}
         <li class="comment_li" id="c{{ comment.id }}">{# c## is used by the absolute URL of the Comment model, so keep that as it is. #}
+            {% if comment.is_public %}
             <div class="comment {{ bubbleside }}">
                 <img class="talkbubb" src="{{ STATIC_URL }}images/reply-mask-{{ bubbleside }}.png" style="background:url({{ DOMAIN_HOST }}{{ comment.user.get_profile_picture }});background-size:100%;"/>
                 <div class="comment_text">
@@ -38,9 +39,10 @@
                         </a>
                     </div>
 
-                    {{ comment.user.username }}: "{{ comment.comment }}"
+                    {% if comment.is_removed %}This comment has been removed{% else %}{{ comment.user.username }}: "{{ comment.comment }}"{% endif %}
                 </div>
             </div>
+            {% endif %}
             {% for close in comment.close %}</li></ul>{% endfor %}
     {% endfor %}
 </div>
