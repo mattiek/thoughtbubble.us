@@ -64,6 +64,8 @@ class LocationUpdate(UpdateView):
         s.latitude=form.cleaned_data['latitude']
         s.longitude=form.cleaned_data['longitude']
 
+        s.about = form.cleaned_data['about']
+
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
