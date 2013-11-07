@@ -313,9 +313,15 @@ form .row .row.second-row {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
+  line-height: 80px;
+}
+/* line 213, ../../scss/idea/add.scss */
+.cloak img {
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-/* line 213, ../../scss/idea/add.scss */
+/* line 219, ../../scss/idea/add.scss */
 #id_links {
   width: 180px;
 }

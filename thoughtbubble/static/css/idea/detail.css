@@ -439,9 +439,10 @@
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
+  margin-left: 20px;
 }
 
-/* line 59, ../../scss/idea/detail.scss */
+/* line 61, ../../scss/idea/detail.scss */
 .news {
   color: #9d9d9d;
   /* text color */
@@ -449,17 +450,17 @@
   font-size: 15px;
 }
 
-/* line 65, ../../scss/idea/detail.scss */
+/* line 67, ../../scss/idea/detail.scss */
 .dislike.blue {
   margin: 0 20px;
 }
 
-/* line 69, ../../scss/idea/detail.scss */
+/* line 71, ../../scss/idea/detail.scss */
 #comments {
   margin-top: 50px;
 }
 
-/* line 73, ../../scss/idea/detail.scss */
+/* line 75, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
@@ -467,35 +468,50 @@ i {
   padding-left: 15px;
 }
 
-/* line 82, ../../scss/idea/detail.scss */
+/* line 84, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 85, ../../scss/idea/detail.scss */
+/* line 87, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 91, ../../scss/idea/detail.scss */
+/* line 93, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 94, ../../scss/idea/detail.scss */
+/* line 96, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 100, ../../scss/idea/detail.scss */
+/* line 102, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 104, ../../scss/idea/detail.scss */
+/* line 106, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 109, ../../scss/idea/detail.scss */
+/* line 111, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
+}
+
+/* line 115, ../../scss/idea/detail.scss */
+#images {
+  line-height: 80px;
+}
+/* line 118, ../../scss/idea/detail.scss */
+#images img {
+  max-width: 80px;
+  vertical-align: middle;
+}
+
+/* line 124, ../../scss/idea/detail.scss */
+#links {
+  margin-bottom: 20px;
 }

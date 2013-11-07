@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib.flatpages.models import FlatPage
 from django.contrib import messages
 from django.shortcuts import render, redirect, HttpResponse
+from django.core.exceptions import ValidationError
+from django.utils.translation import ugettext_lazy as _
 
 from allauth.socialaccount.forms import DisconnectForm
 from allauth.account.adapter import get_adapter as get_account_adapter
@@ -39,6 +41,17 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
         assert request.user.is_authenticated()
         url = reverse('user_dashboard')
         return url
+
+    def validate_disconnect(self, account, accounts):
+        """
+        Validate whether or not the socialaccount account can be
+        safely disconnected.
+        """
+        if len(accounts) == 1:
+            # No usable password would render the local account unusable
+            if not account.user.has_usable_password():
+                raise ValidationError(_("Your account has no password set"
+                                        " up."))
 
 def home(request, state=None, city=None):
     if not state or not city:

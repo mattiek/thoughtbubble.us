@@ -33,13 +33,13 @@
         <div class="r">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
         <div class="r">I imagine something like this:</div>
         <div class=""><b>{{ idea.description }}</b></div>
-        <div class="r">Links:
+        <div id="links" class="r">Links:
             {% for link in idea.idealink_set.all %}
                 <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>{% if not forloop.last %},{% endif %}
             {% endfor %}
         </div>
 
-        <div>
+        <div id="images">
             {% for picture in pictures %}
                 <img src="{{ picture.img.url }}" alt=""/>
             {% endfor %}
