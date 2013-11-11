@@ -1,5 +1,10 @@
 @import "compass";
 
+#wrapper {
+  background: image-url('clean_textile.png');
+  background-size: 50%;
+}
+
 #illustration {
   background: url(../images/thoughtbubble-illustration.jpg) no-repeat no-repeat;
   background-size: 100%;
