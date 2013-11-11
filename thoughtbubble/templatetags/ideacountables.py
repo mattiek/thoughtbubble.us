@@ -17,8 +17,8 @@ def get_idea_support_count(value):
         return 0
     return IdeaSupport.objects.filter(user=value).count()
 
-@register.filter(name='communities_joined_count')
-def communities_joined_count(value):
+@register.filter(name='organizations_joined_count')
+def organizations_joined_count(value):
     if not value.is_authenticated():
         return 0
     return Community.objects.filter(members=value).count()
