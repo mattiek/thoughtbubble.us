@@ -1,4 +1,8 @@
 @import "compass";
+@import "compass/utilities/sprites";
+
+@import "directional/*.png";
+
 
 #wrapper {
   background: image-url('clean_textile.png');
@@ -87,7 +91,9 @@
   font-size: 12px;
   text-align: center;
   width: 100%;
-  margin: 20px auto 0;
+  margin: 0px auto 0;
+  padding-top: 20px;
+  background: #ffffff;
   text-decoration: none;
 
   ul {
@@ -115,6 +121,7 @@
     margin-left: 50px;
     height: 38px;
 
+
     &.icon-explore {
       background: url(../images/button-explore.png) no-repeat;
       background-position: 0 0;
@@ -132,6 +139,35 @@
       margin-left: 0px;
     }
   }
+}
+
+#primary-explore {
+  display: block;
+  width: 504px * .5;
+  height: 75px *.5;
+  line-height: 75px *.5;
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(bottom, #e57f4f 0%, #f9a533 100%)); // layer fill content
+  color: #fff; // text color
+  font-family: "Myriad Pro";
+  font-size: 31px * .5;
+
+  i {
+    display: block;
+    height: directional-sprite-height(normal);
+    width: directional-sprite-width(normal);
+    @include directional-sprite(normal);
+    float: left;
+
+  }
+
+  &:hover {
+    i {
+      @include directional-sprite(hover);
+    }
+  }
+
 }
 
 
@@ -316,7 +352,7 @@ form .row .row .columns.no-padding {
   background-clip: padding-box; /* prevents bg color from leaking outside the border */
   width: 100%;
   background-color: #49c3dd; /* layer fill content */
-  margin: 60px 0 0 0;
+  margin: -8px 0 0 0;
 
   ul {
     display: inline-block;
