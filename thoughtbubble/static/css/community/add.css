@@ -142,14 +142,15 @@ textarea {
 
 /* line 5, ../../scss/community/add.scss */
 #illustration {
-  background: url(../../images/illustration-ship-trans.png) no-repeat no-repeat;
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
   height: 238px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 13, ../../scss/community/add.scss */
+/* line 14, ../../scss/community/add.scss */
 .orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -174,7 +175,7 @@ textarea {
   font-family: 'MuseoSans';
 }
 
-/* line 30, ../../scss/community/add.scss */
+/* line 31, ../../scss/community/add.scss */
 .s-button {
   height: 33px;
   line-height: 33px;
@@ -183,12 +184,12 @@ textarea {
   margin-left: 20px;
   text-align: center;
 }
-/* line 38, ../../scss/community/add.scss */
+/* line 39, ../../scss/community/add.scss */
 .s-button:first-child {
   margin-left: 0px;
 }
 
-/* line 43, ../../scss/community/add.scss */
+/* line 44, ../../scss/community/add.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
@@ -200,23 +201,23 @@ textarea {
   padding: 0 20px;
 }
 
-/* line 54, ../../scss/community/add.scss */
+/* line 55, ../../scss/community/add.scss */
 .centered {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-/* line 61, ../../scss/community/add.scss */
+/* line 62, ../../scss/community/add.scss */
 .row.title {
   text-align: center;
 }
-/* line 65, ../../scss/community/add.scss */
+/* line 66, ../../scss/community/add.scss */
 .row.addpad {
   padding-bottom: 20px;
 }
 
-/* line 70, ../../scss/community/add.scss */
+/* line 71, ../../scss/community/add.scss */
 #cta {
   color: #7b7b7b;
   /* text color */
@@ -225,19 +226,19 @@ textarea {
   text-align: center;
 }
 
-/* line 77, ../../scss/community/add.scss */
+/* line 78, ../../scss/community/add.scss */
 .actions {
   margin: 0 auto;
   width: 463px;
 }
 
-/* line 82, ../../scss/community/add.scss */
+/* line 83, ../../scss/community/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 87, ../../scss/community/add.scss */
+/* line 88, ../../scss/community/add.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -250,7 +251,7 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 103, ../../scss/community/add.scss */
+/* line 104, ../../scss/community/add.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
@@ -261,7 +262,7 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 110, ../../scss/community/add.scss */
+/* line 111, ../../scss/community/add.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
@@ -285,23 +286,23 @@ textarea {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 133, ../../scss/community/add.scss */
+/* line 134, ../../scss/community/add.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 137, ../../scss/community/add.scss */
+/* line 138, ../../scss/community/add.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 142, ../../scss/community/add.scss */
+/* line 143, ../../scss/community/add.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 146, ../../scss/community/add.scss */
+/* line 147, ../../scss/community/add.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -310,7 +311,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 153, ../../scss/community/add.scss */
+/* line 154, ../../scss/community/add.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -319,7 +320,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 160, ../../scss/community/add.scss */
+/* line 161, ../../scss/community/add.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -330,12 +331,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 170, ../../scss/community/add.scss */
+/* line 171, ../../scss/community/add.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 174, ../../scss/community/add.scss */
+/* line 175, ../../scss/community/add.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -346,12 +347,12 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 183, ../../scss/community/add.scss */
+/* line 184, ../../scss/community/add.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 188, ../../scss/community/add.scss */
+/* line 189, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -361,12 +362,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 194, ../../scss/community/add.scss */
+/* line 195, ../../scss/community/add.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
 
-/* line 198, ../../scss/community/add.scss */
+/* line 199, ../../scss/community/add.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -374,17 +375,17 @@ form .row .row.second-row {
   background: url(../../images/orange-arrow.png) no-repeat 0 6px;
 }
 
-/* line 205, ../../scss/community/add.scss */
+/* line 206, ../../scss/community/add.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 209, ../../scss/community/add.scss */
+/* line 210, ../../scss/community/add.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 213, ../../scss/community/add.scss */
+/* line 214, ../../scss/community/add.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -413,14 +414,14 @@ form .row .row.second-row {
   /* IE6-9 */
 }
 
-/* line 232, ../../scss/community/add.scss */
+/* line 233, ../../scss/community/add.scss */
 .left-idea-cap {
   padding-top: 30px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 238, ../../scss/community/add.scss */
+/* line 239, ../../scss/community/add.scss */
 .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -428,7 +429,7 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 246, ../../scss/community/add.scss */
+/* line 247, ../../scss/community/add.scss */
 .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -436,35 +437,35 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 254, ../../scss/community/add.scss */
+/* line 255, ../../scss/community/add.scss */
 .left-idea-cap span {
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
 }
-/* line 260, ../../scss/community/add.scss */
+/* line 261, ../../scss/community/add.scss */
 .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
 }
 
-/* line 272, ../../scss/community/add.scss */
+/* line 273, ../../scss/community/add.scss */
 .right-idea-cap {
   float: right;
   width: 20%;
 }
-/* line 276, ../../scss/community/add.scss */
+/* line 277, ../../scss/community/add.scss */
 .right-idea-cap table {
   background: transparent;
   border: none;
 }
-/* line 283, ../../scss/community/add.scss */
+/* line 284, ../../scss/community/add.scss */
 .right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
   background: transparent;
 }
 
-/* line 292, ../../scss/community/add.scss */
+/* line 293, ../../scss/community/add.scss */
 #community-logo,
 #news-photo,
 .picture {
@@ -479,22 +480,22 @@ form .row .row.second-row {
   margin-right: 30px;
 }
 
-/* line 305, ../../scss/community/add.scss */
+/* line 306, ../../scss/community/add.scss */
 .picture {
   float: left;
   line-height: 80px;
   text-align: center;
 }
-/* line 311, ../../scss/community/add.scss */
+/* line 312, ../../scss/community/add.scss */
 .picture img {
   vertical-align: middle;
 }
-/* line 315, ../../scss/community/add.scss */
+/* line 316, ../../scss/community/add.scss */
 .picture:first-child {
   margin-left: 0px;
 }
 
-/* line 320, ../../scss/community/add.scss */
+/* line 321, ../../scss/community/add.scss */
 .feature {
   height: 20px;
   line-height: 20px;
@@ -508,7 +509,7 @@ form .row .row.second-row {
   float: left;
   margin: 0 10px 10px 0;
 }
-/* line 336, ../../scss/community/add.scss */
+/* line 337, ../../scss/community/add.scss */
 .feature .feature-cap {
   float: right;
   width: 20px;
@@ -516,43 +517,43 @@ form .row .row.second-row {
   background-image: url('../../images/add-photo.png?1377395053');
   background-repeat: no-repeat;
 }
-/* line 344, ../../scss/community/add.scss */
+/* line 345, ../../scss/community/add.scss */
 .feature span {
   padding: 0 10px;
 }
 
-/* line 350, ../../scss/community/add.scss */
+/* line 351, ../../scss/community/add.scss */
 #news #news-photo {
   float: left;
   margin-right: 20px;
 }
-/* line 355, ../../scss/community/add.scss */
+/* line 356, ../../scss/community/add.scss */
 #news textarea {
   width: 416px;
 }
-/* line 359, ../../scss/community/add.scss */
+/* line 360, ../../scss/community/add.scss */
 #news .buttonize {
   float: right;
 }
 
-/* line 364, ../../scss/community/add.scss */
+/* line 365, ../../scss/community/add.scss */
 .submit-all {
   padding: 5px 100px;
   margin: 0 auto;
   display: block;
 }
 
-/* line 370, ../../scss/community/add.scss */
+/* line 371, ../../scss/community/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
-/* line 374, ../../scss/community/add.scss */
+/* line 375, ../../scss/community/add.scss */
 #form-wrapper #deets {
   float: right;
   width: 478px;
 }
-/* line 378, ../../scss/community/add.scss */
+/* line 379, ../../scss/community/add.scss */
 #form-wrapper #deets label {
   width: 70px;
   display: inline-block;
@@ -561,13 +562,13 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 386, ../../scss/community/add.scss */
+/* line 387, ../../scss/community/add.scss */
 #form-wrapper #deets input {
   width: 320px;
   display: inline;
 }
 
-/* line 394, ../../scss/community/add.scss */
+/* line 395, ../../scss/community/add.scss */
 #about label {
   color: #9d9d9d;
   /* text color */
@@ -575,7 +576,7 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 400, ../../scss/community/add.scss */
+/* line 401, ../../scss/community/add.scss */
 .label {
   color: #9d9d9d;
   /* text color */
@@ -583,55 +584,55 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 406, ../../scss/community/add.scss */
+/* line 407, ../../scss/community/add.scss */
 #about {
   clear: both;
 }
-/* line 409, ../../scss/community/add.scss */
+/* line 410, ../../scss/community/add.scss */
 #about #id_about {
   margin-left: 20px;
   width: 452px;
 }
 
-/* line 415, ../../scss/community/add.scss */
+/* line 416, ../../scss/community/add.scss */
 #pictures, #partners, #features {
   width: 100%;
   clear: both;
   margin-top: 20px;
 }
-/* line 420, ../../scss/community/add.scss */
+/* line 421, ../../scss/community/add.scss */
 #pictures .label, #partners .label, #features .label {
   margin-bottom: 10px;
 }
 
-/* line 425, ../../scss/community/add.scss */
+/* line 426, ../../scss/community/add.scss */
 .clr {
   clear: both;
 }
 
-/* line 429, ../../scss/community/add.scss */
+/* line 430, ../../scss/community/add.scss */
 .cloak {
   background: #FFFFFF;
 }
 
-/* line 435, ../../scss/community/add.scss */
+/* line 436, ../../scss/community/add.scss */
 label[for=id_facebook_url],
 label[for=id_twitter_url],
 label[for=id_linkedin_url] {
   text-indent: 35px;
 }
 
-/* line 440, ../../scss/community/add.scss */
+/* line 441, ../../scss/community/add.scss */
 label[for=id_facebook_url] {
   background: url('../../images/small-blue-facebook.png?1380596735') no-repeat;
 }
 
-/* line 443, ../../scss/community/add.scss */
+/* line 444, ../../scss/community/add.scss */
 label[for=id_twitter_url] {
   background: url('../../images/small-blue-twitter.png?1380596747') no-repeat;
 }
 
-/* line 447, ../../scss/community/add.scss */
+/* line 448, ../../scss/community/add.scss */
 label[for=id_linkedin_url] {
   background: url('../../images/small-blue-linkedin.png?1380596755') no-repeat;
 }

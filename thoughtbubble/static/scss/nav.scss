@@ -15,6 +15,7 @@
   height: 695px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 #nav,
@@ -64,9 +65,9 @@
 }
 
 #logo {
-  margin: 35px 0 0 35px;
+  margin: 32px 0 0 35px;
   width: 288px;
-  height: 80px;
+  height: 97px;
 }
 
 #primary-nav {
@@ -152,6 +153,8 @@
   color: #fff; // text color
   font-family: "Myriad Pro";
   font-size: 31px * .5;
+  margin: 44px auto 0;
+  text-indent: 5px;
 
   i {
     display: block;
@@ -159,6 +162,7 @@
     width: directional-sprite-width(normal);
     @include directional-sprite(normal);
     float: left;
+    margin: 2px 0 0 10px;
 
   }
 
@@ -181,6 +185,7 @@
 #home-container {
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 form .row .columns.no-padding,
@@ -481,6 +486,8 @@ p {
 }
 
 .message-box {
+  position: absolute;
+  width: 928px;
   -moz-border-radius: 6px / 5px;
   -webkit-border-radius: 6px / 5px;
   border-radius: 6px / 5px; /* border radius */

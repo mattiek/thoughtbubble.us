@@ -188,7 +188,7 @@ textarea {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
-  font-size: 38px/2;
+  font-size: 38px / 2;
 }
 
 /* line 1, ../../scss/partials/_news_feed.scss */
@@ -245,14 +245,15 @@ ol.slats li p span.meta {
 
 /* line 7, ../../scss/community/detail.scss */
 #illustration {
-  background: url(../../images/illustration-ship-trans.png) no-repeat no-repeat;
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
   height: 238px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 16, ../../scss/community/detail.scss */
+/* line 17, ../../scss/community/detail.scss */
 .s-button {
   height: 33px;
   line-height: 33px;
@@ -261,12 +262,12 @@ ol.slats li p span.meta {
   margin-left: 20px;
   text-align: center;
 }
-/* line 24, ../../scss/community/detail.scss */
+/* line 25, ../../scss/community/detail.scss */
 .s-button:first-child {
   margin-left: 0px;
 }
 
-/* line 29, ../../scss/community/detail.scss */
+/* line 30, ../../scss/community/detail.scss */
 #header {
   background: #33bdd4;
   color: #ffffff;
@@ -278,19 +279,19 @@ ol.slats li p span.meta {
   margin: 0 auto 10px;
 }
 
-/* line 40, ../../scss/community/detail.scss */
+/* line 41, ../../scss/community/detail.scss */
 .centered {
   margin: 0 auto;
   float: none;
   text-align: center;
 }
 
-/* line 47, ../../scss/community/detail.scss */
+/* line 48, ../../scss/community/detail.scss */
 .row.title {
   text-align: center;
 }
 
-/* line 52, ../../scss/community/detail.scss */
+/* line 53, ../../scss/community/detail.scss */
 #cta {
   color: #7b7b7b;
   /* text color */
@@ -299,19 +300,19 @@ ol.slats li p span.meta {
   text-align: center;
 }
 
-/* line 59, ../../scss/community/detail.scss */
+/* line 60, ../../scss/community/detail.scss */
 .actions {
   margin: 0 auto;
   width: 463px;
 }
 
-/* line 64, ../../scss/community/detail.scss */
+/* line 65, ../../scss/community/detail.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 69, ../../scss/community/detail.scss */
+/* line 70, ../../scss/community/detail.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -324,12 +325,12 @@ ol.slats li p span.meta {
   background-position: 57px 57px;
 }
 
-/* line 81, ../../scss/community/detail.scss */
+/* line 82, ../../scss/community/detail.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 85, ../../scss/community/detail.scss */
+/* line 86, ../../scss/community/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -340,39 +341,39 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 94, ../../scss/community/detail.scss */
+/* line 95, ../../scss/community/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 98, ../../scss/community/detail.scss */
+/* line 99, ../../scss/community/detail.scss */
 #about {
   margin: 30px 0;
 }
 
-/* line 104, ../../scss/community/detail.scss */
+/* line 105, ../../scss/community/detail.scss */
 #header .sharing {
   margin: 0px 0px 0px 15px;
 }
-/* line 108, ../../scss/community/detail.scss */
+/* line 109, ../../scss/community/detail.scss */
 #header .sharing li span {
   display: none;
 }
-/* line 112, ../../scss/community/detail.scss */
+/* line 113, ../../scss/community/detail.scss */
 #header .sharing li a.share-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 15px;
 }
-/* line 118, ../../scss/community/detail.scss */
+/* line 119, ../../scss/community/detail.scss */
 #header .sharing li a.share-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 124, ../../scss/community/detail.scss */
+/* line 125, ../../scss/community/detail.scss */
 #header .sharing li a.share-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
@@ -380,26 +381,26 @@ form .row .row.second-row {
   height: 15px;
 }
 
-/* line 135, ../../scss/community/detail.scss */
+/* line 136, ../../scss/community/detail.scss */
 .sharing {
   float: right;
 }
 
-/* line 139, ../../scss/community/detail.scss */
+/* line 140, ../../scss/community/detail.scss */
 .news-label {
   clear: both;
 }
 
-/* line 143, ../../scss/community/detail.scss */
+/* line 144, ../../scss/community/detail.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 147, ../../scss/community/detail.scss */
+/* line 148, ../../scss/community/detail.scss */
 #community-logo {
   text-align: center;
 }
-/* line 150, ../../scss/community/detail.scss */
+/* line 151, ../../scss/community/detail.scss */
 #community-logo img {
   max-width: 300px;
 }
