@@ -69,14 +69,15 @@ textarea {
 
 /* line 4, ../scss/tb-addfeature.scss */
 #illustration {
-  background: url(../images/illustration-trees-trans.png) no-repeat no-repeat;
+  background: url(../images/illustration-trees.png) no-repeat no-repeat;
   background-size: 100%;
   height: 238px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 12, ../scss/tb-addfeature.scss */
+/* line 13, ../scss/tb-addfeature.scss */
 .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -105,13 +106,13 @@ textarea {
   margin: 80px auto 0;
 }
 
-/* line 36, ../scss/tb-addfeature.scss */
+/* line 37, ../scss/tb-addfeature.scss */
 #form-wrapper {
   width: 780px;
   margin: 0 auto;
 }
 
-/* line 41, ../scss/tb-addfeature.scss */
+/* line 42, ../scss/tb-addfeature.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -124,7 +125,7 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 56, ../scss/tb-addfeature.scss */
+/* line 57, ../scss/tb-addfeature.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -134,29 +135,29 @@ input[type="text"] {
   font-family: 'MuseoSans';
 }
 
-/* line 63, ../scss/tb-addfeature.scss */
+/* line 64, ../scss/tb-addfeature.scss */
 textarea {
   border-radius: 5px;
   font-family: 'MuseoSans';
 }
 
-/* line 68, ../scss/tb-addfeature.scss */
+/* line 69, ../scss/tb-addfeature.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 72, ../scss/tb-addfeature.scss */
+/* line 73, ../scss/tb-addfeature.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 77, ../scss/tb-addfeature.scss */
+/* line 78, ../scss/tb-addfeature.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 81, ../scss/tb-addfeature.scss */
+/* line 82, ../scss/tb-addfeature.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -165,7 +166,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 88, ../scss/tb-addfeature.scss */
+/* line 89, ../scss/tb-addfeature.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -174,7 +175,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 95, ../scss/tb-addfeature.scss */
+/* line 96, ../scss/tb-addfeature.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -185,25 +186,25 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 105, ../scss/tb-addfeature.scss */
+/* line 106, ../scss/tb-addfeature.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 109, ../scss/tb-addfeature.scss */
+/* line 110, ../scss/tb-addfeature.scss */
 #map {
   width: 100%;
   height: 265px;
 }
 
-/* line 114, ../scss/tb-addfeature.scss */
+/* line 115, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield {
   list-style-type: none;
   display: block;
   width: 130px;
 }
 
-/* line 120, ../scss/tb-addfeature.scss */
+/* line 121, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield li {
   line-height: 1;
   float: left;
@@ -211,12 +212,12 @@ form .row .row.second-row {
   margin-bottom: 10px;
 }
 
-/* line 127, ../scss/tb-addfeature.scss */
+/* line 128, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield li:first-child {
   margin-left: 0px;
 }
 
-/* line 131, ../scss/tb-addfeature.scss */
+/* line 132, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield li a {
   display: block;
   width: 24px;
@@ -225,17 +226,17 @@ form .row .row.second-row {
   border-radius: 3px;
 }
 
-/* line 139, ../scss/tb-addfeature.scss */
+/* line 140, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield li a.selected {
   background-color: #f47e23;
 }
 
-/* line 143, ../scss/tb-addfeature.scss */
+/* line 144, ../scss/tb-addfeature.scss */
 #id_what_kind_choicefield li.second {
   margin-left: 0px;
 }
 
-/* line 147, ../scss/tb-addfeature.scss */
+/* line 148, ../scss/tb-addfeature.scss */
 .copy {
   color: #9d9d9d;
   /* text color */
@@ -243,12 +244,12 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 153, ../scss/tb-addfeature.scss */
+/* line 154, ../scss/tb-addfeature.scss */
 #latitude {
   margin-top: 15px;
 }
 
-/* line 158, ../scss/tb-addfeature.scss */
+/* line 159, ../scss/tb-addfeature.scss */
 #long_label,
 #lat_label {
   line-height: 24px;
@@ -256,13 +257,13 @@ form .row .row.second-row {
   min-width: 77px;
 }
 
-/* line 164, ../scss/tb-addfeature.scss */
+/* line 165, ../scss/tb-addfeature.scss */
 .save-edit-list {
   list-style-type: none;
   margin-top: 15px;
 }
 
-/* line 169, ../scss/tb-addfeature.scss */
+/* line 170, ../scss/tb-addfeature.scss */
 .save-edit-list a {
   height: 25px;
   width: 65px;
@@ -293,33 +294,33 @@ form .row .row.second-row {
   font-size: 12px;
 }
 
-/* line 192, ../scss/tb-addfeature.scss */
+/* line 193, ../scss/tb-addfeature.scss */
 .save-edit-list li:first-child {
   margin-bottom: 10px;
 }
 
-/* line 196, ../scss/tb-addfeature.scss */
+/* line 197, ../scss/tb-addfeature.scss */
 .pos-rel {
   position: relative;
 }
-/* line 199, ../scss/tb-addfeature.scss */
+/* line 200, ../scss/tb-addfeature.scss */
 .pos-rel.news {
   float: right;
 }
 
-/* line 205, ../scss/tb-addfeature.scss */
+/* line 206, ../scss/tb-addfeature.scss */
 .news-text,
 .about-text {
   min-height: 77px;
   width: 100%;
 }
 
-/* line 210, ../scss/tb-addfeature.scss */
+/* line 211, ../scss/tb-addfeature.scss */
 .news-text {
   width: 610px;
 }
 
-/* line 215, ../scss/tb-addfeature.scss */
+/* line 216, ../scss/tb-addfeature.scss */
 #add-news-image,
 .picture {
   width: 80px;
@@ -333,22 +334,22 @@ form .row .row.second-row {
   margin-right: 10px;
 }
 
-/* line 227, ../scss/tb-addfeature.scss */
+/* line 228, ../scss/tb-addfeature.scss */
 #map {
   width: 400px;
 }
 
-/* line 231, ../scss/tb-addfeature.scss */
+/* line 232, ../scss/tb-addfeature.scss */
 .left-side {
   float: left;
 }
 
-/* line 235, ../scss/tb-addfeature.scss */
+/* line 236, ../scss/tb-addfeature.scss */
 .right-side {
   float: right;
 }
 
-/* line 239, ../scss/tb-addfeature.scss */
+/* line 240, ../scss/tb-addfeature.scss */
 .clr {
   clear: both;
 }

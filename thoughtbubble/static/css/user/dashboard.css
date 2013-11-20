@@ -341,14 +341,15 @@ textarea {
 
 /* line 6, ../../scss/user/dashboard.scss */
 #illustration {
-  background: url(../../images/illustration-ship-trans.png) no-repeat no-repeat;
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
-  height: 238px;
+  height: 233px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 14, ../../scss/user/dashboard.scss */
+/* line 15, ../../scss/user/dashboard.scss */
 .submit {
   height: 33px;
   width: 322px;
@@ -356,13 +357,13 @@ textarea {
   margin-right: 120px;
 }
 
-/* line 22, ../../scss/user/dashboard.scss */
+/* line 23, ../../scss/user/dashboard.scss */
 #form-wrapper {
   width: 650px;
   margin: 0 auto;
 }
 
-/* line 27, ../../scss/user/dashboard.scss */
+/* line 28, ../../scss/user/dashboard.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -375,7 +376,7 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 40, ../../scss/user/dashboard.scss */
+/* line 41, ../../scss/user/dashboard.scss */
 #picture {
   width: 80px;
   height: 79px;
@@ -387,7 +388,7 @@ textarea {
   text-align: center;
 }
 
-/* line 51, ../../scss/user/dashboard.scss */
+/* line 52, ../../scss/user/dashboard.scss */
 .user-info {
   color: #53b8d1;
   /* text color */
@@ -396,7 +397,7 @@ textarea {
   margin-bottom: 10px;
 }
 
-/* line 58, ../../scss/user/dashboard.scss */
+/* line 59, ../../scss/user/dashboard.scss */
 .user-stats {
   color: #53b8d1;
   /* text color */
@@ -404,42 +405,42 @@ textarea {
   font-size: 19px;
 }
 
-/* line 64, ../../scss/user/dashboard.scss */
+/* line 65, ../../scss/user/dashboard.scss */
 .emphasis {
   color: #f47e23;
 }
 
-/* line 68, ../../scss/user/dashboard.scss */
+/* line 69, ../../scss/user/dashboard.scss */
 #update-info, #save-button, #cancel-button {
   display: none;
 }
 
-/* line 72, ../../scss/user/dashboard.scss */
+/* line 73, ../../scss/user/dashboard.scss */
 #edit-button, #save-button, #cancel-button {
   float: right;
   color: #FFFFFF;
 }
-/* line 76, ../../scss/user/dashboard.scss */
+/* line 77, ../../scss/user/dashboard.scss */
 #edit-button:visited, #save-button:visited, #cancel-button:visited {
   color: #FFFFFF;
 }
 
-/* line 81, ../../scss/user/dashboard.scss */
+/* line 82, ../../scss/user/dashboard.scss */
 #user {
   margin-left: 120px;
   padding-top: 20px;
   margin-bottom: 50px;
 }
-/* line 87, ../../scss/user/dashboard.scss */
+/* line 88, ../../scss/user/dashboard.scss */
 #user.editing #edit-button, #user.editing .user-info {
   display: none;
 }
-/* line 90, ../../scss/user/dashboard.scss */
+/* line 91, ../../scss/user/dashboard.scss */
 #user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
   display: block;
 }
 
-/* line 96, ../../scss/user/dashboard.scss */
+/* line 97, ../../scss/user/dashboard.scss */
 #update-info {
   color: #9d9d9d;
   /* text color */
@@ -447,14 +448,14 @@ textarea {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 102, ../../scss/user/dashboard.scss */
+/* line 103, ../../scss/user/dashboard.scss */
 #update-info label {
   float: left;
   width: 100px;
   margin-right: 10px;
 }
 
-/* line 109, ../../scss/user/dashboard.scss */
+/* line 110, ../../scss/user/dashboard.scss */
 fieldset {
   border: none;
 }
