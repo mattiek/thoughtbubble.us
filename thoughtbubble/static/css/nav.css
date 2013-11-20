@@ -482,9 +482,9 @@ p {
 
 /* line 406, ../scss/nav.scss */
 .error-box {
-  -moz-border-radius: 6px/5px;
-  -webkit-border-radius: 6px/5px;
-  border-radius: 6px/5px;
+  -moz-border-radius: 6px / 5px;
+  -webkit-border-radius: 6px / 5px;
+  border-radius: 6px / 5px;
   /* border radius */
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
@@ -530,9 +530,9 @@ p {
 
 /* line 447, ../scss/nav.scss */
 .message-box {
-  -moz-border-radius: 6px/5px;
-  -webkit-border-radius: 6px/5px;
-  border-radius: 6px/5px;
+  -moz-border-radius: 6px / 5px;
+  -webkit-border-radius: 6px / 5px;
+  border-radius: 6px / 5px;
   /* border radius */
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
