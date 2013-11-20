@@ -1,4 +1,8 @@
 @import "compass";
+@import "compass/utilities/sprites";
+
+@import "directional/*.png";
+
 
 #wrapper {
   background: image-url('clean_textile.png');
@@ -11,6 +15,7 @@
   height: 695px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 #nav,
@@ -60,9 +65,9 @@
 }
 
 #logo {
-  margin: 35px 0 0 35px;
+  margin: 32px 0 0 35px;
   width: 288px;
-  height: 80px;
+  height: 97px;
 }
 
 #primary-nav {
@@ -87,7 +92,9 @@
   font-size: 12px;
   text-align: center;
   width: 100%;
-  margin: 20px auto 0;
+  margin: 0px auto 0;
+  padding-top: 20px;
+  background: #ffffff;
   text-decoration: none;
 
   ul {
@@ -115,6 +122,7 @@
     margin-left: 50px;
     height: 38px;
 
+
     &.icon-explore {
       background: url(../images/button-explore.png) no-repeat;
       background-position: 0 0;
@@ -134,6 +142,38 @@
   }
 }
 
+#primary-explore {
+  display: block;
+  width: 504px * .5;
+  height: 75px *.5;
+  line-height: 75px *.5;
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(bottom, #e57f4f 0%, #f9a533 100%)); // layer fill content
+  color: #fff; // text color
+  font-family: "Myriad Pro";
+  font-size: 31px * .5;
+  margin: 44px auto 0;
+  text-indent: 5px;
+
+  i {
+    display: block;
+    height: directional-sprite-height(normal);
+    width: directional-sprite-width(normal);
+    @include directional-sprite(normal);
+    float: left;
+    margin: 2px 0 0 10px;
+
+  }
+
+  &:hover {
+    i {
+      @include directional-sprite(hover);
+    }
+  }
+
+}
+
 
 #login-nav li:first-child {
   background-image: url(../images/icon-person.png);
@@ -145,6 +185,7 @@
 #home-container {
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
 form .row .columns.no-padding,
@@ -316,7 +357,7 @@ form .row .row .columns.no-padding {
   background-clip: padding-box; /* prevents bg color from leaking outside the border */
   width: 100%;
   background-color: #49c3dd; /* layer fill content */
-  margin: 60px 0 0 0;
+  margin: -8px 0 0 0;
 
   ul {
     display: inline-block;
@@ -445,6 +486,8 @@ p {
 }
 
 .message-box {
+  position: absolute;
+  width: 928px;
   -moz-border-radius: 6px / 5px;
   -webkit-border-radius: 6px / 5px;
   border-radius: 6px / 5px; /* border radius */

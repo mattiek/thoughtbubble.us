@@ -383,14 +383,15 @@
 
 /* line 7, ../../scss/idea/detail.scss */
 #illustration {
-  background: url(../../images/illustration-ship-trans.png) no-repeat no-repeat;
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
-  height: 238px;
+  height: 233px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 15, ../../scss/idea/detail.scss */
+/* line 16, ../../scss/idea/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -401,53 +402,53 @@
   margin-bottom: 0px;
 }
 
-/* line 24, ../../scss/idea/detail.scss */
+/* line 25, ../../scss/idea/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 29, ../../scss/idea/detail.scss */
+/* line 30, ../../scss/idea/detail.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
-  font-size: 38px/2;
+  font-size: 38px / 2;
 }
-/* line 36, ../../scss/idea/detail.scss */
+/* line 37, ../../scss/idea/detail.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 42, ../../scss/idea/detail.scss */
+/* line 43, ../../scss/idea/detail.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 44, ../../scss/idea/detail.scss */
+/* line 45, ../../scss/idea/detail.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 50, ../../scss/idea/detail.scss */
+/* line 51, ../../scss/idea/detail.scss */
 .support-number {
   color: #f3812b;
 }
 
-/* line 54, ../../scss/idea/detail.scss */
+/* line 55, ../../scss/idea/detail.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
   margin-left: 20px;
 }
 
-/* line 60, ../../scss/idea/detail.scss */
+/* line 61, ../../scss/idea/detail.scss */
 #form-comment {
   margin-top: 10px;
 }
 
-/* line 64, ../../scss/idea/detail.scss */
+/* line 65, ../../scss/idea/detail.scss */
 .news {
   color: #9d9d9d;
   /* text color */
@@ -455,17 +456,17 @@
   font-size: 15px;
 }
 
-/* line 70, ../../scss/idea/detail.scss */
+/* line 71, ../../scss/idea/detail.scss */
 .dislike.blue {
   margin: 0 20px;
 }
 
-/* line 74, ../../scss/idea/detail.scss */
+/* line 75, ../../scss/idea/detail.scss */
 #comments {
   margin-top: 50px;
 }
 
-/* line 78, ../../scss/idea/detail.scss */
+/* line 79, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
@@ -473,50 +474,50 @@ i {
   padding-left: 15px;
 }
 
-/* line 87, ../../scss/idea/detail.scss */
+/* line 88, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 90, ../../scss/idea/detail.scss */
+/* line 91, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 96, ../../scss/idea/detail.scss */
+/* line 97, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 99, ../../scss/idea/detail.scss */
+/* line 100, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 105, ../../scss/idea/detail.scss */
+/* line 106, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 109, ../../scss/idea/detail.scss */
+/* line 110, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 114, ../../scss/idea/detail.scss */
+/* line 115, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 118, ../../scss/idea/detail.scss */
+/* line 119, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 121, ../../scss/idea/detail.scss */
+/* line 122, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 127, ../../scss/idea/detail.scss */
+/* line 128, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }

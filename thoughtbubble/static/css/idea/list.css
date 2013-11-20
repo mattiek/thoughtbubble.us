@@ -383,14 +383,15 @@
 
 /* line 7, ../../scss/idea/list.scss */
 #illustration {
-  background: url(../../images/illustration-ship-trans.png) no-repeat no-repeat;
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
-  height: 238px;
+  height: 233px;
   width: 930px;
   margin: 0 auto;
+  background-color: #ffffff;
 }
 
-/* line 15, ../../scss/idea/list.scss */
+/* line 16, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -401,47 +402,47 @@
   margin-bottom: 0px;
 }
 
-/* line 24, ../../scss/idea/list.scss */
+/* line 25, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 29, ../../scss/idea/list.scss */
+/* line 30, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
-  font-size: 38px/2;
+  font-size: 38px / 2;
 }
-/* line 36, ../../scss/idea/list.scss */
+/* line 37, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 42, ../../scss/idea/list.scss */
+/* line 43, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 44, ../../scss/idea/list.scss */
+/* line 45, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 50, ../../scss/idea/list.scss */
+/* line 51, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }
 
-/* line 54, ../../scss/idea/list.scss */
+/* line 55, ../../scss/idea/list.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
 }
 
-/* line 59, ../../scss/idea/list.scss */
+/* line 60, ../../scss/idea/list.scss */
 #filtering {
   color: #53b8d1;
   /* text color */
@@ -451,7 +452,7 @@
   margin: 0 auto 20px;
 }
 
-/* line 69, ../../scss/idea/list.scss */
+/* line 70, ../../scss/idea/list.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -461,14 +462,14 @@
   font-size: 14px;
 }
 
-/* line 75, ../../scss/idea/list.scss */
+/* line 76, ../../scss/idea/list.scss */
 #order, #order_chosen {
   width: 150px;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-/* line 81, ../../scss/idea/list.scss */
+/* line 82, ../../scss/idea/list.scss */
 #sort_by {
   vertical-align: super;
 }
