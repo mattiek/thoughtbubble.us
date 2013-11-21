@@ -63,8 +63,8 @@ class Location(models.Model):
             state = self.organization.neighborhood.state
             city = self.organization.neighborhood.city
 
-        return reverse('location_detail', args=[state,
-                                                city,
+        return reverse('location_detail', args=[state.lower(),
+                                                city.lower(),
                                                     str(self.id)])
 
     def get_id(self):
@@ -74,17 +74,17 @@ class Location(models.Model):
         return reverse('locations-detail',args=[self.id,])
 
     def add_idea_url(self):
-            return reverse('addidea', args=[self.organization.neighborhood.state,
-                                            self.organization.neighborhood.city,
-                                            self.organization.title,
-                                            self.name
+            return reverse('addidea', args=[self.organization.neighborhood.state.lower(),
+                                            self.organization.neighborhood.city.lower(),
+                                            self.organization.title.lower(),
+                                            self.name.lower()
             ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[self.organization.neighborhood.state,
-                                        self.organization.neighborhood.city,
-                                        self.organization.title,
-                                        self.name
+        return reverse('idea_list', args=[self.organization.neighborhood.state.lower(),
+                                        self.organization.neighborhood.city.lower(),
+                                        self.organization.title.lower(),
+                                        self.name.lower()
         ])
 
     def save(self, *args, **kwargs):

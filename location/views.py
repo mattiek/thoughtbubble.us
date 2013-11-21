@@ -78,7 +78,7 @@ class LocationUpdate(UpdateView):
     def get_context_data(self, **kwargs):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
         location = Location.objects.get(pk=self.kwargs['pk'])
-        context['action_url'] = reverse('location_update', args=[self.kwargs['state'], self.kwargs['city'], self.kwargs['pk'],])
+        context['action_url'] = reverse('location_update', args=[self.kwargs['state'].lower(), self.kwargs['city'].lower(), self.kwargs['pk'],])
         context['organization'] = location.organization
         context['update'] = True
         if kwargs.get('id',None):
@@ -120,7 +120,7 @@ class LocationCreate(CreateView):
         comm = self.kwargs.get('organization',None)
         if comm:
             organization = Organization.objects.get(pk=comm)
-            context['action_url'] = reverse('addlocation', args=[state,city,comm,])
+            context['action_url'] = reverse('addlocation', args=[state.lower(),city.lower(),comm.lower(),])
             context['organization'] = organization
             # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin
