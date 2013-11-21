@@ -261,7 +261,7 @@ form .row .row.second-row {
 
 /* line 165, ../../scss/idea/add.scss */
 #id_what_kind,
-#id_where {
+#id_content_object {
   width: 300px;
   float: left;
 }

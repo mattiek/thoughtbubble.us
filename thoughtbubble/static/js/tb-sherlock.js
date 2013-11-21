@@ -98,3 +98,17 @@ var getIntersect = function() {
 }
 
 $('#communisplore').on('scroll',  getIntersect);
+
+
+$(document).ready( function() {
+    var height = $('#communisplore').height();
+
+    $('#communisplore').slimscroll({
+        color: '#00f',
+        size: '0px',
+        width: '100%',
+        height: height,
+        wheelStep: 2
+    });
+});
+

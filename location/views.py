@@ -43,7 +43,7 @@ class LocationDetail(DetailView):
         #     context['organization'] = Organization.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
         location = Location.objects.get(pk=id)
-        context['ideas'] = Idea.objects.filter(where=location)
+        context['ideas'] = location.some_ideas.all() #Idea.objects.filter(content_object=location)
         context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
         context['pictures'] = LocationImage.objects.filter(location=location).order_by('-date_created')
         return context
@@ -82,7 +82,7 @@ class LocationUpdate(UpdateView):
         context['organization'] = location.organization
         context['update'] = True
         if kwargs.get('id',None):
-            self.form.fields['where'].initial = location
+            self.form.fields['content_object'].initial = location
         return context
 
 
