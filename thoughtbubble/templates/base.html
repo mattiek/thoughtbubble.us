@@ -65,7 +65,7 @@
             <a href="{% url "home" %}"><img id="logo" src="{{ STATIC_URL }}images/thoughtbubble.us-logo.png" alt=""/></a>
 
                 {% block primarynav %}
-                    <a id="primary-explore" class="login-required" href="{% url "explore" exploring_state exploring_city %}"><i class="icon-explore"></i>Explore and add your ideas</a>
+                    <a id="primary-explore" href="{% url "explore" exploring_state exploring_city %}"><i class="icon-explore"></i>Explore and add your ideas</a>
                 {% endblock %}
         </div>
         <div id="home-container">
