@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Organization Detail
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/add.css" />
+{% endblock %}
+
+{% block bodyid %}organization-form{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div id="form-wrapper">
+        <form method="POST" action="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">
+            {% csrf_token %}
+            <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
+            <input type="hidden" name="curator" value="{{ form.curator.value }}"/>
+
+            {% include 'widgets/errors.html' %}
+        <div class="row">
+            <div id="deets">
+                <label for="id_title">title</label>
+                {{ form.title }}
+
+                <div class="row">
+                    <label for="id_website">website</label>
+                    {{ form.website }}
+                </div>
+
+                <div class="row">
+                    <label for="id_facebook_url">URL</label>
+                    {{ form.facebook_url }}
+                </div>
+
+                <div class="row">
+                    <label for="id_twitter_url">URL</label>
+                    {{ form.twitter_url }}
+                </div>
+
+                <div class="row">
+                    <label for="id_linkedin_url">URL</label>
+                    {{ form.linkedin_url }}
+                </div>
+            </div>
+                <img id="organization-logo" src="{{ organization.get_logo }}" alt=""/>
+        </div>
+
+        {#    About #}
+        <div id="about">
+            <label for="id_about">about</label>
+                {{ form.about }}
+        </div>
+
+        {#    News #}
+        <div id="news">
+            <div class="label">news</div>
+            <div id="news-photo" name="news-photo" class="picture"></div>
+            <textarea></textarea>
+            <a href="#" class="orange buttonize">save</a>
+        </div>
+
+
+        {#    Pictures #}
+        <div id="pictures">
+            <div class="label">pictures</div>
+            <div class="pictures-list">
+                {% if organization.get_pictures %}
+                    {% for picture in organization.get_pictures %}
+                        <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
+{#                            <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">#}
+                            <div class="cloak">
+                                <img src="{{ picture.url }}">
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
+
+                    </div>
+                {% endif %}
+
+            </div>
+            <div class="clr"></div>
+        </div>
+
+        {#    Partners #}
+        <div id="partners">
+            <div class="label">partners</div>
+            <div class="pictures-list">
+                <div id="partne-picture_1" name="partner-picture_1" class="picture" data-index="1" data-prefix="partner"></div>
+            </div>
+            <div class="clr"></div>
+        </div>
+
+        {#    Features #}
+        <div id="features">
+            <div class="label">features</div>
+            <div class="features-list">
+                {% for location in organization.location_set.all %}
+                    <a href="{% url 'location_update' exploring_state exploring_city location.id %}" class="feature">
+                        <div class="feature-cap"></div>
+                        <span>{{ location.name }}</span>
+                    </a>
+                {% endfor %}
+                <a href="{% url 'addlocation' exploring_state exploring_city organization.id %}"class="feature">
+                    <div class="feature-cap"></div>
+                    <span>add a feature</span>
+
+                </a>
+            </div>
+            <div class="clr"></div>
+        </div>
+
+
+        <input type="submit" class="orange submit-all" value="update all"/>
+
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-organization-admin.js"></script>
+{% endblock %}

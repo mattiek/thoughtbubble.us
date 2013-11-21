@@ -9,12 +9,12 @@ urlpatterns = patterns('idea.views',
    url(r'^add/?$', 'addidea', name='addidea'),
    # url(r'^adds/?$', IdeaCreate.as_view(), name='addideas'),
    # url(r'^(?P<id>\d+)/add/?$', 'addidea', name='addidea'),
-   url(r'^(?P<community>[-%\w ]+)/(?P<location>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
-   url(r'^(?P<community>[-%\w ]+)/?$', IdeaList.as_view(), name='idea_list'),
-   url(r'^(?P<community>[-%\w ]+)/(?P<location>[-%\w ]+)/?$', IdeaList.as_view(), name='idea_list'),
-   url(r'^(?P<community>[-%\w ]+)/(?P<location>[-%\w ]+)/(?P<pk>\d+)/?$', IdeaDetail.as_view(), name='idea_detail'),
+   url(r'^(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
+   url(r'^(?P<organization>[-%\w ]+)/?$', IdeaList.as_view(), name='idea_list'),
+   url(r'^(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/?$', IdeaList.as_view(), name='idea_list'),
+   url(r'^(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/(?P<pk>\d+)/?$', IdeaDetail.as_view(), name='idea_detail'),
 
-   url(r'^(?P<community>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
+   url(r'^(?P<organization>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
 
 
    url(r'^$', IdeaList.as_view(), name='idea_list'),

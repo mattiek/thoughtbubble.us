@@ -8,38 +8,38 @@
 
 {% block head %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/community/detail.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/detail.css" />
 {% endblock %}
 
-{% block bodyid %}community-detail{% endblock %}
+{% block bodyid %}organization-detail{% endblock %}
 
 {% block primarynav %}
 {% endblock %}
 
 {% block content %}
     <div id="page-wrapper">
-            <div id="community-logo">
-                <img src="{{ community.get_logo }}" alt=""/>
+            <div id="organization-logo">
+                <img src="{{ organization.get_logo }}" alt=""/>
             </div>
 
-        {% if community.curator == request.user or request.user.is_superuser %}
-            <h1><a href="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">admin</a></h1>
+        {% if organization.curator == request.user or request.user.is_superuser %}
+            <h1><a href="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">admin</a></h1>
         {% endif %}
         <div class="row title">
-                <div id="header">{{ community.title }}
+                <div id="header">{{ organization.title }}
                     {% include "widgets/sharing.html" %}
                 </div>
         </div>
 
-        <p id="cta">join our community, share your ideas, explore your community, and view our ideas</p>
+        <p id="cta">join our organization, share your ideas, explore your organization, and view our ideas</p>
 
             <div class="actions">
-                {% if request.user in community.members.all %}
-                    <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
+                {% if request.user in organization.members.all %}
+                    <a href="{% url 'organization_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button activated">
                         joined
                     </a>
                 {% else %}
-                    <a href="{% url 'community_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
+                    <a href="{% url 'organization_join' object.neighborhood.state object.neighborhood.city object.id %}" class="orange s-button">
                         join
                     </a>
                 {% endif %}
@@ -52,7 +52,7 @@
 
     {#    About #}
             <div id="about" class="large-blue">
-                {{ community.about }}
+                {{ organization.about }}
             </div>
 
            {% include "widgets/sharing.html" %}
@@ -67,7 +67,7 @@
         {#    Pictures #}
         <div class="picture-label">pictures</div>
         <div id="pictures">
-            {% for picture in community.communityimage_set.all %}
+            {% for picture in organization.organizationimage_set.all %}
                 <img src="{{ picture.img.url }}" alt=""/>
             {% endfor %}
         </div>
@@ -75,7 +75,7 @@
         {#    Partners #}
         <div class="partner-label">partners</div>
         <div id="partners">
-            {% for partner in community.partners.all %}
+            {% for partner in organization.partners.all %}
                 <img src="{{ partner.img.url }}" alt=""/>
             {% endfor %}
         </div>

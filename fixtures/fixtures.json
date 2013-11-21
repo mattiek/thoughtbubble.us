@@ -1,0 +1,56 @@
+[{
+    "pk": 2,
+    "model": "organization.organization",
+    "fields": {
+        "website": "http://parsons.fcdev.net/",
+        "partners": [],
+        "about": "The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.",
+        "neighborhood": 164,
+        "title": "Clintonvillian",
+        "twitter_url": "",
+        "facebook_url": "",
+        "date_modified": "2013-10-17T04:38:33.017Z",
+        "linkedin_url": "",
+        "curator": null,
+        "members": [28],
+        "date_created": "2013-10-02T00:00:00Z",
+        "logo": "profiles/da7e203c654ac7f3955999247ea44846.png"
+    }
+}, {
+    "pk": 3,
+    "model": "organization.organization",
+    "fields": {
+        "website": "",
+        "partners": [],
+        "about": "",
+        "neighborhood": 244,
+        "title": "Italian Village",
+        "twitter_url": "",
+        "facebook_url": "",
+        "date_modified": "2013-10-02T00:00:00Z",
+        "linkedin_url": "",
+        "curator": null,
+        "members": [],
+        "date_created": "2013-10-02T00:00:00Z",
+        "logo": ""
+    }
+}, {
+    "pk": 4,
+    "model": "organization.organization",
+    "fields": {
+        "website": "http://www.parsons.fcdev.net/",
+        "partners": [],
+        "about": "The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in. The most effective revitalization efforts are the ones local residents have a stake \u2014 and a role in.",
+        "neighborhood": 62,
+        "title": "Parsons Avenue",
+        "twitter_url": "",
+        "facebook_url": "",
+        "date_modified": "2013-10-16T17:35:54.659Z",
+        "linkedin_url": "",
+        "curator": null,
+        "members": [],
+        "date_created": "2013-10-16T17:35:54.659Z",
+        "logo": "profiles/da7e203c654ac7f3955999247ea44846_1.png"
+    }
+}
+]

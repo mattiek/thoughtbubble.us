@@ -21,7 +21,7 @@ from avatar.views import _get_avatars
 from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
-from community.models import Community
+from organization.models import Organization
 from idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
@@ -80,7 +80,7 @@ def explore(request, state=None, city=None, pk=None):
         request.session['exploring_city'] = city
 
     d = {}
-    d['communities'] = Community.objects.filter(neighborhood__city__iexact=city, neighborhood__state__iexact=state).order_by('neighborhood__name')
+    d['organizations'] = Organization.objects.filter(neighborhood__city__iexact=city, neighborhood__state__iexact=state).order_by('neighborhood__name')
 
     d['metros'] = {
         'current': city if city else 'Columbus',
@@ -88,7 +88,7 @@ def explore(request, state=None, city=None, pk=None):
     }
 
     if pk:
-        d['exploring'] = Community.objects.get(pk=pk)
+        d['exploring'] = Organization.objects.get(pk=pk)
 
     return render(request, 'explore.html', d)
 
@@ -102,9 +102,9 @@ def sherlock(request, state=None, city=None, pk=None):
         request.session['exploring_city'] = city
 
     d = {}
-    d['communities'] = Community.objects.filter().order_by('neighborhood__name')
+    d['organizations'] = Organization.objects.filter().order_by('neighborhood__name')
 
-    d['exploring'] = Community.objects.get(pk=pk)
+    d['exploring'] = Organization.objects.get(pk=pk)
 
     return render(request, 'sherlock.html', d)
 

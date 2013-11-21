@@ -125,13 +125,13 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
 
-    {% if community %}
+    {% if organization %}
         <script type="text/javascript">
             var neighborhoods = neighborhoods || {};
 
             $(document).ready(function() {
                 $.ajax({
-                    url: "{{ community.neighborhood.get_api_detail_url }}",
+                    url: "{{ organization.neighborhood.get_api_detail_url }}",
                     dataType: "json",
                     success: function(d) {
                         var hoods = L.geoJson(d,{
@@ -144,7 +144,7 @@
                             }
                         }).addTo(map);
 
-                        map.fitBounds(neighborhoods[{{ community.neighborhood.id }}].layer);
+                        map.fitBounds(neighborhoods[{{ organization.neighborhood.id }}].layer);
                         hoods.eachLayer(function(e) {
                             var marker = e;
     //            var feature = marker.feature;
