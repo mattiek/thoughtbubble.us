@@ -50,7 +50,7 @@
 
 /* line 48, ../scss/nav.scss */
 #nav li {
-  margin-right: 50px;
+  margin-right: 22px;
 }
 
 /* line 54, ../scss/nav.scss */
@@ -578,6 +578,8 @@ p {
 
 /* line 488, ../scss/nav.scss */
 .message-box {
+  position: absolute;
+  width: 928px;
   -moz-border-radius: 6px / 5px;
   -webkit-border-radius: 6px / 5px;
   border-radius: 6px / 5px;

@@ -38,3 +38,10 @@ p {
 .disabled {
     color: #b0b0b0;
 }
+
+#toprule {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: image-url('top-scale.png') repeat-x;
+}
