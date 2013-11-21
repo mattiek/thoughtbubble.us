@@ -334,3 +334,15 @@ h1,h2 { margin:0px 0px 10px; }
     }
   }
 }
+
+// hiding the scrollbar in the shadow DOM
+//#communisplore::-webkit-scrollbar,
+//#communisplore::-moz-scrollbar,
+//{
+//  display: none;
+//}
+
+.slimScrollDiv {
+  top: 0px;
+  position: absolute !important;
+}
