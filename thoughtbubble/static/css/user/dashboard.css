@@ -419,28 +419,29 @@ textarea {
 #edit-button, #save-button, #cancel-button {
   float: right;
   color: #FFFFFF;
+  margin-left: 10px;
 }
-/* line 77, ../../scss/user/dashboard.scss */
+/* line 78, ../../scss/user/dashboard.scss */
 #edit-button:visited, #save-button:visited, #cancel-button:visited {
   color: #FFFFFF;
 }
 
-/* line 82, ../../scss/user/dashboard.scss */
+/* line 83, ../../scss/user/dashboard.scss */
 #user {
   margin-left: 120px;
   padding-top: 20px;
   margin-bottom: 50px;
 }
-/* line 88, ../../scss/user/dashboard.scss */
+/* line 89, ../../scss/user/dashboard.scss */
 #user.editing #edit-button, #user.editing .user-info {
   display: none;
 }
-/* line 91, ../../scss/user/dashboard.scss */
+/* line 92, ../../scss/user/dashboard.scss */
 #user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
   display: block;
 }
 
-/* line 97, ../../scss/user/dashboard.scss */
+/* line 98, ../../scss/user/dashboard.scss */
 #update-info {
   color: #9d9d9d;
   /* text color */
@@ -448,14 +449,14 @@ textarea {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 103, ../../scss/user/dashboard.scss */
+/* line 104, ../../scss/user/dashboard.scss */
 #update-info label {
   float: left;
   width: 100px;
   margin-right: 10px;
 }
 
-/* line 110, ../../scss/user/dashboard.scss */
+/* line 111, ../../scss/user/dashboard.scss */
 fieldset {
   border: none;
 }

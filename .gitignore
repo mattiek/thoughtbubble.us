@@ -1,5 +1,6 @@
 *.pyc
 *.iml
+*.scssc
 thoughtbubble/settings/local.py
 media
 brandon
