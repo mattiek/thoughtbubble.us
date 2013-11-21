@@ -466,7 +466,7 @@
   margin-top: 50px;
 }
 
-/* line 79, ../../scss/idea/detail.scss */
+/* line 80, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
@@ -474,50 +474,50 @@ i {
   padding-left: 15px;
 }
 
-/* line 88, ../../scss/idea/detail.scss */
+/* line 89, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 91, ../../scss/idea/detail.scss */
+/* line 92, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 97, ../../scss/idea/detail.scss */
+/* line 98, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 100, ../../scss/idea/detail.scss */
+/* line 101, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 106, ../../scss/idea/detail.scss */
+/* line 107, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 110, ../../scss/idea/detail.scss */
+/* line 111, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 115, ../../scss/idea/detail.scss */
+/* line 116, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 119, ../../scss/idea/detail.scss */
+/* line 120, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 122, ../../scss/idea/detail.scss */
+/* line 123, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 128, ../../scss/idea/detail.scss */
+/* line 129, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }
