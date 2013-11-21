@@ -3,7 +3,7 @@ from rest_framework import routers
 from cities.views import CityViewset,CityTypeaheadViewset
 from location.views import LocationViewset
 from neighborhood.views import NeighborhoodViewset, NeighborhoodTypeaheadViewset
-from community.views import CommunityViewset
+from organization.views import OrganizationViewset
 import location
 
 router = routers.DefaultRouter()
@@ -14,7 +14,7 @@ router.register(r'cities', CityViewset)
 router.register(r'cities-typeahead', CityTypeaheadViewset)
 router.register(r'neighborhoods', NeighborhoodViewset, base_name="neighborhoods")
 router.register(r'neighborhoods-typeahead', NeighborhoodTypeaheadViewset)
-router.register(r'communities', CommunityViewset)
+router.register(r'organizations', OrganizationViewset)
 
 urlpatterns = patterns('',
                        # Examples:

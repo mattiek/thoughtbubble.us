@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from forms import AddLocationForm, LocationAdminForm
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib import messages
-from community.models import Community
+from organization.models import Organization
 from django.core.urlresolvers import reverse
 from rest_framework import generics
 from idea.models import Idea
@@ -20,9 +20,9 @@ class LocationViewset(viewsets.ModelViewSet):
     queryset = Location.objects.none()
 
     def get_queryset(self):
-        community = self.request.GET.get('community',None)
-        if community:
-            return Location.objects.filter(community=community)
+        organization = self.request.GET.get('organization',None)
+        if organization:
+            return Location.objects.filter(organization=organization)
         name = self.request.GET.get('metro','')
         return Location.objects.filter(name__icontains=name)
 
@@ -40,7 +40,7 @@ class LocationDetail(DetailView):
 
         id = self.kwargs.get('pk',None)
         # if id:
-        #     context['community'] = Community.objects.get(pk=id)
+        #     context['organization'] = Organization.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
         location = Location.objects.get(pk=id)
         context['ideas'] = Idea.objects.filter(where=location)
@@ -79,7 +79,7 @@ class LocationUpdate(UpdateView):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
         location = Location.objects.get(pk=self.kwargs['pk'])
         context['action_url'] = reverse('location_update', args=[self.kwargs['state'], self.kwargs['city'], self.kwargs['pk'],])
-        context['community'] = location.community
+        context['organization'] = location.organization
         context['update'] = True
         if kwargs.get('id',None):
             self.form.fields['where'].initial = location
@@ -91,8 +91,8 @@ class LocationCreate(CreateView):
     form_class = AddLocationForm
 
     def form_valid(self, form):
-        comm = self.kwargs.get('community',None)
-        community = Community.objects.get(pk=comm)
+        comm = self.kwargs.get('organization',None)
+        organization = Organization.objects.get(pk=comm)
         s = Location(
             name=form.cleaned_data['name'],
             address=form.cleaned_data['address'],
@@ -101,7 +101,7 @@ class LocationCreate(CreateView):
             # what_kind=form.cleaned_data['what_kind'],
             latitude=form.cleaned_data['latitude'],
             longitude=form.cleaned_data['longitude'],
-            community=community
+            organization=organization
             )
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
@@ -117,11 +117,11 @@ class LocationCreate(CreateView):
 
         state = self.kwargs.get('state',None)
         city = self.kwargs.get('city',None)
-        comm = self.kwargs.get('community',None)
+        comm = self.kwargs.get('organization',None)
         if comm:
-            community = Community.objects.get(pk=comm)
+            organization = Organization.objects.get(pk=comm)
             context['action_url'] = reverse('addlocation', args=[state,city,comm,])
-            context['community'] = community
-            # self.form.fields['where'].initial = community
+            context['organization'] = organization
+            # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin
         return context

@@ -8,7 +8,7 @@ from django.core.urlresolvers import reverse
 from partner.models import Partner
 
 
-class Community(models.Model):
+class Organization(models.Model):
     neighborhood = models.OneToOneField(Neighborhood)
 
     logo = models.ImageField(upload_to=path_and_rename('profiles', 'logo'), null=True, blank=True)
@@ -21,7 +21,7 @@ class Community(models.Model):
 
     about = models.TextField(null=True, blank=True)
 
-    curator = models.ForeignKey(ThoughtbubbleUser, related_name="community_curator", null=True, blank=True)
+    curator = models.ForeignKey(ThoughtbubbleUser, related_name="organization_curator", null=True, blank=True)
 
     members = models.ManyToManyField(ThoughtbubbleUser, null=True, blank=True)
 
@@ -31,10 +31,10 @@ class Community(models.Model):
     partners = models.ManyToManyField(Partner, null=True, blank=True)
 
     class Meta:
-        verbose_name_plural = "Communities"
+        verbose_name_plural = "Organizations"
 
     def __unicode__(self):
-        return "%s Community" % self.title
+        return "%s Organization" % self.title
 
     def get_logo(self):
         if self.logo:
@@ -42,10 +42,10 @@ class Community(models.Model):
         return ''
 
     def get_absolute_url(self):
-        return reverse('community_detail', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
+        return reverse('organization_detail', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
 
     def get_pictures(self):
-        return self.communityimage_set.all()
+        return self.organizationimage_set.all()
 
     def get_id(self):
         return self.title.lower().replace(' ','-')
@@ -57,7 +57,7 @@ class Community(models.Model):
         props['explore'] = reverse('sherlock', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
         props['title'] = self.title
         props['icon'] = {
-            "iconUrl": "/static/images/featured-community-location.png",
+            "iconUrl": "/static/images/featured-organization-location.png",
             "iconSize": [24, 30],
             "iconAnchor": [15, 22],
             "popupAnchor": [0, -25]
@@ -94,22 +94,22 @@ class Community(models.Model):
 
 
 
-class CommunityNews(models.Model):
-    community = models.ForeignKey(Community)
+class OrganizationNews(models.Model):
+    organization = models.ForeignKey(Organization)
     name = models.CharField(max_length=255, null=True, blank=True)
-    img = models.ImageField(upload_to="communities/news", null=True, blank=True)
+    img = models.ImageField(upload_to="organizations/news", null=True, blank=True)
     content = models.TextField(null=True, blank=True)
 
     class Meta:
-        verbose_name_plural = "Community News"
+        verbose_name_plural = "Organization News"
 
     def __unicode__(self):
         return self.name
 
 
-class CommunityImage(models.Model):
-    community = models.ForeignKey(Community)
-    img = models.ImageField(upload_to=path_and_rename('communities','img'))
+class OrganizationImage(models.Model):
+    organization = models.ForeignKey(Organization)
+    img = models.ImageField(upload_to=path_and_rename('organizations','img'))
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __unicode__(self):
