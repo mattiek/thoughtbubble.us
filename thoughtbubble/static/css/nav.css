@@ -429,7 +429,7 @@ form .row .row .columns.no-padding {
   width: 100%;
   background-color: #49c3dd;
   /* layer fill content */
-  margin: -8px 0 0 0;
+  margin: 0px 0 0 0;
 }
 /* line 362, ../scss/nav.scss */
 #footer ul {
@@ -449,13 +449,18 @@ form .row .row .columns.no-padding {
   margin-right: 12px;
 }
 
-/* line 380, ../scss/nav.scss */
+/* line 381, ../scss/nav.scss */
+#home #footer {
+  margin: -8px 0 0 0;
+}
+
+/* line 386, ../scss/nav.scss */
 #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 386, ../scss/nav.scss */
+/* line 392, ../scss/nav.scss */
 #footer-logout {
   background: url(../images/user-logout-icon.png) no-repeat 0;
   text-indent: 13px;
@@ -466,7 +471,7 @@ form .row .row .columns.no-padding {
   font-size: 13px;
 }
 
-/* line 395, ../scss/nav.scss */
+/* line 401, ../scss/nav.scss */
 #footer-twitter {
   background: url(../images/twitter-cloud.png);
   width: 23px;
@@ -474,7 +479,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 402, ../scss/nav.scss */
+/* line 408, ../scss/nav.scss */
 #footer-facebook {
   background: url(../images/facebook-cloud.png);
   width: 28px;
@@ -482,7 +487,7 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 409, ../scss/nav.scss */
+/* line 415, ../scss/nav.scss */
 #footer-linkedin {
   background: url(../images/linkedin-cloud.png);
   width: 22px;
@@ -490,45 +495,45 @@ form .row .row .columns.no-padding {
   display: block;
 }
 
-/* line 417, ../scss/nav.scss */
+/* line 423, ../scss/nav.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 422, ../scss/nav.scss */
+/* line 428, ../scss/nav.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 426, ../scss/nav.scss */
+/* line 432, ../scss/nav.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 430, ../scss/nav.scss */
+/* line 436, ../scss/nav.scss */
 a {
   text-decoration: none;
   color: #4585c3;
   /* text color */
 }
-/* line 434, ../scss/nav.scss */
+/* line 440, ../scss/nav.scss */
 a:visited {
   color: #4585c3;
   /* text color */
 }
 
-/* line 439, ../scss/nav.scss */
+/* line 445, ../scss/nav.scss */
 ul {
   padding-left: 0px;
 }
 
-/* line 443, ../scss/nav.scss */
+/* line 449, ../scss/nav.scss */
 p {
   margin-top: 0px;
 }
 
-/* line 447, ../scss/nav.scss */
+/* line 453, ../scss/nav.scss */
 .error-box {
   -moz-border-radius: 6px / 5px;
   -webkit-border-radius: 6px / 5px;
@@ -558,11 +563,11 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 471, ../scss/nav.scss */
+/* line 477, ../scss/nav.scss */
 .error-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 474, ../scss/nav.scss */
+/* line 480, ../scss/nav.scss */
 .error-box .details h3 {
   color: #f37d23;
   /* text color */
@@ -570,13 +575,13 @@ p {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 481, ../scss/nav.scss */
+/* line 487, ../scss/nav.scss */
 .error-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 488, ../scss/nav.scss */
+/* line 494, ../scss/nav.scss */
 .message-box {
   position: absolute;
   width: 928px;
@@ -608,16 +613,16 @@ p {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 514, ../scss/nav.scss */
+/* line 520, ../scss/nav.scss */
 .message-box .details {
   margin: 0 10px 0 50px;
 }
-/* line 517, ../scss/nav.scss */
+/* line 523, ../scss/nav.scss */
 .message-box .details h4 {
   font-family: "Museo Sans", sans-serif;
   margin: 10px;
 }
-/* line 522, ../scss/nav.scss */
+/* line 528, ../scss/nav.scss */
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
