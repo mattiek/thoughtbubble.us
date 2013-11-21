@@ -5,14 +5,14 @@
         <option value="recent" {% if ordering == "recent" %}selected{% endif %}>Recent</option>
         <option value="support" {% if ordering == "support" %}selected{% endif %}>Most Supported</option>
     </select>
-    {{ idea_filter.form.where }}
+    {{ idea_filter.form.content_object }}
 </form>
 <script type="text/javascript">
     $('#order').chosen({disable_search_threshold: 10}).change( function(e) {
         $(e.target).parents('form').submit();
     });
 
-    $('#id_where').chosen({disable_search_threshold: 10}).change( function(e) {
+    $('#id_content_object').chosen({disable_search_threshold: 10}).change( function(e) {
         $(e.target).parents('form').submit();
     });
 </script>

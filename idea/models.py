@@ -2,12 +2,15 @@ from django.db import models
 from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
 from thoughtbubble.models import ThoughtbubbleUser
-from location.models import Location
+#from location.models import Location
 import os
 import hashlib
 import datetime
 from django.utils.timezone import now
 from django.core.urlresolvers import reverse
+
+from django.contrib.contenttypes.models import ContentType
+from django.contrib.contenttypes import generic
 
 from supportering.models import AbstractSupport
 
@@ -33,7 +36,14 @@ class Idea(models.Model):
 
     what_kind = models.ForeignKey(IdeaType)
     what_for = models.CharField(max_length=20, choices=FOR_CHOICES)
-    where = models.ForeignKey(Location)
+    #where = models.ForeignKey(Location)
+
+    # Getting Generic
+    content_type = models.ForeignKey(ContentType, null=True)
+    object_id = models.PositiveIntegerField()
+    content_object = generic.GenericForeignKey()
+
+
 
     user = models.ForeignKey(ThoughtbubbleUser, null=True)
 
@@ -50,7 +60,7 @@ class Idea(models.Model):
         super(Idea, self).save(*args, **kwargs)
 
     def get_title(self):
-        return "%s in %s for %s" % (self.name, self.where, self.what_for)
+        return "%s in %s for %s" % (self.name, self.content_object, self.what_for)
 
     def comment_count(self):
         return 0
@@ -63,15 +73,15 @@ class Idea(models.Model):
         return d.days
 
     def get_support_url(self):
-        return reverse('support_idea',args=[self.where.organization.neighborhood.state.lower(),
-                                           self.where.organization.neighborhood.city.lower(),
+        return reverse('support_idea',args=[self.content_object.organization.neighborhood.state.lower(),
+                                           self.content_object.organization.neighborhood.city.lower(),
                                            self.id])
 
     def get_absolute_url(self):
-        return reverse('idea_detail', args=[self.where.organization.neighborhood.state.lower(),
-                                            self.where.organization.neighborhood.city.lower(),
-                                            self.where.organization.neighborhood.name.lower(),
-                                            self.where.name.lower(),
+        return reverse('idea_detail', args=[self.content_object.organization.neighborhood.state.lower(),
+                                            self.content_object.organization.neighborhood.city.lower(),
+                                            self.content_object.organization.neighborhood.name.lower(),
+                                            self.content_object.name.lower(),
                                             self.id])
 
 class IdeaSupport(AbstractSupport):

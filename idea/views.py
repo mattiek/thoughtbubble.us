@@ -25,7 +25,7 @@ def addidea(request, state, city, id=None, organization=None, location=None):
                         name=data['name'],
                         description=data['description'],
                         what_kind=data['what_kind'],
-                        where=data['where'],
+                        content_object=data['content_object'],
                         what_for=data['what_for'],
                         user=request.user
                         )
@@ -52,7 +52,7 @@ def addidea(request, state, city, id=None, organization=None, location=None):
                 pic4.save()
 
             messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
-            return redirect(idea.where.get_absolute_url())
+            return redirect(idea.content_object.get_absolute_url())
 
     else:
         form = AddIdeaForm()
@@ -60,7 +60,7 @@ def addidea(request, state, city, id=None, organization=None, location=None):
     d = {'form': form}
 
     if id:
-        form.fields['where'].initial = Location.objects.get(pk=id)
+        form.fields['content_object'].initial = Location.objects.get(pk=id)
 
     if organization:
         d['location'] = Location.objects.get(
@@ -68,7 +68,7 @@ def addidea(request, state, city, id=None, organization=None, location=None):
                                             organization__neighborhood__city__iexact=city,
                                             organization__neighborhood__state__iexact=state,
                                             name=location)
-        form.fields['where'].initial = d['location']
+        form.fields['content_object'].initial = d['location']
 
 
 
@@ -84,14 +84,14 @@ class IdeaList(ListView):
         self.city = self.kwargs.get('city', None)
         self.state = self.kwargs.get('state', None)
         if self.organization:
-            return Idea.objects.filter(where__organization__neighborhood__city__iexact=self.city,
-                                       where__organization__neighborhood__state__iexact=self.state,
-                                       where__organization__title__iexact=self.organization)
+            return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
+                                       content_object__organization__neighborhood__state__iexact=self.state,
+                                       content_object__organization__title__iexact=self.organization)
         if self.city and self.state:
-            return Idea.objects.filter(where__organization__neighborhood__city__iexact=self.city,
-                                       where__organization__neighborhood__state__iexact=self.state)
+            return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
+                                       content_object__organization__neighborhood__state__iexact=self.state)
         if self.state:
-            return Idea.objects.filter(where__organization__neighborhood__state__iexact=self.state)
+            return Idea.objects.filter(content_object__organization__neighborhood__state__iexact=self.state)
         return Idea.objects.filter()
 
     def get_context_data(self, **kwargs):
@@ -156,7 +156,7 @@ def support_idea(request, state, city, id):
 def support_idea_from_detail(request,id):
     support_idea(request,id)
     idea = Idea.objects.get(pk=id)
-    return redirect('idea_detail', idea.where.organization.state,
-                    idea.where.organization.city, idea.where.organization.name, id)
+    return redirect('idea_detail', idea.content_object.organization.state,
+                    idea.content_object.organization.city, idea.content_object.organization.name, id)
 
 

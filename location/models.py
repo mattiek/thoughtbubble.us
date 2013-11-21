@@ -7,6 +7,9 @@ from neighborhood.models import Neighborhood
 from django.core.urlresolvers import reverse
 from partner.models import Partner
 
+from idea.models import Idea
+from django.contrib.contenttypes import generic
+
 MAKI_CHOICES = (
     ('garden', 'Garden'),
     ('rocket', 'Rocket'),
@@ -48,6 +51,8 @@ class Location(models.Model):
 
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+
+    some_ideas = generic.GenericRelation(Idea)
 
 
     def __unicode__(self):

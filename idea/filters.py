@@ -7,14 +7,14 @@ class IdeaFilter(django_filters.FilterSet):
     date_created = django_filters.DateRangeFilter()
     class Meta:
         model = Idea
-        fields = ['where', 'date_created']
+        fields = [ 'date_created']
 
     def __init__(self, *args, **kwargs):
         city = kwargs.pop('city','columbus')
         state = kwargs.pop('state','oh')
         super(IdeaFilter, self).__init__(*args, **kwargs)
-        self.filters['where'].extra.update(
-            {'empty_label': 'where',
+        self.filters['content_object'].extra.update(
+            {'empty_label': 'content_object',
              'queryset': Location.objects.filter(organization__neighborhood__city__iexact=city, organization__neighborhood__state__iexact=state)})
         # self.filters['date_created'].extra.update(
         #     {'empty_label': 'when'})
