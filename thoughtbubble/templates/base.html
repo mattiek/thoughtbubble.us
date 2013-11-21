@@ -56,7 +56,7 @@
                 {% endif %}
             </ul>
             <ul id="nav">
-                <li><a id="idea-nav" href="{% url "addidea" exploring_state exploring_city %}">ideas</a></li>
+                <li><a id="idea-nav" class="login-required" href="{% url "addidea" exploring_state exploring_city %}">ideas</a></li>
                 <li><a href="{% url "explore" exploring_state exploring_city %}">explore</a></li>
                 <li><a href="/organizations">organizations</a></li>
                 <li><a href="/about">about</a></li>
@@ -65,7 +65,7 @@
             <a href="{% url "home" %}"><img id="logo" src="{{ STATIC_URL }}images/thoughtbubble.us-logo.png" alt=""/></a>
 
                 {% block primarynav %}
-                    <a id="primary-explore" href="{% url "explore" exploring_state exploring_city %}"><i class="icon-explore"></i>Explore and add your ideas</a>
+                    <a id="primary-explore" class="login-required" href="{% url "explore" exploring_state exploring_city %}"><i class="icon-explore"></i>Explore and add your ideas</a>
                 {% endblock %}
         </div>
         <div id="home-container">

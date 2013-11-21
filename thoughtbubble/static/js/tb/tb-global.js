@@ -44,3 +44,16 @@ $('#create-an-account').magnificPopup({
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
 
+$( document ).on( "click", ".message-box", function(e) {
+    $(this).remove();
+});
+
+$( document ).on( "click", ".logged-out .login-required", function(e){
+    e.preventDefault();
+    $.magnificPopup.open({
+    items: {
+        src: '#login-overlay',
+        type: 'inline'
+        }
+    });
+});
