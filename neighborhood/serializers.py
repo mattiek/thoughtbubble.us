@@ -33,7 +33,7 @@ class NeighborhoodSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Neighborhood
-        fields = ('id', 'name', 'city', 'state', 'county', 'center', 'geometry', 'type', 'properties', 'community')
+        fields = ('id', 'name', 'city', 'state', 'county', 'center', 'geometry', 'type', 'properties', 'organization')
         depth = 1 # Nested object
 
     @property
@@ -52,5 +52,5 @@ class NeighborhoodSerializer(serializers.ModelSerializer):
 class NeighborhoodTypeaheadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Neighborhood
-        fields = ('id', 'name', 'city', 'state', 'county', 'community')
+        fields = ('id', 'name', 'city', 'state', 'county', 'organization')
         depth = 1 # Nested object

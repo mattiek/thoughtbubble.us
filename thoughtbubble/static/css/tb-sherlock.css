@@ -224,7 +224,7 @@ p {
 }
 /* line 111, ../scss/tb-sherlock.scss */
 .cover.active:before {
-  background: url('../images/featured-community-location.png?1381979344') 0px 0px no-repeat;
+  background: url('../images/featured-organization-location.png?1381979344') 0px 0px no-repeat;
 }
 
 /* line 124, ../scss/tb-sherlock.scss */
@@ -239,7 +239,7 @@ p {
   width: 24px;
   height: 30px;
   margin: -30px 0 0 -15px;
-  background: url('../images/featured-community-location.png?1381979344') 0px 0px no-repeat;
+  background: url('../images/featured-organization-location.png?1381979344') 0px 0px no-repeat;
   position: absolute;
 }
 

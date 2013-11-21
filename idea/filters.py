@@ -15,7 +15,7 @@ class IdeaFilter(django_filters.FilterSet):
         super(IdeaFilter, self).__init__(*args, **kwargs)
         self.filters['where'].extra.update(
             {'empty_label': 'where',
-             'queryset': Location.objects.filter(community__neighborhood__city__iexact=city, community__neighborhood__state__iexact=state)})
+             'queryset': Location.objects.filter(organization__neighborhood__city__iexact=city, organization__neighborhood__state__iexact=state)})
         # self.filters['date_created'].extra.update(
         #     {'empty_label': 'when'})
 

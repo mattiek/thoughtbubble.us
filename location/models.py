@@ -2,7 +2,7 @@ from django.contrib.gis.db import models
 from cities.models import City
 import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
-from community.models import Community
+from organization.models import Organization
 from neighborhood.models import Neighborhood
 from django.core.urlresolvers import reverse
 from partner.models import Partner
@@ -42,7 +42,7 @@ class Location(models.Model):
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 
-    community = models.ForeignKey(Community, null=True, blank=True)
+    organization = models.ForeignKey(Organization, null=True, blank=True)
 
     partners = models.ManyToManyField(Partner, null=True, blank=True)
 
@@ -52,16 +52,16 @@ class Location(models.Model):
 
     def __unicode__(self):
         try:
-            return "%s in %s" % (self.name,self.community.title,)
+            return "%s in %s" % (self.name,self.organization.title,)
         except:
-            return "%s [no community]" % (self.name,)
+            return "%s [no organization]" % (self.name,)
 
     def get_absolute_url(self):
         state = 'oh'
         city = 'columbus'
-        if self.community:
-            state = self.community.neighborhood.state
-            city = self.community.neighborhood.city
+        if self.organization:
+            state = self.organization.neighborhood.state
+            city = self.organization.neighborhood.city
 
         return reverse('location_detail', args=[state,
                                                 city,
@@ -74,16 +74,16 @@ class Location(models.Model):
         return reverse('locations-detail',args=[self.id,])
 
     def add_idea_url(self):
-            return reverse('addidea', args=[self.community.neighborhood.state,
-                                            self.community.neighborhood.city,
-                                            self.community.title,
+            return reverse('addidea', args=[self.organization.neighborhood.state,
+                                            self.organization.neighborhood.city,
+                                            self.organization.title,
                                             self.name
             ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[self.community.neighborhood.state,
-                                        self.community.neighborhood.city,
-                                        self.community.title,
+        return reverse('idea_list', args=[self.organization.neighborhood.state,
+                                        self.organization.neighborhood.city,
+                                        self.organization.title,
                                         self.name
         ])
 
@@ -94,10 +94,10 @@ class Location(models.Model):
             self.latitude = self.geom[1]
             self.longitude = self.geom[0]
 
-        # Put in the correct Community
+        # Put in the correct Organization
         # s = Neighborhood.objects.filter(geom__contains=self.geom)
         # if s:
-        #     self.community = s[0]
+        #     self.organization = s[0]
 
 
         super(Location, self).save(*args, **kwargs)
@@ -122,7 +122,7 @@ class Location(models.Model):
         properties['about'] = self.about
 
         properties['icon'] = {
-            "iconUrl": "/static/images/featured-community-location.png",
+            "iconUrl": "/static/images/featured-organization-location.png",
             "iconSize": [24, 30],
             "iconAnchor": [15, 22],
             "popupAnchor": [0, -25]

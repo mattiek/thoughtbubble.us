@@ -1,6 +1,6 @@
 from django.forms import widgets
 from rest_framework import serializers, pagination
-from models import Community
+from models import Organization
 from neighborhood.serializers import NeighborhoodSerializer
 
 
@@ -26,7 +26,7 @@ class CustomPaginationSerializer(pagination.BasePaginationSerializer):
     results_field = 'features'
 
 
-class CommunitySerializer(serializers.HyperlinkedModelSerializer):
+class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
     center = serializers.CharField(source='neighborhood.getCenter', read_only=True)
     geometry = serializers.CharField(source='neighborhood.getGeometry')
     properties = serializers.CharField(source='getProperties', read_only=True)
@@ -35,12 +35,12 @@ class CommunitySerializer(serializers.HyperlinkedModelSerializer):
     neighborhood = NeighborhoodSerializer()
 
     class Meta:
-        model = Community
+        model = Organization
         fields = ('id', 'neighborhood', 'center', 'geometry', 'type', 'properties')
 
     @property
     def data(self):
-        df = super(CommunitySerializer, self).data
+        df = super(OrganizationSerializer, self).data
         m = {
             "type": "FeatureCollection",
             "features": df,

@@ -105,7 +105,7 @@ var experimentalMarkers = function(d) {
 
 TB.Map.mapLayer.on('ready', function() {
     $.ajax({
-        url:  '/api/v1/communities/.json',
+        url:  '/api/v1/organizations/.json',
         dataType: 'json',
         success: function load(d) {
 

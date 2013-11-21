@@ -30,11 +30,11 @@
         <h3>organization</h3>
         <div id="minisplore-wrapper">
                 <ul>
-                    {% for community in communities %}
-                        <li><a class="community" href="{% url 'sherlock' exploring_state exploring_city community.id %}"
-                               data-id="{{ community.neighborhood.id }}"
-                               data-community="{{ community.id }}"
-                                >{{ community.title }}</a></li>
+                    {% for organization in organizations %}
+                        <li><a class="organization" href="{% url 'sherlock' exploring_state exploring_city organization.id %}"
+                               data-id="{{ organization.neighborhood.id }}"
+                               data-organization="{{ organization.id }}"
+                                >{{ organization.title }}</a></li>
                     {% endfor %}
                         <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>
                 </ul>

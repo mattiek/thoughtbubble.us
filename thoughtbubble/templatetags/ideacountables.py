@@ -1,6 +1,6 @@
 from django import template
 from idea.models import Idea, IdeaSupport
-from community.models import Community
+from organization.models import Organization
 from supportering.models import CommentSupport
 
 register = template.Library()
@@ -21,7 +21,7 @@ def get_idea_support_count(value):
 def organizations_joined_count(value):
     if not value.is_authenticated():
         return 0
-    return Community.objects.filter(members=value).count()
+    return Organization.objects.filter(members=value).count()
 
 @register.filter(name='is_supported_by_user')
 def is_supported(value, arg):

@@ -57,7 +57,7 @@ INSTALLED_APPS = (
     'floppyforms',
     'supportering',
     'commenteering',
-    'community',
+    'organization',
     'project',
     'partner',
     # 'social.apps.django_app.default',

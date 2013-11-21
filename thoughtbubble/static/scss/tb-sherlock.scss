@@ -109,7 +109,7 @@ p {
     margin: 0px auto 20px;
   }
   &.active:before {
-    background: image-url('featured-community-location.png') 0px 0px no-repeat;
+    background: image-url('featured-organization-location.png') 0px 0px no-repeat;
   }
 }
 
@@ -137,7 +137,7 @@ p {
   height: 30px;
   //margin: -60px 0px 0px -60px;
   margin: -30px 0 0 -15px;
-  background: image-url('featured-community-location.png') 0px 0px no-repeat;
+  background: image-url('featured-organization-location.png') 0px 0px no-repeat;
   position: absolute;
 
 }

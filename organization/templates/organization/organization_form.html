@@ -3,22 +3,22 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    Community Detail
+    Organization Detail
 {% endblock %}
 
 {% block head %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/community/add.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/add.css" />
 {% endblock %}
 
-{% block bodyid %}community-form{% endblock %}
+{% block bodyid %}organization-form{% endblock %}
 
 {% block primarynav %}
 {% endblock %}
 
 {% block content %}
     <div id="form-wrapper">
-        <form method="POST" action="{% url 'community_update' community.neighborhood.state community.neighborhood.city community.id %}">
+        <form method="POST" action="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">
             {% csrf_token %}
             <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
             <input type="hidden" name="curator" value="{{ form.curator.value }}"/>
@@ -49,7 +49,7 @@
                     {{ form.linkedin_url }}
                 </div>
             </div>
-                <img id="community-logo" src="{{ community.get_logo }}" alt=""/>
+                <img id="organization-logo" src="{{ organization.get_logo }}" alt=""/>
         </div>
 
         {#    About #}
@@ -71,8 +71,8 @@
         <div id="pictures">
             <div class="label">pictures</div>
             <div class="pictures-list">
-                {% if community.get_pictures %}
-                    {% for picture in community.get_pictures %}
+                {% if organization.get_pictures %}
+                    {% for picture in organization.get_pictures %}
                         <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
 {#                            <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">#}
                             <div class="cloak">
@@ -103,13 +103,13 @@
         <div id="features">
             <div class="label">features</div>
             <div class="features-list">
-                {% for location in community.location_set.all %}
+                {% for location in organization.location_set.all %}
                     <a href="{% url 'location_update' exploring_state exploring_city location.id %}" class="feature">
                         <div class="feature-cap"></div>
                         <span>{{ location.name }}</span>
                     </a>
                 {% endfor %}
-                <a href="{% url 'addlocation' exploring_state exploring_city community.id %}"class="feature">
+                <a href="{% url 'addlocation' exploring_state exploring_city organization.id %}"class="feature">
                     <div class="feature-cap"></div>
                     <span>add a feature</span>
 
@@ -127,5 +127,5 @@
 
 {% block footerscripts %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-community-admin.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-organization-admin.js"></script>
 {% endblock %}
