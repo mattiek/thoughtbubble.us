@@ -23,7 +23,7 @@
             </div>
 
         {% if organization.curator == request.user or request.user.is_superuser %}
-            <h1><a href="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">admin</a></h1>
+            <h1 style="margin:0px;"><a href="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">admin</a></h1>
         {% endif %}
         <div class="row title">
                 <div id="header">{{ organization.title }}

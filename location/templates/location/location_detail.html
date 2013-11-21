@@ -24,7 +24,7 @@
 {% block content %}
 <div id="page-wrapper">
     {% if organization.curator == request.user or request.user.is_superuser %}
-        <h1><a href="{% url 'location_update' exploring_state exploring_city location.id %}">admin</a></h1>
+        <h1 style="margin:0px;"><a href="{% url 'location_update' exploring_state exploring_city location.id %}">admin</a></h1>
     {% endif %}
 
     <div class="row title">
