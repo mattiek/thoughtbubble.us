@@ -41,6 +41,7 @@
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}{% if not user.is_authenticated %} logged-out{% else %} logged-in{% endif %}">
 {% block navstart %}
     <div id="wrapper" class="">
+    {% block toprule %} {% endblock %}
         <div id="illustration">
             {#    Messages #}
             {% include "widgets/messages.html" %}
