@@ -3,6 +3,7 @@ from django import forms
 from django.forms import ModelForm
 from models import *
 from thoughtbubble.widgets import FilePicker
+from location.models import Location
 
 
 FOR_CHOICES_AND_EMPTY = [('','')] + FOR_CHOICES
@@ -19,7 +20,7 @@ class AddIdeaForm(forms.Form):
                                        empty_label='',
                                        error_messages={'required':'Tell us what kind of idea this is.'})
 
-    where = forms.ModelChoiceField(queryset=Location.objects.filter(organization__neighborhood__city='Columbus').order_by('name'),
+    content_object = forms.ModelChoiceField(queryset=Location.objects.filter(organization__neighborhood__city='Columbus').order_by('name'),
                                    empty_label='',
                                     error_messages={'required':'You must tell where it is.'})
 
