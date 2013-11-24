@@ -1,6 +1,7 @@
 from models import Neighborhood
 from serializers import NeighborhoodSerializer, NeighborhoodTypeaheadSerializer
 from rest_framework import viewsets
+from vanilla import DetailView, CreateView, UpdateView, ListView
 
 class NeighborhoodViewset(viewsets.ModelViewSet):
     serializer_class = NeighborhoodSerializer
@@ -24,3 +25,6 @@ class NeighborhoodTypeaheadViewset(viewsets.ModelViewSet):
         max_results = self.request.GET.get('max','10')
         offset = self.request.GET.get('offset','0')
         return Neighborhood.objects.filter(name__icontains=neighborhood, city__icontains=name, organization__isnull=True)[offset:max_results]
+
+class NeighborhoodDetail(DetailView):
+    model = Neighborhood

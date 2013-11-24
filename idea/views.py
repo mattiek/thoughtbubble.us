@@ -7,8 +7,11 @@ from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
 from django.contrib.comments.views.comments import post_comment
 import json as JSON
-from filters import IdeaFilter
+# from filters import IdeaFilter
 from django.db.models import Q, Count
+
+from organization.models import Organization
+from location.models import Location
 
 def addidea(request, state, city, id=None, organization=None, location=None):
     if not request.user.is_authenticated():
@@ -80,9 +83,28 @@ class IdeaList(ListView):
 
 
     def get_queryset(self):
+        ### Basic parameters
         self.organization = self.kwargs.get('organization', None)
         self.city = self.kwargs.get('city', None)
         self.state = self.kwargs.get('state', None)
+
+        ### Ordering
+        ordering = self.request.GET.get('order',None)
+        if (ordering == 'support'):
+            self.queryset = self.queryset.annotate(num_books=Count('ideasupport')).order_by('-num_books')
+        else:
+            self.queryset = self.queryset.order_by('-date_created')
+
+        ### Check to see that we are on an Organization Idea List page
+        if self.organization:
+            organizations = Organization.objects.filter(title__iexact=self.organization).values_list('pk', flat=True)
+            locations = Location.objects.filter(organization__in=organizations)
+            return Idea.objects.filter(content_type__name='location', object_id__in=locations)
+
+        neighborhood = self.kwargs.get('neighborhood', None)
+        return Idea.objects.filter(content_type__name='neighborhood', object_id=neighborhood)
+
+
         if self.organization:
             return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
                                        content_object__organization__neighborhood__state__iexact=self.state,
@@ -96,18 +118,12 @@ class IdeaList(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(IdeaList, self).get_context_data(**kwargs)
-        f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
+        # f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
+
 
         ordering = self.request.GET.get('order',None)
 
         context['ideas'] = self.get_queryset()
-
-        if (ordering == 'support'):
-            context['ideas'] = f.qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
-        else:
-            context['ideas'] = f.qs.order_by('-date_created')
-
-        context['idea_filter'] = f
 
         context['ordering'] = ordering
 
