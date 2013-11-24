@@ -118,7 +118,7 @@ class IdeaList(ListView):
         neighborhood = self.kwargs.get('neighborhood', None)
         return Idea.objects.filter(content_type__name='neighborhood', object_id=neighborhood)
 
-
+        ### DEPERECATED
         if self.organization:
             return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
                                        content_object__organization__neighborhood__state__iexact=self.state,
@@ -138,6 +138,7 @@ class IdeaList(ListView):
         f = FilterForm(self.request.GET)
         # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
         f.fields['where'].queryset = Location.objects.filter(organization=self.organization)
+        f.fields['where'].empty_label = self.organization.title
 
         context['filterform'] = f
 
