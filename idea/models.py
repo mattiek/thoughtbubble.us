@@ -73,14 +73,24 @@ class Idea(models.Model):
         return d.days
 
     def get_support_url(self):
-        return reverse('support_idea',args=[self.content_object.organization.neighborhood.state.lower(),
-                                           self.content_object.organization.neighborhood.city.lower(),
+        if self.content_type.name == 'neighborhood':
+            neighborhood = self.content_object
+        else: # its a location
+            neighborhood = self.content_object.organization.neighborhood
+
+        return reverse('support_idea',args=[neighborhood.state.lower(),
+                                           neighborhood.city.lower(),
                                            self.id])
 
     def get_absolute_url(self):
-        return reverse('idea_detail', args=[self.content_object.organization.neighborhood.state.lower(),
-                                            self.content_object.organization.neighborhood.city.lower(),
-                                            self.content_object.organization.neighborhood.name.lower(),
+        if self.content_type.name == 'neighborhood':
+            neighborhood = self.content_object
+        else: # its a location
+            neighborhood = self.content_object.organization.neighborhood
+
+        return reverse('idea_detail', args=[neighborhood.state.lower(),
+                                            neighborhood.city.lower(),
+                                            neighborhood.name.lower(),
                                             self.content_object.name.lower(),
                                             self.id])
 

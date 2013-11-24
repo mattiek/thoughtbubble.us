@@ -2,7 +2,7 @@ $(document).ready(function(){
 $('a.supporting').on('click', function(e){
     e.preventDefault();
     $target = $(e.target);
-    while (!$target.attr('href'))
+    while (!$target.attr('href') && $target.parent().length)
      $target = $target.parent();
 
     $.ajax({

@@ -1,5 +1,5 @@
 /* line 1, ../scss/partials/_buttons.scss */
-.orange {
+a.orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -23,7 +23,7 @@
   font-family: 'MuseoSans';
 }
 /* line 17, ../scss/partials/_buttons.scss */
-.orange.activated {
+a.orange.supporting.activated {
   color: #f9c98c;
   /* text color */
   font-family: "Museo Sans", sans-serif;
