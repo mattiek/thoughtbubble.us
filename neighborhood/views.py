@@ -2,6 +2,7 @@ from models import Neighborhood
 from serializers import NeighborhoodSerializer, NeighborhoodTypeaheadSerializer
 from rest_framework import viewsets
 from vanilla import DetailView, CreateView, UpdateView, ListView
+from idea.models import Idea
 
 class NeighborhoodViewset(viewsets.ModelViewSet):
     serializer_class = NeighborhoodSerializer
@@ -28,3 +29,10 @@ class NeighborhoodTypeaheadViewset(viewsets.ModelViewSet):
 
 class NeighborhoodDetail(DetailView):
     model = Neighborhood
+
+
+    def get_context_data(self, **kwargs):
+        context = super(NeighborhoodDetail, self).get_context_data(**kwargs)
+
+        context['ideas'] = Idea.objects.filter(content_type__name='neighborhood', object_id=self.object.id)
+        return context

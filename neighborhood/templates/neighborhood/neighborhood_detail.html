@@ -30,11 +30,17 @@
             <div class="actions">
 
 
-                <a href="{% url 'idea_list' object.state object.city object.name %}" class="orange s-button">ideas</a>
+{#                <a href="{{ neighborhood. }}" class="orange s-button">ideas</a>#}
 {#                <a href="{% url 'sherlock' object.neighborhood.state object.neighborhood.city object.id %}" class="blue s-button">explore</a>#}
-                <a href="#" class="blue s-button">add</a>
+                <a href="{% url 'add_neighborhood_idea' object.state object.city object.id %}" class="blue s-button">add</a>
                 <div style="clear:both;"></div>
             </div>
+
+        {% include 'idea/idea_filter.html' %}
+
+        {% for idea in ideas %}
+            {% include 'idea/idea_for_list.html' %}
+        {% endfor %}
 
 
     </div>
