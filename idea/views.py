@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from forms import AddIdeaForm
+from forms import AddIdeaForm, FilterForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
 from location.models import Location
@@ -83,23 +83,37 @@ class IdeaList(ListView):
 
 
     def get_queryset(self):
+        qs = super(IdeaList, self).get_queryset()
         ### Basic parameters
-        self.organization = self.kwargs.get('organization', None)
+        self.organization = None
+        try:
+            self.organization = Organization.objects.get(title__iexact=self.kwargs.get('organization', None))
+        except:
+            pass
+
         self.city = self.kwargs.get('city', None)
         self.state = self.kwargs.get('state', None)
 
         ### Ordering
         ordering = self.request.GET.get('order',None)
         if (ordering == 'support'):
-            self.queryset = self.queryset.annotate(num_books=Count('ideasupport')).order_by('-num_books')
+            qs = qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
         else:
-            self.queryset = self.queryset.order_by('-date_created')
+            qs = qs.order_by('-date_created')
+
 
         ### Check to see that we are on an Organization Idea List page
         if self.organization:
-            organizations = Organization.objects.filter(title__iexact=self.organization).values_list('pk', flat=True)
-            locations = Location.objects.filter(organization__in=organizations)
-            return Idea.objects.filter(content_type__name='location', object_id__in=locations)
+            organizations = Organization.objects.filter(title__iexact=self.organization.title).values_list('pk', flat=True)
+
+            ### Where
+            where = self.request.GET.get('where',None)
+            if where:
+                locations = Location.objects.filter(pk=where)
+            else:
+                locations = Location.objects.filter(organization__in=organizations)
+            qs = qs.filter(content_type__name='location', object_id__in=locations)
+            return qs
 
         neighborhood = self.kwargs.get('neighborhood', None)
         return Idea.objects.filter(content_type__name='neighborhood', object_id=neighborhood)
@@ -116,14 +130,21 @@ class IdeaList(ListView):
             return Idea.objects.filter(content_object__organization__neighborhood__state__iexact=self.state)
         return Idea.objects.filter()
 
+
     def get_context_data(self, **kwargs):
         context = super(IdeaList, self).get_context_data(**kwargs)
         # f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
 
+        f = FilterForm(self.request.GET)
+        # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
+        f.fields['where'].queryset = Location.objects.filter(organization=self.organization)
+
+        context['filterform'] = f
+
 
         ordering = self.request.GET.get('order',None)
 
-        context['ideas'] = self.get_queryset()
+        context['ideas'] = self.object_list
 
         context['ordering'] = ordering
 

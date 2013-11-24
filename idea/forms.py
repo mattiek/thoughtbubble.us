@@ -40,3 +40,8 @@ class AddIdeaForm(forms.Form):
         cleaned_data = dict(cleaned_data.items() + self.files.items())
         return cleaned_data
 
+
+
+class FilterForm(forms.Form):
+    where = forms.ModelChoiceField(queryset=Location.objects.none())
+    
