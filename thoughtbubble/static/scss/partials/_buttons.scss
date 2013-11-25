@@ -14,10 +14,13 @@ a.orange {
   color: #FFFFFF;
   font-family: 'MuseoSans';
 
-  &.supporting.activated {
+  &.supporting.activated,
+  &.s-button.activated {
     color: #f9c98c; /* text color */
     font-family: "Museo Sans", sans-serif;
   }
+
+
 }
 
 .blue {

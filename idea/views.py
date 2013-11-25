@@ -140,12 +140,15 @@ def addidea(request, state, city, id=None, organization=None, location=None):
         form.fields['content_object'].initial = Location.objects.get(pk=id)
 
     if organization:
-        d['location'] = Location.objects.get(
-                                            organization__title__iexact=organization,
-                                            organization__neighborhood__city__iexact=city,
-                                            organization__neighborhood__state__iexact=state,
-                                            name=location)
-        form.fields['content_object'].initial = d['location']
+        try:
+            d['location'] = Location.objects.get(
+                                                organization__title__iexact=organization,
+                                                organization__neighborhood__city__iexact=city,
+                                                organization__neighborhood__state__iexact=state,
+                                                name=location)
+            form.fields['content_object'].initial = d['location']
+        except:
+            pass
 
 
 

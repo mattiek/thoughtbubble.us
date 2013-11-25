@@ -64,6 +64,14 @@
 .actions {
   margin: 0 auto 15px;
   width: 463px;
+
+  a {
+    color:#ffffff;
+
+    &:visited {
+      color:#ffffff;
+    }
+  }
 }
 
 #form-wrapper {
