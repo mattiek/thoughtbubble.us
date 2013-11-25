@@ -1,0 +1,27 @@
+
+#filtering {
+  color: #53b8d1; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  width: 570px;
+  //margin: 0 auto 20px;
+  margin: 0 auto 0px;
+}
+
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #53b8d1; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+}
+
+#order, #order_chosen {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#sort_by {
+  vertical-align: super;
+}

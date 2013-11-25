@@ -5,6 +5,7 @@
 @import "partials/news_feed";
 @import "idea/idea";
 @import "partials/chosen";
+@import "partials/filtering";
 
 #illustration {
   background: url(../../images/illustration-ship.png) no-repeat no-repeat;
@@ -34,7 +35,8 @@
   color: #ffffff;
   font-family: 'MuseoSans';
   line-height: 33px;
-  width: 463px;
+  width: 540px;
+//  width: 463px;
   border-radius: 10px;
   padding: 10px 20px;
   margin: 0 auto 10px;
@@ -60,7 +62,7 @@
 }
 
 .actions {
-  margin: 0 auto;
+  margin: 0 auto 15px;
   width: 463px;
 }
 

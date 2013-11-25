@@ -380,7 +380,39 @@ a.orange.supporting.activated {
   margin-right: 3px;
 }
 
-/* line 7, ../../scss/idea/list.scss */
+/* line 2, ../../scss/partials/_filtering.scss */
+#filtering {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  width: 570px;
+  margin: 0 auto 0px;
+}
+
+/* line 13, ../../scss/partials/_filtering.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* line 19, ../../scss/partials/_filtering.scss */
+#order, #order_chosen {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 25, ../../scss/partials/_filtering.scss */
+#sort_by {
+  vertical-align: super;
+}
+
+/* line 9, ../../scss/idea/list.scss */
 #illustration {
   background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
@@ -390,7 +422,7 @@ a.orange.supporting.activated {
   background-color: #ffffff;
 }
 
-/* line 16, ../../scss/idea/list.scss */
+/* line 18, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -401,12 +433,12 @@ a.orange.supporting.activated {
   margin-bottom: 0px;
 }
 
-/* line 25, ../../scss/idea/list.scss */
+/* line 27, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 30, ../../scss/idea/list.scss */
+/* line 32, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
@@ -415,60 +447,28 @@ a.orange.supporting.activated {
   font-family: "Museo Sans", sans-serif;
   font-size: 38px / 2;
 }
-/* line 37, ../../scss/idea/list.scss */
+/* line 39, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 43, ../../scss/idea/list.scss */
+/* line 45, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 45, ../../scss/idea/list.scss */
+/* line 47, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 51, ../../scss/idea/list.scss */
+/* line 53, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }
 
-/* line 55, ../../scss/idea/list.scss */
+/* line 57, ../../scss/idea/list.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
-}
-
-/* line 60, ../../scss/idea/list.scss */
-#filtering {
-  color: #53b8d1;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 14px;
-  width: 570px;
-  margin: 0 auto 20px;
-}
-
-/* line 70, ../../scss/idea/list.scss */
-.chosen-container-single .chosen-default,
-.chosen-container-single .chosen-single,
-.chosen-container-single .chosen-drop .chosen-results li {
-  color: #53b8d1;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 14px;
-}
-
-/* line 76, ../../scss/idea/list.scss */
-#order, #order_chosen {
-  width: 150px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* line 82, ../../scss/idea/list.scss */
-#sort_by {
-  vertical-align: super;
 }
