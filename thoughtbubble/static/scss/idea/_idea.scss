@@ -28,122 +28,125 @@
       }
     }
   }
-}
 
-.left-idea-cap {
-  padding-top: 25px;
-  margin-left: 20px;
-  width: 440px;
-  float: left;
-
-  .supporting {
-    width: (151px / 2);
-    height: (44px / 2);
-    line-height: (44px / 2);
-    display: block;
+  .left-idea-cap {
+    padding-top: 25px;
+    margin-left: 20px;
+    width: 440px;
     float: left;
-    border-radius: 5px;
-    margin-right: 10px;
 
-    i {
-      background-image: image-url("white-star.png");
+    .supporting {
+      width: (151px / 2);
+      height: (44px / 2);
+      line-height: (44px / 2);
+      display: block;
+      float: left;
+      border-radius: 5px;
+      margin-right: 10px;
+
+      i {
+        background-image: image-url("white-star.png");
+        background-repeat: no-repeat;
+        //background-size: 9px;
+        background-position: 15% 45%;
+        padding-left: 15px;
+      }
+
+      .unsupported {
+        display: block;
+      }
+      .supported {
+        display: none;
+      }
+
+
+      &.activated {
+        .unsupported {
+          display: none;
+        }
+        .supported {
+          display: block;
+        }
+      }
+    }
+
+    .commenting {
+      width: 65px;
+      height: 22px;
+      line-height: 22px;
+      //background: url(../../images/comment.png) no-repeat 0;
+      display: block;
+      float: left;
+      border-radius: 5px;
+      margin-right: 10px;
+
+    }
+
+    //span {
+    //  color: #7b7b7b; /* text color */
+    //  font-family: "Museo Sans", sans-serif;
+    //  font-size: 10px;
+    //}
+
+    .sharing {
+      display: inline-block;
+      list-style-type: none;
+      margin-top: 0px;
+      float: none;
+
+      li {
+
+
+      }
+    }
+
+  }
+
+  .right-idea-cap {
+    float:right;
+    list-style-type: none;
+    font-family: "Museo Sans", sans-serif;
+    font-size: 10px;
+    color: #797878; /* text color */
+    padding-top: 25px;
+    padding-right: 15px;
+    padding-left: 0px;
+
+    li {
+      margin-top: 5px;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+
+    .emphasis {
+      color: #f37d23; /* text color */
+      background: #FFF;
+      border-radius: 7px;
+      padding: 2px 7px;
+
+    }
+
+    .support-star {
+      background-image: image-url("orange-star.png");
       background-repeat: no-repeat;
-      //background-size: 9px;
+      background-size: 9px;
       background-position: 15% 45%;
       padding-left: 15px;
     }
 
-    .unsupported {
-      display: block;
-    }
-    .supported {
-      display: none;
-    }
-
-
-    &.activated {
-      .unsupported {
-        display: none;
-      }
-      .supported {
-        display: block;
-      }
-    }
-  }
-
-  .commenting {
-    width: 65px;
-    height: 22px;
-    line-height: 22px;
-    //background: url(../../images/comment.png) no-repeat 0;
-    display: block;
-    float: left;
-    border-radius: 5px;
-    margin-right: 10px;
-
-  }
-
-  //span {
-  //  color: #7b7b7b; /* text color */
-  //  font-family: "Museo Sans", sans-serif;
-  //  font-size: 10px;
-  //}
-
-  .sharing {
-    display: inline-block;
-    list-style-type: none;
-    margin-top: 0px;
-
-    li {
-
-
+    .comments-bubble {
+      background-image: image-url("orange-comment.png");
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: 15% 45%;
+      padding-left: 15px;
     }
   }
 
 }
 
-.right-idea-cap {
-  float:right;
-  list-style-type: none;
-  font-family: "Museo Sans", sans-serif;
-  font-size: 10px;
-  color: #797878; /* text color */
-  padding-top: 25px;
-  padding-right: 15px;
-  padding-left: 0px;
-
-  li {
-    margin-top: 5px;
-
-    &:first-child {
-      margin-top: 0px;
-    }
-  }
-
-  .emphasis {
-    color: #f37d23; /* text color */
-    background: #FFF;
-    border-radius: 7px;
-    padding: 2px 7px;
-
-  }
-
-  .support-star {
-    background-image: image-url("orange-star.png");
-    background-repeat: no-repeat;
-    background-size: 9px;
-    background-position: 15% 45%;
-    padding-left: 15px;
-  }
-
-  .comments-bubble {
-    background-image: image-url("orange-comment.png");
-    background-repeat: no-repeat;
-    background-size: 9px;
-    background-position: 15% 45%;
-    padding-left: 15px;
-  }
-}
 
 .supporting,
 .dislike,

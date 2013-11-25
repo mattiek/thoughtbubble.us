@@ -1,5 +1,5 @@
 from django.shortcuts import render, HttpResponse, redirect
-from forms import AddIdeaForm
+from forms import AddIdeaForm, FilterForm, AddIdeaNeighborhoodForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
 from neighborhood.models import Neighborhood
 from location.models import Location
@@ -7,8 +7,83 @@ from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
 from django.contrib.comments.views.comments import post_comment
 import json as JSON
-from filters import IdeaFilter
+# from filters import IdeaFilter
 from django.db.models import Q, Count
+from django.core.urlresolvers import reverse
+
+from organization.models import Organization
+from location.models import Location
+
+
+def add_neighborhood_idea(request, state, city, neighborhood):
+    if not request.user.is_authenticated():
+        messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
+        return redirect('home')
+
+    if request.POST:
+        form = AddIdeaNeighborhoodForm(request.POST,request.FILES)
+        if form.is_valid():
+
+            data = form.cleaned_data
+
+            idea = Idea(
+                name=data['name'],
+                description=data['description'],
+                what_kind=data['what_kind'],
+                content_object=data['content_object'],
+                what_for=data['what_for'],
+                user=request.user
+            )
+            idea.save()
+
+            pic1 = IdeaImage(idea=idea,img=form.cleaned_data['pic1'])
+            pic2 = IdeaImage(idea=idea,img=form.cleaned_data['pic2'])
+            pic3 = IdeaImage(idea=idea,img=form.cleaned_data['pic3'])
+            pic4 = IdeaImage(idea=idea,img=form.cleaned_data['pic4'])
+
+            link1 = IdeaLink(idea=idea,url=form.cleaned_data['links'])
+
+            if link1:
+                link1.save()
+
+            # TODO: More elegant
+            if pic1.img:
+                pic1.save()
+            if pic2.img:
+                pic2.save()
+            if pic3.img:
+                pic3.save()
+            if pic4.img:
+                pic4.save()
+
+            messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
+            return redirect(idea.content_object.get_absolute_url())
+
+    else:
+        form = AddIdeaForm()
+
+    d = {'form': form,
+         'action': reverse('add_neighborhood_idea', args=[state,city,neighborhood]) }
+
+    form.fields['content_object'].queryset = Neighborhood.objects.filter(pk=neighborhood)
+    form.fields['content_object'].initial = Neighborhood.objects.filter(pk=neighborhood)
+# form.fields['content_object'].initial
+    # if id:
+    #     form.fields['content_object'].initial = Location.objects.get(pk=id)
+    #
+    # if organization:
+    #     d['location'] = Location.objects.get(
+    #         organization__title__iexact=organization,
+    #         organization__neighborhood__city__iexact=city,
+    #         organization__neighborhood__state__iexact=state,
+    #         name=location)
+    #     form.fields['content_object'].initial = d['location']
+
+
+
+    return render(request, 'addidea.html', d)
+
+
 
 def addidea(request, state, city, id=None, organization=None, location=None):
     if not request.user.is_authenticated():
@@ -57,18 +132,23 @@ def addidea(request, state, city, id=None, organization=None, location=None):
     else:
         form = AddIdeaForm()
 
-    d = {'form': form}
+
+    d = {'form': form,
+         'action': reverse('addidea', args=[state,city,organization]) }
 
     if id:
         form.fields['content_object'].initial = Location.objects.get(pk=id)
 
     if organization:
-        d['location'] = Location.objects.get(
-                                            organization__title__iexact=organization,
-                                            organization__neighborhood__city__iexact=city,
-                                            organization__neighborhood__state__iexact=state,
-                                            name=location)
-        form.fields['content_object'].initial = d['location']
+        try:
+            d['location'] = Location.objects.get(
+                                                organization__title__iexact=organization,
+                                                organization__neighborhood__city__iexact=city,
+                                                organization__neighborhood__state__iexact=state,
+                                                name=location)
+            form.fields['content_object'].initial = d['location']
+        except:
+            pass
 
 
 
@@ -80,34 +160,69 @@ class IdeaList(ListView):
 
 
     def get_queryset(self):
-        self.organization = self.kwargs.get('organization', None)
+        qs = super(IdeaList, self).get_queryset()
+        ### Basic parameters
+        self.organization = None
+        try:
+            self.organization = Organization.objects.get(title__iexact=self.kwargs.get('organization', None))
+        except:
+            pass
+
         self.city = self.kwargs.get('city', None)
         self.state = self.kwargs.get('state', None)
+
+        ### Ordering
+        ordering = self.request.GET.get('order',None)
+        if (ordering == 'support'):
+            qs = qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
+        else:
+            qs = qs.order_by('-date_created')
+
+
+        ### Check to see that we are on an Organization Idea List page
         if self.organization:
-            return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
-                                       content_object__organization__neighborhood__state__iexact=self.state,
-                                       content_object__organization__title__iexact=self.organization)
-        if self.city and self.state:
-            return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
-                                       content_object__organization__neighborhood__state__iexact=self.state)
-        if self.state:
-            return Idea.objects.filter(content_object__organization__neighborhood__state__iexact=self.state)
-        return Idea.objects.filter()
+            organizations = Organization.objects.filter(title__iexact=self.organization.title).values_list('pk', flat=True)
+
+            ### Where
+            where = self.request.GET.get('where',None)
+            if where:
+                locations = Location.objects.filter(pk=where)
+            else:
+                locations = Location.objects.filter(organization__in=organizations)
+            qs = qs.filter(content_type__name='location', object_id__in=locations)
+            return qs
+
+        neighborhood = self.kwargs.get('neighborhood', None)
+        return Idea.objects.filter(content_type__name='neighborhood', object_id=neighborhood)
+
+        ### DEPERECATED
+        # if self.organization:
+        #     return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
+        #                                content_object__organization__neighborhood__state__iexact=self.state,
+        #                                content_object__organization__title__iexact=self.organization)
+        # if self.city and self.state:
+        #     return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
+        #                                content_object__organization__neighborhood__state__iexact=self.state)
+        # if self.state:
+        #     return Idea.objects.filter(content_object__organization__neighborhood__state__iexact=self.state)
+        # return Idea.objects.filter()
+
 
     def get_context_data(self, **kwargs):
         context = super(IdeaList, self).get_context_data(**kwargs)
-        f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
+        # f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
+
+        f = FilterForm(self.request.GET)
+        # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
+        f.fields['where'].queryset = Location.objects.filter(organization=self.organization)
+        f.fields['where'].empty_label = self.organization.title
+
+        context['filterform'] = f
+
 
         ordering = self.request.GET.get('order',None)
 
-        context['ideas'] = self.get_queryset()
-
-        if (ordering == 'support'):
-            context['ideas'] = f.qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
-        else:
-            context['ideas'] = f.qs.order_by('-date_created')
-
-        context['idea_filter'] = f
+        context['ideas'] = self.object_list
 
         context['ordering'] = ordering
 
@@ -152,6 +267,7 @@ def support_idea(request, state, city, id):
             pass
 
     return HttpResponse(JSON.dumps(result), mimetype='application/json')
+
 
 def support_idea_from_detail(request,id):
     support_idea(request,id)

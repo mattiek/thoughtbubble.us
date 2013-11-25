@@ -40,3 +40,20 @@ class AddIdeaForm(forms.Form):
         cleaned_data = dict(cleaned_data.items() + self.files.items())
         return cleaned_data
 
+
+class AddIdeaNeighborhoodForm(AddIdeaForm):
+
+    content_object = forms.ModelChoiceField(queryset=Neighborhood.objects.filter(city='Columbus').order_by('name'),
+                                            empty_label='',
+                                            error_messages={'required':'You must tell where it is.'})
+
+
+    # def clean(self, *args, **kwargs):
+    #     cleaned_data = super(AddIdeaNeighborhoodForm, self).clean(*args, **kwargs)
+    #     cleaned_data = dict(cleaned_data.items() + self.files.items())
+    #     return cleaned_data
+
+
+
+class FilterForm(forms.Form):
+    where = forms.ModelChoiceField(queryset=Location.objects.none())

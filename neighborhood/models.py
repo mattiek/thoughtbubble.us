@@ -1,6 +1,7 @@
 from django.contrib.gis.db import models
 import json as JSON
 from django.core.urlresolvers import reverse
+from vanilla import DetailView, CreateView, UpdateView, ListView
 
 class Neighborhood(models.Model):
     state = models.CharField(max_length=2)
@@ -26,6 +27,10 @@ class Neighborhood(models.Model):
     def getCenter(self):
         return JSON.loads(self.center.geojson)
 
+    def get_absolute_url(self):
+        return reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+
+
     def getGeometry(self):
         json = self.geom.geojson
 
@@ -49,6 +54,7 @@ class Neighborhood(models.Model):
 
         props = {}
 
+        props['explore'] = reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
         props['title'] = self.name
         props['icon'] = {
             "iconUrl": "/static/images/map-point.png",

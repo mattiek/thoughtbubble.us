@@ -38,16 +38,15 @@
 .idea-cap a.orange:visited {
   color: #ffffff;
 }
-
-/* line 33, ../../scss/idea/_idea.scss */
-.left-idea-cap {
+/* line 32, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap {
   padding-top: 25px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 39, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting {
+/* line 38, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
   line-height: 22px;
@@ -56,31 +55,31 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 48, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting i {
+/* line 47, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 56, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting .unsupported {
+/* line 55, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting .unsupported {
   display: block;
 }
-/* line 59, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting .supported {
+/* line 58, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting .supported {
   display: none;
 }
-/* line 65, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting.activated .unsupported {
+/* line 64, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting.activated .unsupported {
   display: none;
 }
-/* line 68, ../../scss/idea/_idea.scss */
-.left-idea-cap .supporting.activated .supported {
+/* line 67, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting.activated .supported {
   display: block;
 }
-/* line 74, ../../scss/idea/_idea.scss */
-.left-idea-cap .commenting {
+/* line 73, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
   line-height: 22px;
@@ -89,15 +88,15 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 92, ../../scss/idea/_idea.scss */
-.left-idea-cap .sharing {
+/* line 91, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
   margin-top: 0px;
+  float: none;
 }
-
 /* line 105, ../../scss/idea/_idea.scss */
-.right-idea-cap {
+.idea-cap .right-idea-cap {
   float: right;
   list-style-type: none;
   font-family: "Museo Sans", sans-serif;
@@ -109,15 +108,15 @@
   padding-left: 0px;
 }
 /* line 115, ../../scss/idea/_idea.scss */
-.right-idea-cap li {
+.idea-cap .right-idea-cap li {
   margin-top: 5px;
 }
 /* line 118, ../../scss/idea/_idea.scss */
-.right-idea-cap li:first-child {
+.idea-cap .right-idea-cap li:first-child {
   margin-top: 0px;
 }
 /* line 123, ../../scss/idea/_idea.scss */
-.right-idea-cap .emphasis {
+.idea-cap .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
   background: #FFF;
@@ -125,7 +124,7 @@
   padding: 2px 7px;
 }
 /* line 131, ../../scss/idea/_idea.scss */
-.right-idea-cap .support-star {
+.idea-cap .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
   background-size: 9px;
@@ -133,7 +132,7 @@
   padding-left: 15px;
 }
 /* line 139, ../../scss/idea/_idea.scss */
-.right-idea-cap .comments-bubble {
+.idea-cap .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1380665664');
   background-repeat: no-repeat;
   background-size: 9px;
@@ -141,7 +140,7 @@
   padding-left: 15px;
 }
 
-/* line 150, ../../scss/idea/_idea.scss */
+/* line 153, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -155,7 +154,7 @@
 }
 
 /* line 1, ../../scss/partials/_buttons.scss */
-.orange {
+a.orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -178,14 +177,14 @@
   color: #FFFFFF;
   font-family: 'MuseoSans';
 }
-/* line 17, ../../scss/partials/_buttons.scss */
-.orange.activated {
+/* line 18, ../../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 23, ../../scss/partials/_buttons.scss */
+/* line 26, ../../scss/partials/_buttons.scss */
 .blue {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -216,7 +215,7 @@
   font-family: 'MuseoSans';
 }
 
-/* line 42, ../../scss/partials/_buttons.scss */
+/* line 45, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -381,7 +380,39 @@
   margin-right: 3px;
 }
 
-/* line 7, ../../scss/idea/list.scss */
+/* line 2, ../../scss/partials/_filtering.scss */
+#filtering {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  width: 570px;
+  margin: 0 auto 0px;
+}
+
+/* line 13, ../../scss/partials/_filtering.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* line 19, ../../scss/partials/_filtering.scss */
+#order, #order_chosen {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* line 25, ../../scss/partials/_filtering.scss */
+#sort_by {
+  vertical-align: super;
+}
+
+/* line 9, ../../scss/idea/list.scss */
 #illustration {
   background: url(../../images/illustration-ship.png) no-repeat no-repeat;
   background-size: 100%;
@@ -391,7 +422,7 @@
   background-color: #ffffff;
 }
 
-/* line 16, ../../scss/idea/list.scss */
+/* line 18, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -402,12 +433,12 @@
   margin-bottom: 0px;
 }
 
-/* line 25, ../../scss/idea/list.scss */
+/* line 27, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 30, ../../scss/idea/list.scss */
+/* line 32, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
@@ -416,60 +447,28 @@
   font-family: "Museo Sans", sans-serif;
   font-size: 38px / 2;
 }
-/* line 37, ../../scss/idea/list.scss */
+/* line 39, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 43, ../../scss/idea/list.scss */
+/* line 45, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 45, ../../scss/idea/list.scss */
+/* line 47, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 51, ../../scss/idea/list.scss */
+/* line 53, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }
 
-/* line 55, ../../scss/idea/list.scss */
+/* line 57, ../../scss/idea/list.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
-}
-
-/* line 60, ../../scss/idea/list.scss */
-#filtering {
-  color: #53b8d1;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 14px;
-  width: 570px;
-  margin: 0 auto 20px;
-}
-
-/* line 70, ../../scss/idea/list.scss */
-.chosen-container-single .chosen-default,
-.chosen-container-single .chosen-single,
-.chosen-container-single .chosen-drop .chosen-results li {
-  color: #53b8d1;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 14px;
-}
-
-/* line 76, ../../scss/idea/list.scss */
-#order, #order_chosen {
-  width: 150px;
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-/* line 82, ../../scss/idea/list.scss */
-#sort_by {
-  vertical-align: super;
 }

@@ -31,13 +31,15 @@
 
             <div class="right-side">
                 <div id="map"></div>
-                <div id="latitude" class="row">
+                <div id="latitude">
                     <label id="lat_label" class="copy" for="{{ form.latitude.auto_id }}">latitude</label>
                     {{ form.latitude }}
 
                 </div>
-                <label id="long_label" class="copy" for="{{ form.longitude.auto_id }}">longitude</label>
-                {{ form.longitude }}
+                <div id="longitude">
+                    <label id="long_label" class="copy" for="{{ form.longitude.auto_id }}">longitude</label>
+                    {{ form.longitude }}
+                </div>
             </div>
 
 

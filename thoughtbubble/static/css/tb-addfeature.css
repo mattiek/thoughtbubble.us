@@ -247,9 +247,15 @@ form .row .row.second-row {
 /* line 154, ../scss/tb-addfeature.scss */
 #latitude {
   margin-top: 15px;
+  display: none;
 }
 
-/* line 159, ../scss/tb-addfeature.scss */
+/* line 158, ../scss/tb-addfeature.scss */
+#longitude {
+  display: none;
+}
+
+/* line 163, ../scss/tb-addfeature.scss */
 #long_label,
 #lat_label {
   line-height: 24px;
@@ -257,13 +263,13 @@ form .row .row.second-row {
   min-width: 77px;
 }
 
-/* line 165, ../scss/tb-addfeature.scss */
+/* line 169, ../scss/tb-addfeature.scss */
 .save-edit-list {
   list-style-type: none;
   margin-top: 15px;
 }
 
-/* line 170, ../scss/tb-addfeature.scss */
+/* line 174, ../scss/tb-addfeature.scss */
 .save-edit-list a {
   height: 25px;
   width: 65px;
@@ -294,33 +300,33 @@ form .row .row.second-row {
   font-size: 12px;
 }
 
-/* line 193, ../scss/tb-addfeature.scss */
+/* line 197, ../scss/tb-addfeature.scss */
 .save-edit-list li:first-child {
   margin-bottom: 10px;
 }
 
-/* line 197, ../scss/tb-addfeature.scss */
+/* line 201, ../scss/tb-addfeature.scss */
 .pos-rel {
   position: relative;
 }
-/* line 200, ../scss/tb-addfeature.scss */
+/* line 204, ../scss/tb-addfeature.scss */
 .pos-rel.news {
   float: right;
 }
 
-/* line 206, ../scss/tb-addfeature.scss */
+/* line 210, ../scss/tb-addfeature.scss */
 .news-text,
 .about-text {
   min-height: 77px;
   width: 100%;
 }
 
-/* line 211, ../scss/tb-addfeature.scss */
+/* line 215, ../scss/tb-addfeature.scss */
 .news-text {
   width: 610px;
 }
 
-/* line 216, ../scss/tb-addfeature.scss */
+/* line 220, ../scss/tb-addfeature.scss */
 #add-news-image,
 .picture {
   width: 80px;
@@ -334,22 +340,22 @@ form .row .row.second-row {
   margin-right: 10px;
 }
 
-/* line 228, ../scss/tb-addfeature.scss */
+/* line 232, ../scss/tb-addfeature.scss */
 #map {
   width: 400px;
 }
 
-/* line 232, ../scss/tb-addfeature.scss */
+/* line 236, ../scss/tb-addfeature.scss */
 .left-side {
   float: left;
 }
 
-/* line 236, ../scss/tb-addfeature.scss */
+/* line 240, ../scss/tb-addfeature.scss */
 .right-side {
   float: right;
 }
 
-/* line 240, ../scss/tb-addfeature.scss */
+/* line 244, ../scss/tb-addfeature.scss */
 .clr {
   clear: both;
 }

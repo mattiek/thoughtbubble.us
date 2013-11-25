@@ -1,5 +1,5 @@
 /* line 1, ../scss/partials/_buttons.scss */
-.orange {
+a.orange {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -22,14 +22,14 @@
   color: #FFFFFF;
   font-family: 'MuseoSans';
 }
-/* line 17, ../scss/partials/_buttons.scss */
-.orange.activated {
+/* line 18, ../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 23, ../scss/partials/_buttons.scss */
+/* line 26, ../scss/partials/_buttons.scss */
 .blue {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -60,7 +60,7 @@
   font-family: 'MuseoSans';
 }
 
-/* line 42, ../scss/partials/_buttons.scss */
+/* line 45, ../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
