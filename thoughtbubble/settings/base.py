@@ -60,6 +60,7 @@ INSTALLED_APPS = (
     'organization',
     'project',
     'partner',
+    'tbnews',
     # 'social.apps.django_app.default',
     'threadedcomments',
     'avatar',

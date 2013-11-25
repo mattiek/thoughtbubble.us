@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Add a News Item
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/add.css" />
+{% endblock %}
+
+{% block bodyid %}news-item-form{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id="form-wrapper">
+        <form enctype="multipart/form-data" method="post" action="">
+            {% csrf_token %}
+            {{ form.errors }}
+            {{ form.as_p }}
+            <input type="submit"/>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-addidea.js"></script>
+{% endblock %}
