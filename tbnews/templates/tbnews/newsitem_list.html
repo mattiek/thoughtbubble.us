@@ -13,17 +13,21 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
 {% endblock %}
 
-{% block bodyid %}idea-list{% endblock %}
+{% block bodyid %}news-item-list{% endblock %}
 
 {% block primarynav %}
 {% endblock %}
 
 {% block content %}
-
+    <a href="{% url 'add_news_item' kind obj_id%}">Add</a>
     {% for news in object_list %}
         <h2>{{ news.subject }}</h2>
         <p>{{ news.content }}</p>
-        <a href="{{ news.update_url }}">Update</a>
+        <a href="{% url 'update_news_item' kind obj_id news.id %}">Update</a>
+        <form method="POST" action="{% url 'delete_news_item' kind obj_id news.id %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-sm btn-danger" value="delete"></input>
+        </form>
     {% endfor %}
 
 {% endblock %}
