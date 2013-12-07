@@ -4,4 +4,4 @@ from models import Organization, OrganizationNews
 
 
 admin.site.register(Organization)
-admin.site.register(OrganizationNews)
+# admin.site.register(OrganizationNews)

@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from neighborhood.models import Neighborhood
+from cities.models import City
 from thoughtbubble.utils import path_and_rename
 from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
@@ -9,7 +9,7 @@ from partner.models import Partner
 
 
 class Organization(models.Model):
-    neighborhood = models.OneToOneField(Neighborhood)
+    city = models.ForeignKey(City, null=True, blank=True)
 
     logo = models.ImageField(upload_to=path_and_rename('profiles', 'logo'), null=True, blank=True)
 
@@ -30,11 +30,22 @@ class Organization(models.Model):
 
     partners = models.ManyToManyField(Partner, null=True, blank=True)
 
+
+    geom = models.MultiPolygonField(srid=4326, null=True, blank=True)
+    objects = models.GeoManager()
+
+    center = models.PointField(null=True, blank=True)
+
     class Meta:
         verbose_name_plural = "Organizations"
 
     def __unicode__(self):
         return "%s Organization" % self.title
+
+    def save(self, *args, **kwargs):
+        if not self.center:
+            self.center = self.geom.centroid
+        super(Organization, self).save(*args, **kwargs)
 
     def get_logo(self):
         if self.logo:
@@ -91,6 +102,48 @@ class Organization(models.Model):
             mapbox.append(geometry)
 
         return JSON.dumps(mapbox)
+
+    def getGeometry(self):
+        json = self.geom.geojson
+
+        extent = self.geom.extent
+        geojson = {}
+        geojson['type'] = 'MultiPolygon'
+        geojson['coordinates'] = [[[
+                                       [extent[0], extent[1]],
+                                       [extent[2], extent[1]],
+                                       [extent[2], extent[3]],
+                                       [extent[0], extent[3]],
+                                       [extent[0], extent[1]],
+                                       ]]]
+        # return geojson
+        return JSON.loads(json)
+
+
+    def getType(self):
+        return 'Feature'
+
+    def getCenter(self):
+        return JSON.loads(self.center.geojson)
+
+    def get_api_detail_url(self):
+        return reverse('neighborhoods-detail',args=[self.id,])
+
+    def get_absolute_url(self):
+        return reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+
+    def getExtent(self):
+        extent = self.geom.extent
+        geojson = {}
+        geojson['type'] = 'Polygon'
+        geojson['coordinates'] = [
+            [extent[0], extent[1]],
+            [extent[2], extent[1]],
+            [extent[2], extent[3]],
+            [extent[0], extent[3]],
+            [extent[0], extent[1]],
+            ]
+        return extent
 
 
 

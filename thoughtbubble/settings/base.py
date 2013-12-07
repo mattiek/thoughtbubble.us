@@ -44,7 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'thoughtbubble',
     'world',
-    'neighborhood',
+    # 'neighborhood',
     'cities',
     'location',
     'idea',

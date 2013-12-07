@@ -20,7 +20,7 @@ class AddIdeaForm(forms.Form):
                                        empty_label='',
                                        error_messages={'required':'Tell us what kind of idea this is.'})
 
-    content_object = forms.ModelChoiceField(queryset=Location.objects.filter(organization__neighborhood__city='Columbus').order_by('name'),
+    content_object = forms.ModelChoiceField(queryset=Location.objects.filter(organization__city__name='Columbus').order_by('name'),
                                    empty_label='',
                                     error_messages={'required':'You must tell where it is.'})
 

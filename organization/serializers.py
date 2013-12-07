@@ -27,16 +27,14 @@ class CustomPaginationSerializer(pagination.BasePaginationSerializer):
 
 
 class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
-    center = serializers.CharField(source='neighborhood.getCenter', read_only=True)
-    geometry = serializers.CharField(source='neighborhood.getGeometry')
+    center = serializers.CharField(source='getCenter', read_only=True)
+    geometry = serializers.CharField(source='getGeometry')
     properties = serializers.CharField(source='getProperties', read_only=True)
-    type = serializers.CharField(source='neighborhood.getType', read_only=True)
-
-    neighborhood = NeighborhoodSerializer()
+    type = serializers.CharField(source='getType', read_only=True)
 
     class Meta:
         model = Organization
-        fields = ('id', 'neighborhood', 'center', 'geometry', 'type', 'properties')
+        fields = ('id', 'city', 'center', 'geometry', 'type', 'properties')
 
     @property
     def data(self):
