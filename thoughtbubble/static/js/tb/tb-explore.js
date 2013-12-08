@@ -128,12 +128,19 @@ TB.Map.mapLayer.on('ready', function() {
 
         }
     });
+
+    TB.Map.map().on('moveend', function(e) {
+        getNeighborhoods();
+    })
 });
 
 
+
+
 var getNeighborhoods = function() {
+    var center = map.getCenter();
     $.ajax({
-        url: '/api/v1/neighborhoods/.json?metro=columbus',
+        url: '/api/v1/cities/.json?lat=' + center.lat + '&lng=' + center.lng,
         dataType: 'json',
         success: function load(d) {
 
@@ -148,7 +155,7 @@ var getNeighborhoods = function() {
             });
 
             var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
-            geoJSON.features = _.union(geoJSON.features, dStuff);
+            geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
             TB.Map.map().markerLayer.setGeoJSON(geoJSON);
         }
     });

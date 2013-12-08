@@ -1,6 +1,6 @@
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
-
+import json as JSON
 
 class City(models.Model):
     name = models.CharField(max_length=100)
@@ -23,3 +23,24 @@ class City(models.Model):
         if not self.geom:
             self.geom = Point(self.longitude, self.latitude)
         super(City, self).save(*args, **kwargs)
+
+
+    def getType(self):
+        return 'Feature'
+
+    def getCenter(self):
+        return JSON.loads(self.geom.geojson)
+
+    def getProperties(self):
+
+        props = {}
+
+        #props['explore'] = reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+        props['title'] = self.name
+        props['icon'] = {
+            "iconUrl": "/static/images/map-point.png",
+            "iconSize": [26, 33],
+            "iconAnchor": [13, 30],
+            "popupAnchor": [0, -25]
+        }
+        return props

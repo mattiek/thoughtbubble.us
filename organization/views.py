@@ -13,7 +13,7 @@ class OrganizationViewset(viewsets.ModelViewSet):
 
     def get_queryset(self):
         name = self.request.GET.get('city','')
-        return Organization.objects.filter(neighborhood__city__icontains=name)
+        return Organization.objects.filter(city__name__icontains=name)
 
 
 class OrganizationList(ListView):

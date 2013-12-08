@@ -85,7 +85,7 @@ def explore(request, state=None, city=None, pk=None):
 
     d['metros'] = {
         'current': city if city else 'Columbus',
-        'list': City.objects.values_list('name','state').distinct(),
+        'list': City.objects.none() #City.objects.values_list('name','state').distinct(),
     }
 
     if pk:
