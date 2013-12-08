@@ -22,6 +22,7 @@ from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
 from organization.models import Organization
+from cities.models import City
 from idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
@@ -80,11 +81,11 @@ def explore(request, state=None, city=None, pk=None):
         request.session['exploring_city'] = city
 
     d = {}
-    d['organizations'] = Organization.objects.filter(neighborhood__city__iexact=city, neighborhood__state__iexact=state).order_by('neighborhood__name')
+    d['organizations'] = Organization.objects.filter(city__name__iexact=city, city__state_code__iexact=state).order_by('title')
 
     d['metros'] = {
         'current': city if city else 'Columbus',
-        'list': Neighborhood.objects.values_list('city','state').distinct(),
+        'list': City.objects.values_list('name','state').distinct(),
     }
 
     if pk:
@@ -102,7 +103,7 @@ def sherlock(request, state=None, city=None, pk=None):
         request.session['exploring_city'] = city
 
     d = {}
-    d['organizations'] = Organization.objects.filter().order_by('neighborhood__name')
+    d['organizations'] = Organization.objects.filter().order_by('name')
 
     d['exploring'] = Organization.objects.get(pk=pk)
 

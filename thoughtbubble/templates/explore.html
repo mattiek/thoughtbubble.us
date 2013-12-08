@@ -32,7 +32,7 @@
                 <ul>
                     {% for organization in organizations %}
                         <li><a class="organization" href="{% url 'sherlock' exploring_state exploring_city organization.id %}"
-                               data-id="{{ organization.neighborhood.id }}"
+                               data-id="{{ organization.id }}"
                                data-organization="{{ organization.id }}"
                                 >{{ organization.title }}</a></li>
                     {% endfor %}
