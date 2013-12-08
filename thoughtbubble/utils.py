@@ -1,4 +1,3 @@
-from thoughtbubble.models import *
 import os
 import hashlib
 
