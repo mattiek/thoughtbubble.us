@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from django.contrib.gis.geos import Point
 
 
 class City(models.Model):
@@ -12,5 +13,13 @@ class City(models.Model):
     elevation = models.IntegerField()
     type = models.CharField(max_length=50)
 
+    geom = models.PointField(null=True, blank=True)
+    objects = models.GeoManager()
+
     def __unicode__(self):
         return "%s, %s" % (self.name, self.state_code,)
+
+    def save(self, *args, **kwargs):
+        if not self.geom:
+            self.geom = Point(self.longitude, self.latitude)
+        super(City, self).save(*args, **kwargs)

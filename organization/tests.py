@@ -20,3 +20,6 @@ class OrganizationTestCase(TestCase):
         org2 = Organization.objects.filter(title="Organization 2")
         self.assertNotEqual(org1, None)
         self.assertNotEqual(org2, None)
+
+
+#City.objects.filter(geom__distance_lte=(j.geom, D(mi=3)))
