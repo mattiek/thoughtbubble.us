@@ -196,6 +196,8 @@ AUTHENTICATION_BACKENDS = (
 
 SITE_ID = 1
 
+SOUTH_TESTS_MIGRATE = False
+
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',

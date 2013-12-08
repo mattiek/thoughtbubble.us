@@ -43,7 +43,7 @@ class Organization(models.Model):
         return "%s Organization" % self.title
 
     def save(self, *args, **kwargs):
-        if not self.center:
+        if not self.center and self.geom:
             self.center = self.geom.centroid
         super(Organization, self).save(*args, **kwargs)
 
