@@ -63,7 +63,7 @@ def add_neighborhood_idea(request, state, city, neighborhood):
         form = AddIdeaForm()
 
     d = {'form': form,
-         'action': reverse('add_neighborhood_idea', args=[state,city,neighborhood]) }
+         'action': reverse('add_neighborhood_idea', args=[neighborhood]) }
 
     form.fields['content_object'].queryset = Neighborhood.objects.filter(pk=neighborhood)
     form.fields['content_object'].initial = Neighborhood.objects.filter(pk=neighborhood)
@@ -85,7 +85,7 @@ def add_neighborhood_idea(request, state, city, neighborhood):
 
 
 
-def addidea(request, state, city, id=None, organization=None, location=None):
+def addidea(request, id=None, organization=None, location=None):
     if not request.user.is_authenticated():
         messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
         return redirect('home')
@@ -134,7 +134,7 @@ def addidea(request, state, city, id=None, organization=None, location=None):
 
 
     d = {'form': form,
-         'action': reverse('addidea', args=[state,city,organization]) }
+         'action': reverse('addidea', args=[organization]) }
 
     if id:
         form.fields['content_object'].initial = Location.objects.get(pk=id)

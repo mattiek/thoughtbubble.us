@@ -104,31 +104,31 @@ var experimentalMarkers = function(d) {
 }
 
 TB.Map.mapLayer.on('ready', function() {
-    $.ajax({
-        url:  '/api/v1/organizations/.json',
-        dataType: 'json',
-        success: function load(d) {
-
-            // Transform the regions to the centers
-            var dStuff = _.map(d.features, function(obj) {
-                return {
-                    id: obj.id,
-                    properties: obj.properties,
-                    type: obj.type,
-                    geometry: obj.center
-                }
-            });
-
-           var latestD = {
-                type: "FeatureCollection",
-                features: dStuff
-            }
-            experimentalMarkers(latestD);
-            getNeighborhoods();
-
-        }
-    });
-
+//    $.ajax({
+//        url:  '/api/v1/organizations/.json',
+//        dataType: 'json',
+//        success: function load(d) {
+//
+//            // Transform the regions to the centers
+//            var dStuff = _.map(d.features, function(obj) {
+//                return {
+//                    id: obj.id,
+//                    properties: obj.properties,
+//                    type: obj.type,
+//                    geometry: obj.center
+//                }
+//            });
+//
+//           var latestD = {
+//                type: "FeatureCollection",
+//                features: dStuff
+//            }
+//            experimentalMarkers(latestD);
+//            getNeighborhoods();
+//
+//        }
+//    });
+    getNeighborhoods();
     TB.Map.map().on('moveend', function(e) {
         getNeighborhoods();
     })
@@ -155,8 +155,13 @@ var getNeighborhoods = function() {
             });
 
             var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
-            geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
-            TB.Map.map().markerLayer.setGeoJSON(geoJSON);
+            if (geoJSON) {
+                geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
+                TB.Map.map().markerLayer.setGeoJSON(geoJSON);
+            }
+            else
+                TB.Map.map().markerLayer.setGeoJSON(dStuff);
+
         }
     });
 }

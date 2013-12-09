@@ -28,7 +28,7 @@ class Neighborhood(models.Model):
         return JSON.loads(self.center.geojson)
 
     def get_absolute_url(self):
-        return reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+        return reverse('neighborhood_detail', args=[str(self.id),])
 
 
     def getGeometry(self):
@@ -54,7 +54,7 @@ class Neighborhood(models.Model):
 
         props = {}
 
-        props['explore'] = reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+        props['explore'] = reverse('neighborhood_detail', args=[str(self.id),])
         props['title'] = self.name
         props['icon'] = {
             "iconUrl": "/static/images/map-point.png",

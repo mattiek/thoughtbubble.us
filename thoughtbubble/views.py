@@ -55,10 +55,12 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
                                         " up."))
 
 def home(request, state=None, city=None):
-    if not state or not city:
-        return redirect( reverse('home',  args=[request.session.get('exploring_state','oh'),
-                                                request.session.get('exploring_city','columbus'),
-                                            ]))
+    # if not state or not city:
+    #     return redirect( reverse('home',
+    #                                 args=[request.session.get('exploring_state','oh'),
+    #                                             request.session.get('exploring_city','columbus'),
+    #                                         ]
+    #                     ))
     try:
         copy = FlatPage.objects.get(url='home').content
     except:
@@ -74,19 +76,19 @@ def logout(request):
 
 def explore(request, state=None, city=None, pk=None):
 
-    if state:
-        request.session['exploring_state'] = state
-
-    if city:
-        request.session['exploring_city'] = city
+    # if state:
+    #     request.session['exploring_state'] = state
+    #
+    # if city:
+    #     request.session['exploring_city'] = city
 
     d = {}
-    d['organizations'] = Organization.objects.filter(city__name__iexact=city, city__state_code__iexact=state).order_by('title')
+    #d['organizations'] = Organization.objects.filter(city__name__iexact=city, city__state_code__iexact=state).order_by('title')
 
-    d['metros'] = {
-        'current': city if city else 'Columbus',
-        'list': City.objects.none() #City.objects.values_list('name','state').distinct(),
-    }
+    # d['metros'] = {
+    #     'current': city if city else 'Columbus',
+    #     'list': City.objects.none() #City.objects.values_list('name','state').distinct(),
+    # }
 
     if pk:
         d['exploring'] = Organization.objects.get(pk=pk)
@@ -96,14 +98,14 @@ def explore(request, state=None, city=None, pk=None):
 
 def sherlock(request, state=None, city=None, pk=None):
 
-    if state:
-        request.session['exploring_state'] = state
-
-    if city:
-        request.session['exploring_city'] = city
+    # if state:
+    #     request.session['exploring_state'] = state
+    #
+    # if city:
+    #     request.session['exploring_city'] = city
 
     d = {}
-    d['organizations'] = Organization.objects.filter().order_by('name')
+    # d['organizations'] = Organization.objects.filter().order_by('name')
 
     d['exploring'] = Organization.objects.get(pk=pk)
 

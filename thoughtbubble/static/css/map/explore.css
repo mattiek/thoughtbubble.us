@@ -397,3 +397,8 @@ h1, h2 {
   width: 87%;
   margin: 0 auto;
 }
+
+/* line 241, ../../scss/map/explore.scss */
+.leaflet-container h3 {
+  margin: 0px;
+}

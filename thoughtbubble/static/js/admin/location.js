@@ -4,7 +4,7 @@ $(document).ready(function() {
             name: 'name',
             valueKey: 'name',
             prefetch: '/api/v1/cities-typeahead/.json',
-            remote: '/api/v1/cities-typeahead/.json?city=%QUERY'
+            remote: '/api/v1/cities-typeahead/.json?typeahead=%QUERY'
         }
     ).bind('typeahead:selected', function (obj, datum) {
             $('#id_city').val(datum.id);

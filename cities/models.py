@@ -16,6 +16,7 @@ class City(models.Model):
     geom = models.PointField(null=True, blank=True)
     objects = models.GeoManager()
 
+
     def __unicode__(self):
         return "%s, %s" % (self.name, self.state_code,)
 
@@ -37,10 +38,20 @@ class City(models.Model):
 
         #props['explore'] = reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
         props['title'] = self.name
-        props['icon'] = {
-            "iconUrl": "/static/images/map-point.png",
-            "iconSize": [26, 33],
-            "iconAnchor": [13, 30],
-            "popupAnchor": [0, -25]
-        }
+
+        if len(self.organization_set.all()):
+            props['icon'] = {
+                "iconUrl": "/static/images/featured-organization-location.png",
+                "iconSize": [24, 30],
+                "iconAnchor": [15, 22],
+                "popupAnchor": [0, -25]
+            }
+        else:
+            props['icon'] = {
+                "iconUrl": "/static/images/map-point.png",
+                "iconSize": [26, 33],
+                "iconAnchor": [13, 30],
+                "popupAnchor": [0, -25]
+            }
+
         return props

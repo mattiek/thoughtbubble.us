@@ -33,7 +33,7 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include('api.urls')),
-    url(r'^geo/', include('thoughtbubble.geo_urls')),
+    url(r'^', include('thoughtbubble.geo_urls')),
     url(r'^news/', include('tbnews.urls')),
     # url('', include('social.apps.django_app.urls', namespace='social')),
 

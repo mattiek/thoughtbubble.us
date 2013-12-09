@@ -104,12 +104,12 @@
             <div class="label">features</div>
             <div class="features-list">
                 {% for location in organization.location_set.all %}
-                    <a href="{% url 'location_update' exploring_state exploring_city location.id %}" class="feature">
+                    <a href="{% url 'location_update'  location.id %}" class="feature">
                         <div class="feature-cap"></div>
                         <span>{{ location.name }}</span>
                     </a>
                 {% endfor %}
-                <a href="{% url 'addlocation' exploring_state exploring_city organization.id %}"class="feature">
+                <a href="{% url 'addlocation'  organization.id %}"class="feature">
                     <div class="feature-cap"></div>
                     <span>add a feature</span>
 

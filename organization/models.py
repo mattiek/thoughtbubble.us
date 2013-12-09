@@ -53,7 +53,7 @@ class Organization(models.Model):
         return ''
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
+        return reverse('organization_detail', args=[str(self.id)])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -65,7 +65,7 @@ class Organization(models.Model):
 
         props = {}
 
-        props['explore'] = reverse('sherlock', args=[str(self.neighborhood.state).lower(),str(self.neighborhood.city).lower(),str(self.id)])
+        props['explore'] = reverse('sherlock', args=[str(self.id)])
         props['title'] = self.title
         props['icon'] = {
             "iconUrl": "/static/images/featured-organization-location.png",
@@ -130,7 +130,7 @@ class Organization(models.Model):
         return reverse('neighborhoods-detail',args=[self.id,])
 
     def get_absolute_url(self):
-        return reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+        return reverse('neighborhood_detail', args=[str(self.id)])
 
     def getExtent(self):
         extent = self.geom.extent

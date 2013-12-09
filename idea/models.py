@@ -78,9 +78,7 @@ class Idea(models.Model):
         else: # its a location
             neighborhood = self.content_object.organization.neighborhood
 
-        return reverse('support_idea',args=[neighborhood.state.lower(),
-                                           neighborhood.city.lower(),
-                                           self.id])
+        return reverse('support_idea',args=[self.id])
 
     def get_absolute_url(self):
         if self.content_type.name == 'neighborhood':

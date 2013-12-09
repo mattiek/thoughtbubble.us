@@ -31,12 +31,12 @@
         <div id="minisplore-wrapper">
                 <ul>
                     {% for organization in organizations %}
-                        <li><a class="organization" href="{% url 'sherlock' exploring_state exploring_city organization.id %}"
+                        <li><a class="organization" href="{% url 'sherlock'  organization.id %}"
                                data-id="{{ organization.id }}"
                                data-organization="{{ organization.id }}"
                                 >{{ organization.title }}</a></li>
                     {% endfor %}
-                        <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>
+{#                        <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>#}
                 </ul>
         </div>
     </div>
