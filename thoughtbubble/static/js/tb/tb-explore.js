@@ -135,6 +135,40 @@ TB.Map.mapLayer.on('ready', function() {
 });
 
 
+var previous_layer = null;
+
+function highlightFeature(layer) {
+
+    if (previous_layer) {
+        previous_layer.setStyle({
+            stroke: false,
+            fill: false,
+            weight: 1,
+//            color: '#03f',
+            color: '#03f',
+            dashArray: '',
+            fillOpacity: 0
+        });
+    }
+
+    layer.setStyle({
+        stroke: false,
+        fill: true,
+        weight: 3,
+//        color: '#E27B05',
+        color: '#444',
+        dashArray: '',
+        fillOpacity: 0.2
+    });
+
+    if (!L.Browser.ie && !L.Browser.opera) {
+        layer.bringToFront();
+    }
+
+
+    previous_layer = layer;
+}
+
 
 
 var getNeighborhoods = function() {
@@ -161,6 +195,11 @@ var getNeighborhoods = function() {
 //                e.layer.unbindPopup();
                 var feature = e.layer.feature;
 
+                if (window.statesLayers) {
+                    map.removeLayer(window.statesLayers);
+                    window.statesLayers = null;
+                }
+
                 if (feature.properties.orgs) {
                     $('#minisplore-wrapper ul').html('');
                     _.each(feature.properties.orgs, function(e) {
@@ -172,7 +211,30 @@ var getNeighborhoods = function() {
                         url:  '/api/v1/organizations/.json?city=' + feature.properties.id,
                         dataType: 'json',
                         success: function load(d) {
-                            console.log(d);
+
+//                            var hoods = L.geoJson(d,{
+//                                style: function (feature) {
+//                                    return {stroke: false, fill: false};
+//                                },
+//                                onEachFeature: function (feature, layer) {
+////                                    neighborhoods[feature.id] = {layer: layer,
+////                                        feature: feature};
+//                                }
+//                            }).addTo(map);
+//
+//                            hoods.eachLayer(function(e) {
+//                                var marker = e;
+////            var feature = marker.feature;
+////            marker.setIcon(L.icon(feature.properties.icon));
+//                            });
+
+
+                             window.statesLayers = L.geoJson(d);
+                            window.statesLayers.addTo(map);
+//                            states.on('click', function(e) {
+////                                highlightFeature(e);
+////                                map.fitBounds(e.layer._latlngs);
+//                            });
                         }
                     });
 
