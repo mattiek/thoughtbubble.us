@@ -2,6 +2,8 @@ from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
 import json as JSON
 
+from django.core.urlresolvers import reverse
+
 class City(models.Model):
     name = models.CharField(max_length=100)
     county = models.CharField(max_length=50)
@@ -36,10 +38,11 @@ class City(models.Model):
 
         props = {}
 
-        #props['explore'] = reverse('neighborhood_detail', args=[str(self.state).lower(),str(self.city).lower(),str(self.id)])
+        props['explore'] = reverse('city_detail', args=[str(self.id)])
         props['title'] = self.name
 
         if len(self.organization_set.all()):
+            props['orgs'] = True
             props['icon'] = {
                 "iconUrl": "/static/images/featured-organization-location.png",
                 "iconSize": [24, 30],
@@ -47,6 +50,7 @@ class City(models.Model):
                 "popupAnchor": [0, -25]
             }
         else:
+            props['orgs'] = False
             props['icon'] = {
                 "iconUrl": "/static/images/map-point.png",
                 "iconSize": [26, 33],

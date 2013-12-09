@@ -154,13 +154,30 @@ var getNeighborhoods = function() {
                 }
             });
 
-            var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
-            if (geoJSON) {
-                geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
-                TB.Map.map().markerLayer.setGeoJSON(geoJSON);
-            }
-            else
-                TB.Map.map().markerLayer.setGeoJSON(dStuff);
+            TB.Map.map().markerLayer.setGeoJSON(dStuff);
+
+            // Listen for individual marker clicks
+            TB.Map.map().markerLayer.on('click',function(e) {
+//                e.layer.unbindPopup();
+                var feature = e.layer.feature;
+
+                if (feature.properties.orgs) {
+                    $('#minisplore-wrapper ul').html('<li>Something here</li>');
+                    $('#minisplore').fadeIn();
+                } else {
+                    $('#minisplore').fadeOut();
+//                    $('#minisplore-wrapper ul').html('');
+
+                }
+
+            });
+//            var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
+//            if (geoJSON) {
+//                geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
+//                TB.Map.map().markerLayer.setGeoJSON(geoJSON);
+//            }
+//            else
+//                TB.Map.map().markerLayer.setGeoJSON(dStuff);
 
         }
     });
