@@ -195,10 +195,7 @@ var getNeighborhoods = function() {
 //                e.layer.unbindPopup();
                 var feature = e.layer.feature;
 
-                if (window.statesLayers) {
-                    map.removeLayer(window.statesLayers);
-                    window.statesLayers = null;
-                }
+
 
                 if (feature.properties.orgs) {
                     $('#minisplore-wrapper ul').html('');
@@ -228,6 +225,10 @@ var getNeighborhoods = function() {
 ////            marker.setIcon(L.icon(feature.properties.icon));
 //                            });
 
+                            if (window.statesLayers) {
+                                map.removeLayer(window.statesLayers);
+                                window.statesLayers = null;
+                            }
 
                              window.statesLayers = L.geoJson(d);
                             window.statesLayers.addTo(map);
@@ -241,6 +242,10 @@ var getNeighborhoods = function() {
 
                 } else {
                     $('#minisplore').fadeOut();
+                    if (window.statesLayers) {
+                        map.removeLayer(window.statesLayers);
+                        window.statesLayers = null;
+                    }
 //                    $('#minisplore-wrapper ul').html('');
 
                 }
