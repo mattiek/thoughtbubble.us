@@ -162,8 +162,21 @@ var getNeighborhoods = function() {
                 var feature = e.layer.feature;
 
                 if (feature.properties.orgs) {
-                    $('#minisplore-wrapper ul').html('<li>Something here</li>');
+                    $('#minisplore-wrapper ul').html('');
+                    _.each(feature.properties.orgs, function(e) {
+                    $('#minisplore-wrapper ul').append('<li>' + e.title + '</li>');
+                    });
                     $('#minisplore').fadeIn();
+
+                    $.ajax({
+                        url:  '/api/v1/organizations/.json?city=' + feature.properties.id,
+                        dataType: 'json',
+                        success: function load(d) {
+                            console.log(d);
+                        }
+                    });
+
+
                 } else {
                     $('#minisplore').fadeOut();
 //                    $('#minisplore-wrapper ul').html('');

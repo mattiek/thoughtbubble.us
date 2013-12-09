@@ -38,11 +38,12 @@ class City(models.Model):
 
         props = {}
 
+        props['id'] = self.id
         props['explore'] = reverse('city_detail', args=[str(self.id)])
         props['title'] = self.name
 
         if len(self.organization_set.all()):
-            props['orgs'] = True
+            props['orgs'] = [{'title': x.title, 'link': x.sherlock} for x in self.organization_set.all()]
             props['icon'] = {
                 "iconUrl": "/static/images/featured-organization-location.png",
                 "iconSize": [24, 30],

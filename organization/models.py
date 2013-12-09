@@ -104,27 +104,32 @@ class Organization(models.Model):
         return JSON.dumps(mapbox)
 
     def getGeometry(self):
-        json = self.geom.geojson
+        if self.geom:
+            json = self.geom.geojson
 
-        extent = self.geom.extent
-        geojson = {}
-        geojson['type'] = 'MultiPolygon'
-        geojson['coordinates'] = [[[
-                                       [extent[0], extent[1]],
-                                       [extent[2], extent[1]],
-                                       [extent[2], extent[3]],
-                                       [extent[0], extent[3]],
-                                       [extent[0], extent[1]],
-                                       ]]]
-        # return geojson
-        return JSON.loads(json)
+            extent = self.geom.extent
+            geojson = {}
+            geojson['type'] = 'MultiPolygon'
+            geojson['coordinates'] = [[[
+                                           [extent[0], extent[1]],
+                                           [extent[2], extent[1]],
+                                           [extent[2], extent[3]],
+                                           [extent[0], extent[3]],
+                                           [extent[0], extent[1]],
+                                           ]]]
+            # return geojson
+            return JSON.loads(json)
 
 
     def getType(self):
         return 'Feature'
 
     def getCenter(self):
-        return JSON.loads(self.center.geojson)
+        if self.center:
+            return JSON.loads(self.center.geojson)
+
+    def sherlock(self):
+        return ''
 
     def get_api_detail_url(self):
         return reverse('neighborhoods-detail',args=[self.id,])

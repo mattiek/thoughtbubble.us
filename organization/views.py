@@ -12,8 +12,8 @@ class OrganizationViewset(viewsets.ModelViewSet):
     # pagination_serializer_class = CustomPaginationSerializer
 
     def get_queryset(self):
-        name = self.request.GET.get('city','')
-        return Organization.objects.filter(city__name__icontains=name)
+        city_id = self.request.GET.get('city','')
+        return Organization.objects.filter(city=city_id)
 
 
 class OrganizationList(ListView):
