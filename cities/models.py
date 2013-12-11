@@ -42,21 +42,13 @@ class City(models.Model):
         props['explore'] = reverse('city_detail', args=[str(self.id)])
         props['title'] = self.name
 
-        if len(self.organization_set.all()):
-            props['orgs'] = [{'title': x.title, 'link': x.sherlock} for x in self.organization_set.all()]
-            props['icon'] = {
-                "iconUrl": "/static/images/featured-organization-location.png",
-                "iconSize": [24, 30],
-                "iconAnchor": [15, 22],
-                "popupAnchor": [0, -25]
-            }
-        else:
-            props['orgs'] = False
-            props['icon'] = {
-                "iconUrl": "/static/images/map-point.png",
-                "iconSize": [26, 33],
-                "iconAnchor": [13, 30],
-                "popupAnchor": [0, -25]
-            }
+        props['orgs'] = [x.getCenter() for x in self.organization_set.all()]
+
+        props['icon'] = {
+            "iconUrl": "/static/images/map-point.png",
+            "iconSize": [26, 33],
+            "iconAnchor": [13, 30],
+            "popupAnchor": [0, -25]
+        }
 
         return props

@@ -188,6 +188,17 @@ var getNeighborhoods = function() {
                 }
             });
 
+            var j = _.pluck(d, 'properties');
+            j = _.pluck(j, 'orgs')
+//            j = _.filter(j, function(obj) {
+//                return obj.length > 0;
+//            })
+            j = _.flatten(j)
+            dStuff = _.union(dStuff,j)
+//            j = _.map(j, function(obj){
+//                debugger
+//            })
+
             TB.Map.map().markerLayer.setGeoJSON(dStuff);
 
             // Listen for individual marker clicks

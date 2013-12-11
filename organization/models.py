@@ -126,7 +126,20 @@ class Organization(models.Model):
 
     def getCenter(self):
         if self.center:
-            return JSON.loads(self.center.geojson)
+            j = JSON.loads(self.center.geojson)
+            d = {}
+            d['geometry'] = j
+            d['type'] = 'Feature'
+            d['properties'] = {
+                'title': self.title,
+                'icon': {
+                "iconUrl": "/static/images/featured-organization-location.png",
+                "iconSize": [24, 30],
+                "iconAnchor": [15, 22],
+                "popupAnchor": [0, -25]
+                }
+            }
+            return d
 
     def sherlock(self):
         return ''
