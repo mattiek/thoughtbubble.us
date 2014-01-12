@@ -13,6 +13,9 @@ class OrganizationViewset(viewsets.ModelViewSet):
 
     def get_queryset(self):
         city_id = self.request.GET.get('city','')
+        org_id = self.request.GET.get('org','')
+        if org_id:
+            return Organization.objects.filter(pk=org_id)
         return Organization.objects.filter(city=city_id)
 
 

@@ -67,6 +67,7 @@ class Organization(models.Model):
 
         props['explore'] = reverse('sherlock', args=[str(self.id)])
         props['title'] = self.title
+        props['id'] = self.id
         props['icon'] = {
             "iconUrl": "/static/images/featured-organization-location.png",
             "iconSize": [24, 30],
@@ -132,6 +133,7 @@ class Organization(models.Model):
             d['type'] = 'Feature'
             d['properties'] = {
                 'title': self.title,
+                'id': self.id,
                 'icon': {
                 "iconUrl": "/static/images/featured-organization-location.png",
                 "iconSize": [24, 30],

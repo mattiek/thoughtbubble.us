@@ -14,6 +14,7 @@ var section_source   = $("#section-template").html();
 var section_template = Handlebars.compile(section_source);
 
 function highlightFeature(layer) {
+    debugger
 
     if (previous_layer) {
         previous_layer.setStyle({
@@ -47,6 +48,7 @@ function highlightFeature(layer) {
 
 
 var workingMarkers = function(d) {
+    debugger
     TB.Map.markers = L.mapbox.markerLayer(d.results).addTo(map);
     var newMap = L.mapbox;
     // Add features to the map
@@ -77,6 +79,7 @@ var workingMarkers = function(d) {
 
 // Set a custom icon on each marker based on feature properties
 TB.Map.map().markerLayer.on('layeradd', function(e) {
+
     var marker = e.layer,
         feature = marker.feature;
 
@@ -177,9 +180,8 @@ var getNeighborhoods = function() {
         url: '/api/v1/cities/.json?lat=' + center.lat + '&lng=' + center.lng,
         dataType: 'json',
         success: function load(d) {
-
             // Transform the regions to the centers
-            var dStuff = _.map(d, function(obj) {
+            var cities = _.map(d, function(obj) {
                 return {
                     id: obj.id,
                     properties: obj.properties,
@@ -187,27 +189,21 @@ var getNeighborhoods = function() {
                     geometry: obj.center
                 }
             });
-
             var j = _.pluck(d, 'properties');
-            j = _.pluck(j, 'orgs')
-//            j = _.filter(j, function(obj) {
-//                return obj.length > 0;
-//            })
-            j = _.flatten(j)
-            dStuff = _.union(dStuff,j)
-//            j = _.map(j, function(obj){
-//                debugger
-//            })
+            j = _.pluck(j, 'orgs');
 
-            TB.Map.map().markerLayer.setGeoJSON(dStuff);
+            j = _.flatten(j);
+
+            map_features = _.union(cities,j);
+
+            TB.Map.map().markerLayer.setGeoJSON(map_features);
 
             // Listen for individual marker clicks
             TB.Map.map().markerLayer.on('click',function(e) {
 //                e.layer.unbindPopup();
                 var feature = e.layer.feature;
 
-
-
+                // Check to see that we are a city that would have orgs
                 if (feature.properties.orgs) {
                     $('#minisplore-wrapper ul').html('');
                     _.each(feature.properties.orgs, function(e) {
@@ -220,55 +216,40 @@ var getNeighborhoods = function() {
                         dataType: 'json',
                         success: function load(d) {
 
-//                            var hoods = L.geoJson(d,{
-//                                style: function (feature) {
-//                                    return {stroke: false, fill: false};
-//                                },
-//                                onEachFeature: function (feature, layer) {
-////                                    neighborhoods[feature.id] = {layer: layer,
-////                                        feature: feature};
-//                                }
-//                            }).addTo(map);
-//
-//                            hoods.eachLayer(function(e) {
-//                                var marker = e;
-////            var feature = marker.feature;
-////            marker.setIcon(L.icon(feature.properties.icon));
-//                            });
-
-                            if (window.statesLayers) {
-                                map.removeLayer(window.statesLayers);
-                                window.statesLayers = null;
+                            if (window.organizationBoundaries) {
+                                map.removeLayer(window.organizationBoundaries);
+                                window.organizationBoundaries = null;
                             }
 
-                             window.statesLayers = L.geoJson(d);
-                            window.statesLayers.addTo(map);
-//                            states.on('click', function(e) {
-////                                highlightFeature(e);
-////                                map.fitBounds(e.layer._latlngs);
-//                            });
+                             window.organizationBoundaries = L.geoJson(d);
+                            window.organizationBoundaries.addTo(map);
                         }
                     });
 
 
-                } else {
+                } else { // We are on an Organization
                     $('#minisplore').fadeOut();
-                    if (window.statesLayers) {
-                        map.removeLayer(window.statesLayers);
-                        window.statesLayers = null;
-                    }
-//                    $('#minisplore-wrapper ul').html('');
+
+
+                    $.ajax({
+                        url:  '/api/v1/organizations/.json?org=' + feature.properties.id,
+                        dataType: 'json',
+                        success: function load(d) {
+
+                            if (window.organizationBoundaries) {
+                                map.removeLayer(window.organizationBoundaries);
+                                window.organizationBoundaries = null;
+                            }
+
+                            window.organizationBoundaries = L.geoJson(d);
+                            window.organizationBoundaries.addTo(map);
+                        }
+                    });
+
 
                 }
 
             });
-//            var geoJSON = TB.Map.map().markerLayer.getGeoJSON();
-//            if (geoJSON) {
-//                geoJSON.features = dStuff; //_.union(geoJSON.features, dStuff);
-//                TB.Map.map().markerLayer.setGeoJSON(geoJSON);
-//            }
-//            else
-//                TB.Map.map().markerLayer.setGeoJSON(dStuff);
 
         }
     });
@@ -306,19 +287,3 @@ $('#anywhere-else').on('click', function(e){
 
 
 });
-
-
-// load init
-// Metro selection
-//if (TB.exploring.city && TB.exploring.state) {
-////    $.ajax(
-////        {
-////            url: '/api/v1/cities/.json?city=' + TB.exploring.city + '&state=' + TB.exploring.state,
-////            dataType: 'json',
-////            success: function goto(d) {
-////                console.log(d);
-////                var city = d.results[0];
-////                map.panTo([city.latitude, city.longitude]);
-////            }
-////        });
-//};
