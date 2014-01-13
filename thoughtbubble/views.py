@@ -21,9 +21,9 @@ from avatar.views import _get_avatars
 from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
-from organization.models import Organization
-from cities.models import City
-from idea.models import Idea, IdeaSupport
+from geo.organization.models import Organization
+from geo.cities.models import City
+from ideation.idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
 from forms import SignupForm, LoginForm

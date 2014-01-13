@@ -21,7 +21,7 @@ urlpatterns = patterns('',
 
     # url(r'^accounts/profile/?$', 'thoughtbubble.views.dashboard', name='user_dashboard'),
 
-    url(r'^supporting/', include('supportering.urls')),
+    url(r'^supporting/', include('ideation.supportering.urls')),
 
     url(r'^login/?$', 'thoughtbubble.views.login', name='login'),
     url(r'^logout/?$', 'thoughtbubble.views.logout', name='logout'),

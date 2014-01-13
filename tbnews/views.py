@@ -8,7 +8,7 @@ from forms import NewsItemForm
 
 from vanilla import DetailView, UpdateView, ListView, CreateView, DeleteView
 
-from location.models import Location
+from geo.location.models import Location
 
 
 class NewsItemCreateView(CreateView):

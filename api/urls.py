@@ -1,9 +1,9 @@
 from django.conf.urls import patterns, include, url
 from rest_framework import routers
-from cities.views import CityViewset,CityTypeaheadViewset
-from location.views import LocationViewset
-from organization.views import OrganizationViewset
-import location
+from geo.cities.views import CityViewset,CityTypeaheadViewset
+from geo.location.views import LocationViewset
+from geo.organization.views import OrganizationViewset
+import geo.location
 
 router = routers.DefaultRouter()
 # api = router.SimpleRouter()

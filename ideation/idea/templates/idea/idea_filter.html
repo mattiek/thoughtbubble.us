@@ -1,0 +1,22 @@
+<form id="filtering" action="" method="get">
+    <span id="sort_by">Sort by:</span>
+    <select name="order" id="order">
+        <option value="">refine</option>
+        <option value="recent" {% if ordering == "recent" %}selected{% endif %}>Recent</option>
+        <option value="support" {% if ordering == "support" %}selected{% endif %}>Most Supported</option>
+    </select>
+{#    {{ idea_filter.form.content_object }}#}
+    {{ filterform.where }}
+</form>
+<script type="text/javascript">
+    $('#order').chosen({disable_search_threshold: 10}).change( function(e) {
+        $(e.target).parents('form').submit();
+    });
+
+    $('#id_where').chosen({disable_search_threshold: 10}).change( function(e) {
+        $(e.target).parents('form').submit();
+    });
+</script>
+{#{% for obj in filter %}#}
+{#    {{ obj.name }} <br/>#}
+{#{% endfor %}#}

@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load getdict %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Add a Feature
+{% endblock %}
+
+{% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/location/detail.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
+{% endblock %}
+
+{% block bodyid %}location-detail{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+<div id="page-wrapper">
+    {% if organization.curator == request.user or request.user.is_superuser %}
+        <h1 style="margin:0px;"><a href="{% url 'location_update' location.id %}">admin</a></h1>
+    {% endif %}
+
+    <div class="row title">
+        <div id="header">{{ location.name }}</div>
+    </div>
+
+        <div class="about">{{ location.about }}</div>
+        <div class="">
+            <div id="map"></div>
+        </div>
+
+    {#    News #}
+
+    <div id="news">
+        <div class="small-heading">news</div>
+
+        {% include 'widgets/news_feed.html' %}
+
+                <a href="#" class="orange"></a>
+    </div>
+
+    {#    Pictures #}
+        <div class="large-12 columns small-heading">pictures</div>
+        <div class="large-12 columns">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
+
+    {#    Partners #}
+        <div class="large-12 columns small-heading">partners</div>
+        <div class="large-12 columns">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
+    </div>
+
+{#    Ideas #}
+    {% for idea in ideas %}
+            {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+{% endblock %}
+
+{% block footerscripts %}
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>
+{#    {% if organization %}#}
+        <script type="text/javascript">
+            TB.Map.mapLayer.on('ready', function() {
+                $.ajax({
+                    url: "{{ location.get_api_detail_url }}",
+                    dataType: "json",
+                    success: function(d) {
+
+                        TB.Map.map().markerLayer.on('layeradd', function(e) {
+                            var marker = e.layer,
+                                    feature = marker.feature;
+
+                            marker.setIcon(L.icon(feature.properties.icon));
+                            // Create custom popup content
+                        });
+
+                        // Add features to the map
+                        TB.Map.map().markerLayer.setGeoJSON(d);
+
+{#                        var markers = L.mapbox.markerLayer(d).addTo(map);#}
+
+                        map.setView([d.geometry.coordinates[1],d.geometry.coordinates[0]],15);
+                    }
+                });
+            });
+
+        </script>
+{#    {% endif %}#}
+{% endblock %}

@@ -13,10 +13,10 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
    url(r'^$', 'thoughtbubble.views.home', name='home'),
-   url(r'^ideas/', include('idea.urls')),
-   url(r'^locations/', include('location.urls')),
-   url(r'^cities/', include('cities.urls')),
-   url(r'^organizations/', include('organization.urls')),
+   url(r'^ideas/', include('ideation.idea.urls')),
+   url(r'^locations/', include('geo.location.urls')),
+   url(r'^cities/', include('geo.cities.urls')),
+   url(r'^organizations/', include('geo.organization.urls')),
    url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
    url(r'^explore/(?P<pk>\d+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
    )

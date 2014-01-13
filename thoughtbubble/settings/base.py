@@ -43,10 +43,17 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.flatpages',
     'thoughtbubble',
-    'world',
-    'cities',
-    'location',
-    'idea',
+
+    'geo.world',
+    'geo.cities',
+    'geo.location',
+    'geo.organization',
+
+    'ideation.idea',
+    'ideation.supportering',
+    'ideation.commenteering',
+    'ideation.project',
+
     'csvimport',
     'gunicorn',
     'south',
@@ -54,10 +61,9 @@ INSTALLED_APPS = (
     'rest_framework',
     'api',
     'floppyforms',
-    'supportering',
-    'commenteering',
-    'organization',
-    'project',
+
+
+
     'partner',
     'tbnews',
     # 'social.apps.django_app.default',

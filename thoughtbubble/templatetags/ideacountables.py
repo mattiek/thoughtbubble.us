@@ -1,7 +1,7 @@
 from django import template
-from idea.models import Idea, IdeaSupport
-from organization.models import Organization
-from supportering.models import CommentSupport
+from ideation.idea.models import Idea, IdeaSupport
+from geo.organization.models import Organization
+from geo.supportering.models import CommentSupport
 
 register = template.Library()
 

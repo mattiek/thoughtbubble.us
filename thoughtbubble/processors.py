@@ -1,6 +1,6 @@
 from forms import SignupForm, LoginForm
 from thoughtbubble.settings import DOMAIN_HOST
-from cities.models import City
+from geo.cities.models import City
 
 def login_form(request):
     d = {'loginform': LoginForm(),}
