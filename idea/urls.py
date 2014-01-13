@@ -9,7 +9,7 @@ urlpatterns = patterns('idea.views',
    url(r'^add/?$', 'addidea', name='addidea'),
    # url(r'^adds/?$', IdeaCreate.as_view(), name='addideas'),
    # url(r'^(?P<id>\d+)/add/?$', 'addidea', name='addidea'),
-   url(r'^nh-(?P<neighborhood>\d+)/add/?$', 'add_neighborhood_idea', name='add_neighborhood_idea'),
+   # url(r'^nh-(?P<neighborhood>\d+)/add/?$', 'add_neighborhood_idea', name='add_neighborhood_idea'),
 
    url(r'^(?P<organization>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
    url(r'^(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/add/?$', 'addidea', name='addidea'),

@@ -1,7 +1,6 @@
 from django.forms import widgets
 from rest_framework import serializers, pagination
 from models import Organization
-from neighborhood.serializers import NeighborhoodSerializer
 
 
 class FeatureSerializer(serializers.Serializer):

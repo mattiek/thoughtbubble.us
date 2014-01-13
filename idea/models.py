@@ -1,5 +1,4 @@
 from django.db import models
-from neighborhood.models import Neighborhood
 from thoughtbubble.utils import path_and_rename
 from thoughtbubble.models import ThoughtbubbleUser
 #from location.models import Location
@@ -73,22 +72,21 @@ class Idea(models.Model):
         return d.days
 
     def get_support_url(self):
-        if self.content_type.name == 'neighborhood':
-            neighborhood = self.content_object
-        else: # its a location
-            neighborhood = self.content_object.organization.neighborhood
+        # if self.content_type.name == 'neighborhood':
+        #     neighborhood = self.content_object
+        # else: # its a location
+        #     neighborhood = self.content_object.organization.neighborhood
 
         return reverse('support_idea',args=[self.id])
 
     def get_absolute_url(self):
-        if self.content_type.name == 'neighborhood':
-            neighborhood = self.content_object
-        else: # its a location
-            neighborhood = self.content_object.organization.neighborhood
+        # if self.content_type.name == 'neighborhood':
+        #     neighborhood = self.content_object
+        # else: # its a location
+        #     neighborhood = self.content_object.organization.neighborhood
 
-        return reverse('idea_detail', args=[neighborhood.state.lower(),
-                                            neighborhood.city.lower(),
-                                            neighborhood.name.lower(),
+        return reverse('idea_detail', args=[
+                                            self.content_object.name.lower(),
                                             self.content_object.name.lower(),
                                             self.id])
 

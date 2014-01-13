@@ -17,7 +17,6 @@ urlpatterns = patterns('',
    url(r'^locations/', include('location.urls')),
    url(r'^cities/', include('cities.urls')),
    url(r'^organizations/', include('organization.urls')),
-   url(r'^neighborhoods/', include('neighborhood.urls')),
    url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
    url(r'^explore/(?P<pk>\d+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
    )

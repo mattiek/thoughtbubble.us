@@ -1,7 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
-from forms import AddIdeaForm, FilterForm, AddIdeaNeighborhoodForm
+from forms import AddIdeaForm, FilterForm
 from models import Idea, IdeaType, IdeaImage, IdeaLink, IdeaSupport
-from neighborhood.models import Neighborhood
 from location.models import Location
 from django.contrib import messages
 from vanilla import ListView, DetailView, CreateView, DeleteView
@@ -15,73 +14,60 @@ from organization.models import Organization
 from location.models import Location
 
 
-def add_neighborhood_idea(request, state, city, neighborhood):
-    if not request.user.is_authenticated():
-        messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
-        return redirect('home')
-
-    if request.POST:
-        form = AddIdeaNeighborhoodForm(request.POST,request.FILES)
-        if form.is_valid():
-
-            data = form.cleaned_data
-
-            idea = Idea(
-                name=data['name'],
-                description=data['description'],
-                what_kind=data['what_kind'],
-                content_object=data['content_object'],
-                what_for=data['what_for'],
-                user=request.user
-            )
-            idea.save()
-
-            pic1 = IdeaImage(idea=idea,img=form.cleaned_data['pic1'])
-            pic2 = IdeaImage(idea=idea,img=form.cleaned_data['pic2'])
-            pic3 = IdeaImage(idea=idea,img=form.cleaned_data['pic3'])
-            pic4 = IdeaImage(idea=idea,img=form.cleaned_data['pic4'])
-
-            link1 = IdeaLink(idea=idea,url=form.cleaned_data['links'])
-
-            if link1:
-                link1.save()
-
-            # TODO: More elegant
-            if pic1.img:
-                pic1.save()
-            if pic2.img:
-                pic2.save()
-            if pic3.img:
-                pic3.save()
-            if pic4.img:
-                pic4.save()
-
-            messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
-            return redirect(idea.content_object.get_absolute_url())
-
-    else:
-        form = AddIdeaForm()
-
-    d = {'form': form,
-         'action': reverse('add_neighborhood_idea', args=[neighborhood]) }
-
-    form.fields['content_object'].queryset = Neighborhood.objects.filter(pk=neighborhood)
-    form.fields['content_object'].initial = Neighborhood.objects.filter(pk=neighborhood)
-# form.fields['content_object'].initial
-    # if id:
-    #     form.fields['content_object'].initial = Location.objects.get(pk=id)
-    #
-    # if organization:
-    #     d['location'] = Location.objects.get(
-    #         organization__title__iexact=organization,
-    #         organization__neighborhood__city__iexact=city,
-    #         organization__neighborhood__state__iexact=state,
-    #         name=location)
-    #     form.fields['content_object'].initial = d['location']
-
-
-
-    return render(request, 'addidea.html', d)
+# def add_neighborhood_idea(request, state, city, neighborhood):
+#     if not request.user.is_authenticated():
+#         messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
+#         return redirect('home')
+#
+#     if request.POST:
+#         form = AddIdeaNeighborhoodForm(request.POST,request.FILES)
+#         if form.is_valid():
+#
+#             data = form.cleaned_data
+#
+#             idea = Idea(
+#                 name=data['name'],
+#                 description=data['description'],
+#                 what_kind=data['what_kind'],
+#                 content_object=data['content_object'],
+#                 what_for=data['what_for'],
+#                 user=request.user
+#             )
+#             idea.save()
+#
+#             pic1 = IdeaImage(idea=idea,img=form.cleaned_data['pic1'])
+#             pic2 = IdeaImage(idea=idea,img=form.cleaned_data['pic2'])
+#             pic3 = IdeaImage(idea=idea,img=form.cleaned_data['pic3'])
+#             pic4 = IdeaImage(idea=idea,img=form.cleaned_data['pic4'])
+#
+#             link1 = IdeaLink(idea=idea,url=form.cleaned_data['links'])
+#
+#             if link1:
+#                 link1.save()
+#
+#             # TODO: More elegant
+#             if pic1.img:
+#                 pic1.save()
+#             if pic2.img:
+#                 pic2.save()
+#             if pic3.img:
+#                 pic3.save()
+#             if pic4.img:
+#                 pic4.save()
+#
+#             messages.add_message(request, messages.INFO, ' %s idea added.' % (idea.name,))
+#             return redirect(idea.content_object.get_absolute_url())
+#
+#     else:
+#         form = AddIdeaForm()
+#
+#     d = {'form': form,
+#          'action': reverse('add_neighborhood_idea', args=[neighborhood]) }
+#
+#     form.fields['content_object'].queryset = Neighborhood.objects.filter(pk=neighborhood)
+#     form.fields['content_object'].initial = Neighborhood.objects.filter(pk=neighborhood)
+#
+#     return render(request, 'addidea.html', d)
 
 
 
@@ -143,8 +129,6 @@ def addidea(request, id=None, organization=None, location=None):
         try:
             d['location'] = Location.objects.get(
                                                 organization__title__iexact=organization,
-                                                organization__neighborhood__city__iexact=city,
-                                                organization__neighborhood__state__iexact=state,
                                                 name=location)
             form.fields['content_object'].initial = d['location']
         except:
@@ -192,8 +176,8 @@ class IdeaList(ListView):
             qs = qs.filter(content_type__name='location', object_id__in=locations)
             return qs
 
-        neighborhood = self.kwargs.get('neighborhood', None)
-        return Idea.objects.filter(content_type__name='neighborhood', object_id=neighborhood)
+        # neighborhood = self.kwargs.get('neighborhood', None)
+        return Idea.objects.filter() #content_type__name='neighborhood', object_id=neighborhood)
 
         ### DEPERECATED
         # if self.organization:

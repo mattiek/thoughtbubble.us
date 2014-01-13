@@ -79,7 +79,7 @@ class Organization(models.Model):
     def getLocationsGeoJSON(self):
         mapbox = [{ "geometry": {
             "type": "Point",
-            "coordinates": [self.neighborhood.center[0], self.neighborhood.center[1]],
+            "coordinates": [self.center[0], self.center[1]],
                 },
                     "properties": {
                         "id": self.get_id(),
@@ -134,6 +134,7 @@ class Organization(models.Model):
             d['properties'] = {
                 'title': self.title,
                 'id': self.id,
+                'explore': reverse('sherlock', args=[str(self.id)]),
                 'icon': {
                 "iconUrl": "/static/images/featured-organization-location.png",
                 "iconSize": [24, 30],
@@ -147,10 +148,10 @@ class Organization(models.Model):
         return ''
 
     def get_api_detail_url(self):
-        return reverse('neighborhoods-detail',args=[self.id,])
+        return reverse('organizations-detail',args=[self.id,])
 
     def get_absolute_url(self):
-        return reverse('neighborhood_detail', args=[str(self.id)])
+        return reverse('organization_detail', args=[str(self.id)])
 
     def getExtent(self):
         extent = self.geom.extent

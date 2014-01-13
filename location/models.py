@@ -3,7 +3,6 @@ from cities.models import City
 import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
 from organization.models import Organization
-from neighborhood.models import Neighborhood
 from django.core.urlresolvers import reverse
 from partner.models import Partner
 
@@ -62,11 +61,11 @@ class Location(models.Model):
             return "%s [no organization]" % (self.name,)
 
     def get_absolute_url(self):
-        state = 'oh'
-        city = 'columbus'
-        if self.organization:
-            state = self.organization.neighborhood.state
-            city = self.organization.neighborhood.city
+        # state = 'oh'
+        # city = 'columbus'
+        # if self.organization:
+        #     state = self.organization.neighborhood.state
+        #     city = self.organization.neighborhood.city
 
         return reverse('location_detail', args=[str(self.id)])
 

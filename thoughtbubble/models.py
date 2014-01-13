@@ -4,7 +4,6 @@ from thoughtbubble.utils import path_and_rename
 from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
     )
-from neighborhood.models import Neighborhood
 from avatar.models import Avatar
 
 

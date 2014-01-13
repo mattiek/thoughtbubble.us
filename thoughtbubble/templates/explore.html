@@ -87,13 +87,13 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
 
     {% if exploring %}
-        <script type="text/javascript">
-            minmin(
-            {{ exploring.neighborhood.id }},
-            {{ exploring.id }},
-            '{{ exploring.get_absolute_url }}'
-            );
-        </script>
+{#        <script type="text/javascript">#}
+{#            minmin(#}
+{#            {{ exploring.neighborhood.id }},#}
+{#            {{ exploring.id }},#}
+{#            '{{ exploring.get_absolute_url }}'#}
+{#            );#}
+{#        </script>#}
     {% endif %}
 
 {% endblock %}
