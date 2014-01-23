@@ -176,8 +176,11 @@ function highlightFeature(layer) {
 
 var getNeighborhoods = function() {
     var center = map.getCenter();
+    var bounds = map.getBounds();
+
     $.ajax({
-        url: '/api/v1/places/.json?lat=' + center.lat + '&lng=' + center.lng,
+//        url: '/api/v1/places/.json?lat=' + center.lat + '&lng=' + center.lng,
+        url: '/api/v1/places/.json?bb=' + bounds.toBBoxString() + '&lat=' + center.lat + '&lng=' + center.lng,
         dataType: 'json',
         success: function load(d) {
             // Transform the regions to the centers
