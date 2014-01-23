@@ -24,16 +24,6 @@
     <script src="{{ STATIC_URL }}js/handlebars.js"></script>
     <script src="{{ STATIC_URL }}js/tb/tb-supporting.js"></script>
 
-    <script type="text/javascript">
-        {% if exploring_city and exploring_state %}
-            var TB = TB || {};
-            TB.exploring = {city: "{{ exploring_city }}",
-                            state: "{{ exploring_state }}",
-                            lat: {{ exploring_obj.latitude }},
-                            lng: {{ exploring_obj.longitude }}
-            };
-        {% endif %}
-    </script>
     {% block head %}
     {% endblock %}
 </head>

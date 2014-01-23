@@ -7,7 +7,7 @@ class OrganizationAdminForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(OrganizationAdminForm, self).__init__(*args, **kwargs)
-        self.fields['city'].widget = TypeAheadAdminWidget()
+        # self.fields['city'].widget = TypeAheadAdminWidget()
 
     class Meta:
         model = Organization

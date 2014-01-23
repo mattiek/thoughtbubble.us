@@ -12,11 +12,11 @@ class OrganizationViewset(viewsets.ModelViewSet):
     # pagination_serializer_class = CustomPaginationSerializer
 
     def get_queryset(self):
-        city_id = self.request.GET.get('city','')
+        place_id = self.request.GET.get('place','')
         org_id = self.request.GET.get('org','')
         if org_id:
             return Organization.objects.filter(pk=org_id)
-        return Organization.objects.filter(city=city_id)
+        return Organization.objects.filter(place=place_id)
 
 
 class OrganizationList(ListView):
@@ -43,7 +43,7 @@ class OrganizationUpdate(UpdateView):
         return s
 
 
-def join(request, state, city, pk):
+def join(request, pk):
 
     if not request.user.is_authenticated():
         return HttpResponse('none')
@@ -62,6 +62,6 @@ def join(request, state, city, pk):
         return HttpResponse("removed")
 
 
-def join_from_organization(request, state, city, pk):
-    join(request,state,city,pk)
-    return redirect('organization_detail', state, city, pk)
+def join_from_organization(request, pk):
+    join(request,pk)
+    return redirect('organization_detail', pk)

@@ -22,7 +22,7 @@ from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
 from geo.organization.models import Organization
-from geo.cities.models import City
+from geo.places.models import Place
 from ideation.idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
@@ -54,7 +54,7 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
                 raise ValidationError(_("Your account has no password set"
                                         " up."))
 
-def home(request, state=None, city=None):
+def home(request):
     # if not state or not city:
     #     return redirect( reverse('home',
     #                                 args=[request.session.get('exploring_state','oh'),
@@ -74,7 +74,7 @@ def logout(request):
     return redirect('home')
 
 
-def explore(request, state=None, city=None, pk=None):
+def explore(request, pk=None):
 
     # if state:
     #     request.session['exploring_state'] = state
@@ -96,7 +96,7 @@ def explore(request, state=None, city=None, pk=None):
     return render(request, 'explore.html', d)
 
 
-def sherlock(request, state=None, city=None, pk=None):
+def sherlock(request, pk=None):
 
     # if state:
     #     request.session['exploring_state'] = state

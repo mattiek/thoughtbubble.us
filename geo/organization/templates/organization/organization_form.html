@@ -18,7 +18,7 @@
 
 {% block content %}
     <div id="form-wrapper">
-        <form method="POST" action="{% url 'organization_update' organization.neighborhood.state organization.neighborhood.city organization.id %}">
+        <form method="POST" action="{% url 'organization_update' organization.id %}">
             {% csrf_token %}
             <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
             <input type="hidden" name="curator" value="{{ form.curator.value }}"/>

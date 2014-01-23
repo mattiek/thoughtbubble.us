@@ -44,10 +44,11 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'thoughtbubble',
 
-    'geo.world',
-    'geo.cities',
+    # 'geo.world',
+    # 'geo.cities',
     'geo.location',
     'geo.organization',
+    'geo.places',
 
     'ideation.idea',
     'ideation.supportering',
@@ -177,7 +178,6 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'django.contrib.messages.context_processors.messages',
     'thoughtbubble.processors.login_form',
     'thoughtbubble.processors.domain_host',
-    'thoughtbubble.processors.exploring',
     "allauth.account.context_processors.account",
     "allauth.socialaccount.context_processors.socialaccount",
     # 'social.apps.django_app.context_processors.backends',

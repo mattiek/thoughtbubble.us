@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from geo.cities.models import City
+from geo.places.models import Place
 import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
 from geo.organization.models import Organization
@@ -33,7 +33,6 @@ class Location(models.Model):
     address = models.CharField(max_length=255, null=True, blank=True)
     city_and_state = models.CharField(max_length=255, null=True, blank=True)
     zip = models.CharField(max_length=15, null=True, blank=True)
-    city = models.ForeignKey(City, null=True, blank=True)
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
 

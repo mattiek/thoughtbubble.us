@@ -33,7 +33,7 @@ class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Organization
-        fields = ('id', 'city', 'center', 'geometry', 'type', 'properties')
+        fields = ('id', 'place', 'center', 'geometry', 'type', 'properties')
 
     @property
     def data(self):

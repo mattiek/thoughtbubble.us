@@ -1,5 +1,5 @@
 from django.contrib.gis.db import models
-from geo.cities.models import City
+from geo.places.models import Place
 from thoughtbubble.utils import path_and_rename
 from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
@@ -9,7 +9,7 @@ from partner.models import Partner
 
 
 class Organization(models.Model):
-    city = models.ForeignKey(City, null=True, blank=True)
+    place = models.ForeignKey(Place, null=True, blank=True)
 
     logo = models.ImageField(upload_to=path_and_rename('profiles', 'logo'), null=True, blank=True)
 
