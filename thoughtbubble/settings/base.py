@@ -33,6 +33,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
+    'filebrowser',
+    'tinymce',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -212,3 +215,11 @@ SOCIALACCOUNT_AUTO_SIGNUP=False
 ACCOUNT_EMAIL_REQUIRED=True
 ACCOUNT_EMAIL_VERIFICATION="none"
 SOCIALACCOUNT_ADAPTER="thoughtbubble.views.MySocialAdapter"
+
+# TINYMCE_JS_URL = '//tinymce.cachefly.net/4.0/tinymce.min.js'
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 10,
+    }

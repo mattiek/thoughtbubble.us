@@ -216,7 +216,7 @@ var getNeighborhoods = function() {
                     $('#minisplore').fadeIn();
 
                     $.ajax({
-                        url:  '/api/v1/organizations/.json?city=' + feature.properties.id,
+                        url:  '/api/v1/organizations/.json?place=' + feature.properties.id,
                         dataType: 'json',
                         success: function load(d) {
 

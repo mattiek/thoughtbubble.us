@@ -85,10 +85,25 @@ class ThoughtbubbleUserAdmin(UserAdmin):
     )
 
 
+from django import forms
+from django.contrib.flatpages.models import FlatPage
+from tinymce.widgets import TinyMCE
 
+class FlatPageForm(forms.ModelForm):
+    content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
+
+    class Meta:
+        model = FlatPage
+
+from tinymce.widgets import TinyMCE
 class FlatPageAdmin(admin.ModelAdmin):
-    class Media:
-        js = ("//tinymce.cachefly.net/4.0/tinymce.min.js","js/tb/flatpage.js",)
+    form = FlatPageForm
+    # content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
+    # class Meta:
+    #     forms = FlatPageForm
+    # class Media:
+    #     js = ("//tinymce.cachefly.net/4.0/tinymce.min.js","js/tb/flatpage.js",)
+    #     pass
 
 admin.site.register(ThoughtbubbleUser, ThoughtbubbleUserAdmin)
 admin.site.register(ThoughtbubbleUserProfile)
