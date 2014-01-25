@@ -1,23 +1,7 @@
 #illustration {
-    background: url(../images/illustration-ship.png) no-repeat no-repeat;
-    background-size: 100%;
-    height: 233px;
-    width: 930px;
-    margin: 0 auto;
-    background-color: #ffffff;
+    background-image: url(../images/illustration-ship.png);
 }
 
-#home-container {
-    width: 930px;
-    margin: 0 auto;
-}
-
-#greenhouse,
-#hotdogtruck,
-#guitarist {
-    display:block;
-    margin: 125px auto 0;
-}
 
 h3 {
     font-size: 18px;
@@ -38,14 +22,13 @@ p {
 
 }
 
-.left-column {
-  width: 25%;
-  float: left;
-}
+.middle-column {
+  width: 560px;
+  margin: 0 auto;
 
-.right-column {
-  width: 690px;
-  float: right;
+  :first-child {
+    margin-top: 0px;
+  }
 }
 
 .clr {

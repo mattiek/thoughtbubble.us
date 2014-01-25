@@ -221,11 +221,14 @@ SOCIALACCOUNT_ADAPTER="thoughtbubble.views.MySocialAdapter"
 
 # TINYMCE_JS_URL = '//tinymce.cachefly.net/4.0/tinymce.min.js'
 TINYMCE_DEFAULT_CONFIG = {
-    'plugins': "table,spellchecker,paste,searchreplace",
+    'plugins': "fullscreen,table,spellchecker,paste,searchreplace,fullpage",
+    'toolbar': "fullscreen",
     'theme': "advanced",
+    'theme_advanced_buttons3_add' : "fullpage",
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 10,
     'relative_urls': False,
+    'content_css' : "/static/css/tb-privacy.css",
     }
 
 TINYMCE_SPELLCHECKER = True

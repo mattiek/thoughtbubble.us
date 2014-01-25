@@ -1,7 +1,9 @@
-
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
 
 h1 {
-    color: #6fc4d8; /* text color */
+    color: #6fc4de; /* text color */
     font-family: "Museo Sans", sans-serif;
     font-size: 50px;
     margin: 45px 0 0 0;

@@ -90,7 +90,14 @@ from django.contrib.flatpages.models import FlatPage
 from tinymce.widgets import TinyMCE
 
 class FlatPageForm(forms.ModelForm):
-    content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
+    content = forms.CharField(widget=TinyMCE(
+                        attrs={'cols': 80, 'rows': 30},
+                        mce_attrs={
+                            'plugins': "fullscreen,table,spellchecker,paste,searchreplace",
+                            'theme': "advanced",
+                            'theme_advanced_buttons1_add' : "fullscreen",
+                        },
+    ))
 
     class Meta:
         model = FlatPage
@@ -101,7 +108,8 @@ class FlatPageAdmin(admin.ModelAdmin):
     # content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
     # class Meta:
     #     forms = FlatPageForm
-    # class Media:
+    class Media:
+        css = {'all': ["css/tb-privacy.css",]}
     #     js = ("//tinymce.cachefly.net/4.0/tinymce.min.js","js/tb/flatpage.js",)
     #     pass
 

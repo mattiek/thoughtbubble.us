@@ -2,12 +2,8 @@
 @import "partials/inputs";
 
 #illustration {
-    background: url(../images/illustration-trees.png) no-repeat no-repeat;
-    background-size: 100%;
+    background-image: url(../images/illustration-trees.png);
     height: 238px;
-    width: 930px;
-    margin: 0 auto;
-    background-color: #ffffff;
 }
 
 .submit {

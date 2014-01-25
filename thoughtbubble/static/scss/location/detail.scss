@@ -5,12 +5,8 @@
 @import "partials/common_tb";
 
 #illustration {
-    background: url(../../images/illustration-ship.png) no-repeat no-repeat;
-    background-size: 100%;
+    background-image: url(../../images/illustration-ship.png);
     height: 250px;
-    width: 930px;
-    margin: 0 auto;
-    background-color: #ffffff;
 }
 
 .submit {

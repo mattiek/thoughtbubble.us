@@ -1,14 +1,9 @@
 /* line 1, ../scss/tb-signup.scss */
 #illustration {
-  background: url(../images/illustration-ship.png) no-repeat no-repeat;
-  background-size: 100%;
-  height: 233px;
-  width: 930px;
-  margin: 0 auto;
-  background-color: #ffffff;
+  background-image: url(../images/illustration-ship.png);
 }
 
-/* line 10, ../scss/tb-signup.scss */
+/* line 6, ../scss/tb-signup.scss */
 .submit {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -36,13 +31,13 @@
   margin-top: 30px;
 }
 
-/* line 31, ../scss/tb-signup.scss */
+/* line 27, ../scss/tb-signup.scss */
 #form-wrapper {
   width: 324px;
   margin: 0 auto;
 }
 
-/* line 36, ../scss/tb-signup.scss */
+/* line 32, ../scss/tb-signup.scss */
 #id_profile_picture {
   width: 80px;
   height: 79px;
@@ -55,7 +50,7 @@
   background-position: 57px 57px;
 }
 
-/* line 51, ../scss/tb-signup.scss */
+/* line 47, ../scss/tb-signup.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -80,23 +75,23 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 73, ../scss/tb-signup.scss */
+/* line 69, ../scss/tb-signup.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 77, ../scss/tb-signup.scss */
+/* line 73, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 82, ../scss/tb-signup.scss */
+/* line 78, ../scss/tb-signup.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 86, ../scss/tb-signup.scss */
+/* line 82, ../scss/tb-signup.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -105,7 +100,7 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 93, ../scss/tb-signup.scss */
+/* line 89, ../scss/tb-signup.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -114,19 +109,19 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 100, ../scss/tb-signup.scss */
+/* line 96, ../scss/tb-signup.scss */
 #id_captcha_choicefield li.captcha_select {
   border: 3px solid #f3812b;
   border-radius: 10px;
   padding: 3px;
 }
 
-/* line 106, ../scss/tb-signup.scss */
+/* line 102, ../scss/tb-signup.scss */
 #id_captcha_choicefield img {
   max-height: 50px;
 }
 
-/* line 110, ../scss/tb-signup.scss */
+/* line 106, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   padding: 6px;
 }

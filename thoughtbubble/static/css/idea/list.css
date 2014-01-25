@@ -414,15 +414,10 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 9, ../../scss/idea/list.scss */
 #illustration {
-  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
-  background-size: 100%;
-  height: 233px;
-  width: 930px;
-  margin: 0 auto;
-  background-color: #ffffff;
+  background-image: url(../../images/illustration-ship.png);
 }
 
-/* line 18, ../../scss/idea/list.scss */
+/* line 13, ../../scss/idea/list.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -433,12 +428,12 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   margin-bottom: 0px;
 }
 
-/* line 27, ../../scss/idea/list.scss */
+/* line 22, ../../scss/idea/list.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 32, ../../scss/idea/list.scss */
+/* line 27, ../../scss/idea/list.scss */
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
@@ -447,27 +442,27 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-family: "Museo Sans", sans-serif;
   font-size: 38px / 2;
 }
-/* line 39, ../../scss/idea/list.scss */
+/* line 34, ../../scss/idea/list.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 45, ../../scss/idea/list.scss */
+/* line 40, ../../scss/idea/list.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 47, ../../scss/idea/list.scss */
+/* line 42, ../../scss/idea/list.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 53, ../../scss/idea/list.scss */
+/* line 48, ../../scss/idea/list.scss */
 .support {
   color: #f3812b;
 }
 
-/* line 57, ../../scss/idea/list.scss */
+/* line 52, ../../scss/idea/list.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
