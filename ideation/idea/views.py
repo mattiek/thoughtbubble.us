@@ -199,7 +199,8 @@ class IdeaList(ListView):
         f = FilterForm(self.request.GET)
         # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
         f.fields['where'].queryset = Location.objects.filter(organization=self.organization)
-        f.fields['where'].empty_label = self.organization.title
+        if self.organization:
+            f.fields['where'].empty_label = self.organization.title
 
         context['filterform'] = f
 

@@ -82,6 +82,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.linkedin',
     'allauth.socialaccount.providers.twitter',
     'django_extensions',
+    'reversion',
 )
 
 COMMENTS_APP = 'threadedcomments'
