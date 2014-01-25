@@ -342,4 +342,5 @@ h1,h2 { margin:0px 0px 10px; }
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;
+  -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }

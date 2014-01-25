@@ -482,4 +482,5 @@ h1, h2 {
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;
+  -webkit-overflow-scrolling: touch;
 }
