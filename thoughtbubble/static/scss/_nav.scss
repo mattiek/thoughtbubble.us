@@ -1,7 +1,12 @@
 @import "compass";
 @import "compass/utilities/sprites";
 @import "directional/*.png";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
 
+//@import "compass/css3/border-radius";
+//@import "compass/css3/background-clip";
 
 #wrapper {
   background: image-url('clean_textile.png');
@@ -136,6 +141,30 @@
     }
   }
 }
+
+
+//display: block;
+//width: 252px;
+//height: 37.5px;
+//line-height: 37.5px;
+//-webkit-border-radius: 10px;
+//-moz-border-radius: 10px;
+//-ms-border-radius: 10px;
+//-o-border-radius: 10px;
+//border-radius: 10px;
+//-webkit-background-clip: padding;
+//-moz-background-clip: padding;
+//background-clip: padding-box;
+//background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #e57f4f), color-stop(100%, #f9a533));
+//background-image: -webkit-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
+//background-image: -moz-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
+//background-image: -o-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
+//background-image: linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
+//color: #fff;
+//font-family: "Myriad Pro";
+//font-size: 15.5px;
+//margin: 44px auto 0;
+//text-indent: 5px;
 
 #primary-explore {
   display: block;
