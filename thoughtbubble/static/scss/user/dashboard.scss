@@ -111,3 +111,35 @@
 fieldset {
   border: none;
 }
+
+#social-accounts {
+
+  li {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+
+    &.title {
+      color: #53b8d1; /* text color */
+      font-family: "Museo Sans", sans-serif;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &.social {
+      color: #4585c3;
+    }
+
+    .orange {
+      width: 65px;
+      height: 22px;
+      line-height: 22px;
+      display: block;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+      float:none;
+      margin: 10px auto;
+    }
+  }
+}

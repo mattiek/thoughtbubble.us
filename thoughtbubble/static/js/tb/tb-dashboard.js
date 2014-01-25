@@ -18,3 +18,10 @@ $('#picture a').magnificPopup({
     type:'inline',
     midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
 });
+
+
+$('a.orange.remove').on('click', function(e){
+    e.preventDefault();
+    $('#id_account_removal').val($(e.target).attr('data-value'));
+    $('#social-form').submit();
+});

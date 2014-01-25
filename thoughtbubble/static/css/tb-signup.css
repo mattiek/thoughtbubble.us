@@ -29,15 +29,16 @@
   color: #fff;
   font-family: 'MuseoSans';
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-/* line 27, ../scss/tb-signup.scss */
+/* line 28, ../scss/tb-signup.scss */
 #form-wrapper {
   width: 324px;
   margin: 0 auto;
 }
 
-/* line 32, ../scss/tb-signup.scss */
+/* line 33, ../scss/tb-signup.scss */
 #id_profile_picture {
   width: 80px;
   height: 79px;
@@ -50,7 +51,7 @@
   background-position: 57px 57px;
 }
 
-/* line 47, ../scss/tb-signup.scss */
+/* line 48, ../scss/tb-signup.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -75,23 +76,23 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 69, ../scss/tb-signup.scss */
+/* line 70, ../scss/tb-signup.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 73, ../scss/tb-signup.scss */
+/* line 74, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 78, ../scss/tb-signup.scss */
+/* line 79, ../scss/tb-signup.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 82, ../scss/tb-signup.scss */
+/* line 83, ../scss/tb-signup.scss */
 #captcha-question {
   color: #727171;
   /* text color */
@@ -100,7 +101,7 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 89, ../scss/tb-signup.scss */
+/* line 90, ../scss/tb-signup.scss */
 .terms-and-conditions {
   color: #727171;
   /* text color */
@@ -109,19 +110,19 @@ input[type="text"] {
   font-style: italic;
 }
 
-/* line 96, ../scss/tb-signup.scss */
+/* line 97, ../scss/tb-signup.scss */
 #id_captcha_choicefield li.captcha_select {
   border: 3px solid #f3812b;
   border-radius: 10px;
   padding: 3px;
 }
 
-/* line 102, ../scss/tb-signup.scss */
+/* line 103, ../scss/tb-signup.scss */
 #id_captcha_choicefield img {
   max-height: 50px;
 }
 
-/* line 106, ../scss/tb-signup.scss */
+/* line 107, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   padding: 6px;
 }

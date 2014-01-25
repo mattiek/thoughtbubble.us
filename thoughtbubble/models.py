@@ -67,6 +67,23 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
             return avatar.avatar.url
         return ""
 
+
+    def get_social_account(self, provider):
+        try:
+            return self.socialaccount_set.get(provider=provider)
+        except:
+            return None
+
+    def get_twitter_account(self):
+        return self.get_social_account('twitter')
+
+    def get_facebook_account(self):
+        return self.get_social_account('facebook')
+
+    def get_linkedin_account(self):
+        return self.get_social_account('linkedin')
+
+
     def __unicode__(self):
         return self.get_short_name()
 

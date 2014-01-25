@@ -459,3 +459,34 @@ textarea {
 fieldset {
   border: none;
 }
+
+/* line 117, ../../scss/user/dashboard.scss */
+#social-accounts li {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+}
+/* line 122, ../../scss/user/dashboard.scss */
+#social-accounts li.title {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* line 129, ../../scss/user/dashboard.scss */
+#social-accounts li.social {
+  color: #4585c3;
+}
+/* line 133, ../../scss/user/dashboard.scss */
+#social-accounts li .orange {
+  width: 65px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  float: none;
+  margin: 10px auto;
+}
