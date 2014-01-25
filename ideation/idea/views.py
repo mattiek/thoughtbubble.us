@@ -11,6 +11,7 @@ from django.db.models import Q, Count
 from django.core.urlresolvers import reverse
 
 from geo.organization.models import Organization
+from geo.places.models import Place
 from geo.location.models import Location
 
 
@@ -147,13 +148,12 @@ class IdeaList(ListView):
         qs = super(IdeaList, self).get_queryset()
         ### Basic parameters
         self.organization = None
+        self.place = None
         try:
+            self.place = Place.objects.get(name__iexact=self.kwargs.get('place', None))
             self.organization = Organization.objects.get(title__iexact=self.kwargs.get('organization', None))
         except:
             pass
-
-        self.city = self.kwargs.get('city', None)
-        self.state = self.kwargs.get('state', None)
 
         ### Ordering
         ordering = self.request.GET.get('order',None)

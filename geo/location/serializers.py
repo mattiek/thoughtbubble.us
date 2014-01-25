@@ -4,9 +4,9 @@ from models import Location
 
 
 class LocationSerializer(serializers.HyperlinkedModelSerializer):
-    type = serializers.CharField(source='getFeature', read_only=True)
-    geometry = serializers.CharField(source='getGeometry', read_only=True)
-    properties = serializers.CharField(source='getProperties', read_only=True)
+    type = serializers.CharField(source='get_feature', read_only=True)
+    geometry = serializers.CharField(source='get_geometry', read_only=True)
+    properties = serializers.CharField(source='get_properties', read_only=True)
 
     results_field = 'features'
 

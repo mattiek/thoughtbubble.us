@@ -313,7 +313,7 @@ p {
 /* Distinguish the "cover page" visually other sections. */
 /* line 199, ../scss/tb-sherlock.scss */
 body.section-0 #map {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media (max-width: 640px) {
@@ -409,33 +409,38 @@ section a h4 {
   margin: 0;
 }
 
-/* line 295, ../scss/tb-sherlock.scss */
+/* line 296, ../scss/tb-sherlock.scss */
+section a:visited {
+  color: #eee;
+}
+
+/* line 300, ../scss/tb-sherlock.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 296, ../scss/tb-sherlock.scss */
+/* line 301, ../scss/tb-sherlock.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 297, ../scss/tb-sherlock.scss */
+/* line 302, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 298, ../scss/tb-sherlock.scss */
+/* line 303, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 299, ../scss/tb-sherlock.scss */
+/* line 304, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 301, ../scss/tb-sherlock.scss */
+/* line 306, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -444,13 +449,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 307, ../scss/tb-sherlock.scss */
+/* line 312, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 312, ../scss/tb-sherlock.scss */
+/* line 317, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -459,26 +464,26 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 318, ../scss/tb-sherlock.scss */
+/* line 323, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 321, ../scss/tb-sherlock.scss */
+/* line 326, ../scss/tb-sherlock.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 324, ../scss/tb-sherlock.scss */
+/* line 329, ../scss/tb-sherlock.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 338, ../scss/tb-sherlock.scss */
+/* line 343, ../scss/tb-sherlock.scss */
 #communisplore section:first-child {
   margin-top: 60px;
 }
 
-/* line 342, ../scss/tb-sherlock.scss */
+/* line 347, ../scss/tb-sherlock.scss */
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;

@@ -27,12 +27,7 @@ urlpatterns = patterns('',
 
     url(r'^login/?$', 'thoughtbubble.views.login', name='login'),
     url(r'^logout/?$', 'thoughtbubble.views.logout', name='logout'),
-    # url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
-    # url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
 
-    # url(r'^privacy-policy/?$', 'thoughtbubble.views.privacy', name='privacy'),
-
-    # url(r'^blog/', include('blog.urls')),
     (r'^admin/filebrowser/', include(site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
     (r'^tinymce/', include('tinymce.urls')),

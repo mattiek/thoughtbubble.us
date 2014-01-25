@@ -80,7 +80,7 @@ class Location(models.Model):
             ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[self.organization.title.lower(),
+        return reverse('idea_list', args=[self.organization.place.name.lower(), self.organization.title.lower(),
                                         self.name.lower()
         ])
 
@@ -99,16 +99,16 @@ class Location(models.Model):
 
         super(Location, self).save(*args, **kwargs)
 
-    def getGeoJSON(self):
+    def get_geojson(self):
         return self.geom.geojson
 
-    def getGeometry(self):
+    def get_geometry(self):
         return JSON.loads(self.geom.geojson)
 
-    def getFeature(self):
+    def get_feature(self):
         return 'Feature'
 
-    def getProperties(self):
+    def get_properties(self):
         properties = {}
         properties['title'] = self.name
         # properties['marker-size'] = 'medium'
@@ -134,9 +134,9 @@ class Location(models.Model):
         return properties
 
     @property
-    def getMapboxJSON(self):
+    def get_mapbox_json(self):
         mapbox = {}
-        geometry = JSON.loads(self.getGeoJSON())
+        geometry = JSON.loads(self.get_geojson())
         mapbox['type'] = 'Feature'
         mapbox['geometry'] = geometry
         return mapbox

@@ -96,7 +96,7 @@ def explore(request, pk=None):
     return render(request, 'explore.html', d)
 
 
-def sherlock(request, pk=None):
+def sherlock(request, place=None, organization=None):
 
     # if state:
     #     request.session['exploring_state'] = state
@@ -107,7 +107,7 @@ def sherlock(request, pk=None):
     d = {}
     # d['organizations'] = Organization.objects.filter().order_by('name')
 
-    d['exploring'] = Organization.objects.get(pk=pk)
+    d['exploring'] = Organization.objects.get(place__name__iexact=place, title__iexact=organization)
 
     return render(request, 'sherlock.html', d)
 

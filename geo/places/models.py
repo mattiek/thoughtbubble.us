@@ -42,10 +42,10 @@ class Place(models.Model):
     def get_geojson_type(self):
         return 'Feature'
 
-    def getCenter(self):
+    def get_center(self):
         return JSON.loads(self.geom.geojson)
 
-    def getProperties(self):
+    def get_properties(self):
 
         props = {}
 
@@ -53,7 +53,7 @@ class Place(models.Model):
         props['explore'] = ''#reverse('city_detail', args=[str(self.id)])
         props['title'] = self.name
 
-        props['orgs'] = [x.getCenter() for x in self.organization_set.all()]
+        props['orgs'] = [x.get_center() for x in self.organization_set.all()]
 
         props['icon'] = {
             "iconUrl": "/static/images/map-point.png",

@@ -197,7 +197,7 @@ p {
 /* Distinguish the "cover page" visually other sections. */
 
 body.section-0 #map {
-  opacity: 0.5;
+  opacity: 1;
 }
 
 @media (max-width: 640px) {
@@ -292,6 +292,11 @@ section a {
   //text-shadow:rgba(64,64,64,1) 0px 0px 4px;
 }
 
+section a {
+  &:visited {
+    color: #eee;
+  }
+}
 section.active a { color:#eee; }
 section.active small { color:#aaa; }
 h1 { font-size:2em; line-height:1em; }

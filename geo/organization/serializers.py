@@ -26,10 +26,10 @@ class CustomPaginationSerializer(pagination.BasePaginationSerializer):
 
 
 class OrganizationSerializer(serializers.HyperlinkedModelSerializer):
-    center = serializers.CharField(source='getCenter', read_only=True)
-    geometry = serializers.CharField(source='getGeometry')
-    properties = serializers.CharField(source='getProperties', read_only=True)
-    type = serializers.CharField(source='getType', read_only=True)
+    center = serializers.CharField(source='get_center', read_only=True)
+    geometry = serializers.CharField(source='get_geometry')
+    properties = serializers.CharField(source='get_properties', read_only=True)
+    type = serializers.CharField(source='get_type', read_only=True)
 
     class Meta:
         model = Organization

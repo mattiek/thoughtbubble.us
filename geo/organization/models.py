@@ -53,7 +53,7 @@ class Organization(models.Model):
         return ''
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[str(self.id)])
+        return reverse('organization_detail', args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -61,11 +61,11 @@ class Organization(models.Model):
     def get_id(self):
         return self.title.lower().replace(' ','-')
 
-    def getProperties(self):
+    def get_properties(self):
 
         props = {}
 
-        props['explore'] = reverse('sherlock', args=[str(self.id)])
+        props['explore'] = self.get_explore_link()
         props['title'] = self.title
         props['id'] = self.id
         props['icon'] = {
@@ -76,7 +76,7 @@ class Organization(models.Model):
         }
         return props
 
-    def getLocationsGeoJSON(self):
+    def get_locations_geojson(self):
         mapbox = [{ "geometry": {
             "type": "Point",
             "coordinates": [self.center[0], self.center[1]],
@@ -104,7 +104,7 @@ class Organization(models.Model):
 
         return JSON.dumps(mapbox)
 
-    def getGeometry(self):
+    def get_geometry(self):
         if self.geom:
             json = self.geom.geojson
 
@@ -122,10 +122,13 @@ class Organization(models.Model):
             return JSON.loads(json)
 
 
-    def getType(self):
+    def get_type(self):
         return 'Feature'
 
-    def getCenter(self):
+    def get_explore_link(self):
+        return reverse('sherlock', args=[str(self.place.name.lower()), str(self.title.lower())])
+
+    def get_center(self):
         if self.center:
             j = JSON.loads(self.center.geojson)
             d = {}
@@ -134,7 +137,7 @@ class Organization(models.Model):
             d['properties'] = {
                 'title': self.title,
                 'id': self.id,
-                'explore': reverse('sherlock', args=[str(self.id)]),
+                'explore': self.get_explore_link(),
                 'icon': {
                 "iconUrl": "/static/images/featured-organization-location.png",
                 "iconSize": [24, 30],
@@ -144,8 +147,8 @@ class Organization(models.Model):
             }
             return d
 
-    def sherlock(self):
-        return ''
+    # def sherlock(self):
+    #     return ''
 
     def get_api_detail_url(self):
         return reverse('organizations-detail',args=[self.id,])
@@ -153,7 +156,7 @@ class Organization(models.Model):
     def get_absolute_url(self):
         return reverse('organization_detail', args=[str(self.id)])
 
-    def getExtent(self):
+    def get_extent(self):
         extent = self.geom.extent
         geojson = {}
         geojson['type'] = 'Polygon'
