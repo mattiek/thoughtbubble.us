@@ -276,10 +276,6 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 141, ../../scss/map/explore.scss */
-section .extended {
-  display: none;
-}
 /* line 145, ../../scss/map/explore.scss */
 section.active {
   background: #cdcdcd;

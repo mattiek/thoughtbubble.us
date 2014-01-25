@@ -259,7 +259,7 @@ section {
   }
 
   .extended {
-    display: none;
+    //display: none;
 
     p {
       min-height: 100px;
@@ -334,6 +334,11 @@ h1,h2 { margin:0px 0px 10px; }
 //  display: none;
 //}
 
+#communisplore {
+  section:first-child {
+    margin-top: 60px;
+  }
+}
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;

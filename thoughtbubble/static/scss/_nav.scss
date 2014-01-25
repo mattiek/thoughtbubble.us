@@ -340,8 +340,16 @@ form .row .row .columns.no-padding {
   margin: 20px auto;
 }
 
+.mfp-close:hover, .mfp-close:focus {
+  opacity: 1;
+  outline: none;
+}
 
-.mfp-close-btn-in .mfp-close {
+button.mfp-close:active {
+  top:0px;
+}
+
+#login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
   width: 26px;
@@ -355,6 +363,8 @@ form .row .row .columns.no-padding {
   border: 1px solid #cccccc;
   font-weight: 100;
   font-size: 24px;
+
+
 }
 
 #forgot-password,

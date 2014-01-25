@@ -381,10 +381,6 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 261, ../scss/tb-sherlock.scss */
-section .extended {
-  display: none;
-}
 /* line 264, ../scss/tb-sherlock.scss */
 section .extended p {
   min-height: 100px;
@@ -477,7 +473,12 @@ h1, h2 {
   margin-left: 0;
 }
 
-/* line 337, ../scss/tb-sherlock.scss */
+/* line 338, ../scss/tb-sherlock.scss */
+#communisplore section:first-child {
+  margin-top: 60px;
+}
+
+/* line 342, ../scss/tb-sherlock.scss */
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;
