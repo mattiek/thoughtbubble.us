@@ -172,6 +172,8 @@ REST_FRAMEWORK = {
     'PAGINATE_BY': 10
 }
 
+SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
+
 TEMPLATE_CONTEXT_PROCESSORS = [
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
