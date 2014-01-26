@@ -1,66 +1,57 @@
-/* line 1, ../scss/partials/_buttons.scss */
+/* text color */
+/* line 3, ../scss/partials/_buttons.scss */
 a.orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  /* border radius */
+  -webkit-background-clip: padding;
   -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  /* prevents bg color from leaking outside the border */
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-  /* layer fill content */
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
   border: none;
-  color: #FFFFFF;
-  font-family: 'MuseoSans';
-}
-/* line 18, ../scss/partials/_buttons.scss */
-a.orange.supporting.activated, a.orange.s-button.activated {
-  color: #f9c98c;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-
-/* line 26, ../scss/partials/_buttons.scss */
-.blue {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  /* border radius */
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  /* prevents bg color from leaking outside the border */
-  background: #8dd9f2;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
-  /* IE6-9 */
-  border: none;
-  color: #FFFFFF;
-  font-family: 'MuseoSans';
+/* line 8, ../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
+  color: #f9c98c;
+  /* text color */
 }
 
-/* line 45, ../scss/partials/_buttons.scss */
+/* line 13, ../scss/partials/_buttons.scss */
+.blue {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+
+/* line 17, ../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -71,15 +62,20 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-size: 11px;
 }
 
-/* line 4, ../scss/partials/_inputs.scss */
+/* text color */
+/* line 6, ../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  font-family: "Museo Sans", sans-serif;
   background-color: white;
   border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -97,15 +93,7 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 26, ../scss/partials/_inputs.scss */
-textarea {
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-  min-height: 200px;
-  max-width: 100%;
-}
-
-/* line 33, ../scss/partials/_inputs.scss */
+/* line 28, ../scss/partials/_inputs.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -116,10 +104,14 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 43, ../scss/partials/_inputs.scss */
+/* line 38, ../scss/partials/_inputs.scss */
 textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  font-family: "Museo Sans", sans-serif;
   min-height: 200px;
   max-width: 100%;
   border-radius: 5px;
@@ -168,28 +160,28 @@ article {
   overflow: scroll;
 }
 
-/* line 65, ../scss/tb-sherlock.scss */
+/* line 36, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 70, ../scss/tb-sherlock.scss */
+/* line 41, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 74, ../scss/tb-sherlock.scss */
+/* line 45, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 78, ../scss/tb-sherlock.scss */
+/* line 49, ../scss/tb-sherlock.scss */
 p {
   margin: 0px;
 }
 
-/* line 82, ../scss/tb-sherlock.scss */
+/* line 53, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -198,13 +190,13 @@ p {
   padding: 5px 10px;
 }
 
-/* line 90, ../scss/tb-sherlock.scss */
+/* line 61, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 96, ../scss/tb-sherlock.scss */
+/* line 67, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -212,118 +204,41 @@ p {
   height: 120px;
   margin: 0px auto 20px;
 }
-/* line 103, ../scss/tb-sherlock.scss */
+/* line 74, ../scss/tb-sherlock.scss */
 .cover.active:before {
-  background: url('../images/featured-organization-location.png?1384999133') 0px 0px no-repeat;
+  background: url('../images/featured-organization-location.png?1390687055') 0px 0px no-repeat;
 }
 
-/* line 116, ../scss/tb-sherlock.scss */
+/* line 80, ../scss/tb-sherlock.scss */
 #map {
   transition: opacity 250ms;
   -moz-transition: opacity 250ms;
   -webkit-transition: opacity 250ms;
 }
 
-/* line 127, ../scss/tb-sherlock.scss */
+/* line 86, ../scss/tb-sherlock.scss */
 .spot {
   width: 24px;
   height: 30px;
   margin: -30px 0 0 -15px;
-  background: url('../images/featured-organization-location.png?1384999133') 0px 0px no-repeat;
+  background: url('../images/featured-organization-location.png?1390687055') 0px 0px no-repeat;
   position: absolute;
 }
 
-/* line 137, ../scss/tb-sherlock.scss */
-.spot-cover {
-  display: none;
-}
-
-/* line 141, ../scss/tb-sherlock.scss */
-.spot-baker {
-  background-position: -130px 0px;
-}
-/* line 143, ../scss/tb-sherlock.scss */
-.spot-baker.active {
-  background-position: -130px -120px;
-}
-
-/* line 148, ../scss/tb-sherlock.scss */
-.spot-aldgate {
-  background-position: -260px 0px;
-}
-/* line 150, ../scss/tb-sherlock.scss */
-.spot-aldgate.active {
-  background-position: -260px -120px;
-}
-
-/* line 155, ../scss/tb-sherlock.scss */
-.spot-london-bridge {
-  background-position: -390px 0px;
-}
-/* line 157, ../scss/tb-sherlock.scss */
-.spot-london-bridge.active {
-  background-position: -390px -120px;
-}
-
-/* line 162, ../scss/tb-sherlock.scss */
-.spot-woolwich {
-  background-position: -520px 0px;
-}
-/* line 164, ../scss/tb-sherlock.scss */
-.spot-woolwich.active {
-  background-position: -520px -120px;
-}
-
-/* line 169, ../scss/tb-sherlock.scss */
-.spot-gloucester {
-  background-position: -650px 0px;
-}
-/* line 171, ../scss/tb-sherlock.scss */
-.spot-gloucester.active {
-  background-position: -650px -120px;
-}
-
-/* line 176, ../scss/tb-sherlock.scss */
-.spot-caulfield-gardens {
-  background-position: -780px 0px;
-}
-/* line 178, ../scss/tb-sherlock.scss */
-.spot-caulfield-gardens.active {
-  background-position: -780px -120px;
-}
-
-/* line 183, ../scss/tb-sherlock.scss */
-.spot-telegraph {
-  background-position: -910px 0px;
-}
-/* line 185, ../scss/tb-sherlock.scss */
-.spot-telegraph.active {
-  background-position: -910px -120px;
-}
-
-/* line 190, ../scss/tb-sherlock.scss */
-.spot-charing-cross {
-  background-position: -1040px 0px;
-}
-/* line 192, ../scss/tb-sherlock.scss */
-.spot-charing-cross.active {
-  background-position: -1040px -120px;
-}
-
 /* Distinguish the "cover page" visually other sections. */
-/* line 199, ../scss/tb-sherlock.scss */
+/* line 98, ../scss/tb-sherlock.scss */
 body.section-0 #map {
   opacity: 1;
 }
 
 @media (max-width: 640px) {
-  /* line 204, ../scss/tb-sherlock.scss */
+  /* line 103, ../scss/tb-sherlock.scss */
   body {
     font-size: 12px;
     line-height: 16px;
   }
 
-  /* line 208, ../scss/tb-sherlock.scss */
+  /* line 107, ../scss/tb-sherlock.scss */
   article {
     width: 100%;
     min-width: 100%;
@@ -331,13 +246,13 @@ body.section-0 #map {
     padding-bottom: 200%;
   }
 
-  /* line 214, ../scss/tb-sherlock.scss */
+  /* line 113, ../scss/tb-sherlock.scss */
   section {
     text-shadow: none;
     margin-left: 0px;
     padding: 30px;
   }
-  /* line 218, ../scss/tb-sherlock.scss */
+  /* line 117, ../scss/tb-sherlock.scss */
   section.active {
     position: fixed;
     top: 0px;
@@ -345,12 +260,12 @@ body.section-0 #map {
     right: 0px;
   }
 
-  /* line 225, ../scss/tb-sherlock.scss */
+  /* line 124, ../scss/tb-sherlock.scss */
   #pane {
     width: 100%;
   }
 
-  /* line 228, ../scss/tb-sherlock.scss */
+  /* line 127, ../scss/tb-sherlock.scss */
   #map {
     bottom: 0%;
     left: 0%;
@@ -359,13 +274,13 @@ body.section-0 #map {
   }
 }
 @media (min-width: 1280px) {
-  /* line 237, ../scss/tb-sherlock.scss */
+  /* line 136, ../scss/tb-sherlock.scss */
   body {
     font-size: 18px;
     line-height: 24px;
   }
 }
-/* line 243, ../scss/tb-sherlock.scss */
+/* line 142, ../scss/tb-sherlock.scss */
 section {
   padding: 10px;
   margin-left: 40px;
@@ -381,26 +296,26 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 264, ../scss/tb-sherlock.scss */
+/* line 163, ../scss/tb-sherlock.scss */
 section .extended p {
   min-height: 100px;
 }
-/* line 269, ../scss/tb-sherlock.scss */
+/* line 168, ../scss/tb-sherlock.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 273, ../scss/tb-sherlock.scss */
+/* line 172, ../scss/tb-sherlock.scss */
 section.active .extended {
   display: block;
   text-align: right;
 }
-/* line 279, ../scss/tb-sherlock.scss */
+/* line 178, ../scss/tb-sherlock.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 286, ../scss/tb-sherlock.scss */
+/* line 185, ../scss/tb-sherlock.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -409,38 +324,38 @@ section a h4 {
   margin: 0;
 }
 
-/* line 296, ../scss/tb-sherlock.scss */
+/* line 195, ../scss/tb-sherlock.scss */
 section a:visited {
   color: #eee;
 }
 
-/* line 300, ../scss/tb-sherlock.scss */
+/* line 199, ../scss/tb-sherlock.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 301, ../scss/tb-sherlock.scss */
+/* line 200, ../scss/tb-sherlock.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 302, ../scss/tb-sherlock.scss */
+/* line 201, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 303, ../scss/tb-sherlock.scss */
+/* line 202, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 304, ../scss/tb-sherlock.scss */
+/* line 203, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 306, ../scss/tb-sherlock.scss */
+/* line 205, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -449,13 +364,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 312, ../scss/tb-sherlock.scss */
+/* line 211, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 317, ../scss/tb-sherlock.scss */
+/* line 216, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -464,26 +379,26 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 323, ../scss/tb-sherlock.scss */
+/* line 222, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 326, ../scss/tb-sherlock.scss */
+/* line 225, ../scss/tb-sherlock.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 329, ../scss/tb-sherlock.scss */
+/* line 228, ../scss/tb-sherlock.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 343, ../scss/tb-sherlock.scss */
+/* line 242, ../scss/tb-sherlock.scss */
 #communisplore section:first-child {
   margin-top: 60px;
 }
 
-/* line 347, ../scss/tb-sherlock.scss */
+/* line 246, ../scss/tb-sherlock.scss */
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;

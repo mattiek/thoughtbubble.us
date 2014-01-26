@@ -1,0 +1,89 @@
+// General settings
+$tb_link_blue: #4585c3;
+
+$tb-header_blue: #53b8d1; /* text color */
+
+$tb-orange: #f3812b;
+
+
+@mixin museo {
+  font-family: "Museo Sans", sans-serif;
+}
+
+@mixin blue-museo-link {
+  color: $tb_link_blue; /* text color */
+  @include museo;
+}
+
+@mixin blue-museo {
+  color: $tb_link_blue; /* text color */
+  @include museo;
+}
+
+@mixin white-museo {
+  color: #fff; /* text color */
+  @include museo;
+}
+
+@mixin header-blue-museo {
+  color: #53b8d1; /* text color */
+  @include museo;
+}
+
+@mixin gray-museo {
+  color: #6d6d6d; /* text color */
+  @include museo;
+}
+
+@mixin black-museo {
+  color: #000; /* text color */
+  @include museo;
+}
+
+@mixin bg-image($img) {
+  background: image-url($img);
+  width: image-width($img);
+  height: image-height($img);
+  display: block;
+}
+
+@mixin orange-gradient-button {
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(bottom, $tb-orange 0%, #f9a533 100%)); // layer fill content
+  border: none;
+  @include white-museo;
+  display: block;
+}
+
+@mixin blue-gradient-button {
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(top,  #8dd9f2 0%,#5fd2e7 28%,#30cae1 38%,#4cc6de 100%)); // layer fill content
+  border: none;
+  @include white-museo;
+  display: block;
+}
+
+@mixin orange-gradient-button {
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(bottom, $tb-orange 0%, #f9a533 100%)); // layer fill content
+  border: none;
+  @include white-museo;
+  display: block;
+}
+
+
+@mixin orange-gradient-button-explore {
+  display: block;
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(bottom, #e57f4f 0%, #f9a533 100%)); // layer fill content
+  color: #fff; // text color
+  font-family: "Myriad Pro", "Arial", sans-serif;
+}
+
+
+
+

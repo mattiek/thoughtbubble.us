@@ -33,35 +33,6 @@ article {
   overflow: scroll;
 }
 
-//section {
-//  padding: 40px;
-//  margin-left: 40px;
-//  position: relative;
-//  transition: background 500ms, color 500ms;
-//  -moz-transition: background 500ms, color 500ms;
-//  -webkit-transition: background 500ms, color 500ms;
-//  color: #888;
-//  color: rgba(128, 128, 128, 0);
-//  text-decoration: none;
-//  text-shadow: rgba(64, 64, 64, 1) 0px 0px 4px;
-//  a {
-//    color: #888;
-//    color: rgba(128, 128, 128, 0);
-//    text-decoration: none;
-//    text-shadow: rgba(64, 64, 64, 1) 0px 0px 4px;
-//  }
-//  &.active {
-//    background: #222;
-//    color: #eee;
-//    a {
-//      color: #eee;
-//    }
-//    small {
-//      color: #aaa;
-//    }
-//  }
-//}
-
 h1 {
   font-size: 2em;
   line-height: 1em;
@@ -105,20 +76,8 @@ p {
   }
 }
 
-//#pane {
-//  position: fixed;
-//  top: 0px;
-//  bottom: 0px;
-//  right: 0px;
-//  width: 66.6666%;
-//}
 
 #map {
-  //position: absolute;
-  //top: 0px;
-  //bottom: 0px;
-  //width: 200%;
-  //left: -50%;
   transition: opacity 250ms;
   -moz-transition: opacity 250ms;
   -webkit-transition: opacity 250ms;
@@ -127,72 +86,12 @@ p {
 .spot {
   width: 24px;
   height: 30px;
-  //margin: -60px 0px 0px -60px;
   margin: -30px 0 0 -15px;
   background: image-url('featured-organization-location.png') 0px 0px no-repeat;
   position: absolute;
 
 }
 
-.spot-cover {
-  display: none;
-}
-
-.spot-baker {
-  background-position: -130px 0px;
-  &.active {
-    background-position: -130px -120px;
-  }
-}
-
-.spot-aldgate {
-  background-position: -260px 0px;
-  &.active {
-    background-position: -260px -120px;
-  }
-}
-
-.spot-london-bridge {
-  background-position: -390px 0px;
-  &.active {
-    background-position: -390px -120px;
-  }
-}
-
-.spot-woolwich {
-  background-position: -520px 0px;
-  &.active {
-    background-position: -520px -120px;
-  }
-}
-
-.spot-gloucester {
-  background-position: -650px 0px;
-  &.active {
-    background-position: -650px -120px;
-  }
-}
-
-.spot-caulfield-gardens {
-  background-position: -780px 0px;
-  &.active {
-    background-position: -780px -120px;
-  }
-}
-
-.spot-telegraph {
-  background-position: -910px 0px;
-  &.active {
-    background-position: -910px -120px;
-  }
-}
-
-.spot-charing-cross {
-  background-position: -1040px 0px;
-  &.active {
-    background-position: -1040px -120px;
-  }
-}
 
 /* Distinguish the "cover page" visually other sections. */
 

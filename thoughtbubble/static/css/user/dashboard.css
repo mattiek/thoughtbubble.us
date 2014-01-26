@@ -1,4 +1,5 @@
-/* line 3, ../../scss/idea/_idea.scss */
+/* text color */
+/* line 4, ../../scss/idea/_idea.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
@@ -7,43 +8,44 @@
   width: 576px;
   height: 113px;
   margin: 0 auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
-  background: #daf3f8;
-  /* Old browsers */
-  background: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  /* IE10+ */
-  background: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 );
-  /* IE6-9 */
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
+  background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  background-image: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  background-image: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  background-image: linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
 }
-/* line 21, ../../scss/idea/_idea.scss */
+/* line 15, ../../scss/idea/_idea.scss */
 .idea-cap a {
   text-decoration: none;
 }
-/* line 24, ../../scss/idea/_idea.scss */
+/* line 18, ../../scss/idea/_idea.scss */
 .idea-cap a.orange {
   color: #ffffff;
 }
-/* line 26, ../../scss/idea/_idea.scss */
+/* line 20, ../../scss/idea/_idea.scss */
 .idea-cap a.orange:visited {
   color: #ffffff;
 }
-/* line 32, ../../scss/idea/_idea.scss */
+/* line 26, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap {
   padding-top: 25px;
   margin-left: 20px;
   width: 440px;
   float: left;
+}
+/* line 32, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap p {
+  color: #4585c3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 /* line 38, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting {
@@ -103,19 +105,20 @@
   font-size: 10px;
   color: #797878;
   /* text color */
-  padding-top: 25px;
+  padding-top: 30px;
   padding-right: 15px;
   padding-left: 0px;
 }
 /* line 115, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li {
   margin-top: 5px;
+  line-height: 1.3em;
 }
-/* line 118, ../../scss/idea/_idea.scss */
+/* line 119, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li:first-child {
   margin-top: 0px;
 }
-/* line 123, ../../scss/idea/_idea.scss */
+/* line 124, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -123,7 +126,7 @@
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 131, ../../scss/idea/_idea.scss */
+/* line 132, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -131,16 +134,16 @@
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 139, ../../scss/idea/_idea.scss */
+/* line 140, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .comments-bubble {
-  background-image: url('../../images/orange-comment.png?1380665664');
+  background-image: url('../../images/orange-comment.png?1390687077');
   background-repeat: no-repeat;
   background-size: 9px;
   background-position: 15% 45%;
   padding-left: 15px;
 }
 
-/* line 153, ../../scss/idea/_idea.scss */
+/* line 154, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -153,16 +156,17 @@
   font-size: 11px;
 }
 
-/* line 1, ../../scss/partials/_sharing.scss */
+/* text color */
+/* line 3, ../../scss/partials/_sharing.scss */
 .sharing {
   list-style-type: none;
   display: inline-block;
 }
-/* line 4, ../../scss/partials/_sharing.scss */
+/* line 6, ../../scss/partials/_sharing.scss */
 .sharing li {
   display: inline-block;
 }
-/* line 7, ../../scss/partials/_sharing.scss */
+/* line 9, ../../scss/partials/_sharing.scss */
 .sharing li span {
   color: #7b7b7b;
   /* text color */
@@ -170,95 +174,86 @@
   font-size: 10px;
   vertical-align: super;
 }
-/* line 14, ../../scss/partials/_sharing.scss */
+/* line 16, ../../scss/partials/_sharing.scss */
 .sharing li a {
   display: block;
 }
-/* line 18, ../../scss/partials/_sharing.scss */
+/* line 20, ../../scss/partials/_sharing.scss */
 .sharing li a.share-fb {
-  background: url(../../images/small-blue-facebook.png) no-repeat;
+  background: url('../../images/small-blue-facebook.png?1390687080') no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 25, ../../scss/partials/_sharing.scss */
+/* line 27, ../../scss/partials/_sharing.scss */
 .sharing li a.share-twitter {
-  background: url(../../images/small-blue-twitter.png) no-repeat;
+  background: url('../../images/small-blue-twitter.png?1390687081') no-repeat;
   background-size: 100%;
   width: 15px;
   height: 15px;
 }
-/* line 32, ../../scss/partials/_sharing.scss */
+/* line 34, ../../scss/partials/_sharing.scss */
 .sharing li a.share-linkedin {
-  background: url(../../images/small-blue-linkedin.png) no-repeat;
+  background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
   background-size: 100%;
   width: 15px;
   height: 15px;
 }
 
-/* line 1, ../../scss/partials/_buttons.scss */
+/* text color */
+/* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  /* border radius */
+  -webkit-background-clip: padding;
   -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  /* prevents bg color from leaking outside the border */
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEwMCAxMDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0iaGF0MCIgZ3JhZGllbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHgxPSI1MCUiIHkxPSIxMDAlIiB4Mj0iNTAlIiB5Mj0iLTEuNDIxMDg1NDcxNTIwMmUtMTQlIj4KPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIgc3RvcC1vcGFjaXR5PSIxIi8+CjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgIDwvbGluZWFyR3JhZGllbnQ+Cgo8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0idXJsKCNoYXQwKSIgLz4KPC9zdmc+);
-  /* layer fill content */
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  /* layer fill content */
   border: none;
-  color: #FFFFFF;
-  font-family: 'MuseoSans';
-}
-/* line 18, ../../scss/partials/_buttons.scss */
-a.orange.supporting.activated, a.orange.s-button.activated {
-  color: #f9c98c;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-
-/* line 26, ../../scss/partials/_buttons.scss */
-.blue {
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  /* border radius */
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  /* prevents bg color from leaking outside the border */
-  background: #8dd9f2;
-  /* Old browsers */
-  background: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* IE10+ */
-  background: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#8dd9f2', endColorstr='#4cc6de',GradientType=0 );
-  /* IE6-9 */
-  border: none;
-  color: #FFFFFF;
-  font-family: 'MuseoSans';
+/* line 8, ../../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
+  color: #f9c98c;
+  /* text color */
 }
 
-/* line 45, ../../scss/partials/_buttons.scss */
+/* line 13, ../../scss/partials/_buttons.scss */
+.blue {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+
+/* line 17, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -269,15 +264,20 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-size: 11px;
 }
 
-/* line 4, ../../scss/partials/_inputs.scss */
+/* text color */
+/* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  font-family: "Museo Sans", sans-serif;
   background-color: white;
   border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -295,15 +295,7 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 26, ../../scss/partials/_inputs.scss */
-textarea {
-  border-radius: 5px;
-  font-family: 'MuseoSans';
-  min-height: 200px;
-  max-width: 100%;
-}
-
-/* line 33, ../../scss/partials/_inputs.scss */
+/* line 28, ../../scss/partials/_inputs.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -314,10 +306,14 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 43, ../../scss/partials/_inputs.scss */
+/* line 38, ../../scss/partials/_inputs.scss */
 textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  font-family: "Museo Sans", sans-serif;
   min-height: 200px;
   max-width: 100%;
   border-radius: 5px;
@@ -338,9 +334,10 @@ textarea {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 6, ../../scss/user/dashboard.scss */
+/* text color */
+/* line 7, ../../scss/user/dashboard.scss */
 #illustration {
-  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
+  background: url('../../images/illustration-ship.png?1390687234') no-repeat no-repeat;
   background-size: 100%;
   height: 233px;
   width: 930px;
@@ -348,7 +345,7 @@ textarea {
   background-color: #ffffff;
 }
 
-/* line 15, ../../scss/user/dashboard.scss */
+/* line 16, ../../scss/user/dashboard.scss */
 .submit {
   height: 33px;
   width: 322px;
@@ -356,26 +353,30 @@ textarea {
   margin-right: 120px;
 }
 
-/* line 23, ../../scss/user/dashboard.scss */
+/* line 24, ../../scss/user/dashboard.scss */
 #form-wrapper {
   width: 650px;
   margin: 0 auto;
 }
 
-/* line 28, ../../scss/user/dashboard.scss */
+/* line 29, ../../scss/user/dashboard.scss */
 #add-photo {
   width: 80px;
   height: 79px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
   position: absolute;
-  background-image: url(../images/add-photo.png);
+  background-image: url('../../images/add-photo.png?1390687046');
   background-repeat: no-repeat;
   background-position: 57px 57px;
 }
 
-/* line 41, ../../scss/user/dashboard.scss */
+/* line 42, ../../scss/user/dashboard.scss */
 #picture {
   width: 80px;
   height: 79px;
@@ -387,7 +388,7 @@ textarea {
   text-align: center;
 }
 
-/* line 52, ../../scss/user/dashboard.scss */
+/* line 53, ../../scss/user/dashboard.scss */
 .user-info {
   color: #53b8d1;
   /* text color */
@@ -404,43 +405,49 @@ textarea {
   font-size: 19px;
 }
 
-/* line 65, ../../scss/user/dashboard.scss */
+/* line 64, ../../scss/user/dashboard.scss */
 .emphasis {
   color: #f47e23;
 }
 
-/* line 69, ../../scss/user/dashboard.scss */
-#update-info, #save-button, #cancel-button {
+/* line 70, ../../scss/user/dashboard.scss */
+#update-info,
+#save-button,
+#cancel-button {
   display: none;
 }
 
-/* line 73, ../../scss/user/dashboard.scss */
-#edit-button, #save-button, #cancel-button {
+/* line 76, ../../scss/user/dashboard.scss */
+#edit-button,
+#save-button,
+#cancel-button {
   float: right;
   color: #FFFFFF;
   margin-left: 10px;
 }
-/* line 78, ../../scss/user/dashboard.scss */
-#edit-button:visited, #save-button:visited, #cancel-button:visited {
+/* line 81, ../../scss/user/dashboard.scss */
+#edit-button:visited,
+#save-button:visited,
+#cancel-button:visited {
   color: #FFFFFF;
 }
 
-/* line 83, ../../scss/user/dashboard.scss */
+/* line 86, ../../scss/user/dashboard.scss */
 #user {
   margin-left: 120px;
   padding-top: 20px;
   margin-bottom: 50px;
 }
-/* line 89, ../../scss/user/dashboard.scss */
+/* line 92, ../../scss/user/dashboard.scss */
 #user.editing #edit-button, #user.editing .user-info {
   display: none;
 }
-/* line 92, ../../scss/user/dashboard.scss */
+/* line 95, ../../scss/user/dashboard.scss */
 #user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
   display: block;
 }
 
-/* line 98, ../../scss/user/dashboard.scss */
+/* line 101, ../../scss/user/dashboard.scss */
 #update-info {
   color: #9d9d9d;
   /* text color */
@@ -448,37 +455,37 @@ textarea {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 104, ../../scss/user/dashboard.scss */
+/* line 107, ../../scss/user/dashboard.scss */
 #update-info label {
   float: left;
   width: 100px;
   margin-right: 10px;
 }
 
-/* line 111, ../../scss/user/dashboard.scss */
+/* line 114, ../../scss/user/dashboard.scss */
 fieldset {
   border: none;
 }
 
-/* line 117, ../../scss/user/dashboard.scss */
+/* line 120, ../../scss/user/dashboard.scss */
 #social-accounts li {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
-/* line 122, ../../scss/user/dashboard.scss */
+/* line 125, ../../scss/user/dashboard.scss */
 #social-accounts li.title {
-  color: #53b8d1;
+  color: #4585c3;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 18px;
   margin-bottom: 10px;
 }
-/* line 129, ../../scss/user/dashboard.scss */
+/* line 131, ../../scss/user/dashboard.scss */
 #social-accounts li.social {
   color: #4585c3;
 }
-/* line 133, ../../scss/user/dashboard.scss */
+/* line 135, ../../scss/user/dashboard.scss */
 #social-accounts li .orange {
   width: 65px;
   height: 22px;

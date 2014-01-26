@@ -1,3 +1,4 @@
+@import "partials/general";
 @import "idea/idea";
 @import "partials/buttons";
 @import "partials/sharing";
@@ -5,12 +6,11 @@
 @import "partials/comments";
 
 #illustration {
-    background-image: url(../../images/illustration-ship.png);
+    background-image: image-url('illustration-ship.png');
 }
 
 .copy {
-    color: #6d6d6d; /* text color */
-    font-family: "Museo Sans", sans-serif;
+    @include gray-museo;
     font-size: 15px;
     text-align: left;
     text-indent: 10px;
@@ -25,8 +25,7 @@
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
-  color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include gray-museo;
   font-size: 38px / 2;
 
   b {
@@ -44,7 +43,7 @@
 
 
 .support-number {
-  color: #f3812b;
+  color: $tb-orange;
 }
 
 #id_comment {

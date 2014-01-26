@@ -1,3 +1,4 @@
+@import "partials/general";
 @import "idea/idea";
 @import "partials/buttons";
 @import "partials/sharing";
@@ -6,13 +7,13 @@
 @import "partials/filtering";
 
 
+
 #illustration {
-    background-image: url(../../images/illustration-ship.png);
+    background-image: image-url('illustration-ship.png');
 }
 
 .copy {
-    color: #6d6d6d; /* text color */
-    font-family: "Museo Sans", sans-serif;
+    @include gray-museo;
     font-size: 15px;
     text-align: left;
     text-indent: 10px;
@@ -27,12 +28,11 @@
 #idea-wrapper {
   width: 600px;
   margin: 0 auto;
-  color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include gray-museo;
   font-size: 38px / 2;
 
   b {
-    color: #53b8d1; /* text color */
+    @include header-blue-museo;
   }
 
 }
@@ -46,7 +46,7 @@
 
 
 .support {
-  color: #f3812b;
+  color: $tb-orange;
 }
 
 #id_comment {

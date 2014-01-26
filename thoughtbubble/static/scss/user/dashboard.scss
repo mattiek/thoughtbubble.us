@@ -2,9 +2,10 @@
 @import "partials/sharing";
 @import "partials/buttons";
 @import "partials/inputs";
+@import "partials/general";
 
 #illustration {
-  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
+  background: image-url('illustration-ship.png') no-repeat no-repeat;
   background-size: 100%;
   height: 233px;
   width: 930px;
@@ -28,11 +29,11 @@
 #add-photo {
   width: 80px;
   height: 79px;
-  border-radius: 10px;
+  @include border-radius(10px);
   background-color: #dadbdc;
   margin-left: -100px;
   position: absolute;
-  background-image: url(../images/add-photo.png);
+  background-image: image-url('add-photo.png');
   background-repeat: no-repeat;
   background-position: 57px 57px
 }
@@ -50,15 +51,13 @@
 }
 
 .user-info {
-  color: #53b8d1; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include header-blue-museo;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
 .user-stats {
-  color: #53b8d1; /* text color */
-  font-family: "Museo Sans", sans-serif;
+ @include header-blue-museo;
   font-size: 19px;
 }
 
@@ -66,11 +65,15 @@
   color: #f47e23;
 }
 
-#update-info, #save-button, #cancel-button  {
+#update-info,
+#save-button,
+#cancel-button  {
   display: none;
 }
 
-#edit-button, #save-button, #cancel-button {
+#edit-button,
+#save-button,
+#cancel-button {
   float: right;
   color: #FFFFFF;
   margin-left: 10px;
@@ -97,7 +100,7 @@
 
 #update-info {
   color: #9d9d9d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 14px;
   line-height: 25px;
 
@@ -120,8 +123,7 @@ fieldset {
     text-align: center;
 
     &.title {
-      color: #53b8d1; /* text color */
-      font-family: "Museo Sans", sans-serif;
+      @include blue-museo-link;
       font-size: 18px;
       margin-bottom: 10px;
     }

@@ -1,20 +1,68 @@
-@import "normalize";
+@import "compass/reset";
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
-@import "nav";
-
+@import "navV2";
+@import "partials/general";
 
 
 @font-face {
-  font-family: 'MuseoSans';
-  src: url('../fonts/MuseoSans_500-webfont.eot');
-  src: url('../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../fonts/MuseoSans_500-webfont.woff') format('woff'),
-  url('../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
-  url('../fonts/MuseoSans_500-webfont.svg#museo_sans_500regular') format('svg');
+  font-family: 'Museo Sans';
+  src: url('../../fonts/MuseoSans_500-webfont.eot');
+  src: url('../../fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../../fonts/MuseoSans_500-webfont.woff') format('woff'),
+  url('../../fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+  url('../../fonts/MuseoSans_500-webfont.svg#museo_sans_500regular') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+h1 {
+  color: #6fc4de; /* text color */
+  @include museo;
+  font-size: 50px;
+  margin: 45px 0 0 0;
+  font-weight: normal;
+}
+
+h2 {
+  color: #8b8b8b; /* text color */
+  font-family: "Helvetica";
+  font-size: 19px;
+  margin: 0 0 95px 0;
+  font-weight: normal;
+}
+
+h3 {
+  color: #6fc4d8; /* text color */
+  @include museo;
+  font-size: 19px;
+  margin: 45px 0 0 0;
+  font-weight: normal;
+}
+
+p {
+  color: #6c6d70; /* text color */
+  font-family: "Helvetica";
+  font-size: 14px;
+}
+
+#home-content {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.disabled {
+  color: #b0b0b0;
+}
+
+a {
+  text-decoration: none;
+  color: $tb_link_blue; /* text color */
+
+  &:visited {
+    color: $tb_link_blue; /* text color */;
+  }
 }
 
 #home-container {
@@ -26,10 +74,24 @@
 }
 
 #illustration {
-  background-size: 100%;
-  height: 233px;
-  width: 930px;
+    background-size: 100%;
+    height: 233px;
+    width: 930px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    background-repeat: no-repeat no-repeat;
+}
+
+
+#id_honeypot {
+  display: none;
+}
+
+#page-wrapper {
   margin: 0 auto;
-  background-color: #ffffff;
-  background-repeat: no-repeat no-repeat;
+  width: 600px;
+}
+
+h4.message {
+  text-align: center;
 }
