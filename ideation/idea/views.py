@@ -123,8 +123,8 @@ def addidea(request, place=None, organization=None, location=None):
     d = {'form': form,
          'action': reverse('addidea', args=[organization]) }
 
-    if id:
-        form.fields['content_object'].initial = Location.objects.get(pk=id)
+    # if id:
+    #     form.fields['content_object'].initial = Location.objects.get(pk=id)
 
     if organization:
         try:

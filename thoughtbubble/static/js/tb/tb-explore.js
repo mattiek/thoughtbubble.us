@@ -212,6 +212,7 @@ var getNeighborhoods = function() {
                     _.each(feature.properties.orgs, function(e) {
                     $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore +'">' + e.properties.title + '<a/></li>');
                     });
+                    $('#minisplore h3').html(feature.properties.title);
                     $('#minisplore').fadeIn();
 
                     $.ajax({
@@ -289,4 +290,25 @@ $('#anywhere-else').on('click', function(e){
     }
 
 
+});
+
+
+//
+//if (!navigator.geolocation) {
+//    geolocate.innerHTML = 'geolocation is not available';
+//} else {
+//    geolocate.onclick = function (e) {
+//        e.preventDefault();
+//        e.stopPropagation();
+//        map.locate();
+//    };
+//}
+map.locate();
+
+map.on('locationfound', function(e) {
+    map.fitBounds(e.bounds);
+    map.setZoom(12);
+
+    // And hide the geolocation button
+   // geolocate.parentNode.removeChild(geolocate);
 });
