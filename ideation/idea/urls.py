@@ -7,12 +7,11 @@ urlpatterns = patterns('ideation.idea.views',
    url(r'^supporting/(?P<id>\d+)/?$', 'support_idea_from_detail', name='support_idea_from_detail'),
 
    url(r'^add/?$', 'addidea', name='addidea'),
-   # url(r'^adds/?$', IdeaCreate.as_view(), name='addideas'),
-   # url(r'^(?P<id>\d+)/add/?$', 'addidea', name='addidea'),
-   # url(r'^nh-(?P<neighborhood>\d+)/add/?$', 'add_neighborhood_idea', name='add_neighborhood_idea'),
 
-   url(r'^(?P<organization>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
-   url(r'^(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
+
+   url(r'^(?P<place>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
+   url(r'^(?P<place>[-%\w ]+)/(?P<organization>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
+   url(r'^(?P<place>[-%\w ]+)/(?P<organization>[-%\w ]+)/(?P<location>[-%\w ]+)/add/?$', 'addidea', name='addidea'),
 
 
    url(r'^/?$', IdeaList.as_view(), name='idea_list'),

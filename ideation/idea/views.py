@@ -72,7 +72,7 @@ from geo.location.models import Location
 
 
 
-def addidea(request, id=None, organization=None, location=None):
+def addidea(request, place=None, organization=None, location=None):
     if not request.user.is_authenticated():
         messages.add_message(request, messages.ERROR, "Please log in to add an idea.")
         return redirect('home')
