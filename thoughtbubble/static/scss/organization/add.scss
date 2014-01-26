@@ -31,8 +31,7 @@
 
 #header {
   background: #33bdd4;
-  color: #ffffff;
-  font-family: 'MuseoSans';
+  @include white-museo;
   height: 33px;
   line-height: 33px;
   width: 100%;
