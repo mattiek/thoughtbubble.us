@@ -93,6 +93,7 @@ a {
     @include media($mobile) {
       background: none;
       width: 320px;
+      padding-top: 20px;
     }
 }
 

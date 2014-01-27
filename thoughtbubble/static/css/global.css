@@ -158,19 +158,25 @@ body:after {
     font-size: 12px;
     margin-top: 0px;
   }
-  /* line 72, ../scss/navV2.scss */
+  /* line 74, ../scss/navV2.scss */
   #nav li,
   #login-nav li {
     margin-top: 0px;
   }
 }
 
-/* line 79, ../scss/navV2.scss */
+/* line 81, ../scss/navV2.scss */
 #nav li {
   margin-right: 22px;
 }
+@media screen and (max-width: 480px) {
+  /* line 80, ../scss/navV2.scss */
+  #nav {
+    margin-top: 12px;
+  }
+}
 
-/* line 84, ../scss/navV2.scss */
+/* line 90, ../scss/navV2.scss */
 #primary-nav {
   color: #4585c3;
   /* text color */
@@ -181,41 +187,41 @@ body:after {
   margin: 40px auto 0;
   width: 300px;
 }
-/* line 92, ../scss/navV2.scss */
+/* line 98, ../scss/navV2.scss */
 #primary-nav li {
   display: inline-block;
   text-indent: 50px;
   margin-left: 50px;
   height: 38px;
 }
-/* line 99, ../scss/navV2.scss */
+/* line 105, ../scss/navV2.scss */
 #primary-nav li.icon-explore {
   background: url('../images/button-explore.png?1390687046') no-repeat;
   background-position: 0 0;
 }
-/* line 103, ../scss/navV2.scss */
+/* line 109, ../scss/navV2.scss */
 #primary-nav li.icon-explore:hover {
   background-position: 0 -42px;
 }
-/* line 108, ../scss/navV2.scss */
+/* line 114, ../scss/navV2.scss */
 #primary-nav li.icon-add {
   background: url('../images/button-add.png?1390687047') no-repeat;
 }
-/* line 112, ../scss/navV2.scss */
+/* line 118, ../scss/navV2.scss */
 #primary-nav li:first-child {
   margin-left: 0px;
 }
 
-/* line 119, ../scss/navV2.scss */
+/* line 125, ../scss/navV2.scss */
 #login-nav {
   margin-right: 70px;
   display: block;
 }
-/* line 123, ../scss/navV2.scss */
+/* line 129, ../scss/navV2.scss */
 #login-nav li {
   margin-right: 0px;
 }
-/* line 126, ../scss/navV2.scss */
+/* line 132, ../scss/navV2.scss */
 #login-nav li:first-child {
   background-image: url('../images/icon-person.png?1390687151');
   background-repeat: no-repeat;
@@ -223,13 +229,17 @@ body:after {
   background-position-y: 50%;
 }
 @media screen and (max-width: 480px) {
-  /* line 119, ../scss/navV2.scss */
+  /* line 125, ../scss/navV2.scss */
   #login-nav {
     margin-right: 0px;
   }
+  /* line 143, ../scss/navV2.scss */
+  #login-nav li {
+    margin-right: 20px;
+  }
 }
 
-/* line 140, ../scss/navV2.scss */
+/* line 150, ../scss/navV2.scss */
 #logo {
   background: url('../images/thoughtbubble.us-logo.png?1390687158');
   width: 288px;
@@ -238,18 +248,18 @@ body:after {
   margin: 0px 0 0 35px;
 }
 @media screen and (max-width: 480px) {
-  /* line 140, ../scss/navV2.scss */
+  /* line 150, ../scss/navV2.scss */
   #logo {
     background: url('../images/tb.us-logo-mobile.png?1390780139');
     width: 31px;
     height: 36px;
     background-size: 100%;
     display: block;
-    margin-top: 0px;
+    margin: 0px 0 10px 10px;
   }
 }
 
-/* line 154, ../scss/navV2.scss */
+/* line 164, ../scss/navV2.scss */
 #primary-explore {
   width: 252px;
   height: 37.5px;
@@ -271,7 +281,7 @@ body:after {
   color: #fff;
   font-family: "Myriad Pro", "Arial", sans-serif;
 }
-/* line 165, ../scss/navV2.scss */
+/* line 175, ../scss/navV2.scss */
 #primary-explore i {
   display: block;
   height: 31px;
@@ -280,12 +290,12 @@ body:after {
   float: left;
   margin: 2px 0 0 10px;
 }
-/* line 176, ../scss/navV2.scss */
+/* line 186, ../scss/navV2.scss */
 #primary-explore:hover i {
   background-position: 0 0;
 }
 
-/* line 187, ../scss/navV2.scss */
+/* line 197, ../scss/navV2.scss */
 #sub-footer {
   color: #4585c3;
   /* text color */
@@ -298,22 +308,22 @@ body:after {
   background: #ffffff;
   text-decoration: none;
 }
-/* line 197, ../scss/navV2.scss */
+/* line 207, ../scss/navV2.scss */
 #sub-footer ul {
   list-style: none;
 }
-/* line 200, ../scss/navV2.scss */
+/* line 210, ../scss/navV2.scss */
 #sub-footer ul li {
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
 }
-/* line 207, ../scss/navV2.scss */
+/* line 217, ../scss/navV2.scss */
 #sub-footer p {
   text-align: center;
 }
 
-/* line 213, ../scss/navV2.scss */
+/* line 223, ../scss/navV2.scss */
 #footer {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -328,24 +338,24 @@ body:after {
   /* layer fill content */
   margin: 0px 0 0 0;
 }
-/* line 220, ../scss/navV2.scss */
+/* line 230, ../scss/navV2.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 225, ../scss/navV2.scss */
+/* line 235, ../scss/navV2.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 230, ../scss/navV2.scss */
+/* line 240, ../scss/navV2.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
-/* line 237, ../scss/navV2.scss */
+/* line 247, ../scss/navV2.scss */
 #footer #footer-logout {
   background: url('../images/user-logout-icon.png?1390687159') no-repeat 0;
   text-indent: 13px;
@@ -355,34 +365,34 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   font-size: 13px;
 }
-/* line 245, ../scss/navV2.scss */
+/* line 255, ../scss/navV2.scss */
 #footer #footer-twitter {
   background: url('../images/twitter-cloud.png?1390687081');
   width: 23px;
   height: 22px;
   display: block;
 }
-/* line 249, ../scss/navV2.scss */
+/* line 259, ../scss/navV2.scss */
 #footer #footer-facebook {
   background: url('../images/facebook-cloud.png?1390687055');
   width: 28px;
   height: 19px;
   display: block;
 }
-/* line 253, ../scss/navV2.scss */
+/* line 263, ../scss/navV2.scss */
 #footer #footer-linkedin {
   background: url('../images/linkedin-cloud.png?1390687076');
   width: 22px;
   height: 21px;
   display: block;
 }
-/* line 258, ../scss/navV2.scss */
+/* line 268, ../scss/navV2.scss */
 #footer #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 271, ../scss/navV2.scss */
+/* line 281, ../scss/navV2.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -393,14 +403,14 @@ body:after {
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 279, ../scss/navV2.scss */
+/* line 289, ../scss/navV2.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 283, ../scss/navV2.scss */
+/* line 293, ../scss/navV2.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
@@ -412,7 +422,7 @@ body:after {
   font-weight: normal;
   font-size: 16px;
 }
-/* line 294, ../scss/navV2.scss */
+/* line 304, ../scss/navV2.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -428,7 +438,7 @@ body:after {
   text-align: center;
   line-height: 45px;
 }
-/* line 300, ../scss/navV2.scss */
+/* line 310, ../scss/navV2.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -444,35 +454,35 @@ body:after {
   font-size: 10px;
   font-weight: 100;
 }
-/* line 309, ../scss/navV2.scss */
+/* line 319, ../scss/navV2.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 314, ../scss/navV2.scss */
+/* line 324, ../scss/navV2.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 318, ../scss/navV2.scss */
+/* line 328, ../scss/navV2.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 323, ../scss/navV2.scss */
+/* line 333, ../scss/navV2.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 327, ../scss/navV2.scss */
+/* line 337, ../scss/navV2.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
@@ -481,7 +491,7 @@ body:after {
   width: 195px;
   height: 60px;
 }
-/* line 332, ../scss/navV2.scss */
+/* line 342, ../scss/navV2.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
@@ -492,14 +502,14 @@ body:after {
   width: 44px;
   float: left;
 }
-/* line 339, ../scss/navV2.scss */
+/* line 349, ../scss/navV2.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 343, ../scss/navV2.scss */
+/* line 353, ../scss/navV2.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
@@ -507,7 +517,7 @@ body:after {
   background-position: 44px 0;
   margin: 0 20px;
 }
-/* line 349, ../scss/navV2.scss */
+/* line 359, ../scss/navV2.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
@@ -515,7 +525,7 @@ body:after {
   width: 50px;
   background-position: 124px 0;
 }
-/* line 357, ../scss/navV2.scss */
+/* line 367, ../scss/navV2.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
@@ -523,7 +533,7 @@ body:after {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 364, ../scss/navV2.scss */
+/* line 374, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -546,7 +556,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 372, ../scss/navV2.scss */
+/* line 382, ../scss/navV2.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -572,7 +582,7 @@ body:after {
   display: block;
 }
 
-/* line 381, ../scss/navV2.scss */
+/* line 391, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -582,18 +592,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 390, ../scss/navV2.scss */
+/* line 400, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 395, ../scss/navV2.scss */
+/* line 405, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 399, ../scss/navV2.scss */
+/* line 409, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -614,7 +624,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 420, ../scss/navV2.scss */
+/* line 430, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -640,18 +650,18 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 439, ../scss/navV2.scss */
+/* line 449, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 443, ../scss/navV2.scss */
+/* line 453, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 447, ../scss/navV2.scss */
+/* line 457, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -659,14 +669,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 453, ../scss/navV2.scss */
+/* line 463, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 464, ../scss/navV2.scss */
+/* line 474, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
@@ -789,37 +799,38 @@ a:visited {
   #illustration {
     background: none;
     width: 320px;
+    padding-top: 20px;
   }
 }
 
-/* line 100, ../scss/global.scss */
+/* line 101, ../scss/global.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 104, ../scss/global.scss */
+/* line 105, ../scss/global.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 109, ../scss/global.scss */
+/* line 110, ../scss/global.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 114, ../scss/global.scss */
+/* line 115, ../scss/global.scss */
 #wrapper {
   min-height: 600px;
 }
 
-/* line 122, ../scss/global.scss */
+/* line 123, ../scss/global.scss */
 .mfp-bg.mfp-ready,
 .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 122, ../scss/global.scss */
+  /* line 123, ../scss/global.scss */
   .mfp-bg.mfp-ready,
   .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
     min-width: 320px;
