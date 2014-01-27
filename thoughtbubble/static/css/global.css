@@ -808,13 +808,18 @@ h4.message {
   text-align: center;
 }
 
-/* line 119, ../scss/global.scss */
+/* line 114, ../scss/global.scss */
+#wrapper {
+  min-height: 600px;
+}
+
+/* line 122, ../scss/global.scss */
 .mfp-bg.mfp-ready,
 .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 119, ../scss/global.scss */
+  /* line 122, ../scss/global.scss */
   .mfp-bg.mfp-ready,
   .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
     min-width: 320px;

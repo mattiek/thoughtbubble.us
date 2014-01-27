@@ -7,7 +7,7 @@
 {% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-privacy.css" />
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-privacy.css" />#}
 {% endblock %}
 
 {% block bodyid %}static{% endblock %}
@@ -16,11 +16,9 @@
 {% endblock %}
 
 {% block content %}
-        <div>   </div>
         <div class="middle-column">
             {{ flatpage.content }}
          </div>
-        <div class="clr"></div>
 {% endblock %}
 
 {% block footerscripts %}
