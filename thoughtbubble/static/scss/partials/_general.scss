@@ -5,6 +5,9 @@ $tb-header_blue: #53b8d1; /* text color */
 
 $tb-orange: #f3812b;
 
+$tb-baby-blue: #daf3f8;
+
+$tb-beige: #fef8ee;
 
 @mixin museo {
   font-family: "Museo Sans", sans-serif;
@@ -44,6 +47,14 @@ $tb-orange: #f3812b;
   background: image-url($img);
   width: image-width($img);
   height: image-height($img);
+  display: block;
+}
+
+@mixin mobile-bg-image($img) {
+  background: image-url($img);
+  width: image-width($img) / 2;
+  height: image-height($img) / 2;
+  background-size: 100%;
   display: block;
 }
 

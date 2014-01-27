@@ -1,9 +1,17 @@
 /* text color */
 /* text color */
-/* line 4, ../../scss/idea/_idea.scss */
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../../scss/idea/_idea.scss */
 .idea-cap {
   color: #7a7a7a;
   /* text color */
+  position: relative;
   font-family: "Museo Sans", sans-serif;
   font-size: 17px;
   width: 576px;
@@ -15,32 +23,50 @@
   -o-border-radius: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
   background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  background-image: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  background-image: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
-  background-image: linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  background-image: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
 }
-/* line 15, ../../scss/idea/_idea.scss */
+@media screen and (max-width: 480px) {
+  /* line 7, ../../scss/idea/_idea.scss */
+  .idea-cap {
+    width: 100%;
+    background-image: none;
+    background-color: #daf3f8;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+  }
+}
+/* line 30, ../../scss/idea/_idea.scss */
 .idea-cap a {
   text-decoration: none;
 }
-/* line 18, ../../scss/idea/_idea.scss */
+/* line 33, ../../scss/idea/_idea.scss */
 .idea-cap a.orange {
   color: #ffffff;
 }
-/* line 20, ../../scss/idea/_idea.scss */
+/* line 35, ../../scss/idea/_idea.scss */
 .idea-cap a.orange:visited {
   color: #ffffff;
 }
-/* line 26, ../../scss/idea/_idea.scss */
+/* line 41, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap {
   padding-top: 25px;
   margin-left: 20px;
   width: 440px;
   float: left;
 }
-/* line 32, ../../scss/idea/_idea.scss */
+@media screen and (max-width: 480px) {
+  /* line 41, ../../scss/idea/_idea.scss */
+  .idea-cap .left-idea-cap {
+    margin-left: 0px;
+    width: 320px;
+    background-color: #daf3f8;
+  }
+}
+/* line 53, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap p {
   color: #4585c3;
   /* text color */
@@ -48,7 +74,13 @@
   font-size: 17px;
   margin-bottom: 20px;
 }
-/* line 38, ../../scss/idea/_idea.scss */
+@media screen and (max-width: 480px) {
+  /* line 53, ../../scss/idea/_idea.scss */
+  .idea-cap .left-idea-cap p {
+    text-indent: 20px;
+  }
+}
+/* line 63, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -58,30 +90,30 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 47, ../../scss/idea/_idea.scss */
+/* line 72, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 55, ../../scss/idea/_idea.scss */
+/* line 80, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting .unsupported {
   display: block;
 }
-/* line 58, ../../scss/idea/_idea.scss */
+/* line 83, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting .supported {
   display: none;
 }
-/* line 64, ../../scss/idea/_idea.scss */
+/* line 89, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting.activated .unsupported {
   display: none;
 }
-/* line 67, ../../scss/idea/_idea.scss */
+/* line 92, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting.activated .supported {
   display: block;
 }
-/* line 73, ../../scss/idea/_idea.scss */
+/* line 98, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -91,16 +123,16 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 91, ../../scss/idea/_idea.scss */
+/* line 116, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
   margin-top: 0px;
   float: none;
 }
-/* line 105, ../../scss/idea/_idea.scss */
+/* line 130, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap {
-  float: right;
+  position: absolute;
   list-style-type: none;
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
@@ -109,17 +141,34 @@
   padding-top: 30px;
   padding-right: 15px;
   padding-left: 0px;
+  right: 0px;
+  top: 0px;
 }
-/* line 115, ../../scss/idea/_idea.scss */
+/* line 143, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li {
   margin-top: 5px;
   line-height: 1.3em;
 }
-/* line 119, ../../scss/idea/_idea.scss */
+/* line 147, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li:first-child {
   margin-top: 0px;
 }
-/* line 124, ../../scss/idea/_idea.scss */
+@media screen and (max-width: 480px) {
+  /* line 130, ../../scss/idea/_idea.scss */
+  .idea-cap .right-idea-cap {
+    position: relative;
+    padding-top: 0px;
+    width: 320px;
+    background-color: #fef8ee;
+    padding: 20px;
+  }
+  /* line 161, ../../scss/idea/_idea.scss */
+  .idea-cap .right-idea-cap li {
+    display: inline-block;
+    width: 100px;
+  }
+}
+/* line 167, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -127,7 +176,7 @@
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 132, ../../scss/idea/_idea.scss */
+/* line 175, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -135,7 +184,7 @@
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 140, ../../scss/idea/_idea.scss */
+/* line 183, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1390687077');
   background-repeat: no-repeat;
@@ -144,7 +193,15 @@
   padding-left: 15px;
 }
 
-/* line 154, ../../scss/idea/_idea.scss */
+@media screen and (max-width: 480px) {
+  /* line 195, ../../scss/idea/_idea.scss */
+  .idea-interactions {
+    margin: 20px auto;
+    width: 250px;
+  }
+}
+
+/* line 205, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -168,11 +225,8 @@ a.orange {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -198,11 +252,8 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -342,11 +393,8 @@ ol.slats li p span.meta {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */

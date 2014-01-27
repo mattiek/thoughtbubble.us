@@ -71,6 +71,13 @@ a {
   margin: 0 auto;
   background-color: #ffffff;
   position: relative;
+
+
+  @include media($mobile) {
+    width: 320px;
+    background-color: transparent;
+  }
+
 }
 
 #illustration {
@@ -80,6 +87,11 @@ a {
     margin: 0 auto;
     background-color: #ffffff;
     background-repeat: no-repeat no-repeat;
+
+    @include media($mobile) {
+      background: none;
+      width: 320px;
+    }
 }
 
 

@@ -59,6 +59,15 @@ body {
     display: inline-block;
     margin-top: 75px;
   }
+
+  @include media($mobile) {
+    font-size: 12px;
+    margin-top: 0px;
+
+    li {
+      margin-top: 0px;
+    }
+  }
 }
 
 #nav {
@@ -116,13 +125,22 @@ body {
       background-position-y: 50%;
     }
   }
+
+  @include media($mobile) {
+    margin-right: 0px;
+  }
 }
 
 
 #logo {
+  @include bg-image('thoughtbubble.us-logo.png');
   margin: 32px 0 0 35px;
-  width: 288px;
-  height: 97px;
+  //width: 288px;
+  //height: 97px;
+  @include media($mobile) {
+    @include mobile-bg-image('tb.us-logo-mobile.png');
+    margin-top:0px;
+  }
 }
 
 

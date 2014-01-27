@@ -5,6 +5,10 @@
   width: 570px;
   //margin: 0 auto 20px;
   margin: 0 auto 0px;
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }
 
 .chosen-container-single .chosen-default,
@@ -18,8 +22,46 @@
   width: 150px;
   margin-left: 20px;
   margin-right: 20px;
+
+  @include media($mobile) {
+    width: 100%;
+    margin: 5px 0px;
+  }
 }
+
+#id_where {
+  @include media($mobile) {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+.chosen-container {
+  @include media($mobile) {
+    margin-bottom: 5px;
+  }
+}
+
+.chosen-container-single .chosen-single {
+  @include media($mobile) {
+    background-image: none;
+    background: #ffffff;
+    border: 0px;
+    @include border-radius(0px);
+    //($color, $hoff, $voff, $blur, $spread, $inset)
+    @include single-box-shadow(#FFF, 0px);
+    width: 100%;
+  }
+}
+
+
 
 #sort_by {
   vertical-align: super;
+
+  @include media($mobile) {
+    display: block;
+    padding:10px;
+    background-color: #ffffff;
+  }
 }
