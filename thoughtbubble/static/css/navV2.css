@@ -67,7 +67,6 @@ body:after {
   display: inline;
   list-style-type: none;
   float: right;
-  margin-top: 20px;
 }
 /* line 59, ../scss/navV2.scss */
 #nav a,
@@ -164,7 +163,7 @@ body:after {
   width: 288px;
   height: 97px;
   display: block;
-  margin: 32px 0 0 35px;
+  margin: 0px 0 0 35px;
 }
 @media screen and (max-width: 480px) {
   /* line 140, ../scss/navV2.scss */

@@ -139,7 +139,6 @@ body:after {
   display: inline;
   list-style-type: none;
   float: right;
-  margin-top: 20px;
 }
 /* line 59, ../scss/navV2.scss */
 #nav a,
@@ -236,7 +235,7 @@ body:after {
   width: 288px;
   height: 97px;
   display: block;
-  margin: 32px 0 0 35px;
+  margin: 0px 0 0 35px;
 }
 @media screen and (max-width: 480px) {
   /* line 140, ../scss/navV2.scss */
@@ -783,6 +782,7 @@ a:visited {
   margin: 0 auto;
   background-color: #ffffff;
   background-repeat: no-repeat no-repeat;
+  padding-top: 32px;
 }
 @media screen and (max-width: 480px) {
   /* line 84, ../scss/global.scss */
@@ -792,29 +792,29 @@ a:visited {
   }
 }
 
-/* line 99, ../scss/global.scss */
+/* line 100, ../scss/global.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 103, ../scss/global.scss */
+/* line 104, ../scss/global.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 108, ../scss/global.scss */
+/* line 109, ../scss/global.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 118, ../scss/global.scss */
+/* line 119, ../scss/global.scss */
 .mfp-bg.mfp-ready,
 .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 118, ../scss/global.scss */
+  /* line 119, ../scss/global.scss */
   .mfp-bg.mfp-ready,
   .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
     min-width: 320px;

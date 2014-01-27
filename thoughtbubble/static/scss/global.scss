@@ -88,6 +88,7 @@ a {
     margin: 0 auto;
     background-color: #ffffff;
     background-repeat: no-repeat no-repeat;
+    padding-top: 32px;
 
     @include media($mobile) {
       background: none;

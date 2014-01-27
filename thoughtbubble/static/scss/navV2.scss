@@ -54,7 +54,7 @@ body {
   display: inline;
   list-style-type: none;
   float:right;
-  margin-top: 20px;
+  //margin-top: 20px;
 
   a {
     text-decoration: none;
@@ -139,7 +139,7 @@ body {
 
 #logo {
   @include bg-image('thoughtbubble.us-logo.png');
-  margin: 32px 0 0 35px;
+  margin: 0px 0 0 35px;
   //width: 288px;
   //height: 97px;
   @include media($mobile) {
