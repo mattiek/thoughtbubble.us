@@ -19,6 +19,11 @@ body {
   width: 100%;
   height: 8px;
   background: image-url('top-scale.png') repeat-x;
+  min-width: 930px;
+
+  @include media($mobile) {
+    min-width: 320px;
+  }
 }
 
 
