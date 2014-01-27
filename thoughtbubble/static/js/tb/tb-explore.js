@@ -202,56 +202,69 @@ var getNeighborhoods = function() {
             TB.Map.map().markerLayer.setGeoJSON(map_features);
 
             // Listen for individual marker clicks
-            TB.Map.map().markerLayer.on('click',function(e) {
+            TB.Map.map().markerLayer.on('touchstart click',function(e) {
 //                e.layer.unbindPopup();
-                var feature = e.layer.feature;
+                e.stopPropogation();
+                e.preventDefault();
 
-                // Check to see that we are a city that would have orgs
-                if (feature.properties.orgs) {
-                    $('#minisplore-wrapper ul').html('');
-                    _.each(feature.properties.orgs, function(e) {
-                    $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore +'">' + e.properties.title + '<a/></li>');
-                    });
-                    $('#minisplore h3').html(feature.properties.title);
-                    $('#minisplore').fadeIn();
+                if(e.handled !== true) {
 
-                    $.ajax({
-                        url:  '/api/v1/organizations/.json?place=' + feature.properties.id,
-                        dataType: 'json',
-                        success: function load(d) {
+                    var feature = e.layer.feature;
 
-                            if (window.organizationBoundaries) {
-                                map.removeLayer(window.organizationBoundaries);
-                                window.organizationBoundaries = null;
+                    // Check to see that we are a city that would have orgs
+                    if (feature.properties.orgs) {
+                        $('#minisplore-wrapper ul').html('');
+                        _.each(feature.properties.orgs, function(e) {
+                            $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore +'">' + e.properties.title + '<a/></li>');
+                        });
+                        $('#minisplore h3').html(feature.properties.title);
+                        $('#minisplore').fadeIn();
+
+                        $.ajax({
+                            url:  '/api/v1/organizations/.json?place=' + feature.properties.id,
+                            dataType: 'json',
+                            success: function load(d) {
+
+                                if (window.organizationBoundaries) {
+                                    map.removeLayer(window.organizationBoundaries);
+                                    window.organizationBoundaries = null;
+                                }
+
+                                window.organizationBoundaries = L.geoJson(d);
+                                window.organizationBoundaries.addTo(map);
                             }
-
-                             window.organizationBoundaries = L.geoJson(d);
-                            window.organizationBoundaries.addTo(map);
-                        }
-                    });
+                        });
 
 
-                } else { // We are on an Organization
-                    $('#minisplore').fadeOut();
+                    } else { // We are on an Organization
+                        $('#minisplore').fadeOut();
 
 
-                    $.ajax({
-                        url:  '/api/v1/organizations/.json?org=' + feature.properties.id,
-                        dataType: 'json',
-                        success: function load(d) {
+                        $.ajax({
+                            url:  '/api/v1/organizations/.json?org=' + feature.properties.id,
+                            dataType: 'json',
+                            success: function load(d) {
 
-                            if (window.organizationBoundaries) {
-                                map.removeLayer(window.organizationBoundaries);
-                                window.organizationBoundaries = null;
+                                if (window.organizationBoundaries) {
+                                    map.removeLayer(window.organizationBoundaries);
+                                    window.organizationBoundaries = null;
+                                }
+
+                                window.organizationBoundaries = L.geoJson(d);
+                                window.organizationBoundaries.addTo(map);
                             }
-
-                            window.organizationBoundaries = L.geoJson(d);
-                            window.organizationBoundaries.addTo(map);
-                        }
-                    });
+                        });
 
 
+                    }
+
+
+                    e.handled = true;
+                } else {
+                    return false;
                 }
+
+
 
             });
 
