@@ -443,7 +443,9 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   }
 }
 
-/* line 16, ../../scss/partials/_filtering.scss */
+/* line 18, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single,
+.chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -453,14 +455,14 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-size: 14px;
 }
 
-/* line 21, ../../scss/partials/_filtering.scss */
+/* line 23, ../../scss/partials/_filtering.scss */
 #order, #order_chosen {
   width: 150px;
   margin-left: 20px;
   margin-right: 20px;
 }
 @media screen and (max-width: 480px) {
-  /* line 21, ../../scss/partials/_filtering.scss */
+  /* line 23, ../../scss/partials/_filtering.scss */
   #order, #order_chosen {
     width: 100%;
     margin: 5px 0px;
@@ -468,7 +470,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 32, ../../scss/partials/_filtering.scss */
+  /* line 34, ../../scss/partials/_filtering.scss */
   #id_where {
     width: 100%;
     margin: 0px;
@@ -476,14 +478,15 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 39, ../../scss/partials/_filtering.scss */
+  /* line 41, ../../scss/partials/_filtering.scss */
   .chosen-container {
     margin-bottom: 5px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 45, ../../scss/partials/_filtering.scss */
+  /* line 47, ../../scss/partials/_filtering.scss */
+  .chzn-container-single .chzn-single,
   .chosen-container-single .chosen-single {
     background-image: none;
     background: #ffffff;
@@ -500,12 +503,12 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   }
 }
 
-/* line 59, ../../scss/partials/_filtering.scss */
+/* line 61, ../../scss/partials/_filtering.scss */
 #sort_by {
   vertical-align: super;
 }
 @media screen and (max-width: 480px) {
-  /* line 59, ../../scss/partials/_filtering.scss */
+  /* line 61, ../../scss/partials/_filtering.scss */
   #sort_by {
     display: block;
     padding: 10px;

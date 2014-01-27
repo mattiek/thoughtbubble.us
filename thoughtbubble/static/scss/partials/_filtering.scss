@@ -11,6 +11,8 @@
   }
 }
 
+.chzn-container-single .chzn-single,
+.chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -41,7 +43,7 @@
     margin-bottom: 5px;
   }
 }
-
+.chzn-container-single .chzn-single,
 .chosen-container-single .chosen-single {
   @include media($mobile) {
     background-image: none;
