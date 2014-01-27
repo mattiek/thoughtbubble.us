@@ -17,6 +17,7 @@
   font-style: normal;
 }
 
+
 h1 {
   color: #6fc4de; /* text color */
   @include museo;
@@ -106,4 +107,18 @@ a {
 
 h4.message {
   text-align: center;
+}
+
+
+
+
+/// OVERLAYS
+
+.mfp-bg.mfp-ready,
+.mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready{
+  min-width: 930px;
+
+  @include media($mobile) {
+    min-width: 320px;
+  }
 }
