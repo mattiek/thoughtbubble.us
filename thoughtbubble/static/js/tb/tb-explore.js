@@ -181,7 +181,7 @@ var getNeighborhoods = function() {
             TB.Map.map().markerLayer.on('touchstart click',function(e) {
 //                e.layer.unbindPopup();
 //                e.stopPropagation();
-                e.preventDefault();
+//                e.preventDefault();
 
                 if(e.handled !== true) {
 
