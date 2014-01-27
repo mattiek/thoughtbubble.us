@@ -180,7 +180,7 @@ var getNeighborhoods = function() {
             // Listen for individual marker clicks
             TB.Map.map().markerLayer.on('touchstart click',function(e) {
 //                e.layer.unbindPopup();
-                e.stopPropagation();
+//                e.stopPropagation();
                 e.preventDefault();
 
                 if(e.handled !== true) {
