@@ -586,3 +586,8 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
 }
+
+/* line 67, ../../scss/idea/list.scss */
+.chzn-container-single .chzn-search {
+  display: none;
+}
