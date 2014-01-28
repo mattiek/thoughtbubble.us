@@ -6,6 +6,8 @@
 @import "idea/idea";
 @import "partials/chosen";
 @import "partials/filtering";
+@import "compass";
+@import "compass/css3/border-radius";
 
 #illustration {
   background-image: url(../../images/illustration-ship.png);

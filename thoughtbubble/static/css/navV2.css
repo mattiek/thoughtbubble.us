@@ -13,21 +13,13 @@
 /* text color */
 /* line 11, ../scss/navV2.scss */
 body {
+  overflow: hidden;
   *zoom: 1;
   max-width: 680em;
   margin-left: auto;
   margin-right: auto;
   background: url('../images/clean_textile.png?1390687091');
   background-size: 50%;
-}
-/* line 18, ../scss/bourbon/addons/_clearfix.scss */
-body:before, body:after {
-  content: " ";
-  display: table;
-}
-/* line 23, ../scss/bourbon/addons/_clearfix.scss */
-body:after {
-  clear: both;
 }
 
 /* line 17, ../scss/navV2.scss */
@@ -178,7 +170,7 @@ body:after {
 @media screen and (max-width: 480px) {
   /* line 150, ../scss/navV2.scss */
   #logo {
-    background: url('../images/tb.us-logo-mobile.png?1390780139');
+    background: url('../images/tb.us-logo-mobile.png?1390798734');
     width: 31px;
     height: 36px;
     background-size: 100%;
@@ -204,8 +196,7 @@ body:after {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
-  background-image: linear-gradient(to top, #e57f4f 0%, #f9a533 100%);
+  background-image: linear, bottom, #e57f4f 0%, #f9a533 100%;
   color: #fff;
   font-family: "Myriad Pro", "Arial", sans-serif;
 }
@@ -501,8 +492,7 @@ body:after {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  background-image: linear, bottom, #f3812b 0%, #f9a533 100%;
   border: none;
   color: #fff;
   /* text color */
@@ -565,6 +555,8 @@ button.mfp-close:active {
   background-clip: padding-box;
   background-color: #fff;
   /* layer fill content */
+  -webkit-box-shadow: 2px 2px 11px rgba(1, 1, 1, 0.15);
+  -moz-box-shadow: 2px 2px 11px rgba(1, 1, 1, 0.15);
   box-shadow: 2px 2px 11px rgba(1, 1, 1, 0.15);
   color: #656464;
   /* text color */
