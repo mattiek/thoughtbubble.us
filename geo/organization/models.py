@@ -53,7 +53,7 @@ class Organization(models.Model):
         return ''
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[str(self.place.name.lower()), str(self.title.lower())])
+        return reverse('organization_detail', args=[self.id])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
