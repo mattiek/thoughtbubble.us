@@ -201,18 +201,31 @@ form .row .row.second-row {
   width: 228px;
 }
 
-/* line 87, ../../scss/idea/add.scss */
-.chosen-container-single .chosen-default, .chosen-container-single .chosen-single, .chosen-container-single .chosen-drop .chosen-results li {
+/* line 90, ../../scss/idea/add.scss */
+.chzn-container-single .chzn-default, .chzn-container-single .chzn-single, .chzn-container-single .chzn-drop .chzn-results li,
+.chzn-container-single .chosen-default, .chzn-container-single .chosen-single, .chzn-container-single .chosen-drop .chosen-results li,
+.chosen-container-single .chzn-default,
+.chosen-container-single .chzn-single,
+.chosen-container-single .chzn-drop .chzn-results li,
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 91, ../../scss/idea/add.scss */
+/* line 95, ../../scss/idea/add.scss */
+.chzn-container-single .chzn-default,
+.chzn-container-single .chosen-default,
+.chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 94, ../../scss/idea/add.scss */
+/* line 99, ../../scss/idea/add.scss */
+.chzn-container-single .chzn-single div b,
+.chzn-container-single .chosen-single div b,
+.chosen-container-single .chzn-single div b,
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -220,91 +233,92 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378259983') no-repeat 0 6px;
 }
 
-/* line 102, ../../scss/idea/add.scss */
+/* line 108, ../../scss/idea/add.scss */
+.chzn-container,
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 106, ../../scss/idea/add.scss */
+/* line 112, ../../scss/idea/add.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 111, ../../scss/idea/add.scss */
+/* line 117, ../../scss/idea/add.scss */
 .want {
   width: 80px;
   float: left;
 }
 
-/* line 116, ../../scss/idea/add.scss */
+/* line 122, ../../scss/idea/add.scss */
 #id_name {
   width: 520px;
 }
 
-/* line 121, ../../scss/idea/add.scss */
+/* line 127, ../../scss/idea/add.scss */
 #id_what_kind,
 #id_content_object {
   width: 300px;
   float: left;
 }
 
-/* line 126, ../../scss/idea/add.scss */
+/* line 132, ../../scss/idea/add.scss */
 #id_what_for_chosen {
   margin-left: 60px;
 }
 
-/* line 130, ../../scss/idea/add.scss */
+/* line 136, ../../scss/idea/add.scss */
 #id_what_for {
   width: 218px;
 }
 
-/* line 134, ../../scss/idea/add.scss */
+/* line 140, ../../scss/idea/add.scss */
 #id_description {
   width: 300px;
 }
 
-/* line 138, ../../scss/idea/add.scss */
+/* line 144, ../../scss/idea/add.scss */
 .additional {
   width: 260px;
   float: left;
   margin-bottom: 10px;
 }
-/* line 143, ../../scss/idea/add.scss */
+/* line 149, ../../scss/idea/add.scss */
 .additional.fl {
   width: 340px;
 }
 
-/* line 148, ../../scss/idea/add.scss */
+/* line 154, ../../scss/idea/add.scss */
 .file-picker-input {
   float: left;
   margin-right: 20px;
 }
 
-/* line 155, ../../scss/idea/add.scss */
+/* line 161, ../../scss/idea/add.scss */
 #pictures {
   float: right;
   width: 270px;
 }
 
-/* line 160, ../../scss/idea/add.scss */
+/* line 166, ../../scss/idea/add.scss */
 #id_pic1, #id_pic2, #id_pic3, #id_pic4 {
   margin-bottom: 20px;
 }
 
-/* line 164, ../../scss/idea/add.scss */
+/* line 170, ../../scss/idea/add.scss */
 .cloak {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
   line-height: 80px;
 }
-/* line 170, ../../scss/idea/add.scss */
+/* line 176, ../../scss/idea/add.scss */
 .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 176, ../../scss/idea/add.scss */
+/* line 182, ../../scss/idea/add.scss */
 #id_links {
   width: 180px;
 }
