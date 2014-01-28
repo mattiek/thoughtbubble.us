@@ -1,4 +1,18 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
@@ -88,11 +102,8 @@ textarea {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */
