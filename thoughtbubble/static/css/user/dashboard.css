@@ -1,3 +1,10 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 2, ../../scss/neat/grid/_grid.scss */
 * {
@@ -213,6 +220,13 @@
   font-size: 11px;
 }
 
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 3, ../../scss/partials/_sharing.scss */
 .sharing {
@@ -257,6 +271,13 @@
   height: 15px;
 }
 
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
@@ -268,7 +289,8 @@ a.orange {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: linear, bottom, #f3812b 0%, #f9a533 100%;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -294,7 +316,8 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: linear, top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%;
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -311,6 +334,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   line-height: 25px;
   text-align: center;
   font-size: 11px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* text color */
@@ -380,6 +410,13 @@ textarea {
   -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
   -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* text color */

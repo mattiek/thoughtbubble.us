@@ -1,3 +1,10 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 3, ../../scss/partials/_sharing.scss */
 .sharing {
@@ -42,6 +49,13 @@
   height: 15px;
 }
 
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
@@ -53,11 +67,8 @@ a.orange {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: -o-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
-  background-image: linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -83,11 +94,8 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #8dd9f2), color-stop(28%, #5fd2e7), color-stop(38%, #30cae1), color-stop(100%, #4cc6de));
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: -moz-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: -o-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
-  background-image: linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -104,6 +112,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   line-height: 25px;
   text-align: center;
   font-size: 11px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* text color */
@@ -233,6 +248,13 @@ ol.slats li p span.meta {
   display: block;
   font-size: 12px;
   color: #999;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* text color */
@@ -483,6 +505,13 @@ ol.slats li p span.meta {
   color: #aaa;
 }
 
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* text color */
 /* line 2, ../../scss/partials/_filtering.scss */
 #filtering {
@@ -553,8 +582,6 @@ ol.slats li p span.meta {
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
-    -webkit-box-shadow: 0px 0px 5px white;
-    -moz-box-shadow: 0px 0px 5px white;
     box-shadow: 0px 0px 5px white;
     width: 100%;
   }
@@ -623,29 +650,30 @@ ol.slats li p span.meta {
   font-family: "Museo Sans", sans-serif;
   font-size: 10px;
   text-align: center;
+  margin: 20px 0;
 }
 
-/* line 61, ../../scss/organization/detail.scss */
+/* line 62, ../../scss/organization/detail.scss */
 .actions {
   margin: 0 auto 15px;
   width: 463px;
 }
-/* line 65, ../../scss/organization/detail.scss */
+/* line 66, ../../scss/organization/detail.scss */
 .actions a {
   color: #ffffff;
 }
-/* line 68, ../../scss/organization/detail.scss */
+/* line 69, ../../scss/organization/detail.scss */
 .actions a:visited {
   color: #ffffff;
 }
 
-/* line 74, ../../scss/organization/detail.scss */
+/* line 75, ../../scss/organization/detail.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 79, ../../scss/organization/detail.scss */
+/* line 80, ../../scss/organization/detail.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -658,12 +686,12 @@ ol.slats li p span.meta {
   background-position: 57px 57px;
 }
 
-/* line 91, ../../scss/organization/detail.scss */
+/* line 92, ../../scss/organization/detail.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 95, ../../scss/organization/detail.scss */
+/* line 96, ../../scss/organization/detail.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -674,39 +702,39 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 104, ../../scss/organization/detail.scss */
+/* line 105, ../../scss/organization/detail.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 108, ../../scss/organization/detail.scss */
+/* line 109, ../../scss/organization/detail.scss */
 #about {
   margin: 30px 0;
 }
 
-/* line 114, ../../scss/organization/detail.scss */
+/* line 115, ../../scss/organization/detail.scss */
 #header .sharing {
-  margin: 0px 0px 0px 15px;
+  margin: 20px 0px 0px 15px;
 }
-/* line 118, ../../scss/organization/detail.scss */
+/* line 119, ../../scss/organization/detail.scss */
 #header .sharing li span {
   display: none;
 }
-/* line 122, ../../scss/organization/detail.scss */
+/* line 123, ../../scss/organization/detail.scss */
 #header .sharing li a.share-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 15px;
 }
-/* line 128, ../../scss/organization/detail.scss */
+/* line 129, ../../scss/organization/detail.scss */
 #header .sharing li a.share-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
-/* line 134, ../../scss/organization/detail.scss */
+/* line 135, ../../scss/organization/detail.scss */
 #header .sharing li a.share-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
@@ -714,26 +742,26 @@ form .row .row.second-row {
   height: 15px;
 }
 
-/* line 145, ../../scss/organization/detail.scss */
+/* line 146, ../../scss/organization/detail.scss */
 .sharing {
   float: right;
 }
 
-/* line 149, ../../scss/organization/detail.scss */
+/* line 150, ../../scss/organization/detail.scss */
 .news-label {
   clear: both;
 }
 
-/* line 153, ../../scss/organization/detail.scss */
+/* line 154, ../../scss/organization/detail.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 157, ../../scss/organization/detail.scss */
+/* line 158, ../../scss/organization/detail.scss */
 #organization-logo {
   text-align: center;
 }
-/* line 160, ../../scss/organization/detail.scss */
+/* line 161, ../../scss/organization/detail.scss */
 #organization-logo img {
   max-width: 300px;
 }
