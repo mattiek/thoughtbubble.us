@@ -11,7 +11,10 @@
     <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
   <![endif]-->
-
+    <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.css' rel='stylesheet' />
+    <!--[if lt IE 9]>
+      <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+    <![endif]-->
 
     <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />
 {% endblock %}
@@ -77,6 +80,12 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/typeahead.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.js'></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+    <script type="text/javascript">
+        L.control.locate({position:'topright', follow: false}).addTo(map);
+        var hash = L.hash(map);
+    </script>
 
     {% if exploring %}
 {#        <script type="text/javascript">#}

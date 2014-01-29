@@ -420,3 +420,17 @@ h1, h2 {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
+
+/* line 271, ../../scss/map/explore.scss */
+.leaflet-control-locate {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+/* line 274, ../../scss/map/explore.scss */
+.leaflet-control-locate a {
+  background-color: #fff;
+  background-position: -3px, -2px;
+}
+/* line 279, ../../scss/map/explore.scss */
+.leaflet-control-locate.active a {
+  background-position: -33px -2px;
+}

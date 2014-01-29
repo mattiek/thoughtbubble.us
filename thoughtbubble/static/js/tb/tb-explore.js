@@ -292,12 +292,3 @@ $('#anywhere-else').on('click', function(e){
 //        map.locate();
 //    };
 //}
-map.locate();
-
-map.on('locationfound', function(e) {
-    map.fitBounds(e.bounds);
-    map.setZoom(12);
-
-    // And hide the geolocation button
-   // geolocate.parentNode.removeChild(geolocate);
-});
