@@ -42,6 +42,9 @@ class Organization(models.Model):
     def __unicode__(self):
         return "%s Organization" % self.title
 
+    def get_description(self):
+        return self.about
+
     def save(self, *args, **kwargs):
         if not self.center and self.geom:
             self.center = self.geom.centroid
