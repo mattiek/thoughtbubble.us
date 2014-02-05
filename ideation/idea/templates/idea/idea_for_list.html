@@ -2,7 +2,7 @@
 {% load ideacountables %}
 <div class="idea-cap">
     <div class="left-idea-cap">
-        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ ideation.idea.content_object.name }} for {{ idea.what_for }}</p></a>
+        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ idea.content_object.name }} for {{ idea.what_for }}</p></a>
 
         <ul class="right-idea-cap">
             <li><span class="emphasis support-star">{{ idea.support_count }}</span> supporters</li>
