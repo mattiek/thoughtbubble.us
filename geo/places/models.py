@@ -39,6 +39,14 @@ class Place(models.Model):
             self.geom = Point(self.longitude, self.latitude)
         super(Place, self).save(*args, **kwargs)
 
+
+    def get_explore_link(self):
+        return reverse('places_detail', args=[str(self.name.lower()),])
+
+    def add_idea_link(self):
+        return reverse('addidea', args=[str(self.name.lower()),])
+
+
     def get_geojson_type(self):
         return 'Feature'
 
@@ -50,7 +58,7 @@ class Place(models.Model):
         props = {}
 
         props['id'] = self.id
-        props['explore'] = ''#reverse('city_detail', args=[str(self.id)])
+        props['explore'] = self.get_explore_link()
         props['title'] = self.name
 
         props['orgs'] = [x.get_center() for x in self.organization_set.all()]

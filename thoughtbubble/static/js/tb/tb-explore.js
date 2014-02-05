@@ -282,6 +282,25 @@ $('#anywhere-else').on('click', function(e){
 });
 
 
+var hideCompass = function() {
+    $('#compass-instructions').animate({width:1, height:1}, 250);
+}
+
+var showCompass = function() {
+    $('#compass-instructions').animate({width:140, height:105}, 250);
+}
+
+setTimeout(hideCompass, 4000);
+
+$('#compass').on('click', function(e) {
+    e.preventDefault();
+
+    if ($('#compass-instructions').width() > 1)
+        hideCompass();
+    else
+        showCompass();
+});
+
 //
 //if (!navigator.geolocation) {
 //    geolocate.innerHTML = 'geolocation is not available';

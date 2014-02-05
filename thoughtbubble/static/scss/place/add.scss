@@ -1,0 +1,425 @@
+@import "partials/general";
+@import "compass";
+@import "partials/inputs";
+@import "partials/buttons";
+
+#illustration {
+  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
+  background-size: 100%;
+  height: 233px;
+  width: 930px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.orange {
+  @include orange-gradient-button;
+}
+
+.s-button {
+  height: 33px;
+  line-height: 33px;
+  width: 100px;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+#header {
+  background: #33bdd4;
+  @include white-museo;
+  height: 33px;
+  line-height: 33px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+.centered {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+.row {
+  &.title {
+    text-align: center;
+  }
+
+  &.addpad {
+  padding-bottom: 20px;
+  }
+}
+
+#cta {
+  color: #7b7b7b; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+.actions {
+  margin: 0 auto;
+  width: 463px;
+}
+
+#form-wrapper {
+  width:600px;
+  margin: 0 auto;
+}
+
+#add-photo {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  margin-left: -100px;
+  position: absolute;
+  background-image: url(../../images/add-photo.png);
+  background-repeat: no-repeat;
+  background-position: 57px 57px
+}
+
+
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+}
+
+textarea {
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  font-family: 'MuseoSans';
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+#captcha-question {
+  color: #727171; /* text color */
+  font-family: "MuseoSans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.terms-and-conditions {
+  color: #727171; /* text color */
+  font-family: "MuseoSans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px
+}
+
+form .row .row.second-row {
+  margin-top: 15px;
+}
+
+.copy {
+  color: #6d6d6d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  margin-bottom: 0px;
+}
+
+#id_what_for {
+  width: 228px;
+}
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #6d6d6d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+.chosen-container-single .chosen-default {
+  color: #bbb;
+}
+
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+}
+
+.chosen-container {
+  margin-bottom: 15px;
+}
+
+.auto-hint {
+  color: #aaa;
+}
+
+.idea-cap {
+  color: #7a7a7a; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  width: 576px;
+  height: 113px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background: #daf3f8; /* Old browsers */
+  background: -moz-linear-gradient(left,  #daf3f8 80%, #fef8ee 80%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%,#daf3f8), color-stop(80%,#fef8ee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left,  #daf3f8 80%,#fef8ee 80%); /* IE10+ */
+  background: linear-gradient(to right,  #daf3f8 80%,#fef8ee 80%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 ); /* IE6-9 */
+}
+
+.left-idea-cap {
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 440px;
+  float: left;
+
+  .supporting {
+    width: (151px / 2);
+    height: (44px / 2);
+    background: url(../../images/support.png) no-repeat 0 100%;
+    display: block;
+    float: left;
+  }
+
+  .commenting {
+    width: 65px;
+    height: 22px;
+    background: url(../../images/comment.png) no-repeat 0;
+    display: block;
+    float: left;
+  }
+
+  span {
+    color: #7b7b7b; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 10px;
+  }
+
+  .sharing {
+    display: inline-block;
+    list-style-type: none;
+
+    li {
+
+
+    }
+  }
+
+}
+
+.right-idea-cap {
+  float:right;
+  width: 20%;
+
+  table {
+    background: transparent;
+    border: none;
+
+    tr {
+      &.even,
+      &.alt,
+      &:nth-of-type(even) {
+        background: transparent;
+      }
+    }
+  }
+}
+
+#organization-logo,
+#news-photo,
+.picture {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/add-photo.png);
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+  float: right;
+  margin-right: 30px;
+
+}
+
+.picture {
+  float:left;
+  //margin-left: 20px;
+  line-height: 80px;
+  text-align: center;
+
+  img {
+    vertical-align: middle;
+  }
+
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
+.feature {
+  //width: 135px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #dadbdc;
+  //background-image: url(../../images/add-photo.png);
+  //background-repeat: no-repeat;
+  //background-position: 101%;
+  border-radius: 5px;
+  color: #7b7b7b; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  float: left;
+  margin: 0 10px 10px 0;
+
+  .feature-cap {
+    float: right;
+    width: 20px;
+    height: 20px;
+    background-image: image-url('add-photo.png');
+    background-repeat: no-repeat;
+  }
+
+  span {
+    padding: 0 10px;
+  }
+}
+
+#news {
+  #news-photo {
+    float:left;
+    margin-right:20px;
+  }
+
+  textarea {
+    width: 416px;
+  }
+
+  .buttonize {
+    float: right;
+  }
+}
+
+.submit-all {
+  padding: 5px 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+
+  #deets {
+    float:right;
+    width: 478px;
+
+    label {
+      width:70px;
+      display: inline-block;
+      color: #9d9d9d; /* text color */
+      font-family: "Museo Sans", sans-serif;
+      font-size: 15px;
+    }
+
+    input {
+      width: 320px;
+      display: inline;
+    }
+  }
+}
+
+#about {
+  label {
+    color: #9d9d9d; /* text color */
+    font-family: "Museo Sans", sans-serif;
+    font-size: 15px;
+  }
+}
+.label {
+  color: #9d9d9d; /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+#about {
+  clear:both;
+
+  #id_about {
+    margin-left: 20px;
+    width: 452px;
+  }
+}
+
+#pictures, #partners, #features {
+  width: 100%;
+  clear: both;
+  margin-top: 20px;
+
+  .label {
+    margin-bottom: 10px;
+  }
+}
+
+.clr {
+  clear: both;
+}
+
+.cloak {
+  background: #FFFFFF;
+}
+
+label[for=id_facebook_url],
+label[for=id_twitter_url],
+label[for=id_linkedin_url] {
+  text-indent: 35px;
+}
+
+
+label[for=id_facebook_url] {
+  background: image-url('small-blue-facebook.png') no-repeat;
+}
+label[for=id_twitter_url] {
+  background: image-url('small-blue-twitter.png') no-repeat;
+
+}
+label[for=id_linkedin_url] {
+  background: image-url('small-blue-linkedin.png') no-repeat;
+
+}

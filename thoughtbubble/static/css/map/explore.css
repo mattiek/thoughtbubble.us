@@ -434,3 +434,66 @@ h1, h2 {
 .leaflet-control-locate.active a {
   background-position: -33px -2px;
 }
+
+/* line 286, ../../scss/map/explore.scss */
+#compass-rose {
+  position: absolute;
+  right: 8px;
+  top: 110px;
+}
+/* line 291, ../../scss/map/explore.scss */
+#compass-rose #compass {
+  background: url('../../images/compass.png?1391566529');
+  width: 31px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 5;
+}
+/* line 299, ../../scss/map/explore.scss */
+#compass-rose #compass-instructions {
+  width: 140px;
+  height: 105px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 16px;
+  top: 15px;
+  z-index: 2;
+  overflow: hidden;
+}
+/* line 310, ../../scss/map/explore.scss */
+#compass-rose ol {
+  color: #878585;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 11px;
+  line-height: 2.1em;
+  text-indent: 10px;
+  margin-top: 5px;
+}
+/* line 318, ../../scss/map/explore.scss */
+#compass-rose ol b {
+  font-size: 14px;
+}
+/* line 322, ../../scss/map/explore.scss */
+#compass-rose ol span {
+  line-height: 14px;
+  vertical-align: text-bottom;
+}
+/* line 328, ../../scss/map/explore.scss */
+#compass-rose ul {
+  color: #878585;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 11px;
+}
+/* line 333, ../../scss/map/explore.scss */
+#compass-rose ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 338, ../../scss/map/explore.scss */
+#compass-rose ul img {
+  vertical-align: text-bottom;
+  margin-right: 5px;
+}

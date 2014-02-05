@@ -17,6 +17,7 @@ urlpatterns = patterns('',
    url(r'^locations/', include('geo.location.urls')),
    # url(r'^cities/', include('geo.cities.urls')),
    url(r'^organizations/', include('geo.organization.urls')),
+   url(r'^places/', include('geo.places.urls')),
    url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
    url(r'^explore/(?P<place>[-%\w ()]+)/(?P<organization>[-%\w ()]+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
    )

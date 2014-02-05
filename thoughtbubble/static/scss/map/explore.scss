@@ -280,3 +280,64 @@ h1,h2 { margin:0px 0px 10px; }
     background-position: -33px -2px;
   }
 }
+
+
+// Compass
+#compass-rose {
+  position: absolute;
+  right: 8px;
+  top: 110px;
+
+  #compass {
+  @include bg-image('compass.png');
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 5;
+  }
+
+  #compass-instructions {
+    width: 140px;
+    height: 105px;
+    background-color: #ffffff;
+    position: absolute;
+    right: 16px;
+    top: 15px;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  ol {
+    color: #878585; // text color
+    @include museo;
+    font-size: 11px;
+    line-height: 2.1em;
+    text-indent: 10px;
+    margin-top: 5px;
+
+    b {
+      font-size: 14px;
+    }
+
+    span {
+      line-height: 14px;
+      vertical-align: text-bottom;
+    }
+  }
+
+  ul {
+    color: #878585; // text color
+    @include museo;
+    font-size: 11px;
+
+    li {
+      display: inline-block;
+      margin-left: 10px;
+    }
+
+    img {
+      vertical-align: text-bottom;
+      margin-right: 5px;
+    }
+  }
+}

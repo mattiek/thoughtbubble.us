@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from serializers import CitySerializer
 from rest_framework import viewsets
 from .models import Place
@@ -6,6 +6,8 @@ from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import D
 from django.contrib.gis.geos import fromstr
 from django.contrib.gis.geos import Polygon
+from vanilla import DetailView, CreateView, UpdateView, ListView
+
 
 class PlacesViewset(viewsets.ModelViewSet):
     serializer_class = CitySerializer
@@ -44,3 +46,40 @@ class PlacesViewset(viewsets.ModelViewSet):
 
 
         return Place.objects.distance(pnt).order_by('distance').filter(geom__within=poly)[:50]
+
+
+class PlacesList(ListView):
+    model = Place
+
+
+class PlacesCreate(CreateView):
+    model = Place
+
+
+class PlacesDetail(DetailView):
+    model = Place
+    lookup_field = 'name'
+    lookup_url_kwarg = 'place'
+    context_object_name = 'place'
+
+
+    def get_object(self):
+        """
+        Custom object lookup that returns an instance based on both the
+        'account' and 'slug' as provided in the URL keyword arguments.
+        """
+        queryset = self.get_queryset()
+        place = self.kwargs['place']
+        return get_object_or_404(queryset, name__iexact=place)
+
+class PlacesUpdate(UpdateView):
+    model = Place
+    # success_url = reverse_lazy('organization_detail')
+
+    # def get_success_url(self, *args, **kwargs):
+    #     # super(UpdateView, self).get_success_url(*args, **kwargs)
+    #     return reverse('organization_detail', kwargs=self.kwargs)
+
+    def form_valid(self, form):
+        s = super(PlacesUpdate,self).form_valid(form)
+        return s
