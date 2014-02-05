@@ -4,6 +4,7 @@ from django.forms import ModelForm
 from models import *
 from thoughtbubble.widgets import FilePicker
 from geo.location.models import Location
+from geo.places.models import Place
 
 
 FOR_CHOICES_AND_EMPTY = [('','')] + FOR_CHOICES
@@ -22,7 +23,11 @@ class AddIdeaForm(forms.Form):
 
     content_object = forms.ModelChoiceField(queryset=Location.objects.filter(organization__place__name='Columbus').order_by('name'),
                                    empty_label='',
-                                    error_messages={'required':'You must tell where it is.'})
+                                    error_messages={'required':'You must tell where it is.'}, required=False)
+
+    content_object_place = forms.ModelChoiceField(queryset=Place.objects.all(),
+                                            empty_label='',
+                                            error_messages={'required':'You must tell where it is.'}, required=False)
 
     what_for = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY,
                                  error_messages={'required':'Please specify what this is for.'},
@@ -39,6 +44,10 @@ class AddIdeaForm(forms.Form):
         cleaned_data = super(AddIdeaForm, self).clean(*args, **kwargs)
         cleaned_data = dict(cleaned_data.items() + self.files.items())
         return cleaned_data
+
+    def is_valid(self, *args, **kwargs):
+        t = super(AddIdeaForm, self).is_valid(*args, **kwargs)
+        return t
 
 
 

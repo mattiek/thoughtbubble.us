@@ -1,6 +1,7 @@
-$('#id_what_for').chosen({disable_search_threshold: 10})
-$('#id_content_object').chosen({disable_search_threshold: 10000})
-$('#id_what_kind').chosen({disable_search_threshold: 10000})
+$('#id_what_for').chosen({disable_search_threshold: 10});
+$('#id_content_object').chosen({disable_search_threshold: 10000});
+$('#id_content_object_place').chosen({disable_search_threshold: 10000});
+$('#id_what_kind').chosen({disable_search_threshold: 10000});
 
     //  Focus auto-focus fields
     $('.auto-focus:first').focus();

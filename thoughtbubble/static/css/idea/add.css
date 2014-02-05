@@ -260,70 +260,71 @@ form .row .row.second-row {
   width: 520px;
 }
 
-/* line 130, ../../scss/idea/add.scss */
+/* line 131, ../../scss/idea/add.scss */
 #id_what_kind,
-#id_content_object {
+#id_content_object,
+#id_content_object_place {
   width: 300px;
   float: left;
 }
 
-/* line 135, ../../scss/idea/add.scss */
+/* line 136, ../../scss/idea/add.scss */
 #id_what_for_chosen {
   margin-left: 60px;
 }
 
-/* line 139, ../../scss/idea/add.scss */
+/* line 140, ../../scss/idea/add.scss */
 #id_what_for {
   width: 218px;
 }
 
-/* line 143, ../../scss/idea/add.scss */
+/* line 144, ../../scss/idea/add.scss */
 #id_description {
   width: 300px;
 }
 
-/* line 147, ../../scss/idea/add.scss */
+/* line 148, ../../scss/idea/add.scss */
 .additional {
   width: 260px;
   float: left;
   margin-bottom: 10px;
 }
-/* line 152, ../../scss/idea/add.scss */
+/* line 153, ../../scss/idea/add.scss */
 .additional.fl {
   width: 340px;
 }
 
-/* line 157, ../../scss/idea/add.scss */
+/* line 158, ../../scss/idea/add.scss */
 .file-picker-input {
   float: left;
   margin-right: 20px;
 }
 
-/* line 164, ../../scss/idea/add.scss */
+/* line 165, ../../scss/idea/add.scss */
 #pictures {
   float: right;
   width: 270px;
 }
 
-/* line 169, ../../scss/idea/add.scss */
+/* line 170, ../../scss/idea/add.scss */
 #id_pic1, #id_pic2, #id_pic3, #id_pic4 {
   margin-bottom: 20px;
 }
 
-/* line 173, ../../scss/idea/add.scss */
+/* line 174, ../../scss/idea/add.scss */
 .cloak {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
   line-height: 80px;
 }
-/* line 179, ../../scss/idea/add.scss */
+/* line 180, ../../scss/idea/add.scss */
 .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 185, ../../scss/idea/add.scss */
+/* line 186, ../../scss/idea/add.scss */
 #id_links {
   width: 180px;
 }

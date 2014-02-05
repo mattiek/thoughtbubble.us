@@ -28,7 +28,11 @@
             <div class="">{{ form.name}}</div>
             {{ form.what_kind|attr:"data-placeholder:It's a ..." }}
             {{ form.what_for|attr:"data-placeholder:For ..." }}
+            {% if form.content_object.queryset %}
             {{ form.content_object|attr:"data-placeholder:It should be in ..." }}
+            {% else %}
+            {{ form.content_object_place|attr:"data-placeholder:It should be in ..." }}
+            {% endif %}
 
             <div>
                 <div class="copy additional fl">I imagine something like this:</div>

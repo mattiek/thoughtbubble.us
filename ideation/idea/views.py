@@ -87,7 +87,7 @@ def addidea(request, place=None, organization=None, location=None):
                         name=data['name'],
                         description=data['description'],
                         what_kind=data['what_kind'],
-                        content_object=data['content_object'],
+                        content_object=data['content_object'] or data['content_object_place'],
                         what_for=data['what_for'],
                         user=request.user
                         )
@@ -119,6 +119,12 @@ def addidea(request, place=None, organization=None, location=None):
     else:
         form = AddIdeaForm()
 
+
+
+    if place and not location and not organization:
+        form.fields['content_object_place'].queryset = Place.objects.filter(name__iexact=place)
+        form.fields['content_object_place'].initial = Place.objects.get(name__iexact=place)
+        form.fields['content_object'].queryset=Location.objects.none()
 
     d = {'form': form,
          'action': reverse('addidea', args=[organization]) }

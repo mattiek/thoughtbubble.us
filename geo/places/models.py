@@ -46,6 +46,9 @@ class Place(models.Model):
     def add_idea_link(self):
         return reverse('addidea', args=[str(self.name.lower()),])
 
+    def get_absolute_url(self):
+        return reverse('places_detail', args=[str(self.name.lower()),])
+
 
     def get_geojson_type(self):
         return 'Feature'
