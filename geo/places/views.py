@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404
 from serializers import CitySerializer
 from rest_framework import viewsets
 from .models import Place
+
+from ideation.idea.models import Idea
 from django.contrib.gis.geos import Point
 from django.contrib.gis.measure import D
 from django.contrib.gis.geos import fromstr
@@ -71,6 +73,12 @@ class PlacesDetail(DetailView):
         queryset = self.get_queryset()
         place = self.kwargs['place']
         return get_object_or_404(queryset, name__iexact=place)
+
+
+    def get_context_data(self, **kwargs):
+        context = super(PlacesDetail, self).get_context_data(**kwargs)
+        context['ideas'] = Idea.objects.filter(content_type__name='place', object_id=self.object.id)
+        return context
 
 class PlacesUpdate(UpdateView):
     model = Place
