@@ -84,6 +84,9 @@ class Location(models.Model):
                                         self.name.lower()
         ])
 
+    def get_description(self):
+        return self.about
+
     def save(self, *args, **kwargs):
         # if not self.geom:
         self.geom = GEOSGeometry('POINT(%s %s)' % (self.longitude, self.latitude,))
