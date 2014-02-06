@@ -309,20 +309,20 @@ section .extended p {
 }
 /* line 168, ../scss/tb-sherlock.scss */
 section.active {
-  background: #cdcdcd;
+  background: #ffffff;
   color: #eee;
 }
-/* line 172, ../scss/tb-sherlock.scss */
+/* line 173, ../scss/tb-sherlock.scss */
 section.active .extended {
   display: block;
   text-align: right;
 }
-/* line 178, ../scss/tb-sherlock.scss */
+/* line 179, ../scss/tb-sherlock.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 185, ../scss/tb-sherlock.scss */
+/* line 186, ../scss/tb-sherlock.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -331,38 +331,38 @@ section a h4 {
   margin: 0;
 }
 
-/* line 195, ../scss/tb-sherlock.scss */
+/* line 196, ../scss/tb-sherlock.scss */
 section a:visited {
   color: #eee;
 }
 
-/* line 199, ../scss/tb-sherlock.scss */
+/* line 200, ../scss/tb-sherlock.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 200, ../scss/tb-sherlock.scss */
+/* line 201, ../scss/tb-sherlock.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 201, ../scss/tb-sherlock.scss */
+/* line 202, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 202, ../scss/tb-sherlock.scss */
+/* line 203, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 203, ../scss/tb-sherlock.scss */
+/* line 204, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 205, ../scss/tb-sherlock.scss */
+/* line 206, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -371,13 +371,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 211, ../scss/tb-sherlock.scss */
+/* line 212, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 216, ../scss/tb-sherlock.scss */
+/* line 217, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -386,26 +386,26 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 222, ../scss/tb-sherlock.scss */
+/* line 223, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 225, ../scss/tb-sherlock.scss */
+/* line 226, ../scss/tb-sherlock.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 228, ../scss/tb-sherlock.scss */
+/* line 229, ../scss/tb-sherlock.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 242, ../scss/tb-sherlock.scss */
+/* line 243, ../scss/tb-sherlock.scss */
 #communisplore section:first-child {
   margin-top: 60px;
 }
 
-/* line 246, ../scss/tb-sherlock.scss */
+/* line 247, ../scss/tb-sherlock.scss */
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;
