@@ -269,7 +269,11 @@ h1,h2 { margin:0px 0px 10px; }
 // Locate
 
 .leaflet-control-locate {
-  border: 1px solid rgba(0,0,0,0.4);
+  background-color: #fff;
+  border: 1px solid #999;
+  border-color: rgba(0,0,0,0.4);
+  border-radius: 3px;
+  box-shadow: none;
 
   a {
     background-color: #fff;
@@ -297,8 +301,8 @@ h1,h2 { margin:0px 0px 10px; }
   }
 
   #compass-instructions {
-    width: 140px;
-    height: 105px;
+    width: 160px;
+    height: 145px;
     background-color: #ffffff;
     position: absolute;
     right: 16px;
@@ -322,6 +326,11 @@ h1,h2 { margin:0px 0px 10px; }
     span {
       line-height: 14px;
       vertical-align: text-bottom;
+    }
+
+    &.share-support {
+      text-indent: 0;
+      text-align: center;
     }
   }
 

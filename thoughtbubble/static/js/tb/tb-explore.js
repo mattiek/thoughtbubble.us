@@ -287,7 +287,7 @@ var hideCompass = function() {
 }
 
 var showCompass = function() {
-    $('#compass-instructions').animate({width:140, height:105}, 250);
+    $('#compass-instructions').animate({width:160, height:145}, 250);
 }
 
 setTimeout(hideCompass, 4000);
