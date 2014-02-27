@@ -24,6 +24,9 @@ class IdeaType(models.Model):
     name = models.CharField(max_length=255)
     ordering = models.IntegerField(default=0)
 
+    class Meta:
+        ordering = ['ordering',]
+
     def __unicode__(self):
         return self.name
 
