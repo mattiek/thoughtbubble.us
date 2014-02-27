@@ -22,6 +22,7 @@ FOR_CHOICES = [
 
 class IdeaType(models.Model):
     name = models.CharField(max_length=255)
+    ordering = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.name
