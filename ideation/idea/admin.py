@@ -5,7 +5,7 @@ from models import *
 
 class IdeaTypeAdmin(admin.ModelAdmin):
     list_display = ('name','ordering',)
-    list_editable = ('name','ordering',)
+    list_editable = ('ordering',)
 
 admin.site.register(IdeaType, IdeaTypeAdmin)
 admin.site.register(IdeaImage)
