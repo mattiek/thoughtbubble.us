@@ -33,6 +33,7 @@ class AddLocationForm(forms.Form):
     longitude = forms.CharField(max_length=50, widget=forms.TextInput(attrs={'placeholder': 'longitude'}), required=False)
 
     about = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
+    sherlock_description = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
     news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
 
     # what_kind = forms.ModelChoiceField(queryset=LocationType.objects.all(), empty_label=None, required=False)

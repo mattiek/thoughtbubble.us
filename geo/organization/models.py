@@ -19,7 +19,9 @@ class Organization(models.Model):
     twitter_url = models.URLField(max_length=255, null=True, blank=True)
     linkedin_url = models.URLField(max_length=255, null=True, blank=True)
 
+
     about = models.TextField(null=True, blank=True)
+    sherlock_description = models.TextField(null=True, blank=True)
 
     curator = models.ForeignKey(ThoughtbubbleUser, related_name="organization_curator", null=True, blank=True)
 

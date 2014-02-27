@@ -37,6 +37,7 @@ class Location(models.Model):
     longitude = models.FloatField(null=True, blank=True)
 
     about = models.TextField(null=True, blank=True)
+    sherlock_description = models.TextField(null=True, blank=True)
 
     what_kind = models.ForeignKey(LocationType, null=True, blank=True)
 
