@@ -14,9 +14,9 @@ from django.contrib.contenttypes import generic
 from ideation.supportering.models import AbstractSupport
 
 FOR_CHOICES = [
-    ('live', 'live'),
-    ('work', 'work'),
-    ('play', 'play'),
+    ('morning', 'morning'),
+    ('noon', 'noon'),
+    ('night', 'night'),
 ]
 
 
