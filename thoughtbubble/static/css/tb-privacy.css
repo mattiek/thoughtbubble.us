@@ -20,9 +20,10 @@ h3 {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
+  margin: 10px 0;
 }
 
-/* line 17, ../scss/tb-privacy.scss */
+/* line 18, ../scss/tb-privacy.scss */
 h4,
 h5,
 h6 {
@@ -31,21 +32,22 @@ h6 {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-weight: normal;
+  margin: 10px 0;
 }
 
-/* line 23, ../scss/tb-privacy.scss */
+/* line 25, ../scss/tb-privacy.scss */
 p {
   font-size: 12px;
   color: #58595b;
   text-align: justify;
 }
 
-/* line 30, ../scss/tb-privacy.scss */
+/* line 32, ../scss/tb-privacy.scss */
 .middle-column {
   width: 600px;
   margin: 0 auto;
 }
-/* line 34, ../scss/tb-privacy.scss */
+/* line 36, ../scss/tb-privacy.scss */
 .middle-column :first-child {
   margin-top: 0px;
 }
