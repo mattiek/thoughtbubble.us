@@ -50,10 +50,6 @@ p {
   width: 600px;
   margin: 0 auto;
 }
-/* line 38, ../scss/tb-privacy.scss */
-.middle-column :first-child {
-  margin-top: 0px;
-}
 
 /* line 43, ../scss/tb-privacy.scss */
 ul.bullet-list {
