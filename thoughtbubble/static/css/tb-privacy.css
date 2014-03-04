@@ -40,14 +40,15 @@ p {
   font-size: 12px;
   color: #58595b;
   text-align: justify;
+  line-height: 1.5em;
 }
 
-/* line 32, ../scss/tb-privacy.scss */
+/* line 33, ../scss/tb-privacy.scss */
 .middle-column {
   width: 600px;
   margin: 0 auto;
 }
-/* line 36, ../scss/tb-privacy.scss */
+/* line 37, ../scss/tb-privacy.scss */
 .middle-column :first-child {
   margin-top: 0px;
 }
