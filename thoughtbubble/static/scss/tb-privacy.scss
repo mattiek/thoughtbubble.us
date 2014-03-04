@@ -4,14 +4,17 @@
   background-image: image-url('illustration-ship.png');
 }
 
-
+h1,
+h2,
 h3 {
     font-size: 18px;
     font-weight: normal;
     @include header-blue-museo;
 }
 
-h4 {
+h4,
+h5,
+h6 {
     font-size: 12px;
     @include header-blue-museo;
     font-weight: normal;
@@ -24,15 +27,15 @@ p {
 
 }
 
-.middle-column {
-  width: 560px;
-  margin: 0 auto;
-
-  :first-child {
-    margin-top: 0px;
-  }
-}
-
-.clr {
-  clear: both;
-}
+//.middle-column {
+//  width: 560px;
+//  margin: 0 auto;
+//
+//  :first-child {
+//    margin-top: 0px;
+//  }
+//}
+//
+//.clr {
+//  clear: both;
+//}

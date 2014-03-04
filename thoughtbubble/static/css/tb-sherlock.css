@@ -321,9 +321,10 @@ section.active .extended {
 section p {
   margin: 10px 0;
   text-align: left;
+  line-height: 1.9em;
 }
 
-/* line 187, ../scss/tb-sherlock.scss */
+/* line 188, ../scss/tb-sherlock.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -332,38 +333,38 @@ section a h4 {
   margin: 0;
 }
 
-/* line 197, ../scss/tb-sherlock.scss */
+/* line 198, ../scss/tb-sherlock.scss */
 section a:visited {
   color: #eee;
 }
 
-/* line 201, ../scss/tb-sherlock.scss */
+/* line 202, ../scss/tb-sherlock.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 202, ../scss/tb-sherlock.scss */
+/* line 203, ../scss/tb-sherlock.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 203, ../scss/tb-sherlock.scss */
+/* line 204, ../scss/tb-sherlock.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 204, ../scss/tb-sherlock.scss */
+/* line 205, ../scss/tb-sherlock.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 205, ../scss/tb-sherlock.scss */
+/* line 206, ../scss/tb-sherlock.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 207, ../scss/tb-sherlock.scss */
+/* line 208, ../scss/tb-sherlock.scss */
 .scroll {
   right: 0px;
   bottom: 0px;
@@ -372,13 +373,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 213, ../scss/tb-sherlock.scss */
+/* line 214, ../scss/tb-sherlock.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 218, ../scss/tb-sherlock.scss */
+/* line 219, ../scss/tb-sherlock.scss */
 .cover:before {
   content: '';
   display: block;
@@ -387,26 +388,26 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 224, ../scss/tb-sherlock.scss */
+/* line 225, ../scss/tb-sherlock.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 227, ../scss/tb-sherlock.scss */
+/* line 228, ../scss/tb-sherlock.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 230, ../scss/tb-sherlock.scss */
+/* line 231, ../scss/tb-sherlock.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 244, ../scss/tb-sherlock.scss */
+/* line 245, ../scss/tb-sherlock.scss */
 #communisplore section:first-child {
   margin-top: 60px;
 }
 
-/* line 248, ../scss/tb-sherlock.scss */
+/* line 249, ../scss/tb-sherlock.scss */
 .slimScrollDiv {
   top: 0px;
   position: absolute !important;
