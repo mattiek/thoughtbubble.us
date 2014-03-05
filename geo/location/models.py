@@ -123,9 +123,9 @@ class Location(models.Model):
         properties['about'] = self.about
 
         properties['icon'] = {
-            "iconUrl": "/static/images/featured-organization-location.png",
-            "iconSize": [24, 30],
-            "iconAnchor": [15, 22],
+            "iconUrl": "/static/images/large-featured-location.png",
+            "iconSize": [47, 60],
+            "iconAnchor": [30, 44],
             "popupAnchor": [0, -25]
         }
 
