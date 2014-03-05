@@ -75,8 +75,10 @@ class Organization(models.Model):
         props['id'] = self.id
         props['icon'] = {
             "iconUrl": "/static/images/large-featured-location.png",
-            "iconSize": [47, 60],
-            "iconAnchor": [30, 44],
+            # "iconSize": [47, 60],
+            # "iconAnchor": [30, 44],
+            "iconSize": [35, 45],
+            "iconAnchor": [22, 33],
             "popupAnchor": [0, -25]
         }
         return props
@@ -145,8 +147,8 @@ class Organization(models.Model):
                 'explore': self.get_explore_link(),
                 'icon': {
                 "iconUrl": "/static/images/large-featured-location.png",
-                "iconSize": [47, 60],
-                "iconAnchor": [30, 44],
+                "iconSize": [35, 45],
+                "iconAnchor": [22, 33],
                 "popupAnchor": [0, -25]
                 }
             }
