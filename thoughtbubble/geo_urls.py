@@ -13,11 +13,11 @@ from django.conf.urls import patterns, include, url
 
 urlpatterns = patterns('',
    url(r'^$', 'thoughtbubble.views.home', name='home'),
-   url(r'^ideas/', include('ideation.idea.urls')),
-   url(r'^locations/', include('geo.location.urls')),
+   url(r'^geo/ideas/', include('ideation.idea.urls')),
+   url(r'^geo/locations/', include('geo.location.urls')),
    # url(r'^cities/', include('geo.cities.urls')),
-   url(r'^organizations/', include('geo.organization.urls')),
-   url(r'^places/', include('geo.places.urls')),
-   url(r'^explore/?$', 'thoughtbubble.views.explore', name='explore'),
-   url(r'^explore/(?P<place>[-%\w ()]+)/(?P<organization>[-%\w ()]+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
+   url(r'^geo/organizations/', include('geo.organization.urls')),
+   url(r'^geo/places/', include('geo.places.urls')),
+   url(r'^geo/explore/?$', 'thoughtbubble.views.explore', name='explore'),
+   url(r'^geo/explore/(?P<place>[-%\w ()]+)/(?P<organization>[-%\w ()]+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
    )
