@@ -130,6 +130,7 @@ fieldset {
 
     &.social {
       color: #4585c3;
+      @include museo;
     }
 
     .orange {

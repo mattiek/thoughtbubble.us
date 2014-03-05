@@ -569,8 +569,9 @@ fieldset {
 /* line 131, ../../scss/user/dashboard.scss */
 #social-accounts li.social {
   color: #4585c3;
+  font-family: "Museo Sans", sans-serif;
 }
-/* line 135, ../../scss/user/dashboard.scss */
+/* line 136, ../../scss/user/dashboard.scss */
 #social-accounts li .orange {
   width: 65px;
   height: 22px;
