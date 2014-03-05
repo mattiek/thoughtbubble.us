@@ -86,12 +86,28 @@ class ThoughtbubbleUserAdmin(UserAdmin):
 
 
 from django import forms
-from django.contrib.flatpages.models import FlatPage
+from django.contrib.flatpages.admin import FlatpageForm, FlatPageAdmin
 from tinymce.widgets import TinyMCE
+
+
+class PageForm(FlatpageForm):
+
+    class Meta:
+        model = FlatPage
+        widgets = {
+            'content' : TinyMCE(attrs={'cols': 100, 'rows': 65}),
+            }
+
+
+class PageAdmin(FlatPageAdmin):
+    """
+    Page Admin
+    """
+    form = PageForm
 
 class FlatPageForm(forms.ModelForm):
     content = forms.CharField(widget=TinyMCE(
-                        attrs={'cols': 80, 'rows': 30},
+                        attrs={'cols': 80, 'rows': 90},
                         mce_attrs={
                             'plugins': "fullscreen,table,spellchecker,paste,searchreplace",
                             'theme': "advanced",
@@ -105,9 +121,7 @@ class FlatPageForm(forms.ModelForm):
 from tinymce.widgets import TinyMCE
 class FlatPageAdmin(admin.ModelAdmin):
     form = FlatPageForm
-    # content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows': 30}))
-    # class Meta:
-    #     forms = FlatPageForm
+
     class Media:
         css = {'all': ["css/tb-privacy.css",]}
     #     js = ("//tinymce.cachefly.net/4.0/tinymce.min.js","js/tb/flatpage.js",)
@@ -116,5 +130,31 @@ class FlatPageAdmin(admin.ModelAdmin):
 admin.site.register(ThoughtbubbleUser, ThoughtbubbleUserAdmin)
 admin.site.register(ThoughtbubbleUserProfile)
 
+# admin.site.unregister(FlatPage)
+# admin.site.register(FlatPage, FlatPageAdmin)
+
 admin.site.unregister(FlatPage)
-admin.site.register(FlatPage, FlatPageAdmin)
+# admin.site.register(FlatPage, PageAdmin)
+
+from django import forms
+from django.core.urlresolvers import reverse
+from django.contrib.flatpages.admin import FlatPageAdmin
+from django.contrib.flatpages.models import FlatPage
+from tinymce.widgets import TinyMCE
+
+class TinyMCEFlatPageAdmin(FlatPageAdmin):
+    def formfield_for_dbfield(self, db_field, **kwargs):
+        if db_field.name == 'content':
+            return db_field.formfield(widget=TinyMCE(
+                attrs={'cols': 80, 'rows': 30},
+                mce_attrs={
+                    'external_link_list_url': reverse('tinymce.views.flatpages_link_list'),
+                    # 'plugin_preview_pageurl': reverse('tinymce-preview', "thoughtbubble"),
+                    'plugins': "fullscreen,table,spellchecker,paste,searchreplace",
+                    'theme': "advanced",
+                    'theme_advanced_buttons1_add' : "fullscreen",
+                },
+                ))
+        return super(TinyMCEFlatPageAdmin, self).formfield_for_dbfield(db_field, **kwargs)
+
+admin.site.register(FlatPage, TinyMCEFlatPageAdmin)
