@@ -225,9 +225,9 @@ p {
 
 /* line 86, ../scss/tb-sherlock.scss */
 .spot {
-  width: 24px;
-  height: 30px;
-  margin: -30px 0 0 -15px;
+  width: 47px;
+  height: 60px;
+  margin: -60px 0 0 -30px;
   background: url('../images/large-featured-location.png?1393979381') 0px 0px no-repeat;
   position: absolute;
 }
