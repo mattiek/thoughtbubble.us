@@ -57,6 +57,14 @@ class Organization(models.Model):
             return self.logo.url
         return ''
 
+    def add_idea_url(self):
+        return reverse('addidea', args=[self.place.name.lower(), self.title.lower()
+        ])
+
+    def list_ideas_url(self):
+        return reverse('idea_list', args=[self.place.name.lower(), self.title.lower()
+        ])
+
     def get_absolute_url(self):
         return reverse('organization_detail', args=[self.id])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
