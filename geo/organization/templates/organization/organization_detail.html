@@ -44,7 +44,7 @@
                     </a>
                 {% endif %}
 
-                <a href="{% url 'idea_list' object.place.name.lower object.title %}" class="orange s-button">ideas</a>
+                <a href="{{ object.list_ideas_url }}" class="orange s-button">ideas</a>
                 <a href="{{ object.get_explore_link }}" class="blue s-button">explore</a>
                 <a href="{% url 'addidea' object.place.name.lower object.title %}" class="blue s-button">add</a>
                 <div style="clear:both;"></div>
