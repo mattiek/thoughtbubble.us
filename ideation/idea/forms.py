@@ -60,3 +60,5 @@ class AddIdeaForm(forms.Form):
 
 class FilterForm(forms.Form):
     where = forms.ModelChoiceField(queryset=Location.objects.none())
+    when = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY)
+    what = forms.ModelChoiceField(queryset=IdeaType.objects.all())
