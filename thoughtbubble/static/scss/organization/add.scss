@@ -92,16 +92,15 @@ input[type="text"] {
   /*width: 324px;*/
   height: 25px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  @include museo;
 }
 
 textarea {
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  @include museo;
   min-height: 200px;
   max-width: 100%;
   border-radius: 5px;
-  font-family: 'MuseoSans';
   background-color: white;
   border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -120,14 +119,14 @@ textarea {
 
 #captcha-question {
   color: #727171; /* text color */
-  font-family: "MuseoSans", sans-serif;
+  @include museo;
   font-size: 12px;
   font-style: italic;
 }
 
 .terms-and-conditions {
   color: #727171; /* text color */
-  font-family: "MuseoSans", sans-serif;
+  @include museo;
   font-size: 12px;
   font-style: italic;
 }
@@ -148,7 +147,7 @@ form .row .row.second-row {
 
 .copy {
   color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 15px;
   text-align: left;
   text-indent: 10px;

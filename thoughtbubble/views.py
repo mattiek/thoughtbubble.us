@@ -28,6 +28,8 @@ from forms import UserProfileForm
 from models import *
 from forms import SignupForm, LoginForm
 
+from django_balanced.models import Card
+
 
 class MyDisconnectForm(DisconnectForm):
     cleaned_data = {}
@@ -111,6 +113,22 @@ def sherlock(request, place=None, organization=None):
 
     return render(request, 'sherlock.html', d)
 
+
+def debit_card(request):
+    if request.POST:
+        card_uri = request.POST.get('balancedCreditCardURI')
+        card = Card.create_from_card_uri(request.user, card_uri)
+        buyer = card.user.balanced_account
+        # put some money in the escrow account
+        r = buyer.debit(int(100 * 100), 'THOUGHTBUBBLE1')  # $100.00
+
+        return redirect('thankyou')
+
+
+    return HttpResponse('no good!')
+
+def checkout(request):
+    return render(request, 'checkout.html', {'balanced': settings.BALANCED, 'static_url':'/static',})
 
 def privacy(request):
     return render(request, 'privacy.html')

@@ -36,6 +36,9 @@ urlpatterns = patterns('',
     url(r'^api/', include('api.urls')),
     url(r'^', include('thoughtbubble.geo_urls')),
     url(r'^news/', include('tbnews.urls')),
+
+    url(r'^checkout/?$', 'thoughtbubble.views.checkout', name='checkout'),
+    url(r'^checkout-thanks/?$', 'thoughtbubble.views.debit_card', name='post_checkout'),
     # url('', include('social.apps.django_app.urls', namespace='social')),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

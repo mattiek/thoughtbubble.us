@@ -83,6 +83,7 @@ INSTALLED_APPS = (
     'allauth.socialaccount.providers.twitter',
     'django_extensions',
     'reversion',
+    'django_balanced',
 )
 
 COMMENTS_APP = 'threadedcomments'
@@ -235,3 +236,12 @@ TINYMCE_DEFAULT_CONFIG = {
 
 TINYMCE_SPELLCHECKER = True
 TINYMCE_COMPRESSOR = True
+
+
+
+BALANCED = {
+    'API_KEY': 'ak-test-1OwGZxVnoiuKL8Ssiq53CABlJTGL5HEDK', #os.environ.get('BALANCED_API_KEY'),
+    'DASHBOARD_URL': 'https://www.balancedpayments.com',
+    'API_URL': 'https://api.balancedpayments.com',
+    'MARKETPLACE_URI': '/v1/marketplaces/TEST-MP2idbb7lyd2Y5wKTvXHOF0S',
+    }
