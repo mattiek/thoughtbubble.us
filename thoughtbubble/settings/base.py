@@ -96,6 +96,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_balanced.middleware.BalancedMiddleware',
 
     # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
@@ -178,6 +179,8 @@ REST_FRAMEWORK = {
 SESSION_SERIALIZER='django.contrib.sessions.serializers.PickleSerializer'
 
 TEMPLATE_CONTEXT_PROCESSORS = [
+    'django_balanced.context_processors.balanced_library',
+    'django_balanced.context_processors.balanced_settings',
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.debug',
     'django.core.context_processors.media',
