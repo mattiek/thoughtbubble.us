@@ -434,7 +434,7 @@ button.mfp-close:active {
   @include single-box-shadow( rgba(1,1,1,.15), 2px, 2px, 11px);
 
   color: #656464; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 12px;
   border: 1px solid #cccccc;
 

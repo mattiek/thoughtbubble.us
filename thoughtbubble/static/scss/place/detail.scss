@@ -54,7 +54,7 @@
 
 #cta {
   color: #7b7b7b; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 10px;
   text-align: center;
   margin: 20px 0;

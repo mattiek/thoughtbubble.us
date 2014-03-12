@@ -47,11 +47,11 @@
     </div>
 
     {#    Pictures #}
-        <div class="large-12 columns small-heading">pictures</div>
-        <div class="large-12 columns">
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+        <div class="picture-label">pictures</div>
+        <div id="pictures">
+            {% for picture in pictures %}
+                <img src="{{ picture.img.url }}" alt=""/>
+            {% endfor %}
         </div>
 
     {#    Partners #}

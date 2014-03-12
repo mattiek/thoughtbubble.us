@@ -48,7 +48,10 @@ class LocationDetail(DetailView):
         location = Location.objects.get(slug=id)
         context['ideas'] = location.some_ideas.all() #Idea.objects.filter(content_object=location)
         context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
-        context['pictures'] = LocationImage.objects.filter(location=location).order_by('-date_created')
+        pics = LocationImage.objects.filter(location=location).order_by('ordering','-id').distinct('ordering')[:4]
+
+
+        context['pictures'] = pics
         return context
 
 
@@ -75,7 +78,7 @@ class LocationUpdate(UpdateView):
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
 
-        pics = LocationImage.objects.filter().order_by('ordering','-id').distinct('ordering')[:4]
+        pics = LocationImage.objects.filter(location=s).order_by('ordering','-id').distinct('ordering')[:4]
 
         pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'], ordering=1)
         pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'], ordering=2)

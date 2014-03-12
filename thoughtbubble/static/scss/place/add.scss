@@ -57,7 +57,7 @@
 
 #cta {
   color: #7b7b7b; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 10px;
   text-align: center;
 }
@@ -92,16 +92,16 @@ input[type="text"] {
   /*width: 324px;*/
   height: 25px;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  @include museo;
 }
 
 textarea {
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  @include museo;
   min-height: 200px;
   max-width: 100%;
   border-radius: 5px;
-  font-family: 'MuseoSans';
+  @include museo;
   background-color: white;
   border: 1px solid #cccccc;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -120,14 +120,14 @@ textarea {
 
 #captcha-question {
   color: #727171; /* text color */
-  font-family: "MuseoSans", sans-serif;
+  @include museo;
   font-size: 12px;
   font-style: italic;
 }
 
 .terms-and-conditions {
   color: #727171; /* text color */
-  font-family: "MuseoSans", sans-serif;
+  @include museo;
   font-size: 12px;
   font-style: italic;
 }
@@ -148,7 +148,7 @@ form .row .row.second-row {
 
 .copy {
   color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 15px;
   text-align: left;
   text-indent: 10px;
@@ -162,7 +162,7 @@ form .row .row.second-row {
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 15px;
 }
 
@@ -187,7 +187,7 @@ form .row .row.second-row {
 
 .idea-cap {
   color: #7a7a7a; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 17px;
   width: 576px;
   height: 113px;
@@ -228,7 +228,7 @@ form .row .row.second-row {
 
   span {
     color: #7b7b7b; /* text color */
-    font-family: "Museo Sans", sans-serif;
+    @include museo;
     font-size: 10px;
   }
 
@@ -302,7 +302,7 @@ form .row .row.second-row {
   //background-position: 101%;
   border-radius: 5px;
   color: #7b7b7b; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 10px;
   text-align: center;
   float: left;
@@ -354,7 +354,7 @@ form .row .row.second-row {
       width:70px;
       display: inline-block;
       color: #9d9d9d; /* text color */
-      font-family: "Museo Sans", sans-serif;
+      @include museo;
       font-size: 15px;
     }
 
@@ -368,13 +368,13 @@ form .row .row.second-row {
 #about {
   label {
     color: #9d9d9d; /* text color */
-    font-family: "Museo Sans", sans-serif;
+    @include museo;
     font-size: 15px;
   }
 }
 .label {
   color: #9d9d9d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 15px;
 }
 

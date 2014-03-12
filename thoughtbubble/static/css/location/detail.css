@@ -563,3 +563,8 @@ form .row .row.second-row {
   margin: 20px 0;
   font-size: 38px / 2;
 }
+
+/* line 117, ../../scss/location/detail.scss */
+#news, #pictures, #partners {
+  min-height: 100px;
+}

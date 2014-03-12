@@ -149,7 +149,7 @@ section {
   background: #FFFFFF;
   border-radius: 10px;
   color: #7b7b7b; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   margin-bottom:10px;
   width: 265px;
 

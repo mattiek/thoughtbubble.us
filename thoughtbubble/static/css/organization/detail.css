@@ -623,7 +623,7 @@ ol.slats li p span.meta {
 #header {
   background: #33bdd4;
   color: #ffffff;
-  font-family: 'MuseoSans';
+  font-family: "Museo Sans", sans-serif;
   line-height: 33px;
   width: 540px;
   border-radius: 10px;

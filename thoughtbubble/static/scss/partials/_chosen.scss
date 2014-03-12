@@ -2,7 +2,7 @@
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d; /* text color */
-  font-family: "Museo Sans", sans-serif;
+  @include museo;
   font-size: 15px;
 }
 

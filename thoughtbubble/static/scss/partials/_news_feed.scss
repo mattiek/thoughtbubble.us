@@ -12,7 +12,7 @@ ol.slats {
     }
       h3 {
         color: #53b8d1; /* text color */
-        font-family: "Museo Sans", sans-serif;
+        @include museo;
         font-size: 19px;
         line-height: 19px;
 
