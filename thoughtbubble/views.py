@@ -121,11 +121,16 @@ def debit_card(request):
         buyer = card.user.balanced_account
         # put some money in the escrow account
         r = buyer.debit(int(100 * 100), 'THOUGHTBUBBLE1')  # $100.00
-
-        return redirect('thankyou')
+        messages.add_message(request, messages.INFO, 'Thank you for your purchase.')
+        return redirect('home')
 
 
     return HttpResponse('no good!')
+
+
+def thankyou(request):
+    messages.add_message(request, messages.INFO, 'Thank you for your purchase.')
+    return redirect('home')
 
 def checkout(request):
     return render(request, 'checkout.html', {'balanced': settings.BALANCED, 'static_url':'/static',})
