@@ -16,14 +16,18 @@ class FilePicker(Widget):
         super(FilePicker, self).__init__(default_attrs)
 
     def render(self, name, value, attrs=None):
-        if value is None: value = ''
+        if value is None:
+            value = ''
+        else:
+            value = format_html('<div class="cloak"><img src="%s"/></div>' % value.url)
+
         final_attrs = self.build_attrs(attrs, name=name)
         if not final_attrs.has_key('class'):
             final_attrs['class'] = ''
         final_attrs['class'] += ' file-picker-input'
         return format_html('<div{0}>{1}</div>',
                            flatatt(final_attrs),
-                           format_html(value))
+                           force_text(value))
 
 
 class NullWidget(Widget):

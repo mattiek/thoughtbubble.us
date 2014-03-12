@@ -43,9 +43,10 @@ class LocationUpdateForm(forms.ModelForm):
         self.fields['longitude'].widget =forms.TextInput(attrs={'placeholder': 'longitude'})
 
         # Get the last 4 pics
-        pics = LocationImage.objects.filter().order_by('-id')[:4]
+        pics = LocationImage.objects.filter().order_by('ordering','-id').distinct('ordering')[:4]
         for i,x in enumerate(pics):
-            self.fields['pic%d' % (i + 1)].initial = '<div class="cloak"><img src="%s"/></div>' % x.img.url
+            self.fields['pic%d' % (i + 1)].initial = x.img
+            #self.fields['pic%d' % (i + 1)].initial = '<div class="cloak"><img src="%s"/></div>' % x.img.url
 
     def clean(self, *args, **kwargs):
         cleaned_data = super(LocationUpdateForm, self).clean()

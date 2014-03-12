@@ -189,9 +189,17 @@ class LocationNews(models.Model):
         verbose_name_plural = "Location News"
 
 
+def location_image_upload_to(instance, filename):
+    prefix = 'locations/%s/%s/%s' % (
+                        instance.location.organization.place.id,
+                        instance.location.organization.id,
+                        instance.location.id,
+    )
+    return "%s/%s" % (prefix, filename)
+
 class LocationImage(models.Model):
     location = models.ForeignKey(Location)
-    img = models.ImageField(upload_to="locations")
+    img = models.ImageField(upload_to=location_image_upload_to)
     name = models.CharField(max_length=255, blank=True, null=True)
     ordering = models.IntegerField(default=0)
 

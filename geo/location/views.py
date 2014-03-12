@@ -75,18 +75,27 @@ class LocationUpdate(UpdateView):
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
 
+        pics = LocationImage.objects.filter().order_by('ordering','-id').distinct('ordering')[:4]
+
         pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'], ordering=1)
         pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'], ordering=2)
         pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'], ordering=3)
         pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'], ordering=4)
+
+        pics = dict([(x.ordering, x) for x in pics])
         # TODO: More elegant
-        if pic1.img:
+
+        prev_pic1 = pics.get(1,None)
+        prev_pic2 = pics.get(2,None)
+        prev_pic3 = pics.get(3,None)
+        prev_pic4 = pics.get(4,None)
+        if (pic1.img.name and not prev_pic1) or (pic1.img.name and pic1.img != prev_pic1.img):
             pic1.save()
-        if pic2.img:
+        if (pic2.img.name and not prev_pic2) or (pic2.img.name and pic2.img != prev_pic2.img):
             pic2.save()
-        if pic3.img:
+        if (pic3.img.name and not prev_pic3) or (pic3.img.name and pic3.img != prev_pic3.img):
             pic3.save()
-        if pic4.img:
+        if (pic4.img.name and not prev_pic4) or (pic4.img.name and pic4.img != prev_pic4.img):
             pic4.save()
 
         s.save()
