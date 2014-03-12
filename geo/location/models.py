@@ -70,13 +70,28 @@ class Location(models.Model):
         #     state = self.organization.neighborhood.state
         #     city = self.organization.neighborhood.city
 
-        return reverse('location_detail', args=[url_safe(self.slug)])
+        return reverse('location_detail',  args=[
+            url_safe(self.organization.place.slug),
+            url_safe(self.organization.slug),
+            url_safe(self.slug)
+        ])
 
     def get_id(self):
         return self.name.lower().replace(' ','-')
 
     def get_api_detail_url(self):
-        return reverse('locations-detail',args=[url_safe(self.slug),])
+        return reverse('locations-detail', args=[
+            url_safe(self.organization.place.slug),
+            url_safe(self.organization.slug),
+            url_safe(self.slug)
+        ])
+
+    def get_api_detail_url(self):
+        return reverse('location_update', args=[
+            url_safe(self.organization.place.slug),
+            url_safe(self.organization.slug),
+            url_safe(self.slug)
+        ])
 
     def add_idea_url(self):
             return reverse('addidea', args=[
@@ -87,6 +102,12 @@ class Location(models.Model):
 
     def list_ideas_url(self):
         return reverse('idea_list', args=[url_safe(self.organization.place.slug),
+                                          url_safe(self.organization.slug),
+                                          url_safe(self.slug)
+        ])
+
+    def get_update_url(self):
+        return reverse('location_update', args=[url_safe(self.organization.place.slug),
                                           url_safe(self.organization.slug),
                                           url_safe(self.slug)
         ])

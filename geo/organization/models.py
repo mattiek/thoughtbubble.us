@@ -187,6 +187,10 @@ class Organization(models.Model):
         return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
 
+    def get_location_add_url(self):
+        return reverse('addlocation', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+
+
     def get_extent(self):
         extent = self.geom.extent
         geojson = {}

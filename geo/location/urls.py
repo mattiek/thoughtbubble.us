@@ -6,6 +6,6 @@ urlpatterns = patterns('geo.location.views',
    # url(r'^add/?$', LocationCreate.as_view(), name='addlocation'),
    url(r'^add/(?P<organization>[\w-]+)/?$', LocationCreate.as_view(), name='addlocation'),
    url(r'^list/?$', LocationList.as_view(), name='location_list'),
-   url(r'^detail/(?P<location>[\w-]+)/?$', LocationDetail.as_view(), name='location_detail'),
-   url(r'^edit/(?P<location>[\w-]+)/?$', LocationUpdate.as_view(), name='location_update'),
+   url(r'^detail/(?P<place>[\w-]+)/(?P<organization>[\w-]+)/(?P<location>[\w-]+)/?$', LocationDetail.as_view(), name='location_detail'),
+   url(r'^edit/(?P<place>[\w-]+)/(?P<organization>[\w-]+)/(?P<location>[\w-]+)/?$', LocationUpdate.as_view(), name='location_update'),
 )

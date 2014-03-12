@@ -24,7 +24,7 @@
 
 {% block content %}
     <div id="form-wrapper">
-        <form method="POST" action="{% url 'organization_update' organization.id %}">
+        <form method="POST" action="{{ organization.get_update_url }}">
             {% csrf_token %}
             <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
             <input type="hidden" name="curator" value="{{ form.curator.value }}"/>
@@ -112,12 +112,12 @@
             <div class="label">features</div>
             <div class="features-list">
                 {% for location in organization.location_set.all %}
-                    <a href="{% url 'location_update'  location.id %}" class="feature">
+                    <a href="{{ location.get_update_url }}" class="feature">
                         <div class="feature-cap"></div>
                         <span>{{ location.name }}</span>
                     </a>
                 {% endfor %}
-                <a href="{% url 'addlocation'  organization.id %}"class="feature">
+                <a href="{{ organization.get_location_add_url }}"class="feature">
                     <div class="feature-cap"></div>
                     <span>add a feature</span>
 

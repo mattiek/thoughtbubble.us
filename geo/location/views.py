@@ -55,10 +55,12 @@ class LocationDetail(DetailView):
 class LocationUpdate(UpdateView):
     model = Location
     form_class = LocationAdminForm
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'location'
 
     def form_valid(self, form):
-        comm = self.kwargs.get('pk',None)
-        s = Location.objects.get(pk=comm)
+        comm = self.kwargs.get('location',None)
+        s = Location.objects.get(slug=comm)
         s.name=form.cleaned_data['name']
         s.address=form.cleaned_data['address']
         s.city_and_state=form.cleaned_data['city_and_state']
@@ -73,16 +75,13 @@ class LocationUpdate(UpdateView):
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
         messages.info(self.request, '%s updated.' % s.name)
-        return redirect('location_update', self.kwargs.get('state'),
-                        self.kwargs.get('city'),
-                        self.kwargs.get('pk'),
+        return redirect(s.get_update_url()
                         )
 
     def get_context_data(self, **kwargs):
         context = super(LocationUpdate, self).get_context_data(**kwargs)
-        location = Location.objects.get(pk=self.kwargs['pk'])
-        context['action_url'] = reverse('location_update',
-                                        args=[self.kwargs['pk'],])
+        location = Location.objects.get(slug=self.kwargs['location'])
+        context['action_url'] = location.get_update_url()
         context['organization'] = location.organization
         context['update'] = True
         if kwargs.get('id',None):
