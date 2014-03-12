@@ -68,6 +68,7 @@ class LocationUpdate(UpdateView):
             # what_kind=form.cleaned_data['what_kind'],
         s.latitude=form.cleaned_data['latitude']
         s.longitude=form.cleaned_data['longitude']
+        s.sherlock_description=form.cleaned_data['sherlock_description']
 
         s.about = form.cleaned_data['about']
 

@@ -48,7 +48,7 @@ class Organization(models.Model):
         return "%s Organization" % self.title
 
     def get_description(self):
-        return self.about
+        return self.sherlock_description
 
     def save(self, *args, **kwargs):
         if not self.center and self.geom:

@@ -53,6 +53,7 @@ class AddLocationForm(forms.Form):
         # what_kind = cleaned_data.get("what_kind")
         news = cleaned_data.get("news")
         about = cleaned_data.get("about")
+        sherlock_description = cleaned_data.get("sherlock_description")
 
         return cleaned_data
 

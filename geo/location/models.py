@@ -113,7 +113,7 @@ class Location(models.Model):
         ])
 
     def get_description(self):
-        return self.about
+        return self.sherlock_description
 
     def save(self, *args, **kwargs):
         # if not self.geom:
