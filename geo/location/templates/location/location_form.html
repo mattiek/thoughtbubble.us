@@ -135,7 +135,7 @@
 
             $(document).ready(function() {
                 $.ajax({
-                    url: "{{ organization.neighborhood.get_api_detail_url }}",
+                    url: "/api/v1/organizations/.json?place={{ organization.place.id }}",
                     dataType: "json",
                     success: function(d) {
                         var hoods = L.geoJson(d,{
@@ -148,7 +148,7 @@
                             }
                         }).addTo(map);
 
-                        map.fitBounds(neighborhoods[{{ organization.neighborhood.id }}].layer);
+                        map.fitBounds(neighborhoods[{{ organization.id }}].layer);
                         hoods.eachLayer(function(e) {
                             var marker = e;
     //            var feature = marker.feature;
