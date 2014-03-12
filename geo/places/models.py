@@ -64,7 +64,7 @@ class Place(models.Model):
         props['explore'] = self.get_explore_link()
         props['title'] = self.name
 
-        props['orgs'] = [x.get_center() for x in self.organization_set.all()]
+        props['orgs'] = filter(lambda x: x, [x.get_center() for x in self.organization_set.all()])
 
         props['icon'] = {
             "iconUrl": "/static/images/map-point.png",
