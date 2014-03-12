@@ -193,6 +193,7 @@ class LocationImage(models.Model):
     location = models.ForeignKey(Location)
     img = models.ImageField(upload_to="locations")
     name = models.CharField(max_length=255, blank=True, null=True)
+    ordering = models.IntegerField(default=0)
 
     def __unicode__(self):
         return self.name or "Image %d for %s" % (self.id, self.location,)

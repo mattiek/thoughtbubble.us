@@ -75,10 +75,10 @@ class LocationUpdate(UpdateView):
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
 
-        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'])
-        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'])
-        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'])
-        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'])
+        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'], ordering=1)
+        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'], ordering=2)
+        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'], ordering=3)
+        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'], ordering=4)
         # TODO: More elegant
         if pic1.img:
             pic1.save()
