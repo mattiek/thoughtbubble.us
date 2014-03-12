@@ -84,6 +84,7 @@ INSTALLED_APPS = (
     'django_extensions',
     'reversion',
     'django_balanced',
+    'easy_thumbnails',
 )
 
 COMMENTS_APP = 'threadedcomments'

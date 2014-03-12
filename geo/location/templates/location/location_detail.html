@@ -2,6 +2,7 @@
 {% load classnames %}
 {% load getdict %}
 {% load widget_tweaks %}
+{% load thumbnail %}
 
 {% block title %}
     Add a Feature
@@ -47,16 +48,22 @@
     </div>
 
     {#    Pictures #}
-        <div class="picture-label">pictures</div>
+        <div class="picture-label small-heading">pictures</div>
         <div id="pictures">
             {% for picture in pictures %}
-                <img src="{{ picture.img.url }}" alt=""/>
+                <div>
+                    <div class="cloak">
+{#                        <img src="{{ picture.img.url }}" alt=""/>#}
+                        <img src="{% thumbnail picture.img 120x90 %}" alt=""/>
+{#                        <img src="{% thumbnail picture.img 80x60 crop %}" alt=""/>#}
+                    </div>
+                </div>
             {% endfor %}
         </div>
 
     {#    Partners #}
         <div class="large-12 columns small-heading">partners</div>
-        <div class="large-12 columns">
+        <div id="partners">
             <img src="" alt=""/>
             <img src="" alt=""/>
             <img src="" alt=""/>
