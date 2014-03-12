@@ -223,10 +223,12 @@ class IdeaList(ListView):
 
 class IdeaDetail(DetailView):
     model = Idea
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'idea'
 
     def get_context_data(self, **kwargs):
         context = super(IdeaDetail,self).get_context_data(**kwargs)
-        idea = self.model.objects.get(pk=self.kwargs['pk'])
+        idea = self.model.objects.get(slug=self.kwargs['idea'])
         if self.request.user.is_authenticated():
             context['supported'] = IdeaSupport.objects.filter(idea=idea,user=self.request.user)
         context['pictures'] = idea.ideaimage_set.all()
@@ -238,7 +240,7 @@ class IdeaCreate(CreateView):
     form_class = AddIdeaForm
 
 
-def support_idea(request, id):
+def support_idea(request, idea):
     result = {'status':'none'}
     noStatus = {'status':'none'}
     removedStatus = {'status':'removed'}
@@ -246,7 +248,7 @@ def support_idea(request, id):
 
     if request.user.is_authenticated():
         try:
-            idea = Idea.objects.get(pk=id)
+            idea = Idea.objects.get(slug=idea)
             try:
                 g = IdeaSupport.objects.get(user=request.user, idea=idea)
                 g.delete()
@@ -261,9 +263,9 @@ def support_idea(request, id):
     return HttpResponse(JSON.dumps(result), mimetype='application/json')
 
 
-def support_idea_from_detail(request,id):
-    support_idea(request,id)
-    idea = Idea.objects.get(pk=id)
+def support_idea_from_detail(request,idea):
+    support_idea(request,idea)
+    idea = Idea.objects.get(slug=idea)
     return redirect('idea_detail', idea.content_object.organization.state,
                     idea.content_object.organization.city, idea.content_object.organization.name, id)
 
