@@ -71,7 +71,7 @@ class PlacesDetail(DetailView):
         'account' and 'slug' as provided in the URL keyword arguments.
         """
         queryset = self.get_queryset()
-        place = self.kwargs['slug']
+        place = self.kwargs['place']
         return get_object_or_404(queryset, slug__iexact=place)
 
 
