@@ -107,6 +107,7 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
@@ -134,6 +135,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
 }
 
 /* line 17, ../../scss/partials/_buttons.scss */
@@ -174,6 +176,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
 }
 
 /* line 19, ../../scss/organization/add.scss */

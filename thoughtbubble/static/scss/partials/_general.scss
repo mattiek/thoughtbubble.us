@@ -78,6 +78,7 @@ $tb-dark-gray: #58595a;
   border: none;
   @include white-museo;
   display: block;
+  font-size: 16px;
 }
 
 @mixin blue-gradient-button {
@@ -87,6 +88,7 @@ $tb-dark-gray: #58595a;
   border: none;
   @include white-museo;
   display: block;
+  font-size: 16px;
 }
 
 @mixin orange-gradient-button {
@@ -96,6 +98,7 @@ $tb-dark-gray: #58595a;
   border: none;
   @include white-museo;
   display: block;
+  font-size: 16px;
 }
 
 

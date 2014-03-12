@@ -109,6 +109,7 @@ textarea {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
   height: 33px;
   width: 322px;
   clear: both;

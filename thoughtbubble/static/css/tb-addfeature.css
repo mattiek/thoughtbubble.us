@@ -105,6 +105,7 @@ textarea {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
   height: 33px;
   width: 322px;
   margin: 80px auto 0;
@@ -273,6 +274,7 @@ form .row .row.second-row {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;

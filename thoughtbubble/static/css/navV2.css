@@ -515,6 +515,7 @@ body:after {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
+  font-size: 16px;
 }
 
 /* line 391, ../scss/navV2.scss */
