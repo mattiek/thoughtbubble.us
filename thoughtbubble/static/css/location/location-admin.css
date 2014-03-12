@@ -151,3 +151,33 @@ input[type="url"],
 input[type="text"] {
   width: 325px;
 }
+
+/* line 17, ../../scss/location/location-admin.scss */
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 24, ../../scss/location/location-admin.scss */
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+/* line 29, ../../scss/location/location-admin.scss */
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
+  margin-bottom: 20px;
+}
+
+/* line 33, ../../scss/location/location-admin.scss */
+.file-picker-input .cloak {
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+}
+/* line 41, ../../scss/location/location-admin.scss */
+.file-picker-input img {
+  max-width: 100%;
+  vertical-align: middle;
+}

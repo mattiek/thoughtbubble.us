@@ -173,10 +173,6 @@ class Location(models.Model):
         return mapbox
 
 
-
-
-
-
 class LocationNews(models.Model):
     location = models.ForeignKey(Location)
     name = models.CharField(max_length=255, null=True, blank=True)
@@ -199,4 +195,4 @@ class LocationImage(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
 
     def __unicode__(self):
-        return self.img
+        return self.name or "Image %d for %s" % (self.id, self.location,)

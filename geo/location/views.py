@@ -4,7 +4,7 @@ from models import Location, LocationType, LocationNews, LocationImage
 from serializers import LocationSerializer
 from rest_framework import viewsets
 from django.shortcuts import render, redirect
-from forms import AddLocationForm, LocationAdminForm
+from forms import AddLocationForm, LocationUpdateForm
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib import messages
 from geo.organization.models import Organization
@@ -54,7 +54,7 @@ class LocationDetail(DetailView):
 
 class LocationUpdate(UpdateView):
     model = Location
-    form_class = LocationAdminForm
+    form_class = LocationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'location'
 
@@ -74,6 +74,21 @@ class LocationUpdate(UpdateView):
 
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
+
+        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'])
+        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'])
+        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'])
+        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'])
+        # TODO: More elegant
+        if pic1.img:
+            pic1.save()
+        if pic2.img:
+            pic2.save()
+        if pic3.img:
+            pic3.save()
+        if pic4.img:
+            pic4.save()
+
         s.save()
         messages.info(self.request, '%s updated.' % s.name)
         return redirect(s.get_update_url()
@@ -110,6 +125,21 @@ class LocationCreate(CreateView):
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
+
+        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'])
+        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'])
+        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'])
+        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'])
+        # TODO: More elegant
+        if pic1.img:
+            pic1.save()
+        if pic2.img:
+            pic2.save()
+        if pic3.img:
+            pic3.save()
+        if pic4.img:
+            pic4.save()
+
         messages.info(self.request, '%s created.' % s.name)
         return redirect('location_update', self.kwargs.get('state'),
                         self.kwargs.get('city'),

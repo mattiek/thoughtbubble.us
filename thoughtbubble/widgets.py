@@ -21,9 +21,9 @@ class FilePicker(Widget):
         if not final_attrs.has_key('class'):
             final_attrs['class'] = ''
         final_attrs['class'] += ' file-picker-input'
-        return format_html('<div{0}>\r\n{1}</div>',
+        return format_html('<div{0}>{1}</div>',
                            flatatt(final_attrs),
-                           force_text(value))
+                           format_html(value))
 
 
 class NullWidget(Widget):
