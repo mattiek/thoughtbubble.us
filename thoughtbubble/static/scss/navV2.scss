@@ -254,14 +254,17 @@ body {
 
   #footer-twitter {
     @include bg-image('twitter-cloud.png');
+    background-repeat: no-repeat;
   }
 
   #footer-facebook {
     @include bg-image('facebook-cloud.png');
+    background-repeat: no-repeat;
   }
 
   #footer-linkedin {
     @include bg-image('linkedin-cloud.png');
+    background-repeat: no-repeat;
   }
 
 
