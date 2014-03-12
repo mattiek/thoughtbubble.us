@@ -39,7 +39,7 @@ urlpatterns = patterns('',
 
     url(r'^checkout/?$', 'thoughtbubble.views.checkout', name='checkout'),
     url(r'^checkout-thanks/?$', 'thoughtbubble.views.debit_card', name='post_checkout'),
-    url(r'^thankyou/?$', 'thoughtbubble.views.thank_you', name='thank_you'),
+    # url(r'^thankyou/?$', 'thoughtbubble.views.thank_you', name='thank_you'),
     # url('', include('social.apps.django_app.urls', namespace='social')),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

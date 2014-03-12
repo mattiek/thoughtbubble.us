@@ -128,9 +128,9 @@ def debit_card(request):
     return HttpResponse('no good!')
 
 
-def thankyou(request):
-    messages.add_message(request, messages.INFO, 'Thank you for your purchase.')
-    return redirect('home')
+# def thankyou(request):
+#     messages.add_message(request, messages.INFO, 'Thank you for your purchase.')
+#     return redirect('home')
 
 def checkout(request):
     return render(request, 'checkout.html', {'balanced': settings.BALANCED, 'static_url':'/static',})
