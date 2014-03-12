@@ -127,8 +127,19 @@ def addidea(request, place=None, organization=None, location=None):
         form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
         form.fields['content_object'].queryset=Location.objects.none()
 
-    d = {'form': form,
-         'action': reverse('addidea', args=[url_safe(organization.slug)]) }
+    d = {'form': form,}
+
+    if place:
+         d['action'] = reverse('addidea', args=[url_safe(place)])
+    if organization:
+         d['action'] = reverse('addidea', args=[url_safe(place),
+                                                url_safe(organization)
+                                                ])
+    if location:
+        d['action'] = reverse('addidea', args=[url_safe(place),
+                                               url_safe(organization),
+                                               url_safe(location),
+        ])
 
     # if id:
     #     form.fields['content_object'].initial = Location.objects.get(pk=id)
