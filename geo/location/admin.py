@@ -4,8 +4,9 @@ from thoughtbubble.widgets import NullWidget, TypeAheadWidget
 from django.forms.widgets import TextInput
 from django.db import models
 from forms import LocationAdminForm
+import reversion
 
-class LocationAdmin(admin.OSMGeoAdmin):
+class LocationAdmin(reversion.VersionAdmin, admin.OSMGeoAdmin):
     form = LocationAdminForm
 
     class Media:

@@ -616,6 +616,7 @@ button.mfp-close:active {
   font-size: 14px;
   position: absolute;
   width: 928px;
+  margin-top: -26px;
   background: #9CC8F0;
   background-repeat: no-repeat;
   background-position: 15px 20px;

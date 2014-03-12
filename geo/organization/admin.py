@@ -2,8 +2,9 @@ from django.contrib.gis import admin
 
 from models import Organization, OrganizationNews
 from forms import OrganizationAdminForm
+import reversion
 
-class OrganizationAdmin(admin.OSMGeoAdmin):
+class OrganizationAdmin(reversion.VersionAdmin, admin.OSMGeoAdmin):
     form = OrganizationAdminForm
     class Media:
         css = {

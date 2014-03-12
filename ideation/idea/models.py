@@ -17,6 +17,7 @@ FOR_CHOICES = [
     ('morning', 'morning'),
     ('noon', 'noon'),
     ('night', 'night'),
+    ('all day', 'all day'),
 ]
 
 
