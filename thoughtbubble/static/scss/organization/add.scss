@@ -355,6 +355,9 @@ form .row .row.second-row {
       color: #9d9d9d; /* text color */
       @include museo;
       font-size: 15px;
+      background-size: 21px;
+      height: 20px;
+      //background-position: 8px 0px;
     }
 
     input {
