@@ -69,4 +69,4 @@ def join(request, place, organization):
 
 def join_from_organization(request, place, organization):
     join(request,place,organization)
-    return redirect('organization_detail', organization)
+    return redirect('organization_detail', place, organization)
