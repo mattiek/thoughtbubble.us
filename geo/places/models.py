@@ -45,13 +45,13 @@ class Place(models.Model):
 
 
     def get_explore_link(self):
-        return reverse('places_detail', args=[url_safe(self.name),])
+        return reverse('places_detail', args=[url_safe(self.slug),])
 
     def add_idea_link(self):
-        return reverse('addidea', args=[url_safe(self.name),])
+        return reverse('addidea', args=[url_safe(self.slug),])
 
     def get_absolute_url(self):
-        return reverse('places_detail', args=[url_safe(self.name),])
+        return reverse('places_detail', args=[url_safe(self.slug),])
 
 
     def get_geojson_type(self):

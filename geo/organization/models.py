@@ -62,19 +62,19 @@ class Organization(models.Model):
 
     def add_idea_url(self):
         return reverse('addidea', args=[
-                                        url_safe(self.place.name),
-                                        url_safe(self.title),
+                                        url_safe(self.place.slug),
+                                        url_safe(self.slug),
         ])
 
     def list_ideas_url(self):
         return reverse('idea_list', args=[
-                                        url_safe(self.place.name),
-                                        url_safe(self.title),
+                                        url_safe(self.place.slug),
+                                        url_safe(self.slug),
 
         ])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.id)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        return reverse('organization_detail', args=[url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -149,7 +149,7 @@ class Organization(models.Model):
         return 'Feature'
 
     def get_explore_link(self):
-        return reverse('sherlock', args=[url_safe(self.place.name), url_safe(self.title)])
+        return reverse('sherlock', args=[url_safe(self.place.slug), url_safe(self.slug)])
 
     def get_center(self):
         if self.center:
@@ -174,10 +174,10 @@ class Organization(models.Model):
     #     return ''
 
     def get_api_detail_url(self):
-        return reverse('organizations-detail',args=[url_safe(self.id),])
+        return reverse('organizations-detail',args=[url_safe(self.slug),])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.id)])
+        return reverse('organization_detail', args=[url_safe(self.slug)])
 
     def get_extent(self):
         extent = self.geom.extent

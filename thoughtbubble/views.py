@@ -109,7 +109,7 @@ def sherlock(request, place=None, organization=None):
     d = {}
     # d['organizations'] = Organization.objects.filter().order_by('name')
 
-    d['exploring'] = Organization.objects.get(place__name__iexact=place, title__iexact=organization)
+    d['exploring'] = Organization.objects.get(place__slug__iexact=place, slug__iexact=organization)
 
     return render(request, 'sherlock.html', d)
 

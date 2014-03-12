@@ -123,12 +123,12 @@ def addidea(request, place=None, organization=None, location=None):
 
 
     if place and not location and not organization:
-        form.fields['content_object_place'].queryset = Place.objects.filter(name__iexact=place)
-        form.fields['content_object_place'].initial = Place.objects.get(name__iexact=place)
+        form.fields['content_object_place'].queryset = Place.objects.filter(slug__iexact=place)
+        form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
         form.fields['content_object'].queryset=Location.objects.none()
 
     d = {'form': form,
-         'action': reverse('addidea', args=[url_safe(organization)]) }
+         'action': reverse('addidea', args=[url_safe(organization.slug)]) }
 
     # if id:
     #     form.fields['content_object'].initial = Location.objects.get(pk=id)
@@ -136,8 +136,8 @@ def addidea(request, place=None, organization=None, location=None):
     if organization:
         try:
             d['location'] = Location.objects.get(
-                                                organization__title__iexact=organization,
-                                                name=location)
+                                                organization__slug__iexact=organization,
+                                                slug=location)
             form.fields['content_object'].initial = d['location']
         except:
             pass
@@ -157,8 +157,8 @@ class IdeaList(ListView):
         self.organization = None
         self.place = None
         try:
-            self.place = Place.objects.get(name__iexact=self.kwargs.get('place', None))
-            self.organization = Organization.objects.get(title__iexact=self.kwargs.get('organization', None))
+            self.place = Place.objects.get(slug__iexact=self.kwargs.get('place', None))
+            self.organization = Organization.objects.get(slug__iexact=self.kwargs.get('organization', None))
         except:
             pass
 
@@ -172,7 +172,7 @@ class IdeaList(ListView):
 
         ### Check to see that we are on an Organization Idea List page
         if self.organization:
-            organizations = Organization.objects.filter(title__iexact=self.organization.title).values_list('pk', flat=True)
+            organizations = Organization.objects.filter(slug__iexact=self.organization.slug).values_list('pk', flat=True)
 
             ### Where
             where = self.request.GET.get('where',None)

@@ -6,5 +6,5 @@ urlpatterns = patterns('geo.places.views',
    # url(r'^$', OrganizationList.as_view(), name='organization_list'),
    # url(r'^(?P<state>\w+)/?$', OrganizationList.as_view(), name='organization_list'),
    url(r'^$', PlacesList.as_view(), name='places_list'),
-   url(r'^(?P<place>[!*\'\(\);:@&=+$,/?%#\[]-\w ]+)/?$', PlacesDetail.as_view(), name='places_detail'),
+   url(r'^(?P<place>[\w-]+)/?$', PlacesDetail.as_view(), name='places_detail'),
    )

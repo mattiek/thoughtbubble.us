@@ -60,7 +60,7 @@ class PlacesCreate(CreateView):
 
 class PlacesDetail(DetailView):
     model = Place
-    lookup_field = 'name'
+    lookup_field = 'slug'
     lookup_url_kwarg = 'place'
     context_object_name = 'place'
 
@@ -71,8 +71,8 @@ class PlacesDetail(DetailView):
         'account' and 'slug' as provided in the URL keyword arguments.
         """
         queryset = self.get_queryset()
-        place = self.kwargs['place']
-        return get_object_or_404(queryset, name__iexact=place)
+        place = self.kwargs['slug']
+        return get_object_or_404(queryset, slug__iexact=place)
 
 
     def get_context_data(self, **kwargs):

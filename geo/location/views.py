@@ -35,15 +35,17 @@ class LocationList(ListView):
 
 class LocationDetail(DetailView):
     model = Location
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'location'
 
     def get_context_data(self, **kwargs):
         context = super(LocationDetail, self).get_context_data(**kwargs)
 
-        id = self.kwargs.get('pk',None)
+        id = self.kwargs.get('location',None)
         # if id:
         #     context['organization'] = Organization.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
-        location = Location.objects.get(pk=id)
+        location = Location.objects.get(slug=id)
         context['ideas'] = location.some_ideas.all() #Idea.objects.filter(content_object=location)
         context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
         context['pictures'] = LocationImage.objects.filter(location=location).order_by('-date_created')
@@ -122,7 +124,7 @@ class LocationCreate(CreateView):
         comm = self.kwargs.get('organization',None)
         if comm:
             organization = Organization.objects.get(pk=comm)
-            context['action_url'] = reverse('addlocation', args=[url_safe(comm),])
+            context['action_url'] = reverse('addlocation', args=[url_safe(comm.slug),])
             context['organization'] = organization
             # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin

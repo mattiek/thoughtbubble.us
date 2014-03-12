@@ -14,6 +14,7 @@ from django.contrib.contenttypes import generic
 from ideation.supportering.models import AbstractSupport
 
 from thoughtbubble.utils import url_safe
+from autoslug import AutoSlugField
 FOR_CHOICES = [
     ('morning', 'morning'),
     ('noon', 'noon'),
@@ -36,6 +37,7 @@ class IdeaType(models.Model):
 
 class Idea(models.Model):
     name = models.CharField(max_length=255)
+    slug = AutoSlugField(populate_from='name')
 
     description = models.TextField()
 
@@ -47,7 +49,6 @@ class Idea(models.Model):
     content_type = models.ForeignKey(ContentType, null=True)
     object_id = models.PositiveIntegerField()
     content_object = generic.GenericForeignKey()
-
 
 
     user = models.ForeignKey(ThoughtbubbleUser, null=True)
@@ -83,21 +84,21 @@ class Idea(models.Model):
         # else: # its a location
         #     neighborhood = self.content_object.organization.neighborhood
 
-        return reverse('support_idea',args=[url_safe(self.id)])
+        return reverse('support_idea',args=[url_safe(self.slug)])
 
     def get_absolute_url(self):
         if self.content_type.name == 'place':
             place = self.content_object
             return reverse('place_idea_detail', args=[
-                url_safe(place.name),
-                url_safe(self.id)])
+                url_safe(place.slug),
+                url_safe(self.slug)])
         else: # its a location
             location = self.content_object
             return reverse('idea_detail', args=[
-                                            url_safe(location.organization.place.name),
-                                            url_safe(location.organization.title),
-                                            url_safe(location.name),
-                                            url_safe(self.id)])
+                                            url_safe(location.organization.place.slug),
+                                            url_safe(location.organization.slug),
+                                            url_safe(location.slug),
+                                            url_safe(self.slug)])
 
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)
