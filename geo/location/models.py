@@ -79,7 +79,9 @@ class Location(models.Model):
         return reverse('locations-detail',args=[url_safe(self.slug),])
 
     def add_idea_url(self):
-            return reverse('addidea', args=[url_safe(self.organization.slug),
+            return reverse('addidea', args=[
+                                            url_safe(self.organization.place.slug),
+                                            url_safe(self.organization.slug),
                                             url_safe(self.slug)
             ])
 

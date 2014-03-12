@@ -146,10 +146,24 @@ def addidea(request, place=None, organization=None, location=None):
 
     if organization:
         try:
-            d['location'] = Location.objects.get(
-                                                organization__slug__iexact=organization,
-                                                slug=location)
-            form.fields['content_object'].initial = d['location']
+            d['location'] = Location.objects.filter(organization__slug=organization)
+            form.fields['content_object'].queryset = d['location']
+
+            # form.fields['content_object_place'].queryset = Place.objects.filter(slug__iexact=place)
+            # form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
+            # form.fields['content_object'].queryset=Location.objects.none()
+        except:
+            pass
+
+    if location:
+        try:
+            d['location'] = Location.objects.filter(organization__slug=organization,slug=location)
+            form.fields['content_object'].queryset = d['location']
+            form.fields['content_object'].initial = d['location'][0]
+
+            # form.fields['content_object_place'].queryset = Place.objects.filter(slug__iexact=place)
+            # form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
+            # form.fields['content_object'].queryset=Location.objects.none()
         except:
             pass
 
