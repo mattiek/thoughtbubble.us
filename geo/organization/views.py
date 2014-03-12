@@ -47,17 +47,18 @@ class OrganizationUpdate(UpdateView):
         return s
 
 
-def join(request, pk):
+def join(request, place, organization):
 
     if not request.user.is_authenticated():
         return HttpResponse('none')
 
     try:
-        comm = Organization.objects.get(pk=pk)
+        comm = Organization.objects.get(slug=organization, place__slug=place)
     except:
         return HttpResponse('no organization')
 
-    g = Organization.objects.filter(pk=pk,members=request.user)
+    g = Organization.objects.filter(slug=organization, place__slug=place, members=request.user)
+
     if not g:
         comm.members.add(request.user)
         return HttpResponse("added")
@@ -66,6 +67,6 @@ def join(request, pk):
         return HttpResponse("removed")
 
 
-def join_from_organization(request, pk):
-    join(request,pk)
-    return redirect('organization_detail', pk)
+def join_from_organization(request, place, organization):
+    join(request,place,organization)
+    return redirect('organization_detail', organization)
