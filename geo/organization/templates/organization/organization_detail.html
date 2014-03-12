@@ -23,7 +23,7 @@
             </div>
 
         {% if organization.curator == request.user or request.user.is_superuser %}
-            <h1 style="margin:0px;"><a href="{% url 'organization_update' organization.id %}">admin</a></h1>
+            <h1 style="margin:0px;"><a href="{{ organization.get_update_url }}">admin</a></h1>
         {% endif %}
         <div class="row title">
                 <div id="header">{{ organization.title }}
@@ -35,18 +35,18 @@
 
             <div class="actions">
                 {% if request.user in organization.members.all %}
-                    <a href="{% url 'organization_join' object.id %}" class="orange s-button activated">
+                    <a href="{{ organization.get_join_url }}" class="orange s-button activated">
                         joined
                     </a>
                 {% else %}
-                    <a href="{% url 'organization_join' object.id %}" class="orange s-button">
+                    <a href="{{ organization.get_join_url }}" class="orange s-button">
                         join
                     </a>
                 {% endif %}
 
                 <a href="{{ object.list_ideas_url }}" class="orange s-button">ideas</a>
                 <a href="{{ object.get_explore_link }}" class="blue s-button">explore</a>
-                <a href="{% url 'addidea' object.place.name.lower object.title %}" class="blue s-button">add</a>
+                <a href="{{ object.add_idea_url }}" class="blue s-button">add</a>
                 <div style="clear:both;"></div>
             </div>
 

@@ -74,7 +74,13 @@ class Organization(models.Model):
         ])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+
+    def get_update_url(self):
+        return reverse('organization_update', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+
+    def get_join_url(self):
+        return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -174,10 +180,12 @@ class Organization(models.Model):
     #     return ''
 
     def get_api_detail_url(self):
-        return reverse('organizations-detail',args=[url_safe(self.slug),])
+        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.slug)])
+        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+
 
     def get_extent(self):
         extent = self.geom.extent

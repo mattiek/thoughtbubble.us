@@ -29,9 +29,13 @@ class OrganizationCreate(CreateView):
 
 class OrganizationDetail(DetailView):
     model = Organization
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'organization'
 
 class OrganizationUpdate(UpdateView):
     model = Organization
+    lookup_field = 'slug'
+    lookup_url_kwarg = 'organization'
     # success_url = reverse_lazy('organization_detail')
 
     # def get_success_url(self, *args, **kwargs):
