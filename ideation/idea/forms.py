@@ -7,7 +7,7 @@ from geo.location.models import Location
 from geo.places.models import Place
 
 
-FOR_CHOICES_AND_EMPTY = [('','')] + FOR_CHOICES
+FOR_CHOICES_AND_EMPTY = [('when','when')] + FOR_CHOICES
 
 class AddIdeaForm(forms.Form):
     name = forms.CharField(max_length=50,
@@ -59,6 +59,6 @@ class AddIdeaForm(forms.Form):
 
 
 class FilterForm(forms.Form):
-    where = forms.ModelChoiceField(queryset=Location.objects.none())
+    where = forms.ModelChoiceField(queryset=Location.objects.none(), empty_label='where')
     when = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY)
-    what = forms.ModelChoiceField(queryset=IdeaType.objects.all())
+    what = forms.ModelChoiceField(queryset=IdeaType.objects.all(), empty_label='what')
