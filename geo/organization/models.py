@@ -6,6 +6,7 @@ import json as JSON
 from django.core.urlresolvers import reverse
 
 from partner.models import Partner
+from thoughtbubble.utils import url_safe
 
 
 class Organization(models.Model):
@@ -58,15 +59,20 @@ class Organization(models.Model):
         return ''
 
     def add_idea_url(self):
-        return reverse('addidea', args=[self.place.name.lower(), self.title.lower()
+        return reverse('addidea', args=[
+                                        url_safe(self.place.name),
+                                        url_safe(self.title),
         ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[self.place.name.lower(), self.title.lower()
+        return reverse('idea_list', args=[
+                                        url_safe(self.place.name),
+                                        url_safe(self.title),
+
         ])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[self.id])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        return reverse('organization_detail', args=[url_safe(self.id)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -141,7 +147,7 @@ class Organization(models.Model):
         return 'Feature'
 
     def get_explore_link(self):
-        return reverse('sherlock', args=[str(self.place.name.lower()), str(self.title.lower())])
+        return reverse('sherlock', args=[url_safe(self.place.name), url_safe(self.title)])
 
     def get_center(self):
         if self.center:
@@ -166,10 +172,10 @@ class Organization(models.Model):
     #     return ''
 
     def get_api_detail_url(self):
-        return reverse('organizations-detail',args=[self.id,])
+        return reverse('organizations-detail',args=[url_safe(self.id),])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[str(self.id)])
+        return reverse('organization_detail', args=[url_safe(self.id)])
 
     def get_extent(self):
         extent = self.geom.extent

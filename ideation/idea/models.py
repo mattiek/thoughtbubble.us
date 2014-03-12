@@ -13,6 +13,7 @@ from django.contrib.contenttypes import generic
 
 from ideation.supportering.models import AbstractSupport
 
+from thoughtbubble.utils import url_safe
 FOR_CHOICES = [
     ('morning', 'morning'),
     ('noon', 'noon'),
@@ -82,21 +83,21 @@ class Idea(models.Model):
         # else: # its a location
         #     neighborhood = self.content_object.organization.neighborhood
 
-        return reverse('support_idea',args=[self.id])
+        return reverse('support_idea',args=[url_safe(self.id)])
 
     def get_absolute_url(self):
         if self.content_type.name == 'place':
             place = self.content_object
             return reverse('place_idea_detail', args=[
-                place.name.lower(),
-                self.id])
+                url_safe(place.name),
+                url_safe(self.id)])
         else: # its a location
             location = self.content_object
             return reverse('idea_detail', args=[
-                                            location.organization.place.name.lower(),
-                                            location.organization.title.lower(),
-                                            location.name.lower(),
-                                            self.id])
+                                            url_safe(location.organization.place.name),
+                                            url_safe(location.organization.title),
+                                            url_safe(location.name),
+                                            url_safe(self.id)])
 
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)

@@ -19,5 +19,5 @@ urlpatterns = patterns('',
    url(r'^geo/organizations/', include('geo.organization.urls')),
    url(r'^geo/places/', include('geo.places.urls')),
    url(r'^geo/explore/?$', 'thoughtbubble.views.explore', name='explore'),
-   url(r'^geo/explore/(?P<place>[-%\w ()]+)/(?P<organization>[-%\w ()]+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
+   url(r'^geo/explore/(?P<place>[-%\w+ ()]+)/(?P<organization>[-%\w+ ()]+)/?$', 'thoughtbubble.views.sherlock', name='sherlock'),
    )

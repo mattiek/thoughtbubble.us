@@ -13,6 +13,7 @@ from django.core.urlresolvers import reverse
 from geo.organization.models import Organization
 from geo.places.models import Place
 from geo.location.models import Location
+from thoughtbubble.utils import url_safe
 
 
 # def add_neighborhood_idea(request, state, city, neighborhood):
@@ -127,7 +128,7 @@ def addidea(request, place=None, organization=None, location=None):
         form.fields['content_object'].queryset=Location.objects.none()
 
     d = {'form': form,
-         'action': reverse('addidea', args=[organization]) }
+         'action': reverse('addidea', args=[url_safe(organization)]) }
 
     # if id:
     #     form.fields['content_object'].initial = Location.objects.get(pk=id)

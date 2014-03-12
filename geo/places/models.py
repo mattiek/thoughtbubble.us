@@ -1,6 +1,7 @@
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
 from model_utils.choices import Choices
+from thoughtbubble.utils import url_safe
 
 import json as JSON
 from django.core.urlresolvers import reverse
@@ -41,13 +42,13 @@ class Place(models.Model):
 
 
     def get_explore_link(self):
-        return reverse('places_detail', args=[str(self.name.lower()),])
+        return reverse('places_detail', args=[url_safe(self.name),])
 
     def add_idea_link(self):
-        return reverse('addidea', args=[str(self.name.lower()),])
+        return reverse('addidea', args=[url_safe(self.name),])
 
     def get_absolute_url(self):
-        return reverse('places_detail', args=[str(self.name.lower()),])
+        return reverse('places_detail', args=[url_safe(self.name),])
 
 
     def get_geojson_type(self):

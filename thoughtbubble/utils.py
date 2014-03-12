@@ -1,5 +1,6 @@
 import os
 import hashlib
+import urllib
 
 def path_and_rename(path, attr):
     def wrapper(instance, filename):
@@ -24,3 +25,7 @@ def md5_for_file(f, block_size=2**20):
             break
         md5.update(data)
     return md5.hexdigest()
+
+
+def url_safe(st):
+    return urllib.quote_plus(str(st.lower()))

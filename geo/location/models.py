@@ -8,6 +8,7 @@ from partner.models import Partner
 
 from ideation.idea.models import Idea
 from django.contrib.contenttypes import generic
+from thoughtbubble.utils import url_safe
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -67,22 +68,23 @@ class Location(models.Model):
         #     state = self.organization.neighborhood.state
         #     city = self.organization.neighborhood.city
 
-        return reverse('location_detail', args=[str(self.id)])
+        return reverse('location_detail', args=[url_safe(self.id)])
 
     def get_id(self):
         return self.name.lower().replace(' ','-')
 
     def get_api_detail_url(self):
-        return reverse('locations-detail',args=[self.id,])
+        return reverse('locations-detail',args=[url_safe(self.id),])
 
     def add_idea_url(self):
-            return reverse('addidea', args=[self.organization.title.lower(),
-                                            self.name.lower()
+            return reverse('addidea', args=[url_safe(self.organization.title),
+                                            url_safe(self.name)
             ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[self.organization.place.name.lower(), self.organization.title.lower(),
-                                        self.name.lower()
+        return reverse('idea_list', args=[url_safe(self.organization.place.name),
+                                          url_safe(self.organization.title),
+                                          url_safe(self.name)
         ])
 
     def get_description(self):

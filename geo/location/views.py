@@ -11,6 +11,7 @@ from geo.organization.models import Organization
 from django.core.urlresolvers import reverse
 from rest_framework import generics
 from ideation.idea.models import Idea
+from thoughtbubble.utils import url_safe
 
 from vanilla import ListView, DetailView, CreateView, UpdateView
 
@@ -121,7 +122,7 @@ class LocationCreate(CreateView):
         comm = self.kwargs.get('organization',None)
         if comm:
             organization = Organization.objects.get(pk=comm)
-            context['action_url'] = reverse('addlocation', args=[comm.lower(),])
+            context['action_url'] = reverse('addlocation', args=[url_safe(comm),])
             context['organization'] = organization
             # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin
