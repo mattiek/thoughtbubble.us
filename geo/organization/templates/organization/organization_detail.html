@@ -58,14 +58,14 @@
            {% include "widgets/sharing.html" %}
 
         {#    News #}
-        <div class="news-label">news</div>
+        <div class="news-label small-heading">news</div>
         <div id="news">
                 {% include 'widgets/news_feed.html' %}
         </div>
 
 
         {#    Pictures #}
-        <div class="picture-label">pictures</div>
+        <div class="picture-label small-heading">pictures</div>
         <div id="pictures">
             {% for picture in organization.organizationimage_set.all %}
                 <img src="{{ picture.img.url }}" alt=""/>
@@ -73,7 +73,7 @@
         </div>
 
         {#    Partners #}
-        <div class="partner-label">partners</div>
+        <div class="partner-label small-heading">partners</div>
         <div id="partners">
             {% for partner in organization.partners.all %}
                 <img src="{{ partner.img.url }}" alt=""/>
