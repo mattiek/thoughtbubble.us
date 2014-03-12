@@ -9,6 +9,7 @@ from partner.models import Partner
 from ideation.idea.models import Idea
 from django.contrib.contenttypes import generic
 from thoughtbubble.utils import url_safe
+from autoslug import AutoSlugField
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -31,6 +32,7 @@ class LocationType(models.Model):
 
 class Location(models.Model):
     name = models.CharField(max_length=255)
+    slug = AutoSlugField(populate_from='name', unique_with='organization')
     address = models.CharField(max_length=255, null=True, blank=True)
     city_and_state = models.CharField(max_length=255, null=True, blank=True)
     zip = models.CharField(max_length=15, null=True, blank=True)

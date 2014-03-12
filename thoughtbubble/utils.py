@@ -28,4 +28,4 @@ def md5_for_file(f, block_size=2**20):
 
 
 def url_safe(st):
-    return urllib.quote_plus(str(st.lower()))
+    return str(st.lower())

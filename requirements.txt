@@ -12,6 +12,7 @@ chardet==1.0.1
 distribute==0.7.3
 django-allauth==0.13.0
 django-appconf==0.6
+django-autoslug==1.7.2
 django-avatar==2.0
 git+https://github.com/blorenz/django-balanced
 django-braces==1.2.2

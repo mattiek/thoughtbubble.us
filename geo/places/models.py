@@ -5,6 +5,7 @@ from thoughtbubble.utils import url_safe
 
 import json as JSON
 from django.core.urlresolvers import reverse
+from autoslug import AutoSlugField
 
 class Place(models.Model):
     REGIONS = Choices(
@@ -31,6 +32,8 @@ class Place(models.Model):
 
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
+
+    slug = AutoSlugField(populate_from='name', unique_with='state')
 
     def __unicode__(self):
         return "%s, %s" % (self.name, self.state_code)

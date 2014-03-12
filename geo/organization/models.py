@@ -7,10 +7,12 @@ from django.core.urlresolvers import reverse
 
 from partner.models import Partner
 from thoughtbubble.utils import url_safe
+from autoslug import AutoSlugField
 
 
 class Organization(models.Model):
     place = models.ForeignKey(Place, null=True, blank=True)
+    slug = AutoSlugField(populate_from='title', unique_with='place')
 
     logo = models.ImageField(upload_to=path_and_rename('profiles', 'logo'), null=True, blank=True)
 
