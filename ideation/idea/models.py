@@ -37,7 +37,7 @@ class IdeaType(models.Model):
 
 class Idea(models.Model):
     name = models.CharField(max_length=255)
-    slug = AutoSlugField(populate_from='name')
+    slug = AutoSlugField(populate_from='name',unique_with='object_id')
 
     description = models.TextField()
 
