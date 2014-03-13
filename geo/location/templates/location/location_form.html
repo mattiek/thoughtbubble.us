@@ -70,9 +70,9 @@
 {#                    </ul>#}
 
 
-                    <p class="copy clr">about</p>
+                    <p class="copy clr small-heading">about</p>
                     {{ form.about|add_class:"about-text" }}
-                    <p class="copy clr">explore description:</p>
+                    <p class="copy clr small-heading">explore description:</p>
                     {{ form.sherlock_description|add_class:"about-text" }}
                 <div class="pos-rel">
 {#                    <ul class="save-edit-list">#}
@@ -86,7 +86,7 @@
 
                 </div>
 
-                    <p class="copy">news</p>
+                    <p class="copy small-heading">news</p>
             <div class="news pos-rel">
                 <ul class="save-edit-list">
                     <li>
@@ -102,7 +102,7 @@
                     </div>
                     {{ form.news|add_class:"news-text" }}
 
-                    <p class="copy">pictures</p>
+                    <p class="copy small-heading">pictures</p>
                     {% for picture in form.pictures %}
                         <div class="picture">
 
