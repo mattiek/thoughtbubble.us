@@ -74,7 +74,6 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
-  font-size: 16px;
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
@@ -102,7 +101,6 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
-  font-size: 16px;
 }
 
 /* line 17, ../../scss/partials/_buttons.scss */
@@ -370,12 +368,14 @@ ol.slats li p span.meta {
 /* line 91, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting.activated .unsupported {
   display: none;
+  font-size: 11px;
 }
-/* line 94, ../../scss/idea/_idea.scss */
+/* line 95, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .supporting.activated .supported {
   display: block;
+  font-size: 11px;
 }
-/* line 100, ../../scss/idea/_idea.scss */
+/* line 102, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -386,14 +386,14 @@ ol.slats li p span.meta {
   margin-right: 10px;
   font-size: 11px;
 }
-/* line 119, ../../scss/idea/_idea.scss */
+/* line 121, ../../scss/idea/_idea.scss */
 .idea-cap .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
   margin-top: 0px;
   float: none;
 }
-/* line 133, ../../scss/idea/_idea.scss */
+/* line 135, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap {
   position: absolute;
   list-style-type: none;
@@ -407,17 +407,17 @@ ol.slats li p span.meta {
   right: 0px;
   top: 0px;
 }
-/* line 146, ../../scss/idea/_idea.scss */
+/* line 148, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li {
   margin-top: 5px;
   line-height: 1.3em;
 }
-/* line 150, ../../scss/idea/_idea.scss */
+/* line 152, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap li:first-child {
   margin-top: 0px;
 }
 @media screen and (max-width: 480px) {
-  /* line 133, ../../scss/idea/_idea.scss */
+  /* line 135, ../../scss/idea/_idea.scss */
   .idea-cap .right-idea-cap {
     position: relative;
     padding-top: 0px;
@@ -425,13 +425,13 @@ ol.slats li p span.meta {
     background-color: #fef8ee;
     padding: 20px;
   }
-  /* line 164, ../../scss/idea/_idea.scss */
+  /* line 166, ../../scss/idea/_idea.scss */
   .idea-cap .right-idea-cap li {
     display: inline-block;
     width: 100px;
   }
 }
-/* line 170, ../../scss/idea/_idea.scss */
+/* line 172, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -439,7 +439,7 @@ ol.slats li p span.meta {
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 178, ../../scss/idea/_idea.scss */
+/* line 180, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -447,7 +447,7 @@ ol.slats li p span.meta {
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 186, ../../scss/idea/_idea.scss */
+/* line 188, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1390687077');
   background-repeat: no-repeat;
@@ -457,14 +457,14 @@ ol.slats li p span.meta {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 198, ../../scss/idea/_idea.scss */
+  /* line 200, ../../scss/idea/_idea.scss */
   .idea-interactions {
     margin: 20px auto;
     width: 250px;
   }
 }
 
-/* line 208, ../../scss/idea/_idea.scss */
+/* line 210, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
