@@ -79,18 +79,22 @@
 
       .unsupported {
         display: block;
+        font-size: 11px;
       }
       .supported {
         display: none;
+        font-size: 11px;
       }
 
 
       &.activated {
         .unsupported {
           display: none;
+          font-size: 11px;
         }
         .supported {
           display: block;
+          font-size: 11px;
         }
       }
     }
@@ -104,6 +108,7 @@
       float: left;
       border-radius: 5px;
       margin-right: 10px;
+      font-size: 11px;
 
     }
 
