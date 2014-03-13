@@ -872,3 +872,9 @@ h4.message {
     min-width: 320px;
   }
 }
+
+/* line 135, ../scss/global.scss */
+input .admin-submit.submit[type=submit] {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

@@ -128,3 +128,13 @@ h4.message {
     min-width: 320px;
   }
 }
+
+
+input {
+  .admin-submit.submit {
+    &[type=submit] {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+}
