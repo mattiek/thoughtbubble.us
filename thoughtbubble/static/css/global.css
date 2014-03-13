@@ -873,8 +873,8 @@ h4.message {
   }
 }
 
-/* line 135, ../scss/global.scss */
-input .admin-submit.submit[type=submit] {
+/* line 134, ../scss/global.scss */
+input.admin-submit.submit {
   font-size: 16px;
   margin-bottom: 20px;
 }

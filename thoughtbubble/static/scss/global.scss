@@ -131,10 +131,8 @@ h4.message {
 
 
 input {
-  .admin-submit.submit {
-    &[type=submit] {
+  &.admin-submit.submit {
       font-size: 16px;
       margin-bottom: 20px;
-    }
   }
 }
