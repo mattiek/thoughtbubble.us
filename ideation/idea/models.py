@@ -77,7 +77,7 @@ class Idea(models.Model):
             return place.name
         else: # its a location
             location = self.content_object
-            return location.name
+            return location.organization.title
 
     def get_parent_link(self):
         if self.content_type.name == 'place':
@@ -86,10 +86,11 @@ class Idea(models.Model):
                            url_safe(place.slug) ])
         else: # its a location
             location = self.content_object
-            return reverse('location_detail',args=[
+            return reverse('organization_detail',args=[
                          url_safe(location.organization.place.slug),
                          url_safe(location.organization.slug),
-                            url_safe(location.slug) ])
+                          #  url_safe(location.slug)
+            ])
 
 
     def support_count(self):
