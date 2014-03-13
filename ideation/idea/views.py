@@ -209,7 +209,8 @@ class IdeaList(ListView):
             return qs
 
         # neighborhood = self.kwargs.get('neighborhood', None)
-        return Idea.objects.filter() #content_type__name='neighborhood', object_id=neighborhood)
+        return qs
+        # return Idea.objects.filter() #content_type__name='neighborhood', object_id=neighborhood)
 
         ### DEPERECATED
         # if self.organization:

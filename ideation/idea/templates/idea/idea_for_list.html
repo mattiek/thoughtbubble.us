@@ -7,7 +7,7 @@
         <ul class="right-idea-cap">
             <li><span class="emphasis support-star">{{ idea.support_count }}</span> supporters</li>
             <li><span class="emphasis comments-bubble">{% get_comment_count for idea as comment_count %} {{ comment_count }}</span> comments</li>
-            <li>added {{ ideation.idea.get_days_since_added }} days ago</li>
+            <li>added {{ idea.get_days_since_added }} days ago</li>
         </ul>
 
         <div class="idea-interactions">
