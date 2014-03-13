@@ -79,6 +79,12 @@ class Idea(models.Model):
             location = self.content_object
             return location.organization.title
 
+    def get_parent_label(self):
+        if self.content_type.name == 'place':
+            return "Place"
+        else: # its a location
+            return "Organization"
+
     def get_parent_link(self):
         if self.content_type.name == 'place':
             place = self.content_object
