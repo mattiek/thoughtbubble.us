@@ -71,6 +71,27 @@ class Idea(models.Model):
     def comment_count(self):
         return 0
 
+    def get_parent_title(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return place.name
+        else: # its a location
+            location = self.content_object
+            return location.name
+
+    def get_parent_link(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return reverse('places_detail',args=[
+                           url_safe(place.slug) ])
+        else: # its a location
+            location = self.content_object
+            return reverse('location_detail',args=[
+                         url_safe(location.organization.place.slug),
+                         url_safe(location.organization.slug),
+                            url_safe(location.slug) ])
+
+
     def support_count(self):
         return IdeaSupport.objects.filter(idea=self).count()
 
