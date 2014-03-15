@@ -402,10 +402,11 @@ body:after {
   text-align: center;
 }
 
-/* line 284, ../scss/navV2.scss */
+/* line 285, ../scss/navV2.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
+#dislike-overlay,
 #update-avatar-overlay {
   width: 415px;
   padding-bottom: 30px;
@@ -413,17 +414,19 @@ body:after {
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 292, ../scss/navV2.scss */
+/* line 293, ../scss/navV2.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
+#dislike-overlay form,
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 296, ../scss/navV2.scss */
+/* line 297, ../scss/navV2.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
+#dislike-overlay h6,
 #update-avatar-overlay h6 {
   margin-top: 70px;
   margin-bottom: 35px;
@@ -432,7 +435,7 @@ body:after {
   font-weight: normal;
   font-size: 16px;
 }
-/* line 307, ../scss/navV2.scss */
+/* line 308, ../scss/navV2.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -442,19 +445,24 @@ body:after {
 #join-overlay #login-with-email,
 #join-overlay #join-organization,
 #join-overlay #join-email-account,
+#dislike-overlay #login-with-email,
+#dislike-overlay #join-organization,
+#dislike-overlay #join-email-account,
 #update-avatar-overlay #login-with-email,
 #update-avatar-overlay #join-organization,
 #update-avatar-overlay #join-email-account {
   text-align: center;
   line-height: 45px;
 }
-/* line 313, ../scss/navV2.scss */
+/* line 314, ../scss/navV2.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
 #logout-overlay #create-an-account,
 #join-overlay #forgot-password,
 #join-overlay #create-an-account,
+#dislike-overlay #forgot-password,
+#dislike-overlay #create-an-account,
 #update-avatar-overlay #forgot-password,
 #update-avatar-overlay #create-an-account {
   display: block;
@@ -464,47 +472,53 @@ body:after {
   font-size: 10px;
   font-weight: 100;
 }
-/* line 322, ../scss/navV2.scss */
+/* line 323, ../scss/navV2.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
+#dislike-overlay #join-email-account,
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 327, ../scss/navV2.scss */
+/* line 328, ../scss/navV2.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
+#dislike-overlay.reveal-email #login-with-email,
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 331, ../scss/navV2.scss */
+/* line 332, ../scss/navV2.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
+#dislike-overlay.reveal-email #overlay-login-form,
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 336, ../scss/navV2.scss */
+/* line 337, ../scss/navV2.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
+#dislike-overlay #overlay-login-form,
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 340, ../scss/navV2.scss */
+/* line 341, ../scss/navV2.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
+#dislike-overlay .oauths,
 #update-avatar-overlay .oauths {
   margin: 30px auto 0px;
   width: 195px;
   height: 60px;
 }
-/* line 345, ../scss/navV2.scss */
+/* line 346, ../scss/navV2.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
+#dislike-overlay .oauths a,
 #update-avatar-overlay .oauths a {
   background: url('../images/join-login-social-media.png?1390687060');
   background-repeat: no-repeat;
@@ -513,45 +527,50 @@ body:after {
   width: 44px;
   float: left;
 }
-/* line 353, ../scss/navV2.scss */
+/* line 354, ../scss/navV2.scss */
 #login-overlay .oauths a.blue,
 #logout-overlay .oauths a.blue,
 #join-overlay .oauths a.blue,
+#dislike-overlay .oauths a.blue,
 #update-avatar-overlay .oauths a.blue {
   background: url('../images/join-login-social-media-blue.png?1394892046');
 }
-/* line 357, ../scss/navV2.scss */
+/* line 358, ../scss/navV2.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
+#dislike-overlay .oauths a.facebook-oauth,
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 361, ../scss/navV2.scss */
+/* line 362, ../scss/navV2.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
+#dislike-overlay .oauths a.linkedin-oauth,
 #update-avatar-overlay .oauths a.linkedin-oauth {
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 367, ../scss/navV2.scss */
+/* line 368, ../scss/navV2.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
+#dislike-overlay .oauths a.twitter-oauth,
 #update-avatar-overlay .oauths a.twitter-oauth {
   width: 50px;
   background-position: -78px 0;
 }
-/* line 375, ../scss/navV2.scss */
+/* line 376, ../scss/navV2.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
+#dislike-overlay #login-error,
 #update-avatar-overlay #login-error {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 382, ../scss/navV2.scss */
+/* line 383, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -561,6 +580,9 @@ body:after {
 #join-overlay input[type="password"],
 #join-overlay input[type="email"],
 #join-overlay input[type="text"],
+#dislike-overlay input[type="password"],
+#dislike-overlay input[type="email"],
+#dislike-overlay input[type="text"],
 #update-avatar-overlay input[type="password"],
 #update-avatar-overlay input[type="email"],
 #update-avatar-overlay input[type="text"] {
@@ -574,10 +596,11 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 390, ../scss/navV2.scss */
+/* line 391, ../scss/navV2.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
+#dislike-overlay .submit,
 #update-avatar-overlay .submit {
   height: 45px;
   width: 365px;
@@ -599,21 +622,67 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 397, ../scss/navV2.scss */
+/* line 398, ../scss/navV2.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
+#dislike-overlay .submit.large-text,
 #update-avatar-overlay .submit.large-text {
   font-size: 16px;
 }
 
 /* line 404, ../scss/navV2.scss */
+#dislike-overlay {
+  width: 250px;
+  background-color: #ffffff;
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  text-align: center;
+}
+/* line 409, ../scss/navV2.scss */
+#dislike-overlay img {
+  margin: 30px 0 0;
+}
+/* line 412, ../scss/navV2.scss */
+#dislike-overlay p {
+  font-style: italic;
+  font-size: 12px;
+  width: 200px;
+  margin: 0 auto 20px;
+}
+/* line 419, ../scss/navV2.scss */
+#dislike-overlay h6 {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 12px;
+  margin: 10px 0 0;
+}
+/* line 427, ../scss/navV2.scss */
+#dislike-overlay a {
+  width: 100px;
+  height: 30px;
+  font-size: 12px;
+  float: left;
+  margin-left: 16px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+/* line 436, ../scss/navV2.scss */
+#dislike-overlay a:visited {
+  color: #FFFFFF;
+}
+
+/* line 444, ../scss/navV2.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 410, ../scss/navV2.scss */
+/* line 450, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -623,18 +692,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 419, ../scss/navV2.scss */
+/* line 459, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 424, ../scss/navV2.scss */
+/* line 464, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 428, ../scss/navV2.scss */
+/* line 468, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -655,7 +724,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 449, ../scss/navV2.scss */
+/* line 489, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -681,18 +750,18 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 468, ../scss/navV2.scss */
+/* line 508, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 472, ../scss/navV2.scss */
+/* line 512, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 476, ../scss/navV2.scss */
+/* line 516, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -700,14 +769,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 482, ../scss/navV2.scss */
+/* line 522, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 493, ../scss/navV2.scss */
+/* line 533, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;

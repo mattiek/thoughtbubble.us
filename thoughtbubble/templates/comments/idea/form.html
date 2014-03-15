@@ -8,7 +8,8 @@
         {{ form.parent }}
         {{ form.honeypot }}
         <input type="hidden" name="next" value="{{ idea.get_absolute_url }}" />
-            <a href="#submit" class="orange buttonize submit_comment">comment</a>
+        <span id="comment_submit"></span>
+        <a href="#submit" class="orange buttonize submit_comment">comment</a>
         <div style="clear:both"></div>
 {#            <a href="#c0" id="cancel_reply">cancel reply</a>#}
     </form>

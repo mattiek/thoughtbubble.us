@@ -106,6 +106,20 @@ class Idea(models.Model):
         d = now() - self.date_created
         return d.days
 
+    def get_add_to_location_url(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return reverse('addidea',args=[
+                url_safe(place.slug) ])
+        else: # its a location
+            location = self.content_object
+            return reverse('addidea',args=[
+                url_safe(location.organization.place.slug),
+                url_safe(location.organization.slug),
+                url_safe(location.slug),
+                #  url_safe(location.slug)
+            ])
+
     def get_support_url(self):
         # if self.content_type.name == 'neighborhood':
         #     neighborhood = self.content_object

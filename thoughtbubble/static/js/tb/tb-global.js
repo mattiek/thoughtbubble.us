@@ -61,8 +61,59 @@ $(document).on("click", ".dislike", function(e) {
   e.preventDefault();
   return $.magnificPopup.open({
     items: {
-      src: '#login-overlay',
+      src: '#dislike-overlay',
       type: 'inline'
-    }
+    },
+      callbacks: {
+          open: function() {
+             playDinoSound();
+          }
+     }
   });
 });
+
+$(document).on("click", "#dino_comment", function(e) {
+    return $.magnificPopup.close();
+});
+
+var context;
+window.addEventListener('load', init, false);
+function init() {
+    try {
+        window.dinoSoundBuffer = null;
+        // Fix up prefixing
+        window.AudioContext = window.AudioContext || window.webkitAudioContext;
+        context = new AudioContext();
+
+        function onError(e) {
+            console.log(e);
+        }
+        function loadDinoSound(url) {
+            var request = new XMLHttpRequest();
+            request.open('GET', url, true);
+            request.responseType = 'arraybuffer';
+
+            // Decode asynchronously
+            request.onload = function() {
+                context.decodeAudioData(request.response, function(buffer) {
+                    window.dinoSoundBuffer = buffer;
+                }, onError);
+            }
+            request.send();
+        }
+
+        loadDinoSound(dinoSoundURL);
+    }
+    catch(e) {
+//        alert('Web Audio API is not supported in this browser');
+    }
+}
+
+function playDinoSound() {
+    buffer = window.dinoSoundBuffer;
+    var source = context.createBufferSource(); // creates a sound source
+    source.buffer = buffer;                    // tell the source which sound to play
+    source.connect(context.destination);       // connect the source to the context's destination (the speakers)
+    source.start(0);                           // play the source now
+    // note: on older systems, may have to use deprecated noteOn(time);
+}

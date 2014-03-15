@@ -20,6 +20,9 @@
     <script src="{{ STATIC_URL }}js/handlebars.js"></script>
     <script src="{{ STATIC_URL }}js/tb/tb-supporting.js"></script>
 
+    <script type="text/javascript">
+        var dinoSoundURL = "{{ STATIC_URL }}sounds/dino.mp3";
+    </script>
     {% block head %}
     {% endblock %}
 </head>
@@ -129,6 +132,19 @@
     </form>
 </div>
 
+<div id="dislike-overlay" class="white-popup mfp-hide">
+    <img src="{{ STATIC_URL }}images/big_jimmy.png" alt=""/>
+    <h6>We are an open community.</h6>
+    <p>
+    To dislike an idea you must create a new idea that you think
+    would better benefit the community or face our t-rex, Jimmy.
+    </p>
+
+
+    <a href="#comment_submit" id="dino_comment" class="orange">comment</a>
+    <a href="{{ idea.get_add_to_location_url }}" class="blue" id="dino_top">top that!</a>
+    <div style="clear:both;"></div>
+</div>
 
 
 {#Error#}
