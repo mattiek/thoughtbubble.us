@@ -95,13 +95,13 @@
         <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
     </div>
 
-    <a href="#overlay-login-form" id="login-with-email" class="submit">login with email</a>
+    <a href="#overlay-login-form" id="login-with-email" class="submit large-text">login with email</a>
     <form id="overlay-login-form" action="/login" method="POST">
         {% csrf_token %}
         <p id="login-error"></p>
         {{ loginform.email }}
         {{ loginform.password }}
-        <input type="submit" class="submit login" value="login" />
+        <input type="submit" class="submit login large-text" value="login" />
         <a id="forgot-password" href="#">forgot your password?</a>
     </form>
     <a href="#join-overlay" id="create-an-account">create an account</a>
@@ -125,7 +125,7 @@
     <h6>Account Logout</h6>
     <form id="overlay-logout-form" action="{% url 'account_logout' %}" method="POST">
         {% csrf_token %}
-        <input type="submit" class="submit" value="log me out" />
+        <input type="submit" class="submit large-text" value="log me out" />
     </form>
 </div>
 

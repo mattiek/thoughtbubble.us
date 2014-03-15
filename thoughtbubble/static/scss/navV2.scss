@@ -393,6 +393,17 @@ body {
     float: none;
     margin: 0 auto;
     @include orange-gradient-button;
+
+    &.large-text {
+      font-size: 16px;
+    }
+  }
+}
+
+#overlay-login-form {
+  input {
+    font-size: 16px;
+    text-indent: 15px;
   }
 }
 

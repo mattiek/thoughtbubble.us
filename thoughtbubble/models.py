@@ -17,7 +17,7 @@ class ThoughtbubbleUserManager(BaseUserManager):
             raise ValueError(msg)
 
         user = self.model(
-            username=username,
+            username=username.lower(),
             email=ThoughtbubbleUserManager.normalize_email(email)
         )
 
@@ -86,6 +86,8 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
     def __unicode__(self):
         return self.get_short_name()
+
+
 
 
 class ThoughtbubbleUserProfile(models.Model):

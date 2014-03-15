@@ -599,8 +599,21 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
+/* line 397, ../scss/navV2.scss */
+#login-overlay .submit.large-text,
+#logout-overlay .submit.large-text,
+#join-overlay .submit.large-text,
+#update-avatar-overlay .submit.large-text {
+  font-size: 16px;
+}
 
-/* line 399, ../scss/navV2.scss */
+/* line 404, ../scss/navV2.scss */
+#overlay-login-form input {
+  font-size: 16px;
+  text-indent: 15px;
+}
+
+/* line 410, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -610,18 +623,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 408, ../scss/navV2.scss */
+/* line 419, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 413, ../scss/navV2.scss */
+/* line 424, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 417, ../scss/navV2.scss */
+/* line 428, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -642,7 +655,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 438, ../scss/navV2.scss */
+/* line 449, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -668,18 +681,18 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 457, ../scss/navV2.scss */
+/* line 468, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 461, ../scss/navV2.scss */
+/* line 472, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 465, ../scss/navV2.scss */
+/* line 476, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -687,14 +700,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 471, ../scss/navV2.scss */
+/* line 482, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 482, ../scss/navV2.scss */
+/* line 493, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
