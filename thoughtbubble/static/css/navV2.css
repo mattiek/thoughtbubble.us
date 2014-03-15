@@ -453,7 +453,7 @@ body:after {
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
 #update-avatar-overlay .oauths a.linkedin-oauth {
-  background-position: 44px 0;
+  background-position: -157px 0;
   margin: 0 20px;
 }
 /* line 363, ../scss/navV2.scss */
@@ -462,7 +462,7 @@ body:after {
 #join-overlay .oauths a.twitter-oauth,
 #update-avatar-overlay .oauths a.twitter-oauth {
   width: 50px;
-  background-position: 124px 0;
+  background-position: -78px 0;
 }
 /* line 371, ../scss/navV2.scss */
 #login-overlay #login-error,
