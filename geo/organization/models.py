@@ -10,6 +10,16 @@ from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
 
 
+class OrganizationCuratorRole(models.Model):
+    title = models.CharField(max_length=30)
+    authority = models.IntegerField(default=0)
+
+
+class OrganizationCurator(models.Model):
+    curator = models.ForeignKey(ThoughtbubbleUser)
+    role = models.ForeignKey(OrganizationCuratorRole, null=True, blank=True)
+
+
 class Organization(models.Model):
     place = models.ForeignKey(Place, null=True, blank=True)
     slug = AutoSlugField(populate_from='title', unique_with='place')
@@ -26,7 +36,7 @@ class Organization(models.Model):
     about = models.TextField(null=True, blank=True)
     sherlock_description = models.TextField(null=True, blank=True)
 
-    curator = models.ForeignKey(ThoughtbubbleUser, related_name="organization_curator", null=True, blank=True)
+    curators = models.ManyToManyField(OrganizationCurator, related_name="organization_curator", null=True, blank=True)
 
     members = models.ManyToManyField(ThoughtbubbleUser, null=True, blank=True)
 

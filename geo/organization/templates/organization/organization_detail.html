@@ -22,7 +22,7 @@
                 <img src="{{ organization.get_logo }}" alt=""/>
             </div>
 
-        {% if organization.curator == request.user or request.user.is_superuser %}
+        {% if request.user in organization.curators.all or request.user.is_superuser %}
             <h1 style="margin:0px;"><a href="{{ organization.get_update_url }}">admin</a></h1>
         {% endif %}
         <div class="row title">
