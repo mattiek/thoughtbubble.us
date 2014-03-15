@@ -36,6 +36,7 @@ var setActive = function(index, ease) {
     // Set active class on sections, markers.
 //    _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
     _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
+    $(sections).removeClass('active');
     $(sections[index]).addClass('active');
     markers[index].element.className += ' active';
 

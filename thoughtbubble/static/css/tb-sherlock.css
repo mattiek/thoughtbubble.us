@@ -295,7 +295,7 @@ section {
   transition: background 500ms, color 500ms;
   -moz-transition: background 500ms, color 500ms;
   -webkit-transition: background 500ms, color 500ms;
-  background: #FFFFFF;
+  background: #DADADA;
   border-radius: 10px;
   color: #7b7b7b;
   /* text color */
