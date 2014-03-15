@@ -350,6 +350,10 @@ body {
       width: 44px;
       float: left;
 
+      &.blue {
+        background: image-url('join-login-social-media-blue.png');
+      }
+
       &.facebook-oauth {
         width: 58px;
       }

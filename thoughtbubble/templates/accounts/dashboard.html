@@ -57,10 +57,10 @@
         <form id="social-form" class="uniForm" method="post">
             {% csrf_token %}
             <input id="id_account_removal" type="hidden" name="account" value=""/>
-        <ul id="social-accounts">
-            <li class="title">Twitter</li>
-            <li class="title">Facebook</li>
-            <li class="title">LinkedIn</li>
+        <ul id="social-accounts" class="oauths-list">
+            <li class="title twitter-oauth"><img src="{{ STATIC_URL }}images/twitter-blue.png" alt=""/></li>
+            <li class="title facebook-oauth"><img src="{{ STATIC_URL }}images/facebook-blue.png" alt=""/></li>
+            <li class="title linkedin-oauth"><img src="{{ STATIC_URL }}images/linkedin-blue.png" alt=""/></li>
             <li class="social">{{ user.get_twitter_account.get_provider_account|default:"not connected" }}</li>
             <li class="social">{{ user.get_facebook_account.get_provider_account|default:"not connected" }}</li>
             <li class="social">{{ user.get_linkedin_account.get_provider_account|default:"not connected" }}</li>

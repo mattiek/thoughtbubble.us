@@ -442,13 +442,20 @@ body:after {
   float: left;
 }
 /* line 353, ../scss/navV2.scss */
+#login-overlay .oauths a.blue,
+#logout-overlay .oauths a.blue,
+#join-overlay .oauths a.blue,
+#update-avatar-overlay .oauths a.blue {
+  background: url('../images/join-login-social-media-blue.png?1394892046');
+}
+/* line 357, ../scss/navV2.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 357, ../scss/navV2.scss */
+/* line 361, ../scss/navV2.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
@@ -456,7 +463,7 @@ body:after {
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 363, ../scss/navV2.scss */
+/* line 367, ../scss/navV2.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
@@ -464,7 +471,7 @@ body:after {
   width: 50px;
   background-position: -78px 0;
 }
-/* line 371, ../scss/navV2.scss */
+/* line 375, ../scss/navV2.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
@@ -472,7 +479,7 @@ body:after {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 378, ../scss/navV2.scss */
+/* line 382, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -495,7 +502,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 386, ../scss/navV2.scss */
+/* line 390, ../scss/navV2.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -521,7 +528,7 @@ body:after {
   display: block;
 }
 
-/* line 395, ../scss/navV2.scss */
+/* line 399, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -531,18 +538,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 404, ../scss/navV2.scss */
+/* line 408, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 409, ../scss/navV2.scss */
+/* line 413, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 413, ../scss/navV2.scss */
+/* line 417, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -563,7 +570,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 434, ../scss/navV2.scss */
+/* line 438, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -589,18 +596,18 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 453, ../scss/navV2.scss */
+/* line 457, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 457, ../scss/navV2.scss */
+/* line 461, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 461, ../scss/navV2.scss */
+/* line 465, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -608,14 +615,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 467, ../scss/navV2.scss */
+/* line 471, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 478, ../scss/navV2.scss */
+/* line 482, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
