@@ -51,20 +51,18 @@
         <h3>organization</h3>
         <div id="minisplore-wrapper">
                 <ul>
-                    {% for organization in organizations %}
-                        <li><a class="organization" href="{% url 'sherlock'  organization.id %}"
-                               data-id="{{ organization.id }}"
-                               data-organization="{{ organization.id }}"
-                                >{{ organization.title }}</a></li>
-                    {% endfor %}
+{#                    {% for organization in organizations %}#}
+{#                        <li>#}
+{#                           </li>#}
+{#                    {% endfor %}#}
 {#                        <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>#}
                 </ul>
         </div>
     </div>
 
-    <article id="communisplore">
-
-    </article>
+{#    <article id="communisplore">#}
+{##}
+{#    </article>#}
 
     {% verbatim %}
     <script id="section-template" type="text/x-handlebars-template">

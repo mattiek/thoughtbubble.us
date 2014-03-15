@@ -227,15 +227,20 @@ textarea {
   background: url(../../images/orange-arrow.png) no-repeat 0;
   background-position: 90%;
 }
+/* line 83, ../../scss/map/explore.scss */
+#minisplore li a {
+  width: 230px;
+  display: block;
+}
 
-/* line 93, ../../scss/map/explore.scss */
+/* line 98, ../../scss/map/explore.scss */
 #metrodifier {
   position: relative;
   width: 220px;
   float: right;
 }
 
-/* line 99, ../../scss/map/explore.scss */
+/* line 104, ../../scss/map/explore.scss */
 #communisplore {
   display: none;
   position: absolute;
@@ -247,18 +252,18 @@ textarea {
   /* -webkit-overflow-scrolling: touch; */
   /* uncomment to accelerate scrolling on iOS */
 }
-/* line 107, ../../scss/map/explore.scss */
+/* line 112, ../../scss/map/explore.scss */
 #communisplore div.ending {
   width: 100%;
   height: 640px;
 }
-/* line 114, ../../scss/map/explore.scss */
+/* line 119, ../../scss/map/explore.scss */
 #communisplore::-webkit-scrollbar {
   /* Prevents webkit cross-direction scrolling bug */
   width: 0;
 }
 
-/* line 121, ../../scss/map/explore.scss */
+/* line 126, ../../scss/map/explore.scss */
 article {
   width: 33.3333%;
   min-width: 320px;
@@ -268,7 +273,7 @@ article {
   width: 100%;
 }
 
-/* line 130, ../../scss/map/explore.scss */
+/* line 135, ../../scss/map/explore.scss */
 section {
   padding: 10px;
   margin-left: 40px;
@@ -284,21 +289,21 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 148, ../../scss/map/explore.scss */
+/* line 153, ../../scss/map/explore.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 152, ../../scss/map/explore.scss */
+/* line 157, ../../scss/map/explore.scss */
 section.active .extended {
   display: block;
 }
-/* line 157, ../../scss/map/explore.scss */
+/* line 162, ../../scss/map/explore.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 164, ../../scss/map/explore.scss */
+/* line 169, ../../scss/map/explore.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -307,33 +312,33 @@ section a h4 {
   margin: 0;
 }
 
-/* line 173, ../../scss/map/explore.scss */
+/* line 178, ../../scss/map/explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 174, ../../scss/map/explore.scss */
+/* line 179, ../../scss/map/explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 175, ../../scss/map/explore.scss */
+/* line 180, ../../scss/map/explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 176, ../../scss/map/explore.scss */
+/* line 181, ../../scss/map/explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 177, ../../scss/map/explore.scss */
+/* line 182, ../../scss/map/explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 179, ../../scss/map/explore.scss */
+/* line 184, ../../scss/map/explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -343,13 +348,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 186, ../../scss/map/explore.scss */
+/* line 191, ../../scss/map/explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 191, ../../scss/map/explore.scss */
+/* line 196, ../../scss/map/explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -358,21 +363,21 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 197, ../../scss/map/explore.scss */
+/* line 202, ../../scss/map/explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 200, ../../scss/map/explore.scss */
+/* line 205, ../../scss/map/explore.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 203, ../../scss/map/explore.scss */
+/* line 208, ../../scss/map/explore.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 211, ../../scss/map/explore.scss */
+/* line 216, ../../scss/map/explore.scss */
 .tt-dropdown-menu {
   position: absolute;
   z-index: 99;
@@ -391,37 +396,37 @@ h1, h2 {
   text-indent: 20px;
   overflow: visible;
 }
-/* line 231, ../../scss/map/explore.scss */
+/* line 236, ../../scss/map/explore.scss */
 .tt-dropdown-menu p {
   margin-bottom: 5px;
 }
 
-/* line 236, ../../scss/map/explore.scss */
+/* line 241, ../../scss/map/explore.scss */
 .twitter-typeahead {
   display: block !important;
   width: 87%;
   margin: 0 auto;
 }
 
-/* line 245, ../../scss/map/explore.scss */
+/* line 250, ../../scss/map/explore.scss */
 .leaflet-container h3 {
   margin: 0px;
 }
 
-/* line 256, ../../scss/map/explore.scss */
+/* line 261, ../../scss/map/explore.scss */
 .leaflet-popup-content a h3 {
   color: #4585c3;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 262, ../../scss/map/explore.scss */
+/* line 267, ../../scss/map/explore.scss */
 .leaflet-popup-content h3 {
   color: #000;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 271, ../../scss/map/explore.scss */
+/* line 276, ../../scss/map/explore.scss */
 .leaflet-control-locate {
   background-color: #fff;
   border: 1px solid #999;
@@ -429,23 +434,23 @@ h1, h2 {
   border-radius: 3px;
   box-shadow: none;
 }
-/* line 278, ../../scss/map/explore.scss */
+/* line 283, ../../scss/map/explore.scss */
 .leaflet-control-locate a {
   background-color: #fff;
   background-position: -3px, -2px;
 }
-/* line 283, ../../scss/map/explore.scss */
+/* line 288, ../../scss/map/explore.scss */
 .leaflet-control-locate.active a {
   background-position: -33px -2px;
 }
 
-/* line 290, ../../scss/map/explore.scss */
+/* line 295, ../../scss/map/explore.scss */
 #compass-rose {
   position: absolute;
   right: 8px;
   top: 110px;
 }
-/* line 295, ../../scss/map/explore.scss */
+/* line 300, ../../scss/map/explore.scss */
 #compass-rose #compass {
   background: url('../../images/compass.png?1391566529');
   width: 31px;
@@ -456,7 +461,7 @@ h1, h2 {
   top: 0px;
   z-index: 5;
 }
-/* line 303, ../../scss/map/explore.scss */
+/* line 308, ../../scss/map/explore.scss */
 #compass-rose #compass-instructions {
   width: 160px;
   height: 145px;
@@ -467,7 +472,7 @@ h1, h2 {
   z-index: 2;
   overflow: hidden;
 }
-/* line 314, ../../scss/map/explore.scss */
+/* line 319, ../../scss/map/explore.scss */
 #compass-rose ol {
   color: #878585;
   font-family: "Museo Sans", sans-serif;
@@ -476,32 +481,32 @@ h1, h2 {
   text-indent: 10px;
   margin-top: 5px;
 }
-/* line 322, ../../scss/map/explore.scss */
+/* line 327, ../../scss/map/explore.scss */
 #compass-rose ol b {
   font-size: 14px;
 }
-/* line 326, ../../scss/map/explore.scss */
+/* line 331, ../../scss/map/explore.scss */
 #compass-rose ol span {
   line-height: 14px;
   vertical-align: text-bottom;
 }
-/* line 331, ../../scss/map/explore.scss */
+/* line 336, ../../scss/map/explore.scss */
 #compass-rose ol.share-support {
   text-indent: 0;
   text-align: center;
 }
-/* line 337, ../../scss/map/explore.scss */
+/* line 342, ../../scss/map/explore.scss */
 #compass-rose ul {
   color: #878585;
   font-family: "Museo Sans", sans-serif;
   font-size: 11px;
 }
-/* line 342, ../../scss/map/explore.scss */
+/* line 347, ../../scss/map/explore.scss */
 #compass-rose ul li {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 347, ../../scss/map/explore.scss */
+/* line 352, ../../scss/map/explore.scss */
 #compass-rose ul img {
   vertical-align: text-bottom;
   margin-right: 5px;
