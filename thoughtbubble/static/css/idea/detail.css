@@ -521,14 +521,17 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
   margin-left: 20px;
+  width: 460px;
+  height: 70px;
+  padding: 12px;
 }
 
-/* line 55, ../../scss/idea/detail.scss */
+/* line 58, ../../scss/idea/detail.scss */
 #form-comment {
   margin-top: 10px;
 }
 
-/* line 59, ../../scss/idea/detail.scss */
+/* line 62, ../../scss/idea/detail.scss */
 .news {
   color: #9d9d9d;
   /* text color */
@@ -536,17 +539,17 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-size: 15px;
 }
 
-/* line 65, ../../scss/idea/detail.scss */
+/* line 68, ../../scss/idea/detail.scss */
 .dislike.blue {
   margin: 0 20px;
 }
 
-/* line 69, ../../scss/idea/detail.scss */
+/* line 72, ../../scss/idea/detail.scss */
 #comments {
   margin-top: 50px;
 }
 
-/* line 74, ../../scss/idea/detail.scss */
+/* line 77, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
@@ -554,50 +557,50 @@ i {
   padding-left: 15px;
 }
 
-/* line 83, ../../scss/idea/detail.scss */
+/* line 86, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 86, ../../scss/idea/detail.scss */
+/* line 89, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 92, ../../scss/idea/detail.scss */
+/* line 95, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 95, ../../scss/idea/detail.scss */
+/* line 98, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 101, ../../scss/idea/detail.scss */
+/* line 104, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 105, ../../scss/idea/detail.scss */
+/* line 108, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 110, ../../scss/idea/detail.scss */
+/* line 113, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 114, ../../scss/idea/detail.scss */
+/* line 117, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 117, ../../scss/idea/detail.scss */
+/* line 120, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 123, ../../scss/idea/detail.scss */
+/* line 126, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }

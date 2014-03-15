@@ -343,7 +343,7 @@ body:after {
   width: 100%;
   background-color: #49c3dd;
   /* layer fill content */
-  margin: 0px 0 0 0;
+  margin: 20px 0 0 0;
 }
 /* line 230, ../scss/navV2.scss */
 #footer ul {
