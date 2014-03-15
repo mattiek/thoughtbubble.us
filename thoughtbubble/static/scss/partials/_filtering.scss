@@ -1,4 +1,8 @@
 @import "general";
+@import "compass";
+@import "compass/utilities/sprites";
+@import "filtering/*.png";
+
 #filtering {
   @include header-blue-museo;
   font-size: 14px;
@@ -18,6 +22,32 @@
 .chosen-container-single .chosen-drop .chosen-results li {
   @include header-blue-museo;
   font-size: 14px;
+
+}
+
+.chzn-container-single {
+  .chzn-single {
+    div {
+      background: transparent;
+      border: none;
+      width: 14px;
+      b {
+        //height: filtering-sprite-height(normal);
+        //width: directional-sprite-width(normal);
+        @include filtering-sprite(orange-arrow);
+        height: 7px;
+        margin-top: 8px;
+      }
+    }
+
+    &.chzn-single-with-drop {
+      b {
+        //height: filtering-sprite-height(normal);
+        //width: directional-sprite-width(normal);
+        @include filtering-sprite(orange-arrow-down);
+      }
+    }
+  }
 }
 
 #order, #order_chosen {

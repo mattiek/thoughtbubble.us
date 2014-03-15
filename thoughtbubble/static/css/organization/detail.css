@@ -518,23 +518,28 @@ ol.slats li p span.meta {
 }
 
 /* text color */
-/* line 2, ../../scss/partials/_filtering.scss */
+/* line 50, filtering/*.png */
+.filtering-sprite, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-single.chzn-single-with-drop b {
+  background: url('../../images/filtering-s20e78543db.png') no-repeat;
+}
+
+/* line 6, ../../scss/partials/_filtering.scss */
 #filtering {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 14px;
   width: 570px;
-  margin: 0 auto 0px;
+  margin: 0 auto 10px;
 }
 @media screen and (max-width: 480px) {
-  /* line 2, ../../scss/partials/_filtering.scss */
+  /* line 6, ../../scss/partials/_filtering.scss */
   #filtering {
     width: 100%;
   }
 }
 
-/* line 18, ../../scss/partials/_filtering.scss */
+/* line 22, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single,
 .chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default,
@@ -546,14 +551,31 @@ ol.slats li p span.meta {
   font-size: 14px;
 }
 
-/* line 23, ../../scss/partials/_filtering.scss */
+/* line 30, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single div {
+  background: transparent;
+  border: none;
+  width: 14px;
+}
+/* line 34, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single div b {
+  background-position: 0 0;
+  height: 7px;
+  margin-top: 8px;
+}
+/* line 44, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single.chzn-single-with-drop b {
+  background-position: 0 -7px;
+}
+
+/* line 53, ../../scss/partials/_filtering.scss */
 #order, #order_chosen {
   width: 150px;
   margin-left: 20px;
   margin-right: 20px;
 }
 @media screen and (max-width: 480px) {
-  /* line 23, ../../scss/partials/_filtering.scss */
+  /* line 53, ../../scss/partials/_filtering.scss */
   #order, #order_chosen {
     width: 100%;
     margin: 5px 0px;
@@ -561,7 +583,7 @@ ol.slats li p span.meta {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 34, ../../scss/partials/_filtering.scss */
+  /* line 64, ../../scss/partials/_filtering.scss */
   #id_where {
     width: 100%;
     margin: 0px;
@@ -569,14 +591,14 @@ ol.slats li p span.meta {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 41, ../../scss/partials/_filtering.scss */
+  /* line 71, ../../scss/partials/_filtering.scss */
   .chosen-container {
     margin-bottom: 5px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  /* line 47, ../../scss/partials/_filtering.scss */
+  /* line 77, ../../scss/partials/_filtering.scss */
   .chzn-container-single .chzn-single,
   .chosen-container-single .chosen-single {
     background-image: none;
@@ -587,17 +609,19 @@ ol.slats li p span.meta {
     -ms-border-radius: 0px;
     -o-border-radius: 0px;
     border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 5px white;
+    -moz-box-shadow: 0px 0px 5px white;
     box-shadow: 0px 0px 5px white;
     width: 100%;
   }
 }
 
-/* line 61, ../../scss/partials/_filtering.scss */
+/* line 91, ../../scss/partials/_filtering.scss */
 #sort_by {
   vertical-align: super;
 }
 @media screen and (max-width: 480px) {
-  /* line 61, ../../scss/partials/_filtering.scss */
+  /* line 91, ../../scss/partials/_filtering.scss */
   #sort_by {
     display: block;
     padding: 10px;
