@@ -219,28 +219,30 @@ textarea {
   display: block;
   margin-bottom: 0px;
   list-style-type: none;
+  text-indent: 0px;
+  margin-left: 10px;
 }
-/* line 77, ../../scss/map/explore.scss */
+/* line 79, ../../scss/map/explore.scss */
 #minisplore li {
   font-size: 16px;
   margin-bottom: 10px;
   background: url(../../images/orange-arrow.png) no-repeat 0;
   background-position: 90%;
 }
-/* line 83, ../../scss/map/explore.scss */
+/* line 85, ../../scss/map/explore.scss */
 #minisplore li a {
-  width: 230px;
+  width: 220px;
   display: block;
 }
 
-/* line 98, ../../scss/map/explore.scss */
+/* line 100, ../../scss/map/explore.scss */
 #metrodifier {
   position: relative;
   width: 220px;
   float: right;
 }
 
-/* line 104, ../../scss/map/explore.scss */
+/* line 106, ../../scss/map/explore.scss */
 #communisplore {
   display: none;
   position: absolute;
@@ -252,18 +254,18 @@ textarea {
   /* -webkit-overflow-scrolling: touch; */
   /* uncomment to accelerate scrolling on iOS */
 }
-/* line 112, ../../scss/map/explore.scss */
+/* line 114, ../../scss/map/explore.scss */
 #communisplore div.ending {
   width: 100%;
   height: 640px;
 }
-/* line 119, ../../scss/map/explore.scss */
+/* line 121, ../../scss/map/explore.scss */
 #communisplore::-webkit-scrollbar {
   /* Prevents webkit cross-direction scrolling bug */
   width: 0;
 }
 
-/* line 126, ../../scss/map/explore.scss */
+/* line 128, ../../scss/map/explore.scss */
 article {
   width: 33.3333%;
   min-width: 320px;
@@ -273,7 +275,7 @@ article {
   width: 100%;
 }
 
-/* line 135, ../../scss/map/explore.scss */
+/* line 137, ../../scss/map/explore.scss */
 section {
   padding: 10px;
   margin-left: 40px;
@@ -289,21 +291,21 @@ section {
   margin-bottom: 10px;
   width: 265px;
 }
-/* line 153, ../../scss/map/explore.scss */
+/* line 155, ../../scss/map/explore.scss */
 section.active {
   background: #cdcdcd;
   color: #eee;
 }
-/* line 157, ../../scss/map/explore.scss */
+/* line 159, ../../scss/map/explore.scss */
 section.active .extended {
   display: block;
 }
-/* line 162, ../../scss/map/explore.scss */
+/* line 164, ../../scss/map/explore.scss */
 section p {
   margin: 10px 0;
 }
 
-/* line 169, ../../scss/map/explore.scss */
+/* line 171, ../../scss/map/explore.scss */
 section a h4 {
   color: #53b8d1;
   /* text color */
@@ -312,33 +314,33 @@ section a h4 {
   margin: 0;
 }
 
-/* line 178, ../../scss/map/explore.scss */
+/* line 180, ../../scss/map/explore.scss */
 section.active a {
   color: #eee;
 }
 
-/* line 179, ../../scss/map/explore.scss */
+/* line 181, ../../scss/map/explore.scss */
 section.active small {
   color: #aaa;
 }
 
-/* line 180, ../../scss/map/explore.scss */
+/* line 182, ../../scss/map/explore.scss */
 h1 {
   font-size: 2em;
   line-height: 1em;
 }
 
-/* line 181, ../../scss/map/explore.scss */
+/* line 183, ../../scss/map/explore.scss */
 h2 {
   font-size: 1.3333em;
 }
 
-/* line 182, ../../scss/map/explore.scss */
+/* line 184, ../../scss/map/explore.scss */
 h1, h2 {
   margin: 0px 0px 10px;
 }
 
-/* line 184, ../../scss/map/explore.scss */
+/* line 186, ../../scss/map/explore.scss */
 .scroll {
   position: absolute;
   right: 0px;
@@ -348,13 +350,13 @@ h1, h2 {
   padding: 5px 10px;
 }
 
-/* line 191, ../../scss/map/explore.scss */
+/* line 193, ../../scss/map/explore.scss */
 .colophon {
   display: block;
   margin-top: 10px;
 }
 
-/* line 196, ../../scss/map/explore.scss */
+/* line 198, ../../scss/map/explore.scss */
 .cover:before {
   content: '';
   display: block;
@@ -363,21 +365,21 @@ h1, h2 {
   margin: 0px auto 20px;
 }
 
-/* line 202, ../../scss/map/explore.scss */
+/* line 204, ../../scss/map/explore.scss */
 .cover.active:before {
   background: url(sprite.png) 0px -120px no-repeat;
 }
 
-/* line 205, ../../scss/map/explore.scss */
+/* line 207, ../../scss/map/explore.scss */
 .share a {
   margin-left: 10px;
 }
-/* line 208, ../../scss/map/explore.scss */
+/* line 210, ../../scss/map/explore.scss */
 .share a:first-child {
   margin-left: 0;
 }
 
-/* line 216, ../../scss/map/explore.scss */
+/* line 218, ../../scss/map/explore.scss */
 .tt-dropdown-menu {
   position: absolute;
   z-index: 99;
@@ -396,37 +398,37 @@ h1, h2 {
   text-indent: 20px;
   overflow: visible;
 }
-/* line 236, ../../scss/map/explore.scss */
+/* line 238, ../../scss/map/explore.scss */
 .tt-dropdown-menu p {
   margin-bottom: 5px;
 }
 
-/* line 241, ../../scss/map/explore.scss */
+/* line 243, ../../scss/map/explore.scss */
 .twitter-typeahead {
   display: block !important;
   width: 87%;
   margin: 0 auto;
 }
 
-/* line 250, ../../scss/map/explore.scss */
+/* line 252, ../../scss/map/explore.scss */
 .leaflet-container h3 {
   margin: 0px;
 }
 
-/* line 261, ../../scss/map/explore.scss */
+/* line 263, ../../scss/map/explore.scss */
 .leaflet-popup-content a h3 {
   color: #4585c3;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 267, ../../scss/map/explore.scss */
+/* line 269, ../../scss/map/explore.scss */
 .leaflet-popup-content h3 {
   color: #000;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 276, ../../scss/map/explore.scss */
+/* line 278, ../../scss/map/explore.scss */
 .leaflet-control-locate {
   background-color: #fff;
   border: 1px solid #999;
@@ -434,23 +436,23 @@ h1, h2 {
   border-radius: 3px;
   box-shadow: none;
 }
-/* line 283, ../../scss/map/explore.scss */
+/* line 285, ../../scss/map/explore.scss */
 .leaflet-control-locate a {
   background-color: #fff;
   background-position: -3px, -2px;
 }
-/* line 288, ../../scss/map/explore.scss */
+/* line 290, ../../scss/map/explore.scss */
 .leaflet-control-locate.active a {
   background-position: -33px -2px;
 }
 
-/* line 295, ../../scss/map/explore.scss */
+/* line 297, ../../scss/map/explore.scss */
 #compass-rose {
   position: absolute;
   right: 8px;
   top: 110px;
 }
-/* line 300, ../../scss/map/explore.scss */
+/* line 302, ../../scss/map/explore.scss */
 #compass-rose #compass {
   background: url('../../images/compass.png?1391566529');
   width: 31px;
@@ -461,7 +463,7 @@ h1, h2 {
   top: 0px;
   z-index: 5;
 }
-/* line 308, ../../scss/map/explore.scss */
+/* line 310, ../../scss/map/explore.scss */
 #compass-rose #compass-instructions {
   width: 160px;
   height: 145px;
@@ -472,7 +474,7 @@ h1, h2 {
   z-index: 2;
   overflow: hidden;
 }
-/* line 319, ../../scss/map/explore.scss */
+/* line 321, ../../scss/map/explore.scss */
 #compass-rose ol {
   color: #878585;
   font-family: "Museo Sans", sans-serif;
@@ -481,32 +483,32 @@ h1, h2 {
   text-indent: 10px;
   margin-top: 5px;
 }
-/* line 327, ../../scss/map/explore.scss */
+/* line 329, ../../scss/map/explore.scss */
 #compass-rose ol b {
   font-size: 14px;
 }
-/* line 331, ../../scss/map/explore.scss */
+/* line 333, ../../scss/map/explore.scss */
 #compass-rose ol span {
   line-height: 14px;
   vertical-align: text-bottom;
 }
-/* line 336, ../../scss/map/explore.scss */
+/* line 338, ../../scss/map/explore.scss */
 #compass-rose ol.share-support {
   text-indent: 0;
   text-align: center;
 }
-/* line 342, ../../scss/map/explore.scss */
+/* line 344, ../../scss/map/explore.scss */
 #compass-rose ul {
   color: #878585;
   font-family: "Museo Sans", sans-serif;
   font-size: 11px;
 }
-/* line 347, ../../scss/map/explore.scss */
+/* line 349, ../../scss/map/explore.scss */
 #compass-rose ul li {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 352, ../../scss/map/explore.scss */
+/* line 354, ../../scss/map/explore.scss */
 #compass-rose ul img {
   vertical-align: text-bottom;
   margin-right: 5px;

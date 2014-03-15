@@ -72,6 +72,8 @@
     display: block;
     margin-bottom: 0px;
     list-style-type: none;
+    text-indent: 0px;
+    margin-left: 10px;
   }
 
   li {
@@ -81,7 +83,7 @@
     background-position: 90%;
 
     a {
-      width: 230px;
+      width: 220px;
       display: block;
     }
   }
