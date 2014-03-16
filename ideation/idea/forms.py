@@ -8,6 +8,12 @@ from geo.places.models import Place
 
 
 FOR_CHOICES_AND_EMPTY = [('when','when')] + FOR_CHOICES
+REFINE_CHOICES = [('refine','refine'), ('recent','recent'), ('support','most supported')]
+# <select name="order" id="order">
+# <option value="">refine</option>
+# <option value="recent" {% if ordering == "recent" %}selected{% endif %}>Recent</option>
+# <option value="support" {% if ordering == "support" %}selected{% endif %}>Most Supported</option>
+# </select>
 
 class AddIdeaForm(forms.Form):
     name = forms.CharField(max_length=50,
@@ -59,6 +65,13 @@ class AddIdeaForm(forms.Form):
 
 
 class FilterForm(forms.Form):
-    where = forms.ModelChoiceField(queryset=Location.objects.none(), empty_label='where')
-    when = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY)
-    what = forms.ModelChoiceField(queryset=IdeaType.objects.all(), empty_label='what')
+    order = forms.ChoiceField(choices=REFINE_CHOICES, required=False)
+    org = forms.IntegerField(widget=forms.HiddenInput(), initial=0, required=False)
+    where_place = forms.ModelChoiceField(queryset=Place.objects.none(), empty_label='where', required=False)
+    where_location = forms.ModelChoiceField(queryset=Location.objects.none(), empty_label='where', required=False)
+    when = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY, required=False)
+    what = forms.ModelChoiceField(queryset=IdeaType.objects.all(), empty_label='what', required=False)
+
+    def is_valid(self):
+        super(FilterForm, self).is_valid()
+        return True

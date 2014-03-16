@@ -1,21 +1,28 @@
 <form id="filtering" action="" method="get">
     <span id="sort_by">Sort by:</span><br/>
-    <select name="order" id="order">
-        <option value="">refine</option>
-        <option value="recent" {% if ordering == "recent" %}selected{% endif %}>Recent</option>
-        <option value="support" {% if ordering == "support" %}selected{% endif %}>Most Supported</option>
-    </select>
-{#    {{ idea_filter.form.content_object }}#}
-    {{ filterform.where }}
+
+    {{ idea_filter.form.content_object }}
+    {{ filterform.order }}
+    {% if filterform.fields.where_location.queryset %}
+        {{ filterform.where_location }}
+    {% else %}
+        {{ filterform.where_place }}
+    {% endif %}
+
     {{ filterform.when }}
     {{ filterform.what }}
+    {{ filterform.org }}
 </form>
 <script type="text/javascript">
-    $('#order').chosen({disable_search_threshold: 10, width:"100px"}).change( function(e) {
+    $('#id_order').chosen({disable_search_threshold: 10, width:"100px"}).change( function(e) {
         $(e.target).parents('form').submit();
     });
 
-    $('#id_where').chosen({disable_search_threshold: 10, width:"240px"}).change( function(e) {
+    $('#id_where_place').chosen({disable_search_threshold: 10, width:"240px"}).change( function(e) {
+        $(e.target).parents('form').submit();
+    });
+
+    $('#id_where_location').chosen({disable_search_threshold: 10, width:"240px"}).change( function(e) {
         $(e.target).parents('form').submit();
     });
 

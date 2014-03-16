@@ -15,6 +15,8 @@ from geo.places.models import Place
 from geo.location.models import Location
 from thoughtbubble.utils import url_safe
 
+from .forms import FOR_CHOICES_AND_EMPTY
+
 
 # def add_neighborhood_idea(request, state, city, neighborhood):
 #     if not request.user.is_authenticated():
@@ -195,47 +197,73 @@ class IdeaList(ListView):
             qs = qs.order_by('-date_created')
 
 
+        ### What
+        what = self.request.GET.get('what',None)
+        if what:
+            qs = qs.filter(what_kind=what)
+
+
+        ### When
+        when = self.request.GET.get('when',None)
+        if when.lower() != "when" and when:
+            qs = qs.filter(what_for=when)
+
         ### Check to see that we are on an Organization Idea List page
         if self.organization:
             organizations = Organization.objects.filter(slug__iexact=self.organization.slug).values_list('pk', flat=True)
 
             ### Where
-            where = self.request.GET.get('where',None)
+            where = self.request.GET.get('where_place',None)
             if where:
-                locations = Location.objects.filter(pk=where)
-            else:
-                locations = Location.objects.filter(organization__in=organizations)
-            qs = qs.filter(content_type__name='location', object_id__in=locations)
-            return qs
+                wheres = Place.objects.filter(pk=where)
+                qs = qs.filter(content_type__name='place', object_id__in=wheres)
+            if not where:
+                where = self.request.GET.get('where_location',None)
+                if where:
+                    wheres = Location.objects.filter(pk=where)
+                else:
+                    wheres = Location.objects.filter(organization__pk=self.request.GET.get('org',None))
+                qs = qs.filter(content_type__name='location', object_id__in=wheres)
 
-        # neighborhood = self.kwargs.get('neighborhood', None)
+
+
+            # else:
+            #     locations = Location.objects.filter(organization__in=organizations)
+
+            # return qs
+
         return qs
-        # return Idea.objects.filter() #content_type__name='neighborhood', object_id=neighborhood)
 
-        ### DEPERECATED
-        # if self.organization:
-        #     return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
-        #                                content_object__organization__neighborhood__state__iexact=self.state,
-        #                                content_object__organization__title__iexact=self.organization)
-        # if self.city and self.state:
-        #     return Idea.objects.filter(content_object__organization__neighborhood__city__iexact=self.city,
-        #                                content_object__organization__neighborhood__state__iexact=self.state)
-        # if self.state:
-        #     return Idea.objects.filter(content_object__organization__neighborhood__state__iexact=self.state)
-        # return Idea.objects.filter()
+
 
 
     def get_context_data(self, **kwargs):
         context = super(IdeaList, self).get_context_data(**kwargs)
         # f = IdeaFilter(self.request.GET, queryset=self.get_queryset(), city=self.city, state=self.state)
 
-        f = FilterForm(self.request.GET)
+        f = FilterForm()
         # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
+        what = self.request.GET.get('what',None)
+        if what:
+            f.fields['what'].initial = IdeaType.objects.get(pk=what)
+
+        when = self.request.GET.get('when',None)
+        if when:
+            for i in FOR_CHOICES_AND_EMPTY:
+                if i[0] == when:
+                    f.fields['when'].initial = i[0]
+            # f.fields['when'].initial = FOR_CHOICES_AND_EMPTY[when]
+
         if self.organization:
-            f.fields['where'].queryset = Location.objects.filter(organization=self.organization)
-            f.fields['where'].empty_label = self.organization.title
+            where_location = self.request.GET.get('where_location',None)
+            # if where_location:
+            f.fields['where_location'].initial = where_location
+            f.fields['where_location'].queryset = Location.objects.filter(organization=self.organization)
+            f.fields['where_location'].empty_label = self.organization.title
+
+            f.fields['org'].initial = self.organization.id
         else:
-            f.fields['where'].queryset = Place.objects.filter()
+            f.fields['where_place'].queryset = Place.objects.filter()
 
 
         context['filterform'] = f
