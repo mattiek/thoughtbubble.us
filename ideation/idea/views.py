@@ -205,7 +205,7 @@ class IdeaList(ListView):
 
         ### When
         when = self.request.GET.get('when',None)
-        if when.lower() != "when" and when:
+        if when and when.lower() != "when":
             qs = qs.filter(what_for=when)
 
         ### Check to see that we are on an Organization Idea List page
