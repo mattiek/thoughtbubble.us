@@ -222,7 +222,7 @@ class IdeaList(ListView):
                 if where:
                     wheres = Location.objects.filter(pk=where)
                 else:
-                    wheres = Location.objects.filter(organization__pk=self.request.GET.get('org',None))
+                    wheres = Location.objects.filter(organization= self.organization)#__pk=self.request.GET.get('org',None))
                 qs = qs.filter(content_type__name='location', object_id__in=wheres)
 
 
@@ -261,7 +261,7 @@ class IdeaList(ListView):
             f.fields['where_location'].queryset = Location.objects.filter(organization=self.organization)
             f.fields['where_location'].empty_label = self.organization.title
 
-            f.fields['org'].initial = self.organization.id
+            # f.fields['org'].initial = self.organization.id
         else:
             f.fields['where_place'].queryset = Place.objects.filter()
 

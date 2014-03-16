@@ -66,7 +66,7 @@ class AddIdeaForm(forms.Form):
 
 class FilterForm(forms.Form):
     order = forms.ChoiceField(choices=REFINE_CHOICES, required=False)
-    org = forms.IntegerField(widget=forms.HiddenInput(), initial=0, required=False)
+    # org = forms.IntegerField(widget=forms.HiddenInput(), initial=0, required=False)
     where_place = forms.ModelChoiceField(queryset=Place.objects.none(), empty_label='where', required=False)
     where_location = forms.ModelChoiceField(queryset=Location.objects.none(), empty_label='where', required=False)
     when = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY, required=False)
