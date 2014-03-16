@@ -224,6 +224,8 @@ class IdeaList(ListView):
                 else:
                     wheres = Location.objects.filter(organization= self.organization)#__pk=self.request.GET.get('org',None))
                 qs = qs.filter(content_type__name='location', object_id__in=wheres)
+        else:
+            pass
 
 
 

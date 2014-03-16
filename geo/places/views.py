@@ -9,6 +9,8 @@ from django.contrib.gis.measure import D
 from django.contrib.gis.geos import fromstr
 from django.contrib.gis.geos import Polygon
 from vanilla import DetailView, CreateView, UpdateView, ListView
+from django.db.models import F, Q
+from geo.location.models import Location
 
 
 class PlacesViewset(viewsets.ModelViewSet):
@@ -77,7 +79,10 @@ class PlacesDetail(DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(PlacesDetail, self).get_context_data(**kwargs)
-        context['ideas'] = Idea.objects.filter(content_type__name='place', object_id=self.object.id)
+        locations = Location.objects.filter(organization__place= context['place'])
+        context['ideas'] = Idea.objects.filter(Q(content_type__name='place', object_id=self.object.id) |
+                                               Q(content_type__name='location', object_id__in=locations))
+
         return context
 
 class PlacesUpdate(UpdateView):
