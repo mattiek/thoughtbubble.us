@@ -1,6 +1,6 @@
 from django.contrib.gis import admin
 
-from models import Organization, OrganizationNews
+from models import Organization, OrganizationNews, OrganizationCurator, OrganizationCuratorRole
 from forms import OrganizationAdminForm
 import reversion
 
@@ -14,3 +14,5 @@ class OrganizationAdmin(reversion.VersionAdmin, admin.OSMGeoAdmin):
 
 admin.site.register(Organization, OrganizationAdmin)
 # admin.site.register(OrganizationNews)
+admin.site.register(OrganizationCurator)
+admin.site.register(OrganizationCuratorRole)
