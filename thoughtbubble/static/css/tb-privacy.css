@@ -11,7 +11,7 @@
   background-image: url('../images/illustration-ship.png?1390687234');
 }
 
-/* line 9, ../scss/tb-privacy.scss */
+/* line 7, ../scss/tb-privacy.scss */
 h1,
 h2,
 h3 {
@@ -23,7 +23,7 @@ h3 {
   margin: 10px 0;
 }
 
-/* line 18, ../scss/tb-privacy.scss */
+/* line 16, ../scss/tb-privacy.scss */
 h4,
 h5,
 h6 {
@@ -64,4 +64,14 @@ ul.bullet-list li {
   font-family: "Museo Sans", sans-serif;
   text-align: justify;
   line-height: 1.5em;
+}
+
+/* line 56, ../scss/tb-privacy.scss */
+strong, b {
+  font-weight: bold;
+}
+
+/* line 60, ../scss/tb-privacy.scss */
+i {
+  font-style: italic;
 }
