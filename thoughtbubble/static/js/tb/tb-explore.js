@@ -191,7 +191,7 @@ var getNeighborhoods = function() {
                     if (feature.properties.orgs) {
                         $('#minisplore-wrapper ul').html('');
 
-                        if (feature.properties.orgs > 0) {
+                        if (feature.properties.orgs.length > 0) {
                             _.each(feature.properties.orgs, function (e) {
                                 $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore + '">' + e.properties.title + '</a></li>');
                             });
