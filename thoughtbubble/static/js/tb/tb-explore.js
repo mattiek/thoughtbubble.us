@@ -182,7 +182,7 @@ var getNeighborhoods = function() {
 //                e.layer.unbindPopup();
 //                e.stopPropagation();
 //                e.preventDefault();
-                $('#minisplore').fadeOut();
+
                 if(e.handled !== true) {
 
                     var feature = e.layer.feature;
@@ -212,6 +212,9 @@ var getNeighborhoods = function() {
                                     window.organizationBoundaries.addTo(map);
                                 }
                             });
+                        }
+                        else {
+                            $('#minisplore').fadeOut();
                         }
 
 
