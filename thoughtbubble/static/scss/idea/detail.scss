@@ -5,9 +5,9 @@
 @import "partials/chosen";
 @import "partials/comments";
 
-#illustration {
-    background-image: image-url('illustration-ship.png');
-}
+//#illustration {
+//    background-image: image-url('illustration-ship.png');
+//}
 
 .copy {
     @include gray-museo;

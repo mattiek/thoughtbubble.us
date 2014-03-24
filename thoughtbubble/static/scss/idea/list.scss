@@ -13,7 +13,7 @@
 
 
 #illustration {
-    background-image: image-url('illustration-ship.png');
+//    background-image: image-url('illustration-ship.png');
 
   @include media($mobile) {
     background-image: none;

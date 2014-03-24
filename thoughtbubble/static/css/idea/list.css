@@ -580,10 +580,6 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   box-sizing: border-box;
 }
 
-/* line 15, ../../scss/idea/list.scss */
-#illustration {
-  background-image: url('../../images/illustration-ship.png?1390687234');
-}
 @media screen and (max-width: 480px) {
   /* line 15, ../../scss/idea/list.scss */
   #illustration {

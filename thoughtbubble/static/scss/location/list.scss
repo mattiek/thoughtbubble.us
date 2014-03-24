@@ -1,8 +1,8 @@
 @import "partials/general";
 
-#illustration {
-    background-image: image-url('illustration-ship.png');
-}
+//#illustration {
+//    background-image: image-url('illustration-ship.png');
+//}
 
 .submit {
     @include orange-gradient-button;

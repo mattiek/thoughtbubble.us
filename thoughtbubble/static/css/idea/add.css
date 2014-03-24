@@ -80,9 +80,6 @@ textarea {
 
 /* line 5, ../../scss/idea/add.scss */
 #illustration {
-  background: url('../../images/illustration-windturbines.png?1390687238') no-repeat no-repeat;
-  background-size: 100%;
-  height: 238px;
   width: 930px;
   margin: 0 auto;
   background-color: #ffffff;

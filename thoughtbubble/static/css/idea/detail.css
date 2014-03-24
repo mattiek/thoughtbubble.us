@@ -455,11 +455,6 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   margin-right: 3px;
 }
 
-/* line 8, ../../scss/idea/detail.scss */
-#illustration {
-  background-image: url('../../images/illustration-ship.png?1390687234');
-}
-
 /* line 12, ../../scss/idea/detail.scss */
 .copy {
   color: #6d6d6d;

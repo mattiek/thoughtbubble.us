@@ -143,9 +143,6 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 6, ../../scss/organization/add.scss */
 #illustration {
-  background: url(../../images/illustration-ship.png) no-repeat no-repeat;
-  background-size: 100%;
-  height: 233px;
   width: 930px;
   margin: 0 auto;
   background-color: #ffffff;

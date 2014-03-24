@@ -621,11 +621,6 @@ ol.slats li p span.meta {
 }
 
 /* text color */
-/* line 13, ../../scss/place/detail.scss */
-#illustration {
-  background-image: url('../../images/illustration-ship.png?1390687234');
-}
-
 /* line 18, ../../scss/place/detail.scss */
 .s-button {
   height: 33px;

@@ -413,12 +413,6 @@ ol.slats li p span.meta {
   margin-top: 20px;
 }
 
-/* line 8, ../../scss/location/detail.scss */
-#illustration {
-  background-image: url('../../images/illustration-ship.png?1390687234');
-  height: 250px;
-}
-
 /* line 13, ../../scss/location/detail.scss */
 .submit {
   -moz-border-radius: 10px;

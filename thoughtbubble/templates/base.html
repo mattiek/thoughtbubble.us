@@ -31,7 +31,7 @@
 {% block navstart %}
     <div id="wrapper" class="">
     {% block toprule %} {% endblock %}
-        <div id="illustration">
+        <div id="illustration" {% block illustration%}class="{{ illustrations|random }}"{%endblock%}>
             {#    Messages #}
             {% include "widgets/messages.html" %}
             {#    End Messages #}

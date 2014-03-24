@@ -4,6 +4,9 @@ from django.forms import ModelForm
 from models import *
 from utils import *
 from widgets import FilePicker
+
+from model_utils import Choices
+
 import re
 
 def email_exists(email):
@@ -105,3 +108,10 @@ class LoginForm(forms.Form):
     def clean(self, *args, **kwargs):
         cleaned_data = super(LoginForm, self).clean()
         return cleaned_data
+
+
+class ContactForm(forms.Form):
+    SUBJECTS = Choices('Membership','Sign-up','Privacy','General')
+    email = forms.EmailField()
+    subject = forms.ChoiceField(choices=SUBJECTS)
+    body = forms.Textarea()

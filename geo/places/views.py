@@ -114,6 +114,20 @@ class PlacesDetail(DetailView):
         if when and when.lower() != "when":
             ideas = ideas.filter(what_for=when)
 
+
+            ### Where
+            where = self.request.GET.get('where_place',None)
+            if where:
+                wheres = Place.objects.filter(pk=where)
+                ideas = ideas.filter(content_type__name='place', object_id__in=wheres)
+            # if not where:
+            #     where = self.request.GET.get('where_location',None)
+            #     if where:
+            #         wheres = Location.objects.filter(pk=where)
+            #     else:
+            #         wheres = Location.objects.filter(organization= self.organization)#__pk=self.request.GET.get('org',None))
+            #     qs = qs.filter(content_type__name='location', object_id__in=wheres)
+
         # ### Check to see that we are on an Organization Idea List page
         # if self.organization:
         #     organizations = Organization.objects.filter(slug__iexact=self.organization.slug).values_list('pk', flat=True)

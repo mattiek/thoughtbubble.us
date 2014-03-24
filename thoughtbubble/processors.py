@@ -9,6 +9,10 @@ def domain_host(request):
     d = {'DOMAIN_HOST': DOMAIN_HOST}
     return d
 
+
+def illustrations(request):
+    return {'illustrations': ['ship','trees','turbines']}
+
 # def exploring(request):
 #     city = request.session.get('exploring_city', None)
 #     state =  request.session.get('exploring_state', None)
