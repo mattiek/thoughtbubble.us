@@ -215,6 +215,10 @@ var getNeighborhoods = function() {
                         }
                         else {
                             $('#minisplore').fadeOut();
+                            if (window.organizationBoundaries) {
+                                map.removeLayer(window.organizationBoundaries);
+                                window.organizationBoundaries = null;
+                            }
                         }
 
 
