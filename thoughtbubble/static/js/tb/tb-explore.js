@@ -190,26 +190,29 @@ var getNeighborhoods = function() {
                     // Check to see that we are a city that would have orgs
                     if (feature.properties.orgs) {
                         $('#minisplore-wrapper ul').html('');
-                        _.each(feature.properties.orgs, function(e) {
-                            $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore +'">' + e.properties.title + '</a></li>');
-                        });
-                        $('#minisplore h3').html(feature.properties.title);
-                        $('#minisplore').fadeIn();
 
-                        $.ajax({
-                            url:  '/api/v1/organizations/.json?place=' + feature.properties.id,
-                            dataType: 'json',
-                            success: function load(d) {
+                        if (feature.properties.orgs > 0) {
+                            _.each(feature.properties.orgs, function (e) {
+                                $('#minisplore-wrapper ul').append('<li><a href="' + e.properties.explore + '">' + e.properties.title + '</a></li>');
+                            });
+                            $('#minisplore h3').html(feature.properties.title);
+                            $('#minisplore').fadeIn();
 
-                                if (window.organizationBoundaries) {
-                                    map.removeLayer(window.organizationBoundaries);
-                                    window.organizationBoundaries = null;
+                            $.ajax({
+                                url: '/api/v1/organizations/.json?place=' + feature.properties.id,
+                                dataType: 'json',
+                                success: function load(d) {
+
+                                    if (window.organizationBoundaries) {
+                                        map.removeLayer(window.organizationBoundaries);
+                                        window.organizationBoundaries = null;
+                                    }
+
+                                    window.organizationBoundaries = L.geoJson(d);
+                                    window.organizationBoundaries.addTo(map);
                                 }
-
-                                window.organizationBoundaries = L.geoJson(d);
-                                window.organizationBoundaries.addTo(map);
-                            }
-                        });
+                            });
+                        }
 
 
                     } else { // We are on an Organization
