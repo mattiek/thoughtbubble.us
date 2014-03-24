@@ -182,7 +182,7 @@ var getNeighborhoods = function() {
 //                e.layer.unbindPopup();
 //                e.stopPropagation();
 //                e.preventDefault();
-
+                $('#minisplore').fadeOut();
                 if(e.handled !== true) {
 
                     var feature = e.layer.feature;
