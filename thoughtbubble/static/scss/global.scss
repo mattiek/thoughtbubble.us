@@ -6,7 +6,10 @@
 @import "partials/general";
 @import "partials/common_tb";
 
-
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 @font-face {
   font-family: 'Museo Sans';
   src: url('../fonts/MuseoSans_500-webfont.eot');
