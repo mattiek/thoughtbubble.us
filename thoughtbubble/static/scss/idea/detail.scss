@@ -71,7 +71,6 @@
 
 #comments {
   padding-top: 50px;
-  clear: left;
   clear: both;
 //  margin-bottom: 8px; // Because of footer going up -8px.
 }
@@ -136,6 +135,7 @@ i {
   border-radius: 10px;
   padding: 10px 20px;
   width: 223px;
+  margin-left: 20px;
 
   a {
     white-space: nowrap;
