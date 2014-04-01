@@ -78,3 +78,17 @@ class Place(models.Model):
         }
 
         return props
+
+    def get_fb_sharing(self):
+        return {
+            'share_copy': "Check out this place!",
+            'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
+            'share_caption': 'thoughtbubble.us',
+            'share_name': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
+    def get_twit_sharing(self):
+        return {
+
+        }

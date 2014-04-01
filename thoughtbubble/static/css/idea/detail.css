@@ -598,7 +598,7 @@ i {
   border-radius: 10px;
   padding: 10px 20px;
   width: 223px;
-  argin-left: 20px;
+  margin-left: 20px;
 }
 /* line 140, ../../scss/idea/detail.scss */
 #idea-details a {
@@ -606,7 +606,7 @@ i {
 }
 /* line 143, ../../scss/idea/detail.scss */
 #idea-details p {
-  margin: 10px 0;
+  margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }

@@ -142,6 +142,22 @@ class Idea(models.Model):
                                             url_safe(location.slug),
                                             url_safe(self.slug)])
 
+
+    def get_fb_sharing(self):
+        return {
+            'share_copy': "Check out this idea!",
+            'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
+            'share_caption': 'thoughtbubble.us',
+            'share_name': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
+    def get_twit_sharing(self):
+        return {
+
+        }
+
+
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)
 

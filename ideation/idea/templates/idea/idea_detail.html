@@ -24,7 +24,9 @@
             <div id="support-this">
                 <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
                 <a class="dislike blue" href="#">dislike</a>
-                {% include "widgets/sharing.html" %}
+                {% with fb=idea.get_fb_sharing %}
+                    {% include "widgets/sharing.html" %}
+                {% endwith %}
             </div>
 
         <span class="support-number">{{ idea.support_count }}</span> support this
