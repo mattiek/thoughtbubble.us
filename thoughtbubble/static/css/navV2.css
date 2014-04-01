@@ -1,6 +1,7 @@
-/* line 50, directional/*.png */
+/* line 56, directional/*.png */
 .directional-sprite, #primary-explore i, #primary-explore:hover i {
-  background: url('../images/directional-sc2dbe3af58.png') no-repeat;
+  background-image: url('../images/directional-sc2dbe3af58.png');
+  background-repeat: no-repeat;
 }
 
 /* line 2, ../scss/neat/grid/_grid.scss */
@@ -27,7 +28,7 @@ body {
   background: url('../images/clean_textile.png?1390687091');
   background-size: 50%;
 }
-/* line 18, ../scss/bourbon/addons/_clearfix.scss */
+/* line 17, ../scss/bourbon/addons/_clearfix.scss */
 body:before, body:after {
   content: " ";
   display: table;
@@ -64,7 +65,7 @@ body:after {
   margin: -8px 0 0 0;
 }
 
-/* line 51, ../scss/navV2.scss */
+/* line 50, ../scss/navV2.scss */
 #nav,
 #login-nav {
   color: #4585c3;
@@ -87,7 +88,7 @@ body:after {
   margin-top: 75px;
 }
 @media screen and (max-width: 480px) {
-  /* line 51, ../scss/navV2.scss */
+  /* line 50, ../scss/navV2.scss */
   #nav,
   #login-nav {
     font-size: 12px;
@@ -203,13 +204,12 @@ body:after {
   margin: 44px auto 0;
   text-indent: 5px;
   display: block;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #e57f4f 0%, #f9a533 100%);
@@ -260,13 +260,12 @@ body:after {
 
 /* line 223, ../scss/navV2.scss */
 #footer {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   width: 100%;
   background-color: #49c3dd;
@@ -330,7 +329,7 @@ body:after {
   text-align: center;
 }
 
-/* line 285, ../scss/navV2.scss */
+/* line 281, ../scss/navV2.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -364,7 +363,7 @@ body:after {
   font-weight: normal;
   font-size: 16px;
 }
-/* line 309, ../scss/navV2.scss */
+/* line 307, ../scss/navV2.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -383,7 +382,7 @@ body:after {
   text-align: center;
   line-height: 45px;
 }
-/* line 315, ../scss/navV2.scss */
+/* line 314, ../scss/navV2.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -499,7 +498,7 @@ body:after {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 384, ../scss/navV2.scss */
+/* line 382, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -517,10 +516,8 @@ body:after {
 #update-avatar-overlay input[type="text"] {
   width: 365px;
   height: 45px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
@@ -535,13 +532,12 @@ body:after {
   width: 365px;
   float: none;
   margin: 0 auto;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -643,26 +639,23 @@ button.mfp-close:active {
   margin: 0px;
   top: 8px;
   right: 8px;
-  -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
   border-radius: 7px;
   border: 1px solid #cccccc;
   font-weight: 100;
   font-size: 24px;
 }
 
-/* line 490, ../scss/navV2.scss */
+/* line 489, ../scss/navV2.scss */
 .error-box,
 .message-box {
-  -webkit-border-radius: 1.2;
   -moz-border-radius: 1.2;
-  -ms-border-radius: 1.2;
-  -o-border-radius: 1.2;
+  -webkit-border-radius: 1.2;
   border-radius: 1.2;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #fff;
   /* layer fill content */

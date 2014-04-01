@@ -17,6 +17,8 @@ $tb-beige: #fef8ee;
 
 $tb-dark-gray: #58595a;
 
+$tb-sky-blue: #6fc4d8;
+
 @mixin museo {
   font-family: "Museo Sans", sans-serif;
 }
@@ -37,7 +39,7 @@ $tb-dark-gray: #58595a;
 }
 
 @mixin header-blue-museo {
-  color: #53b8d1; /* text color */
+  color: $tb-header_blue; /* text color */
   @include museo;
 }
 

@@ -11,6 +11,7 @@
   width: 322px;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 #form-wrapper {
@@ -74,6 +75,7 @@ input[type="text"] {
   @include museo;
   font-size: 12px;
   font-style: italic;
+  clear: both;
 }
 
 
@@ -91,4 +93,47 @@ input[type="text"] {
     max-height: 50px;
   }
 
+}
+
+#id_organization_name,
+#id_organization_contact,
+#id_organization_alt_contact,
+#id_organization_cc {
+  margin-top: 40px;
+}
+
+#id_organization_expiry,
+#id_organization_security {
+  float: left;
+  width: 120px;
+}
+
+#id_organization_security {
+  margin-left: 20px;
+}
+
+#id_organization_security + #captcha-question {
+  margin-top: 80px;
+}
+
+h5 {
+//  @include blue-museo;
+  @include header-blue-museo;
+  color: $tb-sky-blue;
+}
+
+#home-container > .promise {
+  margin-bottom: 20px;
+}
+
+form > .promise {
+  margin-top: 30px;
+}
+
+.promise {
+  text-align: center;
+  h5 {
+    font-size: 12px;
+    line-height: 16px;
+  }
 }

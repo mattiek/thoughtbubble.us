@@ -26,15 +26,16 @@
   width: 322px;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
-/* line 16, ../scss/tb-signup.scss */
+/* line 17, ../scss/tb-signup.scss */
 #form-wrapper {
   width: 324px;
   margin: 0 auto;
 }
 
-/* line 21, ../scss/tb-signup.scss */
+/* line 22, ../scss/tb-signup.scss */
 #id_profile_picture {
   width: 80px;
   height: 79px;
@@ -49,7 +50,7 @@
   background-position: 57px 57px;
 }
 
-/* line 34, ../scss/tb-signup.scss */
+/* line 35, ../scss/tb-signup.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -77,23 +78,23 @@ input[type="text"] {
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
 
-/* line 58, ../scss/tb-signup.scss */
+/* line 59, ../scss/tb-signup.scss */
 #id_captcha_choicefield {
   list-style: none;
 }
 
-/* line 62, ../scss/tb-signup.scss */
+/* line 63, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   display: inline-block;
   margin-left: 60px;
 }
 
-/* line 67, ../scss/tb-signup.scss */
+/* line 68, ../scss/tb-signup.scss */
 #id_captcha_choicefield li:first-child {
   margin-left: 15px;
 }
 
-/* line 71, ../scss/tb-signup.scss */
+/* line 72, ../scss/tb-signup.scss */
 #captcha-question,
 .terms-and-conditions {
   color: #727171;
@@ -101,19 +102,73 @@ input[type="text"] {
   font-family: "Museo Sans", sans-serif;
   font-size: 12px;
   font-style: italic;
+  clear: both;
 }
 
-/* line 81, ../scss/tb-signup.scss */
+/* line 83, ../scss/tb-signup.scss */
 #id_captcha_choicefield li {
   padding: 6px;
 }
-/* line 84, ../scss/tb-signup.scss */
+/* line 86, ../scss/tb-signup.scss */
 #id_captcha_choicefield li.captcha_select {
   border: 3px solid #f3812b;
   border-radius: 10px;
   padding: 3px;
 }
-/* line 90, ../scss/tb-signup.scss */
+/* line 92, ../scss/tb-signup.scss */
 #id_captcha_choicefield img {
   max-height: 50px;
+}
+
+/* line 98, ../scss/tb-signup.scss */
+#id_organization_name,
+#id_organization_contact,
+#id_organization_alt_contact,
+#id_organization_cc {
+  margin-top: 40px;
+}
+
+/* line 105, ../scss/tb-signup.scss */
+#id_organization_expiry,
+#id_organization_security {
+  float: left;
+  width: 120px;
+}
+
+/* line 111, ../scss/tb-signup.scss */
+#id_organization_security {
+  margin-left: 20px;
+}
+
+/* line 115, ../scss/tb-signup.scss */
+#id_organization_security + #captcha-question {
+  margin-top: 80px;
+}
+
+/* line 119, ../scss/tb-signup.scss */
+h5 {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #6fc4d8;
+}
+
+/* line 125, ../scss/tb-signup.scss */
+#home-container > .promise {
+  margin-bottom: 20px;
+}
+
+/* line 129, ../scss/tb-signup.scss */
+form > .promise {
+  margin-top: 30px;
+}
+
+/* line 133, ../scss/tb-signup.scss */
+.promise {
+  text-align: center;
+}
+/* line 135, ../scss/tb-signup.scss */
+.promise h5 {
+  font-size: 12px;
+  line-height: 16px;
 }

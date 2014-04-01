@@ -15,11 +15,13 @@
 {% endblock %}
 
 {% block content %}
-    Thank you for trying out our Beta.
-    We promise you won't be disappointed.
-
-    Join our 90 day trial memberships
-    then continue for $99.95 / month.
+    <div class="promise">
+        <h3>Thank you for trying out our Beta.</h3>
+           <h5>We promise you won't be disappointed.</h5>
+        <br/>
+        <h5>Join our 90 day trial memberships</h5>
+        <h5>then continue for $99.95 / month.</h5>
+    </div>
 
     <div id="form-wrapper">
         {% include 'widgets/errors.html' %}
@@ -49,10 +51,16 @@
                     {{ field  }} <span class="terms-and-conditions">I accept the <a href="">Terms and Conditions</a></span>
                 {% endif %}
             {% endfor %}
-            <input type="submit" class="submit" value="create organization"/>
+            <div class="promise">
+                <h5>We look forward to partnering with you</h5>
+                <h5>to build the best community possible!</h5>
+            </div>
+
+            <input type="submit" class="submit" value="join"/>
         </form>
     </div>
 {% endblock %}
+
 
 {% block footerscripts %}
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>

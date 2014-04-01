@@ -233,6 +233,11 @@ class Organization(models.Model):
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
         }
 
+    def get_twit_sharing(self):
+        return {
+
+        }
+
 
 
 class OrganizationNews(models.Model):
