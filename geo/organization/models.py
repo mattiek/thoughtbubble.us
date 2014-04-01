@@ -217,10 +217,10 @@ class Organization(models.Model):
 
     def get_fb_sharing(self):
         return {
-            'share_copy': 'Check out this org!',
+            'share_copy': "Check out this organization.",
             'share_image': 'http://thoughtbubble.us/static/images/thoughtbubble-illustration.jpg',
             'share_caption': 'thoughtbubble.us',
-            'share_name': 'Sharing',
+            'share_name': "%s" % self.title,
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
 
         }
