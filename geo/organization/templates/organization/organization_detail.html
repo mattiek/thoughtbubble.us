@@ -27,7 +27,9 @@
         {% endif %}
         <div class="row title">
                 <div id="header">
-                    {% include "widgets/sharing.html" %}
+                    {% with fb=organization.get_sharing_fb %}
+                        {% include "widgets/sharing.html" %}
+                    {% endwith %}
                     {{ organization.title }}
 
                 </div>
@@ -57,7 +59,9 @@
                 {{ organization.about }}
             </div>
 
+        {% with fb=organization.get_sharing_fb %}
            {% include "widgets/sharing.html" %}
+        {% endwith %}
 
         {#    News #}
         <div class="news-label small-heading">news</div>

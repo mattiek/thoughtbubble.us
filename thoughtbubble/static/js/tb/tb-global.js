@@ -117,3 +117,26 @@ function playDinoSound() {
     source.start(0);                           // play the source now
     // note: on older systems, may have to use deprecated noteOn(time);
 }
+
+
+$('.share-fb').on('click', function(e){
+    e.preventDefault();
+//    var fbDataShareSubject = this.getAttribute("data-share-subject");
+    var fbDataShareCopy = this.getAttribute("data-share-copy");
+    var fbDataShareImage = this.getAttribute("data-share-image");
+    var fbDataShareCaption = this.getAttribute("data-share-caption");
+    var fbDataShareName = this.getAttribute("data-share-name");
+    var fbDataShareLink = this.getAttribute("data-share-link");
+    if (window.location.protocol == 'https:') {
+        fbDataShareImage = fbDataShareImage.replace('http:','https:');
+    }
+    FB.ui({
+        link : fbDataShareLink,
+        method:"feed",
+        name: fbDataShareName,
+        caption:  fbDataShareCaption,
+        description: fbDataShareCopy,
+        display:"popup",
+        picture: fbDataShareImage
+    });
+});

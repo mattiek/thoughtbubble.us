@@ -8,6 +8,7 @@ from django.core.urlresolvers import reverse
 from partner.models import Partner
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
+import urllib
 
 
 class OrganizationCuratorRole(models.Model):
@@ -213,6 +214,16 @@ class Organization(models.Model):
             [extent[0], extent[1]],
             ]
         return extent
+
+    def get_fb_sharing(self):
+        return {
+            'share_copy': 'Check out this org!',
+            'share_image': urllib.quote_plus('http://thoughtbubble.us/static/images/thoughtbubble-illustration.jpg'),
+            'share_caption': 'thoughtbubble.us',
+            'share_name': 'Sharing',
+            'share_link': urllib.quote_plus(self.get_absolute_url()),
+
+        }
 
 
 
