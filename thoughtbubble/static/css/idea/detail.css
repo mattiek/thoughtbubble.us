@@ -531,10 +531,11 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 /* line 72, ../../scss/idea/detail.scss */
 #comments {
   padding-top: 50px;
+  clear: left;
   clear: both;
 }
 
-/* line 78, ../../scss/idea/detail.scss */
+/* line 79, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
@@ -542,55 +543,55 @@ i {
   padding-left: 15px;
 }
 
-/* line 87, ../../scss/idea/detail.scss */
+/* line 88, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 90, ../../scss/idea/detail.scss */
+/* line 91, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 96, ../../scss/idea/detail.scss */
+/* line 97, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 99, ../../scss/idea/detail.scss */
+/* line 100, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 105, ../../scss/idea/detail.scss */
+/* line 106, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 109, ../../scss/idea/detail.scss */
+/* line 110, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 114, ../../scss/idea/detail.scss */
+/* line 115, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 118, ../../scss/idea/detail.scss */
+/* line 119, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 121, ../../scss/idea/detail.scss */
+/* line 122, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 127, ../../scss/idea/detail.scss */
+/* line 128, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }
 
-/* line 131, ../../scss/idea/detail.scss */
+/* line 132, ../../scss/idea/detail.scss */
 #idea-details {
   float: right;
   clear: both;
@@ -599,22 +600,22 @@ i {
   padding: 10px 20px;
   width: 223px;
 }
-/* line 139, ../../scss/idea/detail.scss */
+/* line 140, ../../scss/idea/detail.scss */
 #idea-details a {
   white-space: nowrap;
 }
-/* line 142, ../../scss/idea/detail.scss */
+/* line 143, ../../scss/idea/detail.scss */
 #idea-details p {
   margin: 10px 0;
   font-size: 16px;
   line-height: 29px;
 }
 
-/* line 149, ../../scss/idea/detail.scss */
+/* line 150, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 150, ../../scss/idea/detail.scss */
+/* line 151, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
 }
