@@ -644,3 +644,19 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 .chzn-container-single .chzn-search {
   display: none;
 }
+
+/* line 71, ../../scss/idea/list.scss */
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+}
+/* line 75, ../../scss/idea/list.scss */
+.idea-details-list li {
+  margin: 10px auto;
+  font-size: 14px;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #4585c3;
+}

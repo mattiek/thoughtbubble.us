@@ -67,3 +67,15 @@
 .chzn-container-single .chzn-search {
   display:none;
 }
+
+.idea-details-list {
+ float: right;
+ padding-right: 20px;
+  width: 150px;
+  li {
+    margin: 10px auto;
+    font-size: 14px;
+    @include header-blue-museo;
+    color: $tb_link_blue;
+  }
+}
