@@ -20,16 +20,17 @@
 
 {% block content %}
     <div id="idea-wrapper">
-        <div id="spacer">
+
             <div id="support-this">
                 <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
                 <a class="dislike blue" href="#">dislike</a>
                 {% include "widgets/sharing.html" %}
             </div>
+
+        <span class="support-number">{{ idea.support_count }}</span> support this
+        <div id="spacer">
             <div class="clr"></div>
         </div>
-        <span class="support-number">{{ idea.support_count }}</span> support this
-
         <div id="idea-details">
             <p>{{ idea.get_parent_label }}: <a href="{{idea.get_parent_link }}">{{ idea.get_parent_title }}</a></p>
             <p>Location: <b>{{ idea.content_object.name }}</b></p>
