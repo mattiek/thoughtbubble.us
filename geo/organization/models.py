@@ -16,10 +16,16 @@ class OrganizationCuratorRole(models.Model):
     title = models.CharField(max_length=30)
     authority = models.IntegerField(default=0)
 
+    def __unicode__(self):
+        return "%s" % self.title
+
 
 class OrganizationCurator(models.Model):
     curator = models.ForeignKey(ThoughtbubbleUser)
     role = models.ForeignKey(OrganizationCuratorRole, null=True, blank=True)
+
+    def __unicode__(self):
+        return "%s - %s" % (self.curator, self.role)
 
 
 class Organization(models.Model):
