@@ -221,7 +221,7 @@ class Organization(models.Model):
             'share_image': urllib.quote_plus('http://thoughtbubble.us/static/images/thoughtbubble-illustration.jpg'),
             'share_caption': 'thoughtbubble.us',
             'share_name': 'Sharing',
-            'share_link': urllib.quote_plus('http://thoughtbubble.us' + self.get_absolute_url()),
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
 
         }
 
