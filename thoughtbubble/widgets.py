@@ -16,7 +16,7 @@ class FilePicker(Widget):
         super(FilePicker, self).__init__(default_attrs)
 
     def render(self, name, value, attrs=None):
-        if value is None:
+        if value is None or value == '':
             value = ''
         else:
             value = format_html('<div class="cloak"><img src="%s"/></div>' % value.url)

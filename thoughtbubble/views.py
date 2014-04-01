@@ -21,12 +21,12 @@ from avatar.views import _get_avatars
 from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
-from geo.organization.models import Organization
+from geo.organization.models import Organization, OrganizationCurator
 from geo.places.models import Place
 from ideation.idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
-from forms import SignupForm, LoginForm
+from forms import SignupForm, LoginForm, OrganizationSignupForm
 
 from django_balanced.models import Card
 
@@ -217,6 +217,56 @@ def signup(request):
         form = SignupForm(captcha_choices=s['choices'], answer=s['answer'])
 
     return render(request, 'signup.html', {'form': form, 'captcha_answer': s['answer']})
+
+
+
+def organization_signup(request):
+    register_captcha = 'register_captchas1234'
+    if not request.session.get(register_captcha):
+        # TODO: Create a lot more options
+        x = [ ('guitarist','guitarist.png', ),
+              ('hot dog trunk','hot-dog-truck.png', ),
+              ('jimmy the dinosaur','jimmy-the-dinosaur.png', ), ]
+        random.shuffle(x)
+        answer = random.choice(x)
+        request.session[register_captcha] = { 'answer': answer, 'choices': x }
+
+    s = request.session.get(register_captcha)
+
+    if request.POST:
+        form = OrganizationSignupForm(request.POST, request.FILES, captcha_choices=s['choices'], answer=s['answer']) # A form bound to the POST data
+        if form.is_valid():
+            cleaned_data = form.cleaned_data
+
+            # create user here
+            user = ThoughtbubbleUser.objects.create_user(cleaned_data['username'],
+                                                         cleaned_data['email'],
+                                                         cleaned_data['password'])
+
+            # create a new organization here
+            organization = Organization()
+            organization.title = cleaned_data['organization_name']
+            curator = OrganizationCurator()
+            curator.curator = user
+            curator.save()
+            organization.save()
+            organization.curators.add(curator)
+            organization.save()
+
+            django_logout(request)
+            user = authenticate(username=cleaned_data['username'], email= cleaned_data['email'], password=cleaned_data['password'])
+
+            # Create initial profile for the user
+            user_profile = ThoughtbubbleUserProfile.objects.create(user=user, location=cleaned_data['location'])
+            if cleaned_data['profile_picture']:
+                avatar = Avatar.objects.create(user=user,primary=True, avatar=cleaned_data['profile_picture'])
+
+            django_login(request, user)
+            return redirect('home')
+    else:
+        form = OrganizationSignupForm(captcha_choices=s['choices'], answer=s['answer'])
+
+    return render(request, 'organization_signup.html', {'form': form, 'captcha_answer': s['answer']})
 
 
 class MyConnectionsView(FormView):

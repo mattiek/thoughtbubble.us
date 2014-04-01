@@ -10,6 +10,7 @@ from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
 import urllib
 
+from model_utils import Choices
 
 class OrganizationCuratorRole(models.Model):
     title = models.CharField(max_length=30)
@@ -22,6 +23,8 @@ class OrganizationCurator(models.Model):
 
 
 class Organization(models.Model):
+    MOD_CHOICES = Choices('pending','active','rejected','disabled')
+    status = models.CharField(max_length=20, choices=MOD_CHOICES, default=MOD_CHOICES.pending)
     place = models.ForeignKey(Place, null=True, blank=True)
     slug = AutoSlugField(populate_from='title', unique_with='place')
 

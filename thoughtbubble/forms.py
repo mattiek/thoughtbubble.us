@@ -83,6 +83,37 @@ class SignupForm(forms.Form):
             self.fields['captcha'].choices = captcha_choices
 
 
+class OrganizationSignupForm(SignupForm):
+    organization_name = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization name'}),error_messages={'required':'You need an organization name.'})
+    organization_address = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization address'}),error_messages={'required':'Organization address is required.'})
+    organization_zipcode = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization zipcode'}),error_messages={'required':'Zipcode for organization is needed.'})
+    organization_phone = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization phone'}),error_messages={'required':'Phone number for organization is required.'})
+    organization_email = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization email'}),error_messages={'required':'We need an email for the organization.'})
+    organization_contact = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization contact'}),error_messages={'required':'Who is the contact for the organization?'})
+    organization_phone_number = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization contact phone number'}),error_messages={'required':'What is the phone number for the organization contact?'})
+    organization_contact_email = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'organization contact email'}),error_messages={'required':'We need an email for the organization conrtact.'})
+    organization_alt_contact = forms.CharField(max_length=250, required=False, widget=forms.TextInput(attrs={'placeholder': 'organization alt contact'}))
+    organization_alt_phone_number = forms.CharField(max_length=250, required=False, widget=forms.TextInput(attrs={'placeholder': 'organization alt phone number'}))
+    organization_alt_contact_email = forms.CharField(max_length=250, required=False, widget=forms.TextInput(attrs={'placeholder': 'organization alt contact email'}))
+
+    def clean(self, *args, **kwargs):
+        cleaned_data = super(OrganizationSignupForm, self).clean()
+
+        organization_name = cleaned_data.get("organization_name")
+        organization_address = cleaned_data.get("organization_address")
+        organization_zipcode = cleaned_data.get("organization_zipcode")
+        organization_phone = cleaned_data.get("organization_phone")
+        organization_email = cleaned_data.get("organization_email")
+        organization_contact = cleaned_data.get("organization_contact")
+        organization_phone_number = cleaned_data.get("organization_phone_number")
+        organization_contact_email = cleaned_data.get("organization_contact_email")
+        organization_alt_contact = cleaned_data.get("organization_alt_contact","")
+        organization_alt_phone_number = cleaned_data.get("organization_alt_phone_number","")
+        organization_alt_contact_email = cleaned_data.get("organization_alt_contact_email","")
+
+        cleaned_data = dict(cleaned_data.items() + self.files.items())
+        return cleaned_data
+
 
 class UserProfileForm(forms.Form):
     first_name = forms.CharField(max_length=50,required=False)
