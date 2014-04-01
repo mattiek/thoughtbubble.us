@@ -41,7 +41,9 @@
 
         <div id="images">
             {% for picture in pictures %}
-                <img src="{{ picture.img.url }}" alt=""/>
+                <a class="image-popup-no-margins" href="{{ picture.img.url }}">
+                    <img src="{{ picture.img.url }}" alt=""/>
+                </a>
             {% endfor %}
         </div>
 

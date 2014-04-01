@@ -74,7 +74,9 @@
         <div class="picture-label small-heading">pictures</div>
         <div id="pictures">
             {% for picture in organization.organizationimage_set.all %}
-                <img src="{{ picture.img.url }}" alt=""/>
+                <a class="image-popup-no-margins" href="{{ picture.img.url }}">
+                    <img src="{{ picture.img.url }}" alt=""/>
+                </a>
             {% endfor %}
         </div>
 
@@ -82,7 +84,9 @@
         <div class="partner-label small-heading">partners</div>
         <div id="partners">
             {% for partner in organization.partners.all %}
-                <img src="{{ partner.img.url }}" alt=""/>
+                <a class="image-popup-no-margins" href="{{ partner.img.url }}">
+                    <img src="{{ partner.img.url }}" alt=""/>
+                </a>
             {% endfor %}
         </div>
     </div>
