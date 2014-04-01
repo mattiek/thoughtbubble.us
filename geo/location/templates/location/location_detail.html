@@ -52,11 +52,13 @@
         <div id="pictures">
             {% for picture in pictures %}
                 <div>
-                    <div class="cloak">
+{#                    <div class="cloak">#}
 {#                        <img src="{{ picture.img.url }}" alt=""/>#}
+                    <a class="image-popup-no-margins" href="{{ picture.img.url }}">
                         <img src="{% thumbnail picture.img 120x90 %}" alt=""/>
+                    </a>
 {#                        <img src="{% thumbnail picture.img 80x60 crop %}" alt=""/>#}
-                    </div>
+{#                    </div>#}
                 </div>
             {% endfor %}
         </div>
