@@ -20,17 +20,23 @@
 
 {% block content %}
     <div id="idea-wrapper">
-        <div id="support-this">
-            <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-            <a class="dislike blue" href="#">dislike</a>
-            {% include "widgets/sharing.html" %}
+        <div id="spacer">
+            <div id="support-this">
+                <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+                <a class="dislike blue" href="#">dislike</a>
+                {% include "widgets/sharing.html" %}
+            </div>
+            <div class="clr"></div>
         </div>
         <span class="support-number">{{ idea.support_count }}</span> support this
 
-
-        <div class="r">{{ idea.get_parent_label }}: <a href="{{idea.get_parent_link }}">{{ idea.get_parent_title }}</a></div>
-        <div class="r">We want <b>{{ idea.name }}</b> in <b>{{ idea.content_object.name }}</b>, <b>{{ idea.content_object.place }}</b></div>
-        <div class="r">It's a <b>{{ idea.what_kind }}</b> for <b>{{ idea.what_for }}</b></div>
+        <div id="idea-details">
+            <p>{{ idea.get_parent_label }}: <a href="{{idea.get_parent_link }}">{{ idea.get_parent_title }}</a></p>
+            <p>Location: <b>{{ idea.content_object.name }}</b></p>
+            <p>Type: <b>{{ idea.what_kind }}</b></p>
+            <p>When: <b>{{ idea.what_for }}</b></p>
+        </div>
+        <div class="r">We want <b>{{ idea.name }}</b></div>
         <div class="r">I imagine something like this:</div>
         <div class=""><b>{{ idea.description }}</b></div>
         <div id="links" class="r">Links:
