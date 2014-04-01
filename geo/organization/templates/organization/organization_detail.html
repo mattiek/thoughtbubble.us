@@ -26,8 +26,10 @@
             <h1 style="margin:0px;"><a href="{{ organization.get_update_url }}">admin</a></h1>
         {% endif %}
         <div class="row title">
-                <div id="header">{{ organization.title }}
+                <div id="header">
                     {% include "widgets/sharing.html" %}
+                    {{ organization.title }}
+
                 </div>
         </div>
 
