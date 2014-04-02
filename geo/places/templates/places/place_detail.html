@@ -22,7 +22,7 @@
 
         <div class="row title">
             <div id="header">{{ place.name }}, {{ place.state_code }}
-                {% with fb=place.get_fb_sharing %}
+                {% with fb=place.get_fb_sharing twit=place.get_twit_sharing%}
                     {% include "widgets/sharing.html" %}
                 {% endwith %}
             </div>

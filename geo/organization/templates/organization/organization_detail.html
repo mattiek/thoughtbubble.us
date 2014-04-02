@@ -27,7 +27,7 @@
         {% endif %}
         <div class="row title">
                 <div id="header">
-                    {% with fb=organization.get_fb_sharing %}
+                    {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing %}
                         {% include "widgets/sharing.html" %}
                     {% endwith %}
                     {{ organization.title }}
@@ -59,7 +59,7 @@
                 {{ organization.about }}
             </div>
 
-        {% with fb=organization.get_fb_sharing %}
+        {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing%}
            {% include "widgets/sharing.html" %}
         {% endwith %}
 

@@ -235,7 +235,7 @@ class Organization(models.Model):
 
     def get_twit_sharing(self):
         return {
-
+            'text': "Check out %s on thoughtbubble.us! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
 

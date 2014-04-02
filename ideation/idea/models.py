@@ -154,7 +154,7 @@ class Idea(models.Model):
 
     def get_twit_sharing(self):
         return {
-
+            'text': "Check out the idea %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
 
