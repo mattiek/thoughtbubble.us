@@ -600,18 +600,23 @@ i {
   width: 223px;
   margin-left: 20px;
 }
-/* line 144, ../../scss/idea/detail.scss */
+/* line 140, ../../scss/idea/detail.scss */
+#idea-details a {
+  line-height: 17px;
+  display: block;
+}
+/* line 146, ../../scss/idea/detail.scss */
 #idea-details p {
   margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }
 
-/* line 151, ../../scss/idea/detail.scss */
+/* line 153, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 152, ../../scss/idea/detail.scss */
+/* line 154, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
 }
