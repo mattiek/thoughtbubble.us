@@ -165,9 +165,10 @@ form > .promise {
 
 /* line 133, ../scss/tb-signup.scss */
 .promise {
+  text-align: left;
   text-align: center;
 }
-/* line 135, ../scss/tb-signup.scss */
+/* line 137, ../scss/tb-signup.scss */
 .promise h5 {
   font-size: 12px;
   line-height: 16px;
