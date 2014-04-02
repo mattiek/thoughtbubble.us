@@ -987,3 +987,8 @@ input.admin-submit.submit {
   background-image: url('../images/illustration-windturbines.png?1390687238');
   height: 238px;
 }
+
+/* line 163, ../scss/global.scss */
+.tb-copyright {
+  margin-top: 30px;
+}
