@@ -163,10 +163,12 @@ class LocationCreate(CreateView):
 
         state = self.kwargs.get('state',None)
         city = self.kwargs.get('city',None)
+        place = self.kwargs.get('place',None)
         comm = self.kwargs.get('organization',None)
         if comm:
-            organization = Organization.objects.get(pk=comm)
-            context['action_url'] = reverse('addlocation', args=[url_safe(comm.slug),])
+            #TODO FIX THIS!
+            organization = Organization.objects.get(place__slug=place, slug=comm)
+            context['action_url'] = reverse('addlocation', args=[url_safe(organization.slug),])
             context['organization'] = organization
             # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin
