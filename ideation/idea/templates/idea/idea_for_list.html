@@ -19,7 +19,7 @@
         </ul>
 
         <div class="idea-interactions">
-            <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+            <a class="supporting login-required orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
             <a class="commenting orange" data-id="{{ idea.id }}" href="{{ idea.get_absolute_url }}#comments">comment</a>
             {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing%}
                 {% include "widgets/sharing.html" %}

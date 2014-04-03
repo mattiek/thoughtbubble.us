@@ -9,7 +9,10 @@
 {% endblock %}
 
 {% block head %}
-
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
     <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/detail.css" />
 {% endblock %}
 
@@ -22,7 +25,7 @@
     <div id="idea-wrapper">
 
             <div id="support-this">
-                <a class="supporting orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+                <a class="supporting login-required orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
                 <a class="dislike blue" href="#">dislike</a>
                 {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing %}
                     {% include "widgets/sharing.html" %}
@@ -55,7 +58,8 @@
                 </a>
             {% endfor %}
         </div>
-
+        <div style="clear:both;"></div>
+        <div id="map"></div>
 
 {#    Comments #}
         <div class="comments_wrapper" id="comments">
@@ -71,7 +75,10 @@
 {% endblock %}
 
 {% block footerscripts %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>#}
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
 
 

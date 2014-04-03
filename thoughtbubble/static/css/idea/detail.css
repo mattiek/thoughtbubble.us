@@ -611,12 +611,24 @@ i {
   font-size: 16px;
   line-height: 29px;
 }
+/* line 152, ../../scss/idea/detail.scss */
+#idea-details::after {
+  content: ' ';
+  display: block;
+}
 
-/* line 153, ../../scss/idea/detail.scss */
+/* line 158, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 154, ../../scss/idea/detail.scss */
+/* line 159, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
+}
+
+/* line 165, ../../scss/idea/detail.scss */
+#map {
+  margin-top: 20px;
+  width: 100%;
+  height: 265px;
 }

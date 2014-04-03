@@ -771,3 +771,19 @@ form .row .row.second-row {
 .chzn-search {
   display: none;
 }
+
+/* line 156, ../../scss/place/detail.scss */
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+}
+/* line 160, ../../scss/place/detail.scss */
+.idea-details-list li {
+  margin: 10px auto;
+  font-size: 14px;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #4585c3;
+}
