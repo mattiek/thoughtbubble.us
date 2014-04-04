@@ -492,38 +492,42 @@ form .row .row.second-row {
   padding: 0 10px;
 }
 
-/* line 324, ../../scss/organization/add.scss */
+/* line 323, ../../scss/organization/add.scss */
+#news {
+  clear: both;
+}
+/* line 326, ../../scss/organization/add.scss */
 #news #news-photo {
   float: left;
   margin-right: 20px;
 }
-/* line 329, ../../scss/organization/add.scss */
+/* line 331, ../../scss/organization/add.scss */
 #news textarea {
   width: 416px;
 }
-/* line 333, ../../scss/organization/add.scss */
+/* line 335, ../../scss/organization/add.scss */
 #news .buttonize {
   float: right;
 }
 
-/* line 338, ../../scss/organization/add.scss */
+/* line 340, ../../scss/organization/add.scss */
 .submit-all {
   padding: 5px 100px;
   margin: 0 auto;
   display: block;
 }
 
-/* line 344, ../../scss/organization/add.scss */
+/* line 346, ../../scss/organization/add.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
-/* line 348, ../../scss/organization/add.scss */
+/* line 350, ../../scss/organization/add.scss */
 #form-wrapper #deets {
   float: right;
   width: 478px;
 }
-/* line 352, ../../scss/organization/add.scss */
+/* line 354, ../../scss/organization/add.scss */
 #form-wrapper #deets label {
   width: 70px;
   display: inline-block;
@@ -534,21 +538,35 @@ form .row .row.second-row {
   background-size: 21px;
   height: 20px;
 }
-/* line 363, ../../scss/organization/add.scss */
+/* line 365, ../../scss/organization/add.scss */
 #form-wrapper #deets input {
   width: 320px;
   display: inline;
 }
 
-/* line 371, ../../scss/organization/add.scss */
-#about label {
+/* line 372, ../../scss/organization/add.scss */
+#about,
+#sherlock_description {
+  clear: both;
+}
+/* line 375, ../../scss/organization/add.scss */
+#about label,
+#sherlock_description label {
   color: #9d9d9d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
+  vertical-align: top;
+}
+/* line 381, ../../scss/organization/add.scss */
+#about textarea,
+#sherlock_description textarea {
+  margin-right: 84px;
+  float: right;
+  width: 452px;
 }
 
-/* line 377, ../../scss/organization/add.scss */
+/* line 401, ../../scss/organization/add.scss */
 .label {
   color: #9d9d9d;
   /* text color */
@@ -556,55 +574,45 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 383, ../../scss/organization/add.scss */
-#about {
-  clear: both;
-}
-/* line 386, ../../scss/organization/add.scss */
-#about #id_about {
-  margin-left: 20px;
-  width: 452px;
-}
-
-/* line 392, ../../scss/organization/add.scss */
+/* line 407, ../../scss/organization/add.scss */
 #pictures, #partners, #features {
   width: 100%;
   clear: both;
   margin-top: 20px;
 }
-/* line 397, ../../scss/organization/add.scss */
+/* line 412, ../../scss/organization/add.scss */
 #pictures .label, #partners .label, #features .label {
   margin-bottom: 10px;
 }
 
-/* line 402, ../../scss/organization/add.scss */
+/* line 417, ../../scss/organization/add.scss */
 .clr {
   clear: both;
 }
 
-/* line 406, ../../scss/organization/add.scss */
+/* line 421, ../../scss/organization/add.scss */
 .cloak {
   background: #FFFFFF;
 }
 
-/* line 410, ../../scss/organization/add.scss */
+/* line 425, ../../scss/organization/add.scss */
 label[for=id_facebook_url],
 label[for=id_twitter_url],
 label[for=id_linkedin_url] {
   text-indent: 35px;
 }
 
-/* line 417, ../../scss/organization/add.scss */
+/* line 432, ../../scss/organization/add.scss */
 label[for=id_facebook_url] {
   background: url('../../images/small-blue-facebook.png?1390687080') no-repeat;
 }
 
-/* line 420, ../../scss/organization/add.scss */
+/* line 435, ../../scss/organization/add.scss */
 label[for=id_twitter_url] {
   background: url('../../images/small-blue-twitter.png?1390687081') no-repeat;
 }
 
-/* line 424, ../../scss/organization/add.scss */
+/* line 439, ../../scss/organization/add.scss */
 label[for=id_linkedin_url] {
   background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
 }

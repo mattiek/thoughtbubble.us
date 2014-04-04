@@ -321,6 +321,8 @@ form .row .row.second-row {
 }
 
 #news {
+  clear:both;
+
   #news-photo {
     float:left;
     margin-right:20px;
@@ -367,26 +369,39 @@ form .row .row.second-row {
   }
 }
 
-#about {
+#about,
+#sherlock_description {
+  clear:both;
   label {
     color: #9d9d9d; /* text color */
     @include museo;
     font-size: 15px;
+    vertical-align: top;
+  }
+  textarea {
+    margin-right: 84px;
+    float: right;
+    width: 452px;
   }
 }
+
+//#sherlock_description {
+//  label {
+//    color: #9d9d9d; /* text color */
+//    @include museo;
+//    font-size: 15px;
+//    vertical-align: top;
+//  }
+//  textarea {
+//    margin-left: 20px;
+//    width: 452px;
+//  }
+//}
+
 .label {
   color: #9d9d9d; /* text color */
   @include museo;
   font-size: 15px;
-}
-
-#about {
-  clear:both;
-
-  #id_about {
-    margin-left: 20px;
-    width: 452px;
-  }
 }
 
 #pictures, #partners, #features {
