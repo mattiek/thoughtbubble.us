@@ -67,9 +67,17 @@ i {
     @include white-museo;
     float: right;
     display: block;
+    padding: 5px;
 
     &:visited {
       @include white-museo;
+    }
+    &:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
     }
   }
 }
