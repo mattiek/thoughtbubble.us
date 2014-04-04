@@ -1,0 +1,19 @@
+<div class="idea-cap">
+    <div class="left-idea-cap">
+        {#        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ idea.content_object.name }} for {{ idea.what_for }}</p></a>#}
+
+        {% if org.get_update_url %}
+        <a href="{{ org.get_update_url }}"><p>{{ org.title }}</p></a>
+        {% else %}
+            <p>{{ org.title }}</p>
+        {% endif %}
+        <p>{{ org.place }}</p>
+
+
+        <ul class="right-idea-cap">
+            <li><span class="emphasis support-star">{{ org.get_members_count|default:"0"}}</span> members</li>
+        </ul>
+
+    </div>
+
+</div>

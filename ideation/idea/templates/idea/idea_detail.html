@@ -144,5 +144,32 @@
             $('span',e.target).html(e.count);
         });
 
+
+
+    </script>
+
+    <script type="text/javascript">
+        TB.Map.map().markerLayer.setGeoJSON({
+            // this feature is in the GeoJSON format: see geojson.org
+            // for the full specification
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                // coordinates here are in longitude, latitude order because
+                // x, y is the standard for GeoJSON and many formats
+                coordinates: [{{ idea.get_longitude }}, {{ idea.get_latitude }}]
+            },
+            properties: {
+                {#                    title: 'A Single Marker',#}
+                {#                    description: 'Just one of me',#}
+                // one can customize markers by adding simplestyle properties
+                // http://mapbox.com/developers/simplestyle/
+                {#                    'marker-size': 'large',#}
+                {#                    'marker-color': '#f0a'#}
+            }
+        });
+        map.setView([{{ idea.get_latitude }},{{ idea.get_longitude }}],15);
+
+
     </script>
 {% endblock %}

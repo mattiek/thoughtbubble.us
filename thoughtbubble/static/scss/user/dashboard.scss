@@ -146,3 +146,28 @@ fieldset {
     }
   }
 }
+
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+  li {
+    margin: 10px auto;
+    font-size: 14px;
+    @include header-blue-museo;
+    color: $tb_link_blue;
+  }
+}
+
+
+#curator-admin,
+#dash-ideas {
+  width: 650px;
+  margin: 60px auto 60px;
+}
+
+#curator-admin {
+  border: 3px solid #f3812b;
+  border-radius: 15px;
+  padding: 10px;
+}

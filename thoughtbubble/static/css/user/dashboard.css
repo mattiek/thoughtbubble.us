@@ -573,3 +573,33 @@ fieldset {
   float: none;
   margin: 10px auto;
 }
+
+/* line 150, ../../scss/user/dashboard.scss */
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+}
+/* line 154, ../../scss/user/dashboard.scss */
+.idea-details-list li {
+  margin: 10px auto;
+  font-size: 14px;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #4585c3;
+}
+
+/* line 163, ../../scss/user/dashboard.scss */
+#curator-admin,
+#dash-ideas {
+  width: 650px;
+  margin: 60px auto 60px;
+}
+
+/* line 169, ../../scss/user/dashboard.scss */
+#curator-admin {
+  border: 3px solid #f3812b;
+  border-radius: 15px;
+  padding: 10px;
+}

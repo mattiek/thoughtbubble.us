@@ -5,6 +5,7 @@ from django.contrib.auth.models import (
     BaseUserManager, AbstractBaseUser, PermissionsMixin
     )
 from avatar.models import Avatar
+from geo.organization.models import Organization
 
 
 class ThoughtbubbleUserManager(BaseUserManager):
@@ -82,6 +83,15 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
     def get_linkedin_account(self):
         return self.get_social_account('linkedin')
+
+
+    def get_curated_orgs(self):
+        if self.is_superuser:
+            d = Organization.objects.all()
+        else:
+            d = list(self.organizationcurator_set.all())
+
+        return d
 
 
     def __unicode__(self):

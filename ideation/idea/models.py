@@ -143,6 +143,26 @@ class Idea(models.Model):
                                             url_safe(self.slug)])
 
 
+    def get_longitude(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return place.get_center()[0]
+
+        else: # its a location
+            location = self.content_object
+            return location.longitude
+
+    def get_latitude(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return place.get_center()[1]
+
+        else: # its a location
+            location = self.content_object
+            return location.latitude
+
+
+
     def get_fb_sharing(self):
         return {
             'share_copy': "Check out this idea!",

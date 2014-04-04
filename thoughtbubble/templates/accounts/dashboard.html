@@ -149,16 +149,29 @@
 
 {#                            {% include "socialaccount/snippets/login_extra.html" %}#}
 
-        {{ form.about }}
-        {{ form.news }}
+{#        {{ form.about }}#}
+{#        {{ form.news }}#}
 
 {#            <input type="submit" class="submit" value="post"/>#}
 {#        </form>#}
 </div>
 
-{% for idea in ideas %}
-    {% include 'idea/idea_for_list.html' %}
-{% endfor %}
+{% if user.get_curated_orgs %}
+    <div id="curator-admin">
+        <div class="user-info">Organizations Administrated</div>
+        {% for org in user.get_curated_orgs %}
+            {% include 'organization/organization_admin_list.html' %}
+        {% endfor %}
+    </div>
+{% endif %}
+
+<div id="dash-ideas">
+    <div class="user-info">Your Ideas</div>
+    {% for idea in ideas %}
+        {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+</div>
+
 
 <div id="update-avatar-overlay" class="white-popup mfp-hide">
     <p>Your current avatar: </p>

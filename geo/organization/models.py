@@ -1,7 +1,7 @@
 from django.contrib.gis.db import models
 from geo.places.models import Place
 from thoughtbubble.utils import path_and_rename
-from thoughtbubble.models import ThoughtbubbleUser
+# from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
 from django.core.urlresolvers import reverse
 
@@ -9,6 +9,7 @@ from partner.models import Partner
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
 import urllib
+from django.conf import settings
 
 from model_utils import Choices
 
@@ -21,7 +22,7 @@ class OrganizationCuratorRole(models.Model):
 
 
 class OrganizationCurator(models.Model):
-    curator = models.ForeignKey(ThoughtbubbleUser)
+    curator = models.ForeignKey(settings.AUTH_USER_MODEL)
     role = models.ForeignKey(OrganizationCuratorRole, null=True, blank=True)
 
     def __unicode__(self):
@@ -48,7 +49,7 @@ class Organization(models.Model):
 
     curators = models.ManyToManyField(OrganizationCurator, related_name="organization_curator", null=True, blank=True)
 
-    members = models.ManyToManyField(ThoughtbubbleUser, null=True, blank=True)
+    members = models.ManyToManyField(settings.AUTH_USER_MODEL, null=True, blank=True)
 
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
@@ -97,7 +98,8 @@ class Organization(models.Model):
         return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_update_url(self):
-        return reverse('organization_update', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('organization_update', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_join_url(self):
         return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
@@ -238,6 +240,8 @@ class Organization(models.Model):
             'text': "Check out %s on thoughtbubble.us! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
+    def get_member__count(self):
+        return self.members.count()
 
 
 class OrganizationNews(models.Model):
