@@ -98,14 +98,15 @@ i {
   float: right;
   display: block;
   padding: 5px;
+  font-size: 14px;
 }
-/* line 72, ../scss/tb-privacy.scss */
+/* line 73, ../scss/tb-privacy.scss */
 .join-button a:visited {
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 75, ../scss/tb-privacy.scss */
+/* line 76, ../scss/tb-privacy.scss */
 .join-button a:after {
   content: ".";
   display: block;
