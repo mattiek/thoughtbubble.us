@@ -62,16 +62,14 @@ i {
 }
 
 .join-button {
-  @include orange-gradient-button;
-  @include white-museo;
-  float: right;
-
-  &.supporting.activated,
-  &.s-button.activated {
-    color: #f9c98c; /* text color */
-  }
-
-  &:visited {
+  a {
+    @include orange-gradient-button;
     @include white-museo;
+    float: right;
+    display: block;
+
+    &:visited {
+      @include white-museo;
+    }
   }
 }

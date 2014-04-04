@@ -76,8 +76,8 @@ i {
   clear: both;
 }
 
-/* line 64, ../scss/tb-privacy.scss */
-.join-button {
+/* line 65, ../scss/tb-privacy.scss */
+.join-button a {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
@@ -96,14 +96,10 @@ i {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   float: right;
+  display: block;
 }
-/* line 69, ../scss/tb-privacy.scss */
-.join-button.supporting.activated, .join-button.s-button.activated {
-  color: #f9c98c;
-  /* text color */
-}
-/* line 74, ../scss/tb-privacy.scss */
-.join-button::visited {
+/* line 71, ../scss/tb-privacy.scss */
+.join-button a:visited {
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
