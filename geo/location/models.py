@@ -170,6 +170,15 @@ class Location(models.Model):
         return properties
 
 
+    def get_properties_json(self):
+        return JSON.dumps(self.get_properties())
+
+    def get_longitude(self):
+        return self.longitude
+
+    def get_latitude(self):
+        return self.latitude
+
     @property
     def get_mapbox_json(self):
         mapbox = {}
