@@ -24,9 +24,9 @@
 
 {% block content %}
 <div id="page-wrapper">
-    {% if request.user in organization.curators.all or request.user.is_superuser %}
-        <h1 style="margin:0px;"><a href="{{ location.get_update_url }}">admin</a></h1>
-    {% endif %}
+{#    {% if request.user in organization.curators.all or request.user.is_superuser %}#}
+{#        <h1 style="margin:0px;"><a href="{{ location.get_update_url }}">admin</a></h1>#}
+{#    {% endif %}#}
 
     <div class="row title">
         <div id="header">{{ location.name }}</div>
