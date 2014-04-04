@@ -601,7 +601,7 @@ i {
   margin-left: 20px;
 }
 /* line 140, ../../scss/idea/detail.scss */
-#idea-details a {
+#idea-details a, #idea-details b {
   line-height: 17px;
   display: block;
 }
