@@ -4,6 +4,7 @@ from serializers import OrganizationSerializer, CustomPaginationSerializer
 from rest_framework import viewsets
 from vanilla import DetailView, CreateView, UpdateView, ListView
 from django.core.urlresolvers import reverse_lazy, reverse
+from forms import OrganizationUpdateForm
 
 class OrganizationViewset(viewsets.ModelViewSet):
     serializer_class = OrganizationSerializer
@@ -34,6 +35,7 @@ class OrganizationDetail(DetailView):
 
 class OrganizationUpdate(UpdateView):
     model = Organization
+    form_class = OrganizationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'organization'
     # success_url = reverse_lazy('organization_detail')
@@ -45,6 +47,14 @@ class OrganizationUpdate(UpdateView):
     def form_valid(self, form):
         s = super(OrganizationUpdate,self).form_valid(form)
         return s
+
+    def form_invalid(self, form):
+        s = super(OrganizationUpdate,self).form_valid(form)
+        return s
+
+    def get_context_data(self, **kwargs):
+        context = super(OrganizationUpdate, self).get_context_data(**kwargs)
+        return context
 
 
 def join(request, place, organization):

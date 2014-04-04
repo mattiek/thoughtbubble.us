@@ -80,20 +80,23 @@ class Location(models.Model):
         return self.name.lower().replace(' ','-')
 
     def get_api_detail_url(self):
-        return reverse('locations-detail', args=[
-            url_safe(self.organization.place.slug),
-            url_safe(self.organization.slug),
-            url_safe(self.slug)
-        ])
+        if self.organization.place:
+            return reverse('locations-detail', args=[
+                url_safe(self.organization.place.slug),
+                url_safe(self.organization.slug),
+                url_safe(self.slug)
+            ])
 
     def get_api_detail_url(self):
-        return reverse('location_update', args=[
-            url_safe(self.organization.place.slug),
-            url_safe(self.organization.slug),
-            url_safe(self.slug)
-        ])
+        if self.organization.place:
+            return reverse('location_update', args=[
+                url_safe(self.organization.place.slug),
+                url_safe(self.organization.slug),
+                url_safe(self.slug)
+            ])
 
     def add_idea_url(self):
+        if self.organization.place:
             return reverse('addidea', args=[
                                             url_safe(self.organization.place.slug),
                                             url_safe(self.organization.slug),
@@ -101,16 +104,18 @@ class Location(models.Model):
             ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[url_safe(self.organization.place.slug),
-                                          url_safe(self.organization.slug),
-                                          url_safe(self.slug)
-        ])
+        if self.organization.place:
+            return reverse('idea_list', args=[url_safe(self.organization.place.slug),
+                                              url_safe(self.organization.slug),
+                                              url_safe(self.slug)
+            ])
 
     def get_update_url(self):
-        return reverse('location_update', args=[url_safe(self.organization.place.slug),
-                                          url_safe(self.organization.slug),
-                                          url_safe(self.slug)
-        ])
+        if self.organization.place:
+            return reverse('location_update', args=[url_safe(self.organization.place.slug),
+                                              url_safe(self.organization.slug),
+                                              url_safe(self.slug)
+           ])
 
     def get_description(self):
         return self.sherlock_description or 'no exploring descripton'

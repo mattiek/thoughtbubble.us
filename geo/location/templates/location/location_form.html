@@ -139,6 +139,8 @@
             var neighborhoods = neighborhoods || {};
 
             $(document).ready(function() {
+
+
                 $.ajax({
                     url: "/api/v1/organizations/.json?place={{ organization.place.id }}",
                     dataType: "json",
@@ -161,37 +163,38 @@
                         });
                     }
                 });
+
+                {% if form.latitude.value and form.longitude.value %}
+                    TB.Map.Draw.featureGroup.addLayer(L.mapbox.markerLayer({
+                        // this feature is in the GeoJSON format: see geojson.org
+                        // for the full specification
+                        type: 'Feature',
+                        geometry: {
+                            type: 'Point',
+                            // coordinates here are in longitude, latitude order because
+                            // x, y is the standard for GeoJSON and many formats
+                            coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
+                        },
+                        properties: {
+                            {#                    title: 'A Single Marker',#}
+                            {#                    description: 'Just one of me',#}
+                            // one can customize markers by adding simplestyle properties
+                            // http://mapbox.com/developers/simplestyle/
+                            {#                    'marker-size': 'large',#}
+                            {#                    'marker-color': '#f0a'#}
+                        }
+                    }));
+                {% endif %}
             });
 
         </script>
     {% endif %}
-    {% if form.latitude.value and form.longitude.value %}
-
-        <script type="text/javascript">
-            TB.Map.Draw.featureGroup.addLayer(L.mapbox.markerLayer({
-                // this feature is in the GeoJSON format: see geojson.org
-                // for the full specification
-                type: 'Feature',
-                geometry: {
-                    type: 'Point',
-                    // coordinates here are in longitude, latitude order because
-                    // x, y is the standard for GeoJSON and many formats
-                    coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
-                },
-                properties: {
-{#                    title: 'A Single Marker',#}
-{#                    description: 'Just one of me',#}
-                    // one can customize markers by adding simplestyle properties
-                    // http://mapbox.com/developers/simplestyle/
-                    {#                    'marker-size': 'large',#}
-                    {#                    'marker-color': '#f0a'#}
-                }
-            }));
 
 
-        </script>
+
+
 
         <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
         <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-fileinput.js"></script>
-    {% endif %}
+
 {% endblock %}

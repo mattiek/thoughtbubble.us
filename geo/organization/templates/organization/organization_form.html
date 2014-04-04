@@ -18,10 +18,10 @@
 
 {% block content %}
     <div id="form-wrapper">
-        <form method="POST" action="{{ organization.get_update_url }}">
+        <form method="POST" enctype="multipart/form-data" action="{{ organization.get_update_url }}">
             {% csrf_token %}
-            <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>
-            <input type="hidden" name="curators" value="{{ form.curators.value }}"/>
+{#            <input type="hidden" name="neighborhood" value="{{ form.neighborhood.value }}"/>#}
+{#            <input type="hidden" name="curators" value="{{ form.curators.value }}"/>#}
 
             {% include 'widgets/errors.html' %}
         <div class="row">

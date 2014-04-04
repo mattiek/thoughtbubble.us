@@ -82,27 +82,31 @@ class Organization(models.Model):
         return ''
 
     def add_idea_url(self):
-        return reverse('addidea', args=[
+        if self.place:
+            return reverse('addidea', args=[
                                         url_safe(self.place.slug),
                                         url_safe(self.slug),
         ])
 
     def list_ideas_url(self):
-        return reverse('idea_list', args=[
+        if self.place:
+            return reverse('idea_list', args=[
                                         url_safe(self.place.slug),
                                         url_safe(self.slug),
 
         ])
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_update_url(self):
         if self.place:
             return reverse('organization_update', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_join_url(self):
-        return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
         return self.organizationimage_set.all()
@@ -177,7 +181,8 @@ class Organization(models.Model):
         return 'Feature'
 
     def get_explore_link(self):
-        return reverse('sherlock', args=[url_safe(self.place.slug), url_safe(self.slug)])
+        if self.place:
+            return reverse('sherlock', args=[url_safe(self.place.slug), url_safe(self.slug)])
 
     def get_center(self):
         if self.center:
@@ -202,15 +207,18 @@ class Organization(models.Model):
     #     return ''
 
     def get_api_detail_url(self):
-        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
 
     def get_absolute_url(self):
-        return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('organization_detail', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
 
     def get_location_add_url(self):
-        return reverse('addlocation', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
+        if self.place:
+            return reverse('addlocation', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
 
     def get_extent(self):
