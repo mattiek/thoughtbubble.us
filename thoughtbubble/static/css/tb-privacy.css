@@ -70,3 +70,35 @@ strong, b {
 i {
   font-style: italic;
 }
+
+/* line 60, ../scss/tb-privacy.scss */
+.clr {
+  clear: both;
+}
+
+/* line 64, ../scss/tb-privacy.scss */
+.join-button {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  float: right;
+}
+/* line 69, ../scss/tb-privacy.scss */
+.join-button.supporting.activated, .join-button.s-button.activated {
+  color: #f9c98c;
+  /* text color */
+}

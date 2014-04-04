@@ -56,7 +56,18 @@ strong, b {
 i {
   font-style: italic;
 }
-//
-//.clr {
-//  clear: both;
-//}
+
+.clr {
+  clear: both;
+}
+
+.join-button {
+  @include orange-gradient-button;
+  @include white-museo;
+  float: right;
+
+  &.supporting.activated,
+  &.s-button.activated {
+    color: #f9c98c; /* text color */
+  }
+}
