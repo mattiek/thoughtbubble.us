@@ -70,4 +70,8 @@ i {
   &.s-button.activated {
     color: #f9c98c; /* text color */
   }
+
+  &:visited {
+    @include white-museo;
+  }
 }
