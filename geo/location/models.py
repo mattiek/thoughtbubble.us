@@ -164,6 +164,7 @@ class Location(models.Model):
         # }
         return properties
 
+
     @property
     def get_mapbox_json(self):
         mapbox = {}

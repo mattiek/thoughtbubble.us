@@ -15,6 +15,9 @@ from ideation.supportering.models import AbstractSupport
 
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
+
+import json as JSON
+
 FOR_CHOICES = [
     ('morning', 'morning'),
     ('noon', 'noon'),
@@ -177,6 +180,31 @@ class Idea(models.Model):
             'text': "Check out the idea %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
+    def get_properties(self):
+        properties = {}
+        properties['title'] = self.name
+        # properties['marker-size'] = 'medium'
+        # properties['marker-color'] = '#f0a'
+        # properties['marker-symbol'] = self.what_kind.maki_class if self.what_kind else 'Z'
+        properties['link'] = self.get_absolute_url()
+
+        properties['icon'] = {
+            "iconUrl": "/static/images/large-featured-location.png",
+            "iconSize": [47, 60],
+            "iconAnchor": [30, 44],
+            "popupAnchor": [0, -25]
+        }
+
+        # properties['icon'] = {
+        #     "iconUrl": "http://placekitten.com/50/50",
+        #     "iconSize": [50, 50], # size of the icon
+        #     "iconAnchor": [25, 25], # point of the icon which will correspond to marker's location
+        #      "popupAnchor": [0, -25]  # point from which the popup should open relative to the iconAnchor
+        # }
+        return properties
+
+    def get_properties_json(self):
+        return JSON.dumps(self.get_properties())
 
 class IdeaSupport(AbstractSupport):
     idea = models.ForeignKey(Idea)

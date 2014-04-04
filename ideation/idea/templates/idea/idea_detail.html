@@ -152,6 +152,19 @@
 
 
         $(document).ready(function() {
+            TB.Map.map().markerLayer.on('layeradd', function(e) {
+
+                var marker = e.layer,
+                        feature = marker.feature;
+
+                marker.setIcon(L.icon(feature.properties.icon));
+
+
+                // http://leafletjs.com/reference.html#popup
+                marker.bindPopup(popupContent,{
+                    closeButton: false
+                });
+            });
 
             TB.Map.map().setView([{{ idea.get_latitude }},{{ idea.get_longitude }}],15);
             TB.Map.map().markerLayer.setGeoJSON({
@@ -164,14 +177,7 @@
                     // x, y is the standard for GeoJSON and many formats
                     coordinates: [{{ idea.get_longitude }}, {{ idea.get_latitude }}]
                 },
-                properties: {
-                    {#                    title: 'A Single Marker',#}
-                    {#                    description: 'Just one of me',#}
-                    // one can customize markers by adding simplestyle properties
-                    // http://mapbox.com/developers/simplestyle/
-                    {#                    'marker-size': 'large',#}
-                    {#                    'marker-color': '#f0a'#}
-                }
+                properties: {{ idea.get_properties_json|safe }}
             });
 
         });
