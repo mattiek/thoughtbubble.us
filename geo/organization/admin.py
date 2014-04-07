@@ -6,7 +6,7 @@ import reversion
 
 class OrganizationAdmin(reversion.VersionAdmin, admin.OSMGeoAdmin):
     form = OrganizationAdminForm
-    filter_horizontal = ['curators', 'members',]
+    filter_horizontal = ['curators', 'members', 'partners']
 
     class Media:
         css = {
