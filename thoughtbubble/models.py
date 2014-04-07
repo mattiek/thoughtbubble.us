@@ -89,7 +89,8 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         if self.is_superuser:
             d = Organization.objects.all()
         else:
-            d = list(self.organizationcurator_set.all())
+            l = list(self.organizationcurator_set.all())
+            d = [i.organization_curator.get() for i in l]
 
         return d
 
