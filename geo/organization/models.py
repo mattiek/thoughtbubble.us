@@ -27,7 +27,7 @@ class OrganizationCurator(models.Model):
 
     def __unicode__(self):
         s = "n/a"
-        if self.role.title:
+        if self.role:
             s = self.role.title
 
         return "%s - %s" % (self.curator.username, s)
