@@ -90,7 +90,10 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
             d = Organization.objects.all()
         else:
             l = list(self.organizationcurator_set.all())
-            d = [i.organization_curator.get() for i in l]
+            j = [i.organization_curator.all() for i in l]
+
+            # unravelling from a list
+            d = [u for u in i for i in j]
 
         return d
 
