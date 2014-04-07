@@ -6,6 +6,7 @@ from django.contrib.auth.models import (
     )
 from avatar.models import Avatar
 from geo.organization.models import Organization
+import itertools
 
 
 class ThoughtbubbleUserManager(BaseUserManager):
@@ -90,10 +91,10 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
             d = Organization.objects.all()
         else:
             l = list(self.organizationcurator_set.all())
-            j = [i.organization_curator.all() for i in l]
+            x = [i.organization_curator.all() for i in l]
 
             # unravelling from a list
-            d = [u for u in i for i in j]
+            d = itertools.chain(*x)
 
         return d
 
