@@ -26,7 +26,11 @@ class OrganizationCurator(models.Model):
     role = models.ForeignKey(OrganizationCuratorRole, null=True, blank=True)
 
     def __unicode__(self):
-        return "%s - %s" % (self.curator.username, self.role.title)
+        s = "n/a"
+        if self.role.title:
+            s = self.role.title
+
+        return "%s - %s" % (self.curator.username, s)
 
 
 class Organization(models.Model):
