@@ -56,6 +56,8 @@ class Location(models.Model):
 
     some_ideas = generic.GenericRelation(Idea)
 
+    order = models.IntegerField(default=0)
+
 
     def __unicode__(self):
         try:
