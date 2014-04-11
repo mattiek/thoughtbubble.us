@@ -10,7 +10,7 @@
 h1,
 h2,
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: normal;
   color: #53b8d1;
   /* text color */
@@ -19,6 +19,16 @@ h3 {
 }
 
 /* line 12, ../scss/tb-privacy.scss */
+h1 {
+  font-size: 22px;
+}
+
+/* line 16, ../scss/tb-privacy.scss */
+h3 {
+  font-size: 18px;
+}
+
+/* line 20, ../scss/tb-privacy.scss */
 h4,
 h5,
 h6 {
@@ -30,7 +40,17 @@ h6 {
   margin: 10px 0;
 }
 
-/* line 21, ../scss/tb-privacy.scss */
+/* line 29, ../scss/tb-privacy.scss */
+h4 {
+  font-size: 16px;
+}
+
+/* line 33, ../scss/tb-privacy.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 38, ../scss/tb-privacy.scss */
 p {
   font-size: 12px;
   color: #58595b;
@@ -40,18 +60,18 @@ p {
   line-height: 1.5em;
 }
 
-/* line 30, ../scss/tb-privacy.scss */
+/* line 47, ../scss/tb-privacy.scss */
 .middle-column {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 39, ../scss/tb-privacy.scss */
+/* line 56, ../scss/tb-privacy.scss */
 ul.bullet-list {
   list-style-type: disc;
   margin-left: 40px;
 }
-/* line 43, ../scss/tb-privacy.scss */
+/* line 60, ../scss/tb-privacy.scss */
 ul.bullet-list li {
   font-size: 12px;
   color: #58595b;
@@ -61,22 +81,22 @@ ul.bullet-list li {
   line-height: 1.5em;
 }
 
-/* line 52, ../scss/tb-privacy.scss */
+/* line 69, ../scss/tb-privacy.scss */
 strong, b {
   font-weight: bold;
 }
 
-/* line 56, ../scss/tb-privacy.scss */
+/* line 73, ../scss/tb-privacy.scss */
 i {
   font-style: italic;
 }
 
-/* line 60, ../scss/tb-privacy.scss */
+/* line 77, ../scss/tb-privacy.scss */
 .clr {
   clear: both;
 }
 
-/* line 65, ../scss/tb-privacy.scss */
+/* line 82, ../scss/tb-privacy.scss */
 .join-button a {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -100,13 +120,13 @@ i {
   padding: 5px;
   font-size: 14px;
 }
-/* line 73, ../scss/tb-privacy.scss */
+/* line 90, ../scss/tb-privacy.scss */
 .join-button a:visited {
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 76, ../scss/tb-privacy.scss */
+/* line 93, ../scss/tb-privacy.scss */
 .join-button a:after {
   content: ".";
   display: block;
