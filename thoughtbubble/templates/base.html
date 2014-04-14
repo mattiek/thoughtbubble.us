@@ -49,7 +49,7 @@
     {% endblock %}
 </head>
 
-<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}{% if not user.is_authenticated %} logged-out{% else %} logged-in{% endif %}">
+<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
 {% block navstart %}
     <div id="wrapper" class="">
     {% block toprule %} {% endblock %}

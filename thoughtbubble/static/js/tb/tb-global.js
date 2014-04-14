@@ -23,7 +23,7 @@ $('#login-with-email').click(function(e) {
   return $('#login-overlay').addClass('reveal-email');
 });
 
-$('.logged-out #primary-add').click(function(e) {
+$('[data-view=logged-out] #primary-add').click(function(e) {
   e.preventDefault();
   return $('#login').click();
 });
@@ -47,7 +47,7 @@ $(document).on("click", ".message-box", function(e) {
   return $(this).remove();
 });
 
-$(document).on("click", ".logged-out .login-required", function(e) {
+$(document).on("click", "[data-view=logged-out] .login-required", function(e) {
   e.preventDefault();
   return $.magnificPopup.open({
     items: {

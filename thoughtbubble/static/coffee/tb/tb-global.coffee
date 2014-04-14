@@ -17,7 +17,7 @@ $('#login-with-email').click (e) ->
   e.preventDefault()
   $('#login-overlay').addClass 'reveal-email'
 
-$('.logged-out #primary-add').click (e) ->
+$('[data-view=logged-out] #primary-add').click (e) ->
   e.preventDefault()
   $('#login').click()
 
@@ -37,7 +37,7 @@ $('#create-an-account').magnificPopup
 $( document ).on "click", ".message-box", (e) ->
   $(this).remove()
 
-$( document ).on  "click", ".logged-out .login-required", (e) ->
+$( document ).on  "click", "[data-view=logged-out] .login-required", (e) ->
   e.preventDefault()
   $.magnificPopup.open
     items:
