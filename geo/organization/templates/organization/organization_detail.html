@@ -64,31 +64,37 @@
         {% endwith %}
 
         {#    News #}
-        <div class="news-label small-heading">news</div>
-        <div id="news">
-                {% include 'widgets/news_feed.html' %}
-        </div>
+        {% if news %}
+            <div class="news-label small-heading">news</div>
+            <div id="news">
+                    {% include 'widgets/news_feed.html' %}
+            </div>
+        {% endif %}
 
 
         {#    Pictures #}
-        <div class="picture-label small-heading">pictures</div>
-        <div id="pictures">
-            {% for picture in organization.organizationimage_set.all %}
-                <a class="image-popup-no-margins" href="{{ picture.img.url }}">
-                    <img src="{{ picture.img.url }}" alt=""/>
-                </a>
-            {% endfor %}
-        </div>
+        {% if pictures %}
+            <div class="picture-label small-heading">pictures</div>
+            <div id="pictures">
+                {% for picture in organization.organizationimage_set.all %}
+                    <a class="image-popup-no-margins" href="{{ picture.img.url }}">
+                        <img src="{{ picture.img.url }}" alt=""/>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
 
         {#    Partners #}
-        <div class="partner-label small-heading">partners</div>
-        <div id="partners">
-            {% for partner in organization.partners.all %}
-                <a class="image-popup-no-margins" href="{{ partner.img.url }}">
-                    <img src="{{ partner.img.url }}" alt=""/>
-                </a>
-            {% endfor %}
-        </div>
+        {% if organization.partners.all %}
+            <div class="partner-label small-heading">partners</div>
+            <div id="partners">
+                {% for partner in organization.partners.all %}
+                    <a class="image-popup-no-margins" href="{{ partner.img.url }}">
+                        <img src="{{ partner.img.url }}" alt=""/>
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
     </div>
 {% endblock %}
 

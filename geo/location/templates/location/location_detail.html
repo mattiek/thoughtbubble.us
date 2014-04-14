@@ -38,7 +38,7 @@
         </div>
 
     {#    News #}
-
+    {% if news %}
     <div id="news">
         <div class="small-heading">news</div>
 
@@ -46,8 +46,10 @@
 
                 <a href="#" class="orange"></a>
     </div>
+    {% endif %}
 
     {#    Pictures #}
+    {% if pictures %}
         <div class="picture-label small-heading">pictures</div>
         <div id="pictures">
             {% for picture in pictures %}
@@ -62,14 +64,17 @@
                 </div>
             {% endfor %}
         </div>
+    {% endif %}
 
     {#    Partners #}
+    {% if partners %}
         <div class="large-12 columns small-heading">partners</div>
         <div id="partners">
             <img src="" alt=""/>
             <img src="" alt=""/>
             <img src="" alt=""/>
         </div>
+    {% endif %}
     </div>
 
 {#    Ideas #}
