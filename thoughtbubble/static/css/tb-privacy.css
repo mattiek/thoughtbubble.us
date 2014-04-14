@@ -139,4 +139,6 @@ i {
 h2.join-button a {
   float: none;
   text-align: center;
+  width: 100px;
+  margin: 0 auto;
 }
