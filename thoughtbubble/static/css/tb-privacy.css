@@ -134,3 +134,9 @@ i {
   clear: both;
   visibility: hidden;
 }
+
+/* line 104, ../scss/tb-privacy.scss */
+h2.join-button a {
+  float: none;
+  text-align: center;
+}
