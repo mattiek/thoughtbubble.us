@@ -66,8 +66,11 @@ class Organization(models.Model):
 
     center = models.PointField(null=True, blank=True)
 
+    order = models.IntegerField(default=0)
+
     class Meta:
         verbose_name_plural = "Organizations"
+        ordering=['order']
 
     def __unicode__(self):
         return "%s Organization" % self.title
