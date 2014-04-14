@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="curator list -- getting curator for list">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/6026059ce1204c1c3d57d6957c8f6daeece90237/%042.pngc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/6709f8bc51a27d0bf98428fc19c8a38e838c1fc7/%042.pngc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/images/filtering-s67220bb4e0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/images/orange-arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/forms.py" afterPath="$PROJECT_DIR$/thoughtbubble/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/tb-privacy.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/tb-privacy.scss" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,8 +159,8 @@
       <file leaf-file-name="tb-privacy.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/tb-privacy.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.93967515" vertical-offset="960" max-vertical-offset="1469">
-              <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.93967515" vertical-offset="986" max-vertical-offset="1495">
+              <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -841,7 +835,7 @@
       <workItem from="1397176268908" duration="1919000" />
       <workItem from="1397324556480" duration="10000" />
       <workItem from="1397324570719" duration="4000" />
-      <workItem from="1397513296336" duration="2383000" />
+      <workItem from="1397513296336" duration="2498000" />
     </task>
     <task id="LOCAL-00001" summary="Adding contact to footer">
       <created>1395247937246</created>
@@ -1123,11 +1117,19 @@
       <created>1397515359145</created>
       <updated>1397515359145</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="changes">
+      <created>1397515694150</created>
+      <updated>1397515694150</updated>
+    </task>
+    <task id="LOCAL-00072" summary="changes">
+      <created>1397515771357</created>
+      <updated>1397515771357</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75194000" />
+    <option name="totallyTimeSpent" value="75309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="787" extended-state="6" />
@@ -1174,7 +1176,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="Twitter sharing" />
     <MESSAGE value="fixing org" />
     <MESSAGE value="footer spacing on home page" />
     <MESSAGE value="idea on locations" />
@@ -1199,7 +1200,8 @@
     <MESSAGE value="location admin" />
     <MESSAGE value="Hiding content that isn't populated" />
     <MESSAGE value="Add ordering for orgs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ordering for orgs" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1627,8 +1629,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/tb-privacy.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.93967515" vertical-offset="960" max-vertical-offset="1469">
-          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.93967515" vertical-offset="986" max-vertical-offset="1495">
+          <caret line="107" column="19" selection-start-line="107" selection-start-column="19" selection-end-line="107" selection-end-column="19" />
           <folding />
         </state>
       </provider>
