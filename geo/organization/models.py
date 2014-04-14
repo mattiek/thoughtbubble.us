@@ -262,10 +262,10 @@ class Organization(models.Model):
         return 0
 
     def total_ideas(self):
-        return Idea.objects.filter(content_type__name='organization').filter(object_id=self.id).count()
+        return Idea.objects.filter(content_type__name='location').filter(object_id__in=self.location_set.values_list('id',flat=True)).count()
 
     def total_idea_supported(self):
-        return Idea.objects.filter(content_type__name='organization').filter(object_id=self.id).count()
+        return Idea.objects.filter(content_type__name='location').filter(object_id__in=self.location_set.values_list('id',flat=True)).count()
 
     def total_members(self):
         return self.members.all().count()
