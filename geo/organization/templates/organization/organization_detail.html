@@ -89,7 +89,7 @@
             <div class="partner-label small-heading">partners</div>
             <div id="partners">
                 {% for partner in organization.partners.all %}
-                    <a class="image-popup-no-margins" href="{{ partner.img.url }}">
+                    <a href="{{ partner.link }}" target="_blank">
                         <img src="{{ partner.img.url }}" alt=""/>
                     </a>
                 {% endfor %}
