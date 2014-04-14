@@ -8,7 +8,8 @@ import reversion
 
 class LocationAdmin(reversion.VersionAdmin, admin.OSMGeoAdmin):
     form = LocationAdminForm
-    list_display = ('name','organization','order')
+    list_display = ('name','organization','order',)
+    list_editable = ('order',)
     list_filter = ('organization',)
 
     class Media:
