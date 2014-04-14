@@ -1,7 +1,7 @@
 from django.db import models
 from thoughtbubble.utils import path_and_rename
-from thoughtbubble.models import ThoughtbubbleUser
-#from location.models import Location
+# from thoughtbubble.models import ThoughtbubbleUser
+from django.conf import settings
 import os
 import hashlib
 import datetime
@@ -54,7 +54,7 @@ class Idea(models.Model):
     content_object = generic.GenericForeignKey()
 
 
-    user = models.ForeignKey(ThoughtbubbleUser, null=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True)
 
     date_created = models.DateTimeField(auto_now_add=True, default=now())
     date_modified = models.DateTimeField(auto_now=True, default=now())

@@ -1,17 +1,17 @@
 from django.contrib.gis.db import models
 from geo.places.models import Place
 from thoughtbubble.utils import path_and_rename
-# from thoughtbubble.models import ThoughtbubbleUser
 import json as JSON
 from django.core.urlresolvers import reverse
 
 from partner.models import Partner
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
-import urllib
 from django.conf import settings
 
 from model_utils import Choices
+from ideation.idea.models import Idea
+#
 
 class OrganizationCuratorRole(models.Model):
     title = models.CharField(max_length=30)
@@ -255,8 +255,21 @@ class Organization(models.Model):
             'text': "Check out %s on thoughtbubble.us! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
-    def get_member__count(self):
+    def get_member_count(self):
         return self.members.count()
+
+    def total_projects(self):
+        return 0
+
+    def total_ideas(self):
+        return Idea.objects.filter(content_type__name='organization').filter(object_id=self.id).count()
+
+    def total_idea_supported(self):
+        return Idea.objects.filter(content_type__name='organization').filter(object_id=self.id).count()
+
+    def total_members(self):
+        return self.members.all().count()
+
 
 
 class OrganizationNews(models.Model):
