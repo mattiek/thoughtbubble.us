@@ -40,7 +40,7 @@
             <div class="extended hyphenate">
                 <p>{{ exploring.get_description }}</p>
                 <div class="share">
-                    <a class="orange buttonize" href="{{ exploring.add_idea_url }}">add idea</a>
+                    <a class="orange buttonize login-required" href="{{ exploring.add_idea_url }}">add idea</a>
                     <a class="blue buttonize" href="{{ exploring.list_ideas_url }}">find ideas</a>
                     <a class="blue buttonize" href="{{ exploring.share }}">share</a>
                 </div>
@@ -57,7 +57,7 @@
                 <div class="extended hyphenate">
                     <p>{{ location.get_description }}</p>
                     <div class="share">
-                        <a class="orange buttonize" href="{{ location.add_idea_url }}">add idea</a>
+                        <a class="orange buttonize login-required" href="{{ location.add_idea_url }}">add idea</a>
                         <a class="blue buttonize" href="{{ location.list_ideas_url }}">find ideas</a>
                         <a class="blue buttonize" href="{{ location.share }}">share</a>
                     </div>
@@ -77,7 +77,7 @@
             <div class="extended">
                 <p>{{ description }}</p>
                 <div class="share">
-                    <a class="orange buttonize" href="{{ add_idea }}">add idea</a>
+                    <a class="orange buttonize login-required" href="{{ add_idea }}">add idea</a>
                     <a class="blue buttonize" href="{{ find_ideas }}">find ideas</a>
                     <a class="blue buttonize" href="{{ share }}">share</a>
                 </div>
