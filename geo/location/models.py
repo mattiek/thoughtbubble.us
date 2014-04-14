@@ -58,6 +58,9 @@ class Location(models.Model):
 
     order = models.IntegerField(default=0)
 
+    class Meta:
+        ordering=['order']
+
 
     def __unicode__(self):
         try:
