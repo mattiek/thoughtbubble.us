@@ -14,15 +14,17 @@
 }
 
 /* text color */
-/* line 3, ../../scss/partials/_inputs.scss */
+/* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   background-color: white;
@@ -55,8 +57,10 @@ input[type="text"] {
 
 /* line 38, ../../scss/partials/_inputs.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -87,12 +91,13 @@ textarea {
 
 /* line 14, ../../scss/idea/add.scss */
 .submit {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -122,8 +127,10 @@ textarea {
 #add-photo {
   width: 80px;
   height: 79px;
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
@@ -133,22 +140,26 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 44, ../../scss/idea/add.scss */
+/* line 46, ../../scss/idea/add.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
 
 /* line 53, ../../scss/idea/add.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -187,7 +198,7 @@ form .row .row.second-row {
   width: 228px;
 }
 
-/* line 89, ../../scss/idea/add.scss */
+/* line 90, ../../scss/idea/add.scss */
 .chzn-container-single .chzn-default, .chzn-container-single .chzn-single, .chzn-container-single .chzn-drop .chzn-results li,
 .chzn-container-single .chosen-default, .chzn-container-single .chosen-single, .chzn-container-single .chosen-drop .chosen-results li,
 .chosen-container-single .chzn-default,
@@ -201,14 +212,14 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 94, ../../scss/idea/add.scss */
+/* line 95, ../../scss/idea/add.scss */
 .chzn-container-single .chzn-default,
 .chzn-container-single .chosen-default,
 .chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 98, ../../scss/idea/add.scss */
+/* line 99, ../../scss/idea/add.scss */
 .chzn-container-single .chzn-single div b,
 .chzn-container-single .chosen-single div b,
 .chosen-container-single .chzn-single div b,
@@ -219,7 +230,7 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
 }
 
-/* line 107, ../../scss/idea/add.scss */
+/* line 108, ../../scss/idea/add.scss */
 .chzn-container,
 .chosen-container {
   margin-bottom: 15px;
@@ -247,7 +258,7 @@ form .row .row.second-row {
   width: 520px;
 }
 
-/* line 130, ../../scss/idea/add.scss */
+/* line 132, ../../scss/idea/add.scss */
 #id_what_kind,
 #id_content_object,
 #id_content_object_place {

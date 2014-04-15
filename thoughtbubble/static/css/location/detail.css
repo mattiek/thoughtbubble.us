@@ -31,8 +31,10 @@
   width: 576px;
   height: 113px;
   margin: 0 auto;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
   background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
@@ -44,8 +46,10 @@
     width: 100%;
     background-image: none;
     background-color: #daf3f8;
-    -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
     border-radius: 0px;
   }
 }
@@ -216,7 +220,7 @@
   }
 }
 
-/* line 208, ../../scss/idea/_idea.scss */
+/* line 210, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -239,12 +243,13 @@
 /* text color */
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -257,7 +262,7 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 7, ../../scss/partials/_buttons.scss */
+/* line 8, ../../scss/partials/_buttons.scss */
 a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
@@ -265,12 +270,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 13, ../../scss/partials/_buttons.scss */
 .blue {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
@@ -415,12 +421,13 @@ ol.slats li p span.meta {
 
 /* line 13, ../../scss/location/detail.scss */
 .submit {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -441,22 +448,26 @@ ol.slats li p span.meta {
   margin: 0 auto;
 }
 
-/* line 27, ../../scss/location/detail.scss */
+/* line 29, ../../scss/location/detail.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
 
 /* line 36, ../../scss/location/detail.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;

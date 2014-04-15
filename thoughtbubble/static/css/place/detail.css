@@ -59,12 +59,13 @@
 /* text color */
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -77,7 +78,7 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 7, ../../scss/partials/_buttons.scss */
+/* line 8, ../../scss/partials/_buttons.scss */
 a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
@@ -85,12 +86,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 13, ../../scss/partials/_buttons.scss */
 .blue {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
@@ -120,15 +122,17 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 /* text color */
-/* line 3, ../../scss/partials/_inputs.scss */
+/* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   background-color: white;
@@ -161,8 +165,10 @@ input[type="text"] {
 
 /* line 38, ../../scss/partials/_inputs.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -269,8 +275,10 @@ ol.slats li p span.meta {
   width: 576px;
   height: 113px;
   margin: 0 auto;
-  -moz-border-radius: 20px;
   -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
   background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
@@ -282,8 +290,10 @@ ol.slats li p span.meta {
     width: 100%;
     background-image: none;
     background-color: #daf3f8;
-    -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
     border-radius: 0px;
   }
 }
@@ -454,7 +464,7 @@ ol.slats li p span.meta {
   }
 }
 
-/* line 208, ../../scss/idea/_idea.scss */
+/* line 210, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -467,7 +477,7 @@ ol.slats li p span.meta {
   font-size: 11px;
 }
 
-/* line 1, ../../scss/partials/_chosen.scss */
+/* line 3, ../../scss/partials/_chosen.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -503,10 +513,9 @@ ol.slats li p span.meta {
 }
 
 /* text color */
-/* line 56, filtering/*.png */
+/* line 50, filtering/*.png */
 .filtering-sprite, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-single.chzn-single-with-drop b {
-  background-image: url('../../images/filtering-s67220bb4e0.png');
-  background-repeat: no-repeat;
+  background: url('../../images/filtering-s20e78543db.png') no-repeat;
 }
 
 /* line 6, ../../scss/partials/_filtering.scss */
@@ -525,7 +534,7 @@ ol.slats li p span.meta {
   }
 }
 
-/* line 18, ../../scss/partials/_filtering.scss */
+/* line 22, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single,
 .chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default,
@@ -545,13 +554,13 @@ ol.slats li p span.meta {
 }
 /* line 34, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single div b {
-  background-position: 0 -7px;
+  background-position: 0 0;
   height: 7px;
   margin-top: 8px;
 }
 /* line 44, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single.chzn-single-with-drop b {
-  background-position: 0 0;
+  background-position: 0 -7px;
 }
 
 /* line 53, ../../scss/partials/_filtering.scss */
@@ -584,18 +593,20 @@ ol.slats li p span.meta {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 76, ../../scss/partials/_filtering.scss */
+  /* line 77, ../../scss/partials/_filtering.scss */
   .chzn-container-single .chzn-single,
   .chosen-container-single .chosen-single {
     background-image: none;
     background: #ffffff;
     border: 0px;
-    -moz-border-radius: 0px;
     -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
     border-radius: 0px;
-    -moz-box-shadow: 0px 5px white;
-    -webkit-box-shadow: 0px 5px white;
-    box-shadow: 0px 5px white;
+    -webkit-box-shadow: 0px 0px 5px white;
+    -moz-box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 5px white;
     width: 100%;
   }
 }
@@ -642,8 +653,10 @@ ol.slats li p span.meta {
   font-family: "Museo Sans", sans-serif;
   line-height: 33px;
   width: 540px;
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   padding: 10px 20px;
   margin: 0 auto 10px;

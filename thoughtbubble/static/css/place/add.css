@@ -14,15 +14,17 @@
 }
 
 /* text color */
-/* line 3, ../../scss/partials/_inputs.scss */
+/* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   background-color: white;
@@ -55,8 +57,10 @@ input[type="text"] {
 
 /* line 38, ../../scss/partials/_inputs.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -88,12 +92,13 @@ textarea {
 /* text color */
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -106,7 +111,7 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 7, ../../scss/partials/_buttons.scss */
+/* line 8, ../../scss/partials/_buttons.scss */
 a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
@@ -114,12 +119,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 13, ../../scss/partials/_buttons.scss */
 .blue {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
@@ -150,12 +156,13 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 15, ../../scss/place/add.scss */
 .orange {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -243,7 +250,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   background-position: 57px 57px;
 }
 
-/* line 88, ../../scss/place/add.scss */
+/* line 91, ../../scss/place/add.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
@@ -328,7 +335,7 @@ form .row .row.second-row {
   width: 228px;
 }
 
-/* line 161, ../../scss/place/add.scss */
+/* line 163, ../../scss/place/add.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -436,12 +443,12 @@ form .row .row.second-row {
   background: transparent;
   border: none;
 }
-/* line 256, ../../scss/place/add.scss */
+/* line 258, ../../scss/place/add.scss */
 .right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
   background: transparent;
 }
 
-/* line 265, ../../scss/place/add.scss */
+/* line 267, ../../scss/place/add.scss */
 #organization-logo,
 #news-photo,
 .picture {
@@ -591,7 +598,7 @@ form .row .row.second-row {
   background: #FFFFFF;
 }
 
-/* line 408, ../../scss/place/add.scss */
+/* line 410, ../../scss/place/add.scss */
 label[for=id_facebook_url],
 label[for=id_twitter_url],
 label[for=id_linkedin_url] {

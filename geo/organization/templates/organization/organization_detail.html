@@ -38,10 +38,10 @@
         <p id="cta">join our organization, share your ideas, explore your organization, and view our ideas</p>
     
         <ul id="org-agg">
-            <li>{{ organization.total_projects|default:"0"  }} projects</li>
-            <li>{{ organization.total_ideas|default:"0"  }} ideas</li>
-            <li><i class="support-star"></i>{{ organization.total_idea_supported|default:"0" }} idea support</li>
-            <li>{{ organization.total_members|default:"0" }} community members</li>
+            <li><b>{{ organization.total_projects|default:"0" }}</b> projects</li>
+            <li><b>{{ organization.total_ideas|default:"0" }}</b> ideas</li>
+            <li><i class="support-star"></i><b>{{ organization.total_idea_supported|default:"0" }}</b> idea support</li>
+            <li><b>{{ organization.total_members|default:"0" }}</b> community members</li>
             <li></li>
         </ul>
 

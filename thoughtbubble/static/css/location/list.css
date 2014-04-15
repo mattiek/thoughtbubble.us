@@ -8,12 +8,13 @@
 /* text color */
 /* line 7, ../../scss/location/list.scss */
 .submit {
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
-  -moz-background-clip: padding;
-  -o-background-clip: padding-box;
   -webkit-background-clip: padding;
+  -moz-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -38,8 +39,10 @@
 #add-photo {
   width: 80px;
   height: 79px;
-  -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
@@ -49,22 +52,26 @@
   background-position: 57px 57px;
 }
 
-/* line 33, ../../scss/location/list.scss */
+/* line 35, ../../scss/location/list.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
 
 /* line 42, ../../scss/location/list.scss */
 textarea {
-  -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
