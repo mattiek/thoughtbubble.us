@@ -57,6 +57,10 @@ p {
     @include dark-gray-museo;
     font-size: 12px;
   }
+
+  ol {
+    list-style-type: decimal;
+  }
 }
 
 ul.bullet-list {
