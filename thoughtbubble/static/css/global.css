@@ -290,7 +290,21 @@ body:after {
 }
 /* line 176, ../scss/navV2.scss */
 #primary-explore:hover {
-  background-image: linear, to top, #ff9361 0%, #ffb551 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9361 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #ff9361 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
 }
 /* line 179, ../scss/navV2.scss */
 #primary-explore i {
