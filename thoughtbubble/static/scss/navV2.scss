@@ -172,6 +172,10 @@ body {
 
   @include orange-gradient-button-explore;
 
+
+  &:hover {
+    background-image: linear-gradient(to top, #FF9361 0%, #FFB551 100%);
+  }
   i {
     display: block;
     height: directional-sprite-height(normal);
