@@ -106,10 +106,7 @@ $tb-sky-blue: #6fc4d8;
 @mixin orange-gradient-button-hover {
   @include border-radius(10px); // border radius
   @include background-clip(padding-box); // prevents bg color from leaking outside the border
-  @include background-image(linear-gradient(bottom, #FF9361 0%, #f9a533 100%)); // layer fill content
-  border: none;
-  @include white-museo;
-  display: block;
+  @include background-image(linear-gradient(bottom, #FF9666 0%, #FFB045  100%)); // layer fill content
   //font-size: 16px;
 }
 

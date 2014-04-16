@@ -298,13 +298,8 @@ body:after {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9361 0%, #f9a533 100%);
-  background-image: linear-gradient(to top, #ff9361 0%, #f9a533 100%);
-  border: none;
-  color: #fff;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  display: block;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
 }
 /* line 179, ../scss/navV2.scss */
 #primary-explore i {

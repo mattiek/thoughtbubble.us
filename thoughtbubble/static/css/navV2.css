@@ -226,8 +226,8 @@ body:after {
   -webkit-background-clip: padding;
   -moz-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9361 0%, #f9a533 100%);
-  background-image: linear-gradient(to top, #ff9361 0%, #f9a533 100%);
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
   border: none;
   color: #fff;
   /* text color */
