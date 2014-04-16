@@ -6,7 +6,14 @@
 }
 
 /* text color */
-/* line 5, ../scss/tb-privacy.scss */
+/* line 3, ../scss/tb-privacy.scss */
+li {
+  color: #58595a;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+}
+
+/* line 10, ../scss/tb-privacy.scss */
 h1,
 h2,
 h3 {
@@ -18,17 +25,17 @@ h3 {
   margin: 10px 0;
 }
 
-/* line 12, ../scss/tb-privacy.scss */
+/* line 17, ../scss/tb-privacy.scss */
 h1 {
   font-size: 22px;
 }
 
-/* line 16, ../scss/tb-privacy.scss */
+/* line 21, ../scss/tb-privacy.scss */
 h3 {
   font-size: 18px;
 }
 
-/* line 22, ../scss/tb-privacy.scss */
+/* line 27, ../scss/tb-privacy.scss */
 h4,
 h5,
 h6 {
@@ -40,38 +47,37 @@ h6 {
   margin: 10px 0;
 }
 
-/* line 29, ../scss/tb-privacy.scss */
+/* line 34, ../scss/tb-privacy.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 33, ../scss/tb-privacy.scss */
+/* line 38, ../scss/tb-privacy.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 38, ../scss/tb-privacy.scss */
+/* line 43, ../scss/tb-privacy.scss */
 p {
   font-size: 12px;
   color: #58595b;
   color: #58595a;
   font-family: "Museo Sans", sans-serif;
-  text-align: justify;
   line-height: 1.5em;
 }
 
-/* line 47, ../scss/tb-privacy.scss */
+/* line 51, ../scss/tb-privacy.scss */
 .middle-column {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 56, ../scss/tb-privacy.scss */
+/* line 60, ../scss/tb-privacy.scss */
 ul.bullet-list {
   list-style-type: disc;
   margin-left: 40px;
 }
-/* line 60, ../scss/tb-privacy.scss */
+/* line 64, ../scss/tb-privacy.scss */
 ul.bullet-list li {
   font-size: 12px;
   color: #58595b;
@@ -81,22 +87,22 @@ ul.bullet-list li {
   line-height: 1.5em;
 }
 
-/* line 69, ../scss/tb-privacy.scss */
+/* line 73, ../scss/tb-privacy.scss */
 strong, b {
   font-weight: bold;
 }
 
-/* line 73, ../scss/tb-privacy.scss */
+/* line 77, ../scss/tb-privacy.scss */
 i {
   font-style: italic;
 }
 
-/* line 77, ../scss/tb-privacy.scss */
+/* line 81, ../scss/tb-privacy.scss */
 .clr {
   clear: both;
 }
 
-/* line 82, ../scss/tb-privacy.scss */
+/* line 86, ../scss/tb-privacy.scss */
 .join-button a {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -121,13 +127,13 @@ i {
   padding: 5px;
   font-size: 14px;
 }
-/* line 90, ../scss/tb-privacy.scss */
+/* line 94, ../scss/tb-privacy.scss */
 .join-button a:visited {
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 93, ../scss/tb-privacy.scss */
+/* line 97, ../scss/tb-privacy.scss */
 .join-button a:after {
   content: ".";
   display: block;
@@ -136,7 +142,7 @@ i {
   visibility: hidden;
 }
 
-/* line 104, ../scss/tb-privacy.scss */
+/* line 108, ../scss/tb-privacy.scss */
 h2.join-button a {
   float: none;
   text-align: center;
