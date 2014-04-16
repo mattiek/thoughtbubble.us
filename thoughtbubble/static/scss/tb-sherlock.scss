@@ -168,7 +168,7 @@ section {
   &.active {
     //background: #cdcdcd;
     background: #ffffff;
-    color:#eee;
+    color:#fff;
 
     .extended {
       display: block;
@@ -196,10 +196,10 @@ section a {
 
 section a {
   &:visited {
-    color: #eee;
+    color: #fff;
   }
 }
-section.active a { color:#eee; }
+section.active a { color:#fff; }
 section.active small { color:#aaa; }
 h1 { font-size:2em; line-height:1em; }
 h2 { font-size:1.3333em; }

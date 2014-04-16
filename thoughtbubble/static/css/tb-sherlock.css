@@ -310,7 +310,7 @@ section .extended p {
 /* line 168, ../scss/tb-sherlock.scss */
 section.active {
   background: #ffffff;
-  color: #eee;
+  color: #fff;
 }
 /* line 173, ../scss/tb-sherlock.scss */
 section.active .extended {
@@ -335,12 +335,12 @@ section a h4 {
 
 /* line 198, ../scss/tb-sherlock.scss */
 section a:visited {
-  color: #eee;
+  color: #fff;
 }
 
 /* line 202, ../scss/tb-sherlock.scss */
 section.active a {
-  color: #eee;
+  color: #fff;
 }
 
 /* line 203, ../scss/tb-sherlock.scss */
