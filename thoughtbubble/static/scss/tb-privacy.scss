@@ -1,9 +1,6 @@
 @import "partials/general";
 
-li {
-  @include dark-gray-museo;
-  font-size: 12px;
-}
+
 
 h1,
 h2,
@@ -54,6 +51,11 @@ p {
 
   :first-child {
     //margin-top: 0px;
+  }
+
+  li {
+    @include dark-gray-museo;
+    font-size: 12px;
   }
 }
 
