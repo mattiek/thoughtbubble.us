@@ -1,0 +1,88 @@
+{% extends 'mobile/base.html' %}
+{% load classnames %}
+{% load getdict %}
+{% load widget_tweaks %}
+{% load ideacountables %}
+
+{% load socialaccount %}
+
+
+{% load avatar_tags %}
+
+{% block title %}
+    Dashboard
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/user/dashboard-mobile.css" />
+{% endblock %}
+
+{% block bodyid %}account-update{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div id="form-wrapper">
+{#        <form action="{% url 'user_dashboard' %}" method="POST">#}
+{#            {% csrf_token %}#}
+            <div class="row">
+                <div class="large-offset-1 large-2 small-2 columns">
+                    <div id="picture">
+                        {% avatar user %}
+                        <a href="{% url 'avatar_change' %}">Change your avatar (demo)</a>
+{#                        <img src="{{ user.get_profile_picture }}" alt=""/>#}
+                    </div>
+                </div>
+                <div class="large-9 small-10 columns">
+                    <div class="row">
+                        <div class="large-11 small-11 columns user-info">
+                            {{ form.as_p }}
+                         </div>
+                        <div class="large-1 small-1 columns">
+                            <a class="buttonize orange" href="">edit</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 small-12 columns user-stats">
+                            <span class="emphasis">{{ user|idea_count }}</span> ideas <span class="emphasis">{{ user|idea_support_count }}</span> ideas supported <span
+                                class="emphasis">{{ user|organizations_joined_count }}</span> organizations joined
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="large-12 small-12 columns">
+
+
+                        </div>
+                    </div>
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 small-12 columns">
+                    {{ form.about }}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="large-12 small-12 columns">
+                    {{ form.news }}
+                </div>
+            </div>
+
+{#            <input type="submit" class="submit" value="post"/>#}
+{#        </form>#}
+    </div>
+
+    {% for idea in ideas %}
+        {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-dashboard.js"></script>
+{% endblock %}

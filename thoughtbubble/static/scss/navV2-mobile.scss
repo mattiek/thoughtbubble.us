@@ -279,7 +279,7 @@ body {
 #dislike-overlay,
 #update-avatar-overlay {
   border-radius: 10px;
-  width: 415px;
+  max-width: 415px;
   //height: 430px;
   padding-bottom: 30px;
   background-color: #49c4dd;

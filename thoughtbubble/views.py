@@ -279,6 +279,9 @@ class MyConnectionsView(FormView):
         kwargs["request"] = self.request
         return kwargs
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(MyConnectionsView, self).get_template_names().pop()
+
     def post(self, request, *args, **kwargs):
         if 'first_name' in request.POST:
             profile_form = UserProfileForm(request.POST)

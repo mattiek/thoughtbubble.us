@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/user/dashboard.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/user/dashboard-mobile.css" />
 {% endblock %}
 
 {% block bodyid %}dashboard{% endblock %}
@@ -38,7 +38,8 @@
             <a id="save-button" class="buttonize orange" href="">save</a>
             <a id="cancel-button" class="buttonize blue" href="">cancel</a>
             <div class="user-info">
-                {{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}} | {{profile.location|default:"unknown"}}
+                <h4>{{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}}</h4>
+                <h5>{{profile.location|default:"unknown"}}</h5>
             </div>
             <form id="update-info" action="" METHOD="POST">
                 {% csrf_token %}
