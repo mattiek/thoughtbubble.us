@@ -24,18 +24,18 @@
 {% block content %}
     <div id="idea-wrapper">
 
-            <div id="support-this">
-                <a class="supporting login-required orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
-                <a class="dislike blue" href="#">dislike</a>
+        <a class="supporting login-required orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+        <span class="support-number"><i class="support-star-orange"></i>{{ idea.support_count }}</span> support this
+
+        <div id="support-this">
                 {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing %}
                     {% include "widgets/sharing.html" %}
                 {% endwith %}
-            </div>
+            <a class="dislike blue" href="#">dislike</a>
 
-        <span class="support-number"><i class="support-star-orange"></i>{{ idea.support_count }}</span> support this
-        <div id="spacer">
-            <div class="clr"></div>
         </div>
+
+
         <div id="idea-details">
             <p>{{ idea.get_parent_label }}: <br/><a href="{{idea.get_parent_link }}">{{ idea.get_parent_title }}</a></p>
             <p>Location: <br/><b>{{ idea.content_object.name }}</b></p>

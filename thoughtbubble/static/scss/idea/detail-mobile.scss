@@ -23,7 +23,6 @@
 
 
 #idea-wrapper {
-  width: 600px;
   margin: 0 auto;
   @include gray-museo;
   font-size: 38px / 2;
@@ -50,7 +49,7 @@
   border: 1px solid #d8f1f6;
   border-radius: 10px;
   margin-left: 20px;
-  width: 460px;
+  width: 200px;
   height: 70px;
   padding: 12px;
 }
@@ -96,6 +95,7 @@ i {
 }
 
 .supporting {
+  float: right;
   .unsupported {
     display: block;
   }
@@ -116,11 +116,12 @@ i {
 
 .sharing {
   margin: 7px 0 0 0;
+  float:right;
 }
 
 #support-this {
-  float: right;
-  width: 280px;
+  float: none;
+  clear: both;
 }
 
 .r {
@@ -141,13 +142,11 @@ i {
 }
 
 #idea-details {
-  float: right;
+  margin-top: 10px;
   clear: both;
   border: 2px solid $tb-baby-blue;
   border-radius: 10px;
   padding: 10px 20px;
-  width: 223px;
-  margin-left: 20px;
 
   a,b {
 //    white-space: nowrap;
@@ -178,4 +177,15 @@ i {
   margin-top: 20px;
   width: 100%;
   height: 265px;
+}
+
+
+.sharing {
+  li {
+    margin-right: 10px;
+  }
+}
+
+.dislike {
+  float: none;
 }

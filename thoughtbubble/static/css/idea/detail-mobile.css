@@ -540,49 +540,48 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 
 /* line 25, ../../scss/idea/detail-mobile.scss */
 #idea-wrapper {
-  width: 600px;
   margin: 0 auto;
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 38px / 2;
 }
-/* line 31, ../../scss/idea/detail-mobile.scss */
+/* line 30, ../../scss/idea/detail-mobile.scss */
 #idea-wrapper b {
   color: #53b8d1;
   /* text color */
 }
 
-/* line 37, ../../scss/idea/detail-mobile.scss */
+/* line 36, ../../scss/idea/detail-mobile.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 39, ../../scss/idea/detail-mobile.scss */
+/* line 38, ../../scss/idea/detail-mobile.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 45, ../../scss/idea/detail-mobile.scss */
+/* line 44, ../../scss/idea/detail-mobile.scss */
 .support-number {
   color: #f3812b;
 }
 
-/* line 49, ../../scss/idea/detail-mobile.scss */
+/* line 48, ../../scss/idea/detail-mobile.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
   margin-left: 20px;
-  width: 460px;
+  width: 200px;
   height: 70px;
   padding: 12px;
 }
 
-/* line 58, ../../scss/idea/detail-mobile.scss */
+/* line 57, ../../scss/idea/detail-mobile.scss */
 #form-comment {
   margin-top: 10px;
 }
 
-/* line 62, ../../scss/idea/detail-mobile.scss */
+/* line 61, ../../scss/idea/detail-mobile.scss */
 .news {
   color: #9d9d9d;
   /* text color */
@@ -590,24 +589,24 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-size: 15px;
 }
 
-/* line 68, ../../scss/idea/detail-mobile.scss */
+/* line 67, ../../scss/idea/detail-mobile.scss */
 .dislike.blue {
   margin: 0 20px;
 }
 
-/* line 72, ../../scss/idea/detail-mobile.scss */
+/* line 71, ../../scss/idea/detail-mobile.scss */
 #comments {
   padding-top: 50px;
   clear: both;
 }
 
-/* line 78, ../../scss/idea/detail-mobile.scss */
+/* line 77, ../../scss/idea/detail-mobile.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
 }
 
-/* line 86, ../../scss/idea/detail-mobile.scss */
+/* line 85, ../../scss/idea/detail-mobile.scss */
 .support-star-orange {
   width: 12px;
   height: 13px;
@@ -620,6 +619,10 @@ i {
   background-repeat: no-repeat;
 }
 
+/* line 97, ../../scss/idea/detail-mobile.scss */
+.supporting {
+  float: right;
+}
 /* line 99, ../../scss/idea/detail-mobile.scss */
 .supporting .unsupported {
   display: block;
@@ -640,73 +643,82 @@ i {
 /* line 117, ../../scss/idea/detail-mobile.scss */
 .sharing {
   margin: 7px 0 0 0;
-}
-
-/* line 121, ../../scss/idea/detail-mobile.scss */
-#support-this {
   float: right;
-  width: 280px;
 }
 
-/* line 126, ../../scss/idea/detail-mobile.scss */
+/* line 122, ../../scss/idea/detail-mobile.scss */
+#support-this {
+  float: none;
+  clear: both;
+}
+
+/* line 127, ../../scss/idea/detail-mobile.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 130, ../../scss/idea/detail-mobile.scss */
+/* line 131, ../../scss/idea/detail-mobile.scss */
 #images {
   line-height: 80px;
 }
-/* line 133, ../../scss/idea/detail-mobile.scss */
+/* line 134, ../../scss/idea/detail-mobile.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 139, ../../scss/idea/detail-mobile.scss */
+/* line 140, ../../scss/idea/detail-mobile.scss */
 #links {
   margin-bottom: 20px;
 }
 
-/* line 143, ../../scss/idea/detail-mobile.scss */
+/* line 144, ../../scss/idea/detail-mobile.scss */
 #idea-details {
-  float: right;
+  margin-top: 10px;
   clear: both;
   border: 2px solid #daf3f8;
   border-radius: 10px;
   padding: 10px 20px;
-  width: 223px;
-  margin-left: 20px;
 }
-/* line 152, ../../scss/idea/detail-mobile.scss */
+/* line 151, ../../scss/idea/detail-mobile.scss */
 #idea-details a, #idea-details b {
   line-height: 17px;
   display: block;
 }
-/* line 158, ../../scss/idea/detail-mobile.scss */
+/* line 157, ../../scss/idea/detail-mobile.scss */
 #idea-details p {
   margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }
-/* line 164, ../../scss/idea/detail-mobile.scss */
+/* line 163, ../../scss/idea/detail-mobile.scss */
 #idea-details::after {
   content: ' ';
   display: block;
 }
 
-/* line 170, ../../scss/idea/detail-mobile.scss */
+/* line 169, ../../scss/idea/detail-mobile.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 171, ../../scss/idea/detail-mobile.scss */
+/* line 170, ../../scss/idea/detail-mobile.scss */
 #spacer .clr {
   clear: both;
 }
 
-/* line 177, ../../scss/idea/detail-mobile.scss */
+/* line 176, ../../scss/idea/detail-mobile.scss */
 #map {
   margin-top: 20px;
   width: 100%;
   height: 265px;
+}
+
+/* line 184, ../../scss/idea/detail-mobile.scss */
+.sharing li {
+  margin-right: 10px;
+}
+
+/* line 189, ../../scss/idea/detail-mobile.scss */
+.dislike {
+  float: none;
 }
