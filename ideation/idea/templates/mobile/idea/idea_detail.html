@@ -13,7 +13,7 @@
     <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
   <![endif]-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/detail.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/detail-mobile.css" />
 {% endblock %}
 
 {% block bodyid %}idea-detail{% endblock %}
@@ -32,7 +32,7 @@
                 {% endwith %}
             </div>
 
-        <span class="support-number">{{ idea.support_count }}</span> support this
+        <span class="support-number"><i class="support-star-orange"></i>{{ idea.support_count }}</span> support this
         <div id="spacer">
             <div class="clr"></div>
         </div>

@@ -1,0 +1,651 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 6, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 28, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 38, ../../scss/partials/_inputs.scss */
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 3, ../../scss/partials/_buttons.scss */
+a.orange {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+/* line 8, ../../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
+  color: #f9c98c;
+  /* text color */
+}
+
+/* line 13, ../../scss/partials/_buttons.scss */
+.blue {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+
+/* line 17, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 6, ../../scss/place/add-mobile.scss */
+#illustration {
+  width: 930px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* line 15, ../../scss/place/add-mobile.scss */
+.orange {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+
+/* line 19, ../../scss/place/add-mobile.scss */
+.s-button {
+  height: 33px;
+  line-height: 33px;
+  width: 100px;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+}
+/* line 27, ../../scss/place/add-mobile.scss */
+.s-button:first-child {
+  margin-left: 0px;
+}
+
+/* line 32, ../../scss/place/add-mobile.scss */
+#header {
+  background: #33bdd4;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  height: 33px;
+  line-height: 33px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+/* line 42, ../../scss/place/add-mobile.scss */
+.centered {
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+/* line 49, ../../scss/place/add-mobile.scss */
+.row.title {
+  text-align: center;
+}
+/* line 53, ../../scss/place/add-mobile.scss */
+.row.addpad {
+  padding-bottom: 20px;
+}
+
+/* line 58, ../../scss/place/add-mobile.scss */
+#cta {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* line 65, ../../scss/place/add-mobile.scss */
+.actions {
+  margin: 0 auto;
+  width: 463px;
+}
+
+/* line 70, ../../scss/place/add-mobile.scss */
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* line 75, ../../scss/place/add-mobile.scss */
+#add-photo {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  margin-left: -100px;
+  position: absolute;
+  background-image: url(../../images/add-photo.png);
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+}
+
+/* line 91, ../../scss/place/add-mobile.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 98, ../../scss/place/add-mobile.scss */
+textarea {
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 121, ../../scss/place/add-mobile.scss */
+#captcha-question {
+  color: #727171;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* line 128, ../../scss/place/add-mobile.scss */
+.terms-and-conditions {
+  color: #727171;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+/* line 135, ../../scss/place/add-mobile.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 145, ../../scss/place/add-mobile.scss */
+form .row .row.second-row {
+  margin-top: 15px;
+}
+
+/* line 149, ../../scss/place/add-mobile.scss */
+.copy {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 158, ../../scss/place/add-mobile.scss */
+#id_what_for {
+  width: 228px;
+}
+
+/* line 163, ../../scss/place/add-mobile.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 169, ../../scss/place/add-mobile.scss */
+.chosen-container-single .chosen-default {
+  color: #bbb;
+}
+
+/* line 173, ../../scss/place/add-mobile.scss */
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+}
+
+/* line 180, ../../scss/place/add-mobile.scss */
+.chosen-container {
+  margin-bottom: 15px;
+}
+
+/* line 184, ../../scss/place/add-mobile.scss */
+.auto-hint {
+  color: #aaa;
+}
+
+/* line 188, ../../scss/place/add-mobile.scss */
+.idea-cap {
+  color: #7a7a7a;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  width: 576px;
+  height: 113px;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background: #daf3f8;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(80%, #daf3f8), color-stop(80%, #fef8ee));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  /* IE10+ */
+  background: linear, to right, #daf3f8 80%, #fef8ee 80%;
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#daf3f8', endColorstr='#fef8ee',GradientType=1 );
+  /* IE6-9 */
+}
+
+/* line 207, ../../scss/place/add-mobile.scss */
+.left-idea-cap {
+  padding-top: 30px;
+  margin-left: 20px;
+  width: 440px;
+  float: left;
+}
+/* line 213, ../../scss/place/add-mobile.scss */
+.left-idea-cap .supporting {
+  width: 75.5px;
+  height: 22px;
+  background: url(../../images/support.png) no-repeat 0 100%;
+  display: block;
+  float: left;
+}
+/* line 221, ../../scss/place/add-mobile.scss */
+.left-idea-cap .commenting {
+  width: 65px;
+  height: 22px;
+  background: url(../../images/comment.png) no-repeat 0;
+  display: block;
+  float: left;
+}
+/* line 229, ../../scss/place/add-mobile.scss */
+.left-idea-cap span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+}
+/* line 235, ../../scss/place/add-mobile.scss */
+.left-idea-cap .sharing {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* line 247, ../../scss/place/add-mobile.scss */
+.right-idea-cap {
+  float: right;
+  width: 20%;
+}
+/* line 251, ../../scss/place/add-mobile.scss */
+.right-idea-cap table {
+  background: transparent;
+  border: none;
+}
+/* line 258, ../../scss/place/add-mobile.scss */
+.right-idea-cap table tr.even, .right-idea-cap table tr.alt, .right-idea-cap table tr:nth-of-type(even) {
+  background: transparent;
+}
+
+/* line 267, ../../scss/place/add-mobile.scss */
+#organization-logo,
+#news-photo,
+.picture {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/add-photo.png);
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+  float: right;
+  margin-right: 30px;
+}
+
+/* line 280, ../../scss/place/add-mobile.scss */
+.picture {
+  float: left;
+  line-height: 80px;
+  text-align: center;
+}
+/* line 286, ../../scss/place/add-mobile.scss */
+.picture img {
+  vertical-align: middle;
+}
+/* line 290, ../../scss/place/add-mobile.scss */
+.picture:first-child {
+  margin-left: 0px;
+}
+
+/* line 295, ../../scss/place/add-mobile.scss */
+.feature {
+  height: 20px;
+  line-height: 20px;
+  background-color: #dadbdc;
+  border-radius: 5px;
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  float: left;
+  margin: 0 10px 10px 0;
+}
+/* line 311, ../../scss/place/add-mobile.scss */
+.feature .feature-cap {
+  float: right;
+  width: 20px;
+  height: 20px;
+  background-image: url('../../images/add-photo.png?1390687046');
+  background-repeat: no-repeat;
+}
+/* line 319, ../../scss/place/add-mobile.scss */
+.feature span {
+  padding: 0 10px;
+}
+
+/* line 325, ../../scss/place/add-mobile.scss */
+#news #news-photo {
+  float: left;
+  margin-right: 20px;
+}
+/* line 330, ../../scss/place/add-mobile.scss */
+#news textarea {
+  width: 416px;
+}
+/* line 334, ../../scss/place/add-mobile.scss */
+#news .buttonize {
+  float: right;
+}
+
+/* line 339, ../../scss/place/add-mobile.scss */
+.submit-all {
+  padding: 5px 100px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 345, ../../scss/place/add-mobile.scss */
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+/* line 349, ../../scss/place/add-mobile.scss */
+#form-wrapper #deets {
+  float: right;
+  width: 478px;
+}
+/* line 353, ../../scss/place/add-mobile.scss */
+#form-wrapper #deets label {
+  width: 70px;
+  display: inline-block;
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+/* line 361, ../../scss/place/add-mobile.scss */
+#form-wrapper #deets input {
+  width: 320px;
+  display: inline;
+}
+
+/* line 369, ../../scss/place/add-mobile.scss */
+#about label {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 375, ../../scss/place/add-mobile.scss */
+.label {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 381, ../../scss/place/add-mobile.scss */
+#about {
+  clear: both;
+}
+/* line 384, ../../scss/place/add-mobile.scss */
+#about #id_about {
+  margin-left: 20px;
+  width: 452px;
+}
+
+/* line 390, ../../scss/place/add-mobile.scss */
+#pictures, #partners, #features {
+  width: 100%;
+  clear: both;
+  margin-top: 20px;
+}
+/* line 395, ../../scss/place/add-mobile.scss */
+#pictures .label, #partners .label, #features .label {
+  margin-bottom: 10px;
+}
+
+/* line 400, ../../scss/place/add-mobile.scss */
+.clr {
+  clear: both;
+}
+
+/* line 404, ../../scss/place/add-mobile.scss */
+.cloak {
+  background: #FFFFFF;
+}
+
+/* line 410, ../../scss/place/add-mobile.scss */
+label[for=id_facebook_url],
+label[for=id_twitter_url],
+label[for=id_linkedin_url] {
+  text-indent: 35px;
+}
+
+/* line 415, ../../scss/place/add-mobile.scss */
+label[for=id_facebook_url] {
+  background: url('../../images/small-blue-facebook.png?1390687080') no-repeat;
+}
+
+/* line 418, ../../scss/place/add-mobile.scss */
+label[for=id_twitter_url] {
+  background: url('../../images/small-blue-twitter.png?1390687081') no-repeat;
+}
+
+/* line 422, ../../scss/place/add-mobile.scss */
+label[for=id_linkedin_url] {
+  background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
+}

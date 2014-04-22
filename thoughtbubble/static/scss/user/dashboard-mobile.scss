@@ -1,0 +1,173 @@
+@import 'idea/idea';
+@import "partials/sharing";
+@import "partials/buttons";
+@import "partials/inputs";
+@import "partials/general";
+
+#illustration {
+//  background: image-url('illustration-ship.png') no-repeat no-repeat;
+//  background-size: 100%;
+//  height: 233px;
+  width: 930px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.submit {
+  height: 33px;
+  width: 322px;
+
+  float: right;
+  margin-right: 120px;
+}
+
+#form-wrapper {
+  width:650px;
+  margin: 0 auto;
+}
+
+#add-photo {
+  width: 80px;
+  height: 79px;
+  @include border-radius(10px);
+  background-color: #dadbdc;
+  margin-left: -100px;
+  position: absolute;
+  background-image: image-url('add-photo.png');
+  background-repeat: no-repeat;
+  background-position: 57px 57px
+}
+
+
+#picture {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+  float: left;
+  text-align: center;
+}
+
+.user-info {
+  @include header-blue-museo;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.user-stats {
+ @include header-blue-museo;
+  font-size: 19px;
+}
+
+.emphasis {
+  color: #f47e23;
+}
+
+#update-info,
+#save-button,
+#cancel-button  {
+  display: none;
+}
+
+#edit-button,
+#save-button,
+#cancel-button {
+  float: right;
+  color: #FFFFFF;
+  margin-left: 10px;
+
+  &:visited {
+    color: #FFFFFF;
+  }
+}
+
+#user {
+  margin-left: 120px;
+  padding-top: 20px;
+  margin-bottom: 50px;
+
+  &.editing {
+    #edit-button, .user-info {
+      display: none;
+    }
+    #update-info, #save-button, #cancel-button {
+      display: block;
+    }
+  }
+}
+
+#update-info {
+  color: #9d9d9d; /* text color */
+  @include museo;
+  font-size: 14px;
+  line-height: 25px;
+
+  label {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+#social-accounts {
+
+  li {
+    display: inline-block;
+    width: 30%;
+    text-align: center;
+
+    &.title {
+      @include blue-museo-link;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    &.social {
+      color: #4585c3;
+      @include museo;
+    }
+
+    .orange {
+      width: 65px;
+      height: 22px;
+      line-height: 22px;
+      display: block;
+      border-radius: 5px;
+      text-align: center;
+      font-size: 14px;
+      float:none;
+      margin: 10px auto;
+    }
+  }
+}
+
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+  li {
+    margin: 10px auto;
+    font-size: 14px;
+    @include header-blue-museo;
+    color: $tb_link_blue;
+  }
+}
+
+
+#curator-admin,
+#dash-ideas {
+  width: 650px;
+  margin: 60px auto 60px;
+}
+
+#curator-admin {
+  border: 3px solid #f3812b;
+  border-radius: 15px;
+  padding: 10px;
+}

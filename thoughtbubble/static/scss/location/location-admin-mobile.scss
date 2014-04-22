@@ -1,0 +1,45 @@
+@import "compass";
+@import "partials/buttons";
+@import "partials/inputs";
+
+.cloak {
+  background: #FFFFFF;
+}
+
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  width: 325px;
+}
+
+
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+
+
+}
+
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
+  margin-bottom: 20px;
+}
+.file-picker-input {
+  .cloak {
+    background: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    line-height: 80px;
+
+
+  }
+  img {
+    max-width: 100%;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,203 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 3, ../../scss/partials/_buttons.scss */
+a.orange {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+/* line 8, ../../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
+  color: #f9c98c;
+  /* text color */
+}
+
+/* line 13, ../../scss/partials/_buttons.scss */
+.blue {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+
+/* line 17, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 6, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 28, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 38, ../../scss/partials/_inputs.scss */
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 5, ../../scss/location/location-admin-mobile.scss */
+.cloak {
+  background: #FFFFFF;
+}
+
+/* line 12, ../../scss/location/location-admin-mobile.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  width: 325px;
+}
+
+/* line 17, ../../scss/location/location-admin-mobile.scss */
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 24, ../../scss/location/location-admin-mobile.scss */
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+/* line 29, ../../scss/location/location-admin-mobile.scss */
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
+  margin-bottom: 20px;
+}
+
+/* line 33, ../../scss/location/location-admin-mobile.scss */
+.file-picker-input .cloak {
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+}
+/* line 41, ../../scss/location/location-admin-mobile.scss */
+.file-picker-input img {
+  max-width: 100%;
+  vertical-align: middle;
+}

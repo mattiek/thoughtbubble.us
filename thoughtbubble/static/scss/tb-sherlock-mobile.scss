@@ -1,0 +1,253 @@
+@import 'compass';
+@import 'partials/buttons';
+@import "partials/inputs";
+
+//body {
+//  margin: 0px;
+//  padding: 0px;
+//  font: normal 15px / 20px Arial, sans-serif;
+//  background: #fff;
+//}
+
+#illustration {
+  background: #c9eaf7 no-repeat no-repeat;
+  height: 150px;
+}
+
+#map {
+  width:100%;
+  height:640px;
+  background-color: #b5e2b3;
+}
+
+#sherlock-end {
+  height: 640px;
+}
+
+article {
+  min-width: 320px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 640px;
+  overflow: scroll;
+}
+
+h1 {
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h2 {
+  font-size: 1.3333em;
+}
+
+h1, h2 {
+  margin: 0px 0px 10px;
+}
+
+p {
+  margin: 0px;
+}
+
+.scroll {
+  right: 0px;
+  bottom: 0px;
+  font-size: 10px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+}
+
+.colophon {
+  display: block;
+  margin-top: 10px;
+}
+
+.cover {
+  &:before {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0px auto 20px;
+  }
+  &.active:before {
+    background: image-url('large-featured-location.png') 0px 0px no-repeat;
+  }
+}
+
+
+#map {
+  transition: opacity 250ms;
+  -moz-transition: opacity 250ms;
+  -webkit-transition: opacity 250ms;
+}
+
+.spot {
+  width: 47px;
+  height: 60px;
+  margin: -60px 0 0 -30px;
+  background: image-url('large-featured-location.png') 0px 0px no-repeat;
+  position: absolute;
+
+}
+
+
+/* Distinguish the "cover page" visually other sections. */
+
+body.section-0 #map {
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  article {
+    width: 100%;
+    min-width: 100%;
+    padding-top: 0px;
+    padding-bottom: 200%;
+  }
+  section {
+    text-shadow: none;
+    margin-left: 0px;
+    padding: 30px;
+    &.active {
+      position: fixed;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+    }
+  }
+  #pane {
+    width: 100%;
+  }
+  #map {
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    height: 150%;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+section {
+  padding:10px;
+  margin-left:40px;
+  position:relative;
+  transition:background 500ms, color 500ms;
+  -moz-transition:background 500ms, color 500ms;
+  -webkit-transition:background 500ms, color 500ms;
+  background: #DADADA;
+  border-radius: 10px;
+  color: #7b7b7b; /* text color */
+  @include museo;
+  margin-bottom:10px;
+  width: 265px;
+
+  &:first-child {
+    //margin-top: 20px;
+  }
+
+  .extended {
+    //display: none;
+
+    p {
+      min-height: 100px;
+    }
+  }
+
+  &.active {
+    //background: #cdcdcd;
+    background: #ffffff;
+    color:#fff;
+
+    .extended {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  p {
+    margin: 10px 0;
+    text-align: left;
+    line-height: 1.9em;
+  }
+
+}
+
+section a {
+  h4 {
+    color: #53b8d1; /* text color */
+    text-decoration:none;
+    font-weight: normal;
+    margin: 0;
+  }
+  //text-shadow:rgba(64,64,64,1) 0px 0px 4px;
+}
+
+section a {
+  &:visited {
+    color: #fff;
+  }
+}
+section.active a { color:#fff; }
+section.active small { color:#aaa; }
+h1 { font-size:2em; line-height:1em; }
+h2 { font-size:1.3333em; }
+h1,h2 { margin:0px 0px 10px; }
+
+.scroll {
+  right:0px; bottom:0px;
+  font-size:10px;
+  text-transform:uppercase;
+  padding:5px 10px;
+}
+.colophon {
+  display:block;
+  margin-top:10px;
+}
+
+.cover:before {
+  content:'';
+  display:block;
+  width:120px; height:120px;
+  margin:0px auto 20px;
+}
+.cover.active:before { background:url(sprite.png) 0px -120px no-repeat; }
+
+.share {
+  a {
+    margin-left:10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+// hiding the scrollbar in the shadow DOM
+//#communisplore::-webkit-scrollbar,
+//#communisplore::-moz-scrollbar,
+//{
+//  display: none;
+//}
+
+#communisplore {
+  section:first-child {
+    margin-top: 60px;
+  }
+}
+.slimScrollDiv {
+  top: 0px;
+  position: absolute !important;
+  -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
+}

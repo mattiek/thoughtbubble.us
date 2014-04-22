@@ -470,7 +470,7 @@ ol.slats li p span.meta {
   margin-top: 20px;
 }
 
-/* line 13, ../../scss/location/detail.scss */
+/* line 13, ../../scss/location/detail-mobile.scss */
 .submit {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -493,13 +493,13 @@ ol.slats li p span.meta {
   margin-right: 120px;
 }
 
-/* line 21, ../../scss/location/detail.scss */
+/* line 21, ../../scss/location/detail-mobile.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 29, ../../scss/location/detail.scss */
+/* line 29, ../../scss/location/detail-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -513,7 +513,7 @@ input[type="text"] {
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 36, ../../scss/location/detail.scss */
+/* line 36, ../../scss/location/detail-mobile.scss */
 textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -525,7 +525,7 @@ textarea {
   max-width: 100%;
 }
 
-/* line 44, ../../scss/location/detail.scss */
+/* line 44, ../../scss/location/detail-mobile.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -536,12 +536,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 54, ../../scss/location/detail.scss */
+/* line 54, ../../scss/location/detail-mobile.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 58, ../../scss/location/detail.scss */
+/* line 58, ../../scss/location/detail-mobile.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -552,23 +552,23 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 66, ../../scss/location/detail.scss */
+/* line 66, ../../scss/location/detail-mobile.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 71, ../../scss/location/detail.scss */
+/* line 71, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-default, .chosen-container-single .chosen-single, .chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 75, ../../scss/location/detail.scss */
+/* line 75, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 78, ../../scss/location/detail.scss */
+/* line 78, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -576,18 +576,18 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
 }
 
-/* line 90, ../../scss/location/detail.scss */
+/* line 90, ../../scss/location/detail-mobile.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 94, ../../scss/location/detail.scss */
+/* line 94, ../../scss/location/detail-mobile.scss */
 #map {
   width: 100%;
   height: 265px;
 }
 
-/* line 99, ../../scss/location/detail.scss */
+/* line 99, ../../scss/location/detail-mobile.scss */
 #header {
   background: #33bdd4;
   color: #fff;
@@ -602,7 +602,7 @@ form .row .row.second-row {
   margin-bottom: 20px;
 }
 
-/* line 111, ../../scss/location/detail.scss */
+/* line 111, ../../scss/location/detail-mobile.scss */
 .about {
   color: #53b8d1;
   /* text color */
@@ -611,16 +611,16 @@ form .row .row.second-row {
   font-size: 38px / 2;
 }
 
-/* line 117, ../../scss/location/detail.scss */
+/* line 117, ../../scss/location/detail-mobile.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 121, ../../scss/location/detail.scss */
+/* line 121, ../../scss/location/detail-mobile.scss */
 #pictures {
   width: 270px;
 }
-/* line 123, ../../scss/location/detail.scss */
+/* line 123, ../../scss/location/detail-mobile.scss */
 #pictures > div {
   float: left;
   width: 80px;
@@ -628,11 +628,11 @@ form .row .row.second-row {
   border-radius: 10px;
   margin-left: 10px;
 }
-/* line 130, ../../scss/location/detail.scss */
+/* line 130, ../../scss/location/detail-mobile.scss */
 #pictures > div:first-child {
   margin-left: 0px;
 }
-/* line 134, ../../scss/location/detail.scss */
+/* line 134, ../../scss/location/detail-mobile.scss */
 #pictures > div .cloak {
   background: #FFFFFF;
   width: 100%;
@@ -640,19 +640,19 @@ form .row .row.second-row {
   line-height: 80px;
   text-align: center;
 }
-/* line 141, ../../scss/location/detail.scss */
+/* line 141, ../../scss/location/detail-mobile.scss */
 #pictures > div .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 150, ../../scss/location/detail.scss */
+/* line 150, ../../scss/location/detail-mobile.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 154, ../../scss/location/detail.scss */
+/* line 154, ../../scss/location/detail-mobile.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;

@@ -224,6 +224,17 @@
   padding-left: 15px;
 }
 /* line 188, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap .support-star-orange {
+  width: 12px;
+  height: 10px;
+  background: url('../../images/big-orange-star.png?1397523106');
+  background-size: 100%;
+  margin-top: 2px;
+  margin-right: 3px;
+  display: block;
+  float: left;
+}
+/* line 199, ../../scss/idea/_idea.scss */
 .idea-cap .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1390687077');
   background-repeat: no-repeat;
@@ -233,14 +244,14 @@
 }
 
 @media screen and (max-width: 480px) {
-  /* line 200, ../../scss/idea/_idea.scss */
+  /* line 211, ../../scss/idea/_idea.scss */
   .idea-interactions {
     margin: 20px auto;
     width: 250px;
   }
 }
 
-/* line 210, ../../scss/idea/_idea.scss */
+/* line 221, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -594,59 +605,70 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
-  background-position: 15% 45%;
-  padding-left: 15px;
 }
 
-/* line 87, ../../scss/idea/detail.scss */
+/* line 86, ../../scss/idea/detail.scss */
+.support-star-orange {
+  width: 12px;
+  height: 13px;
+  background: url('../../images/big-orange-star.png?1397523106');
+  background-size: 100%;
+  margin-top: 2px;
+  margin-right: 3px;
+  display: block;
+  float: left;
+  background-repeat: no-repeat;
+}
+
+/* line 99, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 90, ../../scss/idea/detail.scss */
+/* line 102, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 96, ../../scss/idea/detail.scss */
+/* line 108, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 99, ../../scss/idea/detail.scss */
+/* line 111, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 105, ../../scss/idea/detail.scss */
+/* line 117, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 109, ../../scss/idea/detail.scss */
+/* line 121, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
   width: 280px;
 }
 
-/* line 114, ../../scss/idea/detail.scss */
+/* line 126, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 118, ../../scss/idea/detail.scss */
+/* line 130, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 121, ../../scss/idea/detail.scss */
+/* line 133, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 127, ../../scss/idea/detail.scss */
+/* line 139, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }
 
-/* line 131, ../../scss/idea/detail.scss */
+/* line 143, ../../scss/idea/detail.scss */
 #idea-details {
   float: right;
   clear: both;
@@ -656,33 +678,33 @@ i {
   width: 223px;
   margin-left: 20px;
 }
-/* line 140, ../../scss/idea/detail.scss */
+/* line 152, ../../scss/idea/detail.scss */
 #idea-details a, #idea-details b {
   line-height: 17px;
   display: block;
 }
-/* line 146, ../../scss/idea/detail.scss */
+/* line 158, ../../scss/idea/detail.scss */
 #idea-details p {
   margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }
-/* line 152, ../../scss/idea/detail.scss */
+/* line 164, ../../scss/idea/detail.scss */
 #idea-details::after {
   content: ' ';
   display: block;
 }
 
-/* line 158, ../../scss/idea/detail.scss */
+/* line 170, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 159, ../../scss/idea/detail.scss */
+/* line 171, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
 }
 
-/* line 165, ../../scss/idea/detail.scss */
+/* line 177, ../../scss/idea/detail.scss */
 #map {
   margin-top: 20px;
   width: 100%;

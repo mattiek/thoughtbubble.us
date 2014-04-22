@@ -143,18 +143,18 @@ input {
 #illustration {
   background-repeat: no-repeat;
   &.ship {
-    background-image: image-url('illustration-ship.png');
-    height: 250px;
+    //background-image: image-url('illustration-ship.png');
+    //height: 250px;
   }
 
   &.trees {
-    background-image: image-url('illustration-trees.png');
-    height: 238px;
+    //background-image: image-url('illustration-trees.png');
+    //height: 238px;
   }
 
   &.turbines {
-    background-image: image-url('illustration-windturbines.png');
-    height: 238px;
+    //background-image: image-url('illustration-windturbines.png');
+    //height: 238px;
   }
 
 }

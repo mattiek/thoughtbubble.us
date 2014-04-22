@@ -1,0 +1,142 @@
+@import "compass";
+@import "partials/general";
+
+//#illustration {
+//  background-image: image-url('illustration-ship.png');
+//}
+
+.submit {
+  @include orange-gradient-button;
+  height: 33px;
+  width: 322px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+#form-wrapper {
+    width:324px;
+    margin: 0 auto;
+}
+
+#id_profile_picture {
+    width: 80px;
+    height: 79px;
+    @include border-radius(10px);
+    background-color: #dadbdc;
+    margin-left: -100px;
+    position: absolute;
+    background-image: image-url('add-photo.png');
+    background-repeat: no-repeat;
+    background-position: 57px 57px
+}
+
+
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+    width: 324px;
+    height: 25px;
+    @include border-radius(5px);
+
+    @include white-museo;
+    border: 1px solid #cccccc;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 0.875em;
+    margin: 0 0 1em 0;
+    padding: 0.5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+    transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+#id_captcha_choicefield {
+  list-style: none;
+}
+
+#id_captcha_choicefield li {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+#id_captcha_choicefield li:first-child {
+  margin-left: 15px;
+}
+
+#captcha-question,
+.terms-and-conditions {
+  color: #727171; /* text color */
+  @include museo;
+  font-size: 12px;
+  font-style: italic;
+  clear: both;
+}
+
+
+#id_captcha_choicefield {
+  li{
+    padding: 6px;
+
+    &.captcha_select {
+      border: 3px solid $tb-orange;
+      border-radius: 10px;
+      padding: 3px;
+    }
+  }
+  img {
+    max-height: 50px;
+  }
+
+}
+
+#id_organization_name,
+#id_organization_contact,
+#id_organization_alt_contact,
+#id_organization_cc {
+  margin-top: 40px;
+}
+
+#id_organization_expiry,
+#id_organization_security {
+  float: left;
+  width: 120px;
+}
+
+#id_organization_security {
+  margin-left: 20px;
+}
+
+#id_organization_security + #captcha-question {
+  margin-top: 80px;
+}
+
+h5 {
+//  @include blue-museo;
+  @include header-blue-museo;
+  color: $tb-sky-blue;
+}
+
+#home-container > .promise {
+  margin-bottom: 20px;
+}
+
+form > .promise {
+  margin-top: 30px;
+}
+
+.promise {
+  text-align:left;
+  text-align: center;
+
+  h5 {
+    font-size: 12px;
+    line-height: 16px;
+
+  }
+}

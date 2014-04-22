@@ -999,21 +999,6 @@ input.admin-submit.submit {
 #illustration {
   background-repeat: no-repeat;
 }
-/* line 145, ../scss/global-mobile.scss */
-#illustration.ship {
-  background-image: url('../images/illustration-ship.png?1390687234');
-  height: 250px;
-}
-/* line 150, ../scss/global-mobile.scss */
-#illustration.trees {
-  background-image: url('../images/illustration-trees.png?1390687200');
-  height: 238px;
-}
-/* line 155, ../scss/global-mobile.scss */
-#illustration.turbines {
-  background-image: url('../images/illustration-windturbines.png?1390687238');
-  height: 238px;
-}
 
 /* line 162, ../scss/global-mobile.scss */
 .tb-copyright {
