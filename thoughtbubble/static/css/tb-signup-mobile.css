@@ -1,72 +1,190 @@
-/*
-Syntax error: Invalid CSS after "    margin": expected ";", was ": 0 auto 20px;"
-        on line 31 of /Volumes/Brandon/my_projects/thought/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/tb-signup-mobile.scss
+/* line 2, ../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-Backtrace:
-/Volumes/Brandon/my_projects/thought/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/tb-signup-mobile.scss:31
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:1149:in `expected'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:1085:in `expected'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:1080:in `tok!'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:586:in `block in declaration_or_ruleset'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:1123:in `call'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:1123:in `rethrow'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:592:in `declaration_or_ruleset'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:554:in `block_child'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:546:in `block_contents'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:535:in `block'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:529:in `ruleset'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:553:in `block_child'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:546:in `block_contents'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:82:in `stylesheet'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/scss/parser.rb:27:in `parse'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/engine.rb:342:in `_to_tree'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:126:in `timed'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:139:in `block in compile'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/logger.rb:45:in `red'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:138:in `compile'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:118:in `compile_if_required'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:103:in `block (2 levels) in run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:101:in `each'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:101:in `block in run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:126:in `timed'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/compiler.rb:100:in `run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/commands/watch_project.rb:147:in `recompile'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `call'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/path.rb:73:in `run_callback'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/path.rb:55:in `callback_action'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/path.rb:35:in `update'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/state/directory.rb:39:in `block in modified'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `each'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/state/directory.rb:37:in `modified'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/state/directory.rb:18:in `refresh'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:30:in `block in temporary_multipath_handler'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `each'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:27:in `temporary_multipath_handler'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:17:in `block (2 levels) in run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `each'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:16:in `block in run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/rb-fsevent-0.9.4/lib/rb-fsevent/fsevent.rb:45:in `call'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/rb-fsevent-0.9.4/lib/rb-fsevent/fsevent.rb:45:in `run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/backends/rbfsevent.rb:20:in `run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm/monitor.rb:26:in `run'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/fssm-0.2.10/lib/fssm.rb:70:in `monitor'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/commands/watch_project.rb:87:in `perform'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/commands/base.rb:18:in `execute'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/commands/project_base.rb:19:in `execute'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/bin/compass:30:in `block in <top (required)>'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/bin/compass:44:in `call'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/gems/compass-0.12.3/bin/compass:44:in `<top (required)>'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/bin/compass:23:in `load'
-/Users/mlorenz/.rvm/gems/ruby-1.9.3-p484/bin/compass:23:in `<top (required)>'
--e:1:in `load'
--e:1:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"    margin\": expected \";\", was \": 0 auto 20px;\"\A         on line 31 of /Volumes/Brandon/my_projects/thought/thoughtbubble/thoughtbubble/thoughtbubble/static/scss/tb-signup-mobile.scss"; }
+/* text color */
+/* line 122, ../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 8, ../scss/tb-signup-mobile.scss */
+.submit {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  height: 33px;
+  width: 322px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+/* line 17, ../scss/tb-signup-mobile.scss */
+#form-wrapper {
+  width: 324px;
+  margin: 0 auto;
+}
+
+/* line 22, ../scss/tb-signup-mobile.scss */
+#id_profile_picture {
+  width: 80px;
+  height: 79px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  margin-left: -100px;
+  background-image: url('../images/add-photo.png?1390687046');
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+  margin: 0 auto 20px;
+}
+
+/* line 37, ../scss/tb-signup-mobile.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  width: 324px;
+  height: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 59, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield {
+  list-style: none;
+}
+
+/* line 63, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield li {
+  display: inline-block;
+  margin-left: 60px;
+}
+
+/* line 68, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield li:first-child {
+  margin-left: 15px;
+}
+
+/* line 73, ../scss/tb-signup-mobile.scss */
+#captcha-question,
+.terms-and-conditions {
+  color: #727171;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  clear: both;
+}
+
+/* line 83, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield li {
+  padding: 6px;
+}
+/* line 86, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield li.captcha_select {
+  border: 3px solid #f3812b;
+  border-radius: 10px;
+  padding: 3px;
+}
+/* line 92, ../scss/tb-signup-mobile.scss */
+#id_captcha_choicefield img {
+  max-height: 50px;
+}
+
+/* line 101, ../scss/tb-signup-mobile.scss */
+#id_organization_name,
+#id_organization_contact,
+#id_organization_alt_contact,
+#id_organization_cc {
+  margin-top: 40px;
+}
+
+/* line 106, ../scss/tb-signup-mobile.scss */
+#id_organization_expiry,
+#id_organization_security {
+  float: left;
+  width: 120px;
+}
+
+/* line 111, ../scss/tb-signup-mobile.scss */
+#id_organization_security {
+  margin-left: 20px;
+}
+
+/* line 115, ../scss/tb-signup-mobile.scss */
+#id_organization_security + #captcha-question {
+  margin-top: 80px;
+}
+
+/* line 119, ../scss/tb-signup-mobile.scss */
+h5 {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #6fc4d8;
+}
+
+/* line 125, ../scss/tb-signup-mobile.scss */
+#home-container > .promise {
+  margin-bottom: 20px;
+}
+
+/* line 129, ../scss/tb-signup-mobile.scss */
+form > .promise {
+  margin-top: 30px;
+}
+
+/* line 133, ../scss/tb-signup-mobile.scss */
+.promise {
+  text-align: left;
+  text-align: center;
+}
+/* line 137, ../scss/tb-signup-mobile.scss */
+.promise h5 {
+  font-size: 12px;
+  line-height: 16px;
+}
