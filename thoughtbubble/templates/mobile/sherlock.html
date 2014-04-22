@@ -13,7 +13,7 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/mapbox-v0.6.7.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.slimscroll.min.js"></script>
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-sherlock.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-sherlock-mobile.css" />
 {#    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />#}
 {% endblock %}
 {% block bodyid %}sherlock{% endblock %}
@@ -24,16 +24,14 @@
 
 {% block content %}
 
-    <div id='pane'><div id='map'></div></div>
+    <ul id="communisplore-mobile">
+        {#        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">#}
+        {#            <h3>{{ exploring.title }}</h3>#}
+        {#            <p>{{ exploring.about }}</p>#}
+        {#            <small class='scroll'>Scroll ▼</small>#}
+        {#        </section>#}
 
-    <article id="communisplore">
-{#        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">#}
-{#            <h3>{{ exploring.title }}</h3>#}
-{#            <p>{{ exploring.about }}</p>#}
-{#            <small class='scroll'>Scroll ▼</small>#}
-{#        </section>#}
-
-        <section class='active' id="{{ exploring.get_id }}" data-index="0">
+        <li class='active' id="{{ exploring.get_id }}" data-index="0">
             <a href="{{ exploring.get_absolute_url }}">
                 <h4>{{ exploring.title }}</h4>
             </a>
@@ -47,10 +45,10 @@
                 <div style="clear:both;"></div>
                 <small class='scroll'>Scroll ▼</small>
             </div>
-        </section>
+        </li>
 
         {% for location in exploring.location_set.all %}
-            <section id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
+            <li id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
                 <a href="{{ location.get_absolute_url }}">
                     <h4>{{ location.name }}</h4>
                 </a>
@@ -63,14 +61,17 @@
                     </div>
                     <div style="clear:both;"></div>
                 </div>
-            </section>
+            </li>
         {% endfor %}
         <div id="sherlock-end"></div>
-    </article>
+    </ul>
+
+    <div id='pane'><div id='map'></div></div>
+
 
     {% verbatim %}
     <script id="section-template" type="text/x-handlebars-template">
-        <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
+        <li data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
             <a href="{{ link }}">
                 <h4>{{ name }}</h4>
             </a>
@@ -83,7 +84,7 @@
                 </div>
                 <div style="clear:both;"></div>
             </div>
-        </section>
+        </li>
     </script>
     {% endverbatim %}
 
@@ -96,7 +97,7 @@
 
 
     <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb-sherlock.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb-sherlock-mobile.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/hyphenator.js"></script>
 
 {#    {% if exploring %}#}

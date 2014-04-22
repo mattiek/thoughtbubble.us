@@ -11,12 +11,12 @@
 
 #illustration {
   background: #c9eaf7 no-repeat no-repeat;
-  height: 150px;
+  //height: 150px;
 }
 
 #map {
   width:100%;
-  height:640px;
+  height:300px;
   background-color: #b5e2b3;
 }
 
@@ -26,7 +26,7 @@
 
 article {
   min-width: 320px;
-  position: absolute;
+  //position: absolute;
   top: 0px;
   width: 100%;
   height: 640px;
@@ -128,7 +128,7 @@ body.section-0 #map {
     bottom: 0%;
     left: 0%;
     width: 100%;
-    height: 150%;
+    height: 300px;
   }
 }
 
@@ -139,72 +139,75 @@ body.section-0 #map {
   }
 }
 
-section {
-  padding:10px;
-  margin-left:40px;
-  position:relative;
-  transition:background 500ms, color 500ms;
-  -moz-transition:background 500ms, color 500ms;
-  -webkit-transition:background 500ms, color 500ms;
-  background: #DADADA;
-  border-radius: 10px;
-  color: #7b7b7b; /* text color */
-  @include museo;
-  margin-bottom:10px;
-  width: 265px;
-
+#communisplore-mobile {
   &:first-child {
-    //margin-top: 20px;
+    margin-top: 10px;
   }
+  li {
+    padding:10px;
+    position:relative;
+    transition:background 500ms, color 500ms;
+    -moz-transition:background 500ms, color 500ms;
+    -webkit-transition:background 500ms, color 500ms;
+    background: #DADADA;
+    border-radius: 10px;
+    color: #7b7b7b; /* text color */
+    @include museo;
+    margin-bottom:10px;
+    display: block;
 
-  .extended {
-    //display: none;
-
-    p {
-      min-height: 100px;
+    &:first-child {
+      //margin-top: 20px;
     }
-  }
-
-  &.active {
-    //background: #cdcdcd;
-    background: #ffffff;
-    color:#fff;
 
     .extended {
-      display: block;
-      text-align: right;
+      //display: none;
+
+      p {
+        //min-height: 100px;
+      }
+    }
+
+    &.active {
+      //background: #cdcdcd;
+      background: #ffffff;
+      color:#fff;
+
+      .extended {
+        display: block;
+        text-align: right;
+      }
+    }
+
+    p {
+      margin: 10px 0;
+      text-align: left;
+      line-height: 1.9em;
+    }
+
+  }
+
+  li a {
+    h4 {
+      color: #53b8d1; /* text color */
+      text-decoration:none;
+      font-weight: normal;
+      margin: 0;
+    }
+    //text-shadow:rgba(64,64,64,1) 0px 0px 4px;
+  }
+
+  li a {
+    &:visited {
+      color: #fff;
     }
   }
-
-  p {
-    margin: 10px 0;
-    text-align: left;
-    line-height: 1.9em;
-  }
-
+  li.active a { color:#fff; }
+  li.active small { color:#aaa; }
+  h1 { font-size:2em; line-height:1em; }
+  h2 { font-size:1.3333em; }
+  h1,h2 { margin:0px 0px 10px; }
 }
-
-section a {
-  h4 {
-    color: #53b8d1; /* text color */
-    text-decoration:none;
-    font-weight: normal;
-    margin: 0;
-  }
-  //text-shadow:rgba(64,64,64,1) 0px 0px 4px;
-}
-
-section a {
-  &:visited {
-    color: #fff;
-  }
-}
-section.active a { color:#fff; }
-section.active small { color:#aaa; }
-h1 { font-size:2em; line-height:1em; }
-h2 { font-size:1.3333em; }
-h1,h2 { margin:0px 0px 10px; }
-
 .scroll {
   right:0px; bottom:0px;
   font-size:10px;
@@ -241,13 +244,15 @@ h1,h2 { margin:0px 0px 10px; }
 //  display: none;
 //}
 
-#communisplore {
+#communisplore-mobile {
   section:first-child {
     margin-top: 60px;
   }
+  height: 150px;
+  overflow: auto;
 }
 .slimScrollDiv {
   top: 0px;
-  position: absolute !important;
+  //position: absolute !important;
   -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }
