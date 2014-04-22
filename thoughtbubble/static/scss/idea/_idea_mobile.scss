@@ -1,0 +1,230 @@
+@import "compass";
+@import "partials/general";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+.idea-cap {
+  color: #7a7a7a; /* text color */
+  position: relative;;
+  @include museo;
+  font-size: 17px;
+  width: 100%;
+  height: 113px;
+  margin: 0 auto;
+  @include border-radius(20px);
+  margin-bottom: 15px;
+  @include background-image(linear-gradient(left, #daf3f8 80%, #fef8ee 80%)); // layer fill content
+
+
+
+
+  @include media($mobile) {
+    width: 100%;
+    background-image: none;
+    background-color: #daf3f8;
+    @include border-radius(0px);
+  }
+
+
+  a {
+    text-decoration: none;
+
+    &.orange {
+      color: #ffffff;
+      &:visited {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .left-idea-cap {
+    padding-top: 25px;
+    margin-left: 20px;
+    width: 440px;
+    float: left;
+
+    @include media($mobile) {
+      margin-left: 0px;
+      width: 320px;
+      background-color: $tb-baby-blue;
+    }
+
+    p {
+      @include blue-museo-link;
+      font-size:17px;
+      margin-bottom: 20px;
+
+      @include media($mobile) {
+        text-indent: 20px;
+      }
+    }
+
+    .supporting {
+      width: (151px / 2);
+      height: (44px / 2);
+      line-height: (44px / 2);
+      display: block;
+      float: left;
+      border-radius: 5px;
+      margin-right: 10px;
+
+      i {
+        background-image: image-url("white-star.png");
+        background-repeat: no-repeat;
+        //background-size: 9px;
+        background-position: 15% 45%;
+        padding-left: 15px;
+      }
+
+      .unsupported {
+        display: block;
+        font-size: 11px;
+      }
+      .supported {
+        display: none;
+        font-size: 11px;
+      }
+
+
+      &.activated {
+        .unsupported {
+          display: none;
+          font-size: 11px;
+        }
+        .supported {
+          display: block;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .commenting {
+      width: 65px;
+      height: 22px;
+      line-height: 22px;
+      //background: url(../../images/comment.png) no-repeat 0;
+      display: block;
+      float: left;
+      border-radius: 5px;
+      margin-right: 10px;
+      font-size: 11px;
+
+    }
+
+    //span {
+    //  color: #7b7b7b; /* text color */
+    //  font-family: "Museo Sans", sans-serif;
+    //  font-size: 10px;
+    //}
+
+    .sharing {
+      display: inline-block;
+      list-style-type: none;
+      margin-top: 0px;
+      float: none;
+
+      li {
+
+
+      }
+    }
+
+  }
+
+  .right-idea-cap {
+    list-style-type: none;
+    @include museo;
+    font-size: 10px;
+    color: #797878; /* text color */
+    padding-top: 30px;
+    padding-right: 15px;
+    padding-left: 0px;
+    right: 0px;
+    top: 0px;
+
+
+    li {
+      margin-top: 5px;
+      line-height: 1.3em;
+
+      &:first-child {
+        margin-top: 0px;
+      }
+    }
+
+      padding-top: 0px;
+      width: 320px;
+      clear: both;
+
+      background-color: $tb-beige;
+
+      padding: 20px;
+
+      li {
+        display: inline-block;
+        width: 100px;
+      }
+
+    .emphasis {
+      color: #f37d23; /* text color */
+      background: #FFF;
+      border-radius: 7px;
+      padding: 2px 7px;
+
+    }
+
+    .support-star {
+      background-image: image-url("orange-star.png");
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: 15% 45%;
+      padding-left: 15px;
+    }
+
+    .support-star-orange {
+      width: 12px;
+      height: 10px;
+      background: image-url('big-orange-star.png');
+      background-size: 100%;
+      margin-top: 2px;
+      margin-right: 3px;
+      display: block;
+      float:left;
+    }
+
+    .comments-bubble {
+      background-image: image-url("orange-comment.png");
+      background-repeat: no-repeat;
+      background-size: 9px;
+      background-position: 15% 45%;
+      padding-left: 15px;
+    }
+  }
+
+}
+
+
+.idea-interactions {
+  @include media($mobile) {
+    margin: 20px auto;
+    width: 250px;
+  }
+}
+
+
+.supporting,
+.dislike,
+.commenting {
+  display:block;
+  float:left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+.chosen-container {
+  display: block;
+}
