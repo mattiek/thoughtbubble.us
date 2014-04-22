@@ -9,7 +9,7 @@
   position: relative;;
   @include museo;
   font-size: 17px;
-  width: 100%;
+
   height: 113px;
   margin: 0 auto;
   @include border-radius(20px);
@@ -17,7 +17,7 @@
   @include background-image(linear-gradient(left, #daf3f8 80%, #fef8ee 80%)); // layer fill content
 
 
-  width: 100%;
+  width: 300px;
   background-image: none;
   background-color: #daf3f8;
   @include border-radius(0px);
