@@ -81,7 +81,7 @@ $(document).ready( function() {
         size: '0px',
         width: '100%',
         height: height,
-        wheelStep: 10
+        wheelStep: 5
     });
 
 });
