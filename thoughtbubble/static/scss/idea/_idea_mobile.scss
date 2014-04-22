@@ -17,15 +17,11 @@
   @include background-image(linear-gradient(left, #daf3f8 80%, #fef8ee 80%)); // layer fill content
 
 
-
-
-  @include media($mobile) {
-    width: 100%;
-    background-image: none;
-    background-color: #daf3f8;
-    @include border-radius(0px);
-  }
-
+  width: 100%;
+  background-image: none;
+  background-color: #daf3f8;
+  @include border-radius(0px);
+  height: auto;
 
   a {
     text-decoration: none;
@@ -41,12 +37,11 @@
   .left-idea-cap {
     padding-top: 25px;
     margin-left: 20px;
-    width: 440px;
-    float: left;
+    width: 300px;
 
     @include media($mobile) {
       margin-left: 0px;
-      width: 320px;
+      width: 300px;
       background-color: $tb-baby-blue;
     }
 
@@ -154,7 +149,7 @@
     }
 
       padding-top: 0px;
-      width: 320px;
+      width: 300px;
       clear: both;
 
       background-color: $tb-beige;
@@ -227,4 +222,9 @@
 
 .chosen-container {
   display: block;
+}
+
+.clr {
+  clear: both;
+  margin-bottom: 20px;
 }

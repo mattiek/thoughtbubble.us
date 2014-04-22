@@ -59,48 +59,43 @@
   margin-bottom: 15px;
   background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
   background-image: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
+  width: 100%;
+  background-image: none;
+  background-color: #daf3f8;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  height: auto;
 }
-@media screen and (max-width: 480px) {
-  /* line 7, ../../scss/idea/_idea_mobile.scss */
-  .idea-cap {
-    width: 100%;
-    background-image: none;
-    background-color: #daf3f8;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
-    border-radius: 0px;
-  }
-}
-/* line 30, ../../scss/idea/_idea_mobile.scss */
+/* line 26, ../../scss/idea/_idea_mobile.scss */
 .idea-cap a {
   text-decoration: none;
 }
-/* line 33, ../../scss/idea/_idea_mobile.scss */
+/* line 29, ../../scss/idea/_idea_mobile.scss */
 .idea-cap a.orange {
   color: #ffffff;
 }
-/* line 35, ../../scss/idea/_idea_mobile.scss */
+/* line 31, ../../scss/idea/_idea_mobile.scss */
 .idea-cap a.orange:visited {
   color: #ffffff;
 }
-/* line 41, ../../scss/idea/_idea_mobile.scss */
+/* line 37, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap {
   padding-top: 25px;
   margin-left: 20px;
-  width: 440px;
-  float: left;
+  width: 300px;
 }
 @media screen and (max-width: 480px) {
-  /* line 41, ../../scss/idea/_idea_mobile.scss */
+  /* line 37, ../../scss/idea/_idea_mobile.scss */
   .idea-cap .left-idea-cap {
     margin-left: 0px;
-    width: 320px;
+    width: 300px;
     background-color: #daf3f8;
   }
 }
-/* line 53, ../../scss/idea/_idea_mobile.scss */
+/* line 48, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap p {
   color: #4585c3;
   /* text color */
@@ -109,12 +104,12 @@
   margin-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
-  /* line 53, ../../scss/idea/_idea_mobile.scss */
+  /* line 48, ../../scss/idea/_idea_mobile.scss */
   .idea-cap .left-idea-cap p {
     text-indent: 20px;
   }
 }
-/* line 63, ../../scss/idea/_idea_mobile.scss */
+/* line 58, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting {
   width: 75.5px;
   height: 22px;
@@ -124,34 +119,34 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-/* line 72, ../../scss/idea/_idea_mobile.scss */
+/* line 67, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 80, ../../scss/idea/_idea_mobile.scss */
+/* line 75, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting .unsupported {
   display: block;
   font-size: 11px;
 }
-/* line 84, ../../scss/idea/_idea_mobile.scss */
+/* line 79, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting .supported {
   display: none;
   font-size: 11px;
 }
-/* line 91, ../../scss/idea/_idea_mobile.scss */
+/* line 86, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting.activated .unsupported {
   display: none;
   font-size: 11px;
 }
-/* line 95, ../../scss/idea/_idea_mobile.scss */
+/* line 90, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .supporting.activated .supported {
   display: block;
   font-size: 11px;
 }
-/* line 102, ../../scss/idea/_idea_mobile.scss */
+/* line 97, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .commenting {
   width: 65px;
   height: 22px;
@@ -162,14 +157,14 @@
   margin-right: 10px;
   font-size: 11px;
 }
-/* line 121, ../../scss/idea/_idea_mobile.scss */
+/* line 116, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .left-idea-cap .sharing {
   display: inline-block;
   list-style-type: none;
   margin-top: 0px;
   float: none;
 }
-/* line 135, ../../scss/idea/_idea_mobile.scss */
+/* line 130, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap {
   list-style-type: none;
   font-family: "Museo Sans", sans-serif;
@@ -182,26 +177,26 @@
   right: 0px;
   top: 0px;
   padding-top: 0px;
-  width: 320px;
+  width: 300px;
   clear: both;
   background-color: #fef8ee;
   padding: 20px;
 }
-/* line 147, ../../scss/idea/_idea_mobile.scss */
+/* line 142, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap li {
   margin-top: 5px;
   line-height: 1.3em;
 }
-/* line 151, ../../scss/idea/_idea_mobile.scss */
+/* line 146, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap li:first-child {
   margin-top: 0px;
 }
-/* line 164, ../../scss/idea/_idea_mobile.scss */
+/* line 159, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap li {
   display: inline-block;
   width: 100px;
 }
-/* line 169, ../../scss/idea/_idea_mobile.scss */
+/* line 164, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap .emphasis {
   color: #f37d23;
   /* text color */
@@ -209,7 +204,7 @@
   border-radius: 7px;
   padding: 2px 7px;
 }
-/* line 177, ../../scss/idea/_idea_mobile.scss */
+/* line 172, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap .support-star {
   background-image: url('../../images/orange-star.png?1380665340');
   background-repeat: no-repeat;
@@ -217,7 +212,7 @@
   background-position: 15% 45%;
   padding-left: 15px;
 }
-/* line 185, ../../scss/idea/_idea_mobile.scss */
+/* line 180, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap .support-star-orange {
   width: 12px;
   height: 10px;
@@ -228,7 +223,7 @@
   display: block;
   float: left;
 }
-/* line 196, ../../scss/idea/_idea_mobile.scss */
+/* line 191, ../../scss/idea/_idea_mobile.scss */
 .idea-cap .right-idea-cap .comments-bubble {
   background-image: url('../../images/orange-comment.png?1390687077');
   background-repeat: no-repeat;
@@ -238,14 +233,14 @@
 }
 
 @media screen and (max-width: 480px) {
-  /* line 208, ../../scss/idea/_idea_mobile.scss */
+  /* line 203, ../../scss/idea/_idea_mobile.scss */
   .idea-interactions {
     margin: 20px auto;
     width: 250px;
   }
 }
 
-/* line 218, ../../scss/idea/_idea_mobile.scss */
+/* line 213, ../../scss/idea/_idea_mobile.scss */
 .supporting,
 .dislike,
 .commenting {
@@ -258,9 +253,15 @@
   font-size: 11px;
 }
 
-/* line 228, ../../scss/idea/_idea_mobile.scss */
+/* line 223, ../../scss/idea/_idea_mobile.scss */
 .chosen-container {
   display: block;
+}
+
+/* line 227, ../../scss/idea/_idea_mobile.scss */
+.clr {
+  clear: both;
+  margin-bottom: 20px;
 }
 
 /* line 2, ../../scss/neat/grid/_grid.scss */
