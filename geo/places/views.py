@@ -57,9 +57,15 @@ class PlacesViewset(viewsets.ModelViewSet):
 class PlacesList(ListView):
     model = Place
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(PlacesList, self).get_template_names().pop()
+
 
 class PlacesCreate(CreateView):
     model = Place
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(PlacesCreate, self).get_template_names().pop()
 
 
 class PlacesDetail(DetailView):
@@ -67,6 +73,9 @@ class PlacesDetail(DetailView):
     lookup_field = 'slug'
     lookup_url_kwarg = 'place'
     context_object_name = 'place'
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(PlacesDetail, self).get_template_names().pop()
 
 
     def get_object(self):
@@ -189,6 +198,9 @@ class PlacesUpdate(UpdateView):
     # def get_success_url(self, *args, **kwargs):
     #     # super(UpdateView, self).get_success_url(*args, **kwargs)
     #     return reverse('organization_detail', kwargs=self.kwargs)
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(PlacesUpdate, self).get_template_names().pop()
 
     def form_valid(self, form):
         s = super(PlacesUpdate,self).form_valid(form)

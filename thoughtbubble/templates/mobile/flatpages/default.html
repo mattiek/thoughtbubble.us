@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    {{ flatpage.title }}
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-privacy.css" />
+{% endblock %}
+
+{% block bodyid %}static{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+        <div class="middle-column">
+            {{ flatpage.content }}
+         </div>
+{% endblock %}
+
+{% block footerscripts %}
+{% endblock %}

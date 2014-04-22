@@ -46,6 +46,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.flatpages',
     'thoughtbubble',
+    'mobileesp',
 
     # 'geo.world',
     # 'geo.cities',
@@ -91,6 +92,7 @@ COMMENTS_APP = 'threadedcomments'
 
 MIDDLEWARE_CLASSES = (
 
+    'mobileesp.middleware.MobileDetectionMiddleware',
     'django.middleware.gzip.GZipMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

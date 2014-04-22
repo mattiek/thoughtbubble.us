@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Idea List
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/list.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
+{% endblock %}
+
+{% block bodyid %}idea-list{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    {% include 'idea/idea_filter.html' %}
+
+    {% for idea in ideas %}
+        {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}

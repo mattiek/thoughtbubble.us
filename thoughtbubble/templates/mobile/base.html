@@ -1,0 +1,178 @@
+{% load socialaccount %}
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{% block title %}Thoughtbubble{% endblock %}</title>
+
+    <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/global-mobile.css" />
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />#}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/magnific-popup.css" />
+
+
+    <script>
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId : "608949152458030", // App ID
+                status : true,
+                cookie : true,
+                xfbml : true
+            });
+        };
+        (function(d) {
+            var js, id = 'facebook-jssdk', ref = d
+                    .getElementsByTagName('script')[0];
+            if (d.getElementById(id)) {
+                return;
+            }
+            js = d.createElement('script');
+            js.id = id;
+            js.async = true;
+            js.src = "//connect.facebook.net/en_US/all.js";
+            ref.parentNode.insertBefore(js, ref);
+        }(document));
+    </script>
+
+{#    <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>#}
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/plugins/jquery.magnific-popup.min.js"></script>
+    <script src="{{ STATIC_URL }}js/underscore-min.js"></script>
+{#    <script src="{{ STATIC_URL }}js/plugins/jquery.form.min.js"></script>#}
+    <script src="{{ STATIC_URL }}js/handlebars.js"></script>
+    <script src="{{ STATIC_URL }}js/tb/tb-supporting.js"></script>
+
+    <script type="text/javascript">
+        var dinoSoundURL = "{{ STATIC_URL }}sounds/dino.mp3";
+    </script>
+    {% block head %}
+    {% endblock %}
+</head>
+
+<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
+{% block navstart %}
+    <div id="wrapper" class="">
+    {% block toprule %} {% endblock %}
+        <div id="illustration" {% block illustration%}class="{{ illustrations|random }}"{%endblock%}>
+            {#    Messages #}
+            {% include "widgets/messages.html" %}
+            {#    End Messages #}
+            <ul id="login-nav">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url "user_dashboard" %}">{{ user }}</a></li>
+                {% else %}
+                    <li><a id="join" class="open-popup-link" href="#join-overlay">join</a></li>
+                    <li>|</li>
+                    <li><a id="login" class="open-popup-link" href="#login-overlay">login</a></li>
+                {% endif %}
+            </ul>
+            <ul id="nav">
+                <li><a id="idea-nav" href="{% url "idea_list"  %}">ideas</a></li>
+                <li><a href="{% url "explore"  %}">explore</a></li>
+                <li><a href="/organizations">organizations</a></li>
+                <li><a href="/about">about</a></li>
+            </ul>
+
+            <a id="logo" href="{% url "home" %}"></a>
+
+                {% block primarynav %}
+                    <a id="primary-explore" href="{% url "explore"  %}"><i class="icon-explore"></i>Explore and Add Ideas</a>
+                {% endblock %}
+        </div>
+        <div id="home-container">
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+{% block navend %}
+        <div id="footer">
+            <div id="footer-wrap">
+                <ul>
+                    <li><a id="footer-logout" href="#logout-overlay">Logout</a></li>
+                    <li><a id="footer-twitter" target="_blank" href="https://twitter.com/thoughtbubbleus"></a></li>
+                    <li><a id="footer-facebook" target="_blank" href="https://www.facebook.com/thoughtbubble.us"></a></li>
+                    <li><a id="footer-linkedin" target="_blank" href="https://www.linkedin.com/in/kirkmatthew"></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="sub-footer">
+            <ul>
+                <li><a href="{% url "idea_list"  %}">ideas</a></li>
+                <li><a href="/about">about</a></li>
+                <li><a href="/terms">terms</a></li>
+                <li><a href="/partners">partners</a></li>
+                <li class="second"><a href="/rules">rules</a></li>
+                <li><a href="/faqs">FAQs</a></li>
+                <li><a href="/news">news</a></li>
+                <li><a href="/privacy-policy">privacy</a></li>
+                <li><a href="mailto:contact@thoughtbubble.us">contact</a></li>
+            </ul>
+        <p class="tb-copyright">&copy;2014, thoughtbubble.us, LLC. All rights reserved.</p>
+        </div>
+    </div>
+{% endblock %}
+
+<div id="login-overlay" class="white-popup mfp-hide">
+    <h6>login with</h6>
+    <div class="oauths">
+        <a class="facebook-oauth" href="{% provider_login_url "facebook" method="oauth2" %}"></a>
+        <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
+        <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
+    </div>
+
+    <a href="#overlay-login-form" id="login-with-email" class="submit large-text">login with email</a>
+    <form id="overlay-login-form" action="/login" method="POST">
+        {% csrf_token %}
+        <p id="login-error"></p>
+        {{ loginform.email }}
+        {{ loginform.password }}
+        <input type="submit" class="submit login large-text" value="login" />
+        <a id="forgot-password" href="#">forgot your password?</a>
+    </form>
+    <a href="#join-overlay" id="create-an-account">create an account</a>
+</div>
+
+<div id="join-overlay" class="white-popup mfp-hide">
+    <h6>join with</h6>
+    <div class="oauths">
+        <a class="facebook-oauth" href="{% provider_login_url "facebook" method="oauth2" %}"></a>
+        <a class="linkedin-oauth" href="{% provider_login_url "linkedin" method="oauth2" %}"></a>
+        <a class="twitter-oauth" href="{% provider_login_url "twitter" %}"></a>
+    </div>
+
+    <a href="{% url 'signup' %}" id="join-email-account" class="submit">create an account with email</a>
+{#    <a href="#join-organization" id="join-organization" class="submit">create an organization page</a>#}
+    <a href="/organizations/" id="join-organization" class="submit">create an organization page</a>
+</div>
+
+
+<div id="logout-overlay" class="white-popup mfp-hide">
+    <h6>Account Logout</h6>
+    <form id="overlay-logout-form" action="{% url 'account_logout' %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" class="submit large-text" value="log me out" />
+    </form>
+</div>
+
+<div id="dislike-overlay" class="white-popup mfp-hide">
+    <img src="{{ STATIC_URL }}images/big_jimmy.png" alt=""/>
+    <h6>We are an open community.</h6>
+    <p>
+    To dislike an idea you must create a new idea that you think
+    would better benefit the community or face our t-rex, Jimmy.
+    </p>
+
+
+    <a href="#comment_submit" id="dino_comment" class="orange">comment</a>
+    <a href="{{ idea.get_add_to_location_url }}" class="blue" id="dino_top">top that!</a>
+    <div style="clear:both;"></div>
+</div>
+
+
+{#Error#}
+{#<button title="Close (Esc)" type="button" class="mfp-close">×</button>#}
+</body>
+<script src="{{ STATIC_URL }}js/tb/tb-global.js"></script>
+{% block footerscripts %}
+{% endblock %}
+</html>

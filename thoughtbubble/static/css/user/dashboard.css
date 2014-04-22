@@ -6,6 +6,16 @@
 }
 
 /* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 2, ../../scss/neat/grid/_grid.scss */
 * {
   -webkit-box-sizing: border-box;
@@ -233,6 +243,16 @@
 }
 
 /* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 3, ../../scss/partials/_sharing.scss */
 .sharing {
   list-style-type: none;
@@ -284,6 +304,16 @@
 }
 
 /* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
   -webkit-border-radius: 10px;
@@ -349,6 +379,16 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 /* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 6, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
@@ -425,6 +465,16 @@ textarea {
 }
 
 /* text color */
+/* line 122, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 7, ../../scss/user/dashboard.scss */
 #illustration {
   width: 930px;

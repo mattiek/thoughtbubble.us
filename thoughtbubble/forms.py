@@ -137,9 +137,6 @@ class UserProfileForm(forms.Form):
 
     def clean(self, *args, **kwargs):
         cleaned_data = super(UserProfileForm, self).clean()
-        first_name = cleaned_data['first_name']
-        last_name = cleaned_data['last_name']
-        location = cleaned_data['location']
         return cleaned_data
 
 

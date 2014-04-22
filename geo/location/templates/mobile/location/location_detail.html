@@ -1,0 +1,156 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load getdict %}
+{% load widget_tweaks %}
+{% load thumbnail %}
+
+{% block title %}
+    Add a Feature
+{% endblock %}
+
+{% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/location/detail.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
+{% endblock %}
+
+{% block bodyid %}location-detail{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+<div id="page-wrapper">
+{#    {% if request.user in organization.curators.all or request.user.is_superuser %}#}
+{#        <h1 style="margin:0px;"><a href="{{ location.get_update_url }}">admin</a></h1>#}
+{#    {% endif %}#}
+
+    <div class="row title">
+        <div id="header">{{ location.name }}</div>
+    </div>
+
+        <div class="about">{{ location.about }}</div>
+        <div class="">
+            <div id="map"></div>
+        </div>
+
+    {#    News #}
+    {% if news %}
+    <div id="news">
+        <div class="small-heading">news</div>
+
+        {% include 'widgets/news_feed.html' %}
+
+                <a href="#" class="orange"></a>
+    </div>
+    {% endif %}
+
+    {#    Pictures #}
+    {% if pictures %}
+        <div class="picture-label small-heading">pictures</div>
+        <div id="pictures">
+            {% for picture in pictures %}
+                <div>
+{#                    <div class="cloak">#}
+{#                        <img src="{{ picture.img.url }}" alt=""/>#}
+                    <a class="image-popup-no-margins" href="{{ picture.img.url }}">
+                        <img src="{% thumbnail picture.img 120x90 %}" alt=""/>
+                    </a>
+{#                        <img src="{% thumbnail picture.img 80x60 crop %}" alt=""/>#}
+{#                    </div>#}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {#    Partners #}
+    {% if partners %}
+        <div class="large-12 columns small-heading">partners</div>
+        <div id="partners">
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+            <img src="" alt=""/>
+        </div>
+    {% endif %}
+    </div>
+
+{#    Ideas #}
+    {% for idea in ideas %}
+            {% include 'idea/idea_for_list.html' %}
+    {% endfor %}
+{% endblock %}
+
+{% block footerscripts %}
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>
+{#    {% if organization %}#}
+
+    <script type="text/javascript">
+
+
+        $(document).ready(function() {
+            TB.Map.map().markerLayer.on('layeradd', function(e) {
+
+                var marker = e.layer,
+                        feature = marker.feature;
+
+                marker.setIcon(L.icon(feature.properties.icon));
+
+
+                // http://leafletjs.com/reference.html#popup
+                marker.bindPopup(popupContent,{
+                    closeButton: false
+                });
+            });
+
+            TB.Map.map().setView([{{ location.get_latitude }},{{ location.get_longitude }}],15);
+            TB.Map.map().markerLayer.setGeoJSON({
+                // this feature is in the GeoJSON format: see geojson.org
+                // for the full specification
+                type: 'Feature',
+                geometry: {
+                    type: 'Point',
+                    // coordinates here are in longitude, latitude order because
+                    // x, y is the standard for GeoJSON and many formats
+                    coordinates: [{{ location.get_longitude }}, {{ location.get_latitude }}]
+                },
+                properties: {{ location.get_properties_json|safe }}
+            });
+
+        });
+
+
+
+    </script>
+{#        <script type="text/javascript">#}
+{#            TB.Map.mapLayer.on('ready', function() {#}
+{#                $.ajax({#}
+{#                    url: "{{ location.get_api_detail_url }}",#}
+{#                    dataType: "json",#}
+{#                    success: function(d) {#}
+{##}
+{#                        TB.Map.map().markerLayer.on('layeradd', function(e) {#}
+{#                            var marker = e.layer,#}
+{#                                    feature = marker.feature;#}
+{##}
+{#                            marker.setIcon(L.icon(feature.properties.icon));#}
+{#                            // Create custom popup content#}
+{#                        });#}
+{##}
+{#                        // Add features to the map#}
+{#                        TB.Map.map().markerLayer.setGeoJSON(d);#}
+{##}
+{#                        var markers = L.mapbox.markerLayer(d).addTo(map);#}
+{##}
+{#                        map.setView([d.geometry.coordinates[1],d.geometry.coordinates[0]],15);#}
+{#                    }#}
+{#                });#}
+{#            });#}
+{##}
+{#        </script>#}
+{#    {% endif %}#}
+{% endblock %}

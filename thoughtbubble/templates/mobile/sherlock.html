@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+{% block title %}
+    Explore Organization
+{% endblock %}
+
+{% block head %}
+    <!--[if lt IE 9]>
+<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/mapbox-v0.6.7.css"/>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/mapbox-v0.6.7.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.slimscroll.min.js"></script>
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-sherlock.css" />
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />#}
+{% endblock %}
+{% block bodyid %}sherlock{% endblock %}
+{% block illustration %}
+{% endblock %}
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    <div id='pane'><div id='map'></div></div>
+
+    <article id="communisplore">
+{#        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">#}
+{#            <h3>{{ exploring.title }}</h3>#}
+{#            <p>{{ exploring.about }}</p>#}
+{#            <small class='scroll'>Scroll ▼</small>#}
+{#        </section>#}
+
+        <section class='active' id="{{ exploring.get_id }}" data-index="0">
+            <a href="{{ exploring.get_absolute_url }}">
+                <h4>{{ exploring.title }}</h4>
+            </a>
+            <div class="extended hyphenate">
+                <p>{{ exploring.get_description }}</p>
+                <div class="share">
+                    <a class="orange buttonize login-required" href="{{ exploring.add_idea_url }}">add idea</a>
+                    <a class="blue buttonize" href="{{ exploring.list_ideas_url }}">find ideas</a>
+                    <a class="blue buttonize" href="{{ exploring.share }}">share</a>
+                </div>
+                <div style="clear:both;"></div>
+                <small class='scroll'>Scroll ▼</small>
+            </div>
+        </section>
+
+        {% for location in exploring.location_set.all %}
+            <section id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
+                <a href="{{ location.get_absolute_url }}">
+                    <h4>{{ location.name }}</h4>
+                </a>
+                <div class="extended hyphenate">
+                    <p>{{ location.get_description }}</p>
+                    <div class="share">
+                        <a class="orange buttonize login-required" href="{{ location.add_idea_url }}">add idea</a>
+                        <a class="blue buttonize" href="{{ location.list_ideas_url }}">find ideas</a>
+                        <a class="blue buttonize" href="{{ location.share }}">share</a>
+                    </div>
+                    <div style="clear:both;"></div>
+                </div>
+            </section>
+        {% endfor %}
+        <div id="sherlock-end"></div>
+    </article>
+
+    {% verbatim %}
+    <script id="section-template" type="text/x-handlebars-template">
+        <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
+            <a href="{{ link }}">
+                <h4>{{ name }}</h4>
+            </a>
+            <div class="extended">
+                <p>{{ description }}</p>
+                <div class="share">
+                    <a class="orange buttonize login-required" href="{{ add_idea }}">add idea</a>
+                    <a class="blue buttonize" href="{{ find_ideas }}">find ideas</a>
+                    <a class="blue buttonize" href="{{ share }}">share</a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </section>
+    </script>
+    {% endverbatim %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript">
+        var geojson = {{ exploring.get_locations_geojson|safe }};
+    </script>
+
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb-sherlock.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/hyphenator.js"></script>
+
+{#    {% if exploring %}#}
+{#        <script type="text/javascript">#}
+{#            minmin(#}
+{#            {{ exploring.neighborhood.id }},#}
+{#            {{ exploring.id }},#}
+{#            '{{ exploring.get_absolute_url }}'#}
+{#            );#}
+{#        </script>#}
+{#    {% endif %}#}
+
+{% endblock %}

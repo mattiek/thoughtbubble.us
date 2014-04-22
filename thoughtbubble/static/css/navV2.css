@@ -18,6 +18,16 @@
 }
 
 /* text color */
+/* line 122, ../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 /* line 11, ../scss/navV2.scss */
 body {
   *zoom: 1;
@@ -196,7 +206,7 @@ body:after {
 
 /* line 164, ../scss/navV2.scss */
 #primary-explore {
-  width: 252px;
+  width: 210px;
   height: 37.5px;
   line-height: 37.5px;
   font-size: 15.5px;
@@ -228,11 +238,6 @@ body:after {
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
   background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
-  border: none;
-  color: #fff;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  display: block;
 }
 /* line 179, ../scss/navV2.scss */
 #primary-explore i {

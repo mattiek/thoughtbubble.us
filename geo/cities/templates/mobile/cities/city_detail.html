@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    City Detail
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/detail.css" />
+{% endblock %}
+
+{% block bodyid %}neighborhood-detail{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div id="page-wrapper">
+
+        <div class="row title">
+            <div id="header">{{ city.name }}, {{ city.state_code }}
+                {% include "widgets/sharing.html" %}
+            </div>
+        </div>
+
+        <p id="cta">join our organization, share your ideas, explore your organization, and view our ideas</p>
+
+        <div class="actions">
+
+
+            {#                <a href="{{ neighborhood. }}" class="orange s-button">ideas</a>#}
+            {#                <a href="{% url 'sherlock' object.neighborhood.state object.neighborhood.city object.id %}" class="blue s-button">explore</a>#}
+{#            <a href="{% url 'add_neighborhood_idea' object.state object.city object.id %}" class="blue s-button">add</a>#}
+            <a href="#" class="blue s-button login-required">add</a>
+            <div style="clear:both;"></div>
+        </div>
+
+        {% include 'idea/idea_filter.html' %}
+
+        {% for idea in ideas %}
+            {% include 'idea/idea_for_list.html' %}
+        {% endfor %}
+
+
+    </div>
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}

@@ -23,9 +23,15 @@ class OrganizationViewset(viewsets.ModelViewSet):
 class OrganizationList(ListView):
     model = Organization
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(OrganizationList, self).get_template_names().pop()
+
 
 class OrganizationCreate(CreateView):
     model = Organization
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(OrganizationCreate, self).get_template_names().pop()
 
 
 class OrganizationDetail(DetailView):
@@ -33,12 +39,18 @@ class OrganizationDetail(DetailView):
     lookup_field = 'slug'
     lookup_url_kwarg = 'organization'
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(OrganizationDetail, self).get_template_names().pop()
+
 class OrganizationUpdate(UpdateView):
     model = Organization
     form_class = OrganizationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'organization'
     # success_url = reverse_lazy('organization_detail')
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(OrganizationUpdate, self).get_template_names().pop()
 
     # def get_success_url(self, *args, **kwargs):
     #     # super(UpdateView, self).get_success_url(*args, **kwargs)

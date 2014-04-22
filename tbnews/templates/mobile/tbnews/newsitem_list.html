@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Idea List
+{% endblock %}
+
+{% block head %}
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/list.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.js"></script>
+{% endblock %}
+
+{% block bodyid %}news-item-list{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <a href="{% url 'add_news_item' kind obj_id%}">Add</a>
+    {% for news in object_list %}
+        <h2>{{ news.subject }}</h2>
+        <p>{{ news.content }}</p>
+        <a href="{% url 'update_news_item' kind obj_id news.id %}">Update</a>
+        <form method="POST" action="{% url 'delete_news_item' kind obj_id news.id %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-sm btn-danger" value="delete"></input>
+        </form>
+    {% endfor %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+{% endblock %}

@@ -171,12 +171,15 @@ def addidea(request, place=None, organization=None, location=None):
 
 
 
-    return render(request, 'addidea.html', d)
+    return render(request, request.device_template_dir + 'addidea.html', d)
 
 
 class IdeaList(ListView):
     model = Idea
 
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(IdeaList, self).get_template_names().pop()
 
     def get_queryset(self):
         qs = super(IdeaList, self).get_queryset()
@@ -293,10 +296,15 @@ class IdeaDetail(DetailView):
         context['pictures'] = idea.ideaimage_set.all()
         return context
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(IdeaDetail, self).get_template_names().pop()
+
 
 class IdeaCreate(CreateView):
     model = Idea
     form_class = AddIdeaForm
+    def get_template_names(self):
+        return self.request.device_template_dir + super(IdeaCreate, self).get_template_names().pop()
 
 
 def support_idea(request, idea):

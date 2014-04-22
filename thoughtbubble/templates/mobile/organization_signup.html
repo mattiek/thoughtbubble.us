@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load classnames %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-signup.css" />
+{% endblock %}
+
+{% block bodyid %}signup{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    <div class="promise">
+        <h3>Thank you for trying out our Beta.</h3>
+           <h5>We promise you won't be disappointed.</h5>
+        <br/>
+{#        <h5>Join our 90 day trial memberships</h5>#}
+{#        <h5>then continue for $99.95 / month.</h5>#}
+    </div>
+
+    <div id="form-wrapper">
+        {% include 'widgets/errors.html' %}
+        <form action="{% url 'organization_signup' %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {% for field in form %}
+                {% if field.field|classname == 'ChoiceField' %}
+                {% elif field.field|classname == 'BooleanField' %}
+                {% else %}
+                    {{ field  }}
+                {% endif %}
+            {% endfor %}
+
+            {% for field in form %}
+                {% if field.field|classname == 'ChoiceField' %}
+                    <p id="captcha-question">to make sure you are human, please click on the {{ captcha_answer.0 }}</p>
+                    <input type="hidden" value="" id="{{ field.auto_id }}" name="{{ field.name }}" />
+
+                    <ul id="{{ field.auto_id }}_choicefield">
+                        {% for choice in field.field.choices %}
+                            <li>
+                                <img src="{{ STATIC_URL }}images/{{ choice.1 }}" data-choice="{{ choice.0 }}" alt=""/>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% elif field.field|classname == 'BooleanField' %}
+                    {{ field  }} <span class="terms-and-conditions">I accept the <a href="">Terms and Conditions</a></span>
+                {% endif %}
+            {% endfor %}
+            <div class="promise">
+                <h5>We look forward to partnering with you</h5>
+                <h5>to build the best community possible!</h5>
+            </div>
+
+            <input type="submit" class="submit" value="join"/>
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block footerscripts %}
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-signup.js"></script>
+{% endblock %}

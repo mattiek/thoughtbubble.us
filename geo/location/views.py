@@ -32,6 +32,9 @@ class LocationViewset(viewsets.ModelViewSet):
 class LocationList(ListView):
     model = Location
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(LocationList, self).get_template_names().pop()
+
 
 class LocationDetail(DetailView):
     model = Location
@@ -54,12 +57,18 @@ class LocationDetail(DetailView):
         context['pictures'] = pics
         return context
 
+    def get_template_names(self):
+        return self.request.device_template_dir + super(LocationDetail, self).get_template_names().pop()
+
 
 class LocationUpdate(UpdateView):
     model = Location
     form_class = LocationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'location'
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(LocationUpdate, self).get_template_names().pop()
 
     def form_valid(self, form):
         comm = self.kwargs.get('location',None)
@@ -120,6 +129,9 @@ class LocationUpdate(UpdateView):
 class LocationCreate(CreateView):
     model = Location
     form_class = AddLocationForm
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(LocationCreate, self).get_template_names().pop()
 
     def form_valid(self, form):
         comm = self.kwargs.get('organization',None)

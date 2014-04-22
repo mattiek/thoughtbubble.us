@@ -1,0 +1,30 @@
+{% load threadedcomments_tags %}
+{% load ideacountables %}
+<div class="idea-cap">
+    <div class="left-idea-cap">
+{#        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }} in {{ idea.content_object.name }} for {{ idea.what_for }}</p></a>#}
+
+        <ul class="idea-details-list">
+            <li>{{ idea.content_object.name }} </li>
+            <li>{{ idea.what_kind }}</li>
+        </ul>
+
+        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }}</p></a>
+
+
+        <ul class="right-idea-cap">
+            <li><span class="emphasis support-star">{{ idea.support_count }}</span> supporters</li>
+            <li><span class="emphasis comments-bubble">{% get_comment_count for idea as comment_count %} {{ comment_count }}</span> comments</li>
+            <li>added {{ idea.get_days_since_added }} days ago</li>
+        </ul>
+
+        <div class="idea-interactions">
+            <a class="supporting login-required orange {% if idea|is_supported_by_user:user %}activated{% endif %}" data-id="{{ idea.id }}" href="{{ idea.get_support_url }}"><span class="unsupported"><i></i>support</span><span class="supported">supported</span></a>
+            <a class="commenting orange" data-id="{{ idea.id }}" href="{{ idea.get_absolute_url }}#comments">comment</a>
+            {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing%}
+                {% include "widgets/sharing.html" %}
+            {% endwith %}
+        </div>
+    </div>
+
+</div>

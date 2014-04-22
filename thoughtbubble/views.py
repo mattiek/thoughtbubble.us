@@ -68,7 +68,7 @@ def home(request):
     except:
         copy = 'Copy here'
     d = {'copy': copy}
-    return render(request, 'home.html', d)
+    return render(request, request.device_template_dir + 'home.html', d)
 
 
 def logout(request):
@@ -95,7 +95,7 @@ def explore(request, pk=None):
     if pk:
         d['exploring'] = Organization.objects.get(pk=pk)
 
-    return render(request, 'explore.html', d)
+    return render(request, request.device_template_dir + 'explore.html', d)
 
 
 def sherlock(request, place=None, organization=None):
@@ -111,7 +111,7 @@ def sherlock(request, place=None, organization=None):
 
     d['exploring'] = Organization.objects.get(place__slug__iexact=place, slug__iexact=organization)
 
-    return render(request, 'sherlock.html', d)
+    return render(request, request.device_template_dir + 'sherlock.html', d)
 
 
 def debit_card(request):
@@ -133,10 +133,10 @@ def debit_card(request):
 #     return redirect('home')
 
 def checkout(request):
-    return render(request, 'checkout.html', {'balanced': settings.BALANCED, 'static_url':'/static',})
+    return render(request, request.device_template_dir + 'checkout.html', {'balanced': settings.BALANCED, 'static_url':'/static',})
 
 def privacy(request):
-    return render(request, 'privacy.html')
+    return render(request, request.device_template_dir + 'privacy.html')
 
 def login(request):
     if request.POST:
@@ -216,7 +216,7 @@ def signup(request):
     else:
         form = SignupForm(captcha_choices=s['choices'], answer=s['answer'])
 
-    return render(request, 'signup.html', {'form': form, 'captcha_answer': s['answer']})
+    return render(request, request.device_template_dir + 'signup.html', {'form': form, 'captcha_answer': s['answer']})
 
 
 
@@ -266,7 +266,7 @@ def organization_signup(request):
     else:
         form = OrganizationSignupForm(captcha_choices=s['choices'], answer=s['answer'])
 
-    return render(request, 'organization_signup.html', {'form': form, 'captcha_answer': s['answer']})
+    return render(request, request.device_template_dir + 'organization_signup.html', {'form': form, 'captcha_answer': s['answer']})
 
 
 class MyConnectionsView(FormView):
@@ -347,3 +347,6 @@ class MyConnectionsView(FormView):
 class UserProfileFormView(VanillaFormView,AjaxResponseMixin, JSONResponseMixin):
     form_class = UserProfileForm
     template_name = "accounts/update.html"
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(UserProfileFormView, self).get_template_names()

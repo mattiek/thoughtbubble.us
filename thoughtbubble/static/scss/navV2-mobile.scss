@@ -1,0 +1,552 @@
+@import "compass";
+@import "compass/utilities/sprites";
+@import "directional/*.png";
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "partials/general";
+
+
+
+body {
+  @include outer-container;
+  background: image-url('clean_textile.png');
+  background-size: 50%;
+}
+
+#toprule {
+  position: absolute;
+  width: 100%;
+  height: 8px;
+  background: image-url('top-scale.png') repeat-x;
+  min-width: 930px;
+
+  @include media($mobile) {
+    min-width: 320px;
+  }
+}
+
+
+
+#home { // home page stuff
+
+  #illustration {
+    width: 320px;
+    background: image-url('thoughtbubble-illustration.jpg') no-repeat no-repeat;
+    background-size: cover;
+    height: 250px;
+    margin: 0 auto;
+  }
+
+  #footer {
+    margin: -8px 0 0 0;
+  }
+
+}
+
+
+
+// NAVS
+
+#nav,
+#login-nav {
+  @include blue-museo-link;
+  font-size: 18px;
+  display: inline;
+  list-style-type: none;
+  float:right;
+  //margin-top: 20px;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-top: 75px;
+  }
+
+  @include media($mobile) {
+    font-size: 12px;
+    margin-top: 0px;
+
+
+
+    li {
+      margin-top: 0px;
+    }
+  }
+}
+
+#nav {
+  li {
+    margin-right: 22px;
+  }
+
+  @include media($mobile) {
+    margin-top: 12px;
+  }
+}
+
+#primary-nav {
+  @include blue-museo-link;
+  font-size: 27px;
+  list-style-type: none;
+  clear: both;
+  margin: 40px auto 0;
+  width: 300px;
+
+  li {
+    display: inline-block;
+    text-indent:50px;
+    margin-left: 50px;
+    height: 38px;
+
+
+    &.icon-explore {
+      background: image-url('button-explore.png') no-repeat;
+      background-position: 0 0;
+
+      &:hover {
+        background-position: 0 -42px;
+      }
+    }
+
+    &.icon-add {
+      background: image-url('button-add.png') no-repeat;
+    }
+
+    &:first-child {
+      margin-left: 0px;
+    }
+  }
+}
+
+
+#login-nav {
+  margin-right: 70px;
+  display: block;
+
+  li {
+    margin-right: 0px;
+
+    &:first-child {
+      background-image: image-url('icon-person.png');
+      background-repeat: no-repeat;
+      text-indent: 15px;
+      background-position-y: 50%;
+      background-size: 8px;
+    }
+  }
+
+  @include media($mobile) {
+    margin-right: 0px;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+
+#logo {
+  @include mobile-bg-image('tb.us-logo-mobile.png');
+  margin: 0px 0 0 35px;
+  //width: 288px;
+  //height: 97px;
+  @include media($mobile) {
+    @include mobile-bg-image('tb.us-logo-mobile.png');
+    margin: 0px 0 10px 10px;
+  }
+}
+
+
+
+/// PRIMARY EXPLORE BUTTON
+#primary-explore {
+
+  width: 210px;
+  height: 75px *.5;
+  line-height: 75px *.5;
+  font-size: 31px * .5;
+  margin: 20px auto 0;
+  text-indent: 5px;
+
+  @include orange-gradient-button-explore;
+
+
+  &:hover {
+   @include orange-gradient-button-hover;
+  }
+  i {
+    display: block;
+    height: directional-sprite-height(normal);
+    width: directional-sprite-width(normal);
+    @include directional-sprite(normal);
+    float: left;
+    margin: 2px 0 0 10px;
+
+  }
+
+  &:hover {
+    i {
+      @include directional-sprite(hover);
+    }
+  }
+
+}
+
+
+
+
+/// FOOTERS
+#sub-footer {
+  @include blue-museo-link;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
+  margin: 0px auto 0;
+  padding-top: 20px;
+  background: #ffffff;
+  text-decoration: none;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      margin-right: 25px;
+      line-height: 25px;
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+
+#footer {
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  width: 100%;
+  background-color: #49c3dd; /* layer fill content */
+  margin: 20px 0 0 0;
+  clear:both;
+
+  ul {
+    display: inline-block;
+    list-style-type: none;
+    margin: 13px auto 10px;
+
+    li {
+      float: left;
+      list-style-type: none;
+      margin-left: 12px;
+
+      &:first-child {
+        margin-left: 0px;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  #footer-logout {
+    background: image-url('user-logout-icon.png') no-repeat 0;
+    text-indent: 13px;
+    display: block;
+    @include white-museo;
+    font-size: 13px;
+  }
+
+  #footer-twitter {
+    @include bg-image('twitter-cloud.png');
+    background-repeat: no-repeat;
+  }
+
+  #footer-facebook {
+    @include bg-image('facebook-cloud.png');
+    background-repeat: no-repeat;
+  }
+
+  #footer-linkedin {
+    @include bg-image('linkedin-cloud.png');
+    background-repeat: no-repeat;
+  }
+
+
+  #footer-wrap {
+    margin: 0 auto;
+    //width: 220px;
+    text-align: center;
+  }
+}
+
+
+
+/// OVERYLAYS
+#login-overlay,
+#logout-overlay,
+#join-overlay,
+#dislike-overlay,
+#update-avatar-overlay {
+  border-radius: 10px;
+  width: 415px;
+  //height: 430px;
+  padding-bottom: 30px;
+  background-color: #49c4dd;
+  color: #ffffff;
+  font-family: "Helvetica", sans-serif;
+
+  form {
+    text-align: center;
+  }
+
+  h6 {
+    margin-top: 70px;
+    margin-bottom: 35px;
+    text-align: center;
+    color: #ffffff;
+    font-weight: normal;
+    font-size: 16px;
+  }
+
+  #login-with-email,
+  #join-organization,
+  #join-email-account {
+    text-align: center;
+    line-height: 45px;
+  }
+
+  #forgot-password,
+  #create-an-account {
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 10px;
+    font-weight: 100;
+  }
+
+  #join-email-account {
+    margin-bottom: 20px;
+  }
+
+  &.reveal-email {
+    #login-with-email {
+      display: none;
+    }
+
+    #overlay-login-form {
+      display: block;
+    }
+  }
+
+  #overlay-login-form {
+    display:none;
+  }
+
+  .oauths {
+    margin: 30px auto 0px;
+    width: 195px;
+    height: 60px;
+
+    a {
+      background: image-url('join-login-social-media.png');
+      background-repeat: no-repeat;
+      display: block;
+      height: 44px;
+      width: 44px;
+      float: left;
+
+      &.blue {
+        background: image-url('join-login-social-media-blue.png');
+      }
+
+      &.facebook-oauth {
+        width: 58px;
+      }
+
+      &.linkedin-oauth {
+        //156
+        background-position: -157px 0;
+        margin: 0 20px;
+      }
+
+      &.twitter-oauth {
+        width: 50px;
+        background-position: -78px 0;
+        //77
+      }
+    }
+  }
+
+  #login-error {
+    height: 30px;
+    margin-bottom: 0px;
+  }
+
+  input[type="password"],
+  input[type="email"],
+  input[type="text"] {
+    width: 365px;
+    height: 45px;
+    @include border-radius(10px); // border radius
+    @include museo;
+    margin: 0 auto 10px;
+  }
+
+  .submit {
+    height: 45px;
+    width: 365px;
+    float: none;
+    margin: 0 auto;
+    @include orange-gradient-button;
+
+    &.large-text {
+      font-size: 16px;
+    }
+  }
+}
+
+#dislike-overlay {
+  width: 250px;
+  background-color: #ffffff;
+  @include gray-museo;
+  text-align: center;
+  img {
+    margin: 30px 0 0;
+  }
+  p {
+    font-style: italic;
+    font-size: 12px;
+    width: 200px;
+    margin: 0 auto 20px;
+  }
+
+  h6 {
+    @include gray-museo;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 12px;
+    margin: 10px 0 0;
+  }
+
+  a {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    float: left;
+    margin-left: 16px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+    &:visited {
+      color: #FFFFFF;
+    }
+
+  }
+}
+
+#overlay-login-form {
+  input {
+    font-size: 16px;
+    text-indent: 15px;
+  }
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 1px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.mfp-close:hover, .mfp-close:focus {
+  opacity: 1;
+  outline: none;
+}
+
+button.mfp-close:active {
+  top:0px;
+}
+
+#login-overylay .mfp-close-btn-in .mfp-close {
+  color: #f47d21;
+  background-color: #ffffff;
+  width: 26px;
+  height: 28px;
+  opacity: 1;
+  line-height: 28px;
+  margin: 0px;
+  top: 8px;
+  right: 8px;
+  @include border-radius(7px);
+  border: 1px solid #cccccc;
+  font-weight: 100;
+  font-size: 24px;
+}
+
+
+
+
+// INFO/ERROR BOX
+.error-box,
+.message-box {
+  @include border-radius(6px / 5px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  background-color: #fff; /* layer fill content */
+  @include single-box-shadow( rgba(1,1,1,.15), 2px, 2px, 11px);
+
+  color: #656464; /* text color */
+  @include museo;
+  font-size: 12px;
+  border: 1px solid #cccccc;
+
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAcCAYAAAB/E6/TAAACyElEQVRIx71WXUhTYRj+6Mb+bgovkrqIfqCrICKigiCIfm6D6ib6uchSSAv6MYikG4t+8Cq6SSJz25n7n7Mxz7YsnUlo6qzUpttcJZrT3PnbdNt5+rZQ0hTFc9YD7815Du/D97zv+c5DyF94pdEf0+qNznqnK+r2NMZZzxtuqeX2NgoNrFcyW+t6qmuY+0yteT2ZD9UaRve2yYdodAyyLGO5SCQS6PsagNFsi2t0hsNzRZgu/yeoCUEQYbXXQ8sY9k/bdbKpuQW5wPDICHR6Yyu1cQthak224ZGfyBWafO+h0dXeIo7Xrl+pVCpnQpl56Q1mJ3GxXg45RDAUhsliZ6mQh1OyZYthIBiC0WJbXCj9w49U6MMCXDdSg+3KhdKRDvDX14G/tpY2bJvNjYUh3NkM7hJBaqBZmVCy9SVi5wi4ywTCzXza0PdHZLQfwt1tiJ2lXEnezHNF1k2+ewaumDYsomLlWzHlew7x4V5w5wn4sg3qWDeNKSrGlxWAv5EPvngF+JKVEB/sQXroi3rLMI24rgj8lTwItzeCL10Nqeq0uluXnZXfTm3bDv7qmmwJmZOVrkJcc1E9oWSnGRw9SWbw0tPjSH/vglR5KLsgmYprCpULpXpZxC4QxM4QiJUHIUsT2eeyEIX4aB+4QsqdIphkKxV+R+MRCPd2QHx8AHI8NouTxXG6ELshVuyCPDGk3DqZj9IanZ/jhhfklr11iu+6Bvd/ur2dLndOT9Q/EITBZGWJ1ebokSQpZ0J+mkV0jPEFzQzMk96+QE5EppJJ0OiWoL/yEzQzmDdRD8dinPqjav/YCZrxKmbiFlU8YrE5splOLbS1d4C6Zf8nQNL8tVPDGDqbW1oRCAQxGPmGcCSC8ODSKvN+KByBv/sz6uqdcnWNrpwsBJpWCmq0+jK9weKg0baRFrvUstjqPDSderWMsYo6dHRu799rIQvxD3aijQAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-position: 15px 20px;
+
+  padding-bottom: 0px;
+  padding-top: 5px;
+  margin-bottom: 10px;
+
+  .details {
+    margin: 0 10px 0 50px;
+
+    @include museo;
+    h4 {
+      margin: 10px;
+    }
+
+    h3 {
+      color: #f37d23; /* text color */
+      font-size: 26px;
+      margin: 0 0 5px 0;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-top: 0;
+    }
+  }
+}
+
+.error-box {
+
+}
+
+.message-box {
+  font-size: 14px;
+  position: absolute;
+  width: 928px;
+  margin-top: -26px;
+
+  background: #9CC8F0;
+  background-repeat: no-repeat;
+  background-position: 15px 20px;
+
+}
+

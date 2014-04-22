@@ -55,3 +55,6 @@ class CityDetailView(DetailView):
 
         context['ideas'] = Idea.objects.filter(content_type__name='cities', object_id=self.object.id)
         return context
+
+    def get_template_names(self):
+        return self.request.device_template_dir + super(CityDetailView, self).get_template_names().pop()

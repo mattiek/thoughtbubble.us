@@ -1,0 +1,119 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load widget_tweaks %}
+
+{% block title %}
+    Explore
+{% endblock %}
+
+{% block illustration %}
+{% endblock %}
+
+{% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+    <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.css' rel='stylesheet' />
+    <!--[if lt IE 9]>
+      <link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+    <![endif]-->
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />
+{% endblock %}
+
+{% block bodyid %}explore{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+    {#    TODO: Legend that appears and disappears #}
+    <div id="map">
+
+    </div>
+    <div id="compass-rose">
+        <div id="compass"></div>
+        <div id="compass-instructions">
+            <ol>
+                <li><span>Start Shaping your Spaces!</span></li>
+                <li>Click On:</li>
+            </ol>
+            <ul>
+                <li><img src="{{ STATIC_URL }}images/map-point-compass.png" alt=""/>Places</li>
+                <li><img src="{{ STATIC_URL }}images/featured-community-location.png" alt=""/>Features</li>
+            </ul>
+            <ol class="share-support">
+                <li>Share or Support</li>
+                 <li>The Idea</li>
+                <li>You Want Next!</li>
+            </ol>
+        </div>
+    </div>
+    <div id="minisplore">
+        <h3>organization</h3>
+        <div id="minisplore-wrapper">
+                <ul>
+{#                    {% for organization in organizations %}#}
+{#                        <li>#}
+{#                           </li>#}
+{#                    {% endfor %}#}
+{#                        <li><a href="#anywhere-else" id="anywhere-else">anywhere else</a></li>#}
+                </ul>
+        </div>
+    </div>
+
+{#    <article id="communisplore">#}
+{##}
+{#    </article>#}
+
+    {% verbatim %}
+    <script id="section-template" type="text/x-handlebars-template">
+        <section data-longitude="{{ longitude }}" data-latitude="{{ latitude }}">
+            <a href="{{ link }}">
+                <h4>{{ name }}</h4>
+            </a>
+            <div class="extended">
+                <p>{{ description }}</p>
+                <div class="share">
+                    <a class="orange buttonize login-required" href="{{ add_idea }}">add idea</a>
+                    <a class="blue buttonize" href="{{ find_ideas }}">find ideas</a>
+                    <a class="blue buttonize" href="{{ share }}">share</a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+        </section>
+    </script>
+    {% endverbatim %}
+
+{% endblock %}
+
+{% block footerscripts %}
+    <script type="text/javascript">
+    window.exploringMetro = "{{ exploring_city }}";
+    </script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/underscore-min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/baron.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jcarousellite.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/typeahead.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.js'></script>
+    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+    <script type="text/javascript">
+        L.control.locate({position:'topright', follow: false}).addTo(map);
+        var hash = L.hash(map);
+    </script>
+
+    {% if exploring %}
+{#        <script type="text/javascript">#}
+{#            minmin(#}
+{#            {{ exploring.neighborhood.id }},#}
+{#            {{ exploring.id }},#}
+{#            '{{ exploring.get_absolute_url }}'#}
+{#            );#}
+{#        </script>#}
+    {% endif %}
+
+{% endblock %}
