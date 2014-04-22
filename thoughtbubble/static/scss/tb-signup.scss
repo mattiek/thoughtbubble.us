@@ -36,7 +36,7 @@ input[type="password"],
 input[type="email"],
 input[type="text"] {
     width: 324px;
-    height: 25px;
+    height: 35px;
     @include border-radius(5px);
 
     @include white-museo;

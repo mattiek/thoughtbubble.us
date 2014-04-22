@@ -25,10 +25,10 @@
     @include border-radius(10px);
     background-color: #dadbdc;
     margin-left: -100px;
-    position: absolute;
     background-image: image-url('add-photo.png');
     background-repeat: no-repeat;
     background-position: 57px 57px
+    margin: 0 auto 20px;
 }
 
 
@@ -36,7 +36,7 @@ input[type="password"],
 input[type="email"],
 input[type="text"] {
     width: 324px;
-    height: 25px;
+    height: 35px;
     @include border-radius(5px);
 
     @include white-museo;
