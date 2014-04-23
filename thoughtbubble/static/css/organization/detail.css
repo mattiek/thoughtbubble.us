@@ -840,13 +840,14 @@ form .row .row.second-row {
 /* line 159, ../../scss/organization/detail.scss */
 #organization-logo {
   text-align: center;
+  margin-bottom: 10px;
 }
-/* line 162, ../../scss/organization/detail.scss */
+/* line 163, ../../scss/organization/detail.scss */
 #organization-logo img {
   max-width: 300px;
 }
 
-/* line 167, ../../scss/organization/detail.scss */
+/* line 168, ../../scss/organization/detail.scss */
 #org-agg {
   font-size: 16px;
   color: #53b8d1;
@@ -855,12 +856,12 @@ form .row .row.second-row {
   text-align: center;
   margin: 20px auto;
 }
-/* line 173, ../../scss/organization/detail.scss */
+/* line 174, ../../scss/organization/detail.scss */
 #org-agg b {
   color: #f3812b;
   font-weight: bold;
 }
-/* line 178, ../../scss/organization/detail.scss */
+/* line 179, ../../scss/organization/detail.scss */
 #org-agg i {
   width: 12px;
   height: 10px;
@@ -871,12 +872,12 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 189, ../../scss/organization/detail.scss */
+/* line 190, ../../scss/organization/detail.scss */
 #org-agg li {
   display: inline-block;
   margin-left: 20px;
 }
-/* line 193, ../../scss/organization/detail.scss */
+/* line 194, ../../scss/organization/detail.scss */
 #org-agg li:first-child {
   margin-left: 0px;
 }

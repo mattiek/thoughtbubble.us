@@ -8,7 +8,7 @@
 
 {% block head %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/detail.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/organization/detail-mobile.css" />
 {% endblock %}
 
 {% block bodyid %}organization-detail{% endblock %}
@@ -67,7 +67,7 @@
                 {{ organization.about }}
             </div>
 
-        {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing%}
+        {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing id="about-sharing"%}
            {% include "widgets/sharing.html" %}
         {% endwith %}
 

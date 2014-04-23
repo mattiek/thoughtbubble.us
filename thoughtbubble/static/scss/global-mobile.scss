@@ -79,6 +79,7 @@ a {
 
   width: 300px;
   background: none;
+  width: 320px;
 
 }
 
@@ -102,7 +103,8 @@ a {
 
 #page-wrapper {
   margin: 0 auto;
-  width: 600px;
+  //width: 600px;
+  background: white;
 }
 
 h4.message {
@@ -134,6 +136,7 @@ input {
 
 #illustration {
   background-repeat: no-repeat;
+  background: white;
   &.ship {
     //background-image: image-url('illustration-ship.png');
     //height: 250px;

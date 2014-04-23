@@ -67,7 +67,7 @@
                 {{ organization.about }}
             </div>
 
-        {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing%}
+        {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing id="about-sharing" %}
            {% include "widgets/sharing.html" %}
         {% endwith %}
 

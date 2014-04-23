@@ -19,10 +19,11 @@
   line-height: 33px;
   width: 100px;
   float: left;
-  margin-left: 20px;
+  margin-left: 10px;
   text-align: center;
+  margin-top: 10px;
 
-  &:first-child {
+  &:nth-child(odd) {
     margin-left: 0px;
   }
 }
@@ -32,9 +33,9 @@
   color: #ffffff;
   @include museo;
   line-height: 33px;
-  width: 540px;
+  //width: 540px;
 //  width: 463px;
-  border-radius: 10px;
+//  border-radius: 10px;
   padding: 10px 20px;
   margin: 0 auto 10px;
 }
@@ -56,12 +57,12 @@
   @include museo;
   font-size: 10px;
   text-align: center;
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 .actions {
   margin: 0 auto 15px;
-  width: 463px;
+  width: 210px;
 
   a {
     color:#ffffff;
@@ -108,6 +109,8 @@ form .row .row.second-row {
 
 #about {
   margin: 30px 0;
+  font-size: 14px;
+  padding: 0 10px;
 }
 
 // Overrides
@@ -158,17 +161,20 @@ form .row .row.second-row {
 
 #organization-logo {
   text-align: center;
+  margin-bottom: 10px;
 
   img {
-    max-width: 300px;
+    max-width: 100%;
   }
 }
 
 #org-agg {
-  font-size: 16px;
+  font-size: 12px;
   @include header-blue-museo;
   text-align: center;
-  margin: 20px auto;
+  margin: 10px auto 10px;
+  padding: 0 10px;
+  line-height: 18px;
 
   b {
     color: $tb-orange;
@@ -194,4 +200,12 @@ form .row .row.second-row {
       margin-left: 0px;
     }
   }
+}
+
+#about-sharing {
+  float: none;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
 }
