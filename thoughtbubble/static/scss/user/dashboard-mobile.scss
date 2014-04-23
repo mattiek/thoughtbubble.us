@@ -135,6 +135,7 @@ fieldset {
     &.social {
       color: #4585c3;
       @include museo;
+      font-size: 12px;
     }
 
     .orange {
@@ -167,13 +168,23 @@ fieldset {
 #curator-admin,
 #dash-ideas {
   margin: 20px auto 20px;
-  width: 320px;
+  width: 300px;
 }
 
 #curator-admin {
   border: 3px solid #f3812b;
   border-radius: 15px;
   padding: 5px;
+}
+#curator-admin {
+  .idea-cap {
+    width: 280px;
+    //overflow: hidden;
+    .left-idea-cap,
+    .right-idea-cap {
+      width: 280px;
+    }
+  }
 }
 
 h4 {
@@ -189,4 +200,12 @@ h5 {
 }
 #update-avatar {
 @include blue-museo-link;
+  font-size: 12px;
+}
+
+#home-container {
+  // New add
+  width: 320px;
+  padding: 0 10px;
+  background: white;
 }

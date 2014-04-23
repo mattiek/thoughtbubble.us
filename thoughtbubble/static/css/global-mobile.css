@@ -753,18 +753,19 @@ button.mfp-close:active {
   padding-bottom: 0px;
   padding-top: 5px;
   margin-bottom: 10px;
+  width: 100%;
 }
-/* line 504, ../scss/navV2-mobile.scss */
+/* line 505, ../scss/navV2-mobile.scss */
 .error-box .details,
 .message-box .details {
   font-family: "Museo Sans", sans-serif;
 }
-/* line 508, ../scss/navV2-mobile.scss */
+/* line 509, ../scss/navV2-mobile.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 512, ../scss/navV2-mobile.scss */
+/* line 513, ../scss/navV2-mobile.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -772,14 +773,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 518, ../scss/navV2-mobile.scss */
+/* line 519, ../scss/navV2-mobile.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 529, ../scss/navV2-mobile.scss */
+/* line 530, ../scss/navV2-mobile.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
@@ -788,6 +789,7 @@ button.mfp-close:active {
   background: #9CC8F0;
   background-repeat: no-repeat;
   background-position: 15px 20px;
+  width: 100%;
 }
 
 /* line 2, ../scss/neat/grid/_grid.scss */

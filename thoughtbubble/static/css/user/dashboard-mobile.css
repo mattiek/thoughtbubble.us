@@ -634,8 +634,9 @@ fieldset {
 #social-accounts li.social {
   color: #4585c3;
   font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
 }
-/* line 140, ../../scss/user/dashboard-mobile.scss */
+/* line 141, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li .orange {
   width: 65px;
   height: 22px;
@@ -648,13 +649,13 @@ fieldset {
   margin: 10px auto;
 }
 
-/* line 154, ../../scss/user/dashboard-mobile.scss */
+/* line 155, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 158, ../../scss/user/dashboard-mobile.scss */
+/* line 159, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;
@@ -664,38 +665,56 @@ fieldset {
   color: #4585c3;
 }
 
-/* line 168, ../../scss/user/dashboard-mobile.scss */
+/* line 169, ../../scss/user/dashboard-mobile.scss */
 #curator-admin,
 #dash-ideas {
   margin: 20px auto 20px;
-  width: 320px;
+  width: 300px;
 }
 
-/* line 173, ../../scss/user/dashboard-mobile.scss */
+/* line 174, ../../scss/user/dashboard-mobile.scss */
 #curator-admin {
   border: 3px solid #f3812b;
   border-radius: 15px;
   padding: 5px;
 }
 
-/* line 179, ../../scss/user/dashboard-mobile.scss */
+/* line 180, ../../scss/user/dashboard-mobile.scss */
+#curator-admin .idea-cap {
+  width: 280px;
+}
+/* line 184, ../../scss/user/dashboard-mobile.scss */
+#curator-admin .idea-cap .left-idea-cap,
+#curator-admin .idea-cap .right-idea-cap {
+  width: 280px;
+}
+
+/* line 190, ../../scss/user/dashboard-mobile.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 183, ../../scss/user/dashboard-mobile.scss */
+/* line 194, ../../scss/user/dashboard-mobile.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 187, ../../scss/user/dashboard-mobile.scss */
+/* line 198, ../../scss/user/dashboard-mobile.scss */
 #social-form {
   text-align: center;
 }
 
-/* line 190, ../../scss/user/dashboard-mobile.scss */
+/* line 201, ../../scss/user/dashboard-mobile.scss */
 #update-avatar {
   color: #4585c3;
   /* text color */
   font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+}
+
+/* line 206, ../../scss/user/dashboard-mobile.scss */
+#home-container {
+  width: 320px;
+  padding: 0 10px;
+  background: white;
 }
