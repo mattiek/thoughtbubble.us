@@ -48,11 +48,11 @@
             <a id="save-button" class="buttonize orange" href="">save</a>
             <a id="cancel-button" class="buttonize blue" href="">cancel</a>
 
-            <div class="user-stats">
-                <span class="emphasis">{{ user|idea_count }}</span> ideas
-                <span class="emphasis">{{ user|idea_support_count }}</span> ideas supported
-                <span class="emphasis">{{ user|organizations_joined_count }}</span> organizations joined
-            </div>
+            <ul class="user-stats">
+                <li><span class="emphasis">{{ user|idea_count }}</span> ideas</li>
+                <li><span class="emphasis">{{ user|idea_support_count }}</span> ideas supported</li>
+                <li><span class="emphasis">{{ user|organizations_joined_count }}</span> organizations joined</li>
+            </ul>
         </div>
 
         <div class="user-info">Social Accounts</div>

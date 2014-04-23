@@ -547,23 +547,24 @@ textarea {
   color: #53b8d1;
   /* text color */
   font-family: "Museo Sans", sans-serif;
-  font-size: 19px;
+  font-size: 14px;
+  line-height: 17px;
   clear: both;
 }
 
-/* line 65, ../../scss/user/dashboard-mobile.scss */
+/* line 66, ../../scss/user/dashboard-mobile.scss */
 .emphasis {
   color: #f47e23;
 }
 
-/* line 71, ../../scss/user/dashboard-mobile.scss */
+/* line 72, ../../scss/user/dashboard-mobile.scss */
 #update-info,
 #save-button,
 #cancel-button {
   display: none;
 }
 
-/* line 77, ../../scss/user/dashboard-mobile.scss */
+/* line 78, ../../scss/user/dashboard-mobile.scss */
 #edit-button,
 #save-button,
 #cancel-button {
@@ -573,29 +574,29 @@ textarea {
   width: 40px;
   margin-bottom: 20px;
 }
-/* line 84, ../../scss/user/dashboard-mobile.scss */
+/* line 85, ../../scss/user/dashboard-mobile.scss */
 #edit-button:visited,
 #save-button:visited,
 #cancel-button:visited {
   color: #FFFFFF;
 }
 
-/* line 89, ../../scss/user/dashboard-mobile.scss */
+/* line 90, ../../scss/user/dashboard-mobile.scss */
 #user {
   margin-left: 120px;
   padding-top: 20px;
   margin-bottom: 50px;
 }
-/* line 95, ../../scss/user/dashboard-mobile.scss */
+/* line 96, ../../scss/user/dashboard-mobile.scss */
 #user.editing #edit-button, #user.editing .user-info {
   display: none;
 }
-/* line 98, ../../scss/user/dashboard-mobile.scss */
+/* line 99, ../../scss/user/dashboard-mobile.scss */
 #user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
   display: block;
 }
 
-/* line 104, ../../scss/user/dashboard-mobile.scss */
+/* line 105, ../../scss/user/dashboard-mobile.scss */
 #update-info {
   color: #9d9d9d;
   /* text color */
@@ -603,25 +604,25 @@ textarea {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 110, ../../scss/user/dashboard-mobile.scss */
+/* line 111, ../../scss/user/dashboard-mobile.scss */
 #update-info label {
   float: left;
   width: 100px;
   margin-right: 10px;
 }
 
-/* line 117, ../../scss/user/dashboard-mobile.scss */
+/* line 118, ../../scss/user/dashboard-mobile.scss */
 fieldset {
   border: none;
 }
 
-/* line 123, ../../scss/user/dashboard-mobile.scss */
+/* line 124, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
-/* line 128, ../../scss/user/dashboard-mobile.scss */
+/* line 129, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li.title {
   color: #4585c3;
   /* text color */
@@ -629,12 +630,12 @@ fieldset {
   font-size: 18px;
   margin-bottom: 10px;
 }
-/* line 134, ../../scss/user/dashboard-mobile.scss */
+/* line 135, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li.social {
   color: #4585c3;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 139, ../../scss/user/dashboard-mobile.scss */
+/* line 140, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li .orange {
   width: 65px;
   height: 22px;
@@ -647,13 +648,13 @@ fieldset {
   margin: 10px auto;
 }
 
-/* line 153, ../../scss/user/dashboard-mobile.scss */
+/* line 154, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 157, ../../scss/user/dashboard-mobile.scss */
+/* line 158, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;
@@ -663,36 +664,36 @@ fieldset {
   color: #4585c3;
 }
 
-/* line 167, ../../scss/user/dashboard-mobile.scss */
+/* line 168, ../../scss/user/dashboard-mobile.scss */
 #curator-admin,
 #dash-ideas {
   margin: 20px auto 20px;
   width: 320px;
 }
 
-/* line 172, ../../scss/user/dashboard-mobile.scss */
+/* line 173, ../../scss/user/dashboard-mobile.scss */
 #curator-admin {
   border: 3px solid #f3812b;
   border-radius: 15px;
   padding: 5px;
 }
 
-/* line 178, ../../scss/user/dashboard-mobile.scss */
+/* line 179, ../../scss/user/dashboard-mobile.scss */
 h4 {
   font-size: 16px;
 }
 
-/* line 182, ../../scss/user/dashboard-mobile.scss */
+/* line 183, ../../scss/user/dashboard-mobile.scss */
 h5 {
   font-size: 14px;
 }
 
-/* line 186, ../../scss/user/dashboard-mobile.scss */
+/* line 187, ../../scss/user/dashboard-mobile.scss */
 #social-form {
   text-align: center;
 }
 
-/* line 189, ../../scss/user/dashboard-mobile.scss */
+/* line 190, ../../scss/user/dashboard-mobile.scss */
 #update-avatar {
   color: #4585c3;
   /* text color */
