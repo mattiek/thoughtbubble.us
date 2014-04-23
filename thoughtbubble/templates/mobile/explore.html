@@ -99,10 +99,10 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/typeahead.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-explore.js"></script>
-    <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.js'></script>
+    <script src='{{ STATIC_URL }}js/L.Control.Locate.js'></script>
     <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
     <script type="text/javascript">
-        L.control.locate({position:'topright', follow: false}).addTo(map);
+        L.control.locate({position:'topright', follow: false,  keepCurrentZoomLevel: true}).addTo(map);
         var hash = L.hash(map);
     </script>
 

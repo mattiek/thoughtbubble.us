@@ -548,51 +548,54 @@ textarea {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 19px;
+  clear: both;
 }
 
-/* line 64, ../../scss/user/dashboard-mobile.scss */
+/* line 65, ../../scss/user/dashboard-mobile.scss */
 .emphasis {
   color: #f47e23;
 }
 
-/* line 70, ../../scss/user/dashboard-mobile.scss */
+/* line 71, ../../scss/user/dashboard-mobile.scss */
 #update-info,
 #save-button,
 #cancel-button {
   display: none;
 }
 
-/* line 76, ../../scss/user/dashboard-mobile.scss */
+/* line 77, ../../scss/user/dashboard-mobile.scss */
 #edit-button,
 #save-button,
 #cancel-button {
   float: right;
   color: #FFFFFF;
   margin-left: 10px;
+  width: 40px;
+  margin-bottom: 20px;
 }
-/* line 81, ../../scss/user/dashboard-mobile.scss */
+/* line 84, ../../scss/user/dashboard-mobile.scss */
 #edit-button:visited,
 #save-button:visited,
 #cancel-button:visited {
   color: #FFFFFF;
 }
 
-/* line 86, ../../scss/user/dashboard-mobile.scss */
+/* line 89, ../../scss/user/dashboard-mobile.scss */
 #user {
   margin-left: 120px;
   padding-top: 20px;
   margin-bottom: 50px;
 }
-/* line 92, ../../scss/user/dashboard-mobile.scss */
+/* line 95, ../../scss/user/dashboard-mobile.scss */
 #user.editing #edit-button, #user.editing .user-info {
   display: none;
 }
-/* line 95, ../../scss/user/dashboard-mobile.scss */
+/* line 98, ../../scss/user/dashboard-mobile.scss */
 #user.editing #update-info, #user.editing #save-button, #user.editing #cancel-button {
   display: block;
 }
 
-/* line 101, ../../scss/user/dashboard-mobile.scss */
+/* line 104, ../../scss/user/dashboard-mobile.scss */
 #update-info {
   color: #9d9d9d;
   /* text color */
@@ -600,25 +603,25 @@ textarea {
   font-size: 14px;
   line-height: 25px;
 }
-/* line 107, ../../scss/user/dashboard-mobile.scss */
+/* line 110, ../../scss/user/dashboard-mobile.scss */
 #update-info label {
   float: left;
   width: 100px;
   margin-right: 10px;
 }
 
-/* line 114, ../../scss/user/dashboard-mobile.scss */
+/* line 117, ../../scss/user/dashboard-mobile.scss */
 fieldset {
   border: none;
 }
 
-/* line 120, ../../scss/user/dashboard-mobile.scss */
+/* line 123, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li {
   display: inline-block;
   width: 30%;
   text-align: center;
 }
-/* line 125, ../../scss/user/dashboard-mobile.scss */
+/* line 128, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li.title {
   color: #4585c3;
   /* text color */
@@ -626,12 +629,12 @@ fieldset {
   font-size: 18px;
   margin-bottom: 10px;
 }
-/* line 131, ../../scss/user/dashboard-mobile.scss */
+/* line 134, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li.social {
   color: #4585c3;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 136, ../../scss/user/dashboard-mobile.scss */
+/* line 139, ../../scss/user/dashboard-mobile.scss */
 #social-accounts li .orange {
   width: 65px;
   height: 22px;
@@ -644,13 +647,13 @@ fieldset {
   margin: 10px auto;
 }
 
-/* line 150, ../../scss/user/dashboard-mobile.scss */
+/* line 153, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 154, ../../scss/user/dashboard-mobile.scss */
+/* line 157, ../../scss/user/dashboard-mobile.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;
@@ -660,16 +663,38 @@ fieldset {
   color: #4585c3;
 }
 
-/* line 164, ../../scss/user/dashboard-mobile.scss */
+/* line 167, ../../scss/user/dashboard-mobile.scss */
 #curator-admin,
 #dash-ideas {
   margin: 20px auto 20px;
   width: 320px;
 }
 
-/* line 169, ../../scss/user/dashboard-mobile.scss */
+/* line 172, ../../scss/user/dashboard-mobile.scss */
 #curator-admin {
   border: 3px solid #f3812b;
   border-radius: 15px;
   padding: 5px;
+}
+
+/* line 178, ../../scss/user/dashboard-mobile.scss */
+h4 {
+  font-size: 16px;
+}
+
+/* line 182, ../../scss/user/dashboard-mobile.scss */
+h5 {
+  font-size: 14px;
+}
+
+/* line 186, ../../scss/user/dashboard-mobile.scss */
+#social-form {
+  text-align: center;
+}
+
+/* line 189, ../../scss/user/dashboard-mobile.scss */
+#update-avatar {
+  color: #4585c3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
 }

@@ -59,6 +59,7 @@
 .user-stats {
  @include header-blue-museo;
   font-size: 19px;
+  clear: both;
 }
 
 .emphasis {
@@ -77,6 +78,8 @@
   float: right;
   color: #FFFFFF;
   margin-left: 10px;
+  width: 40px;
+  margin-bottom: 20px;
 
   &:visited {
     color: #FFFFFF;
@@ -170,4 +173,19 @@ fieldset {
   border: 3px solid #f3812b;
   border-radius: 15px;
   padding: 5px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+#social-form {
+  text-align: center;
+}
+#update-avatar {
+@include blue-museo-link;
 }

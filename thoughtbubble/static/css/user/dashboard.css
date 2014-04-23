@@ -676,3 +676,10 @@ fieldset {
   border-radius: 15px;
   padding: 10px;
 }
+
+/* line 175, ../../scss/user/dashboard.scss */
+#update-avatar {
+  color: #4585c3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}

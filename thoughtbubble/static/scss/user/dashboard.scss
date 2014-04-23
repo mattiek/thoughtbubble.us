@@ -171,3 +171,7 @@ fieldset {
   border-radius: 15px;
   padding: 10px;
 }
+
+#update-avatar {
+  @include blue-museo-link;
+}

@@ -30,13 +30,12 @@
 {#            {% csrf_token %}#}
         <div id="picture">
             {% avatar user %}
-            <a href="#update-avatar-overlay">update</a>
+            <a href="#update-avatar-overlay" id="update-avatar">update</a>
 {#                        <img src="{{ user.get_profile_picture }}" alt=""/>#}
         </div>
         <div id="user">
             <a id="edit-button" class="buttonize orange" href="">edit</a>
-            <a id="save-button" class="buttonize orange" href="">save</a>
-            <a id="cancel-button" class="buttonize blue" href="">cancel</a>
+
             <div class="user-info">
                 <h4>{{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}}</h4>
                 <h5>{{profile.location|default:"unknown"}}</h5>
@@ -46,6 +45,8 @@
                 {{ update_form.as_p }}
 {#                {{ update_form.first_name }} {{ update_form.last_name }} {{ update_form.location }}#}
             </form>
+            <a id="save-button" class="buttonize orange" href="">save</a>
+            <a id="cancel-button" class="buttonize blue" href="">cancel</a>
 
             <div class="user-stats">
                 <span class="emphasis">{{ user|idea_count }}</span> ideas
