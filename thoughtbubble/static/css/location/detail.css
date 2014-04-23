@@ -585,9 +585,10 @@ form .row .row.second-row {
 #map {
   width: 100%;
   height: 265px;
+  margin-bottom: 20px;
 }
 
-/* line 99, ../../scss/location/detail.scss */
+/* line 100, ../../scss/location/detail.scss */
 #header {
   background: #33bdd4;
   color: #fff;
@@ -602,7 +603,7 @@ form .row .row.second-row {
   margin-bottom: 20px;
 }
 
-/* line 111, ../../scss/location/detail.scss */
+/* line 112, ../../scss/location/detail.scss */
 .about {
   color: #53b8d1;
   /* text color */
@@ -611,16 +612,16 @@ form .row .row.second-row {
   font-size: 38px / 2;
 }
 
-/* line 117, ../../scss/location/detail.scss */
+/* line 118, ../../scss/location/detail.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 121, ../../scss/location/detail.scss */
+/* line 122, ../../scss/location/detail.scss */
 #pictures {
   width: 270px;
 }
-/* line 123, ../../scss/location/detail.scss */
+/* line 124, ../../scss/location/detail.scss */
 #pictures > div {
   float: left;
   width: 80px;
@@ -628,11 +629,11 @@ form .row .row.second-row {
   border-radius: 10px;
   margin-left: 10px;
 }
-/* line 130, ../../scss/location/detail.scss */
+/* line 131, ../../scss/location/detail.scss */
 #pictures > div:first-child {
   margin-left: 0px;
 }
-/* line 134, ../../scss/location/detail.scss */
+/* line 135, ../../scss/location/detail.scss */
 #pictures > div .cloak {
   background: #FFFFFF;
   width: 100%;
@@ -640,19 +641,19 @@ form .row .row.second-row {
   line-height: 80px;
   text-align: center;
 }
-/* line 141, ../../scss/location/detail.scss */
+/* line 142, ../../scss/location/detail.scss */
 #pictures > div .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 150, ../../scss/location/detail.scss */
+/* line 151, ../../scss/location/detail.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 154, ../../scss/location/detail.scss */
+/* line 155, ../../scss/location/detail.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;
