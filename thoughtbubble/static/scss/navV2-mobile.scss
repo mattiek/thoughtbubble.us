@@ -502,7 +502,7 @@ button.mfp-close:active {
   margin-bottom: 10px;
 
   .details {
-    margin: 0 10px 0 50px;
+    //margin: 0 10px 0 50px;
 
     @include museo;
     h4 {
@@ -529,9 +529,8 @@ button.mfp-close:active {
 .message-box {
   font-size: 14px;
   position: absolute;
-  width: 928px;
-  margin-top: -26px;
-
+  top: 0px;
+  left: 0px;
   background: #9CC8F0;
   background-repeat: no-repeat;
   background-position: 15px 20px;

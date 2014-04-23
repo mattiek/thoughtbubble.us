@@ -1014,7 +1014,7 @@ input.admin-submit.submit {
 @media screen and (max-width: 480px) {
   /* line 143, ../scss/global.scss */
   #illustration {
-    width: 100%;
+    width: 320px;
   }
   /* line 164, ../scss/global.scss */
   #illustration.turbines, #illustration.trees, #illustration.ship {
