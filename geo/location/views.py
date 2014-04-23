@@ -165,9 +165,9 @@ class LocationCreate(CreateView):
             pic4.save()
 
         messages.info(self.request, '%s created.' % s.name)
-        return redirect('location_update', self.kwargs.get('state'),
-                        self.kwargs.get('city'),
-                        s.id,
+        return redirect('location_update', s.organization.place.slug,
+                        s.organization.slug,
+                        s.slug,
                         )
 
     def get_context_data(self, **kwargs):
