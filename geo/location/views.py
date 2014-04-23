@@ -144,6 +144,8 @@ class LocationCreate(CreateView):
             # what_kind=form.cleaned_data['what_kind'],
             latitude=form.cleaned_data['latitude'],
             longitude=form.cleaned_data['longitude'],
+            about=form.cleaned_data['about'],
+            sherlock_description=form.cleaned_data['sherlock_description'],
             organization=organization
             )
 
