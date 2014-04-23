@@ -135,7 +135,7 @@ class LocationCreate(CreateView):
 
     def form_valid(self, form):
         comm = self.kwargs.get('organization',None)
-        organization = Organization.objects.get(pk=comm)
+        organization = Organization.objects.get(slug=comm)
         s = Location(
             name=form.cleaned_data['name'],
             address=form.cleaned_data['address'],
