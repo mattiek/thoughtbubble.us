@@ -157,6 +157,17 @@ input {
     height: 238px;
   }
 
+  @include media($mobile) {
+    width: 100%;
+    &.turbines,
+    &.trees,
+    &.ship {
+      background: none;
+      height: 80px;
+    }
+
+  }
+
 }
 
 .tb-copyright {
