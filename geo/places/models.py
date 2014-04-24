@@ -79,6 +79,14 @@ class Place(models.Model):
 
         return props
 
+
+    def get_linkedin_sharing(self):
+        return {
+            'summary': "Check out this place!",
+            'title': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
     def get_fb_sharing(self):
         return {
             'share_copy': "Check out this place!",

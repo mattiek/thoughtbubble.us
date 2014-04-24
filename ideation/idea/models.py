@@ -175,6 +175,13 @@ class Idea(models.Model):
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
+    def get_linkedin_sharing(self):
+        return {
+            'summary': "Check out this idea!",
+            'title': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
     def get_twit_sharing(self):
         return {
             'text': "Check out the idea %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())

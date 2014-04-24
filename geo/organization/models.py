@@ -250,6 +250,13 @@ class Organization(models.Model):
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
         }
 
+    def get_linkedin_sharing(self):
+        return {
+            'summary': "Check out this organization.",
+            'title': "%s" % self.title,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
     def get_twit_sharing(self):
         return {
             'text': "Check out %s on thoughtbubble.us! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())

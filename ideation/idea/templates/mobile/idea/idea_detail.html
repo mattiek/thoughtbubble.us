@@ -28,8 +28,8 @@
         <span class="support-number"><i class="support-star-orange"></i>{{ idea.support_count }}</span> support this
 
         <div id="support-this">
-                {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing %}
-                    {% include "widgets/sharing.html" %}
+            {% with fb=idea.get_fb_sharing twit=idea.get_twit_sharing linkedin=idea.get_linkedin_sharing %}
+                {% include "widgets/sharing.html" %}
                 {% endwith %}
             <a class="dislike blue" href="#">dislike</a>
 
