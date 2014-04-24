@@ -176,7 +176,7 @@ class Idea(models.Model):
 
     def get_fb_sharing(self):
         return {
-            'share_copy': "%s%s" % (self.get_idea_location_name(), self.name,),
+            'share_copy': "%s<br/>%s" % (self.get_idea_location_name(), self.name,),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
             'share_name': "I want...",
