@@ -175,4 +175,25 @@
 <script src="{{ STATIC_URL }}js/tb/tb-global.js"></script>
 {% block footerscripts %}
 {% endblock %}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".share-fb").on("click", function(e) {
+            e.preventDefault();
+            var fbDataShareImage = $(this).attr("data-share-image");
+            if (window.location.protocol == 'https:') {
+                fbDataShareImage = fbDataShareImage.replace('http:','https:');
+            }
+            FB.ui({
+                link : $(this).attr("data-share-link"),
+                method:"feed",
+                name: $(this).attr("data-share-name"),
+                caption:  $(this).attr("data-share-caption"),
+                description: $(this).attr("data-share-copy"),
+                display:"popup",
+                picture: fbDataShareImage
+            });
+        });
+    });
+</script>
 </html>
