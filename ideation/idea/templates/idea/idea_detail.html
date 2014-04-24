@@ -161,9 +161,9 @@
 
 
                 // http://leafletjs.com/reference.html#popup
-                marker.bindPopup(popupContent,{
-                    closeButton: false
-                });
+{#                marker.bindPopup(popupContent,{#}
+{#                    closeButton: false#}
+{#                });#}
             });
 
             TB.Map.map().setView([{{ idea.get_latitude }},{{ idea.get_longitude }}],15);
