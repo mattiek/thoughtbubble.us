@@ -146,6 +146,14 @@ class Idea(models.Model):
                                             url_safe(self.slug)])
 
 
+    def get_idea_location_name(self):
+        if self.content_type.name == 'place':
+            place = self.content_object
+            return place.name
+        else: # its a location
+            location = self.content_object
+            return location.name
+
     def get_longitude(self):
         if self.content_type.name == 'place':
             place = self.content_object
@@ -168,10 +176,10 @@ class Idea(models.Model):
 
     def get_fb_sharing(self):
         return {
-            'share_copy': "Check out this idea!",
+            'share_copy': "%s<br/>%s" % (self.get_idea_location_name(), self.name,),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "%s" % self.name,
+            'share_name': "I want...",
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
