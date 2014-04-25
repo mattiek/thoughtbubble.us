@@ -498,8 +498,9 @@ h1, h2 {
 /* line 256, ../scss/tb-sherlock.scss */
 .sharing {
   margin-right: 10px;
+  margin-left: 15px;
 }
-/* line 259, ../scss/tb-sherlock.scss */
+/* line 260, ../scss/tb-sherlock.scss */
 .sharing li:first-child {
   display: none;
 }
