@@ -444,21 +444,21 @@ h1, h2 {
 }
 /* line 264, ../scss/tb-sherlock.scss */
 .sharing li a.share-fb {
-  background: url(../../images/facebook-cloud.png) no-repeat;
+  background: url(../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 15px;
 }
 /* line 270, ../scss/tb-sherlock.scss */
 .sharing li a.share-twitter {
-  background: url(../../images/twitter-cloud.png) no-repeat;
+  background: url(../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
 }
 /* line 276, ../scss/tb-sherlock.scss */
 .sharing li a.share-linkedin {
-  background: url(../../images/linkedin-cloud.png) no-repeat;
+  background: url(../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 15px;
