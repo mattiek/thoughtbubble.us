@@ -255,7 +255,8 @@ h1,h2 { margin:0px 0px 10px; }
 
 .sharing {
   margin-right: 10px;
-  &:first-child {
+
+  li:first-child {
     display: none;
   }
 }

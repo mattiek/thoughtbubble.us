@@ -499,7 +499,7 @@ h1, h2 {
 .sharing {
   margin-right: 10px;
 }
-/* line 258, ../scss/tb-sherlock.scss */
-.sharing:first-child {
+/* line 259, ../scss/tb-sherlock.scss */
+.sharing li:first-child {
   display: none;
 }
