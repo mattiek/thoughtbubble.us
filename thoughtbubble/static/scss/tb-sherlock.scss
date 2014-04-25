@@ -251,3 +251,34 @@ h1,h2 { margin:0px 0px 10px; }
   position: absolute !important;
   -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }
+
+.sharing {
+  //margin: 20px 0px 0px 15px;
+  margin: 0px 0px 0px 15px;
+
+  li {
+    span {
+      display: none;
+    }
+    a {
+      &.share-fb {
+        background: url(../../images/facebook-cloud.png) no-repeat;
+        background-size: 100%;
+        width: 21px;
+        height: 15px;
+      }
+      &.share-twitter {
+        background: url(../../images/twitter-cloud.png) no-repeat;
+        background-size: 100%;
+        width: 18px;
+        height: 15px;
+      }
+      &.share-linkedin {
+        background: url(../../images/linkedin-cloud.png) no-repeat;
+        background-size: 100%;
+        width: 18px;
+        height: 15px;
+      }
+    }
+  }
+}
