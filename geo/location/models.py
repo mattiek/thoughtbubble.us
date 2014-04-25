@@ -184,6 +184,27 @@ class Location(models.Model):
     def get_latitude(self):
         return self.latitude
 
+    def get_fb_sharing(self):
+        return {
+            'share_copy': "Check out this location.",
+            'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
+            'share_caption': 'thoughtbubble.us',
+            'share_name': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
+    def get_linkedin_sharing(self):
+        return {
+            'summary': "Check out this location.",
+            'title': "%s" % self.name,
+            'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
+            }
+
+    def get_twit_sharing(self):
+        return {
+            'text': "Check out %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
+        }
+
     @property
     def get_mapbox_json(self):
         mapbox = {}
