@@ -42,7 +42,10 @@
                 <div class="share">
                     <a class="orange buttonize login-required" href="{{ exploring.add_idea_url }}">add idea</a>
                     <a class="blue buttonize" href="{{ exploring.list_ideas_url }}">find ideas</a>
-                    <a class="blue buttonize" href="{{ exploring.share }}">share</a>
+{#                    <a class="blue buttonize" href="{{ exploring.share }}">share</a>#}
+                        {% with fb=exploring.get_fb_sharing twit=exploring.get_twit_sharing linkedin=exploring.get_linkedin_sharing %}
+                            {% include "widgets/sharing.html" %}
+                        {% endwith %}
                 </div>
                 <div style="clear:both;"></div>
                 <small class='scroll'>Scroll ▼</small>
@@ -59,7 +62,10 @@
                     <div class="share">
                         <a class="orange buttonize login-required" href="{{ location.add_idea_url }}">add idea</a>
                         <a class="blue buttonize" href="{{ location.list_ideas_url }}">find ideas</a>
-                        <a class="blue buttonize" href="{{ location.share }}">share</a>
+{#                        <a class="blue buttonize" href="{{ location.share }}">share</a>#}
+                        {% with fb=location.get_fb_sharing twit=location.get_twit_sharing linkedin=location.get_linkedin_sharing %}
+                            {% include "widgets/sharing.html" %}
+                        {% endwith %}
                     </div>
                     <div style="clear:both;"></div>
                 </div>
