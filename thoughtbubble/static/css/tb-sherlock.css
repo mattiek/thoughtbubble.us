@@ -494,3 +494,12 @@ h1, h2 {
   position: absolute !important;
   -webkit-overflow-scrolling: touch;
 }
+
+/* line 256, ../scss/tb-sherlock.scss */
+.sharing {
+  margin-right: 10px;
+}
+/* line 258, ../scss/tb-sherlock.scss */
+.sharing:first-child {
+  display: none;
+}

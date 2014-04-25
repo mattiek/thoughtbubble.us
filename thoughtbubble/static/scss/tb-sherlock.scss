@@ -252,3 +252,10 @@ h1,h2 { margin:0px 0px 10px; }
   position: absolute !important;
   -webkit-overflow-scrolling: touch; //adding this line will enable inertial scrolling
 }
+
+.sharing {
+  margin-right: 10px;
+  &:first-child {
+    display: none;
+  }
+}
