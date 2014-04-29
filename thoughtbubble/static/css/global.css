@@ -1018,12 +1018,12 @@ input.admin-submit.submit {
   }
   /* line 164, ../scss/global.scss */
   #illustration.turbines, #illustration.trees, #illustration.ship {
-    background: none;
+    background: white;
     height: 80px;
   }
 }
 
-/* line 173, ../scss/global.scss */
+/* line 174, ../scss/global.scss */
 .tb-copyright {
   margin-top: 20px;
 }
