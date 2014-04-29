@@ -100,7 +100,6 @@
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 17px;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
   /* line 48, ../../scss/idea/_idea_mobile.scss */
@@ -727,10 +726,11 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   float: right;
   padding-right: 20px;
   width: 150px;
+  text-align: right;
 }
-/* line 75, ../../scss/idea/list-mobile.scss */
+/* line 76, ../../scss/idea/list-mobile.scss */
 .idea-details-list li {
-  margin: 10px auto;
+  margin: 7px auto;
   font-size: 14px;
   color: #53b8d1;
   /* text color */
@@ -738,17 +738,17 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   color: #4585c3;
 }
 
-/* line 83, ../../scss/idea/list-mobile.scss */
+/* line 84, ../../scss/idea/list-mobile.scss */
 select {
   width: 300px;
 }
 
-/* line 87, ../../scss/idea/list-mobile.scss */
+/* line 88, ../../scss/idea/list-mobile.scss */
 #filtering {
   text-align: center;
 }
 
-/* line 91, ../../scss/idea/list-mobile.scss */
+/* line 92, ../../scss/idea/list-mobile.scss */
 #sort_by {
   text-align: left;
 }

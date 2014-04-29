@@ -100,7 +100,6 @@
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 17px;
-  margin-bottom: 20px;
 }
 @media screen and (max-width: 480px) {
   /* line 48, ../../scss/idea/_idea_mobile.scss */

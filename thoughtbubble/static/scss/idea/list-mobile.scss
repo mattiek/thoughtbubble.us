@@ -72,8 +72,9 @@
  float: right;
  padding-right: 20px;
   width: 150px;
+  text-align: right;
   li {
-    margin: 10px auto;
+    margin: 7px auto;
     font-size: 14px;
     @include header-blue-museo;
     color: $tb_link_blue;

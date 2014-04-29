@@ -9,7 +9,7 @@
             <li>{{ idea.what_kind }}</li>
         </ul>
 
-        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.name }}</p></a>
+        <a href="{{ idea.get_absolute_url }}"><p>{{ idea.support_count|pluralize:"I,We" }} want {{ idea.name }}</p></a>
 
 
         <ul class="right-idea-cap">
