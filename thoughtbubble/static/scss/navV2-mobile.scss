@@ -29,8 +29,10 @@ body {
   #illustration {
     width: 320px;
     background: image-url('thoughtbubble-illustration.jpg') no-repeat no-repeat;
-    background-size: cover;
-    height: 250px;
+    background-size: 140%;
+    background-position-x: 40%;
+    background-position-y: 90%;
+    height: 350px;
     margin: 0 auto;
   }
 
