@@ -737,3 +737,18 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-family: "Museo Sans", sans-serif;
   color: #4585c3;
 }
+
+/* line 83, ../../scss/idea/list-mobile.scss */
+select {
+  width: 300px;
+}
+
+/* line 87, ../../scss/idea/list-mobile.scss */
+#filtering {
+  text-align: center;
+}
+
+/* line 91, ../../scss/idea/list-mobile.scss */
+#sort_by {
+  text-align: left;
+}
