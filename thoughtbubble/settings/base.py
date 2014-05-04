@@ -102,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'reversion.middleware.RevisionMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_balanced.middleware.BalancedMiddleware',
+    'thoughtbubble.middleware.GeoIPMiddleware',
 
     # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
 )
@@ -254,3 +255,5 @@ BALANCED = {
     'API_URL': 'https://api.balancedpayments.com',
     'MARKETPLACE_URI': '/v1/marketplaces/TEST-MP2idbb7lyd2Y5wKTvXHOF0S',
     }
+
+GEOIP_PATH=os.path.join(BASE_ROOT, 'thoughtbubble/data')
