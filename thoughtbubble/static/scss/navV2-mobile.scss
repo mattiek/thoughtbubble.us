@@ -76,10 +76,14 @@ body {
 
 #nav {
   li {
-    margin-right: 22px;
+    //margin-right: 22px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 15px;
   }
 
-    margin-top: 12px;
+    //margin-top: 12px;
 }
 
 #primary-nav {
@@ -143,17 +147,27 @@ body {
 }
 
 
+#hamburger-button {
+  @include mobile-bg-image('hamburger-button.png');
+  //margin: 0px 0 10px 10px;
+  margin: 0px 0 0px 5px;
+  background-size: cover;
+
+  height: 42px;
+  width: 30px;
+}
+
 #logo {
-  @include mobile-bg-image('tb.us-logo-mobile.png');
-  margin: 0px 0 0 35px;
   //width: 288px;
   //height: 97px;
     @include mobile-bg-image('tb.us-logo-mobile.png');
     //margin: 0px 0 10px 10px;
-    margin: -5px 0 0px 5px;
-
+    margin: 0px 0 0px 5px;
+  background-size: 91%;
+  background-repeat: no-repeat no-repeat;
   height: 47px;
   width: 41px;
+  float: right;
 }
 
 
@@ -546,4 +560,6 @@ button.mfp-close:active {
   width: 100%;
 
 }
+
+
 

@@ -6,6 +6,7 @@
     <title>{% block title %}Thoughtbubble{% endblock %}</title>
 
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.mmenu.all.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/global-mobile.css" />
 {#    <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />#}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/magnific-popup.css" />
@@ -36,6 +37,7 @@
 
 {#    <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>#}
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/jquery.mmenu.min.all.js"></script>
     <script src="{{ STATIC_URL }}js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="{{ STATIC_URL }}js/underscore-min.js"></script>
 {#    <script src="{{ STATIC_URL }}js/plugins/jquery.form.min.js"></script>#}
@@ -50,6 +52,23 @@
 </head>
 
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
+{% block slideoutnav %}
+<div id="slide-out">
+    <ul id="nav">
+        {% if user.is_authenticated %}
+            <li><a href="{% url "user_dashboard" %}">hi, {{ user }}</a></li>
+        {% else %}
+            <li><span id="login-span"><a id="join" class="open-popup-link" href="#join-overlay">join</a> | <a id="login" class="open-popup-link" href="#login-overlay">login</a></span></li>
+        {% endif %}
+        <li><a id="idea-nav" href="{% url "idea_list"  %}">ideas</a></li>
+        <li><a href="{% url "explore"  %}">explore</a></li>
+        <li><a href="/organizations">organizations</a></li>
+        <li><a href="/about">about</a></li>
+    </ul>
+</div>
+
+{% endblock %}
+
 {% block navstart %}
     <div id="wrapper" class="">
     {% block toprule %} {% endblock %}
@@ -57,23 +76,11 @@
             {#    Messages #}
             {% include "widgets/messages.html" %}
             {#    End Messages #}
-            <ul id="login-nav">
-                {% if user.is_authenticated %}
-                    <li><a href="{% url "user_dashboard" %}">{{ user }}</a></li>
-                {% else %}
-                    <li><a id="join" class="open-popup-link" href="#join-overlay">join</a></li>
-                    <li>|</li>
-                    <li><a id="login" class="open-popup-link" href="#login-overlay">login</a></li>
-                {% endif %}
-            </ul>
-            <ul id="nav">
-                <li><a id="idea-nav" href="{% url "idea_list"  %}">ideas</a></li>
-                <li><a href="{% url "explore"  %}">explore</a></li>
-                <li><a href="/organizations">organizations</a></li>
-                <li><a href="/about">about</a></li>
-            </ul>
+
+
 
             <a id="logo" href="{% url "home" %}"></a>
+            <a id="hamburger-button" href="#slide-out"></a>
 
                 {% block primarynav %}
                     <a id="primary-explore" href="{% url "explore"  %}"><i class="icon-explore"></i>Explore and Add Ideas</a>
@@ -175,4 +182,12 @@
 <script src="{{ STATIC_URL }}js/tb/tb-global.js"></script>
 {% block footerscripts %}
 {% endblock %}
+
+<script type="text/javascript">
+    $(document).ready( function() {
+
+     $('#slide-out').mmenu();
+
+    })
+</script>
 </html>
