@@ -101,7 +101,6 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'reversion.middleware.RevisionMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_balanced.middleware.BalancedMiddleware',
     'thoughtbubble.middleware.GeoIPMiddleware',
 
     # 'social.apps.django_app.middleware.SocialAuthExceptionMiddleware',
