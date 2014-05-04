@@ -11,8 +11,9 @@
 <![endif]-->
     <link rel="stylesheet" href="{{ STATIC_URL }}css/mapbox-v0.6.7.css"/>
     <script type="text/javascript" src="{{ STATIC_URL }}js/mapbox-v0.6.7.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.slimscroll.min.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/swiper.min.js"></script>
 
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/swiper.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-sherlock-mobile.css" />
 {#    <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />#}
 {% endblock %}
@@ -24,14 +25,15 @@
 
 {% block content %}
 
-    <ul id="communisplore-mobile">
+    <div class="swiper-container">
+    <ul id="communisplore-mobile" class="swiper-wrapper">
         {#        <section class='cover active' id="{{ exploring.get_id }}" data-index="0">#}
         {#            <h3>{{ exploring.title }}</h3>#}
         {#            <p>{{ exploring.about }}</p>#}
         {#            <small class='scroll'>Scroll ▼</small>#}
         {#        </section>#}
 
-        <li class='active' id="{{ exploring.get_id }}" data-index="0">
+        <li class="swiper-slide" class='active' id="{{ exploring.get_id }}" data-index="0">
             <a href="{{ exploring.get_absolute_url }}">
                 <h4>{{ exploring.title }}</h4>
             </a>
@@ -48,7 +50,7 @@
         </li>
 
         {% for location in exploring.location_set.all %}
-            <li id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
+            <li class="swiper-slide" id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
                 <a href="{{ location.get_absolute_url }}">
                     <h4>{{ location.name }}</h4>
                 </a>
@@ -63,8 +65,9 @@
                 </div>
             </li>
         {% endfor %}
-        <div id="sherlock-end"></div>
+
     </ul>
+    </div>
 
     <div id='pane'><div id='map'></div></div>
 
@@ -93,6 +96,7 @@
 {% block footerscripts %}
     <script type="text/javascript">
         var geojson = {{ exploring.get_locations_geojson|safe }};
+
     </script>
 
 

@@ -54,6 +54,28 @@ var setActive = function(index, ease) {
     return true;
 };
 
+// Helper to set the active section.
+var setSwipeActive = function(index, ease) {
+    // Set active class on sections, markers.
+//    _(sections).each(function(s) { s.className = s.className.replace(' active', '') });
+    _(markers).each(function(m) { m.element.className = m.element.className.replace(' active', '') });
+
+//    $(sections[index]).addClass('active');
+    markers[index].element.className += ' active';
+
+    // Set a body class for the active section.
+    document.body.className = 'section-' + index;
+
+    // Ease map to active marker.
+    if (!ease) {
+        map.centerzoom(markers[index].location, markers[index].data.properties.zoom||14);
+    } else {
+        map.ease.location(markers[index].location).zoom(markers[index].data.properties.zoom||14).optimal(0.5, 1.00);
+    }
+
+    return true;
+};
+
 // Set map to first section.
 setActive(0, false);
 
@@ -70,18 +92,23 @@ var getIntersect = function() {
     setActive($(active).attr('data-index'),true);
 }
 
-$('#communisplore-mobile').on('scroll',  getIntersect);
+//$('#communisplore-mobile').on('scroll',  getIntersect);
 
 
 $(document).ready( function() {
     var height = $('#communisplore-mobile').height();
-
-    $('#communisplore-mobile').slimscroll({
-        color: '#00f',
-        size: '0px',
-        width: '100%',
-        height: height,
-        wheelStep: 40
+    var mySwiper = $('.swiper-container').swiper({
+        //Your options here:
+        mode:'horizontal',
+        loop: false,
+        slideElement: 'li',
+        onSlideChangeEnd: function(e) {
+            var $slide = $(e.activeSlide());
+            var index = $slide.index();
+            $(sections).removeClass('active');
+            $slide.addClass('active');
+            setSwipeActive(index,true)
+        }
     });
 
 });
