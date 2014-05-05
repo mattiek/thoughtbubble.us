@@ -6,7 +6,7 @@
     <title>{% block title %}Thoughtbubble{% endblock %}</title>
 
     <!-- If you are using CSS version, only link these 2 files, you may add app.css to use for your overrides if you like. -->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/snap.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/global-mobile.css" />
 {#    <link rel="stylesheet" href="{{ STATIC_URL }}fonts/fonts.css" />#}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/magnific-popup.css" />
@@ -37,7 +37,7 @@
 
 {#    <script src="{{ STATIC_URL }}js/custom.modernizr.js"></script>#}
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
-    <script src="{{ STATIC_URL }}js/jquery.mmenu.min.all.js"></script>
+    <script src="{{ STATIC_URL }}js/snap.min.js"></script>
     <script src="{{ STATIC_URL }}js/plugins/jquery.magnific-popup.min.js"></script>
     <script src="{{ STATIC_URL }}js/underscore-min.js"></script>
 {#    <script src="{{ STATIC_URL }}js/plugins/jquery.form.min.js"></script>#}
@@ -53,24 +53,28 @@
 
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
 {% block slideoutnav %}
-<div id="slide-out">
-    <ul id="nav">
-        {% if user.is_authenticated %}
-            <li><a href="{% url "user_dashboard" %}">hi, {{ user }}</a></li>
-        {% else %}
-            <li><span id="login-span"><a id="join" class="open-popup-link" href="#join-overlay">join</a> | <a id="login" class="open-popup-link" href="#login-overlay">login</a></span></li>
-        {% endif %}
-        <li><a id="idea-nav" href="{% url "idea_list"  %}">ideas</a></li>
-        <li><a href="{% url "explore"  %}">explore</a></li>
-        <li><a href="/organizations">organizations</a></li>
-        <li><a href="/about">about</a></li>
-    </ul>
-</div>
+
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left">
+            <ul id="nav">
+                {% if user.is_authenticated %}
+                    <li><a href="{% url "user_dashboard" %}">hi, {{ user }}</a></li>
+                {% else %}
+                    <li><span id="login-span"><a id="join" class="open-popup-link" href="#join-overlay">join</a> | <a id="login" class="open-popup-link" href="#login-overlay">login</a></span></li>
+                {% endif %}
+                <li><a id="idea-nav" href="{% url "idea_list"  %}">ideas</a></li>
+                <li><a href="{% url "explore"  %}">explore</a></li>
+                <li><a href="/organizations">organizations</a></li>
+                <li><a href="/about">about</a></li>
+            </ul>
+        </div>
+        <div class="snap-drawer snap-drawer-right"></div>
+    </div>
 
 {% endblock %}
 
 {% block navstart %}
-    <div id="wrapper" class="">
+    <div id="wrapper" class="snap-content">
     {% block toprule %} {% endblock %}
         <div id="illustration" {% block illustration%}class="{{ illustrations|random }}"{%endblock%}>
             {#    Messages #}
@@ -186,7 +190,10 @@
 <script type="text/javascript">
     $(document).ready( function() {
 
-     $('#slide-out').mmenu();
+        var snapper = new Snap({
+            element: document.getElementById('wrapper'),
+            disable: 'right'
+        });
 
     })
 </script>

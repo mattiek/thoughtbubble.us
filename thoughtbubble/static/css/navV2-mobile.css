@@ -29,7 +29,7 @@
 }
 
 /* line 11, ../scss/navV2-mobile.scss */
-body {
+#wrapper {
   *zoom: 1;
   max-width: 680em;
   margin-left: auto;
@@ -38,12 +38,12 @@ body {
   background-size: 50%;
 }
 /* line 18, ../scss/bourbon/addons/_clearfix.scss */
-body:before, body:after {
+#wrapper:before, #wrapper:after {
   content: " ";
   display: table;
 }
 /* line 23, ../scss/bourbon/addons/_clearfix.scss */
-body:after {
+#wrapper:after {
   clear: both;
 }
 
@@ -81,27 +81,30 @@ body:after {
   display: inline;
   list-style-type: none;
   float: right;
-  font-size: 12px;
-  margin-top: 0px;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 15px;
 }
-/* line 58, ../scss/navV2-mobile.scss */
+/* line 59, ../scss/navV2-mobile.scss */
 #nav a,
 #login-nav a {
   text-decoration: none;
 }
-/* line 62, ../scss/navV2-mobile.scss */
+/* line 63, ../scss/navV2-mobile.scss */
 #nav li,
 #login-nav li {
   display: inline-block;
   margin-top: 75px;
+  height: 30px;
+  border-bottom: 1px solid #dcdcdc;
 }
-/* line 72, ../scss/navV2-mobile.scss */
+/* line 74, ../scss/navV2-mobile.scss */
 #nav li,
 #login-nav li {
-  margin-top: 0px;
+  margin-top: 10px;
 }
 
-/* line 78, ../scss/navV2-mobile.scss */
+/* line 80, ../scss/navV2-mobile.scss */
 #nav li {
   width: 100%;
   display: block;
@@ -109,7 +112,7 @@ body:after {
   font-size: 15px;
 }
 
-/* line 89, ../scss/navV2-mobile.scss */
+/* line 91, ../scss/navV2-mobile.scss */
 #primary-nav {
   color: #4585c3;
   /* text color */
@@ -120,32 +123,32 @@ body:after {
   margin: 40px auto 0;
   width: 300px;
 }
-/* line 97, ../scss/navV2-mobile.scss */
+/* line 99, ../scss/navV2-mobile.scss */
 #primary-nav li {
   display: inline-block;
   text-indent: 50px;
   margin-left: 50px;
   height: 38px;
 }
-/* line 104, ../scss/navV2-mobile.scss */
+/* line 106, ../scss/navV2-mobile.scss */
 #primary-nav li.icon-explore {
   background: url('../images/button-explore.png?1390687046') no-repeat;
   background-position: 0 0;
 }
-/* line 108, ../scss/navV2-mobile.scss */
+/* line 110, ../scss/navV2-mobile.scss */
 #primary-nav li.icon-explore:hover {
   background-position: 0 -42px;
 }
-/* line 113, ../scss/navV2-mobile.scss */
+/* line 115, ../scss/navV2-mobile.scss */
 #primary-nav li.icon-add {
   background: url('../images/button-add.png?1390687047') no-repeat;
 }
-/* line 117, ../scss/navV2-mobile.scss */
+/* line 119, ../scss/navV2-mobile.scss */
 #primary-nav li:first-child {
   margin-left: 0px;
 }
 
-/* line 124, ../scss/navV2-mobile.scss */
+/* line 126, ../scss/navV2-mobile.scss */
 #login-nav {
   margin-right: 70px;
   display: block;
@@ -153,11 +156,11 @@ body:after {
   width: 100%;
   margin-right: 0px;
 }
-/* line 130, ../scss/navV2-mobile.scss */
+/* line 132, ../scss/navV2-mobile.scss */
 #login-nav li {
   margin-right: 0px;
 }
-/* line 133, ../scss/navV2-mobile.scss */
+/* line 135, ../scss/navV2-mobile.scss */
 #login-nav li:first-child {
   background-image: url('../images/icon-person.png?1390687151');
   background-repeat: no-repeat;
@@ -165,12 +168,12 @@ body:after {
   background-position-y: 50%;
   background-size: 8px;
 }
-/* line 144, ../scss/navV2-mobile.scss */
+/* line 146, ../scss/navV2-mobile.scss */
 #login-nav li {
   margin-right: 20px;
 }
 
-/* line 150, ../scss/navV2-mobile.scss */
+/* line 152, ../scss/navV2-mobile.scss */
 #hamburger-button {
   background: url('../images/hamburger-button.png?1399222928');
   width: 45.5px;
@@ -183,7 +186,7 @@ body:after {
   width: 30px;
 }
 
-/* line 160, ../scss/navV2-mobile.scss */
+/* line 162, ../scss/navV2-mobile.scss */
 #logo {
   background: url('../images/tb.us-logo-mobile.png?1390798734');
   width: 31px;
@@ -198,7 +201,7 @@ body:after {
   float: right;
 }
 
-/* line 176, ../scss/navV2-mobile.scss */
+/* line 178, ../scss/navV2-mobile.scss */
 #primary-explore {
   width: 210px;
   height: 37.5px;
@@ -220,7 +223,7 @@ body:after {
   color: #fff;
   font-family: "Myriad Pro", "Arial", sans-serif;
 }
-/* line 188, ../scss/navV2-mobile.scss */
+/* line 190, ../scss/navV2-mobile.scss */
 #primary-explore:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -233,7 +236,7 @@ body:after {
   background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
   background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
 }
-/* line 191, ../scss/navV2-mobile.scss */
+/* line 193, ../scss/navV2-mobile.scss */
 #primary-explore i {
   display: block;
   height: 31px;
@@ -242,12 +245,12 @@ body:after {
   float: left;
   margin: 2px 0 0 10px;
 }
-/* line 202, ../scss/navV2-mobile.scss */
+/* line 204, ../scss/navV2-mobile.scss */
 #primary-explore:hover i {
   background-position: 0 0;
 }
 
-/* line 213, ../scss/navV2-mobile.scss */
+/* line 215, ../scss/navV2-mobile.scss */
 #sub-footer {
   color: #4585c3;
   /* text color */
@@ -260,22 +263,22 @@ body:after {
   background: #ffffff;
   text-decoration: none;
 }
-/* line 223, ../scss/navV2-mobile.scss */
+/* line 225, ../scss/navV2-mobile.scss */
 #sub-footer ul {
   list-style: none;
 }
-/* line 226, ../scss/navV2-mobile.scss */
+/* line 228, ../scss/navV2-mobile.scss */
 #sub-footer ul li {
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
 }
-/* line 233, ../scss/navV2-mobile.scss */
+/* line 235, ../scss/navV2-mobile.scss */
 #sub-footer p {
   text-align: center;
 }
 
-/* line 239, ../scss/navV2-mobile.scss */
+/* line 241, ../scss/navV2-mobile.scss */
 #footer {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -291,24 +294,24 @@ body:after {
   margin: 20px 0 0 0;
   clear: both;
 }
-/* line 247, ../scss/navV2-mobile.scss */
+/* line 249, ../scss/navV2-mobile.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 252, ../scss/navV2-mobile.scss */
+/* line 254, ../scss/navV2-mobile.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 257, ../scss/navV2-mobile.scss */
+/* line 259, ../scss/navV2-mobile.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
-/* line 264, ../scss/navV2-mobile.scss */
+/* line 266, ../scss/navV2-mobile.scss */
 #footer #footer-logout {
   background: url('../images/user-logout-icon.png?1390687159') no-repeat 0;
   text-indent: 13px;
@@ -318,7 +321,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   font-size: 13px;
 }
-/* line 272, ../scss/navV2-mobile.scss */
+/* line 274, ../scss/navV2-mobile.scss */
 #footer #footer-twitter {
   background: url('../images/twitter-cloud.png?1390687081');
   width: 23px;
@@ -326,7 +329,7 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 277, ../scss/navV2-mobile.scss */
+/* line 279, ../scss/navV2-mobile.scss */
 #footer #footer-facebook {
   background: url('../images/facebook-cloud.png?1390687055');
   width: 28px;
@@ -334,7 +337,7 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 282, ../scss/navV2-mobile.scss */
+/* line 284, ../scss/navV2-mobile.scss */
 #footer #footer-linkedin {
   background: url('../images/linkedin-cloud.png?1390687076');
   width: 22px;
@@ -342,13 +345,13 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 288, ../scss/navV2-mobile.scss */
+/* line 290, ../scss/navV2-mobile.scss */
 #footer #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 302, ../scss/navV2-mobile.scss */
+/* line 304, ../scss/navV2-mobile.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -361,7 +364,7 @@ body:after {
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 311, ../scss/navV2-mobile.scss */
+/* line 313, ../scss/navV2-mobile.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
@@ -369,7 +372,7 @@ body:after {
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 315, ../scss/navV2-mobile.scss */
+/* line 317, ../scss/navV2-mobile.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
@@ -382,7 +385,7 @@ body:after {
   font-weight: normal;
   font-size: 16px;
 }
-/* line 326, ../scss/navV2-mobile.scss */
+/* line 328, ../scss/navV2-mobile.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -401,7 +404,7 @@ body:after {
   text-align: center;
   line-height: 45px;
 }
-/* line 332, ../scss/navV2-mobile.scss */
+/* line 334, ../scss/navV2-mobile.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -419,7 +422,7 @@ body:after {
   font-size: 10px;
   font-weight: 100;
 }
-/* line 341, ../scss/navV2-mobile.scss */
+/* line 343, ../scss/navV2-mobile.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
@@ -427,7 +430,7 @@ body:after {
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 346, ../scss/navV2-mobile.scss */
+/* line 348, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
@@ -435,7 +438,7 @@ body:after {
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 350, ../scss/navV2-mobile.scss */
+/* line 352, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
@@ -443,7 +446,7 @@ body:after {
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 355, ../scss/navV2-mobile.scss */
+/* line 357, ../scss/navV2-mobile.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
@@ -451,7 +454,7 @@ body:after {
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 359, ../scss/navV2-mobile.scss */
+/* line 361, ../scss/navV2-mobile.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
@@ -461,7 +464,7 @@ body:after {
   width: 195px;
   height: 60px;
 }
-/* line 364, ../scss/navV2-mobile.scss */
+/* line 366, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
@@ -474,7 +477,7 @@ body:after {
   width: 44px;
   float: left;
 }
-/* line 372, ../scss/navV2-mobile.scss */
+/* line 374, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.blue,
 #logout-overlay .oauths a.blue,
 #join-overlay .oauths a.blue,
@@ -482,7 +485,7 @@ body:after {
 #update-avatar-overlay .oauths a.blue {
   background: url('../images/join-login-social-media-blue.png?1394892046');
 }
-/* line 376, ../scss/navV2-mobile.scss */
+/* line 378, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
@@ -490,7 +493,7 @@ body:after {
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 380, ../scss/navV2-mobile.scss */
+/* line 382, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
@@ -499,7 +502,7 @@ body:after {
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 386, ../scss/navV2-mobile.scss */
+/* line 388, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
@@ -508,7 +511,7 @@ body:after {
   width: 50px;
   background-position: -78px 0;
 }
-/* line 394, ../scss/navV2-mobile.scss */
+/* line 396, ../scss/navV2-mobile.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
@@ -517,7 +520,7 @@ body:after {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 401, ../scss/navV2-mobile.scss */
+/* line 403, ../scss/navV2-mobile.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -543,7 +546,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 409, ../scss/navV2-mobile.scss */
+/* line 411, ../scss/navV2-mobile.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -569,7 +572,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 416, ../scss/navV2-mobile.scss */
+/* line 418, ../scss/navV2-mobile.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
@@ -578,7 +581,7 @@ body:after {
   font-size: 16px;
 }
 
-/* line 422, ../scss/navV2-mobile.scss */
+/* line 424, ../scss/navV2-mobile.scss */
 #dislike-overlay {
   width: 250px;
   background-color: #ffffff;
@@ -587,18 +590,18 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   text-align: center;
 }
-/* line 427, ../scss/navV2-mobile.scss */
+/* line 429, ../scss/navV2-mobile.scss */
 #dislike-overlay img {
   margin: 30px 0 0;
 }
-/* line 430, ../scss/navV2-mobile.scss */
+/* line 432, ../scss/navV2-mobile.scss */
 #dislike-overlay p {
   font-style: italic;
   font-size: 12px;
   width: 200px;
   margin: 0 auto 20px;
 }
-/* line 437, ../scss/navV2-mobile.scss */
+/* line 439, ../scss/navV2-mobile.scss */
 #dislike-overlay h6 {
   color: #6d6d6d;
   /* text color */
@@ -608,7 +611,7 @@ body:after {
   font-size: 12px;
   margin: 10px 0 0;
 }
-/* line 445, ../scss/navV2-mobile.scss */
+/* line 447, ../scss/navV2-mobile.scss */
 #dislike-overlay a {
   width: 100px;
   height: 30px;
@@ -618,18 +621,18 @@ body:after {
   line-height: 30px;
   color: #FFFFFF;
 }
-/* line 454, ../scss/navV2-mobile.scss */
+/* line 456, ../scss/navV2-mobile.scss */
 #dislike-overlay a:visited {
   color: #FFFFFF;
 }
 
-/* line 462, ../scss/navV2-mobile.scss */
+/* line 464, ../scss/navV2-mobile.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 468, ../scss/navV2-mobile.scss */
+/* line 470, ../scss/navV2-mobile.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -639,18 +642,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 477, ../scss/navV2-mobile.scss */
+/* line 479, ../scss/navV2-mobile.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 482, ../scss/navV2-mobile.scss */
+/* line 484, ../scss/navV2-mobile.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 486, ../scss/navV2-mobile.scss */
+/* line 488, ../scss/navV2-mobile.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -671,7 +674,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 507, ../scss/navV2-mobile.scss */
+/* line 509, ../scss/navV2-mobile.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -698,17 +701,17 @@ button.mfp-close:active {
   margin-bottom: 10px;
   width: 100%;
 }
-/* line 527, ../scss/navV2-mobile.scss */
+/* line 529, ../scss/navV2-mobile.scss */
 .error-box .details,
 .message-box .details {
   font-family: "Museo Sans", sans-serif;
 }
-/* line 531, ../scss/navV2-mobile.scss */
+/* line 533, ../scss/navV2-mobile.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 535, ../scss/navV2-mobile.scss */
+/* line 537, ../scss/navV2-mobile.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -716,14 +719,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 541, ../scss/navV2-mobile.scss */
+/* line 543, ../scss/navV2-mobile.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 552, ../scss/navV2-mobile.scss */
+/* line 554, ../scss/navV2-mobile.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
