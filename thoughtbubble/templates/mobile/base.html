@@ -194,7 +194,10 @@
             element: document.getElementById('wrapper'),
             disable: 'right'
         });
-
+        $('#hamburger-button').on("click", function(e) {
+            e.preventDefault();
+            snapper.open('left');
+        });
     })
 </script>
 </html>
