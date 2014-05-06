@@ -157,7 +157,7 @@ class Idea(models.Model):
     def get_longitude(self):
         if self.content_type.name == 'place':
             place = self.content_object
-            return place.get_center()[0]
+            return place.get_center()['coordinates'][0]
 
         else: # its a location
             location = self.content_object
@@ -166,7 +166,7 @@ class Idea(models.Model):
     def get_latitude(self):
         if self.content_type.name == 'place':
             place = self.content_object
-            return place.get_center()[1]
+            return place.get_center()['coordinates'][1]
 
         else: # its a location
             location = self.content_object
