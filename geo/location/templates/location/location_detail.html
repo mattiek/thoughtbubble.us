@@ -70,9 +70,9 @@
     {% if partners %}
         <div class="large-12 columns small-heading">partners</div>
         <div id="partners">
-            <img src="" alt=""/>
-            <img src="" alt=""/>
-            <img src="" alt=""/>
+            {% for partner in partners %}
+                <a href="{{ partner.link }}"><img src="{{ partner.img.url }}" alt=""/></a>
+            {% endfor %}
         </div>
     {% endif %}
     </div>
