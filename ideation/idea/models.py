@@ -183,7 +183,7 @@ class Idea(models.Model):
             """ % (self.get_idea_location_name(),),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "%s %s" % (who_wants,self.idea.name.lower()),
+            'share_name': "%s %s" % (who_wants,self.name.lower()),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
