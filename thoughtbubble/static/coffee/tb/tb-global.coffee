@@ -49,5 +49,85 @@ $( document ).on "click", ".dislike", (e) ->
   e.preventDefault()
   $.magnificPopup.open
     items:
-      src: '#login-overlay',
+      src: '#dislike-overlay',
       type: 'inline'
+    callbacks:
+      open: () ->
+        playDinoSound()
+
+
+$(document).on("click", "#dino_comment", (e) ->
+  $.magnificPopup.close()
+)
+
+window.addEventListener('load', init, false)
+
+init = ->
+  try
+    window.dinoSoundBuffer = null;
+
+#    // Fix up prefixing
+    window.AudioContext = window.AudioContext || window.webkitAudioContext
+    context = new AudioContext()
+
+    onError = (e) ->
+      console.log(e)
+
+    loadDinoSound = (url) ->
+      request = new XMLHttpRequest()
+      request.open('GET', url, true)
+      request.responseType = 'arraybuffer'
+
+#      // Decode asynchronously
+      request.onload = () ->
+        context.decodeAudioData(request.response, (buffer) ->
+          window.dinoSoundBuffer = buffer
+        , onError)
+      request.send()
+    loadDinoSound(dinoSoundURL)
+
+  catch e
+    console.log 'no sound'
+
+playDinoSound ->
+  buffer = window.dinoSoundBuffer
+  source = context.createBufferSource()
+  source.buffer = buffer
+  source.connect(context.destination)
+  source.start(0)
+
+
+$('.share-fb').on('click', (e) ->
+  e.preventDefault()
+  fbDataShareCopy = this.getAttribute("data-share-copy")
+  fbDataShareImage = this.getAttribute("data-share-image")
+  fbDataShareCaption = this.getAttribute("data-share-caption")
+  fbDataShareName = this.getAttribute("data-share-name")
+  fbDataShareLink = this.getAttribute("data-share-link")
+
+  if (window.location.protocol == 'https:')
+    fbDataShareImage = fbDataShareImage.replace('http:','https:')
+
+  FB.ui(
+    link : fbDataShareLink
+    method:"feed"
+    name: fbDataShareName
+    caption:  fbDataShareCaption
+    description: fbDataShareCopy
+    display:"popup"
+    picture: fbDataShareImage
+  )
+)
+
+$('.image-popup-no-margins').magnificPopup(
+  type: 'image'
+  closeOnContentClick: true
+  closeBtnInside: false
+  fixedContentPos: true
+  mainClass: 'mfp-no-margins mfp-with-zoom'
+  image:
+    verticalFit: true
+  zoom:
+    enabled: true
+    duration: 300
+)
