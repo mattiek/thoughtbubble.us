@@ -794,29 +794,34 @@ form .row .row.second-row {
   margin: 30px 0;
 }
 
-/* line 118, ../../scss/organization/detail.scss */
-#header .sharing {
-  margin: 5px 0px 0px 0px;
+/* line 117, ../../scss/organization/detail.scss */
+#header {
+  position: relative;
 }
-/* line 123, ../../scss/organization/detail.scss */
+/* line 119, ../../scss/organization/detail.scss */
+#header .sharing {
+  position: absolute;
+  right: 20px;
+}
+/* line 126, ../../scss/organization/detail.scss */
 #header .sharing li span {
   display: none;
 }
-/* line 127, ../../scss/organization/detail.scss */
+/* line 130, ../../scss/organization/detail.scss */
 #header .sharing li a.share-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 18px;
 }
-/* line 133, ../../scss/organization/detail.scss */
+/* line 136, ../../scss/organization/detail.scss */
 #header .sharing li a.share-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 18px;
 }
-/* line 139, ../../scss/organization/detail.scss */
+/* line 142, ../../scss/organization/detail.scss */
 #header .sharing li a.share-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
@@ -824,32 +829,32 @@ form .row .row.second-row {
   height: 18px;
 }
 
-/* line 150, ../../scss/organization/detail.scss */
+/* line 153, ../../scss/organization/detail.scss */
 .sharing {
   float: right;
 }
 
-/* line 154, ../../scss/organization/detail.scss */
+/* line 157, ../../scss/organization/detail.scss */
 .news-label {
   clear: both;
 }
 
-/* line 158, ../../scss/organization/detail.scss */
+/* line 161, ../../scss/organization/detail.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 162, ../../scss/organization/detail.scss */
+/* line 165, ../../scss/organization/detail.scss */
 #organization-logo {
   text-align: center;
   margin-bottom: 10px;
 }
-/* line 166, ../../scss/organization/detail.scss */
+/* line 169, ../../scss/organization/detail.scss */
 #organization-logo img {
   max-width: 300px;
 }
 
-/* line 171, ../../scss/organization/detail.scss */
+/* line 174, ../../scss/organization/detail.scss */
 #org-agg {
   font-size: 16px;
   color: #53b8d1;
@@ -858,12 +863,12 @@ form .row .row.second-row {
   text-align: center;
   margin: 20px auto;
 }
-/* line 177, ../../scss/organization/detail.scss */
+/* line 180, ../../scss/organization/detail.scss */
 #org-agg b {
   color: #f3812b;
   font-weight: bold;
 }
-/* line 182, ../../scss/organization/detail.scss */
+/* line 185, ../../scss/organization/detail.scss */
 #org-agg i {
   width: 12px;
   height: 10px;
@@ -874,12 +879,12 @@ form .row .row.second-row {
   display: block;
   float: left;
 }
-/* line 193, ../../scss/organization/detail.scss */
+/* line 196, ../../scss/organization/detail.scss */
 #org-agg li {
   display: inline-block;
   margin-left: 20px;
 }
-/* line 197, ../../scss/organization/detail.scss */
+/* line 200, ../../scss/organization/detail.scss */
 #org-agg li:first-child {
   margin-left: 0px;
 }
