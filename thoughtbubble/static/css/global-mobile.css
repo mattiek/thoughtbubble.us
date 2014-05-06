@@ -344,13 +344,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
+  font-size: 16px;
+  border-left: 1px solid #4585c3;
+  margin: 0;
+  margin-left: 10px;
+  padding-left: 10px;
 }
-/* line 235, ../scss/navV2-mobile.scss */
+/* line 239, ../scss/navV2-mobile.scss */
+#sub-footer ul li:first-child, #sub-footer ul li.second {
+  border-left: none;
+  padding-left: 0px;
+}
+/* line 245, ../scss/navV2-mobile.scss */
+#sub-footer ul br {
+  line-height: 30px;
+  display: block;
+}
+/* line 251, ../scss/navV2-mobile.scss */
 #sub-footer p {
   text-align: center;
 }
 
-/* line 241, ../scss/navV2-mobile.scss */
+/* line 257, ../scss/navV2-mobile.scss */
 #footer {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -366,24 +381,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 20px 0 0 0;
   clear: both;
 }
-/* line 249, ../scss/navV2-mobile.scss */
+/* line 265, ../scss/navV2-mobile.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 254, ../scss/navV2-mobile.scss */
+/* line 270, ../scss/navV2-mobile.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 259, ../scss/navV2-mobile.scss */
+/* line 275, ../scss/navV2-mobile.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
-/* line 266, ../scss/navV2-mobile.scss */
+/* line 282, ../scss/navV2-mobile.scss */
 #footer #footer-logout {
   background: url('../images/user-logout-icon.png?1390687159') no-repeat 0;
   text-indent: 13px;
@@ -393,7 +408,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "Museo Sans", sans-serif;
   font-size: 13px;
 }
-/* line 274, ../scss/navV2-mobile.scss */
+/* line 290, ../scss/navV2-mobile.scss */
 #footer #footer-twitter {
   background: url('../images/twitter-cloud.png?1390687081');
   width: 23px;
@@ -401,7 +416,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   background-repeat: no-repeat;
 }
-/* line 279, ../scss/navV2-mobile.scss */
+/* line 295, ../scss/navV2-mobile.scss */
 #footer #footer-facebook {
   background: url('../images/facebook-cloud.png?1390687055');
   width: 28px;
@@ -409,7 +424,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   background-repeat: no-repeat;
 }
-/* line 284, ../scss/navV2-mobile.scss */
+/* line 300, ../scss/navV2-mobile.scss */
 #footer #footer-linkedin {
   background: url('../images/linkedin-cloud.png?1390687076');
   width: 22px;
@@ -417,13 +432,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
   background-repeat: no-repeat;
 }
-/* line 290, ../scss/navV2-mobile.scss */
+/* line 306, ../scss/navV2-mobile.scss */
 #footer #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 304, ../scss/navV2-mobile.scss */
+/* line 320, ../scss/navV2-mobile.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -436,7 +451,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 313, ../scss/navV2-mobile.scss */
+/* line 329, ../scss/navV2-mobile.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
@@ -444,7 +459,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 317, ../scss/navV2-mobile.scss */
+/* line 333, ../scss/navV2-mobile.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
@@ -457,7 +472,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-weight: normal;
   font-size: 16px;
 }
-/* line 328, ../scss/navV2-mobile.scss */
+/* line 344, ../scss/navV2-mobile.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -476,7 +491,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   text-align: center;
   line-height: 45px;
 }
-/* line 334, ../scss/navV2-mobile.scss */
+/* line 350, ../scss/navV2-mobile.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -494,7 +509,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 10px;
   font-weight: 100;
 }
-/* line 343, ../scss/navV2-mobile.scss */
+/* line 359, ../scss/navV2-mobile.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
@@ -502,7 +517,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 348, ../scss/navV2-mobile.scss */
+/* line 364, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
@@ -510,7 +525,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 352, ../scss/navV2-mobile.scss */
+/* line 368, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
@@ -518,7 +533,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 357, ../scss/navV2-mobile.scss */
+/* line 373, ../scss/navV2-mobile.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
@@ -526,7 +541,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 361, ../scss/navV2-mobile.scss */
+/* line 377, ../scss/navV2-mobile.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
@@ -536,7 +551,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 195px;
   height: 60px;
 }
-/* line 366, ../scss/navV2-mobile.scss */
+/* line 382, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
@@ -549,7 +564,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 44px;
   float: left;
 }
-/* line 374, ../scss/navV2-mobile.scss */
+/* line 390, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.blue,
 #logout-overlay .oauths a.blue,
 #join-overlay .oauths a.blue,
@@ -557,7 +572,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay .oauths a.blue {
   background: url('../images/join-login-social-media-blue.png?1394892046');
 }
-/* line 378, ../scss/navV2-mobile.scss */
+/* line 394, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
@@ -565,7 +580,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 382, ../scss/navV2-mobile.scss */
+/* line 398, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
@@ -574,7 +589,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 388, ../scss/navV2-mobile.scss */
+/* line 404, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
@@ -583,7 +598,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 50px;
   background-position: -78px 0;
 }
-/* line 396, ../scss/navV2-mobile.scss */
+/* line 412, ../scss/navV2-mobile.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
@@ -592,7 +607,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 403, ../scss/navV2-mobile.scss */
+/* line 419, ../scss/navV2-mobile.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -618,7 +633,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 411, ../scss/navV2-mobile.scss */
+/* line 427, ../scss/navV2-mobile.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -644,7 +659,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 418, ../scss/navV2-mobile.scss */
+/* line 434, ../scss/navV2-mobile.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
@@ -653,7 +668,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 16px;
 }
 
-/* line 424, ../scss/navV2-mobile.scss */
+/* line 440, ../scss/navV2-mobile.scss */
 #dislike-overlay {
   width: 250px;
   background-color: #ffffff;
@@ -662,18 +677,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-family: "Museo Sans", sans-serif;
   text-align: center;
 }
-/* line 429, ../scss/navV2-mobile.scss */
+/* line 445, ../scss/navV2-mobile.scss */
 #dislike-overlay img {
   margin: 30px 0 0;
 }
-/* line 432, ../scss/navV2-mobile.scss */
+/* line 448, ../scss/navV2-mobile.scss */
 #dislike-overlay p {
   font-style: italic;
   font-size: 12px;
   width: 200px;
   margin: 0 auto 20px;
 }
-/* line 439, ../scss/navV2-mobile.scss */
+/* line 455, ../scss/navV2-mobile.scss */
 #dislike-overlay h6 {
   color: #6d6d6d;
   /* text color */
@@ -683,7 +698,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 12px;
   margin: 10px 0 0;
 }
-/* line 447, ../scss/navV2-mobile.scss */
+/* line 463, ../scss/navV2-mobile.scss */
 #dislike-overlay a {
   width: 100px;
   height: 30px;
@@ -693,18 +708,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 30px;
   color: #FFFFFF;
 }
-/* line 456, ../scss/navV2-mobile.scss */
+/* line 472, ../scss/navV2-mobile.scss */
 #dislike-overlay a:visited {
   color: #FFFFFF;
 }
 
-/* line 464, ../scss/navV2-mobile.scss */
+/* line 480, ../scss/navV2-mobile.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 470, ../scss/navV2-mobile.scss */
+/* line 486, ../scss/navV2-mobile.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -714,18 +729,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin: 20px auto;
 }
 
-/* line 479, ../scss/navV2-mobile.scss */
+/* line 495, ../scss/navV2-mobile.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 484, ../scss/navV2-mobile.scss */
+/* line 500, ../scss/navV2-mobile.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 488, ../scss/navV2-mobile.scss */
+/* line 504, ../scss/navV2-mobile.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -746,7 +761,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 509, ../scss/navV2-mobile.scss */
+/* line 525, ../scss/navV2-mobile.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -773,17 +788,17 @@ button.mfp-close:active {
   margin-bottom: 10px;
   width: 100%;
 }
-/* line 529, ../scss/navV2-mobile.scss */
+/* line 545, ../scss/navV2-mobile.scss */
 .error-box .details,
 .message-box .details {
   font-family: "Museo Sans", sans-serif;
 }
-/* line 533, ../scss/navV2-mobile.scss */
+/* line 549, ../scss/navV2-mobile.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 537, ../scss/navV2-mobile.scss */
+/* line 553, ../scss/navV2-mobile.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -791,14 +806,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 543, ../scss/navV2-mobile.scss */
+/* line 559, ../scss/navV2-mobile.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 554, ../scss/navV2-mobile.scss */
+/* line 570, ../scss/navV2-mobile.scss */
 .message-box {
   font-size: 14px;
   position: absolute;

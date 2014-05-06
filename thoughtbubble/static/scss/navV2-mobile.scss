@@ -229,6 +229,22 @@
       display: inline-block;
       margin-right: 25px;
       line-height: 25px;
+      font-size: 16px;
+      border-left: 1px solid $tb_link_blue;
+      margin: 0;
+      margin-left:10px;
+      padding-left: 10px;
+
+      &:first-child,
+      &.second {
+        border-left: none;
+        padding-left:0px;
+      }
+    }
+
+    br {
+      line-height: 30px;
+      display: block;
     }
   }
 
