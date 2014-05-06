@@ -801,7 +801,7 @@ form .row .row.second-row {
 /* line 119, ../../scss/organization/detail.scss */
 #header .sharing {
   position: absolute;
-  top: 5px;
+  margin-top: 5px;
   right: 20px;
 }
 /* line 127, ../../scss/organization/detail.scss */
