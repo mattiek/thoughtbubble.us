@@ -294,7 +294,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: linear-gradient(to top, #e57f4f 0%, #f9a533 100%);
   color: #fff;
   font-family: "Myriad Pro", "Arial", sans-serif;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 /* line 190, ../scss/navV2-mobile.scss */
 #primary-explore:hover {
