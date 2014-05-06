@@ -78,6 +78,7 @@
     </div>
 
 {#    Ideas #}
+    {% include 'idea/idea_filter.html' %}
     {% for idea in ideas %}
             {% include 'idea/idea_for_list.html' %}
     {% endfor %}
