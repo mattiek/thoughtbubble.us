@@ -13,6 +13,8 @@ from rest_framework import generics
 from ideation.idea.models import Idea
 from thoughtbubble.utils import url_safe
 
+from partner.models import Partner
+
 from vanilla import ListView, DetailView, CreateView, UpdateView
 
 
@@ -55,6 +57,7 @@ class LocationDetail(DetailView):
 
 
         context['pictures'] = pics
+        context['partners'] = location.partners.all()
         return context
 
     def get_template_names(self):
