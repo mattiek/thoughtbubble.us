@@ -45,6 +45,13 @@ $( document ).on  "click", "[data-view=logged-out] .login-required", (e) ->
       type: 'inline'
 
 
+playDinoSound ->
+  buffer = window.dinoSoundBuffer
+  source = context.createBufferSource()
+  source.buffer = buffer
+  source.connect(context.destination)
+  source.start(0)
+
 $( document ).on "click", ".dislike", (e) ->
   e.preventDefault()
   $.magnificPopup.open
@@ -88,13 +95,6 @@ init = ->
 
   catch e
     console.log 'no sound'
-
-playDinoSound ->
-  buffer = window.dinoSoundBuffer
-  source = context.createBufferSource()
-  source.buffer = buffer
-  source.connect(context.destination)
-  source.start(0)
 
 
 $('.share-fb').on('click', (e) ->

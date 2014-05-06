@@ -59,6 +59,15 @@ $(document).on("click", "[data-view=logged-out] .login-required", function(e) {
   });
 });
 
+playDinoSound(function() {
+  var buffer, source;
+  buffer = window.dinoSoundBuffer;
+  source = context.createBufferSource();
+  source.buffer = buffer;
+  source.connect(context.destination);
+  return source.start(0);
+});
+
 $(document).on("click", ".dislike", function(e) {
   e.preventDefault();
   return $.magnificPopup.open({
@@ -107,15 +116,6 @@ init = function() {
     return console.log('no sound');
   }
 };
-
-playDinoSound(function() {
-  var buffer, source;
-  buffer = window.dinoSoundBuffer;
-  source = context.createBufferSource();
-  source.buffer = buffer;
-  source.connect(context.destination);
-  return source.start(0);
-});
 
 $('.share-fb').on('click', function(e) {
   var fbDataShareCaption, fbDataShareCopy, fbDataShareImage, fbDataShareLink, fbDataShareName;
