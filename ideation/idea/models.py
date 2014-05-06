@@ -175,25 +175,34 @@ class Idea(models.Model):
 
 
     def get_fb_sharing(self):
+        who_wants = "I want"
+        if self.idea.support_count() > 1:
+            who_wants = "We want"
         return {
             'share_copy': """%s
-            %s""" % (self.get_idea_location_name(), self.name,),
+            """ % (self.get_idea_location_name(),),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "I want...",
+            'share_name': "%s %s" % (who_wants,self.idea.name.lower()),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
     def get_linkedin_sharing(self):
+        who_wants = "I want"
+        if self.idea.support_count() > 1:
+            who_wants = "We want"
         return {
-            'summary': "Check out this idea!",
-            'title': "%s" % self.name,
+            'summary': "%s %s in %s. Let's make this happen!" % (who_wants, self.name, self.get_idea_location_name()),
+            'title': "%s %s in %s" % (who_wants, self.name, self.get_idea_location_name()),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
     def get_twit_sharing(self):
+        who_wants = "I want"
+        if self.idea.support_count() > 1:
+            who_wants = "We want"
         return {
-            'text': "Check out the idea %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
+            'text': "%s %s in %s. Let's make this happen! %s" % (who_wants, self.name, self.get_idea_location_name(), 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
     def get_properties(self):
