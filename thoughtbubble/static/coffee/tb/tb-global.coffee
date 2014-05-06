@@ -45,7 +45,7 @@ $( document ).on  "click", "[data-view=logged-out] .login-required", (e) ->
       type: 'inline'
 
 
-playDinoSound ->
+playDinoSound  = ->
   buffer = window.dinoSoundBuffer
   source = context.createBufferSource()
   source.buffer = buffer
