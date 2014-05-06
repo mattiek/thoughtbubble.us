@@ -243,23 +243,23 @@ class Organization(models.Model):
 
     def get_fb_sharing(self):
         return {
-            'share_copy': "Check out this organization.",
+            'share_copy': "Check out what people are saying about %s and join the conversation!" % (self.title),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "%s" % self.title,
+            'share_name': "Check out what people are saying about %s and join the conversation! %s" % (self.title),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
         }
 
     def get_linkedin_sharing(self):
         return {
-            'summary': "Check out this organization.",
+            'summary': "%s is on the thoughtbubble.us network, are you?" % self.title,
             'title': "%s" % self.title,
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
     def get_twit_sharing(self):
         return {
-            'text': "Check out %s on thoughtbubble.us! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())
+            'text': "Check out what people are saying about %s and join the conversation! %s" % (self.title, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
     def get_member_count(self):

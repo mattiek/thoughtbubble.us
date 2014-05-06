@@ -186,7 +186,7 @@ class Location(models.Model):
 
     def get_fb_sharing(self):
         return {
-            'share_copy': "Check out this location.",
+            'share_copy': "See what's happening at %s and join the conversation!" % (self.name),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
             'share_name': "%s" % self.name,
@@ -195,14 +195,14 @@ class Location(models.Model):
 
     def get_linkedin_sharing(self):
         return {
-            'summary': "Check out this location.",
+            'summary': "See what's happening at %s and join the conversation!" % (self.name),
             'title': "%s" % self.name,
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
     def get_twit_sharing(self):
         return {
-            'text': "Check out %s on thoughtbubble.us! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
+            'text': "See what's happening at %s and join the conversation! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
 
     @property
