@@ -55,9 +55,11 @@
 #cta {
   color: #7b7b7b; /* text color */
   @include museo;
-  font-size: 10px;
+  font-size: 15px;
   text-align: center;
-  margin: 20px 0;
+  margin: 20px auto;
+  width: 430px;
+  line-height: 18px;
 }
 
 .actions {
