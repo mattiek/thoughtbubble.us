@@ -176,7 +176,7 @@ class Idea(models.Model):
 
     def get_fb_sharing(self):
         who_wants = "I want"
-        if self.idea.support_count() > 1:
+        if self.support_count() > 1:
             who_wants = "We want"
         return {
             'share_copy': """%s
@@ -189,7 +189,7 @@ class Idea(models.Model):
 
     def get_linkedin_sharing(self):
         who_wants = "I want"
-        if self.idea.support_count() > 1:
+        if self.support_count() > 1:
             who_wants = "We want"
         return {
             'summary': "%s %s in %s. Let's make this happen!" % (who_wants, self.name, self.get_idea_location_name()),
@@ -199,7 +199,7 @@ class Idea(models.Model):
 
     def get_twit_sharing(self):
         who_wants = "I want"
-        if self.idea.support_count() > 1:
+        if self.support_count() > 1:
             who_wants = "We want"
         return {
             'text': "%s %s in %s. Let's make this happen! %s" % (who_wants, self.name, self.get_idea_location_name(), 'http://thoughtbubble.us' + self.get_absolute_url())
