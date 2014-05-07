@@ -87,7 +87,9 @@ $(document).on("click", "#dino_comment", function(e) {
   return $.magnificPopup.close();
 });
 
-window.addEventListener('load', init, false);
+$(document).ready(function() {
+  return init();
+});
 
 init = function() {
   var e, loadDinoSound, onError;

@@ -66,7 +66,10 @@ $(document).on("click", "#dino_comment", (e) ->
   $.magnificPopup.close()
 )
 
-window.addEventListener('load', init, false)
+#window.addEventListener('load', init, false)
+
+$(document).ready ->
+  init()
 
 init = ->
   try
