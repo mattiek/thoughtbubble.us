@@ -179,10 +179,10 @@ class Idea(models.Model):
         if self.support_count() > 1:
             who_wants = "We want"
         return {
-            'share_copy': "%s %s in %s. Let's make this happen!" % (who_wants, self.name, self.get_idea_location_name()),
+            'share_copy': "Support my idea at thoughtbubble.us!",
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "%s %s" % (who_wants,self.name.lower()),
+            'share_name': "%s %s in %s" % (who_wants, self.name, self.get_idea_location_name()),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
             }
 
