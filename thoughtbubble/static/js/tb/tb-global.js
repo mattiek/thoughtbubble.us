@@ -59,14 +59,12 @@ $(document).on("click", "[data-view=logged-out] .login-required", function(e) {
   });
 });
 
-context;
-
 playDinoSound = function() {
   var buffer, source;
   buffer = window.dinoSoundBuffer;
-  source = context.createBufferSource();
+  source = window.context.createBufferSource();
   source.buffer = buffer;
-  source.connect(context.destination);
+  source.connect(window.context.destination);
   return source.start(0);
 };
 
@@ -92,11 +90,11 @@ $(document).on("click", "#dino_comment", function(e) {
 window.addEventListener('load', init, false);
 
 init = function() {
-  var context, e, loadDinoSound, onError;
+  var e, loadDinoSound, onError;
   try {
     window.dinoSoundBuffer = null;
     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-    context = new AudioContext();
+    window.context = new AudioContext();
     onError = function(e) {
       return console.log(e);
     };
@@ -106,7 +104,7 @@ init = function() {
       request.open('GET', url, true);
       request.responseType = 'arraybuffer';
       request.onload = function() {
-        return context.decodeAudioData(request.response, function(buffer) {
+        return window.context.decodeAudioData(request.response, function(buffer) {
           return window.dinoSoundBuffer = buffer;
         }, onError);
       };

@@ -44,13 +44,11 @@ $( document ).on  "click", "[data-view=logged-out] .login-required", (e) ->
       src: '#login-overlay',
       type: 'inline'
 
-context
-
 playDinoSound  = ->
   buffer = window.dinoSoundBuffer
-  source = context.createBufferSource()
+  source = window.context.createBufferSource()
   source.buffer = buffer
-  source.connect(context.destination)
+  source.connect(window.context.destination)
   source.start(0)
 
 $( document ).on "click", ".dislike", (e) ->
@@ -76,7 +74,7 @@ init = ->
 
 #    // Fix up prefixing
     window.AudioContext = window.AudioContext || window.webkitAudioContext
-    context = new AudioContext()
+    window.context = new AudioContext()
 
     onError = (e) ->
       console.log(e)
@@ -88,7 +86,7 @@ init = ->
 
 #      // Decode asynchronously
       request.onload = () ->
-        context.decodeAudioData(request.response, (buffer) ->
+        window.context.decodeAudioData(request.response, (buffer) ->
           window.dinoSoundBuffer = buffer
         , onError)
       request.send()
