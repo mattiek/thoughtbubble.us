@@ -44,6 +44,7 @@ $( document ).on  "click", "[data-view=logged-out] .login-required", (e) ->
       src: '#login-overlay',
       type: 'inline'
 
+context
 
 playDinoSound  = ->
   buffer = window.dinoSoundBuffer

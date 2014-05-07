@@ -59,6 +59,8 @@ $(document).on("click", "[data-view=logged-out] .login-required", function(e) {
   });
 });
 
+context;
+
 playDinoSound = function() {
   var buffer, source;
   buffer = window.dinoSoundBuffer;
