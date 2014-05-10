@@ -1,6 +1,7 @@
 @import "compass";
 @import "compass/utilities/sprites";
 @import "directional/*.png";
+@import "eai/*.png";
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
@@ -162,37 +163,48 @@ body {
 
 /// PRIMARY EXPLORE BUTTON
 #primary-explore {
-
-  width: 210px;
-  height: 75px *.5;
-  line-height: 75px *.5;
-  font-size: 31px * .5;
-  margin: 44px auto 0;
-  text-indent: 5px;
-
-  @include orange-gradient-button-explore;
-
-
-  &:hover {
-   @include orange-gradient-button-hover;
-  }
-  i {
+  @include eai-sprite(eai-button);
+    width: 181px;
+    height: 34px;
     display: block;
-    height: directional-sprite-height(normal);
-    width: directional-sprite-width(normal);
-    @include directional-sprite(normal);
-    float: left;
-    margin: 2px 0 0 10px;
+    margin: 44px auto 0;
 
-  }
-
-  &:hover {
-    i {
-      @include directional-sprite(hover);
+    &:hover {
+      @include eai-sprite(eai-button-hover);
     }
-  }
-
 }
+//#primary-explore {
+//
+//  width: 210px;
+//  height: 75px *.5;
+//  line-height: 75px *.5;
+//  font-size: 31px * .5;
+//  margin: 44px auto 0;
+//  text-indent: 5px;
+//
+//  @include orange-gradient-button-explore;
+//
+//
+//  &:hover {
+//   @include orange-gradient-button-hover;
+//  }
+//  i {
+//    display: block;
+//    height: directional-sprite-height(normal);
+//    width: directional-sprite-width(normal);
+//    @include directional-sprite(normal);
+//    float: left;
+//    margin: 2px 0 0 10px;
+//
+//  }
+//
+//  &:hover {
+//    i {
+//      @include directional-sprite(hover);
+//    }
+//  }
+//
+//}
 
 
 

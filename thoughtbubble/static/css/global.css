@@ -71,8 +71,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* line 50, directional/*.png */
-.directional-sprite, #primary-explore i, #primary-explore:hover i {
+.directional-sprite {
   background: url('../images/directional-sc2dbe3af58.png') no-repeat;
+}
+
+/* line 50, eai/*.png */
+.eai-sprite, #primary-explore, #primary-explore:hover {
+  background: url('../images/eai-s1228f0687c.png') no-repeat;
 }
 
 /* line 2, ../scss/neat/grid/_grid.scss */
@@ -100,7 +105,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-top: 20px;
 }
 
-/* line 11, ../scss/navV2.scss */
+/* line 12, ../scss/navV2.scss */
 body {
   *zoom: 1;
   max-width: 680em;
@@ -119,7 +124,7 @@ body:after {
   clear: both;
 }
 
-/* line 17, ../scss/navV2.scss */
+/* line 18, ../scss/navV2.scss */
 #toprule {
   position: absolute;
   width: 100%;
@@ -128,25 +133,25 @@ body:after {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 17, ../scss/navV2.scss */
+  /* line 18, ../scss/navV2.scss */
   #toprule {
     min-width: 320px;
   }
 }
 
-/* line 33, ../scss/navV2.scss */
+/* line 34, ../scss/navV2.scss */
 #home #illustration {
   width: 930px;
   background: url('../images/thoughtbubble-illustration.jpg?1390687056') no-repeat no-repeat;
   height: 695px;
   margin: 0 auto;
 }
-/* line 40, ../scss/navV2.scss */
+/* line 41, ../scss/navV2.scss */
 #home #footer {
   margin: -8px 0 0 0;
 }
 
-/* line 51, ../scss/navV2.scss */
+/* line 52, ../scss/navV2.scss */
 #nav,
 #login-nav {
   color: #4585c3;
@@ -157,43 +162,43 @@ body:after {
   list-style-type: none;
   float: right;
 }
-/* line 59, ../scss/navV2.scss */
+/* line 60, ../scss/navV2.scss */
 #nav a,
 #login-nav a {
   text-decoration: none;
 }
-/* line 63, ../scss/navV2.scss */
+/* line 64, ../scss/navV2.scss */
 #nav li,
 #login-nav li {
   display: inline-block;
   margin-top: 75px;
 }
 @media screen and (max-width: 480px) {
-  /* line 51, ../scss/navV2.scss */
+  /* line 52, ../scss/navV2.scss */
   #nav,
   #login-nav {
     font-size: 12px;
     margin-top: 0px;
   }
-  /* line 74, ../scss/navV2.scss */
+  /* line 75, ../scss/navV2.scss */
   #nav li,
   #login-nav li {
     margin-top: 0px;
   }
 }
 
-/* line 81, ../scss/navV2.scss */
+/* line 82, ../scss/navV2.scss */
 #nav li {
   margin-right: 22px;
 }
 @media screen and (max-width: 480px) {
-  /* line 80, ../scss/navV2.scss */
+  /* line 81, ../scss/navV2.scss */
   #nav {
     margin-top: 12px;
   }
 }
 
-/* line 90, ../scss/navV2.scss */
+/* line 91, ../scss/navV2.scss */
 #primary-nav {
   color: #4585c3;
   /* text color */
@@ -204,41 +209,41 @@ body:after {
   margin: 40px auto 0;
   width: 300px;
 }
-/* line 98, ../scss/navV2.scss */
+/* line 99, ../scss/navV2.scss */
 #primary-nav li {
   display: inline-block;
   text-indent: 50px;
   margin-left: 50px;
   height: 38px;
 }
-/* line 105, ../scss/navV2.scss */
+/* line 106, ../scss/navV2.scss */
 #primary-nav li.icon-explore {
   background: url('../images/button-explore.png?1390687046') no-repeat;
   background-position: 0 0;
 }
-/* line 109, ../scss/navV2.scss */
+/* line 110, ../scss/navV2.scss */
 #primary-nav li.icon-explore:hover {
   background-position: 0 -42px;
 }
-/* line 114, ../scss/navV2.scss */
+/* line 115, ../scss/navV2.scss */
 #primary-nav li.icon-add {
   background: url('../images/button-add.png?1390687047') no-repeat;
 }
-/* line 118, ../scss/navV2.scss */
+/* line 119, ../scss/navV2.scss */
 #primary-nav li:first-child {
   margin-left: 0px;
 }
 
-/* line 125, ../scss/navV2.scss */
+/* line 126, ../scss/navV2.scss */
 #login-nav {
   margin-right: 70px;
   display: block;
 }
-/* line 129, ../scss/navV2.scss */
+/* line 130, ../scss/navV2.scss */
 #login-nav li {
   margin-right: 0px;
 }
-/* line 132, ../scss/navV2.scss */
+/* line 133, ../scss/navV2.scss */
 #login-nav li:first-child {
   background-image: url('../images/icon-person.png?1390687151');
   background-repeat: no-repeat;
@@ -246,17 +251,17 @@ body:after {
   background-position-y: 50%;
 }
 @media screen and (max-width: 480px) {
-  /* line 125, ../scss/navV2.scss */
+  /* line 126, ../scss/navV2.scss */
   #login-nav {
     margin-right: 0px;
   }
-  /* line 143, ../scss/navV2.scss */
+  /* line 144, ../scss/navV2.scss */
   #login-nav li {
     margin-right: 20px;
   }
 }
 
-/* line 150, ../scss/navV2.scss */
+/* line 151, ../scss/navV2.scss */
 #logo {
   background: url('../images/thoughtbubble.us-logo.png?1390687158');
   width: 288px;
@@ -265,7 +270,7 @@ body:after {
   margin: 0px 0 0 35px;
 }
 @media screen and (max-width: 480px) {
-  /* line 150, ../scss/navV2.scss */
+  /* line 151, ../scss/navV2.scss */
   #logo {
     background: url('../images/tb.us-logo-mobile.png?1390798734');
     width: 31px;
@@ -276,56 +281,20 @@ body:after {
   }
 }
 
-/* line 164, ../scss/navV2.scss */
+/* line 165, ../scss/navV2.scss */
 #primary-explore {
-  width: 210px;
-  height: 37.5px;
-  line-height: 37.5px;
-  font-size: 15.5px;
+  background-position: 0 -34px;
+  width: 181px;
+  height: 34px;
+  display: block;
   margin: 44px auto 0;
-  text-indent: 5px;
-  display: block;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #e57f4f 0%, #f9a533 100%);
-  background-image: linear-gradient(to top, #e57f4f 0%, #f9a533 100%);
-  color: #fff;
-  font-family: "Myriad Pro", "Arial", sans-serif;
 }
-/* line 176, ../scss/navV2.scss */
+/* line 172, ../scss/navV2.scss */
 #primary-explore:hover {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  border-radius: 10px;
-  -webkit-background-clip: padding;
-  -moz-background-clip: padding;
-  background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
-}
-/* line 179, ../scss/navV2.scss */
-#primary-explore i {
-  display: block;
-  height: 31px;
-  width: 30px;
-  background-position: 0 -31px;
-  float: left;
-  margin: 2px 0 0 10px;
-}
-/* line 190, ../scss/navV2.scss */
-#primary-explore:hover i {
   background-position: 0 0;
 }
 
-/* line 201, ../scss/navV2.scss */
+/* line 213, ../scss/navV2.scss */
 #sub-footer {
   color: #4585c3;
   /* text color */
@@ -338,22 +307,22 @@ body:after {
   background: #ffffff;
   text-decoration: none;
 }
-/* line 211, ../scss/navV2.scss */
+/* line 223, ../scss/navV2.scss */
 #sub-footer ul {
   list-style: none;
 }
-/* line 214, ../scss/navV2.scss */
+/* line 226, ../scss/navV2.scss */
 #sub-footer ul li {
   display: inline-block;
   margin-right: 25px;
   line-height: 25px;
 }
-/* line 221, ../scss/navV2.scss */
+/* line 233, ../scss/navV2.scss */
 #sub-footer p {
   text-align: center;
 }
 
-/* line 227, ../scss/navV2.scss */
+/* line 239, ../scss/navV2.scss */
 #footer {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -369,24 +338,24 @@ body:after {
   margin: 20px 0 0 0;
   clear: both;
 }
-/* line 235, ../scss/navV2.scss */
+/* line 247, ../scss/navV2.scss */
 #footer ul {
   display: inline-block;
   list-style-type: none;
   margin: 13px auto 10px;
 }
-/* line 240, ../scss/navV2.scss */
+/* line 252, ../scss/navV2.scss */
 #footer ul li {
   float: left;
   list-style-type: none;
   margin-left: 12px;
 }
-/* line 245, ../scss/navV2.scss */
+/* line 257, ../scss/navV2.scss */
 #footer ul li:first-child {
   margin-left: 0px;
   margin-right: 12px;
 }
-/* line 252, ../scss/navV2.scss */
+/* line 264, ../scss/navV2.scss */
 #footer #footer-logout {
   background: url('../images/user-logout-icon.png?1390687159') no-repeat 0;
   text-indent: 13px;
@@ -396,7 +365,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   font-size: 13px;
 }
-/* line 260, ../scss/navV2.scss */
+/* line 272, ../scss/navV2.scss */
 #footer #footer-twitter {
   background: url('../images/twitter-cloud.png?1390687081');
   width: 23px;
@@ -404,7 +373,7 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 265, ../scss/navV2.scss */
+/* line 277, ../scss/navV2.scss */
 #footer #footer-facebook {
   background: url('../images/facebook-cloud.png?1390687055');
   width: 28px;
@@ -412,7 +381,7 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 270, ../scss/navV2.scss */
+/* line 282, ../scss/navV2.scss */
 #footer #footer-linkedin {
   background: url('../images/linkedin-cloud.png?1390687076');
   width: 22px;
@@ -420,13 +389,13 @@ body:after {
   display: block;
   background-repeat: no-repeat;
 }
-/* line 276, ../scss/navV2.scss */
+/* line 288, ../scss/navV2.scss */
 #footer #footer-wrap {
   margin: 0 auto;
   text-align: center;
 }
 
-/* line 290, ../scss/navV2.scss */
+/* line 302, ../scss/navV2.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -439,7 +408,7 @@ body:after {
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 299, ../scss/navV2.scss */
+/* line 311, ../scss/navV2.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
@@ -447,7 +416,7 @@ body:after {
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 303, ../scss/navV2.scss */
+/* line 315, ../scss/navV2.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
@@ -460,7 +429,7 @@ body:after {
   font-weight: normal;
   font-size: 16px;
 }
-/* line 314, ../scss/navV2.scss */
+/* line 326, ../scss/navV2.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -479,7 +448,7 @@ body:after {
   text-align: center;
   line-height: 45px;
 }
-/* line 320, ../scss/navV2.scss */
+/* line 332, ../scss/navV2.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -497,7 +466,7 @@ body:after {
   font-size: 10px;
   font-weight: 100;
 }
-/* line 329, ../scss/navV2.scss */
+/* line 341, ../scss/navV2.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
@@ -505,7 +474,7 @@ body:after {
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 334, ../scss/navV2.scss */
+/* line 346, ../scss/navV2.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
@@ -513,7 +482,7 @@ body:after {
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 338, ../scss/navV2.scss */
+/* line 350, ../scss/navV2.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
@@ -521,7 +490,7 @@ body:after {
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 343, ../scss/navV2.scss */
+/* line 355, ../scss/navV2.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
@@ -529,7 +498,7 @@ body:after {
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 347, ../scss/navV2.scss */
+/* line 359, ../scss/navV2.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
@@ -539,7 +508,7 @@ body:after {
   width: 195px;
   height: 60px;
 }
-/* line 352, ../scss/navV2.scss */
+/* line 364, ../scss/navV2.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
@@ -552,7 +521,7 @@ body:after {
   width: 44px;
   float: left;
 }
-/* line 360, ../scss/navV2.scss */
+/* line 372, ../scss/navV2.scss */
 #login-overlay .oauths a.blue,
 #logout-overlay .oauths a.blue,
 #join-overlay .oauths a.blue,
@@ -560,7 +529,7 @@ body:after {
 #update-avatar-overlay .oauths a.blue {
   background: url('../images/join-login-social-media-blue.png?1394892046');
 }
-/* line 364, ../scss/navV2.scss */
+/* line 376, ../scss/navV2.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
@@ -568,7 +537,7 @@ body:after {
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 368, ../scss/navV2.scss */
+/* line 380, ../scss/navV2.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
@@ -577,7 +546,7 @@ body:after {
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 374, ../scss/navV2.scss */
+/* line 386, ../scss/navV2.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
@@ -586,7 +555,7 @@ body:after {
   width: 50px;
   background-position: -78px 0;
 }
-/* line 382, ../scss/navV2.scss */
+/* line 394, ../scss/navV2.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
@@ -595,7 +564,7 @@ body:after {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 389, ../scss/navV2.scss */
+/* line 401, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -621,7 +590,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 397, ../scss/navV2.scss */
+/* line 409, ../scss/navV2.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -647,7 +616,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 404, ../scss/navV2.scss */
+/* line 416, ../scss/navV2.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
@@ -656,7 +625,7 @@ body:after {
   font-size: 16px;
 }
 
-/* line 410, ../scss/navV2.scss */
+/* line 422, ../scss/navV2.scss */
 #dislike-overlay {
   width: 250px;
   background-color: #ffffff;
@@ -665,18 +634,18 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   text-align: center;
 }
-/* line 415, ../scss/navV2.scss */
+/* line 427, ../scss/navV2.scss */
 #dislike-overlay img {
   margin: 30px 0 0;
 }
-/* line 418, ../scss/navV2.scss */
+/* line 430, ../scss/navV2.scss */
 #dislike-overlay p {
   font-style: italic;
   font-size: 12px;
   width: 200px;
   margin: 0 auto 20px;
 }
-/* line 425, ../scss/navV2.scss */
+/* line 437, ../scss/navV2.scss */
 #dislike-overlay h6 {
   color: #6d6d6d;
   /* text color */
@@ -686,7 +655,7 @@ body:after {
   font-size: 12px;
   margin: 10px 0 0;
 }
-/* line 433, ../scss/navV2.scss */
+/* line 445, ../scss/navV2.scss */
 #dislike-overlay a {
   width: 100px;
   height: 30px;
@@ -696,18 +665,18 @@ body:after {
   line-height: 30px;
   color: #FFFFFF;
 }
-/* line 442, ../scss/navV2.scss */
+/* line 454, ../scss/navV2.scss */
 #dislike-overlay a:visited {
   color: #FFFFFF;
 }
 
-/* line 450, ../scss/navV2.scss */
+/* line 462, ../scss/navV2.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 456, ../scss/navV2.scss */
+/* line 468, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -717,18 +686,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 465, ../scss/navV2.scss */
+/* line 477, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 470, ../scss/navV2.scss */
+/* line 482, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 474, ../scss/navV2.scss */
+/* line 486, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -749,7 +718,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 495, ../scss/navV2.scss */
+/* line 507, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -775,18 +744,18 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 514, ../scss/navV2.scss */
+/* line 526, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 518, ../scss/navV2.scss */
+/* line 530, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 522, ../scss/navV2.scss */
+/* line 534, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -794,14 +763,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 528, ../scss/navV2.scss */
+/* line 540, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 539, ../scss/navV2.scss */
+/* line 551, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
