@@ -229,7 +229,7 @@
   height: 10px;
   background: url('../../images/big-orange-star.png?1397523106');
   background-size: 100%;
-  margin-top: 2px;
+  margin-top: 6px;
   margin-right: 3px;
   display: block;
   float: left;
@@ -251,10 +251,11 @@
   }
 }
 
-/* line 221, ../../scss/idea/_idea.scss */
+/* line 222, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
-.commenting {
+.commenting,
+.flag {
   display: block;
   float: left;
   width: 75px;
@@ -262,6 +263,24 @@
   line-height: 25px;
   text-align: center;
   font-size: 11px;
+}
+
+/* line 232, ../../scss/idea/_idea.scss */
+a.flag {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  border-radius: 7px;
+  margin-left: 5px;
+}
+/* line 241, ../../scss/idea/_idea.scss */
+a.flag img {
+  max-width: 70%;
+  max-height: 70%;
+  vertical-align: middle;
 }
 
 /* line 2, ../../scss/neat/grid/_grid.scss */

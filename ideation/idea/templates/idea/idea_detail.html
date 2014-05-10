@@ -32,7 +32,9 @@
                 {% endwith %}
             </div>
 
+
         <span class="support-number"><i class="support-star-orange"></i>{{ idea.support_count }}</span> support this
+        <a class="flag blue" href="{{ idea.get_flag_url }}"><img src="{{ STATIC_URL }}images/flag.png" alt=""/></a>
         <div id="spacer">
             <div class="clr"></div>
         </div>

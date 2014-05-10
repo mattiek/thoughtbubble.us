@@ -16,6 +16,8 @@ from ideation.supportering.models import AbstractSupport
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
 
+from model_utils import Choices
+
 import json as JSON
 
 FOR_CHOICES = [
@@ -39,6 +41,7 @@ class IdeaType(models.Model):
 
 
 class Idea(models.Model):
+    MOD_CHOICES = Choices('active','flagged','disabled')
     name = models.CharField(max_length=255)
     slug = AutoSlugField(populate_from='name',unique_with='object_id')
 
@@ -58,7 +61,7 @@ class Idea(models.Model):
 
     date_created = models.DateTimeField(auto_now_add=True, default=now())
     date_modified = models.DateTimeField(auto_now=True, default=now())
-
+    status = models.CharField(max_length=20, choices=MOD_CHOICES, default=MOD_CHOICES.active)
 
     # member = models.ForeignKey(ThoughtbubbleUser, related_name='member_idea_creator', null=True, blank=True)
 
@@ -123,6 +126,12 @@ class Idea(models.Model):
                 #  url_safe(location.slug)
             ])
 
+
+    # TODO: Make these use place and location!
+    def get_flag_url(self):
+        return reverse('flag_idea',args=[url_safe(self.slug)])
+
+    # TODO: Make these use place and location!
     def get_support_url(self):
         # if self.content_type.name == 'neighborhood':
         #     neighborhood = self.content_object

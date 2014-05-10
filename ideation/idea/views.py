@@ -337,3 +337,10 @@ def support_idea_from_detail(request,idea):
                     idea.content_object.organization.city, idea.content_object.organization.name, id)
 
 
+def flag_idea(request,idea):
+    if request.POST:
+        idea = Idea.objects.get(slug=idea)
+        idea.status = Idea.MOD_CHOICES.flagged
+        idea.save()
+        return HttpResponse(JSON.dumps({'flagged': True}), mimetype='application/json')
+    return HttpResponse(JSON.dumps({'error': True}), mimetype='application/json')

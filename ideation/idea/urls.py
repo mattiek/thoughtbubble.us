@@ -3,6 +3,7 @@ from views import IdeaList, IdeaDetail, IdeaCreate
 
 urlpatterns = patterns('ideation.idea.views',
 
+   url(r'^flag/(?P<idea>[\w-]+)/?$', 'flag_idea', name='flag_idea'),
    url(r'^support/(?P<idea>[\w-]+)/?$', 'support_idea', name='support_idea'),
    url(r'^supporting/(?P<idea>[\w-]+)/?$', 'support_idea_from_detail', name='support_idea_from_detail'),
 

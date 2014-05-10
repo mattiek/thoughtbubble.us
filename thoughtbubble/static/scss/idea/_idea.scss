@@ -190,7 +190,7 @@
       height: 10px;
       background: image-url('big-orange-star.png');
       background-size: 100%;
-      margin-top: 2px;
+      margin-top: 6px;
       margin-right: 3px;
       display: block;
       float:left;
@@ -218,7 +218,8 @@
 
 .supporting,
 .dislike,
-.commenting {
+.commenting,
+.flag {
   display:block;
   float:left;
   width: 75px;
@@ -226,4 +227,20 @@
   line-height: 25px;
   text-align: center;
   font-size: 11px;
+}
+
+a.flag {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  border-radius: 7px;
+  margin-left: 5px;
+  img {
+    max-width: 70%;
+    max-height: 70%;
+    vertical-align: middle;
+  }
 }
