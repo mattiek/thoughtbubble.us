@@ -336,11 +336,19 @@ def support_idea_from_detail(request,idea):
     return redirect('idea_detail', idea.content_object.organization.state,
                     idea.content_object.organization.city, idea.content_object.organization.name, id)
 
+from django.template.loader import render_to_string
 
 def flag_idea(request,idea):
     if request.POST:
         idea = Idea.objects.get(slug=idea)
         idea.status = Idea.MOD_CHOICES.flagged
         idea.save()
-        return HttpResponse(JSON.dumps({'flagged': True}), mimetype='application/json')
+        message = "%s was flagged for administrator follow-up." % idea.name
+        messages = [message,]
+        return HttpResponse(JSON.dumps({'flagged': True,
+                                        'response': render_to_string(
+                                                        'widgets/messages.html',
+                                                        {'messages': messages}
+                                                    )
+                                        }), mimetype='application/json')
     return HttpResponse(JSON.dumps({'error': True}), mimetype='application/json')

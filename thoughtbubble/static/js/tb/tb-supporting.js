@@ -32,15 +32,9 @@ $('a.flag').on('click', function(e){
         type: 'POST',
         data: {flag: true},
         success: function(data) {
-            if (data.status == 'removed') {
-                $target.removeClass('activated');
-                $(document.body).trigger({type: 'idea:support:count', target: $target, count: data.count});
-            } else if (data.status == 'added') {
-                $target.addClass('activated');
-                $(document.body).trigger({type: 'idea:support:count', target: $target, count: data.count});
-            } else {
-
-            }
+           if (data.flagged == true) {
+             $('#illustration').prepend(data.response);
+           }
         }
     })
 
