@@ -1,6 +1,6 @@
 from django.forms import widgets
 from rest_framework import serializers
-from .models import Place
+from .models import Place, County, Region
 
 
 class CitySerializer(serializers.HyperlinkedModelSerializer):
@@ -11,3 +11,18 @@ class CitySerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Place
         fields = ('id', 'name', 'county', 'state_code', 'zip_code', 'latitude', 'longitude', 'type', 'properties', 'center')
+
+
+from import_export import resources
+
+
+class CountyResource(resources.ModelResource):
+
+    class Meta:
+        model = County
+
+
+class RegionResource(resources.ModelResource):
+
+    class Meta:
+        model = Region

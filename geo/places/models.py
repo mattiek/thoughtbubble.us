@@ -7,18 +7,30 @@ import json as JSON
 from django.core.urlresolvers import reverse
 from autoslug import AutoSlugField
 
-class Place(models.Model):
-    REGIONS = Choices(
-        'northwest',
-        'northeast',
-        'southeast',
-        'southwest',
-        'western',
-        'central',
-    )
+class County(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    state_code = models.CharField(max_length=255, null=True, blank=True)
 
+    class Meta:
+        verbose_name_plural = "Counties"
+        ordering = ['name',]
+
+    def __unicode__(self):
+        return "%s, %s" % (self.name, self.state_code,)
+
+
+class Region(models.Model):
+    name = models.CharField(max_length=255, null=True, blank=True)
+    counties = models.ManyToManyField(County)
+
+    def __unicode__(self):
+        return "%s Region" % self.name
+
+
+class Place(models.Model):
     name = models.CharField(max_length=255)
     county = models.CharField(max_length=255, null=True, blank=True)
+    county_fk = models.ForeignKey(County,  null=True)
     state = models.CharField(max_length=255, null=True, blank=True)
     state_code = models.CharField(max_length=255, null=True, blank=True)
     zip_code = models.IntegerField()
@@ -27,8 +39,6 @@ class Place(models.Model):
     elevation = models.IntegerField(default=0)
     place_type = models.CharField(max_length=255, null=True, blank=True)
     population= models.IntegerField(default=0)
-
-    region = models.CharField(max_length=255, choices=REGIONS, default=REGIONS.central)
 
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
@@ -41,6 +51,11 @@ class Place(models.Model):
     def save(self, *args, **kwargs):
         if not self.geom:
             self.geom = Point(self.longitude, self.latitude)
+
+        if not self.county_fk:
+            c = County.objects.get_or_create(name=self.county, state_code=self.state_code)[0]
+            self.county_fk = c
+
         super(Place, self).save(*args, **kwargs)
 
 

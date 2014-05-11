@@ -86,6 +86,8 @@ INSTALLED_APPS = (
     'reversion',
     'django_balanced',
     'easy_thumbnails',
+
+    'import_export',
 )
 
 COMMENTS_APP = 'threadedcomments'
