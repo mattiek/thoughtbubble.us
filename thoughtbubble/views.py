@@ -22,13 +22,14 @@ from avatar.forms import PrimaryAvatarForm, DeleteAvatarForm, UploadAvatarForm
 
 from thoughtbubble.utils import path_and_rename
 from geo.organization.models import Organization, OrganizationCurator
-from geo.places.models import Place
+from geo.places.models import Place, Region
 from ideation.idea.models import Idea, IdeaSupport
 from forms import UserProfileForm
 from models import *
 from forms import SignupForm, LoginForm, OrganizationSignupForm
 
 from django_balanced.models import Card
+from geo.places.utils import get_region_from_geoip
 
 
 class MyDisconnectForm(DisconnectForm):
@@ -56,6 +57,7 @@ class MySocialAdapter(DefaultSocialAccountAdapter):
                 raise ValidationError(_("Your account has no password set"
                                         " up."))
 
+
 def home(request):
     # if not state or not city:
     #     return redirect( reverse('home',
@@ -67,6 +69,8 @@ def home(request):
         copy = FlatPage.objects.get(url='home').content
     except:
         copy = 'Copy here'
+
+    p = get_region_from_geoip(request.geoip)
     d = {'copy': copy}
     return render(request, request.device_template_dir + 'home.html', d)
 

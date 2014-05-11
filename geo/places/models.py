@@ -46,6 +46,9 @@ class Place(models.Model):
 
     slug = AutoSlugField(populate_from='name', unique_with='state')
 
+    class Meta:
+        ordering = ['name',]
+
     def __unicode__(self):
         return "%s, %s" % (self.name, self.state_code)
 

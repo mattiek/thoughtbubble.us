@@ -2,6 +2,7 @@ import os
 import hashlib
 import urllib
 
+
 def path_and_rename(path, attr):
     def wrapper(instance, filename):
         ext = filename.split('.')[-1]
@@ -29,3 +30,5 @@ def md5_for_file(f, block_size=2**20):
 
 def url_safe(st):
     return str(st.lower())
+
+
