@@ -21,6 +21,7 @@ class County(models.Model):
 
 class Region(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
+    capital = models.ForeignKey('Place', null=True, blank=True)
     counties = models.ManyToManyField(County)
 
     def __unicode__(self):
