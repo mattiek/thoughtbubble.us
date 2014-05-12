@@ -1,4 +1,6 @@
 from django.contrib.gis.geoip import GeoIP
+from geo.places.utils import get_region_from_geoip
+from geo.places.models import Region
 
 class GeoIPMiddleware(object):
 
@@ -17,3 +19,8 @@ class GeoIPMiddleware(object):
         g = GeoIP()
         city = g.city(self.get_client_ip(request))
         request.geoip = city
+        if not request.session.get('region', None):
+            p = get_region_from_geoip(request.geoip)
+            if not p:
+                p = Region.objects.get(name__iexact='central')
+            request.session['region'] = p

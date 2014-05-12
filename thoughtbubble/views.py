@@ -29,7 +29,7 @@ from models import *
 from forms import SignupForm, LoginForm, OrganizationSignupForm
 
 from django_balanced.models import Card
-from geo.places.utils import get_region_from_geoip
+
 
 
 class MyDisconnectForm(DisconnectForm):
@@ -70,7 +70,6 @@ def home(request):
     except:
         copy = 'Copy here'
 
-    p = get_region_from_geoip(request.geoip)
     d = {'copy': copy}
     return render(request, request.device_template_dir + 'home.html', d)
 
