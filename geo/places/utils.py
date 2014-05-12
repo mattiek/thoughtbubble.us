@@ -6,9 +6,9 @@ from geo.places.models import Place, Region
 def get_region_from_geoip(geoip=None):
     if not geoip:
         g = GeoIP()
-        # ip='71.74.93.236'
+        ip='71.74.93.236' #columbus
         # ip='137.148.13.101' #cleveland
-        ip='24.210.209.3' #dayton
+        # ip='24.210.209.3' #dayton
         geoip = g.city(ip)
 
     lat = geoip['latitude']
