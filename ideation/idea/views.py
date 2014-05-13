@@ -240,7 +240,10 @@ class IdeaList(ListView):
                     wheres = Location.objects.filter(organization= self.organization)#__pk=self.request.GET.get('org',None))
                 qs = qs.filter(content_type__name='location', object_id__in=wheres)
         else:
-            pass
+            where = self.request.GET.get('where_place',None)
+            if where:
+                wheres = Place.objects.filter(pk=where)
+                qs = qs.filter(content_type__name='place', object_id__in=wheres)
 
 
 
