@@ -9,7 +9,7 @@ if ("undefined" === typeof TB) {
 
         var default_lat = region[1] || 39.961;
         var default_lng = region[0] || -82.998;
-        var default_zoom = 13;
+        var default_zoom = 11;
         var default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
 //        var default_map = 'mattiej.map-wodu25gx';//'mlreed328.map-0chlhqvz';
         var map;
