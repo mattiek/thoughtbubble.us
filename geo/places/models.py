@@ -7,6 +7,8 @@ import json as JSON
 from django.core.urlresolvers import reverse
 from autoslug import AutoSlugField
 
+from ideation.idea.models import Idea
+
 class County(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
     state_code = models.CharField(max_length=255, null=True, blank=True)
@@ -72,6 +74,9 @@ class Place(models.Model):
     def get_absolute_url(self):
         return reverse('places_detail', args=[url_safe(self.slug),])
 
+
+    def get_number_ideas(self):
+        return Idea.objects.filter(object_id=self.id, content_type__name__iexact='place').count()
 
     def get_geojson_type(self):
         return 'Feature'

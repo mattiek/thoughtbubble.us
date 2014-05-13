@@ -6,7 +6,13 @@
     {% if filterform.fields.where_location.queryset %}
         {{ filterform.where_location }}
     {% else %}
-        {{ filterform.where_place }}
+{#        {{ filterform.where_place }}#}
+        <select id="id_where_place" name="where_place">
+            <option value="" selected="selected">where</option>
+            {% for field in filterform.fields.where_place.queryset %}
+                <option value="{{ field.pk }}">{{ field }} ({{ field.get_number_ideas }})</option>
+             {% endfor %}
+        </select>
     {% endif %}
 
     {{ filterform.when }}
