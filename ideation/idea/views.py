@@ -146,6 +146,16 @@ def addidea(request, place=None, organization=None, location=None):
     # if id:
     #     form.fields['content_object'].initial = Location.objects.get(pk=id)
 
+    if place:
+        try:
+            counties = request.session.get('region').counties.all()
+            d['location'] = Place.objects.filter(county_fk=counties)
+            form.fields['content_object'].queryset = d['location']
+
+        except:
+            pass
+
+
     if organization:
         try:
             d['location'] = Location.objects.filter(organization__slug=organization)
@@ -168,6 +178,8 @@ def addidea(request, place=None, organization=None, location=None):
             # form.fields['content_object'].queryset=Location.objects.none()
         except:
             pass
+
+
 
 
 
@@ -268,7 +280,8 @@ class IdeaList(ListView):
 
             # f.fields['org'].initial = self.organization.id
         else:
-            f.fields['where_place'].queryset = Place.objects.filter()
+            counties = self.request.session.get('region').counties.all()
+            f.fields['where_place'].queryset = Place.objects.filter(county_fk=counties)
 
 
         context['filterform'] = f
