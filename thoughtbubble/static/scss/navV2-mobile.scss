@@ -1,7 +1,7 @@
 @import "compass";
 @import "compass/utilities/sprites";
 @import "directional/*.png";
-@import "eai/*.png";
+@import "eai-mobile/*.png";
 @import "bourbon/bourbon";
 @import "grid-settings";
 @import "neat/neat";
@@ -183,15 +183,17 @@
 
 /// PRIMARY EXPLORE BUTTON
 #primary-explore {
-  @include eai-sprite(eai-button);
+  @include eai-mobile-sprite(eai-mobile-normal);
   width: 181px;
   height: 34px;
   display: block;
   margin: 15px auto 0;
+  background-size: 100%;
 
-  &:hover {
-    @include eai-sprite(eai-button-hover);
-  }
+  //&:hover {
+  //  @include eai-mobile-sprite(eai-mobile-hover);
+  //  background-size: 100%;
+  //}
 }
 
   //padding-right: 10px;
