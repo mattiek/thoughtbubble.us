@@ -151,65 +151,49 @@
 
 
 #hamburger-button {
-  @include mobile-bg-image('hamburger-button.png');
+  @include mobile-bg-image('hamburgerfinal.png');
   //margin: 0px 0 10px 10px;
-  margin: 0px 0 0px 5px;
+  margin: 27px 0 0px 15px;
   background-size: cover;
+  width: 31px;
 
-  height: 42px;
-  width: 30px;
+  //height: 42px;
+  //width: 30px;
 }
 
 #logo {
   //width: 288px;
   //height: 97px;
-    @include mobile-bg-image('tb.us-logo-mobile.png');
-    //margin: 0px 0 10px 10px;
-    margin: 0px 0 0px 5px;
-  background-size: 91%;
+  //  @include mobile-bg-image('tb.us-logo-mobile.png');
+  @include mobile-bg-image('tb-mobile-header.png');
+  //margin: 0px 0 10px 10px;
+  margin: 0px 0 0px 20px;
+  //background-size: 91%;
   background-repeat: no-repeat no-repeat;
-  height: 47px;
-  width: 41px;
+  //height: 47px;
+  //width: 41px;
   float: right;
+  width: 200px;
+  position: relative;
+  right: 20px;
 }
 
 
 
 /// PRIMARY EXPLORE BUTTON
 #primary-explore {
-
-  width: 240px;
-  height: 75px *.5;
-  line-height: 75px *.5;
-  font-size: 31px * .5;
-  margin: 20px auto 0;
-  text-indent: 5px;
-
-  @include orange-gradient-button-explore;
-
+  @include eai-sprite(eai-button);
+  width: 181px;
+  height: 34px;
+  display: block;
+  margin: 15px auto 0;
 
   &:hover {
-   @include orange-gradient-button-hover;
+    @include eai-sprite(eai-button-hover);
   }
-  i {
-    display: block;
-    height: directional-sprite-height(normal);
-    width: directional-sprite-width(normal);
-    @include directional-sprite(normal);
-    float: left;
-    margin: 2px 0 0 10px;
-
-  }
-
-  &:hover {
-    i {
-      @include directional-sprite(hover);
-    }
-  }
+}
 
   //padding-right: 10px;
-
-}
 
 
 

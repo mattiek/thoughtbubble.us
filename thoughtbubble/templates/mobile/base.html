@@ -87,7 +87,7 @@
             <a id="hamburger-button" href="#slide-out"></a>
 
                 {% block primarynav %}
-                    <a id="primary-explore" href="{% url "explore"  %}"><i class="icon-explore"></i>Explore and Add Ideas</a>
+                    <a id="primary-explore" href="{% url "explore"  %}"></a>
                 {% endblock %}
         </div>
         <div id="home-container">
@@ -193,11 +193,17 @@
 
         var snapper = new Snap({
             element: document.getElementById('wrapper'),
-            disable: 'right'
+            disable: 'right',
+            touchToDrag: false
         });
         $('#hamburger-button').on("click", function(e) {
             e.preventDefault();
-            snapper.open('left');
+            var data = snapper.state();
+            if (data.state == 'closed') {
+                snapper.open('left');
+            } else {
+                snapper.close('left');
+            }
         });
     })
 </script>
