@@ -53,7 +53,6 @@
 
 <body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
 {% block slideoutnav %}
-
     <div class="snap-drawers">
         <div class="snap-drawer snap-drawer-left">
             <ul id="nav">
@@ -70,7 +69,6 @@
         </div>
         <div class="snap-drawer snap-drawer-right"></div>
     </div>
-
 {% endblock %}
 
 {% block navstart %}
