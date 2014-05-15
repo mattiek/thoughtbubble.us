@@ -16,11 +16,13 @@ class GeoIPMiddleware(object):
         return ip
 
     def process_request(self, request):
-        g = GeoIP()
-        city = g.city(self.get_client_ip(request))
-        request.geoip = city
         if not request.session.get('region', None):
+            g = GeoIP()
+            city = g.city(self.get_client_ip(request))
+            request.geoip = city
             p = get_region_from_geoip(request.geoip)
             if not p:
                 p = Region.objects.get(name__iexact='central')
             request.session['region'] = p
+
+
