@@ -11,6 +11,8 @@ from django.conf import settings
 
 from model_utils import Choices
 from ideation.idea.models import Idea
+
+from tbnews.models import NewsItem
 #
 
 class OrganizationCuratorRole(models.Model):
@@ -120,6 +122,15 @@ class Organization(models.Model):
 
     def get_id(self):
         return self.title.lower().replace(' ','-')
+
+    def get_add_news_url(self):
+        return reverse('add_news_item', args=['org',self.id])
+
+    def get_list_news_url(self):
+        return reverse('list_news_item', args=['org',self.id])
+
+    def get_news_items(self):
+        return NewsItem.objects.filter(content_type='organization', object_id=self.id)
 
     def get_properties(self):
 
