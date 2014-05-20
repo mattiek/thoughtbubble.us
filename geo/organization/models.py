@@ -127,7 +127,7 @@ class Organization(models.Model):
         return reverse('add_news_item', args=['org',self.id])
 
     def get_list_news_url(self):
-        return reverse('list_news_item', args=['org',self.id])
+        return reverse('list_news_items', args=['org',self.id])
 
     def get_news_items(self):
         return NewsItem.objects.filter(content_type__name='organization', object_id=self.id)
