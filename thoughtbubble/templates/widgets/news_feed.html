@@ -2,9 +2,11 @@
 {% for news in news_feed %}
     <li class="group">
 {#        <a href="#">#}
-            <img src="{{ news.img.url }}" alt="thumbnail" />
+            {% if news.img %}
+                <img src="{{ news.img.url }}" alt="thumbnail" />
+            {% endif %}
             <h3>{{ news.name }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
-            <p>{{ news.content }}</p>
+            <p>{{ news.content|safe }}</p>
 {#        </a>#}
     </li>
 {% endfor %}

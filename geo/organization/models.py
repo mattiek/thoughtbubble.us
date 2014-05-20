@@ -130,7 +130,7 @@ class Organization(models.Model):
         return reverse('list_news_item', args=['org',self.id])
 
     def get_news_items(self):
-        return NewsItem.objects.filter(content_type='organization', object_id=self.id)
+        return NewsItem.objects.filter(content_type__name='organization', object_id=self.id)
 
     def get_properties(self):
 

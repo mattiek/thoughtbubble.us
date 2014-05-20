@@ -72,12 +72,16 @@
         {% endwith %}
 
         {#    News #}
-        {% if news %}
-            <div class="news-label small-heading">news</div>
-            <div id="news">
-                    {% include 'widgets/news_feed.html' %}
-            </div>
-        {% endif %}
+        {% with news_feed=object.get_news_items  %}
+            {% if news_feed %}
+                <div class="news-label small-heading">news</div>
+                <div id="news">
+
+                        {% include 'widgets/news_feed.html' %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
 
 
         {#    Pictures #}
