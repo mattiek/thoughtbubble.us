@@ -4,6 +4,7 @@ from rest_framework import routers
 from geo.places.views import PlacesViewset
 from geo.location.views import LocationViewset
 from geo.organization.views import OrganizationViewset
+from tbnews.views import NewsItemViewset
 import geo.location
 
 router = routers.DefaultRouter()
@@ -14,6 +15,8 @@ router.register(r'locations', geo.location.views.LocationViewset, base_name="loc
 router.register(r'places', PlacesViewset)
 # router.register(r'cities-typeahead', CityTypeaheadViewset)
 router.register(r'organizations', OrganizationViewset)
+
+router.register(r'news', NewsItemViewset)
 
 urlpatterns = patterns('',
                        # Examples:

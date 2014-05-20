@@ -4,11 +4,14 @@ from django.contrib.contenttypes.models import ContentType
 
 
 from models import NewsItem
+from .serializers import NewsItemSerializer
 from forms import NewsItemForm
 
 from vanilla import DetailView, UpdateView, ListView, CreateView, DeleteView
 
 from geo.location.models import Location
+from rest_framework import viewsets
+
 
 
 class NewsItemCreateView(CreateView):
@@ -21,15 +24,20 @@ class NewsItemCreateView(CreateView):
     def get_context_data(self, **kwargs):
         d = super(NewsItemCreateView, self).get_context_data()
         d = dict(d, **kwargs)  # idiom to union two dicts. precedence to kwargs
+
+        c_type = 'location'
+        if self.kwargs.get('kind') == 'org':
+            c_type = 'organization'
+
+        d['form'].fields['content_type'].initial = d['form'].fields['content_type'].choices.queryset.get(name=c_type).id
+        d['form'].fields['object_id'].initial = self.kwargs.get('obj_id')
         return d
 
     def post(self, request, *args, **kwargs):
         j = request.POST
 
-        # assuming location
-        location_type = ContentType.objects.get_for_model(Location)
-        j['content_type'] = location_type.id
-        self.obj_id = j['object_id'] = kwargs['obj_id']
+        location_type = ContentType.objects.get(pk=j['content_type'])
+        self.obj_id = j['object_id']
         self.kind = kwargs['kind']
 
         d = super(NewsItemCreateView, self).post(request,*args, **kwargs)
@@ -57,6 +65,14 @@ class NewsItemListView(ListView):
     model = NewsItem
     kind = "location"
 
+    def get_queryset(self):
+        qs = super(NewsItemListView, self).get_queryset()
+        c_type = 'location'
+        if self.kwargs.get('kind') == 'org':
+            c_type = 'organization'
+        c = ContentType.objects.get(name=c_type)
+        return qs.filter(content_type=c, object_id=self.kwargs.get('obj_id'))
+
     def get_context_data(self, **kwargs):
         d = super(NewsItemListView, self).get_context_data()
         d = dict(d, **self.kwargs)  # idiom to union two dicts. precedence to kwargs
@@ -73,5 +89,13 @@ class NewsItemDeleteView(DeleteView):
     success_url = reverse_lazy('list_news_items')
 
 
+class NewsItemViewset(viewsets.ModelViewSet):
+    model = NewsItem
+    serializer_class = NewsItemSerializer
+    queryset = NewsItem.objects.all()
 
-# Create your views here.
+    def get_queryset(self):
+        qs = super(NewsItemViewset, self).get_queryset()
+        kind = self.request.GET.get('kind',None)
+        c = ContentType.objects.get(name=kind)
+        return qs.filter(content_type=c, object_id=self.request.GET.get('obj_id'))
