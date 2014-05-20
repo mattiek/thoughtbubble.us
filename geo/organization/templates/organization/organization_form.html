@@ -17,6 +17,8 @@
 {% endblock %}
 
 {% block content %}
+
+
     <div id="form-wrapper">
         <form method="POST" enctype="multipart/form-data" action="{{ organization.get_update_url }}">
             {% csrf_token %}
@@ -68,9 +70,8 @@
             {#    News #}
         <div id="news">
             <div class="label">news</div>
-            <div id="news-photo" name="news-photo" class="picture"></div>
-            <textarea></textarea>
-            <a href="#" class="orange buttonize">save</a>
+            <a href="{{ organization.get_list_news_url }}" class="blue s-button">List News</a>
+            <a href="{{ organization.get_add_news_url }}" class="blue s-button">Add News</a>
         </div>
 
 
