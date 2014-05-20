@@ -57,8 +57,9 @@ class NewsItemCreateView(CreateView):
 
 class NewsItemUpdateView(UpdateView):
     model = NewsItem
-    success_url = reverse_lazy('list_news_items')
-    kind = "location"
+
+    def get_success_url(self):
+        return reverse_lazy('list_news_items', args=[self.kwargs.get('kind'), self.kwargs.get('obj_id')])
 
 
 class NewsItemListView(ListView):
@@ -85,8 +86,10 @@ class NewsItemDetailView(DetailView):
 
 class NewsItemDeleteView(DeleteView):
     model = NewsItem
-    kind = "location"
-    success_url = reverse_lazy('list_news_items')
+
+    def get_success_url(self):
+        return reverse_lazy('list_news_items', args=[self.kwargs.get('kind'), self.kwargs.get('obj_id')])
+
 
 
 class NewsItemViewset(viewsets.ModelViewSet):
