@@ -11,6 +11,19 @@
 //    height: 250px;
 }
 
+.s-button {
+  height: 33px;
+  line-height: 33px;
+  width: 100px;
+  float: left;
+  margin-left: 20px;
+  text-align: center;
+
+  &:first-child {
+    margin-left: 0px;
+  }
+}
+
 .submit {
     @include orange-gradient-button;
     height: 33px;
