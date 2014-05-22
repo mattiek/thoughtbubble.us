@@ -119,28 +119,6 @@ init = function() {
   }
 };
 
-$('.share-fb').on('click', function(e) {
-  var fbDataShareCaption, fbDataShareCopy, fbDataShareImage, fbDataShareLink, fbDataShareName;
-  e.preventDefault();
-  fbDataShareCopy = this.getAttribute("data-share-copy");
-  fbDataShareImage = this.getAttribute("data-share-image");
-  fbDataShareCaption = this.getAttribute("data-share-caption");
-  fbDataShareName = this.getAttribute("data-share-name");
-  fbDataShareLink = this.getAttribute("data-share-link");
-  if (window.location.protocol === 'https:') {
-    fbDataShareImage = fbDataShareImage.replace('http:', 'https:');
-  }
-  return FB.ui({
-    link: fbDataShareLink,
-    method: "feed",
-    name: fbDataShareName,
-    caption: fbDataShareCaption,
-    description: fbDataShareCopy,
-    display: "popup",
-    picture: fbDataShareImage
-  });
-});
-
 $('.image-popup-no-margins').magnificPopup({
   type: 'image',
   closeOnContentClick: true,
