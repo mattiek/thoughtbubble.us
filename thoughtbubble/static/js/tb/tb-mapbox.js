@@ -10,9 +10,12 @@ if ("undefined" === typeof TB) {
         var default_lat =  39.961;
         var default_lng = -82.998;
 
-        if (region) {
+        try {
             default_lat = region[1];
             default_lng = region[0];
+        }
+        catch (e) {
+
         }
 
         var default_zoom = 11;
