@@ -110,6 +110,13 @@ $tb-sky-blue: #6fc4d8;
   //font-size: 16px;
 }
 
+@mixin blue-gradient-button-hover {
+  @include border-radius(10px); // border radius
+  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+  @include background-image(linear-gradient(top,  #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%)); // layer fill content
+//font-size: 16px;
+}
+
 @mixin orange-gradient-button-explore {
   display: block;
   @include border-radius(10px); // border radius

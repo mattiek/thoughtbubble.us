@@ -413,6 +413,10 @@ body {
     margin: 0 auto;
     @include orange-gradient-button;
 
+    &:hover {
+      @include orange-gradient-button-hover;
+    }
+
     &.large-text {
       font-size: 16px;
     }

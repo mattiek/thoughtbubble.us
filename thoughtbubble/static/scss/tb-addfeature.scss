@@ -13,6 +13,12 @@
     width: 322px;
     margin: 80px auto 0;
     margin-bottom: 20px;
+
+  &:hover {
+    @include orange-gradient-button-hover;
+  }
+
+
 }
 
 #form-wrapper {
@@ -137,6 +143,11 @@ form .row .row.second-row {
     line-height: 25px;
     text-align: center;
     font-size: 12px;
+
+  &:hover {
+    @include orange-gradient-button-hover;
+  }
+
 }
 
 .save-edit-list li:first-child {

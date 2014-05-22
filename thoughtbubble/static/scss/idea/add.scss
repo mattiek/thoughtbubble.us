@@ -17,6 +17,11 @@
     width: 322px;
     clear: both;
     margin: 40px auto;
+
+  &:hover {
+    @include orange-gradient-button-hover;
+  }
+
 }
 
 #form-wrapper {

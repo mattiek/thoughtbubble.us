@@ -6,7 +6,7 @@
 }
 
 /* text color */
-/* line 122, ../scss/partials/_general.scss */
+/* line 129, ../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -141,12 +141,25 @@ i {
   font-size: 14px;
 }
 /* line 100, ../scss/tb-privacy-mobile.scss */
+.join-button a:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+}
+/* line 105, ../scss/tb-privacy-mobile.scss */
 .join-button a:visited {
   color: #fff;
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 103, ../scss/tb-privacy-mobile.scss */
+/* line 108, ../scss/tb-privacy-mobile.scss */
 .join-button a:after {
   content: ".";
   display: block;
@@ -155,7 +168,7 @@ i {
   visibility: hidden;
 }
 
-/* line 114, ../scss/tb-privacy-mobile.scss */
+/* line 119, ../scss/tb-privacy-mobile.scss */
 h2.join-button a {
   float: none;
   text-align: center;

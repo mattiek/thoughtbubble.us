@@ -6,7 +6,7 @@
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -38,14 +38,27 @@
   float: right;
   margin-right: 120px;
 }
+/* line 13, ../../scss/location/list-mobile.scss */
+.submit:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+}
 
-/* line 15, ../../scss/location/list-mobile.scss */
+/* line 19, ../../scss/location/list-mobile.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 20, ../../scss/location/list-mobile.scss */
+/* line 24, ../../scss/location/list-mobile.scss */
 #add-photo {
   width: 80px;
   height: 79px;
@@ -62,7 +75,7 @@
   background-position: 57px 57px;
 }
 
-/* line 35, ../../scss/location/list-mobile.scss */
+/* line 39, ../../scss/location/list-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -76,7 +89,7 @@ input[type="text"] {
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 42, ../../scss/location/list-mobile.scss */
+/* line 46, ../../scss/location/list-mobile.scss */
 textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -88,7 +101,7 @@ textarea {
   max-width: 100%;
 }
 
-/* line 50, ../../scss/location/list-mobile.scss */
+/* line 54, ../../scss/location/list-mobile.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -99,12 +112,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 60, ../../scss/location/list-mobile.scss */
+/* line 64, ../../scss/location/list-mobile.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 64, ../../scss/location/list-mobile.scss */
+/* line 68, ../../scss/location/list-mobile.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -115,23 +128,23 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 72, ../../scss/location/list-mobile.scss */
+/* line 76, ../../scss/location/list-mobile.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 77, ../../scss/location/list-mobile.scss */
+/* line 81, ../../scss/location/list-mobile.scss */
 .chosen-container-single .chosen-default, .chosen-container-single .chosen-single, .chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 81, ../../scss/location/list-mobile.scss */
+/* line 85, ../../scss/location/list-mobile.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 84, ../../scss/location/list-mobile.scss */
+/* line 88, ../../scss/location/list-mobile.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -139,12 +152,12 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
 }
 
-/* line 92, ../../scss/location/list-mobile.scss */
+/* line 96, ../../scss/location/list-mobile.scss */
 .chosen-container {
   margin-bottom: 15px;
 }
 
-/* line 96, ../../scss/location/list-mobile.scss */
+/* line 100, ../../scss/location/list-mobile.scss */
 .auto-hint {
   color: #aaa;
 }

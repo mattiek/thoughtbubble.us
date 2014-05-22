@@ -6,7 +6,7 @@
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -67,7 +67,7 @@
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -122,8 +122,21 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
+/* line 15, ../../scss/partials/_buttons.scss */
+.blue:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+  background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+}
 
-/* line 17, ../../scss/partials/_buttons.scss */
+/* line 20, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -142,7 +155,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -288,7 +301,7 @@ ol.slats li p span.meta {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -583,7 +596,7 @@ a.flag img {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */

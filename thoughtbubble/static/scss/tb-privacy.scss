@@ -105,6 +105,11 @@ i {
     padding: 5px;
     font-size: 14px;
 
+    &:hover {
+      @include orange-gradient-button-hover;
+    }
+
+
     &:visited {
       @include white-museo;
     }

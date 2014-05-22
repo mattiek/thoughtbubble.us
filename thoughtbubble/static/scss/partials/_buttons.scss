@@ -12,6 +12,9 @@ a.orange {
 
 .blue {
   @include  blue-gradient-button;
+  &:hover {
+    @include  blue-gradient-button-hover;
+  }
 }
 
 .buttonize {

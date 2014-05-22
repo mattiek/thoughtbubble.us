@@ -6,7 +6,7 @@
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -24,7 +24,7 @@
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -291,7 +291,7 @@ a.flag img {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -346,8 +346,21 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
+/* line 15, ../../scss/partials/_buttons.scss */
+.blue:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+  background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+}
 
-/* line 17, ../../scss/partials/_buttons.scss */
+/* line 20, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;
@@ -366,7 +379,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -479,7 +492,7 @@ ol.slats li p span.meta {
 }
 
 /* text color */
-/* line 122, ../../scss/partials/_general.scss */
+/* line 129, ../../scss/partials/_general.scss */
 .small-heading {
   color: #9d9d9d;
   /* text color */
@@ -511,14 +524,27 @@ ol.slats li p span.meta {
   float: right;
   margin-right: 120px;
 }
+/* line 20, ../../scss/location/detail-mobile.scss */
+.submit:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+}
 
-/* line 21, ../../scss/location/detail-mobile.scss */
+/* line 26, ../../scss/location/detail-mobile.scss */
 #form-wrapper {
   width: 600px;
   margin: 0 auto;
 }
 
-/* line 29, ../../scss/location/detail-mobile.scss */
+/* line 34, ../../scss/location/detail-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
@@ -532,7 +558,7 @@ input[type="text"] {
   font-family: "Museo Sans", sans-serif;
 }
 
-/* line 36, ../../scss/location/detail-mobile.scss */
+/* line 41, ../../scss/location/detail-mobile.scss */
 textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -544,7 +570,7 @@ textarea {
   max-width: 100%;
 }
 
-/* line 44, ../../scss/location/detail-mobile.scss */
+/* line 49, ../../scss/location/detail-mobile.scss */
 .file-picker-input {
   width: 80px;
   height: 79px;
@@ -555,12 +581,12 @@ textarea {
   background-position: 23px 24px;
 }
 
-/* line 54, ../../scss/location/detail-mobile.scss */
+/* line 59, ../../scss/location/detail-mobile.scss */
 form .row .row.second-row {
   margin-top: 15px;
 }
 
-/* line 58, ../../scss/location/detail-mobile.scss */
+/* line 63, ../../scss/location/detail-mobile.scss */
 .copy {
   color: #6d6d6d;
   /* text color */
@@ -571,23 +597,23 @@ form .row .row.second-row {
   margin-bottom: 0px;
 }
 
-/* line 66, ../../scss/location/detail-mobile.scss */
+/* line 71, ../../scss/location/detail-mobile.scss */
 #id_what_for {
   width: 228px;
 }
 
-/* line 71, ../../scss/location/detail-mobile.scss */
+/* line 76, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-default, .chosen-container-single .chosen-single, .chosen-container-single .chosen-drop .chosen-results li {
   color: #6d6d6d;
   /* text color */
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 75, ../../scss/location/detail-mobile.scss */
+/* line 80, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 78, ../../scss/location/detail-mobile.scss */
+/* line 83, ../../scss/location/detail-mobile.scss */
 .chosen-container-single .chosen-single div b {
   display: block;
   width: 100%;
@@ -595,18 +621,18 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
 }
 
-/* line 90, ../../scss/location/detail-mobile.scss */
+/* line 95, ../../scss/location/detail-mobile.scss */
 .auto-hint {
   color: #aaa;
 }
 
-/* line 94, ../../scss/location/detail-mobile.scss */
+/* line 99, ../../scss/location/detail-mobile.scss */
 #map {
   width: 100%;
   height: 265px;
 }
 
-/* line 99, ../../scss/location/detail-mobile.scss */
+/* line 104, ../../scss/location/detail-mobile.scss */
 #header {
   background: #33bdd4;
   color: #fff;
@@ -621,7 +647,7 @@ form .row .row.second-row {
   margin-bottom: 20px;
 }
 
-/* line 111, ../../scss/location/detail-mobile.scss */
+/* line 116, ../../scss/location/detail-mobile.scss */
 .about {
   color: #53b8d1;
   /* text color */
@@ -630,16 +656,16 @@ form .row .row.second-row {
   font-size: 38px / 2;
 }
 
-/* line 117, ../../scss/location/detail-mobile.scss */
+/* line 122, ../../scss/location/detail-mobile.scss */
 #news, #pictures, #partners {
   min-height: 100px;
 }
 
-/* line 121, ../../scss/location/detail-mobile.scss */
+/* line 126, ../../scss/location/detail-mobile.scss */
 #pictures {
   width: 270px;
 }
-/* line 123, ../../scss/location/detail-mobile.scss */
+/* line 128, ../../scss/location/detail-mobile.scss */
 #pictures > div {
   float: left;
   width: 80px;
@@ -647,11 +673,11 @@ form .row .row.second-row {
   border-radius: 10px;
   margin-left: 10px;
 }
-/* line 130, ../../scss/location/detail-mobile.scss */
+/* line 135, ../../scss/location/detail-mobile.scss */
 #pictures > div:first-child {
   margin-left: 0px;
 }
-/* line 134, ../../scss/location/detail-mobile.scss */
+/* line 139, ../../scss/location/detail-mobile.scss */
 #pictures > div .cloak {
   background: #FFFFFF;
   width: 100%;
@@ -659,19 +685,19 @@ form .row .row.second-row {
   line-height: 80px;
   text-align: center;
 }
-/* line 141, ../../scss/location/detail-mobile.scss */
+/* line 146, ../../scss/location/detail-mobile.scss */
 #pictures > div .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 150, ../../scss/location/detail-mobile.scss */
+/* line 155, ../../scss/location/detail-mobile.scss */
 .idea-details-list {
   float: right;
   padding-right: 20px;
   width: 150px;
 }
-/* line 154, ../../scss/location/detail-mobile.scss */
+/* line 159, ../../scss/location/detail-mobile.scss */
 .idea-details-list li {
   margin: 10px auto;
   font-size: 14px;
