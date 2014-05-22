@@ -37,11 +37,44 @@ class LocationList(ListView):
     def get_template_names(self):
         return self.request.device_template_dir + super(LocationList, self).get_template_names().pop()
 
+from django.db.models import Q, Count
 
 class LocationDetail(DetailView):
     model = Location
     lookup_field = 'slug'
     lookup_url_kwarg = 'location'
+
+    def get_ideas(self):
+
+        id = self.kwargs.get('location',None)
+        location = Location.objects.get(slug=id)
+        ### Basic parameters
+        qs = location.some_ideas.all()
+        ### Ordering
+        ordering = self.request.GET.get('order',None)
+        if (ordering == 'support'):
+            qs = qs.annotate(num_books=Count('ideasupport')).order_by('-num_books')
+        else:
+            qs = qs.order_by('-date_created')
+
+
+        ### What
+        what = self.request.GET.get('what',None)
+        if what:
+            qs = qs.filter(what_kind=what)
+
+
+        ### When
+        when = self.request.GET.get('when',None)
+        if when and when.lower() != "when":
+            qs = qs.filter(what_for=when)
+
+                # else:
+                #     locations = Location.objects.filter(organization__in=organizations)
+
+                # return qs
+
+        return qs
 
     def get_context_data(self, **kwargs):
         context = super(LocationDetail, self).get_context_data(**kwargs)
