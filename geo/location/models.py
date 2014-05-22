@@ -84,6 +84,10 @@ class Location(models.Model):
     def get_id(self):
         return self.name.lower().replace(' ','-')
 
+    def get_explore_link(self):
+        if self.organization:
+            return reverse('sherlock', args=[url_safe(self.organization.place.slug), url_safe(self.organization.slug)])
+
     def get_api_detail_url(self):
         if self.organization.place:
             return reverse('locations-detail', args=[
