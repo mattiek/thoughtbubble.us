@@ -257,7 +257,7 @@ class Organization(models.Model):
             'share_copy': "Check out what people are saying about %s and join the conversation!" % (self.title),
             'share_image': 'http://thoughtbubble.us/static/images/TB_socialicon.png',
             'share_caption': 'thoughtbubble.us',
-            'share_name': "Check out what people are saying about %s and join the conversation! %s" % (self.title),
+            'share_name': "Check out what people are saying about %s and join the conversation!" % (self.title),
             'share_link': 'http://thoughtbubble.us' + self.get_absolute_url(),
         }
 
