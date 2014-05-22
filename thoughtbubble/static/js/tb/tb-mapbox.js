@@ -7,8 +7,14 @@ if ("undefined" === typeof TB) {
     TB.Map = (function(){
         var drawn_object = [];
 
-        var default_lat = region[1] || 39.961;
-        var default_lng = region[0] || -82.998;
+        var default_lat =  39.961;
+        var default_lng = -82.998;
+
+        if (region) {
+            default_lat = region[1];
+            default_lng = region[0];
+        }
+
         var default_zoom = 11;
         var default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
 //        var default_map = 'mattiej.map-wodu25gx';//'mlreed328.map-0chlhqvz';
