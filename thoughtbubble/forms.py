@@ -154,7 +154,14 @@ class LoginForm(forms.Form):
 
 
 class ContactForm(forms.Form):
-    SUBJECTS = Choices('Membership','Sign-up','Privacy','General')
+    SUBJECTS = Choices(
+                        'General',
+                        'Report Misuse',
+
+                       'Membership',
+                       'Sign-Up',
+                       'FAQs',
+                        'Terms & Privacy')
     email = forms.EmailField()
     subject = forms.ChoiceField(choices=SUBJECTS)
     body = forms.Textarea()

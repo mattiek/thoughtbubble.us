@@ -356,3 +356,4 @@ class UserProfileFormView(VanillaFormView,AjaxResponseMixin, JSONResponseMixin):
 
     def get_template_names(self):
         return self.request.device_template_dir + super(UserProfileFormView, self).get_template_names()
+
