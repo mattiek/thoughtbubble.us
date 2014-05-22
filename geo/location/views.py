@@ -38,6 +38,8 @@ class LocationList(ListView):
         return self.request.device_template_dir + super(LocationList, self).get_template_names().pop()
 
 from django.db.models import Q, Count
+from ideation.idea.forms import FilterForm, FOR_CHOICES_AND_EMPTY
+from ideation.idea.models import IdeaType
 
 class LocationDetail(DetailView):
     model = Location
@@ -84,13 +86,36 @@ class LocationDetail(DetailView):
         #     context['organization'] = Organization.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
         location = Location.objects.get(slug=id)
-        context['ideas'] = location.some_ideas.all() #Idea.objects.filter(content_object=location)
+
         context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
         pics = LocationImage.objects.filter(location=location).order_by('ordering','-id').distinct('ordering')[:4]
 
 
         context['pictures'] = pics
         context['partners'] = location.partners.all()
+
+        f = FilterForm()
+        # f.fields['where'].initial = Location.objects.filter(organization=self.organization)
+        what = self.request.GET.get('what',None)
+        if what:
+            f.fields['what'].initial = IdeaType.objects.get(pk=what)
+
+        when = self.request.GET.get('when',None)
+        if when:
+            for i in FOR_CHOICES_AND_EMPTY:
+                if i[0] == when:
+                    f.fields['when'].initial = i[0]
+                    # f.fields['when'].initial = FOR_CHOICES_AND_EMPTY[when]
+
+
+        context['filterform'] = f
+
+
+        ordering = self.request.GET.get('order',None)
+
+        context['ideas'] = self.get_ideas()
+
+        context['ordering'] = ordering
         return context
 
     def get_template_names(self):
