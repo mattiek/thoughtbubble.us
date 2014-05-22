@@ -166,6 +166,13 @@ class Location(models.Model):
             "popupAnchor": [0, -25]
         }
 
+        properties['highlight'] = {
+            "iconUrl": "/static/images/large-featured-location-hover.png",
+            "iconSize": [47, 60],
+            "iconAnchor": [30, 44],
+            "popupAnchor": [0, -25]
+        }
+
         # properties['icon'] = {
         #     "iconUrl": "http://placekitten.com/50/50",
         #     "iconSize": [50, 50], # size of the icon
