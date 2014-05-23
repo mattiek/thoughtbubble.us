@@ -147,10 +147,12 @@ form .row .row.second-row {
 
 #news, #pictures, #partners {
   min-height: 100px;
+  clear: both;
 }
 
 #partners {
-  
+
+
   img {
     max-width:140px;
     margin-right: 20px;
