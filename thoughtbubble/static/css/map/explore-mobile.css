@@ -60,8 +60,21 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
 }
+/* line 12, ../../scss/partials/_buttons.scss */
+a.orange:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+}
 
-/* line 13, ../../scss/partials/_buttons.scss */
+/* line 17, ../../scss/partials/_buttons.scss */
 .blue {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -79,7 +92,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 15, ../../scss/partials/_buttons.scss */
+/* line 19, ../../scss/partials/_buttons.scss */
 .blue:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -93,7 +106,7 @@ a.orange.supporting.activated, a.orange.s-button.activated {
   background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
 }
 
-/* line 20, ../../scss/partials/_buttons.scss */
+/* line 24, ../../scss/partials/_buttons.scss */
 .buttonize {
   display: block;
   float: left;

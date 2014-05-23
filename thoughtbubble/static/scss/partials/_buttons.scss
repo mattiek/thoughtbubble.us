@@ -8,6 +8,10 @@ a.orange {
   &.s-button.activated {
     color: #f9c98c; /* text color */
   }
+
+  &:hover {
+    @include orange-gradient-button-hover;
+  }
 }
 
 .blue {
