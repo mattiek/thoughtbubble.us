@@ -14,6 +14,7 @@
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 2, ../../scss/neat/grid/_grid.scss */
@@ -32,6 +33,7 @@
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 2, ../../scss/neat/grid/_grid.scss */
@@ -278,6 +280,7 @@
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 3, ../../scss/partials/_buttons.scss */
@@ -379,6 +382,7 @@ a.orange:hover {
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 3, ../../scss/partials/_sharing.scss */
@@ -468,6 +472,7 @@ a.orange:hover {
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 4, ../../scss/partials/_comments.scss */
@@ -562,6 +567,7 @@ a.orange:hover {
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 50, filtering/*.png */

@@ -103,6 +103,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 12, ../scss/navV2-mobile.scss */
@@ -825,6 +826,7 @@ button.mfp-close:active {
   font-size: 15px;
   margin-bottom: 10px;
   margin-top: 20px;
+  clear: both;
 }
 
 /* line 8, ../scss/global-mobile.scss */
