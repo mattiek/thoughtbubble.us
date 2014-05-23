@@ -1,0 +1,94 @@
+@import "partials/general";
+@import "idea/idea_mobile";
+@import "partials/buttons";
+@import "partials/sharing";
+@import "partials/chosen";
+@import "partials/comments";
+@import "partials/filtering";
+
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+
+
+
+#illustration {
+//    background-image: image-url('illustration-ship.png');
+
+  @include media($mobile) {
+    background-image: none;
+    height: auto;
+  }
+}
+
+.copy {
+    @include gray-museo;
+    font-size: 15px;
+    text-align: left;
+    text-indent: 10px;
+    margin-bottom: 0px;
+}
+
+#id_what_for {
+    width: 228px;
+}
+
+
+#idea-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  @include gray-museo;
+  font-size: 38px / 2;
+
+  b {
+    @include header-blue-museo;
+  }
+
+}
+
+.row {
+  margin-bottom: 5px;
+  &.extrapad {
+    margin-bottom: 20px;
+  }
+}
+
+
+.support {
+  color: $tb-orange;
+}
+
+#id_comment {
+  border: 1px solid #d8f1f6;
+  border-radius: 10px;
+}
+
+
+.chzn-container-single .chzn-search {
+  display:none;
+}
+
+.idea-details-list {
+ float: right;
+ padding-right: 20px;
+  width: 150px;
+  text-align: right;
+  li {
+    margin: 7px auto;
+    font-size: 14px;
+    @include header-blue-museo;
+    color: $tb_link_blue;
+  }
+}
+
+select {
+  width: 300px;
+}
+
+#filtering {
+  text-align: center;
+}
+
+#sort_by {
+  text-align: left;
+}

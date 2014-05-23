@@ -1,0 +1,366 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 6, ../../scss/partials/_inputs.scss */
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 28, ../../scss/partials/_inputs.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url(../../images/polaroid-camera-composite.png);
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 38, ../../scss/partials/_inputs.scss */
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.875em;
+  margin: 0 0 1em 0;
+  padding: 0.5em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  -moz-transition: -moz-box-shadow 0.45s, border-color 0.45s ease-in-out;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+/* line 5, ../../scss/news/add.scss */
+#illustration {
+  width: 930px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+/* line 14, ../../scss/news/add.scss */
+#id_content_type, #id_object_id, [for=id_content_type], [for=id_object_id] {
+  display: none;
+}
+
+/* line 18, ../../scss/news/add.scss */
+.submit {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  height: 33px;
+  width: 322px;
+  clear: both;
+  margin: 40px auto;
+}
+/* line 25, ../../scss/news/add.scss */
+.submit:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+}
+
+/* line 31, ../../scss/news/add.scss */
+#form-wrapper {
+  width: 600px;
+  margin: 0 auto;
+}
+
+/* line 36, ../../scss/news/add.scss */
+#pictures {
+  width: 200px;
+}
+
+/* line 40, ../../scss/news/add.scss */
+#add-photo {
+  width: 80px;
+  height: 79px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  margin-left: -100px;
+  position: absolute;
+  background-image: url('../../images/add-photo.png?1390687046');
+  background-repeat: no-repeat;
+  background-position: 57px 57px;
+}
+
+/* line 55, ../../scss/news/add.scss */
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  /*width: 324px;*/
+  height: 25px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 62, ../../scss/news/add.scss */
+textarea {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  font-family: "Museo Sans", sans-serif;
+  min-height: 200px;
+  max-width: 100%;
+}
+
+/* line 69, ../../scss/news/add.scss */
+.file-picker-input {
+  width: 80px;
+  height: 79px;
+  border-radius: 10px;
+  background-color: #dadbdc;
+  background-image: url('../../images/polaroid-camera-composite.png?1390687080');
+  background-repeat: no-repeat;
+  background-position: 23px 24px;
+}
+
+/* line 79, ../../scss/news/add.scss */
+form .row .row.second-row {
+  margin-top: 15px;
+}
+
+/* line 83, ../../scss/news/add.scss */
+.copy {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 91, ../../scss/news/add.scss */
+#id_what_for {
+  width: 228px;
+}
+
+/* line 99, ../../scss/news/add.scss */
+.chzn-container-single .chzn-default, .chzn-container-single .chzn-single, .chzn-container-single .chzn-drop .chzn-results li,
+.chzn-container-single .chosen-default, .chzn-container-single .chosen-single, .chzn-container-single .chosen-drop .chosen-results li,
+.chosen-container-single .chzn-default,
+.chosen-container-single .chzn-single,
+.chosen-container-single .chzn-drop .chzn-results li,
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+/* line 104, ../../scss/news/add.scss */
+.chzn-container-single .chzn-default,
+.chzn-container-single .chosen-default,
+.chosen-container-single .chzn-default,
+.chosen-container-single .chosen-default {
+  color: #bbb;
+}
+/* line 108, ../../scss/news/add.scss */
+.chzn-container-single .chzn-single div b,
+.chzn-container-single .chosen-single div b,
+.chosen-container-single .chzn-single div b,
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
+}
+
+/* line 117, ../../scss/news/add.scss */
+.chzn-container,
+.chosen-container {
+  margin-bottom: 15px;
+}
+
+/* line 121, ../../scss/news/add.scss */
+.auto-hint {
+  color: #aaa;
+}
+
+/* line 125, ../../scss/news/add.scss */
+.chzn-search {
+  display: none;
+}
+
+/* line 129, ../../scss/news/add.scss */
+.want {
+  width: 80px;
+  float: left;
+  padding-top: 5px;
+}
+
+/* line 135, ../../scss/news/add.scss */
+#id_name {
+  width: 520px;
+}
+
+/* line 141, ../../scss/news/add.scss */
+#id_what_kind,
+#id_content_object,
+#id_content_object_place {
+  width: 300px;
+  float: left;
+}
+
+/* line 146, ../../scss/news/add.scss */
+#id_what_for_chosen {
+  margin-left: 60px;
+}
+
+/* line 150, ../../scss/news/add.scss */
+#id_what_for {
+  width: 218px;
+}
+
+/* line 154, ../../scss/news/add.scss */
+#id_description {
+  width: 300px;
+}
+
+/* line 158, ../../scss/news/add.scss */
+.additional {
+  width: 260px;
+  float: left;
+  margin-bottom: 10px;
+}
+/* line 163, ../../scss/news/add.scss */
+.additional.fl {
+  width: 340px;
+}
+
+/* line 168, ../../scss/news/add.scss */
+.file-picker-input {
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 175, ../../scss/news/add.scss */
+#pictures {
+  float: right;
+  width: 270px;
+}
+
+/* line 180, ../../scss/news/add.scss */
+#id_pic1, #id_pic2, #id_pic3, #id_pic4 {
+  margin-bottom: 20px;
+}
+
+/* line 184, ../../scss/news/add.scss */
+.cloak {
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  line-height: 80px;
+}
+/* line 190, ../../scss/news/add.scss */
+.cloak img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* line 196, ../../scss/news/add.scss */
+#id_links {
+  width: 180px;
+}

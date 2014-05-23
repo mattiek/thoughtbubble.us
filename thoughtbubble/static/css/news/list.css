@@ -1,0 +1,772 @@
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 7, ../../scss/idea/_idea.scss */
+.idea-cap {
+  color: #7a7a7a;
+  /* text color */
+  position: relative;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  width: 576px;
+  height: 113px;
+  margin: 0 auto;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
+  background-image: linear-gradient(to right, #daf3f8 80%, #fef8ee 80%);
+}
+@media screen and (max-width: 480px) {
+  /* line 7, ../../scss/idea/_idea.scss */
+  .idea-cap {
+    width: 100%;
+    background-image: none;
+    background-color: #daf3f8;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+  }
+}
+/* line 30, ../../scss/idea/_idea.scss */
+.idea-cap a {
+  text-decoration: none;
+}
+/* line 33, ../../scss/idea/_idea.scss */
+.idea-cap a.orange {
+  color: #ffffff;
+}
+/* line 35, ../../scss/idea/_idea.scss */
+.idea-cap a.orange:visited {
+  color: #ffffff;
+}
+/* line 41, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap {
+  padding-top: 25px;
+  margin-left: 20px;
+  width: 440px;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  /* line 41, ../../scss/idea/_idea.scss */
+  .idea-cap .left-idea-cap {
+    margin-left: 0px;
+    width: 320px;
+    background-color: #daf3f8;
+  }
+}
+/* line 53, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap p {
+  color: #4585c3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  /* line 53, ../../scss/idea/_idea.scss */
+  .idea-cap .left-idea-cap p {
+    text-indent: 20px;
+  }
+}
+/* line 63, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting {
+  width: 75.5px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+/* line 72, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting i {
+  background-image: url('../../images/white-star.png?1380669755');
+  background-repeat: no-repeat;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 80, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting .unsupported {
+  display: block;
+  font-size: 11px;
+}
+/* line 84, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting .supported {
+  display: none;
+  font-size: 11px;
+}
+/* line 91, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting.activated .unsupported {
+  display: none;
+  font-size: 11px;
+}
+/* line 95, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .supporting.activated .supported {
+  display: block;
+  font-size: 11px;
+}
+/* line 102, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .commenting {
+  width: 65px;
+  height: 22px;
+  line-height: 22px;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 11px;
+}
+/* line 121, ../../scss/idea/_idea.scss */
+.idea-cap .left-idea-cap .sharing {
+  display: inline-block;
+  list-style-type: none;
+  margin-top: 0px;
+  float: none;
+}
+/* line 135, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap {
+  position: absolute;
+  list-style-type: none;
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  color: #797878;
+  /* text color */
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-left: 0px;
+  right: 0px;
+  top: 0px;
+}
+/* line 148, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap li {
+  margin-top: 5px;
+  line-height: 1.3em;
+}
+/* line 152, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap li:first-child {
+  margin-top: 0px;
+}
+@media screen and (max-width: 480px) {
+  /* line 135, ../../scss/idea/_idea.scss */
+  .idea-cap .right-idea-cap {
+    position: relative;
+    padding-top: 0px;
+    width: 320px;
+    background-color: #fef8ee;
+    padding: 20px;
+  }
+  /* line 166, ../../scss/idea/_idea.scss */
+  .idea-cap .right-idea-cap li {
+    display: inline-block;
+    width: 100px;
+  }
+}
+/* line 172, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap .emphasis {
+  color: #f37d23;
+  /* text color */
+  background: #FFF;
+  border-radius: 7px;
+  padding: 2px 7px;
+}
+/* line 180, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap .support-star {
+  background-image: url('../../images/orange-star.png?1380665340');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+/* line 188, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap .support-star-orange {
+  width: 12px;
+  height: 10px;
+  background: url('../../images/big-orange-star.png?1397523106');
+  background-size: 100%;
+  margin-top: 6px;
+  margin-right: 3px;
+  display: block;
+  float: left;
+}
+/* line 199, ../../scss/idea/_idea.scss */
+.idea-cap .right-idea-cap .comments-bubble {
+  background-image: url('../../images/orange-comment.png?1390687077');
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: 15% 45%;
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 211, ../../scss/idea/_idea.scss */
+  .idea-interactions {
+    margin: 20px auto;
+    width: 250px;
+  }
+}
+
+/* line 222, ../../scss/idea/_idea.scss */
+.supporting,
+.dislike,
+.commenting,
+.flag {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 232, ../../scss/idea/_idea.scss */
+a.flag {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  display: inline-block;
+  float: none;
+  vertical-align: middle;
+  border-radius: 7px;
+  margin-left: 5px;
+}
+/* line 241, ../../scss/idea/_idea.scss */
+a.flag img {
+  max-width: 70%;
+  max-height: 70%;
+  vertical-align: middle;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 3, ../../scss/partials/_buttons.scss */
+a.orange {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+/* line 8, ../../scss/partials/_buttons.scss */
+a.orange.supporting.activated, a.orange.s-button.activated {
+  color: #f9c98c;
+  /* text color */
+}
+
+/* line 13, ../../scss/partials/_buttons.scss */
+.blue {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
+  border: none;
+  color: #fff;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  display: block;
+}
+/* line 15, ../../scss/partials/_buttons.scss */
+.blue:hover {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  background-image: -webkit-linear-gradient(top, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+  background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
+}
+
+/* line 20, ../../scss/partials/_buttons.scss */
+.buttonize {
+  display: block;
+  float: left;
+  width: 75px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-size: 11px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 3, ../../scss/partials/_sharing.scss */
+.sharing {
+  list-style-type: none;
+  display: inline-block;
+}
+/* line 6, ../../scss/partials/_sharing.scss */
+.sharing li {
+  display: inline-block;
+}
+/* line 9, ../../scss/partials/_sharing.scss */
+.sharing li span {
+  color: #7b7b7b;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  vertical-align: super;
+}
+/* line 16, ../../scss/partials/_sharing.scss */
+.sharing li a {
+  display: block;
+}
+/* line 20, ../../scss/partials/_sharing.scss */
+.sharing li a.share-fb {
+  background: url('../../images/small-blue-facebook.png?1390687080') no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 15px;
+}
+/* line 27, ../../scss/partials/_sharing.scss */
+.sharing li a.share-twitter {
+  background: url('../../images/small-blue-twitter.png?1390687081') no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+/* line 34, ../../scss/partials/_sharing.scss */
+.sharing li a.share-linkedin {
+  background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
+  background-size: 100%;
+  width: 15px;
+  height: 15px;
+}
+
+/* line 3, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+}
+
+/* line 9, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-default {
+  color: #bbb;
+}
+
+/* line 13, ../../scss/partials/_chosen.scss */
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url(../../images/orange-arrow.png) no-repeat 0 6px;
+}
+
+/* line 24, ../../scss/partials/_chosen.scss */
+.auto-hint {
+  color: #aaa;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 4, ../../scss/partials/_comments.scss */
+.comments {
+  clear: both;
+}
+/* line 6, ../../scss/partials/_comments.scss */
+.comments ul {
+  list-style-type: none;
+}
+/* line 12, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft img.talkbubb {
+  float: left;
+}
+/* line 16, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleleft .comment_text {
+  margin-left: 6%;
+}
+/* line 22, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright img.talkbubb {
+  float: right;
+}
+/* line 26, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright .comment_text {
+  margin-right: 6%;
+}
+/* line 31, ../../scss/partials/_comments.scss */
+.comments .comment_li {
+  margin-top: 10px;
+}
+/* line 35, ../../scss/partials/_comments.scss */
+.comments .comment_text {
+  border: 1px solid #d8f1f6;
+  border-radius: 5px;
+  color: #adafb3;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 12px;
+  font-style: italic;
+  text-indent: 10px;
+  width: 94%;
+  padding: 5px 0px;
+}
+/* line 47, ../../scss/partials/_comments.scss */
+.comments .comment_text .comment_meta {
+  float: right;
+  margin-right: 5px;
+}
+
+/* line 64, ../../scss/partials/_comments.scss */
+.comments_length p {
+  float: left;
+  margin-left: 40px;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+/* line 71, ../../scss/partials/_comments.scss */
+.comments_length p:first-child {
+  margin-left: 0;
+}
+
+/* line 77, ../../scss/partials/_comments.scss */
+.comment_support {
+  color: #f37d23;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 10px;
+  font-style: normal;
+}
+/* line 83, ../../scss/partials/_comments.scss */
+.comment_support img {
+  vertical-align: initial;
+  margin-right: 3px;
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* text color */
+/* line 129, ../../scss/partials/_general.scss */
+.small-heading {
+  color: #9d9d9d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/* line 50, filtering/*.png */
+.filtering-sprite, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-single.chzn-single-with-drop b {
+  background: url('../../images/filtering-s20e78543db.png') no-repeat;
+}
+
+/* line 6, ../../scss/partials/_filtering.scss */
+#filtering {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+  width: 570px;
+  margin: 0 auto 10px;
+}
+@media screen and (max-width: 480px) {
+  /* line 6, ../../scss/partials/_filtering.scss */
+  #filtering {
+    width: 100%;
+  }
+}
+
+/* line 22, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single,
+.chosen-container-single .chzn-default,
+.chosen-container-single .chosen-default,
+.chosen-container-single .chosen-single,
+.chosen-container-single .chosen-drop .chosen-results li {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 14px;
+}
+
+/* line 30, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single div {
+  background: transparent;
+  border: none;
+  width: 14px;
+}
+/* line 34, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single div b {
+  background-position: 0 0;
+  height: 7px;
+  margin-top: 8px;
+}
+/* line 44, ../../scss/partials/_filtering.scss */
+.chzn-container-single .chzn-single.chzn-single-with-drop b {
+  background-position: 0 -7px;
+}
+
+/* line 53, ../../scss/partials/_filtering.scss */
+#order {
+  width: 150px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+@media screen and (max-width: 480px) {
+  /* line 53, ../../scss/partials/_filtering.scss */
+  #order {
+    width: 100%;
+    margin: 5px 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* line 64, ../../scss/partials/_filtering.scss */
+  #id_where {
+    width: 100%;
+    margin: 0px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* line 71, ../../scss/partials/_filtering.scss */
+  .chosen-container {
+    margin-bottom: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* line 77, ../../scss/partials/_filtering.scss */
+  .chzn-container-single .chzn-single,
+  .chosen-container-single .chosen-single {
+    background-image: none;
+    background: #ffffff;
+    border: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 0px 5px white;
+    -moz-box-shadow: 0px 0px 5px white;
+    box-shadow: 0px 0px 5px white;
+    width: 100%;
+  }
+}
+
+/* line 91, ../../scss/partials/_filtering.scss */
+#sort_by {
+  vertical-align: super;
+}
+@media screen and (max-width: 480px) {
+  /* line 91, ../../scss/partials/_filtering.scss */
+  #sort_by {
+    display: block;
+    padding: 10px;
+    background-color: #ffffff;
+  }
+}
+
+/* line 2, ../../scss/neat/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  /* line 15, ../../scss/news/list.scss */
+  #illustration {
+    background-image: none;
+    height: auto;
+  }
+}
+
+/* line 24, ../../scss/news/list.scss */
+.copy {
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 15px;
+  text-align: left;
+  text-indent: 10px;
+  margin-bottom: 0px;
+}
+
+/* line 32, ../../scss/news/list.scss */
+#id_what_for {
+  width: 228px;
+}
+
+/* line 37, ../../scss/news/list.scss */
+#idea-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  color: #6d6d6d;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  font-size: 38px / 2;
+}
+/* line 43, ../../scss/news/list.scss */
+#idea-wrapper b {
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+}
+
+/* line 49, ../../scss/news/list.scss */
+.row {
+  margin-bottom: 5px;
+}
+/* line 51, ../../scss/news/list.scss */
+.row.extrapad {
+  margin-bottom: 20px;
+}
+
+/* line 57, ../../scss/news/list.scss */
+.support {
+  color: #f3812b;
+}
+
+/* line 61, ../../scss/news/list.scss */
+#id_comment {
+  border: 1px solid #d8f1f6;
+  border-radius: 10px;
+}
+
+/* line 67, ../../scss/news/list.scss */
+.chzn-container-single .chzn-search {
+  display: none;
+}
+
+/* line 71, ../../scss/news/list.scss */
+.idea-details-list {
+  float: right;
+  padding-right: 20px;
+  width: 150px;
+}
+/* line 75, ../../scss/news/list.scss */
+.idea-details-list li {
+  margin: 10px auto;
+  font-size: 14px;
+  color: #53b8d1;
+  /* text color */
+  font-family: "Museo Sans", sans-serif;
+  color: #4585c3;
+}
