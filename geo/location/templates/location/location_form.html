@@ -87,21 +87,27 @@
 
                 </div>
 
-                    <p class="copy small-heading">news</p>
-            <div class="news pos-rel">
-                <ul class="save-edit-list">
-                    <li>
-                        <a class="submit-type" href="#">edit</a>
-                    </li>
-                    <li>
-                        <a class="submit-type" href="#">save</a>
-                    </li>
-                </ul>
-            </div>
-                    <div id="add-news-image">
+{#                    <p class="copy small-heading">news</p>#}
+{#            <div class="news pos-rel">#}
+{#                <ul class="save-edit-list">#}
+{#                    <li>#}
+{#                        <a class="submit-type" href="#">edit</a>#}
+{#                    </li>#}
+{#                    <li>#}
+{#                        <a class="submit-type" href="#">save</a>#}
+{#                    </li>#}
+{#                </ul>#}
+{#            </div>#}
+{#                    <div id="add-news-image">#}
+{##}
+{#                    </div>#}
+{#                    {{ form.news|add_class:"news-text" }}#}
 
-                    </div>
-                    {{ form.news|add_class:"news-text" }}
+            <div id="news">
+            <div class="label">news</div>
+                <a href="{{ location.get_list_news_url }}" class="blue s-button">List News</a>
+                <a href="{{ location.get_add_news_url }}" class="blue s-button">Add News</a>
+            </div>
 
                     <p class="copy small-heading">pictures</p>
                     {% for picture in form.pictures %}

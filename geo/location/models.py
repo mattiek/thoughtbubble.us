@@ -10,6 +10,7 @@ from ideation.idea.models import Idea
 from django.contrib.contenttypes import generic
 from thoughtbubble.utils import url_safe
 from autoslug import AutoSlugField
+from tbnews.models import NewsItem
 
 MAKI_CHOICES = (
     ('garden', 'Garden'),
@@ -215,6 +216,15 @@ class Location(models.Model):
         return {
             'text': "See what's happening at %s and join the conversation! %s" % (self.name, 'http://thoughtbubble.us' + self.get_absolute_url())
         }
+
+    def get_add_news_url(self):
+        return reverse('add_news_item', args=['loc',self.id])
+
+    def get_list_news_url(self):
+        return reverse('list_news_items', args=['loc',self.id])
+
+    def get_news_items(self):
+        return NewsItem.objects.filter(content_type__name='location', object_id=self.id)
 
     @property
     def get_mapbox_json(self):
