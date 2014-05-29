@@ -24,25 +24,6 @@
   box-sizing: border-box;
 }
 
-/* text color */
-/* line 129, ../../scss/partials/_general.scss */
-.small-heading {
-  color: #9d9d9d;
-  /* text color */
-  font-family: "Museo Sans", sans-serif;
-  font-size: 15px;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  clear: both;
-}
-
-/* line 2, ../../scss/neat/grid/_grid.scss */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 /* line 7, ../../scss/idea/_idea.scss */
 .idea-cap {
   color: #7a7a7a;
@@ -728,32 +709,42 @@ i {
   margin-left: 20px;
 }
 /* line 151, ../../scss/idea/detail.scss */
+#idea-details img {
+  float: left;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+/* line 156, ../../scss/idea/detail.scss */
+#idea-details img + b {
+  margin-top: 4px;
+}
+/* line 162, ../../scss/idea/detail.scss */
 #idea-details a, #idea-details b {
   line-height: 17px;
   display: block;
 }
-/* line 157, ../../scss/idea/detail.scss */
+/* line 168, ../../scss/idea/detail.scss */
 #idea-details p {
   margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }
-/* line 163, ../../scss/idea/detail.scss */
+/* line 174, ../../scss/idea/detail.scss */
 #idea-details::after {
   content: ' ';
   display: block;
 }
 
-/* line 169, ../../scss/idea/detail.scss */
+/* line 180, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 170, ../../scss/idea/detail.scss */
+/* line 181, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
 }
 
-/* line 176, ../../scss/idea/detail.scss */
+/* line 187, ../../scss/idea/detail.scss */
 #map {
   margin-top: 20px;
   width: 100%;

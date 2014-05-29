@@ -1,4 +1,4 @@
-@import "partials/general";
+//@import "partials/general";
 @import "idea/idea";
 @import "partials/buttons";
 @import "partials/sharing";
@@ -147,6 +147,17 @@ i {
   padding: 10px 20px;
   width: 223px;
   margin-left: 20px;
+
+  img {
+    float: left;
+    margin-right: 10px;
+    vertical-align: middle;
+
+    & + b {
+      margin-top: 4px;
+    }
+  }
+
 
   a,b {
 //    white-space: nowrap;
