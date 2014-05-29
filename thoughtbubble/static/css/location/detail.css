@@ -898,3 +898,44 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   color: #4585c3;
 }
+
+/* line 209, ../../scss/location/detail.scss */
+#header {
+  position: relative;
+}
+/* line 211, ../../scss/location/detail.scss */
+#header .sharing {
+  position: absolute;
+  margin-top: 5px;
+  right: 20px;
+}
+/* line 219, ../../scss/location/detail.scss */
+#header .sharing li span {
+  display: none;
+}
+/* line 223, ../../scss/location/detail.scss */
+#header .sharing li a.share-fb {
+  background: url(../../images/facebook-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 21px;
+  height: 18px;
+}
+/* line 229, ../../scss/location/detail.scss */
+#header .sharing li a.share-twitter {
+  background: url(../../images/twitter-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+}
+/* line 235, ../../scss/location/detail.scss */
+#header .sharing li a.share-linkedin {
+  background: url(../../images/linkedin-cloud.png) no-repeat;
+  background-size: 100%;
+  width: 18px;
+  height: 18px;
+}
+
+/* line 246, ../../scss/location/detail.scss */
+.sharing {
+  float: right;
+}
