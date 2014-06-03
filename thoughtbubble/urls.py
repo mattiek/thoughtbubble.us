@@ -5,7 +5,7 @@ from django.contrib.gis import admin
 from filebrowser.sites import site
 
 
-from views import MyConnectionsView, UserProfileFormView
+from views import MyConnectionsView, UserProfileFormView, ContactFormView
 
 admin.autodiscover()
 
@@ -42,6 +42,8 @@ urlpatterns = patterns('',
     url(r'^checkout-thanks/?$', 'thoughtbubble.views.debit_card', name='post_checkout'),
     # url(r'^thankyou/?$', 'thoughtbubble.views.thank_you', name='thank_you'),
     # url('', include('social.apps.django_app.urls', namespace='social')),
+
+    url(r'^contact-us/?$', ContactFormView.as_view(), name='contact_form'),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

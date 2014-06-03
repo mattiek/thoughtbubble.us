@@ -73,15 +73,15 @@ $tb-sky-blue: #6fc4d8;
   display: block;
 }
 
-@mixin orange-gradient-button {
-  @include border-radius(10px); // border radius
-  @include background-clip(padding-box); // prevents bg color from leaking outside the border
-  @include background-image(linear-gradient(bottom, $tb-orange 0%, #f9a533 100%)); // layer fill content
-  border: none;
-  @include white-museo;
-  display: block;
-  //font-size: 16px;
-}
+//@mixin orange-gradient-button {
+//  @include border-radius(10px); // border radius
+//  @include background-clip(padding-box); // prevents bg color from leaking outside the border
+//  @include background-image(linear-gradient(bottom, $tb-orange 0%, #f9a533 100%)); // layer fill content
+//  border: none;
+//  @include white-museo;
+//  display: block;
+//  //font-size: 16px;
+//}
 
 @mixin blue-gradient-button {
   @include border-radius(10px); // border radius

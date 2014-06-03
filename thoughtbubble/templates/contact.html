@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load classnames %}
+
+{% block title %}
+    Contact Form
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-contact.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
+    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
+{% endblock %}
+
+{% block bodyid %}contact{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+
+    {% if success %}
+        <h2>Thanks for your input.</h2>
+    {% else %}
+    <div id="form-wrapper">
+        {% include 'widgets/errors.html' %}
+        <form action="{% url 'contact_form' %}" enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <input type="submit" class="submit orange" value="contact"/>
+        </form>
+    </div>
+    {% endif %}
+
+{% endblock %}
+
+
+{% block footerscripts %}
+    <script type="text/javascript">
+        $('#id_subject').chosen({disable_search_threshold: 10});
+    </script>
+{% endblock %}

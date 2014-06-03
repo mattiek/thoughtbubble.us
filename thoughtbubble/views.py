@@ -357,3 +357,15 @@ class UserProfileFormView(VanillaFormView,AjaxResponseMixin, JSONResponseMixin):
     def get_template_names(self):
         return self.request.device_template_dir + super(UserProfileFormView, self).get_template_names()
 
+
+from forms import ContactForm
+from django.core.mail import send_mail
+
+class ContactFormView(VanillaFormView):
+    form_class = ContactForm
+    template_name = "contact.html"
+
+    def form_valid(self, form):
+        send_mail(form['subject'], form['body'], form['email'],
+                  ['blorenz@gmail.com'], fail_silently=False)
+        return render(self.request, self.template_name, {'success': True})

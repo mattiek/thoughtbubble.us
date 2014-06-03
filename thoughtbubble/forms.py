@@ -162,6 +162,6 @@ class ContactForm(forms.Form):
                        'Sign-Up',
                        'FAQs',
                         'Terms & Privacy')
-    email = forms.EmailField()
+    email = forms.EmailField(error_messages={'required': 'Please enter your email.'})
     subject = forms.ChoiceField(choices=SUBJECTS)
-    body = forms.Textarea()
+    body = forms.CharField(widget=forms.Textarea, error_messages={'required': 'Please enter your message.'})

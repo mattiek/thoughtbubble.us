@@ -694,14 +694,15 @@ button.mfp-close:active {
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
+  margin-bottom: 10px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 534, ../scss/navV2.scss */
+/* line 535, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 538, ../scss/navV2.scss */
+/* line 539, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -709,14 +710,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 544, ../scss/navV2.scss */
+/* line 545, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 555, ../scss/navV2.scss */
+/* line 556, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
