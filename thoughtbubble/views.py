@@ -366,6 +366,6 @@ class ContactFormView(VanillaFormView):
     template_name = "contact.html"
 
     def form_valid(self, form):
-        send_mail(form['subject'], form['body'], form['email'],
+        send_mail(form.cleaned_data['subject'], form.cleaned_data['body'], form.cleaned_data['email'],
                   ['blorenz@gmail.com'], fail_silently=False)
         return render(self.request, self.template_name, {'success': True})
