@@ -1016,3 +1016,8 @@ input.admin-submit.submit {
 .tb-copyright {
   margin-top: 20px;
 }
+
+/* line 180, ../scss/global.scss */
+#contact h2 {
+  text-align: center;
+}
