@@ -31,3 +31,14 @@ var previewThumbs = function(e, data) {
 }
 
 $('.picture').imagePreviewInput({ resize: 30 * 1024, decode: true, quality: 0.5 }).on('load', previewThumbs);
+
+
+$('#id_logo').imagePreviewInput({ resize: 30 * 1024, decode: true, quality: 0.5 }).on('load', function(e, data) {
+    var $preview = $(e.target).css('display', 'inline-block'),
+        $img = $preview.find('img');
+    if (!$img.length) {
+        $img = $('<img/>').appendTo($preview);
+    }
+
+    $img.attr('src', data);
+});

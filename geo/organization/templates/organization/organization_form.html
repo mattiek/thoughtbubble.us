@@ -51,7 +51,8 @@
                     {{ form.linkedin_url|attr:"placeholder:http://"   }}
                 </div>
             </div>
-                <img id="organization-logo" src="{{ organization.get_logo }}" alt=""/>
+                {{ form.logo }}
+{#             <img id="organization-logo" src="{{ organization.get_logo }}" alt=""/>#}
         </div>
 
         {#    About #}

@@ -1,6 +1,7 @@
 from django.contrib.gis import forms
 from models import Organization
 from thoughtbubble.widgets import TypeAheadAdminWidget
+from thoughtbubble.widgets import FilePicker
 
 class OrganizationAdminForm(forms.ModelForm):
    # news = forms.CharField(max_length=255, widget=forms.Textarea(), required=False)
@@ -36,3 +37,6 @@ class OrganizationUpdateForm(forms.ModelForm):
                   'website', 'facebook_url', 'twitter_url',
                   'linkedin_url', 'about', 'sherlock_description'
                   ]
+        widgets = {
+            'logo': FilePicker(),
+            }
