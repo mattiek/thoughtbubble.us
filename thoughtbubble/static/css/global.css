@@ -564,8 +564,9 @@ body:after {
 #update-avatar-overlay #login-error {
   height: 30px;
   margin-bottom: 0px;
+  color: #f02a2a;
 }
-/* line 401, ../scss/navV2.scss */
+/* line 402, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -591,7 +592,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 409, ../scss/navV2.scss */
+/* line 410, ../scss/navV2.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
@@ -617,7 +618,7 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 416, ../scss/navV2.scss */
+/* line 417, ../scss/navV2.scss */
 #login-overlay .submit:hover,
 #logout-overlay .submit:hover,
 #join-overlay .submit:hover,
@@ -634,7 +635,7 @@ body:after {
   background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
   background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
 }
-/* line 420, ../scss/navV2.scss */
+/* line 421, ../scss/navV2.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
@@ -643,7 +644,7 @@ body:after {
   font-size: 16px;
 }
 
-/* line 426, ../scss/navV2.scss */
+/* line 427, ../scss/navV2.scss */
 #dislike-overlay {
   width: 250px;
   background-color: #ffffff;
@@ -652,18 +653,18 @@ body:after {
   font-family: "Museo Sans", sans-serif;
   text-align: center;
 }
-/* line 431, ../scss/navV2.scss */
+/* line 432, ../scss/navV2.scss */
 #dislike-overlay img {
   margin: 30px 0 0;
 }
-/* line 434, ../scss/navV2.scss */
+/* line 435, ../scss/navV2.scss */
 #dislike-overlay p {
   font-style: italic;
   font-size: 12px;
   width: 200px;
   margin: 0 auto 20px;
 }
-/* line 441, ../scss/navV2.scss */
+/* line 442, ../scss/navV2.scss */
 #dislike-overlay h6 {
   color: #6d6d6d;
   /* text color */
@@ -673,7 +674,7 @@ body:after {
   font-size: 12px;
   margin: 10px 0 0;
 }
-/* line 449, ../scss/navV2.scss */
+/* line 450, ../scss/navV2.scss */
 #dislike-overlay a {
   width: 100px;
   height: 30px;
@@ -683,18 +684,18 @@ body:after {
   line-height: 30px;
   color: #FFFFFF;
 }
-/* line 458, ../scss/navV2.scss */
+/* line 459, ../scss/navV2.scss */
 #dislike-overlay a:visited {
   color: #FFFFFF;
 }
 
-/* line 466, ../scss/navV2.scss */
+/* line 467, ../scss/navV2.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 472, ../scss/navV2.scss */
+/* line 473, ../scss/navV2.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -704,18 +705,18 @@ body:after {
   margin: 20px auto;
 }
 
-/* line 481, ../scss/navV2.scss */
+/* line 482, ../scss/navV2.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 486, ../scss/navV2.scss */
+/* line 487, ../scss/navV2.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 490, ../scss/navV2.scss */
+/* line 491, ../scss/navV2.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -736,7 +737,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 511, ../scss/navV2.scss */
+/* line 512, ../scss/navV2.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -762,19 +763,19 @@ button.mfp-close:active {
   padding-top: 5px;
   margin-bottom: 10px;
 }
-/* line 530, ../scss/navV2.scss */
+/* line 531, ../scss/navV2.scss */
 .error-box .details,
 .message-box .details {
   margin: 0 10px 0 50px;
   margin-bottom: 10px;
   font-family: "Museo Sans", sans-serif;
 }
-/* line 535, ../scss/navV2.scss */
+/* line 536, ../scss/navV2.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 539, ../scss/navV2.scss */
+/* line 540, ../scss/navV2.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -782,14 +783,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 545, ../scss/navV2.scss */
+/* line 546, ../scss/navV2.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 556, ../scss/navV2.scss */
+/* line 557, ../scss/navV2.scss */
 .message-box {
   font-size: 14px;
   position: absolute;
