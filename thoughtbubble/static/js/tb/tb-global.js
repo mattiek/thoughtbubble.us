@@ -13,7 +13,7 @@ $('#login-overlay .submit.login').click(function(e) {
   url = $('#overlay-login-form').attr('action');
   return $.post(url, $('#overlay-login-form').serialize(), function(response) {
     if (response.success) {
-      return window.location = window.location;
+      return window.location.reload(false);
     } else {
       return $('#login-error').html('Incorrect user/password credentials.');
     }

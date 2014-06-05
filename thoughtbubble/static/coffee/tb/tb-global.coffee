@@ -8,7 +8,7 @@ $('#login-overlay .submit.login').click (e) ->
   url = $('#overlay-login-form').attr 'action'
   $.post url, $('#overlay-login-form').serialize(), (response) ->
       if (response.success)
-        window.location = window.location;
+        window.location.reload( false );
       else
         $('#login-error').html 'Incorrect user/password credentials.'
 
