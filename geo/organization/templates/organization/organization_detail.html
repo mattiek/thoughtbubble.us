@@ -29,9 +29,18 @@
 {#        {% endif %}#}
         <div class="row title">
                 <div id="header">
-                    {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing linkedin=organization.get_linkedin_sharing %}
-                        {% include "widgets/sharing.html" %}
-                    {% endwith %}
+                    <ul id="{{ id }}" class="sharing">
+                        <li><span>share</span></li>
+                        {% if organization.facebook_url %}
+                        <li><a class="org-fb" href="{{ organization.facebook_url }}" target="_blank"></a></li>
+                        {% endif %}
+                        {% if organization.twitter_url %}
+                        <li><a class="org-twitter" href="{{ organization.twitter_url }}" target="_blank"></a></li>
+                        {% endif %}
+                        {% if organization.linkedin_url %}
+                        <li><a class="org-linkedin" target="_blank" href="{{ organization.linkedin_url }}"></a></li>
+                        {% endif %}
+                    </ul>
                     {{ organization.title }}
 
                 </div>

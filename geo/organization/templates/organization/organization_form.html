@@ -33,22 +33,22 @@
 
                 <div class="row">
                     <label for="id_website">website</label>
-                    {{ form.website }}
+                    {{ form.website|attr:"placeholder:http://"  }}
                 </div>
 
                 <div class="row">
                     <label for="id_facebook_url">URL</label>
-                    {{ form.facebook_url }}
+                    {{ form.facebook_url|attr:"placeholder:http://"  }}
                 </div>
 
                 <div class="row">
                     <label for="id_twitter_url">URL</label>
-                    {{ form.twitter_url }}
+                    {{ form.twitter_url|attr:"placeholder:http://" }}
                 </div>
 
                 <div class="row">
                     <label for="id_linkedin_url">URL</label>
-                    {{ form.linkedin_url }}
+                    {{ form.linkedin_url|attr:"placeholder:http://"   }}
                 </div>
             </div>
                 <img id="organization-logo" src="{{ organization.get_logo }}" alt=""/>
@@ -59,6 +59,7 @@
             <label for="id_about">about</label>
                 {{ form.about }}
         </div>
+
 
         {#    About #}
         <div id="sherlock_description">

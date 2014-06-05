@@ -859,21 +859,21 @@ form .row .row.second-row {
   display: none;
 }
 /* line 131, ../../scss/organization/detail.scss */
-#header .sharing li a.share-fb {
+#header .sharing li a.org-fb {
   background: url(../../images/facebook-cloud.png) no-repeat;
   background-size: 100%;
   width: 21px;
   height: 18px;
 }
 /* line 137, ../../scss/organization/detail.scss */
-#header .sharing li a.share-twitter {
+#header .sharing li a.org-twitter {
   background: url(../../images/twitter-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;
   height: 18px;
 }
 /* line 143, ../../scss/organization/detail.scss */
-#header .sharing li a.share-linkedin {
+#header .sharing li a.org-linkedin {
   background: url(../../images/linkedin-cloud.png) no-repeat;
   background-size: 100%;
   width: 18px;

@@ -32,14 +32,14 @@
 
     <div class="row title">
         <div id="header">
-            {% with fb=location.get_fb_sharing twit=location.get_twit_sharing linkedin=location.get_linkedin_sharing %}
-                {% include "widgets/sharing.html" %}
-            {% endwith %}
             {{ location.name }}
         </div>
     </div>
 
         <div class="about">{{ location.about }}</div>
+    {% with fb=location.get_fb_sharing twit=location.get_twit_sharing linkedin=location.get_linkedin_sharing %}
+        {% include "widgets/sharing.html" %}
+    {% endwith %}
         <div class="">
             <div id="map"></div>
         </div>
