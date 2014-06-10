@@ -106,7 +106,7 @@ textarea {
 
 /* line 5, ../../scss/idea/add-mobile.scss */
 #illustration {
-  width: 930px;
+  width: 300px;
   margin: 0 auto;
   background-color: #ffffff;
 }
@@ -129,7 +129,7 @@ textarea {
   font-family: "Museo Sans", sans-serif;
   display: block;
   height: 33px;
-  width: 322px;
+  width: 300px;
   clear: both;
   margin: 40px auto;
 }
@@ -310,7 +310,7 @@ form .row .row.second-row {
 }
 /* line 153, ../../scss/idea/add-mobile.scss */
 .additional.fl {
-  width: 340px;
+  width: 300px;
 }
 
 /* line 158, ../../scss/idea/add-mobile.scss */
