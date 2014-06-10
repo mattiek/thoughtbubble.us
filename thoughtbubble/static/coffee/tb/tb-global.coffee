@@ -16,7 +16,7 @@ $('#login-overlay .submit.login').click (e) ->
       else
         $('#login-error').html 'Incorrect user/password credentials.'
         if $('html.thought-mobile')
-          $(document).scrollTo($('#login-error'))
+          $(document).scrollTo($('.mfp-content'))
 
 
 
