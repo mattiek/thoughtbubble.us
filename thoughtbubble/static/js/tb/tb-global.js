@@ -22,7 +22,10 @@ $('#login-overlay .submit.login').click(function(e) {
     if (response.success) {
       return window.location.reload(false);
     } else {
-      return $('#login-error').html('Incorrect user/password credentials.');
+      $('#login-error').html('Incorrect user/password credentials.');
+      if ($('html.thought-mobile')) {
+        return $(document).scrollTo($('#login-error'));
+      }
     }
   });
 });

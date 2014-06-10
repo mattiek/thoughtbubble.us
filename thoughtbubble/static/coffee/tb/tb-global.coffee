@@ -15,6 +15,9 @@ $('#login-overlay .submit.login').click (e) ->
         window.location.reload( false );
       else
         $('#login-error').html 'Incorrect user/password credentials.'
+        if $('html.thought-mobile')
+          $(document).scrollTo($('#login-error'))
+
 
 
 $('#login-with-email').click (e) ->

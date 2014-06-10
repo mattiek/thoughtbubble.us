@@ -87,7 +87,7 @@
 @media screen and (max-width: 480px) {
   /* line 48, ../../scss/idea/_idea_mobile.scss */
   .idea-cap .left-idea-cap p {
-    text-indent: 20px;
+    margin-left: 20px;
   }
 }
 /* line 58, ../../scss/idea/_idea_mobile.scss */
