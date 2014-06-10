@@ -73,8 +73,8 @@
 
                     <p class="copy clr small-heading">about</p>
                     {{ form.about|add_class:"about-text" }}
-                    <p class="copy clr small-heading">explore description:</p>
-                    {{ form.sherlock_description|add_class:"about-text" }}
+                    <p class="copy clr small-heading">explore description: (136 characters max)</p>
+                    {{ form.sherlock_description|add_class:"about-text"|attr:"maxlength:136" }}
                 <div class="pos-rel">
 {#                    <ul class="save-edit-list">#}
 {#                        <li>#}
@@ -103,11 +103,9 @@
 {#                    </div>#}
 {#                    {{ form.news|add_class:"news-text" }}#}
 
-            <div id="news">
-            <div class="label">news</div>
+            <p class="copy small-heading">news</p>
                 <a href="{{ location.get_list_news_url }}" class="blue s-button">List News</a>
                 <a href="{{ location.get_add_news_url }}" class="blue s-button">Add News</a>
-            </div>
 
                     <p class="copy small-heading">pictures</p>
                     {% for picture in form.pictures %}
@@ -193,7 +191,20 @@
                 {% endif %}
             });
 
+            $(document).ready(function() {
+                $('#id_sherlock_description').keyup(function() {
+                    var content = $('#id_sherlock_description').html();
+                    var extra = content.match(/.{19}(.*)/)[1];
+
+                    $('#extra').html(extra);
+
+                    var newContent = content.replace(extra, "<span class='highlight'>" + extra + "</span>");
+                    $('#sample').html(newContent);
+                });
+            });
         </script>
+
+
     {% endif %}
 
 

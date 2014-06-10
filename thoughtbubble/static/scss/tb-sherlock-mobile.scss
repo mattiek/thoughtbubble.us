@@ -141,7 +141,7 @@ body.section-0 #map {
 
 #communisplore-mobile {
   &:first-child {
-    margin-top: 10px;
+    //margin-top: 10px;
   }
   li {
     padding:10px;
@@ -150,7 +150,7 @@ body.section-0 #map {
     -moz-transition:background 500ms, color 500ms;
     -webkit-transition:background 500ms, color 500ms;
     background: #DADADA;
-    border-radius: 10px;
+    //border-radius: 10px;
     color: #7b7b7b; /* text color */
     @include museo;
     margin-bottom:10px;

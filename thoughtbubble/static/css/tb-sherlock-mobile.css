@@ -333,10 +333,6 @@ body.section-0 #map {
     line-height: 24px;
   }
 }
-/* line 143, ../scss/tb-sherlock-mobile.scss */
-#communisplore-mobile:first-child {
-  margin-top: 10px;
-}
 /* line 146, ../scss/tb-sherlock-mobile.scss */
 #communisplore-mobile li {
   padding: 10px;
@@ -345,7 +341,6 @@ body.section-0 #map {
   -moz-transition: background 500ms, color 500ms;
   -webkit-transition: background 500ms, color 500ms;
   background: #DADADA;
-  border-radius: 10px;
   color: #7b7b7b;
   /* text color */
   font-family: "Museo Sans", sans-serif;

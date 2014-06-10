@@ -27,6 +27,7 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 
+
 ALLOWED_HOSTS = []
 
 
@@ -45,8 +46,10 @@ INSTALLED_APPS = (
     'django.contrib.gis',
     'django.contrib.sites',
     'django.contrib.flatpages',
-    'thoughtbubble',
     'mobileesp',
+
+    'thoughtbubble',
+
 
     # 'geo.world',
     # 'geo.cities',
@@ -88,6 +91,7 @@ INSTALLED_APPS = (
     'easy_thumbnails',
 
     'import_export',
+
 )
 
 COMMENTS_APP = 'threadedcomments'
@@ -258,3 +262,5 @@ BALANCED = {
     }
 
 GEOIP_PATH=os.path.join(BASE_ROOT, 'thoughtbubble/data')
+
+TEMPLATE_DIRS = (os.path.join(BASE_ROOT, 'thoughtbubble/templates'),)

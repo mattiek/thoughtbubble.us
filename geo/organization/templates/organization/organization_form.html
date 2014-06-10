@@ -64,8 +64,8 @@
 
         {#    About #}
         <div id="sherlock_description">
-            <label for="id_sherlock_description">explore</label>
-            {{ form.sherlock_description }}
+            <label for="id_sherlock_description">explore description: (136 characters max)</label>
+            {{ form.sherlock_description|attr:"maxlength:136" }}
         </div>
 
 

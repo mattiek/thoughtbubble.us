@@ -389,6 +389,14 @@ form .row .row.second-row {
   }
 }
 
+#sherlock_description {
+  textarea {
+    height: 75px;
+    min-height: 75px;
+    margin-top: 5px;
+  }
+}
+
 //#sherlock_description {
 //  label {
 //    color: #9d9d9d; /* text color */

@@ -351,11 +351,16 @@ form .row .row.second-row {
 }
 
 /* line 171, ../scss/tb-addfeature.scss */
+#id_sherlock_description {
+  height: 75px;
+}
+
+/* line 175, ../scss/tb-addfeature.scss */
 .news-text {
   width: 610px;
 }
 
-/* line 176, ../scss/tb-addfeature.scss */
+/* line 180, ../scss/tb-addfeature.scss */
 #add-news-image,
 .picture {
   width: 80px;
@@ -373,22 +378,22 @@ form .row .row.second-row {
   margin-right: 10px;
 }
 
-/* line 188, ../scss/tb-addfeature.scss */
+/* line 192, ../scss/tb-addfeature.scss */
 #map {
   width: 400px;
 }
 
-/* line 192, ../scss/tb-addfeature.scss */
+/* line 196, ../scss/tb-addfeature.scss */
 .left-side {
   float: left;
 }
 
-/* line 196, ../scss/tb-addfeature.scss */
+/* line 200, ../scss/tb-addfeature.scss */
 .right-side {
   float: right;
 }
 
-/* line 200, ../scss/tb-addfeature.scss */
+/* line 204, ../scss/tb-addfeature.scss */
 .clr {
   clear: both;
 }

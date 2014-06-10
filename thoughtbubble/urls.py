@@ -20,7 +20,8 @@ urlpatterns = patterns('',
     url(r'^$', 'thoughtbubble.views.home', name='home'),
 
     url(r'^signup/?$', 'thoughtbubble.views.signup', name='signup'),
-    url(r'^organization-signup/?$', 'thoughtbubble.views.organization_signup', name='organization_signup'),
+    # url(r'^organization-signup/?$', 'thoughtbubble.views.organization_signup', name='organization_signup'),
+    url(r'^organization-signup/?$',  ContactFormView.as_view(), name='contact_form'),
 
     # url(r'^accounts/profile/?$', 'thoughtbubble.views.dashboard', name='user_dashboard'),
 

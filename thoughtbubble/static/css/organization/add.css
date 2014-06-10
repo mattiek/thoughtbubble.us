@@ -645,7 +645,14 @@ form .row .row.second-row {
   width: 452px;
 }
 
-/* line 405, ../../scss/organization/add.scss */
+/* line 393, ../../scss/organization/add.scss */
+#sherlock_description textarea {
+  height: 75px;
+  min-height: 75px;
+  margin-top: 5px;
+}
+
+/* line 413, ../../scss/organization/add.scss */
 .label {
   color: #9d9d9d;
   /* text color */
@@ -653,45 +660,45 @@ form .row .row.second-row {
   font-size: 15px;
 }
 
-/* line 411, ../../scss/organization/add.scss */
+/* line 419, ../../scss/organization/add.scss */
 #pictures, #partners, #features {
   width: 100%;
   clear: both;
   margin-top: 20px;
 }
-/* line 416, ../../scss/organization/add.scss */
+/* line 424, ../../scss/organization/add.scss */
 #pictures .label, #partners .label, #features .label {
   margin-bottom: 10px;
 }
 
-/* line 421, ../../scss/organization/add.scss */
+/* line 429, ../../scss/organization/add.scss */
 .clr {
   clear: both;
 }
 
-/* line 425, ../../scss/organization/add.scss */
+/* line 433, ../../scss/organization/add.scss */
 .cloak {
   background: #FFFFFF;
 }
 
-/* line 431, ../../scss/organization/add.scss */
+/* line 439, ../../scss/organization/add.scss */
 label[for=id_facebook_url],
 label[for=id_twitter_url],
 label[for=id_linkedin_url] {
   text-indent: 35px;
 }
 
-/* line 436, ../../scss/organization/add.scss */
+/* line 444, ../../scss/organization/add.scss */
 label[for=id_facebook_url] {
   background: url('../../images/small-blue-facebook.png?1390687080') no-repeat;
 }
 
-/* line 439, ../../scss/organization/add.scss */
+/* line 447, ../../scss/organization/add.scss */
 label[for=id_twitter_url] {
   background: url('../../images/small-blue-twitter.png?1390687081') no-repeat;
 }
 
-/* line 443, ../../scss/organization/add.scss */
+/* line 451, ../../scss/organization/add.scss */
 label[for=id_linkedin_url] {
   background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
 }
