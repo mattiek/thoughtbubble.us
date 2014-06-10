@@ -97,7 +97,12 @@ class LocationDetail(DetailView):
         # if id:
         #     context['organization'] = Organization.objects.get(pk=id)
             # context['is_admin'] = self.request.user.is_admin
-        location = Location.objects.get(slug=id)
+
+        place = self.kwargs['place']
+        org = self.kwargs['organization']
+        location = self.kwargs['location']
+
+        location = Location.objects.get(organization__place__slug=place, organization__slug=org, slug=location)
 
         context['news_feed'] = LocationNews.objects.filter(location=location).order_by('-date_created')
         pics = LocationImage.objects.filter(location=location).order_by('ordering','-id').distinct('ordering')[:4]
