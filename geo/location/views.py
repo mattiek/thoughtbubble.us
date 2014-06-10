@@ -61,7 +61,11 @@ class LocationDetail(DetailView):
     def get_ideas(self):
 
         id = self.kwargs.get('location',None)
-        location = Location.objects.get(slug=id)
+        place = self.kwargs['place']
+        org = self.kwargs['organization']
+        location = self.kwargs['location']
+
+        location = Location.objects.get(organization__place__slug=place, organization__slug=org, slug=location)
         ### Basic parameters
         qs = location.some_ideas.all()
         ### Ordering
