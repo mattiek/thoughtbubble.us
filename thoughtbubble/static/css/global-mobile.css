@@ -643,7 +643,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #update-avatar-overlay input[type="password"],
 #update-avatar-overlay input[type="email"],
 #update-avatar-overlay input[type="text"] {
-  width: 365px;
+  width: 300px;
   height: 45px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -661,7 +661,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 #msg-overlay .submit,
 #update-avatar-overlay .submit {
   height: 45px;
-  width: 365px;
+  width: 300px;
   float: none;
   margin: 0 auto;
   -webkit-border-radius: 10px;

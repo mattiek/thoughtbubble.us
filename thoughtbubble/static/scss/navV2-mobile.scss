@@ -424,7 +424,7 @@
   input[type="password"],
   input[type="email"],
   input[type="text"] {
-    width: 365px;
+    width: 300px;
     height: 45px;
     @include border-radius(10px); // border radius
     @include museo;
@@ -433,7 +433,7 @@
 
   .submit {
     height: 45px;
-    width: 365px;
+    width: 300px;
     float: none;
     margin: 0 auto;
     @include orange-gradient-button;
