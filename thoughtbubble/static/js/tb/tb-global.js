@@ -24,7 +24,7 @@ $('#login-overlay .submit.login').click(function(e) {
     } else {
       $('#login-error').html('Incorrect user/password credentials.');
       if ($('html.thought-mobile')) {
-        return $(document).scrollTo($('.mfp-content'));
+        return $(window).scrollTop();
       }
     }
   });
