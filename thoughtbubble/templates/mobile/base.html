@@ -138,7 +138,7 @@
         {{ loginform.email }}
         {{ loginform.password }}
         <input type="submit" class="submit login large-text" value="login" />
-        <a id="forgot-password" href="#">forgot your password?</a>
+        <a id="forgot-password" href="{% url 'account_reset_password' %}">forgot your password?</a>
     </form>
     <a href="#join-overlay" id="create-an-account">create an account</a>
 </div>
