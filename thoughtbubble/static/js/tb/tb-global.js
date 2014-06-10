@@ -3,7 +3,14 @@ var init, playDinoSound;
 
 $('#login').magnificPopup({
   type: 'inline',
-  midClick: true
+  midClick: true,
+  callbacks: {
+    beforeOpen: function() {
+      if (snapper) {
+        return snapper.close('left');
+      }
+    }
+  }
 });
 
 $('#login-overlay .submit.login').click(function(e) {

@@ -190,9 +190,10 @@
 {% endblock %}
 
 <script type="text/javascript">
+    var snapper = null;
     $(document).ready( function() {
 
-        var snapper = new Snap({
+       snapper = new Snap({
             element: document.getElementById('wrapper'),
             disable: 'right',
             touchToDrag: false

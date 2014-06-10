@@ -1,6 +1,10 @@
 $('#login').magnificPopup
   type:'inline'
   midClick: true
+  callbacks:
+    beforeOpen: () ->
+      if snapper
+        snapper.close('left')
 
 $('#login-overlay .submit.login').click (e) ->
   e.preventDefault()
