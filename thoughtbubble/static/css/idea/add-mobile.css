@@ -149,7 +149,7 @@ textarea {
 
 /* line 27, ../../scss/idea/add-mobile.scss */
 #form-wrapper {
-  width: 600px;
+  width: 300px;
   margin: 0 auto;
 }
 
@@ -230,7 +230,7 @@ form .row .row.second-row {
 
 /* line 87, ../../scss/idea/add-mobile.scss */
 #id_what_for {
-  width: 228px;
+  width: 290px;
 }
 
 /* line 95, ../../scss/idea/add-mobile.scss */
@@ -290,74 +290,60 @@ form .row .row.second-row {
 
 /* line 131, ../../scss/idea/add-mobile.scss */
 #id_name {
-  width: 520px;
+  width: 220px;
 }
 
-/* line 137, ../../scss/idea/add-mobile.scss */
+/* line 139, ../../scss/idea/add-mobile.scss */
 #id_what_kind,
 #id_content_object,
-#id_content_object_place {
-  width: 300px;
-  float: left;
-}
-
-/* line 142, ../../scss/idea/add-mobile.scss */
-#id_what_for_chosen {
-  margin-left: 60px;
-}
-
-/* line 146, ../../scss/idea/add-mobile.scss */
-#id_what_for {
-  width: 218px;
-}
-
-/* line 150, ../../scss/idea/add-mobile.scss */
+#id_content_object_place,
+#id_what_for,
 #id_description {
-  width: 300px;
+  width: 290px;
 }
 
-/* line 154, ../../scss/idea/add-mobile.scss */
+/* line 148, ../../scss/idea/add-mobile.scss */
 .additional {
   width: 260px;
   float: left;
   margin-bottom: 10px;
 }
-/* line 159, ../../scss/idea/add-mobile.scss */
+/* line 153, ../../scss/idea/add-mobile.scss */
 .additional.fl {
   width: 340px;
 }
 
-/* line 164, ../../scss/idea/add-mobile.scss */
+/* line 158, ../../scss/idea/add-mobile.scss */
 .file-picker-input {
   float: left;
   margin-right: 20px;
 }
 
-/* line 171, ../../scss/idea/add-mobile.scss */
+/* line 165, ../../scss/idea/add-mobile.scss */
 #pictures {
   float: right;
   width: 270px;
 }
 
-/* line 176, ../../scss/idea/add-mobile.scss */
+/* line 170, ../../scss/idea/add-mobile.scss */
 #id_pic1, #id_pic2, #id_pic3, #id_pic4 {
   margin-bottom: 20px;
 }
 
-/* line 180, ../../scss/idea/add-mobile.scss */
+/* line 174, ../../scss/idea/add-mobile.scss */
 .cloak {
   background: #FFFFFF;
   width: 100%;
   height: 100%;
   line-height: 80px;
 }
-/* line 186, ../../scss/idea/add-mobile.scss */
+/* line 180, ../../scss/idea/add-mobile.scss */
 .cloak img {
   max-width: 100%;
   vertical-align: middle;
 }
 
-/* line 192, ../../scss/idea/add-mobile.scss */
+/* line 186, ../../scss/idea/add-mobile.scss */
 #id_links {
   width: 180px;
 }
