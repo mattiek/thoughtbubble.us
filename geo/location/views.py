@@ -3,7 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from models import Location, LocationType, LocationNews, LocationImage
 from serializers import LocationSerializer
 from rest_framework import viewsets
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from forms import AddLocationForm, LocationUpdateForm
 from django.contrib.gis.geos import GEOSGeometry
 from django.contrib import messages
@@ -12,6 +12,7 @@ from django.core.urlresolvers import reverse
 from rest_framework import generics
 from ideation.idea.models import Idea
 from thoughtbubble.utils import url_safe
+
 
 from partner.models import Partner
 
@@ -45,6 +46,17 @@ class LocationDetail(DetailView):
     model = Location
     lookup_field = 'slug'
     lookup_url_kwarg = 'location'
+
+    def get_object(self):
+        """
+        Custom object lookup that returns an instance based on both the
+        'account' and 'slug' as provided in the URL keyword arguments.
+        """
+        queryset = self.get_queryset()
+        place = self.kwargs['place']
+        org = self.kwargs['organization']
+        location = self.kwargs['location']
+        return get_object_or_404(queryset, place=place, organization=org, location=location)
 
     def get_ideas(self):
 
