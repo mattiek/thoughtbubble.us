@@ -334,11 +334,12 @@
   text-align: center;
 }
 
-/* line 311, ../scss/navV2-mobile.scss */
+/* line 312, ../scss/navV2-mobile.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
 #dislike-overlay,
+#msg-overlay,
 #update-avatar-overlay {
   border-radius: 10px;
   max-width: 415px;
@@ -347,19 +348,21 @@
   color: #ffffff;
   font-family: "Helvetica", sans-serif;
 }
-/* line 320, ../scss/navV2-mobile.scss */
+/* line 321, ../scss/navV2-mobile.scss */
 #login-overlay form,
 #logout-overlay form,
 #join-overlay form,
 #dislike-overlay form,
+#msg-overlay form,
 #update-avatar-overlay form {
   text-align: center;
 }
-/* line 324, ../scss/navV2-mobile.scss */
+/* line 325, ../scss/navV2-mobile.scss */
 #login-overlay h6,
 #logout-overlay h6,
 #join-overlay h6,
 #dislike-overlay h6,
+#msg-overlay h6,
 #update-avatar-overlay h6 {
   margin-top: 70px;
   margin-bottom: 35px;
@@ -368,7 +371,37 @@
   font-weight: normal;
   font-size: 16px;
 }
+/* line 334, ../scss/navV2-mobile.scss */
+#login-overlay h4,
+#logout-overlay h4,
+#join-overlay h4,
+#dislike-overlay h4,
+#msg-overlay h4,
+#update-avatar-overlay h4 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 16px;
+}
 /* line 335, ../scss/navV2-mobile.scss */
+#login-overlay h4:first-child,
+#logout-overlay h4:first-child,
+#join-overlay h4:first-child,
+#dislike-overlay h4:first-child,
+#msg-overlay h4:first-child,
+#update-avatar-overlay h4:first-child {
+  margin-top: 70px;
+}
+/* line 339, ../scss/navV2-mobile.scss */
+#login-overlay h4:last-child,
+#logout-overlay h4:last-child,
+#join-overlay h4:last-child,
+#dislike-overlay h4:last-child,
+#msg-overlay h4:last-child,
+#update-avatar-overlay h4:last-child {
+  margin-bottom: 35px;
+}
+/* line 351, ../scss/navV2-mobile.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -381,13 +414,16 @@
 #dislike-overlay #login-with-email,
 #dislike-overlay #join-organization,
 #dislike-overlay #join-email-account,
+#msg-overlay #login-with-email,
+#msg-overlay #join-organization,
+#msg-overlay #join-email-account,
 #update-avatar-overlay #login-with-email,
 #update-avatar-overlay #join-organization,
 #update-avatar-overlay #join-email-account {
   text-align: center;
   line-height: 45px;
 }
-/* line 341, ../scss/navV2-mobile.scss */
+/* line 357, ../scss/navV2-mobile.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -396,6 +432,8 @@
 #join-overlay #create-an-account,
 #dislike-overlay #forgot-password,
 #dislike-overlay #create-an-account,
+#msg-overlay #forgot-password,
+#msg-overlay #create-an-account,
 #update-avatar-overlay #forgot-password,
 #update-avatar-overlay #create-an-account {
   display: block;
@@ -405,53 +443,59 @@
   font-size: 10px;
   font-weight: 100;
 }
-/* line 350, ../scss/navV2-mobile.scss */
+/* line 366, ../scss/navV2-mobile.scss */
 #login-overlay #join-email-account,
 #logout-overlay #join-email-account,
 #join-overlay #join-email-account,
 #dislike-overlay #join-email-account,
+#msg-overlay #join-email-account,
 #update-avatar-overlay #join-email-account {
   margin-bottom: 20px;
 }
-/* line 355, ../scss/navV2-mobile.scss */
+/* line 371, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #login-with-email,
 #logout-overlay.reveal-email #login-with-email,
 #join-overlay.reveal-email #login-with-email,
 #dislike-overlay.reveal-email #login-with-email,
+#msg-overlay.reveal-email #login-with-email,
 #update-avatar-overlay.reveal-email #login-with-email {
   display: none;
 }
-/* line 359, ../scss/navV2-mobile.scss */
+/* line 375, ../scss/navV2-mobile.scss */
 #login-overlay.reveal-email #overlay-login-form,
 #logout-overlay.reveal-email #overlay-login-form,
 #join-overlay.reveal-email #overlay-login-form,
 #dislike-overlay.reveal-email #overlay-login-form,
+#msg-overlay.reveal-email #overlay-login-form,
 #update-avatar-overlay.reveal-email #overlay-login-form {
   display: block;
 }
-/* line 364, ../scss/navV2-mobile.scss */
+/* line 380, ../scss/navV2-mobile.scss */
 #login-overlay #overlay-login-form,
 #logout-overlay #overlay-login-form,
 #join-overlay #overlay-login-form,
 #dislike-overlay #overlay-login-form,
+#msg-overlay #overlay-login-form,
 #update-avatar-overlay #overlay-login-form {
   display: none;
 }
-/* line 368, ../scss/navV2-mobile.scss */
+/* line 384, ../scss/navV2-mobile.scss */
 #login-overlay .oauths,
 #logout-overlay .oauths,
 #join-overlay .oauths,
 #dislike-overlay .oauths,
+#msg-overlay .oauths,
 #update-avatar-overlay .oauths {
   margin: 30px auto 0px;
   width: 195px;
   height: 60px;
 }
-/* line 373, ../scss/navV2-mobile.scss */
+/* line 389, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a,
 #logout-overlay .oauths a,
 #join-overlay .oauths a,
 #dislike-overlay .oauths a,
+#msg-overlay .oauths a,
 #update-avatar-overlay .oauths a {
   background: url('../images/join-login-social-media.png?1390687060');
   background-repeat: no-repeat;
@@ -460,50 +504,55 @@
   width: 44px;
   float: left;
 }
-/* line 381, ../scss/navV2-mobile.scss */
+/* line 397, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.blue,
 #logout-overlay .oauths a.blue,
 #join-overlay .oauths a.blue,
 #dislike-overlay .oauths a.blue,
+#msg-overlay .oauths a.blue,
 #update-avatar-overlay .oauths a.blue {
   background: url('../images/join-login-social-media-blue.png?1394892046');
 }
-/* line 385, ../scss/navV2-mobile.scss */
+/* line 401, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.facebook-oauth,
 #logout-overlay .oauths a.facebook-oauth,
 #join-overlay .oauths a.facebook-oauth,
 #dislike-overlay .oauths a.facebook-oauth,
+#msg-overlay .oauths a.facebook-oauth,
 #update-avatar-overlay .oauths a.facebook-oauth {
   width: 58px;
 }
-/* line 389, ../scss/navV2-mobile.scss */
+/* line 405, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.linkedin-oauth,
 #logout-overlay .oauths a.linkedin-oauth,
 #join-overlay .oauths a.linkedin-oauth,
 #dislike-overlay .oauths a.linkedin-oauth,
+#msg-overlay .oauths a.linkedin-oauth,
 #update-avatar-overlay .oauths a.linkedin-oauth {
   background-position: -157px 0;
   margin: 0 20px;
 }
-/* line 395, ../scss/navV2-mobile.scss */
+/* line 411, ../scss/navV2-mobile.scss */
 #login-overlay .oauths a.twitter-oauth,
 #logout-overlay .oauths a.twitter-oauth,
 #join-overlay .oauths a.twitter-oauth,
 #dislike-overlay .oauths a.twitter-oauth,
+#msg-overlay .oauths a.twitter-oauth,
 #update-avatar-overlay .oauths a.twitter-oauth {
   width: 50px;
   background-position: -78px 0;
 }
-/* line 403, ../scss/navV2-mobile.scss */
+/* line 419, ../scss/navV2-mobile.scss */
 #login-overlay #login-error,
 #logout-overlay #login-error,
 #join-overlay #login-error,
 #dislike-overlay #login-error,
+#msg-overlay #login-error,
 #update-avatar-overlay #login-error {
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 410, ../scss/navV2-mobile.scss */
+/* line 426, ../scss/navV2-mobile.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -516,6 +565,9 @@
 #dislike-overlay input[type="password"],
 #dislike-overlay input[type="email"],
 #dislike-overlay input[type="text"],
+#msg-overlay input[type="password"],
+#msg-overlay input[type="email"],
+#msg-overlay input[type="text"],
 #update-avatar-overlay input[type="password"],
 #update-avatar-overlay input[type="email"],
 #update-avatar-overlay input[type="text"] {
@@ -529,11 +581,12 @@
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
 }
-/* line 418, ../scss/navV2-mobile.scss */
+/* line 434, ../scss/navV2-mobile.scss */
 #login-overlay .submit,
 #logout-overlay .submit,
 #join-overlay .submit,
 #dislike-overlay .submit,
+#msg-overlay .submit,
 #update-avatar-overlay .submit {
   height: 45px;
   width: 365px;
@@ -555,11 +608,12 @@
   font-family: "Museo Sans", sans-serif;
   display: block;
 }
-/* line 425, ../scss/navV2-mobile.scss */
+/* line 441, ../scss/navV2-mobile.scss */
 #login-overlay .submit:hover,
 #logout-overlay .submit:hover,
 #join-overlay .submit:hover,
 #dislike-overlay .submit:hover,
+#msg-overlay .submit:hover,
 #update-avatar-overlay .submit:hover {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -572,16 +626,17 @@
   background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
   background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
 }
-/* line 429, ../scss/navV2-mobile.scss */
+/* line 445, ../scss/navV2-mobile.scss */
 #login-overlay .submit.large-text,
 #logout-overlay .submit.large-text,
 #join-overlay .submit.large-text,
 #dislike-overlay .submit.large-text,
+#msg-overlay .submit.large-text,
 #update-avatar-overlay .submit.large-text {
   font-size: 16px;
 }
 
-/* line 435, ../scss/navV2-mobile.scss */
+/* line 451, ../scss/navV2-mobile.scss */
 #dislike-overlay {
   width: 250px;
   background-color: #ffffff;
@@ -590,18 +645,18 @@
   font-family: "Museo Sans", sans-serif;
   text-align: center;
 }
-/* line 440, ../scss/navV2-mobile.scss */
+/* line 456, ../scss/navV2-mobile.scss */
 #dislike-overlay img {
   margin: 30px 0 0;
 }
-/* line 443, ../scss/navV2-mobile.scss */
+/* line 459, ../scss/navV2-mobile.scss */
 #dislike-overlay p {
   font-style: italic;
   font-size: 12px;
   width: 200px;
   margin: 0 auto 20px;
 }
-/* line 450, ../scss/navV2-mobile.scss */
+/* line 466, ../scss/navV2-mobile.scss */
 #dislike-overlay h6 {
   color: #6d6d6d;
   /* text color */
@@ -611,7 +666,7 @@
   font-size: 12px;
   margin: 10px 0 0;
 }
-/* line 458, ../scss/navV2-mobile.scss */
+/* line 474, ../scss/navV2-mobile.scss */
 #dislike-overlay a {
   width: 100px;
   height: 30px;
@@ -621,18 +676,18 @@
   line-height: 30px;
   color: #FFFFFF;
 }
-/* line 467, ../scss/navV2-mobile.scss */
+/* line 483, ../scss/navV2-mobile.scss */
 #dislike-overlay a:visited {
   color: #FFFFFF;
 }
 
-/* line 475, ../scss/navV2-mobile.scss */
+/* line 491, ../scss/navV2-mobile.scss */
 #overlay-login-form input {
   font-size: 16px;
   text-indent: 15px;
 }
 
-/* line 481, ../scss/navV2-mobile.scss */
+/* line 497, ../scss/navV2-mobile.scss */
 .white-popup {
   position: relative;
   background: #FFF;
@@ -642,18 +697,18 @@
   margin: 20px auto;
 }
 
-/* line 490, ../scss/navV2-mobile.scss */
+/* line 506, ../scss/navV2-mobile.scss */
 .mfp-close:hover, .mfp-close:focus {
   opacity: 1;
   outline: none;
 }
 
-/* line 495, ../scss/navV2-mobile.scss */
+/* line 511, ../scss/navV2-mobile.scss */
 button.mfp-close:active {
   top: 0px;
 }
 
-/* line 499, ../scss/navV2-mobile.scss */
+/* line 515, ../scss/navV2-mobile.scss */
 #login-overylay .mfp-close-btn-in .mfp-close {
   color: #f47d21;
   background-color: #ffffff;
@@ -674,7 +729,7 @@ button.mfp-close:active {
   font-size: 24px;
 }
 
-/* line 520, ../scss/navV2-mobile.scss */
+/* line 536, ../scss/navV2-mobile.scss */
 .error-box,
 .message-box {
   -webkit-border-radius: 1.2;
@@ -701,17 +756,17 @@ button.mfp-close:active {
   margin-bottom: 10px;
   width: 100%;
 }
-/* line 540, ../scss/navV2-mobile.scss */
+/* line 556, ../scss/navV2-mobile.scss */
 .error-box .details,
 .message-box .details {
   font-family: "Museo Sans", sans-serif;
 }
-/* line 544, ../scss/navV2-mobile.scss */
+/* line 560, ../scss/navV2-mobile.scss */
 .error-box .details h4,
 .message-box .details h4 {
   margin: 10px;
 }
-/* line 548, ../scss/navV2-mobile.scss */
+/* line 564, ../scss/navV2-mobile.scss */
 .error-box .details h3,
 .message-box .details h3 {
   color: #f37d23;
@@ -719,14 +774,14 @@ button.mfp-close:active {
   font-size: 26px;
   margin: 0 0 5px 0;
 }
-/* line 554, ../scss/navV2-mobile.scss */
+/* line 570, ../scss/navV2-mobile.scss */
 .error-box .details ul,
 .message-box .details ul {
   list-style-type: none;
   margin-top: 0;
 }
 
-/* line 565, ../scss/navV2-mobile.scss */
+/* line 581, ../scss/navV2-mobile.scss */
 .message-box {
   font-size: 14px;
   position: absolute;

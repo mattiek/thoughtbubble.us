@@ -76,7 +76,7 @@
     {% block toprule %} {% endblock %}
         <div id="illustration" {% block illustration%}class="{{ illustrations|random }}"{%endblock%}>
             {#    Messages #}
-            {% include "widgets/messages.html" %}
+{#            {% include "widgets/messages.html" %}#}
             {#    End Messages #}
 
 
@@ -177,6 +177,9 @@
     <a href="{{ idea.get_add_to_location_url }}" class="blue" id="dino_top">top that!</a>
     <div style="clear:both;"></div>
 </div>
+
+{% include "widgets/messages-popup.html" %}
+
 
 
 {#Error#}

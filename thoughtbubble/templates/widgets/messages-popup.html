@@ -1,0 +1,18 @@
+{% if messages %}
+    <div id="msg-overlay" class="white-popup mfp-hide">
+        {% for message in messages %}
+            <h4 class="message">{{ message }}</h4>
+        {% endfor %}
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $.magnificPopup.open({
+            items: {
+                src: '#msg-overlay',
+                type: 'inline'
+            }
+        })
+
+    });
+    </script>
+{% endif %}

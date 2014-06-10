@@ -86,7 +86,7 @@
             <div id="wrapper" class="snap-content">
             <div id="illustration">
                 {#    Messages #}
-                {% include "widgets/messages.html" %}
+{#                {% include "widgets/messages.html" %}#}
                 {#    End Messages #}
                 <a id="logo" href="{% url "home" %}"></a>
                 <a id="hamburger-button" href="#slide-out"></a>
@@ -97,7 +97,7 @@
             {% block toprule %} {% endblock %}
             <div id="illustration" {% block illustration%}class="{{ illustrations|random }}"{%endblock%}>
                 {#    Messages #}
-                {% include "widgets/messages.html" %}
+{#                {% include "widgets/messages.html" %}#}
                 {#    End Messages #}
                 <ul id="login-nav">
                     {% if user.is_authenticated %}
@@ -226,6 +226,11 @@
     <a href="{{ idea.get_add_to_location_url }}" class="blue" id="dino_top">top it!</a>
     <div style="clear:both;"></div>
 </div>
+
+{#    Messages #}
+{% include "widgets/messages-popup.html" %}
+{#    End Messages #}
+
 
 
 {#Error#}
