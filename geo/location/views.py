@@ -44,8 +44,8 @@ from ideation.idea.models import IdeaType
 
 class LocationDetail(DetailView):
     model = Location
-    lookup_field = 'slug'
-    lookup_url_kwarg = 'location'
+    # lookup_field = 'slug'
+    # lookup_url_kwarg = 'location'
 
     def get_object(self):
         """
