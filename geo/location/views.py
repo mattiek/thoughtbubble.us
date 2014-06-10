@@ -56,7 +56,7 @@ class LocationDetail(DetailView):
         place = self.kwargs['place']
         org = self.kwargs['organization']
         location = self.kwargs['location']
-        return get_object_or_404(queryset, place=place, organization=org, location=location)
+        return get_object_or_404(queryset, place=place, organization__slug=org, slug=location)
 
     def get_ideas(self):
 
