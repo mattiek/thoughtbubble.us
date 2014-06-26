@@ -91,6 +91,11 @@ class Idea(models.Model):
         else: # its a location
             return "Organization"
 
+    def get_name(self):
+        s = self.name
+        s[0] = s[0].lower()
+        return s
+
     def get_parent_link(self):
         if self.content_type.name == 'place':
             place = self.content_object

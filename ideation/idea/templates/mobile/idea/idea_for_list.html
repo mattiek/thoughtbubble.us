@@ -6,7 +6,7 @@
 
 
 
-        <a href="{{ idea.get_absolute_url }}"><p>{% if idea.support_count %}{{ idea.support_count|pluralize:"I,We" }}{% else %}I{% endif %} want {{ idea.name }}</p></a>
+        <a href="{{ idea.get_absolute_url }}"><p>{% if idea.support_count %}{{ idea.support_count|pluralize:"I,We" }}{% else %}I{% endif %} want {{ idea.get_name }}</p></a>
 
         <ul class="idea-details-list">
             <li>{{ idea.content_object.name }} </li>
