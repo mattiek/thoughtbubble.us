@@ -95,7 +95,7 @@ class Idea(models.Model):
         s = self.name
         indices = set([0])
         # s[0] = s[0].lower()
-        return "".join(c.upper() if i in indices else c for i, c in enumerate(s))
+        return "".join(c.lower() if i in indices else c for i, c in enumerate(s))
 
     def get_parent_link(self):
         if self.content_type.name == 'place':
