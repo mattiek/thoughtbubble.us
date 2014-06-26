@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ideation/idea/models.py" afterPath="$PROJECT_DIR$/ideation/idea/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html" afterPath="$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779769046" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779884115" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403187816383" ignored="false" />
     <file path="/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403187794475" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231060936" ignored="false" />
-    <file path="/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779659006" ignored="false" />
+    <file path="/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779881920" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402832118858" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/settings/base_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268214881" ignored="false" />
     <file path="/base_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268214881" ignored="false" />
@@ -35,7 +35,7 @@
     <file path="$PROJECT_DIR$/../../../hungerhub/hungerhub/static/sass/screen.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879593124" ignored="false" />
     <file path="/screen.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879591482" ignored="false" />
     <file path="/*.regexp" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402881352460" ignored="false" />
-    <file path="/a.dummy" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779667030" ignored="false" />
+    <file path="/a.dummy" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403779968386" ignored="false" />
     <file path="/detail.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403230283634" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/templates/detail.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403230284579" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/static/sass/global.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268416725" ignored="false" />
@@ -117,15 +117,6 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="location_detail.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/location/templates/location/location_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="16" selection-start="4027" selection-end="4127" vertical-scroll-proportion="-4.7083335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="location_detail.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo/location/templates/mobile/location/location_detail.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="105" column="18" selection-start="3202" selection-end="3300" vertical-scroll-proportion="-5.0416665">
@@ -134,13 +125,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ideation/idea/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="81" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.8821989">
+            <state line="89" column="26" selection-start="2592" selection-end="2592" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="127" column="23" selection-start="5275" selection-end="5275" vertical-scroll-proportion="0.6675978">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="167" column="16" selection-start="7198" selection-end="7240" vertical-scroll-proportion="-8.416667">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -199,15 +208,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tb-explore.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-explore.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="65" column="12" selection-start="1378" selection-end="1378" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -226,7 +226,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/neat/functions/_new-breakpoint.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/organization/detail.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/tb-privacy.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/base.html" />
@@ -242,6 +241,7 @@
         <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
         <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_for_list.html" />
         <option value="$PROJECT_DIR$/ideation/idea/models.py" />
+        <option value="$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html" />
       </list>
     </option>
   </component>
@@ -1401,13 +1401,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="28" selection-start="1565" selection-end="1565" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/thoughtbubble/settings/local.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="1" selection-start="639" selection-end="639" vertical-scroll-proportion="0.0">
@@ -1432,13 +1425,6 @@
     <entry file="file://$PROJECT_DIR$/thoughtbubble/static/coffee/tb/tb-global.coffee">
       <provider selected="true" editor-type-id="text-editor">
         <state line="108" column="5" selection-start="2471" selection-end="2471" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="268" column="12" selection-start="10952" selection-end="10952" vertical-scroll-proportion="-9.458333">
           <folding />
         </state>
       </provider>
@@ -1508,10 +1494,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ideation/idea/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="81" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.8821989">
+        <state line="89" column="26" selection-start="2592" selection-end="2592" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="167" column="16" selection-start="7198" selection-end="7240" vertical-scroll-proportion="-8.416667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="127" column="23" selection-start="5275" selection-end="5275" vertical-scroll-proportion="0.6675978">
+          <folding />
         </state>
       </provider>
     </entry>
