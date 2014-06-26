@@ -103,9 +103,9 @@
 
 
                 // http://leafletjs.com/reference.html#popup
-                marker.bindPopup(popupContent,{
-                    closeButton: false
-                });
+{#                marker.bindPopup(popupContent,{#}
+{#                    closeButton: false#}
+{#                });#}
             });
 
             TB.Map.map().setView([{{ location.get_latitude }},{{ location.get_longitude }}],15);
