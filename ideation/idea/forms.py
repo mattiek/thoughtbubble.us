@@ -25,7 +25,7 @@ class AddIdeaForm(forms.Form):
 
     what_kind = forms.ModelChoiceField(queryset=IdeaType.objects.all(),
                                        empty_label='',
-                                       error_messages={'required':'Tell us what kind of idea this is.'})
+                                       error_messages={'required':'Tell us what kind of idea this is.'}, required=False)
 
     content_object = forms.ModelChoiceField(queryset=Location.objects.filter(organization__place__name='Columbus').order_by('name'),
                                    empty_label='',
@@ -37,7 +37,7 @@ class AddIdeaForm(forms.Form):
 
     what_for = forms.ChoiceField(choices=FOR_CHOICES_AND_EMPTY,
                                  error_messages={'required':'Please specify what this is for.'},
-                                 widget=forms.Select())
+                                 widget=forms.Select(), required=False)
 
     links = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'link examples'}),required=False)
 

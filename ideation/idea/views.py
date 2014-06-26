@@ -129,6 +129,10 @@ def addidea(request, place=None, organization=None, location=None):
         form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
         form.fields['content_object'].queryset=Location.objects.none()
 
+    if place and organization and not location:
+        form.fields['content_object_place'].queryset = Place.objects.none()
+        form.fields['content_object'].queryset=Location.objects.filter(organization__slug__iexact=organization, organization__place__slug__iexact=place)
+
     d = {'form': form,}
 
     if place:
@@ -148,9 +152,10 @@ def addidea(request, place=None, organization=None, location=None):
 
     if place:
         try:
-            counties = request.session.get('region').counties.all()
-            d['location'] = Place.objects.filter(county_fk=counties)
-            form.fields['content_object'].queryset = d['location']
+            pass
+            # counties = request.session.get('region').counties.all()
+            # d['location'] = Place.objects.filter(county_fk=counties)
+            # form.fields['content_object'].queryset = d['location']
 
         except:
             pass
