@@ -93,7 +93,7 @@ class Idea(models.Model):
 
     def get_name(self):
         s = self.name
-        s[0] = s[0].lower()
+        # s[0] = s[0].lower()
         return s
 
     def get_parent_link(self):
