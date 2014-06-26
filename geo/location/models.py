@@ -82,6 +82,10 @@ class Location(models.Model):
             url_safe(self.slug)
         ])
 
+
+    def get_name(self):
+        return self.name
+
     def get_id(self):
         return self.name.lower().replace(' ','-')
 

@@ -10,6 +10,7 @@ from forms import NewsItemForm
 from vanilla import DetailView, UpdateView, ListView, CreateView, DeleteView
 
 from geo.location.models import Location
+from geo.organization.models import Organization
 from rest_framework import viewsets
 
 
@@ -65,18 +66,24 @@ class NewsItemUpdateView(UpdateView):
 class NewsItemListView(ListView):
     model = NewsItem
     kind = "location"
+    c_type = 'location'
 
     def get_queryset(self):
         qs = super(NewsItemListView, self).get_queryset()
-        c_type = 'location'
         if self.kwargs.get('kind') == 'org':
-            c_type = 'organization'
-        c = ContentType.objects.get(name=c_type)
+            self.c_type = 'organization'
+        c = ContentType.objects.get(name=self.c_type)
         return qs.filter(content_type=c, object_id=self.kwargs.get('obj_id'))
 
     def get_context_data(self, **kwargs):
         d = super(NewsItemListView, self).get_context_data()
         d = dict(d, **self.kwargs)  # idiom to union two dicts. precedence to kwargs
+        obj_id = self.kwargs.get('obj_id')
+        if self.c_type == 'organization':
+            o = Organization.objects.get(pk=obj_id)
+        else:
+            o = Location.objects.get(pk=obj_id)
+        d['obj'] = o
         return d
 
 

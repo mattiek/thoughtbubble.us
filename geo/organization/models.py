@@ -77,6 +77,9 @@ class Organization(models.Model):
     def __unicode__(self):
         return "%s Organization" % self.title
 
+    def get_name(self):
+        return self.title
+
     def get_description(self):
         return self.sherlock_description or 'no exploring descripton'
 

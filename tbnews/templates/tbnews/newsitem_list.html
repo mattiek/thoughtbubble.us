@@ -3,7 +3,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    Idea List
+    News List
 {% endblock %}
 
 {% block head %}
@@ -19,6 +19,7 @@
 {% endblock %}
 
 {% block content %}
+    <h3>News for {{ obj.get_name }}</h3>
     <a href="{% url 'add_news_item' kind obj_id%}">Add</a>
     {% for news in object_list %}
         <h2>{{ news.subject }}</h2>
