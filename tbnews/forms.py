@@ -12,6 +12,9 @@ class NewsItemForm(ModelForm):
             'object_id':  HiddenInput(),
             'content_type': HiddenInput(),
         }
+        labels = {
+            'img': 'Image'
+        }
 
         #fields = ['subject', 'content', 'img']
 

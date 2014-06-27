@@ -21,11 +21,12 @@
 {% block content %}
 
     <div id="form-wrapper">
+        <h3>Add/Update News Item for {{ obj.get_name }}</h3>
         <form enctype="multipart/form-data" method="post" action="">
             {% csrf_token %}
             {{ form.errors }}
             {{ form.as_p }}
-            <input type="submit"/>
+            <input type="submit" class="admin-submit submit" value="Add News"/>
         </form>
     </div>
 {% endblock %}

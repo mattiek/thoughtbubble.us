@@ -2,26 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/location/models.py" afterPath="$PROJECT_DIR$/geo/location/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/organization/models.py" afterPath="$PROJECT_DIR$/geo/organization/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/forms.py" afterPath="$PROJECT_DIR$/tbnews/forms.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/global.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/global.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" afterPath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" afterPath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html" afterPath="$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/views.py" afterPath="$PROJECT_DIR$/tbnews/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403819835124" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820756142" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403187816383" ignored="false" />
-    <file path="/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403819179547" ignored="false" />
+    <file path="/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828037597" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231060936" ignored="false" />
-    <file path="/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820730591" ignored="false" />
+    <file path="/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403827987344" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402832118858" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/settings/base_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268214881" ignored="false" />
     <file path="/base_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268214881" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/settings/local_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879016009" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/views.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231467256" ignored="false" />
-    <file path="/views.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820633683" ignored="false" />
+    <file path="/views.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828306837" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/urls.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231871355" ignored="false" />
     <file path="/urls.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231660948" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/templates/base.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231219260" ignored="false" />
@@ -32,18 +35,18 @@
     <file path="/img.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403103761499" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/admin.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402976594118" ignored="false" />
     <file path="/admin.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402976593676" ignored="false" />
-    <file path="/fragment.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820168328" ignored="false" />
+    <file path="/fragment.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828394310" ignored="false" />
     <file path="/local_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879015656" ignored="false" />
     <file path="$PROJECT_DIR$/../../../hungerhub/hungerhub/templates/base.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879523560" ignored="false" />
     <file path="$PROJECT_DIR$/../../../hungerhub/hungerhub/static/coffee/global.coffee" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879523560" ignored="false" />
     <file path="$PROJECT_DIR$/../../../hungerhub/hungerhub/static/sass/screen.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879593124" ignored="false" />
     <file path="/screen.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879591482" ignored="false" />
     <file path="/*.regexp" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402881352460" ignored="false" />
-    <file path="/a.dummy" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403818575619" ignored="false" />
+    <file path="/a.dummy" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403827679962" ignored="false" />
     <file path="/detail.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403230283634" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/templates/detail.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403230284579" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/static/sass/global.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403268416725" ignored="false" />
-    <file path="/global.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403229480180" ignored="false" />
+    <file path="/global.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403827638800" ignored="false" />
     <file path="/dummy.xml" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231339239" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/static/css/global.css" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403229486231" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/nationwide/templates/robots.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403175995074" ignored="false" />
@@ -65,7 +68,9 @@
     <file path="$USER_HOME$/Documents/SIT-intellij-2014/dog/pnstatic/web/plugin/OrientationBook/css/MiniDog.css" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403791955883" ignored="false" />
     <file path="/MiniDog.css" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403791955198" ignored="false" />
     <file path="/organization_form.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820238360" ignored="false" />
-    <file path="/newsitem_list.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820696177" ignored="false" />
+    <file path="/newsitem_list.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403827715831" ignored="false" />
+    <file path="/newsitem_form.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828416890" ignored="false" />
+    <file path="/add.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828124368" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,39 +131,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ideation/idea/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="126" column="0" selection-start="3043" selection-end="4351" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ideation/idea/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="103" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="22" selection-start="1114" selection-end="1114" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo/organization/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="4" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.82843137">
+            <state line="81" column="0" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,25 +143,54 @@
       <file leaf-file-name="organization_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="94" selection-start="2840" selection-end="2840" vertical-scroll-proportion="-4.0416665">
+            <state line="85" column="94" selection-start="2840" selection-end="2840" vertical-scroll-proportion="-13.416667">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/views.py">
+      <file leaf-file-name="global.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/global.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="60" column="0" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0">
+            <state line="73" column="19" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newsitem_form.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="add.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="217" column="22" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tbnews/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="25" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tbnews/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="48" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newsitem_form.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="7" selection-start="96" selection-end="99" vertical-scroll-proportion="-1.5">
+            <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="0.8490566">
               <folding />
             </state>
           </provider>
@@ -194,7 +199,7 @@
       <file leaf-file-name="newsitem_list.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="32" selection-start="529" selection-end="529" vertical-scroll-proportion="-3.7083333">
+            <state line="22" column="71" selection-start="609" selection-end="609" vertical-scroll-proportion="-10.5">
               <folding />
             </state>
           </provider>
@@ -212,7 +217,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tbnews/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="20" selection-start="2743" selection-end="2744" vertical-scroll-proportion="0.0">
+            <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-1.8909091">
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -238,11 +243,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/geo/location/templates/location/location_detail.html" />
-        <option value="$PROJECT_DIR$/geo/location/templates/mobile/location/location_detail.html" />
-        <option value="$PROJECT_DIR$/ideation/idea/templates/idea/idea_for_list.html" />
-        <option value="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
-        <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
         <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_for_list.html" />
         <option value="$PROJECT_DIR$/ideation/idea/models.py" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html" />
@@ -250,10 +250,15 @@
         <option value="$PROJECT_DIR$/ideation/idea/forms.py" />
         <option value="$PROJECT_DIR$/geo/organization/forms.py" />
         <option value="$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html" />
-        <option value="$PROJECT_DIR$/tbnews/views.py" />
-        <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
         <option value="$PROJECT_DIR$/geo/location/models.py" />
         <option value="$PROJECT_DIR$/geo/organization/models.py" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/global.scss" />
+        <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
+        <option value="$PROJECT_DIR$/tbnews/models.py" />
+        <option value="$PROJECT_DIR$/tbnews/forms.py" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" />
+        <option value="$PROJECT_DIR$/tbnews/views.py" />
+        <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" />
       </list>
     </option>
   </component>
@@ -1290,7 +1295,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="not so unrequired fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Work on news" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1304,7 +1309,6 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="privacy page header styles" />
     <MESSAGE value="ordering on locatrion&#10;explore now has login required" />
     <MESSAGE value="logged-out modal" />
     <MESSAGE value="location admin" />
@@ -1329,6 +1333,7 @@
     <MESSAGE value="contact form" />
     <MESSAGE value="Adding ideas to stuff" />
     <MESSAGE value="not so unrequired fields" />
+    <MESSAGE value="Work on news" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1374,38 +1379,10 @@
           <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="45" />
+      <option name="time" value="47" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_for_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="161" selection-start="421" selection-end="421" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideation/idea/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="26" selection-start="2592" selection-end="2592" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="16" selection-start="7198" selection-end="7240" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="5" selection-start="4740" selection-end="4740" vertical-scroll-proportion="-6.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ideation/idea/templates/addidea.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="44" selection-start="924" selection-end="938" vertical-scroll-proportion="-3.5833333">
@@ -1443,39 +1420,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="94" selection-start="2840" selection-end="2840" vertical-scroll-proportion="-4.0416665">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geo/organization/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="60" column="0" selection-start="2193" selection-end="2193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="7" selection-start="96" selection-end="99" vertical-scroll-proportion="-1.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tbnews/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="20" selection-start="2743" selection-end="2744" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="32" selection-start="529" selection-end="529" vertical-scroll-proportion="-3.7083333">
           <folding />
         </state>
       </provider>
@@ -1489,7 +1436,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geo/organization/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="4" selection-start="2678" selection-end="2678" vertical-scroll-proportion="0.82843137">
+        <state line="81" column="0" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/global.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="73" column="19" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tbnews/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="48" selection-start="445" selection-end="445" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tbnews/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="25" selection-start="349" selection-end="349" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="22" selection-start="3159" selection-end="3159" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="94" selection-start="2840" selection-end="2840" vertical-scroll-proportion="-13.416667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tbnews/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1311" selection-end="1311" vertical-scroll-proportion="-1.8909091">
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="71" selection-start="609" selection-end="609" vertical-scroll-proportion="-10.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="0.8490566">
           <folding />
         </state>
       </provider>

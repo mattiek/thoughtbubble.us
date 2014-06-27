@@ -949,8 +949,16 @@ a:visited {
   color: #4585c3;
   /* text color */
 }
+/* line 71, ../scss/global.scss */
+a.blue {
+  color: white;
+}
+/* line 73, ../scss/global.scss */
+a.blue:visited {
+  color: white;
+}
 
-/* line 72, ../scss/global.scss */
+/* line 80, ../scss/global.scss */
 #home-container {
   *zoom: 1;
   max-width: 680em;
@@ -971,14 +979,14 @@ a:visited {
   clear: both;
 }
 @media screen and (max-width: 480px) {
-  /* line 72, ../scss/global.scss */
+  /* line 80, ../scss/global.scss */
   #home-container {
     width: 320px;
     background-color: transparent;
   }
 }
 
-/* line 87, ../scss/global.scss */
+/* line 95, ../scss/global.scss */
 #illustration {
   background-size: 100%;
   height: 233px;
@@ -989,7 +997,7 @@ a:visited {
   padding-top: 32px;
 }
 @media screen and (max-width: 480px) {
-  /* line 87, ../scss/global.scss */
+  /* line 95, ../scss/global.scss */
   #illustration {
     background: none;
     width: 320px;
@@ -997,83 +1005,83 @@ a:visited {
   }
 }
 
-/* line 104, ../scss/global.scss */
+/* line 112, ../scss/global.scss */
 #id_honeypot {
   display: none;
 }
 
-/* line 108, ../scss/global.scss */
+/* line 116, ../scss/global.scss */
 #page-wrapper {
   margin: 0 auto;
   width: 600px;
 }
 
-/* line 113, ../scss/global.scss */
+/* line 121, ../scss/global.scss */
 h4.message {
   text-align: center;
 }
 
-/* line 118, ../scss/global.scss */
+/* line 126, ../scss/global.scss */
 #wrapper {
   min-height: 600px;
 }
 
-/* line 126, ../scss/global.scss */
+/* line 134, ../scss/global.scss */
 .mfp-bg.mfp-ready,
 .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 126, ../scss/global.scss */
+  /* line 134, ../scss/global.scss */
   .mfp-bg.mfp-ready,
   .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
     min-width: 320px;
   }
 }
 
-/* line 136, ../scss/global.scss */
+/* line 144, ../scss/global.scss */
 input.admin-submit.submit {
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* line 143, ../scss/global.scss */
+/* line 151, ../scss/global.scss */
 #illustration {
   background-repeat: no-repeat;
 }
-/* line 145, ../scss/global.scss */
+/* line 153, ../scss/global.scss */
 #illustration.ship {
   background-image: url('../images/illustration-ship.png?1390687234');
   height: 250px;
 }
-/* line 150, ../scss/global.scss */
+/* line 158, ../scss/global.scss */
 #illustration.trees {
   background-image: url('../images/illustration-trees.png?1390687200');
   height: 238px;
 }
-/* line 155, ../scss/global.scss */
+/* line 163, ../scss/global.scss */
 #illustration.turbines {
   background-image: url('../images/illustration-windturbines.png?1390687238');
   height: 238px;
 }
 @media screen and (max-width: 480px) {
-  /* line 143, ../scss/global.scss */
+  /* line 151, ../scss/global.scss */
   #illustration {
     width: 320px;
   }
-  /* line 164, ../scss/global.scss */
+  /* line 172, ../scss/global.scss */
   #illustration.turbines, #illustration.trees, #illustration.ship {
     background: white;
     height: 80px;
   }
 }
 
-/* line 174, ../scss/global.scss */
+/* line 182, ../scss/global.scss */
 .tb-copyright {
   margin-top: 20px;
 }
 
-/* line 180, ../scss/global.scss */
+/* line 188, ../scss/global.scss */
 #contact h2 {
   text-align: center;
 }

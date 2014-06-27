@@ -20,18 +20,25 @@ class NewsItemCreateView(CreateView):
     kind = "location"
     obj_id = 0
     form_class = NewsItemForm
+    c_type = 'location'
 
 
     def get_context_data(self, **kwargs):
         d = super(NewsItemCreateView, self).get_context_data()
         d = dict(d, **kwargs)  # idiom to union two dicts. precedence to kwargs
 
-        c_type = 'location'
+        self.c_type = 'location'
         if self.kwargs.get('kind') == 'org':
-            c_type = 'organization'
+            self.c_type = 'organization'
 
-        d['form'].fields['content_type'].initial = d['form'].fields['content_type'].choices.queryset.get(name=c_type).id
+        d['form'].fields['content_type'].initial = d['form'].fields['content_type'].choices.queryset.get(name=self.c_type).id
         d['form'].fields['object_id'].initial = self.kwargs.get('obj_id')
+
+        if self.c_type == 'organization':
+            o = Organization.objects.get(pk=self.kwargs.get('obj_id'))
+        else:
+            o = Location.objects.get(pk=self.kwargs.get('obj_id'))
+        d['obj'] = o
         return d
 
     def post(self, request, *args, **kwargs):

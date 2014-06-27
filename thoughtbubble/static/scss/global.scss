@@ -67,7 +67,15 @@ a {
   &:visited {
     color: $tb_link_blue; /* text color */;
   }
+
+  &.blue {
+    color: white;
+    &:visited {
+      color: white;
+    }
+  }
 }
+
 
 #home-container {
   @include outer-container;

@@ -20,7 +20,7 @@
 
 {% block content %}
     <h3>News for {{ obj.get_name }}</h3>
-    <a href="{% url 'add_news_item' kind obj_id%}">Add</a>
+    <a href="{% url 'add_news_item' kind obj_id%}" class="orange submit">Add</a>
     {% for news in object_list %}
         <h2>{{ news.subject }}</h2>
         <p>{{ news.content }}</p>

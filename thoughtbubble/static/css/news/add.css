@@ -366,3 +366,19 @@ form .row .row.second-row {
 #id_links {
   width: 180px;
 }
+
+/* line 204, ../../scss/news/add.scss */
+label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* line 213, ../../scss/news/add.scss */
+input, textarea {
+  width: 324px;
+}
+
+/* line 217, ../../scss/news/add.scss */
+h3 {
+  margin-bottom: 20px;
+}
