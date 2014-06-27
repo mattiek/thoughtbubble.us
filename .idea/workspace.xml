@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/forms.py" afterPath="$PROJECT_DIR$/tbnews/forms.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/global.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/global.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" afterPath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" afterPath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/views.py" afterPath="$PROJECT_DIR$/tbnews/views.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo/places/templates/gmgdav3.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/geo/places/templates/gmgdav3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/places/admin.py" afterPath="$PROJECT_DIR$/geo/places/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403820756142" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403830137657" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403187816383" ignored="false" />
     <file path="/forms.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828037597" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/models.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403231060936" ignored="false" />
@@ -34,7 +29,7 @@
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/img.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403103881569" ignored="false" />
     <file path="/img.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403103761499" ignored="false" />
     <file path="$PROJECT_DIR$/../../../nationwide/wordart/admin.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402976594118" ignored="false" />
-    <file path="/admin.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402976593676" ignored="false" />
+    <file path="/admin.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403830289614" ignored="false" />
     <file path="/fragment.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1403828394310" ignored="false" />
     <file path="/local_settings.py" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879015656" ignored="false" />
     <file path="$PROJECT_DIR$/../../../hungerhub/hungerhub/templates/base.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1402879523560" ignored="false" />
@@ -131,28 +126,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="0" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="organization_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo/organization/templates/organization/organization_form.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="85" column="94" selection-start="2840" selection-end="2840" vertical-scroll-proportion="-13.416667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="global.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/global.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="19" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -187,11 +164,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="newsitem_form.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="newsitem_form.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="0.8490566">
+            <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="-6.3">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gmgdav3.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo/places/templates/gmgdav3.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gmgdav3.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/geo/places/templates/gmgdav3.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geo/places/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="38" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -200,15 +206,6 @@
         <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html">
           <provider selected="true" editor-type-id="text-editor">
             <state line="22" column="71" selection-start="609" selection-end="609" vertical-scroll-proportion="-10.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/location/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="0" selection-start="2782" selection-end="2782" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -243,7 +240,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_for_list.html" />
         <option value="$PROJECT_DIR$/ideation/idea/models.py" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html" />
         <option value="$PROJECT_DIR$/ideation/idea/views.py" />
@@ -259,6 +255,7 @@
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" />
         <option value="$PROJECT_DIR$/tbnews/views.py" />
         <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html" />
+        <option value="$PROJECT_DIR$/geo/places/admin.py" />
       </list>
     </option>
   </component>
@@ -336,83 +333,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbnews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbnews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbnews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tbnews" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="geo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -427,6 +348,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="geo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="places" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="geo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="places" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -485,7 +432,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/thoughtbubble/templates" />
       <recent name="$PROJECT_DIR$/thoughtbubble/static/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/geo/places/templates" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.thought">
@@ -1219,7 +1170,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="792" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1232,7 +1183,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32065997" sideWeight="0.70238096" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32065997" sideWeight="0.70238096" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29761904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1383,29 +1334,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ideation/idea/templates/addidea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="44" selection-start="924" selection-end="938" vertical-scroll-proportion="-3.5833333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideation/idea/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="126" column="0" selection-start="3043" selection-end="4351" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ideation/idea/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="103" selection-start="1268" selection-end="1268" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/thoughtbubble/lib/python2.7/site-packages/vanilla/model_views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="309" column="0" selection-start="10403" selection-end="10403" vertical-scroll-proportion="0.33333334">
@@ -1496,7 +1424,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_form.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="0.8490566">
+        <state line="23" column="43" selection-start="574" selection-end="574" vertical-scroll-proportion="-6.3">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo/places/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="38" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo/places/templates/gmgdav3.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo/places/templates/gmgdav3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
