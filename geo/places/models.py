@@ -39,9 +39,9 @@ class Place(models.Model):
     zip_code = models.IntegerField()
     latitude = models.FloatField(null=True, blank=True)
     longitude = models.FloatField(null=True, blank=True)
-    elevation = models.IntegerField(default=0)
+    elevation = models.IntegerField(default=0, null=True, blank=True)
     place_type = models.CharField(max_length=255, null=True, blank=True)
-    population= models.IntegerField(default=0)
+    population= models.IntegerField(default=0, null=True, blank=True)
 
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
