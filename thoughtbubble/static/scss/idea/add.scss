@@ -1,6 +1,7 @@
 @import "partials/general";
 @import "compass";
 @import "partials/inputs";
+@import "partials/filtering";
 
 #illustration {
 //    background: image-url('illustration-windturbines.png') no-repeat no-repeat;
@@ -88,18 +89,21 @@ form .row .row.second-row {
     width: 228px;
 }
 
+
+
+//
 .chzn-container-single,
 .chosen-container-single {
-
-  .chzn-default, .chzn-single, .chzn-drop .chzn-results li,
-  .chosen-default, .chosen-single, .chosen-drop .chosen-results li {
-    @include gray-museo;
-    font-size: 15px;
-  }
-  .chzn-default,
-  .chosen-default {
-    color: #bbb;
-  }
+//
+//  .chzn-default, .chzn-single, .chzn-drop .chzn-results li,
+//  .chosen-default, .chosen-single, .chosen-drop .chosen-results li {
+//    @include gray-museo;
+//    font-size: 15px;
+//  }
+//  .chzn-default,
+//  .chosen-default {
+//    color: #bbb;
+//  }
   .chzn-single div b,
   .chosen-single div b {
     display: block;

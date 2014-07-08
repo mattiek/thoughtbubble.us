@@ -1019,69 +1019,70 @@ a.blue:visited {
 /* line 121, ../scss/global.scss */
 h4.message {
   text-align: center;
+  margin-bottom: 40px;
 }
 
-/* line 126, ../scss/global.scss */
+/* line 127, ../scss/global.scss */
 #wrapper {
   min-height: 600px;
 }
 
-/* line 134, ../scss/global.scss */
+/* line 135, ../scss/global.scss */
 .mfp-bg.mfp-ready,
 .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
   min-width: 930px;
 }
 @media screen and (max-width: 480px) {
-  /* line 134, ../scss/global.scss */
+  /* line 135, ../scss/global.scss */
   .mfp-bg.mfp-ready,
   .mfp-wrap.mfp-close-btn-in.mfp-auto-cursor.mfp-ready {
     min-width: 320px;
   }
 }
 
-/* line 144, ../scss/global.scss */
+/* line 145, ../scss/global.scss */
 input.admin-submit.submit {
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-/* line 151, ../scss/global.scss */
+/* line 152, ../scss/global.scss */
 #illustration {
   background-repeat: no-repeat;
 }
-/* line 153, ../scss/global.scss */
+/* line 154, ../scss/global.scss */
 #illustration.ship {
   background-image: url('../images/illustration-ship.png?1390687234');
   height: 250px;
 }
-/* line 158, ../scss/global.scss */
+/* line 159, ../scss/global.scss */
 #illustration.trees {
   background-image: url('../images/illustration-trees.png?1390687200');
   height: 238px;
 }
-/* line 163, ../scss/global.scss */
+/* line 164, ../scss/global.scss */
 #illustration.turbines {
   background-image: url('../images/illustration-windturbines.png?1390687238');
   height: 238px;
 }
 @media screen and (max-width: 480px) {
-  /* line 151, ../scss/global.scss */
+  /* line 152, ../scss/global.scss */
   #illustration {
     width: 320px;
   }
-  /* line 172, ../scss/global.scss */
+  /* line 173, ../scss/global.scss */
   #illustration.turbines, #illustration.trees, #illustration.ship {
     background: white;
     height: 80px;
   }
 }
 
-/* line 182, ../scss/global.scss */
+/* line 183, ../scss/global.scss */
 .tb-copyright {
   margin-top: 20px;
 }
 
-/* line 188, ../scss/global.scss */
+/* line 189, ../scss/global.scss */
 #contact h2 {
   text-align: center;
 }
