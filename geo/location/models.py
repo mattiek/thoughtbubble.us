@@ -2,7 +2,7 @@ from django.contrib.gis.db import models
 from geo.places.models import Place
 import json as JSON
 from django.contrib.gis.geos import GEOSGeometry
-from geo.organization.models import Organization
+# from geo.organization.models import Organization
 from django.core.urlresolvers import reverse
 from partner.models import Partner
 
@@ -48,7 +48,7 @@ class Location(models.Model):
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 
-    organization = models.ForeignKey(Organization, null=True, blank=True)
+    organization = models.ForeignKey('organization.Organization', null=True, blank=True)
 
     partners = models.ManyToManyField(Partner, null=True, blank=True)
 
@@ -65,6 +65,8 @@ class Location(models.Model):
 
     def __unicode__(self):
         try:
+            if self.what_kind and self.what_kind.name == 'organization':
+                return "%s" % (self.name)
             return "%s in %s" % (self.name,self.organization.title,)
         except:
             return "%s [no organization]" % (self.name,)

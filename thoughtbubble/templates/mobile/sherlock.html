@@ -49,7 +49,7 @@
             </div>
         </li>
 
-        {% for location in exploring.location_set.all %}
+        {% for location in exploring.get_sherlock_location %}
             <li class="swiper-slide" id="{{ location.get_id }}" data-index="{{ forloop.counter  }}">
                 <a href="{{ location.get_absolute_url }}">
                     <h4>{{ location.name }}</h4>

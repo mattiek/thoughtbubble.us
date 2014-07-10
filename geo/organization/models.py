@@ -13,6 +13,8 @@ from model_utils import Choices
 from ideation.idea.models import Idea
 
 from tbnews.models import NewsItem
+from django.db.models import Q
+
 #
 
 class OrganizationCuratorRole(models.Model):
@@ -34,6 +36,8 @@ class OrganizationCurator(models.Model):
 
         return "%s - %s" % (self.curator.username, s)
 
+
+from geo.location.models import Location, LocationType
 
 class Organization(models.Model):
     MOD_CHOICES = Choices('pending','active','rejected','disabled')
@@ -83,10 +87,28 @@ class Organization(models.Model):
     def get_description(self):
         return self.sherlock_description or 'no exploring descripton'
 
+    def get_sherlock_locations(self):
+        return self.location_set.filter(~Q(what_kind__name='organization'))
+
     def save(self, *args, **kwargs):
         if not self.center and self.geom:
             self.center = self.geom.centroid
+        try:
+            loc = self.location_set.get(what_kind__name='organization')
+        except:
+            loc = Location()
+            loc_type = LocationType.objects.get(name='organization')
+            loc.what_kind = loc_type
+            loc.name = self.title
+            loc.organization = self
+
+            # loc.geom = self.center
+            loc.longitude = self.center[0]
+            loc.latitude = self.center[1]
+            loc.save()
+            self.location_set.add(loc)
         super(Organization, self).save(*args, **kwargs)
+
 
     def get_logo(self):
         if self.logo:
