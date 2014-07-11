@@ -55,7 +55,7 @@ class Place(models.Model):
         return "%s, %s" % (self.name, self.state_code)
 
     def save(self, *args, **kwargs):
-        if not self.geom:
+        if not self.geom and self.longitude and self.latitude:
             self.geom = Point(self.longitude, self.latitude)
 
         if not self.county_fk:
