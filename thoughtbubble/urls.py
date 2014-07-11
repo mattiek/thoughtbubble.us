@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^comments/', include('django.contrib.comments.urls')),
 
     url(r'^$', 'thoughtbubble.views.home', name='home'),
+    url(r'^error/?$', 'thoughtbubble.views.error', name='error'),
 
     url(r'^signup/?$', 'thoughtbubble.views.signup', name='signup'),
     # url(r'^organization-signup/?$', 'thoughtbubble.views.organization_signup', name='organization_signup'),

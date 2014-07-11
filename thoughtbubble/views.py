@@ -117,6 +117,10 @@ def sherlock(request, place=None, organization=None):
     return render(request, request.device_template_dir + 'sherlock.html', d)
 
 
+def error(request):
+    i = 8 / 0
+
+
 def debit_card(request):
     if request.POST:
         card_uri = request.POST.get('balancedCreditCardURI')

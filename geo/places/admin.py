@@ -24,5 +24,5 @@ class GoogleAdmin(geos_admin.OSMGeoAdmin):
     map_template = 'gmgdav3.html'
 
 admin.site.register(Place, GoogleAdmin)
-admin.site.register(County,CountyAdmin)
-admin.site.register(Region,RegionAdmin)
+admin.site.register(County, CountyAdmin)
+admin.site.register(Region, RegionAdmin)
