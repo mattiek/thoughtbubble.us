@@ -55,14 +55,16 @@ class Place(models.Model):
         return "%s, %s" % (self.name, self.state_code)
 
     def save(self, *args, **kwargs):
+        super(Place, self).save(*args, **kwargs)
+
         if not self.geom and self.longitude and self.latitude:
             self.geom = Point(self.longitude, self.latitude)
 
-        if not self.county_fk:
-            c = County.objects.get_or_create(name=self.county, state_code=self.state_code)[0]
-            self.county_fk = c
+        # if not self.county_fk:
+        #     c = County.objects.get_or_create(name=self.county, state_code=self.state_code)[0]
+        #     self.county_fk = c
 
-        super(Place, self).save(*args, **kwargs)
+
 
 
     def get_explore_link(self):
