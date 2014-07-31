@@ -4,6 +4,7 @@
 {% load threadedcomments_tags %}
 {% load ideacountables %}
 {% load avatar_tags %}
+{% load thumbnail %}
 
 {% block title %}
     Idea List
@@ -58,7 +59,7 @@
         <div id="images">
             {% for picture in pictures %}
                 <a class="image-popup-no-margins" href="{{ picture.img.url }}">
-                    <img src="{{ picture.img.url }}" alt=""/>
+                    <img src="{% thumbnail picture.img 80x80 %}" alt=""/>
                 </a>
             {% endfor %}
         </div>

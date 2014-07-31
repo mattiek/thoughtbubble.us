@@ -87,7 +87,7 @@
                 {% if partner.link %}
                     <a href="{{ partner.link }}">
                   {% endif %}
-                    <img src="{{ partner.img.url }}" alt=""/></a>
+                    <img src="{% thumbnail partner.img 200x200 %}" alt=""/></a>
                 {% if partner.link %}
                     </a>
                 {% endif %}

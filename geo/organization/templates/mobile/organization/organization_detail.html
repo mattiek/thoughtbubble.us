@@ -1,6 +1,7 @@
 {% extends 'mobile/base.html' %}
 {% load classnames %}
 {% load widget_tweaks %}
+{% load thumbnail %}
 
 {% block title %}
     Organization Detail
@@ -86,7 +87,7 @@
             <div id="pictures">
                 {% for picture in organization.organizationimage_set.all %}
                     <a class="image-popup-no-margins" href="{{ picture.img.url }}">
-                        <img src="{{ picture.img.url }}" alt=""/>
+                        <img src="{% thumbnail picture.img 200x200 %}" alt=""/>
                     </a>
                 {% endfor %}
             </div>
@@ -98,7 +99,7 @@
             <div id="partners">
                 {% for partner in organization.partners.all %}
                     <a href="{{ partner.link }}" target="_blank">
-                        <img src="{{ partner.img.url }}" alt=""/>
+                        <img src="{% thumbnail partner.img 200x200 %}" alt=""/>
                     </a>
                 {% endfor %}
             </div>

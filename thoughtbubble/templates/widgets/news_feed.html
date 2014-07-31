@@ -1,9 +1,11 @@
+{% load thumbnail %}
+
 <ol class="slats">
 {% for news in news_feed %}
     <li class="group">
 {#        <a href="#">#}
             {% if news.img %}
-                <img src="{{ news.img.url }}" alt="thumbnail" />
+                <img src="{% thumbnail news.img 150x150 %}" alt="thumbnail" />
             {% endif %}
             <h3>{{ news.name }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
             <p>{{ news.content|safe }}</p>
