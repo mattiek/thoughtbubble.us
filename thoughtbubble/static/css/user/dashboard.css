@@ -733,3 +733,17 @@ fieldset {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
+
+/* line 179, ../../scss/user/dashboard.scss */
+#update-avatar-overlay {
+  padding-left: 40px;
+  padding-top: 35px;
+}
+/* line 182, ../../scss/user/dashboard.scss */
+#update-avatar-overlay p {
+  color: white;
+}
+/* line 187, ../../scss/user/dashboard.scss */
+#update-avatar-overlay img {
+  margin-top: 15px;
+}

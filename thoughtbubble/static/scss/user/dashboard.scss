@@ -175,3 +175,16 @@ fieldset {
 #update-avatar {
   @include blue-museo-link;
 }
+
+#update-avatar-overlay {
+  padding-left: 40px;
+  padding-top: 35px;
+  p {
+
+    color: white;
+  }
+
+  img {
+    margin-top: 15px;
+  }
+}

@@ -483,27 +483,33 @@ a.orange:hover {
 .comments ul {
   list-style-type: none;
 }
-/* line 12, ../../scss/partials/_comments.scss */
+/* line 9, ../../scss/partials/_comments.scss */
+.comments ul.indent-comment {
+  padding-left: 30px;
+}
+/* line 16, ../../scss/partials/_comments.scss */
 .comments .comment.bubbleleft img.talkbubb {
   float: left;
 }
-/* line 16, ../../scss/partials/_comments.scss */
+/* line 20, ../../scss/partials/_comments.scss */
 .comments .comment.bubbleleft .comment_text {
-  margin-left: 6%;
+  margin-left: 6.5%;
+  padding-left: 1%;
 }
-/* line 22, ../../scss/partials/_comments.scss */
+/* line 27, ../../scss/partials/_comments.scss */
 .comments .comment.bubbleright img.talkbubb {
   float: right;
 }
-/* line 26, ../../scss/partials/_comments.scss */
-.comments .comment.bubbleright .comment_text {
-  margin-right: 6%;
-}
 /* line 31, ../../scss/partials/_comments.scss */
+.comments .comment.bubbleright .comment_text {
+  margin-right: 6.5%;
+  padding-left: 1%;
+}
+/* line 37, ../../scss/partials/_comments.scss */
 .comments .comment_li {
   margin-top: 10px;
 }
-/* line 35, ../../scss/partials/_comments.scss */
+/* line 41, ../../scss/partials/_comments.scss */
 .comments .comment_text {
   border: 1px solid #d8f1f6;
   border-radius: 5px;
@@ -516,13 +522,13 @@ a.orange:hover {
   width: 94%;
   padding: 5px 0px;
 }
-/* line 47, ../../scss/partials/_comments.scss */
+/* line 53, ../../scss/partials/_comments.scss */
 .comments .comment_text .comment_meta {
   float: right;
   margin-right: 5px;
 }
 
-/* line 64, ../../scss/partials/_comments.scss */
+/* line 70, ../../scss/partials/_comments.scss */
 .comments_length p {
   float: left;
   margin-left: 40px;
@@ -532,12 +538,12 @@ a.orange:hover {
   font-size: 10px;
   margin-bottom: 10px;
 }
-/* line 71, ../../scss/partials/_comments.scss */
+/* line 77, ../../scss/partials/_comments.scss */
 .comments_length p:first-child {
   margin-left: 0;
 }
 
-/* line 77, ../../scss/partials/_comments.scss */
+/* line 83, ../../scss/partials/_comments.scss */
 .comment_support {
   color: #f37d23;
   /* text color */
@@ -545,7 +551,7 @@ a.orange:hover {
   font-size: 10px;
   font-style: normal;
 }
-/* line 83, ../../scss/partials/_comments.scss */
+/* line 89, ../../scss/partials/_comments.scss */
 .comment_support img {
   vertical-align: initial;
   margin-right: 3px;

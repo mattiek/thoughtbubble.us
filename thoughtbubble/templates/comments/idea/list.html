@@ -17,7 +17,7 @@
             </li>
         {% endif %}
             {% if comment.open %}
-                <ul>
+                <ul class="{% if comment.depth > 1 %}indent-comment{% endif %}">
                 {% if comment.parent_id == None %}
                     {% set bubbleside = 'bubbleleft' %}
                 {% elif bubbleside == 'bubbleleft' %}
