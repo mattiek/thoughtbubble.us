@@ -87,6 +87,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
 
     def get_curated_orgs(self):
+        d = None
         if self.is_superuser:
             d = Organization.objects.all()
         else:
@@ -95,6 +96,9 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
             # unravelling from a list
             d = itertools.chain(*x)
+
+            if not len(d):
+                d = None
 
         return d
 

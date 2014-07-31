@@ -253,6 +253,7 @@ class IdeaImage(models.Model):
     idea = models.ForeignKey(Idea)
     img = models.ImageField(upload_to=path_and_rename('ideas','img'))
     name = models.CharField(max_length=255, blank=True, null=True)
+    ordering = models.IntegerField(default=0)
 
     def __unicode__(self):
         if self.name:
