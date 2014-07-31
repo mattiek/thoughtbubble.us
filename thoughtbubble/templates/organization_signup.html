@@ -6,7 +6,15 @@
 {% endblock %}
 
 {% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addfeature.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-signup.css" />
+
+
 {% endblock %}
 
 {% block bodyid %}signup{% endblock %}
@@ -34,6 +42,10 @@
                     {{ field  }}
                 {% endif %}
             {% endfor %}
+
+
+            <div id="map"></div>
+
 
             {% for field in form %}
                 {% if field.field|classname == 'ChoiceField' %}
@@ -63,6 +75,11 @@
 
 
 {% block footerscripts %}
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.5.1/mapbox.js'></script>
+    <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
+
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-signup.js"></script>
 {% endblock %}
