@@ -143,7 +143,7 @@ class Organization(models.Model):
             return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
-        return self.organizationimage_set.all()
+        return self.organizationimage_set.filter(active=True)
 
     def get_id(self):
         return self.title.lower().replace(' ','-')
@@ -358,6 +358,7 @@ class OrganizationImage(models.Model):
     img = models.ImageField(upload_to=path_and_rename('organizations','img'))
     name = models.CharField(max_length=255, blank=True, null=True)
     ordering = models.IntegerField(default=0)
+    active = models.BooleanField(default=False)
 
 
     class Meta:

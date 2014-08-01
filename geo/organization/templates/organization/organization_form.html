@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load classnames %}
 {% load widget_tweaks %}
+{% load thumbnail %}
 
 {% block title %}
     Organization Detail
@@ -83,10 +84,10 @@
             <div class="pictures-list">
                 {% if organization.get_pictures %}
                     {% for picture in organization.get_pictures %}
-                        <div id="pic-picture_{{ picture.id }}" name="pic-picture_{{ picture.id }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
+                        <div id="pic-picture_{{ picture.ordering }}" name="pic-picture_{{ picture.ordering }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
 {#                            <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">#}
                             <div class="cloak">
-                                <img src="{{ picture.url }}">
+                                <img src="{% thumbnail picture.img 100x100 %}">
                             </div>
                         </div>
                     {% endfor %}

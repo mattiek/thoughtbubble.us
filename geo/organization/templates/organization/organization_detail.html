@@ -97,7 +97,7 @@
 
 
         {#    Pictures #}
-        {% if pictures %}
+        {% if organization.organizationimage_set.all %}
             <div class="picture-label small-heading">pictures</div>
             <div id="pictures">
                 {% for picture in organization.organizationimage_set.all %}

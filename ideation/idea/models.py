@@ -254,8 +254,10 @@ class IdeaImage(models.Model):
     img = models.ImageField(upload_to=path_and_rename('ideas','img'))
     name = models.CharField(max_length=255, blank=True, null=True)
     ordering = models.IntegerField(default=0)
+    active = models.BooleanField(default=False)
 
-    def __unicode__(self):
+
+def __unicode__(self):
         if self.name:
             return self.name
         else:

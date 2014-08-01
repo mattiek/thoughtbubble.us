@@ -58,6 +58,18 @@ class OrganizationUpdate(UpdateView):
 
     def form_valid(self, form):
         s = super(OrganizationUpdate,self).form_valid(form)
+        pics = [form.cleaned_data.get('pic-picture_%d' % x, None) for x in range(1,5)]
+        partners = [form.cleaned_data.get('partner-picture_%d' % x, None) for x in range(1,5)]
+
+        for x in range(0,4):
+            obj = self.object.organizationimage_set.filter(ordering=x, active=True)
+            # if obj:
+            #     obj.active = False
+            #     obj.save()
+            order = x + 1
+            if pics[x]:
+                self.object.organizationimage_set.create(name='', img=pics[x], ordering=order,active=True)
+
         return s
 
     def form_invalid(self, form):

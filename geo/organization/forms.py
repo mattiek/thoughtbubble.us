@@ -29,6 +29,7 @@ class OrganizationUpdateForm(forms.ModelForm):
         cleaned_data = super(OrganizationUpdateForm, self).clean()
         cleaned_data = dict(cleaned_data.items() + self.files.items())
 
+
         return cleaned_data
 
     class Meta:
