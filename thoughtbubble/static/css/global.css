@@ -1086,3 +1086,8 @@ input.admin-submit.submit {
 #contact h2 {
   text-align: center;
 }
+
+/* line 195, ../scss/global.scss */
+#id_logo.file-picker-input img {
+  max-width: 100%;
+}
