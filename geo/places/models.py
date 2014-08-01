@@ -43,6 +43,9 @@ class Place(models.Model):
     place_type = models.CharField(max_length=255, null=True, blank=True)
     population= models.IntegerField(default=0, null=True, blank=True)
 
+    #TODO: classification = models.IntegerField City or Neighborhood
+    #TODO: Add DEBUG HEADER to see what IP you have and the region detect
+
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()
 

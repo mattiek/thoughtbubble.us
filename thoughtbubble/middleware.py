@@ -24,5 +24,6 @@ class GeoIPMiddleware(object):
             if not p:
                 p = Region.objects.get(name__iexact='central')
             request.session['region'] = p
+            request.session['ip'] = self.get_client_ip(request)
 
 
