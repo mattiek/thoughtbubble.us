@@ -31,13 +31,18 @@
 {% endblock %}
 
 {% block content %}
-    <div id="debug">
-        <p>IP : {{ request.session.ip }}</p>
-        <p>region : {{ request.session.region }}</p>
-    </div>
+{#    <div id="debug">#}
+{#        <p>IP : {{ request.session.ip }}</p>#}
+{#        <p>region : {{ request.session.region }}</p>#}
+{#    </div>#}
     {#    TODO: Legend that appears and disappears #}
     <div id="map">
 
+    </div>
+    <div id="zoom-to-me">
+        <ol>
+            <li>Zoom to me!</li>
+        </ol>
     </div>
     <div id="compass-rose">
         <div id="compass"></div>

@@ -8,6 +8,7 @@ from django.core.urlresolvers import reverse
 from autoslug import AutoSlugField
 
 from ideation.idea.models import Idea
+CLASSIFICATION_CHOICES = Choices('city','neighborhood','organization')
 
 class County(models.Model):
     name = models.CharField(max_length=255, null=True, blank=True)
@@ -44,7 +45,12 @@ class Place(models.Model):
     population= models.IntegerField(default=0, null=True, blank=True)
 
     #TODO: classification = models.IntegerField City or Neighborhood
+    classification = models.CharField(max_length=20, choices=CLASSIFICATION_CHOICES, default=CLASSIFICATION_CHOICES.city)
+
+
     #TODO: Add DEBUG HEADER to see what IP you have and the region detect
+    #TODO: Remove places from map when above certain view level
+    #TODO: ZOOM to me on the GeoLocation stuff
 
     geom = models.PointField(srid=4326, null=True, blank=True)
     objects = models.GeoManager()

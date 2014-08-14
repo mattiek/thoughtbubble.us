@@ -292,6 +292,24 @@ h1,h2 { margin:0px 0px 10px; }
   }
 }
 
+#zoom-to-me {
+  width: 140px;
+  height: 35px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 11px;
+  top: 75px;
+  z-index: 2;
+  overflow: hidden;
+  color: #878585; // text color
+  @include museo;
+  font-size: 13px;
+  line-height: 2.1em;
+  text-indent: 20px;
+  text-align: left;
+  padding-top: 5px;
+
+}
 
 // Compass
 #compass-rose {
@@ -317,6 +335,8 @@ h1,h2 { margin:0px 0px 10px; }
     z-index: 2;
     overflow: hidden;
   }
+
+
 
   ol {
     color: #878585; // text color

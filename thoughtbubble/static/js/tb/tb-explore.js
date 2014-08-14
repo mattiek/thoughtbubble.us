@@ -300,7 +300,16 @@ var showCompass = function() {
     $('#compass-instructions').animate({width:160, height:145}, 250);
 }
 
+var hideZoomToMe = function() {
+    $('#zoom-to-me').animate({width:1, height:1}, 250);
+}
+
+var showZoomToMe = function() {
+    $('#zoom-to-me').animate({width:160, height:145}, 250);
+}
+
 setTimeout(hideCompass, 4000);
+setTimeout(hideZoomToMe, 4000);
 
 $('#compass').on('click', function(e) {
     e.preventDefault();
