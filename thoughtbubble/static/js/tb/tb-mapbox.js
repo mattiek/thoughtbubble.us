@@ -5,24 +5,25 @@ if ("undefined" === typeof TB) {
 (function($) {
 
     TB.Map = (function(){
-        var drawn_object = [];
+        var self = {}
+        self.drawn_object = [];
 
-        var default_lat =  39.961;
-        var default_lng = -82.998;
+        self.default_lat =  39.961;
+        self.default_lng = -82.998;
 
         try {
-            default_lat = region[1];
-            default_lng = region[0];
+            self.default_lat = region[1];
+            self.default_lng = region[0];
         }
         catch (e) {
 
         }
 
-        var default_zoom = 11;
-        var default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
-//        var default_map = 'mattiej.map-wodu25gx';//'mlreed328.map-0chlhqvz';
-        var map;
-        var mapLayer = null;
+        self.default_zoom = 11;
+        self.default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
+        self.map;
+        self.featureLayer = null;
+        self.mapLayer = null;
 
         var drawn_poly;
         var polyLineOptions = {
@@ -31,41 +32,30 @@ if ("undefined" === typeof TB) {
         };
 
 
-        var init = function(){
-            map = L.mapbox.map('map','', {zoomControl: false })
-                .setView([default_lat, default_lng], default_zoom);
+        self.init = function(){
+            L.mapbox.accessToken = 'pk.eyJ1IjoibWF0dGllaiIsImEiOiJiaFJBdENBIn0.a3wsqqaNNEbR1_cq1SSZNA';
+            self.map = L.mapbox.map('map','', {
+                zoomControl: false
+            })
+                .setView([self.default_lat, self.default_lng], self.default_zoom);
 
 
-            new L.Control.Zoom({ position: 'topright' }).addTo(map);
+            self.featureLayer = L.mapbox.featureLayer().addTo(self.map);
+            self.mapLayer = L.mapbox.tileLayer(self.default_map);
+            self.map.addLayer(self.mapLayer);
+            new L.Control.Zoom({ position: 'topright' }).addTo(self.map);
 
         };
 
-        var loadMapLayer = function() {
-            TB.Map.mapLayer = L.mapbox.tileLayer(default_map);
-            map.addLayer(TB.Map.mapLayer);
+        self.get_map = function() {
+            return self.map;
         }
 
-        var get_map = function() {
-            return map;
+        self.panTo = function(coords) {
+            self.map.panTo(coords);
         }
 
-        var panTo = function(coords) {
-            map.panTo(coords);
-        }
-
-        return {
-            "map"               : get_map,
-            "drawn_object"      : drawn_object,
-            "default_lat"       : default_lat,
-            "default_lng"       : default_lng,
-            "default_zoom"      : default_zoom,
-            "default_map"       : default_map,
-            "init"              : init,
-            "panTo"             : panTo,
-            "loadMapLayer"      : loadMapLayer,
-            "mapLayer"          : mapLayer
-        };
-
+        return self;
     }());
 
 
@@ -75,3 +65,8 @@ if ("undefined" === typeof TB) {
 //    });
 
 })(jQuery);
+var has_map = $("#map").length > 0;
+if(has_map){
+    TB.Map.init();
+    //TB.Map.loadMapLayer();
+}

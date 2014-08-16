@@ -1,84 +1,83 @@
-var has_map = $("#map").length > 0;
+
 
 var neighborhoods = neighborhoods || {};
 
-if(has_map){
-    TB.Map.init();
-    TB.Map.loadMapLayer();
-}
-var map = TB.Map.map();
+
+var map = TB.Map.get_map();
 
 var previous_layer = null;
 
 var section_source   = $("#section-template").html();
 var section_template = Handlebars.compile(section_source);
 
-function highlightFeature(layer) {
-    debugger
-
-    if (previous_layer) {
-        previous_layer.setStyle({
-            stroke: false,
-            fill: false,
-            weight: 1,
+//function highlightFeature(layer) {
+//    if (previous_layer) {
+//        previous_layer.setStyle({
+//            stroke: false,
+//            fill: false,
+//            weight: 1,
+////            color: '#03f',
 //            color: '#03f',
-            color: '#03f',
-            dashArray: '',
-            fillOpacity: 0
-        });
-    }
-
-    layer.setStyle({
-        stroke: false,
-        fill: true,
-        weight: 3,
-//        color: '#E27B05',
-        color: '#444',
-        dashArray: '',
-        fillOpacity: 0.2
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToFront();
-    }
-
-
-    previous_layer = layer;
-}
-
-
-var workingMarkers = function(d) {
-    debugger
-    TB.Map.markers = L.mapbox.markerLayer(d.results).addTo(map);
-    var newMap = L.mapbox;
-    // Add features to the map
-    // Set a custom icon on each marker based on feature properties
+//            dashArray: '',
+//            fillOpacity: 0
+//        });
+//    }
+//
+//    layer.setStyle({
+//        stroke: false,
+//        fill: true,
+//        weight: 3,
+////        color: '#E27B05',
+//        color: '#444',
+//        dashArray: '',
+//        fillOpacity: 0.2
+//    });
+//
+//    if (!L.Browser.ie && !L.Browser.opera) {
+//        layer.bringToFront();
+//    }
+//
+//
+//    previous_layer = layer;
+//}
 
 
-    //Add features to the map
-//        map.markerLayer.setGeoJSON(d);
+//var workingMarkers = function(d) {
+//    TB.Map.markers = L.mapbox.markerLayer(d.results).addTo(map);
+//    var newMap = L.mapbox;
+//    // Add features to the map
+//    // Set a custom icon on each marker based on feature properties
+//
+//
+//    //Add features to the map
+////        map.markerLayer.setGeoJSON(d);
+//
+//    TB.Map.markers.eachLayer(function(marker) {
+//
+//        var feature = marker.feature;
+//
+//        // Create custom popup content
+//        var popupContent =  '<a class="popup" href="' + feature.properties.link + '">' +
+//            '   <h3>' + feature.properties.title + '</h3>' +
+//            '</a>';
+//
+//        // http://leafletjs.com/reference.html#popup
+//        marker.bindPopup(popupContent,{
+//            closeButton: false
+////                minWidth: 320
+//        });
+//    });
+//
+//    getNeighborhoods();
+//}
 
-    TB.Map.markers.eachLayer(function(marker) {
 
-        var feature = marker.feature;
-
-        // Create custom popup content
-        var popupContent =  '<a class="popup" href="' + feature.properties.link + '">' +
-            '   <h3>' + feature.properties.title + '</h3>' +
-            '</a>';
-
-        // http://leafletjs.com/reference.html#popup
-        marker.bindPopup(popupContent,{
-            closeButton: false
-//                minWidth: 320
-        });
-    });
-
-    getNeighborhoods();
-}
+// L.marker is a low-level marker constructor in Leaflet.
+//var nm = L.marker([37.9, -77]);
+//nm.setIcon(L.icon(feature.properties.icon))
 
 // Set a custom icon on each marker based on feature properties
-TB.Map.map().markerLayer.on('layeradd', function(e) {
+TB.Map.featureLayer.on('layeradd', function(e) {
 
     var marker = e.layer,
         feature = marker.feature;
@@ -101,14 +100,14 @@ TB.Map.map().markerLayer.on('layeradd', function(e) {
     });
 });
 
-var experimentalMarkers = function(d) {
-// Add features to the map
-    TB.Map.map().markerLayer.setGeoJSON(d);
-}
+//var experimentalMarkers = function(d) {
+//// Add features to the map
+//    TB.Map.map().markerLayer.setGeoJSON(d);
+//}
 
 TB.Map.mapLayer.on('ready', function() {
     getNeighborhoods();
-    TB.Map.map().on('moveend', function(e) {
+    TB.Map.get_map().on('moveend', function(e) {
         getNeighborhoods();
     })
 });
@@ -116,37 +115,37 @@ TB.Map.mapLayer.on('ready', function() {
 
 var previous_layer = null;
 
-function highlightFeature(layer) {
-
-    if (previous_layer) {
-        previous_layer.setStyle({
-            stroke: false,
-            fill: false,
-            weight: 1,
+//function highlightFeature(layer) {
+//
+//    if (previous_layer) {
+//        previous_layer.setStyle({
+//            stroke: false,
+//            fill: false,
+//            weight: 1,
+////            color: '#03f',
 //            color: '#03f',
-            color: '#03f',
-            dashArray: '',
-            fillOpacity: 0
-        });
-    }
-
-    layer.setStyle({
-        stroke: false,
-        fill: true,
-        weight: 3,
-//        color: '#E27B05',
-        color: '#444',
-        dashArray: '',
-        fillOpacity: 0.2
-    });
-
-    if (!L.Browser.ie && !L.Browser.opera) {
-        layer.bringToFront();
-    }
-
-
-    previous_layer = layer;
-}
+//            dashArray: '',
+//            fillOpacity: 0
+//        });
+//    }
+//
+//    layer.setStyle({
+//        stroke: false,
+//        fill: true,
+//        weight: 3,
+////        color: '#E27B05',
+//        color: '#444',
+//        dashArray: '',
+//        fillOpacity: 0.2
+//    });
+//
+//    if (!L.Browser.ie && !L.Browser.opera) {
+//        layer.bringToFront();
+//    }
+//
+//
+//    previous_layer = layer;
+//}
 
 
 
@@ -175,10 +174,10 @@ var getNeighborhoods = function() {
 
             map_features = _.union(cities,j);
 
-            TB.Map.map().markerLayer.setGeoJSON(map_features);
+            TB.Map.featureLayer.setGeoJSON(map_features);
 
             // Listen for individual marker clicks
-            TB.Map.map().markerLayer.on('touchstart click',function(e) {
+            TB.Map.featureLayer.on('touchstart click',function(e) {
 //                e.layer.unbindPopup();
 //                e.stopPropagation();
 //                e.preventDefault();
@@ -260,37 +259,42 @@ var getNeighborhoods = function() {
 
 
 // Metro selection
-$('#metrodifier').on('change', function(e) {
-    window.location.href = $('[value=' + e.target.value +']', e.target).attr('data-href');
-});
+//$('#metrodifier').on('change', function(e) {
+//    window.location.href = $('[value=' + e.target.value +']', e.target).attr('data-href');
+//});
 
 
-$('#anywhere-else').on('click', function(e){
-    e.preventDefault();
-    if ($('#anywhere-entry').length) {
-        $('#anywhere-entry').remove();
-        $('.twitter-typeahead').remove();
-    }
-    else {
-        $('#minisplore').append('<input id="anywhere-entry" type="text" />');
-        $('#anywhere-entry').typeahead(
-            {
-                name: 'name',
-                valueKey: 'name',
-                prefetch: '/api/v1/neighborhoods-typeahead/.json',
-                remote: '/api/v1/neighborhoods-typeahead/.json?neighborhood=%QUERY&metro=' + window.exploringMetro
-            }
-        ).bind('typeahead:selected', function (obj, datum) {
-                $('#id_city').val(datum.id);
-            }).bind('typeahead:autocompleted', function (obj, datum) {
-                $('#id_city').val(datum.id);
-            });
+//$('#anywhere-else').on('click', function(e){
+//    e.preventDefault();
+//    if ($('#anywhere-entry').length) {
+//        $('#anywhere-entry').remove();
+//        $('.twitter-typeahead').remove();
+//    }
+//    else {
+//        $('#minisplore').append('<input id="anywhere-entry" type="text" />');
+//        $('#anywhere-entry').typeahead(
+//            {
+//                name: 'name',
+//                valueKey: 'name',
+//                prefetch: '/api/v1/neighborhoods-typeahead/.json',
+//                remote: '/api/v1/neighborhoods-typeahead/.json?neighborhood=%QUERY&metro=' + window.exploringMetro
+//            }
+//        ).bind('typeahead:selected', function (obj, datum) {
+//                $('#id_city').val(datum.id);
+//            }).bind('typeahead:autocompleted', function (obj, datum) {
+//                $('#id_city').val(datum.id);
+//            });
+//
+//    }
+//
+//
+//});
 
-    }
 
 
-});
 
+
+// Map Hints and Coaching
 
 var hideCompass = function() {
     $('#compass-instructions').animate({width:1, height:1}, 250);
@@ -302,10 +306,6 @@ var showCompass = function() {
 
 var hideZoomToMe = function() {
     $('#zoom-to-me').animate({width:1, height:1}, 250);
-}
-
-var showZoomToMe = function() {
-    $('#zoom-to-me').animate({width:160, height:145}, 250);
 }
 
 setTimeout(hideCompass, 4000);
@@ -320,13 +320,3 @@ $('#compass').on('click', function(e) {
         showCompass();
 });
 
-//
-//if (!navigator.geolocation) {
-//    geolocate.innerHTML = 'geolocation is not available';
-//} else {
-//    geolocate.onclick = function (e) {
-//        e.preventDefault();
-//        e.stopPropagation();
-//        map.locate();
-//    };
-//}
