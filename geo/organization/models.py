@@ -91,11 +91,16 @@ class Organization(models.Model):
         return self.location_set.filter(~Q(what_kind__name='organization'))
 
     def save(self, *args, **kwargs):
+
+        # First try to see if we don't have a center, then set it by the geom's center
         if not self.center and self.geom:
             self.center = self.geom.centroid
         try:
+            # Trying to see if we have a specialized location for the organization
             loc = self.location_set.get(what_kind__name='organization')
         except:
+            # If we don't have a specialized location for it, then we need to set it
+            # from the center.
             loc = Location()
             loc_type = LocationType.objects.get(name='organization')
             loc.what_kind = loc_type
@@ -107,6 +112,7 @@ class Organization(models.Model):
             loc.latitude = self.center[1]
             loc.save()
             self.location_set.add(loc)
+
         super(Organization, self).save(*args, **kwargs)
 
 

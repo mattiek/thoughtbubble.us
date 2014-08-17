@@ -5,7 +5,7 @@ var options = {
     decode: true //use window.atob to base64 decode before checking size
 };
 
-$('#id_pic1, #id_pic2, #id_pic3, #id_pic4').imagePreviewInput({ resize: 30 * 1024, decode: true, quality: 0.5 }).on('load', function(e, data) {
+$('.file-picker-input').imagePreviewInput({ resize: 30 * 1024, decode: true, quality: 0.5 }).on('load', function(e, data) {
     var $preview = $(e.target).css('display', 'inline-block'),
         $img = $preview.find('img');
     if (!$img.length) {
