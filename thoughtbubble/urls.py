@@ -5,6 +5,8 @@ from django.contrib.gis import admin
 from filebrowser.sites import site
 
 
+from django.views.generic import RedirectView
+
 from views import MyConnectionsView, UserProfileFormView, ContactFormView
 
 admin.autodiscover()
@@ -31,17 +33,25 @@ urlpatterns = patterns('',
     url(r'^login/?$', 'thoughtbubble.views.login', name='login'),
     url(r'^logout/?$', 'thoughtbubble.views.logout', name='logout'),
 
+    # Admin related pages
     (r'^admin/filebrowser/', include(site.urls)),
     (r'^grappelli/', include('grappelli.urls')),
     (r'^tinymce/', include('tinymce.urls')),
-    # url(r'^admin$', include(admin.site.urls)),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin$', RedirectView.as_view(url="/admin/")),
+
+    # API pages
     url(r'^api/', include('api.urls')),
+
+    # Geo pages
     url(r'^', include('thoughtbubble.geo_urls')),
     url(r'^news/', include('tbnews.urls')),
 
+    # Pages related to checkout
     url(r'^checkout/?$', 'thoughtbubble.views.checkout', name='checkout'),
     url(r'^checkout-thanks/?$', 'thoughtbubble.views.debit_card', name='post_checkout'),
+
+
     # url(r'^thankyou/?$', 'thoughtbubble.views.thank_you', name='thank_you'),
     # url('', include('social.apps.django_app.urls', namespace='social')),
 
