@@ -97,10 +97,10 @@
 
 
         {#    Pictures #}
-        {% if organization.organizationimage_set.all %}
+        {% if organization.get_pictures %}
             <div class="picture-label small-heading">pictures</div>
             <div id="pictures">
-                {% for picture in organization.organizationimage_set.all %}
+                {% for picture in organization.get_pictures %}
                     <a class="image-popup-no-margins" href="{{ picture.img.url }}">
                         <img src="{% thumbnail picture.img 200x200 %}" alt=""/>
                     </a>
@@ -109,13 +109,13 @@
         {% endif %}
 
         {#    Partners #}
-        {% if organization.partners.all %}
+        {% if organization.get_partners %}
             <div class="partner-label small-heading">partners</div>
             <div id="partners">
-                {% for partner in organization.partners.all %}
-                    <a href="{{ partner.link }}" target="_blank">
+                {% for partner in organization.get_partners %}
+                   {% if partner.link %} <a href="{{ partner.link }}" target="_blank"> {% endif %}
                         <img src="{% thumbnail partner.img 200x200 %}" alt=""/>
-                    </a>
+                    {% if partner.link %} </a> {% endif %}
                 {% endfor %}
             </div>
         {% endif %}

@@ -57,7 +57,7 @@ class Location(models.Model):
 
     some_ideas = generic.GenericRelation(Idea)
 
-    order = models.IntegerField(default=0)
+    order = models.IntegerField(default=0, blank=True)
 
     class Meta:
         ordering=['order']
@@ -241,6 +241,18 @@ class Location(models.Model):
         return mapbox
 
 
+    def get_pictures(self):
+        pics = [None,None,None,None]
+        for i in range(len(pics)):
+            idx = i + 1
+            try:
+                pics[i] = self.locationimage_set.get(ordering=idx, active=True)
+            except:
+                pass
+        return pics
+
+
+
 class LocationNews(models.Model):
     location = models.ForeignKey(Location)
     name = models.CharField(max_length=255, null=True, blank=True)
@@ -270,6 +282,7 @@ class LocationImage(models.Model):
     img = models.ImageField(upload_to=location_image_upload_to)
     name = models.CharField(max_length=255, blank=True, null=True)
     ordering = models.IntegerField(default=0)
+    active = models.BooleanField(default=True)
 
     def __unicode__(self):
         return self.name or "Image %d for %s" % (self.id, self.location,)

@@ -1,0 +1,17 @@
+{% load thumbnail %}
+<div id="partners">
+    <div class="label">partners</div>
+    <div class="pictures-list">
+        {% for partner in organization.get_partners %}
+            <div id="partner-picture_{{ forloop.counter }}" name="partner-picture_{{ forloop.counter }}" class="picture file-picker-input" data-index="{{ forloop.counter }}" data-prefix="pic">
+                {% if partner %}
+                    <input type="file" name="partner-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+                    <div class="cloak">
+                        <img src="{% thumbnail partner.img 100x100 %}">
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+    <div class="clr"></div>
+</div>

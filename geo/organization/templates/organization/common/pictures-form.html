@@ -1,0 +1,20 @@
+{% load thumbnail %}
+
+<div id="pictures">
+    <div class="label">pictures</div>
+    <div class="pictures-list">
+        {% for picture in organization.get_pictures %}
+            <div id="id_pic{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture file-picker-input" data-index="{{ forloop.counter }}" data-prefix="pic">
+               {% if picture %}
+                    <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+                    <div class="cloak">
+                        <img src="{% thumbnail picture.img 100x100 %}">
+                    </div>
+               {% endif %}
+            </div>
+        {% endfor %}
+
+
+    </div>
+    <div class="clr"></div>
+</div>

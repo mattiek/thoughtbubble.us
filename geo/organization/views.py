@@ -30,6 +30,10 @@ class OrganizationList(ListView):
 class OrganizationCreate(CreateView):
     model = Organization
 
+    def form_valid(self, form):
+        s = super(self, OrganizationCreate).form_valid(form)
+        return s
+
     def get_template_names(self):
         return self.request.device_template_dir + super(OrganizationCreate, self).get_template_names().pop()
 
@@ -58,18 +62,28 @@ class OrganizationUpdate(UpdateView):
 
     def form_valid(self, form):
         s = super(OrganizationUpdate,self).form_valid(form)
-        pics = [form.cleaned_data.get('pic-picture_%d' % x, None) for x in range(1,5)]
-        partners = [form.cleaned_data.get('partner-picture_%d' % x, None) for x in range(1,5)]
+        pics = [form.cleaned_data.get('pic-picture_%s' % str(x + 1), None) for x in range(4)]
+        partners = [form.cleaned_data.get('partner-picture_%s' % str(x + 1), None) for x in range(4)]
 
-        for x in range(0,4):
-            obj = self.object.organizationimage_set.filter(ordering=x, active=True)
-            # if obj:
-            #     obj.active = False
-            #     obj.save()
+        for x in range(4):
             order = x + 1
             if pics[x]:
+                obj = self.object.organizationimage_set.filter(ordering=order, active=True)
+                if obj:
+                    #Compare objects
+                    for i in obj:
+                        i.active = False
+                        i.save()
                 self.object.organizationimage_set.create(name='', img=pics[x], ordering=order,active=True)
 
+            if partners[x]:
+                obj = self.object.partners.filter(ordering=order, active=True)
+                if obj:
+                    #Compare objects
+                    for i in obj:
+                        i.active = False
+                        i.save()
+                self.object.partners.create(name='', img=partners[x], ordering=order,active=True)
         return s
 
     def form_invalid(self, form):

@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.min.css" />
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.min.js"></script>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/location/detail.css" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
 {% endblock %}
 
 {% block bodyid %}location-detail{% endblock %}
@@ -57,44 +56,40 @@
 
         {% include 'widgets/news_feed.html' %}
 
-                <a href="#" class="orange"></a>
+        <a href="#" class="orange"></a>
     </div>
     {% endif %}
 
     {#    Pictures #}
-    {% if pictures %}
+    {% if location.get_pictures %}
         <div class="picture-label small-heading">pictures</div>
         <div id="pictures">
-            {% for picture in pictures %}
+            {% for picture in location.get_pictures %}
                 <div>
-{#                    <div class="cloak">#}
-{#                        <img src="{{ picture.img.url }}" alt=""/>#}
                     <a class="image-popup-no-margins" href="{{ picture.img.url }}">
                         <img src="{% thumbnail picture.img 120x90 %}" alt=""/>
                     </a>
-{#                        <img src="{% thumbnail picture.img 80x60 crop %}" alt=""/>#}
-{#                    </div>#}
                 </div>
             {% endfor %}
         </div>
     {% endif %}
 
     {#    Partners #}
-    {% if partners %}
-        <div class="large-12 columns small-heading">partners</div>
-        <div id="partners">
-            {% for partner in partners %}
-                {% if partner.link %}
-                    <a href="{{ partner.link }}">
-                  {% endif %}
-                    <img src="{% thumbnail partner.img 200x200 %}" alt=""/></a>
-                {% if partner.link %}
-                    </a>
-                {% endif %}
-            {% endfor %}
-        </div>
-    {% endif %}
-    </div>
+{#    {% if partners %}#}
+{#        <div class="large-12 columns small-heading">partners</div>#}
+{#        <div id="partners">#}
+{#            {% for partner in partners %}#}
+{#                {% if partner.link %}#}
+{#                    <a href="{{ partner.link }}">#}
+{#                  {% endif %}#}
+{#                    <img src="{% thumbnail partner.img 200x200 %}" alt=""/></a>#}
+{#                {% if partner.link %}#}
+{#                    </a>#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+{#        </div>#}
+{#    {% endif %}#}
+{#    </div>#}
 
 {#    Ideas #}
 
@@ -148,31 +143,4 @@
 
 
     </script>
-{#        <script type="text/javascript">#}
-{#            TB.Map.mapLayer.on('ready', function() {#}
-{#                $.ajax({#}
-{#                    url: "{{ location.get_api_detail_url }}",#}
-{#                    dataType: "json",#}
-{#                    success: function(d) {#}
-{##}
-{#                        TB.Map.map().markerLayer.on('layeradd', function(e) {#}
-{#                            var marker = e.layer,#}
-{#                                    feature = marker.feature;#}
-{##}
-{#                            marker.setIcon(L.icon(feature.properties.icon));#}
-{#                            // Create custom popup content#}
-{#                        });#}
-{##}
-{#                        // Add features to the map#}
-{#                        TB.Map.map().markerLayer.setGeoJSON(d);#}
-{##}
-{#                        var markers = L.mapbox.markerLayer(d).addTo(map);#}
-{##}
-{#                        map.setView([d.geometry.coordinates[1],d.geometry.coordinates[0]],15);#}
-{#                    }#}
-{#                });#}
-{#            });#}
-{##}
-{#        </script>#}
-{#    {% endif %}#}
 {% endblock %}

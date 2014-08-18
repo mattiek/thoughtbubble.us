@@ -52,16 +52,17 @@ class LocationUpdateForm(forms.ModelForm):
         cleaned_data = super(LocationUpdateForm, self).clean()
         cleaned_data = dict(cleaned_data.items() + self.files.items())
 
-        name = cleaned_data.get("name")
-        address = cleaned_data.get("address")
-        city_and_state = cleaned_data.get("city_and_state")
-        zip = cleaned_data.get("zip")
-        latitude = cleaned_data.get("latitude")
-        longitude = cleaned_data.get("longitude")
-        # what_kind = cleaned_data.get("what_kind")
-        news = cleaned_data.get("news")
-        about = cleaned_data.get("about")
-        sherlock_description = cleaned_data.get("sherlock_description")
+        # name = cleaned_data.get("name")
+        # address = cleaned_data.get("address")
+        # city_and_state = cleaned_data.get("city_and_state")
+        # zip = cleaned_data.get("zip")
+        # latitude = cleaned_data.get("latitude")
+        # longitude = cleaned_data.get("longitude")
+        # # what_kind = cleaned_data.get("what_kind")
+        # news = cleaned_data.get("news")
+        # about = cleaned_data.get("about")
+        # sherlock_description = cleaned_data.get("sherlock_description")
+        # order = cleaned_data.get("order")
 
         return cleaned_data
 

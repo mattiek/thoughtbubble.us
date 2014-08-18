@@ -154,7 +154,9 @@ class LocationUpdate(UpdateView):
 
     def form_valid(self, form):
         comm = self.kwargs.get('location',None)
-        s = Location.objects.get(slug=comm)
+        place = self.kwargs.get('place',None)
+        org = self.kwargs.get('organization',None)
+        s = Location.objects.get(slug=comm, organization__place__slug=place, organization__slug=org)
         s.name=form.cleaned_data['name']
         s.address=form.cleaned_data['address']
         s.city_and_state=form.cleaned_data['city_and_state']
@@ -169,28 +171,46 @@ class LocationUpdate(UpdateView):
 
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
 
-        pics = LocationImage.objects.filter(location=s).order_by('ordering','-id').distinct('ordering')[:4]
+        # pics = LocationImage.objects.filter(location=s, active=True).order_by('ordering','-id').distinct('ordering')[:4]
 
-        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'], ordering=1)
-        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'], ordering=2)
-        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'], ordering=3)
-        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'], ordering=4)
+        # pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'], ordering=1)
+        # pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'], ordering=2)
+        # pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'], ordering=3)
+        # pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'], ordering=4)
 
-        pics = dict([(x.ordering, x) for x in pics])
+        # pics = dict([(x.ordering, x) for x in pics])
         # TODO: More elegant
+        pics = [form.cleaned_data.get('id_pic%s' % str(x + 1), None) for x in range(4)]
+        # prev_pic1 = pics.get(1,None)
+        # prev_pic2 = pics.get(2,None)
+        # prev_pic3 = pics.get(3,None)
+        # prev_pic4 = pics.get(4,None)
 
-        prev_pic1 = pics.get(1,None)
-        prev_pic2 = pics.get(2,None)
-        prev_pic3 = pics.get(3,None)
-        prev_pic4 = pics.get(4,None)
-        if (pic1.img.name and not prev_pic1) or (pic1.img.name and pic1.img != prev_pic1.img):
-            pic1.save()
-        if (pic2.img.name and not prev_pic2) or (pic2.img.name and pic2.img != prev_pic2.img):
-            pic2.save()
-        if (pic3.img.name and not prev_pic3) or (pic3.img.name and pic3.img != prev_pic3.img):
-            pic3.save()
-        if (pic4.img.name and not prev_pic4) or (pic4.img.name and pic4.img != prev_pic4.img):
-            pic4.save()
+        for x in range(4):
+            order = x + 1
+            if pics[x]:
+                obj = s.locationimage_set.filter(location=s, ordering=order, active=True)
+                if obj:
+                    #Compare objects
+                    for i in obj:
+                        i.active = False
+                        i.save()
+                s.locationimage_set.create(location=s, name='', img=pics[x], ordering=order,active=True)
+
+        # for i in range(4):
+        #     pic = getattr(self, "pic%d" % (i+1), None)
+        #     if pic:
+        #         pic.save()
+
+
+        # if (pic1.img.name and not prev_pic1) or (pic1.img.name and pic1.img != prev_pic1.img):
+        #     pic1.save()
+        # if (pic2.img.name and not prev_pic2) or (pic2.img.name and pic2.img != prev_pic2.img):
+        #     pic2.save()
+        # if (pic3.img.name and not prev_pic3) or (pic3.img.name and pic3.img != prev_pic3.img):
+        #     pic3.save()
+        # if (pic4.img.name and not prev_pic4) or (pic4.img.name and pic4.img != prev_pic4.img):
+        #     pic4.save()
 
         s.save()
         messages.info(self.request, '%s updated.' % s.name)
@@ -234,19 +254,28 @@ class LocationCreate(CreateView):
         s.geom = GEOSGeometry('POINT(%s %s)' % (form.cleaned_data['longitude'], form.cleaned_data['latitude'],))
         s.save()
 
-        pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'])
-        pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'])
-        pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'])
-        pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'])
-        # TODO: More elegant
-        if pic1.img:
-            pic1.save()
-        if pic2.img:
-            pic2.save()
-        if pic3.img:
-            pic3.save()
-        if pic4.img:
-            pic4.save()
+        # pic1 = LocationImage(location=s,img=form.cleaned_data['pic1'])
+        # pic2 = LocationImage(location=s,img=form.cleaned_data['pic2'])
+        # pic3 = LocationImage(location=s,img=form.cleaned_data['pic3'])
+        # pic4 = LocationImage(location=s,img=form.cleaned_data['pic4'])
+        #
+        # if pic1.img:
+        #     pic1.save()
+        # if pic2.img:
+        #     pic2.save()
+        # if pic3.img:
+        #     pic3.save()
+        # if pic4.img:
+        #     pic4.save()
+        # More elegant:
+
+        for i in range(4):
+            # pic = getattr(self, "pic%d" % (i+1), None)
+            pic = LocationImage(location=s,img=form.cleaned_data['pic%d'] % (i+1), ordering=(i+1))
+            if pic:
+                pic.save()
+
+
 
         messages.info(self.request, '%s created.' % s.name)
         return redirect('location_update', s.organization.place.slug,

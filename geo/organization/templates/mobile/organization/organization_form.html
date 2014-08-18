@@ -75,42 +75,16 @@
 
 
         {#    Pictures #}
-        <div id="pictures">
-            <div class="label">pictures</div>
-            <div class="pictures-list">
-                {% if organization.get_pictures %}
-                    {% for picture in organization.get_pictures %}
-                        <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
-{#                            <input type="file" name="pic-picture_{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">#}
-                            <div class="cloak">
-                                <img src="{{ picture.url }}">
-                            </div>
-                        </div>
-                    {% endfor %}
-                {% else %}
-                    <div id="pic-picture_{{ forloop.counter }}" name="pic-picture_{{ forloop.counter }}" class="picture" data-index="{{ forloop.counter }}" data-prefix="pic">
-
-                    </div>
-                {% endif %}
-
-            </div>
-            <div class="clr"></div>
-        </div>
+        {% include "organization/common/pictures-form.html" %}
 
         {#    Partners #}
-        <div id="partners">
-            <div class="label">partners</div>
-            <div class="pictures-list">
-                <div id="partne-picture_1" name="partner-picture_1" class="picture" data-index="1" data-prefix="partner"></div>
-            </div>
-            <div class="clr"></div>
-        </div>
+        {% include "organization/common/partners-form.html" %}
 
         {#    Features #}
         <div id="features">
             <div class="label">features</div>
             <div class="features-list">
-                {% for location in organization.location_set.all %}
+                {% for location in organization.get_sherlock_locations %}
                     <a href="{{ location.get_update_url }}" class="feature">
                         <div class="feature-cap"></div>
                         <span>{{ location.name }}</span>

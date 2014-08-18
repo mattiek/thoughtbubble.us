@@ -149,7 +149,25 @@ class Organization(models.Model):
             return reverse('organization_join', args=[url_safe(self.place.slug),url_safe(self.slug)])#args=[str(self.place.name.lower()), str(self.title.lower())])
 
     def get_pictures(self):
-        return self.organizationimage_set.filter(active=True)
+        pics = [None,None,None,None]
+        for i in range(len(pics)):
+            idx = i + 1
+            try:
+                pics[i] = self.organizationimage_set.get(ordering=idx, active=True)
+            except:
+                pass
+        return pics
+
+
+    def get_partners(self):
+        partners = [None,None,None,None]
+        for i in range(len(partners)):
+            idx = i + 1
+            try:
+                partners[i] = self.partners.get(ordering=idx, active=True)
+            except:
+                partners[i] = None
+        return partners
 
     def get_id(self):
         return self.title.lower().replace(' ','-')
