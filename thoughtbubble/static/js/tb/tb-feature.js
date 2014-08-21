@@ -1,11 +1,11 @@
-var has_map = $("#map").length > 0;
+//var has_map = $("#map").length > 0;
+//
+//if(has_map){
+//    TB.Map.init();
+//    TB.Map.loadMapLayer();
+//}
 
-if(has_map){
-    TB.Map.init();
-    TB.Map.loadMapLayer();
-}
-
-var map = TB.Map.map();
+//var map = TB.Map.map();
 
 
 (function($) {
