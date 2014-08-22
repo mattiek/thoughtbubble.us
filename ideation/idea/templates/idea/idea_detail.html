@@ -73,6 +73,8 @@
             <div id="wrap_write_comment">
                 {% if user.is_authenticated %}
                     {% render_comment_form for idea %}
+                {% else %}
+                    <a href="#submit" class="orange buttonize logintocomment login-required">login to comment</a>
                 {% endif %}
             </div>
         </div>
