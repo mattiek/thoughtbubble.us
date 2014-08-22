@@ -7,9 +7,9 @@
     <div class="pictures-list">
         {% if location %}
             {% for picture in location.get_pictures %}
-                <div id="id_pic{{ forloop.counter }}" name="id_pic{{ forloop.counter }}" class="picture file-picker-input" data-index="{{ forloop.counter }}" data-prefix="pic">
+                <div id="id_pic{{ forloop.counter }}" name="pic{{ forloop.counter }}" class="picture file-picker-input" data-index="{{ forloop.counter }}" data-prefix="pic">
                     {% if picture %}
-                        <input type="file" name="id_pic{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+                        <input type="file" name="pic{{ forloop.counter }}" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
                         <div class="cloak">
                             <img src="{% thumbnail picture.img 100x100 %}">
                         </div>
@@ -17,26 +17,26 @@
                 </div>
             {% endfor %}
         {% else %}
-            <div id="id_pic1" name="id_pic1" class="picture file-picker-input" data-index="1" data-prefix="pic">
-                    <input type="file" name="id_pic1" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+            <div id="id_pic1" name="pic1" class="picture file-picker-input" data-index="1" data-prefix="pic">
+                    <input type="file" name="pic1" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
 {#                    <div class="cloak">#}
 {#                        <img src="">#}
 {#                    </div>#}
             </div>
-            <div id="id_pic2" name="id_pic2" class="picture file-picker-input" data-index="1" data-prefix="pic">
-                <input type="file" name="id_pic2" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+            <div id="id_pic2" name="pic2" class="picture file-picker-input" data-index="1" data-prefix="pic">
+                <input type="file" name="pic2" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
 {#                <div class="cloak">#}
 {#                    <img src="">#}
 {#                </div>#}
             </div>
-            <div id="id_pic3" name="id_pic3" class="picture file-picker-input" data-index="1" data-prefix="pic">
-                <input type="file" name="id_pic3" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+            <div id="id_pic3" name="pic3" class="picture file-picker-input" data-index="1" data-prefix="pic">
+                <input type="file" name="pic3" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
 {#                <div class="cloak">#}
 {#                    <img src="">#}
 {#                </div>#}
             </div>
-            <div id="id_pic4" name="id_pic4" class="picture file-picker-input" data-index="1" data-prefix="pic">
-                <input type="file" name="id_pic4" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
+            <div id="id_pic4" name="pic4" class="picture file-picker-input" data-index="1" data-prefix="pic">
+                <input type="file" name="pic4" style="cursor: auto; opacity: 0; left: -231.5px; top: 38.5px; position: absolute;">
 {#                <div class="cloak">#}
 {#                    <img src="">#}
 {#                </div>#}

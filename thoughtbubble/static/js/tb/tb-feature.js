@@ -12,10 +12,11 @@
 
     TB.Map.Draw = (function(){
 
-        var featureGroup = L.featureGroup().addTo(map);
+        var map = TB.Map.get_map();
+         TB.Map.featureGroup = L.featureGroup().addTo(map);
         var drawControl = new L.Control.Draw({
             edit: {
-                featureGroup: featureGroup
+                featureGroup: TB.Map.featureGroup
             },
             draw: {
                 polyline: false,
@@ -29,15 +30,15 @@
         }).addTo(map);
 
         map.on('draw:created', function(e) {
-            if (featureGroup.getLayers().length > 0) {
+            if (TB.Map.featureGroup.getLayers().length > 0) {
 //                alert('Unstyled alert: Only one location allowed per feature. Remove the existing one first')
-                while (featureGroup.getLayers().length > 0) {
-                    var i = featureGroup.getLayers()[0];
-                    featureGroup.removeLayer(i);
+                while (TB.Map.featureGroup.getLayers().length > 0) {
+                    var i = TB.Map.featureGroup.getLayers()[0];
+                    TB.Map.featureGroup.removeLayer(i);
                 }
             }
 //            else
-                featureGroup.addLayer(e.layer);
+            TB.Map.featureGroup.addLayer(e.layer);
 //            console.log(e.layer._latlng);
             var latlng = e.layer._latlng;
             $('#id_longitude').val(latlng.lng);

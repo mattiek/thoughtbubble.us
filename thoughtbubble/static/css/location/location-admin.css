@@ -228,4 +228,5 @@ input[type="text"] {
 .file-picker-input img {
   max-width: 100%;
   vertical-align: middle;
+  width: 80px;
 }

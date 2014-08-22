@@ -223,8 +223,11 @@ class LocationUpdate(UpdateView):
         context['action_url'] = location.get_update_url()
         context['organization'] = location.organization
         context['update'] = True
+        context['dowhat'] = 'Update'
+        context['coords'] = location.get_geometry()['coordinates'][0], location.get_geometry()['coordinates'][1]
+
         if kwargs.get('id',None):
-            self.form.fields['content_object'].initial = location
+                self.form.fields['content_object'].initial = location
         return context
 
 
@@ -271,8 +274,8 @@ class LocationCreate(CreateView):
 
         for i in range(4):
             # pic = getattr(self, "pic%d" % (i+1), None)
-            pic = LocationImage(location=s,img=form.cleaned_data['pic%d'] % (i+1), ordering=(i+1))
-            if pic:
+            if form.cleaned_data['pic%d' % (i+1)]:
+                pic = LocationImage(location=s,img=form.cleaned_data['pic%d' % (i+1)], ordering=(i+1))
                 pic.save()
 
 
@@ -290,11 +293,14 @@ class LocationCreate(CreateView):
         city = self.kwargs.get('city',None)
         place = self.kwargs.get('place',None)
         comm = self.kwargs.get('organization',None)
+        context['dowhat'] = 'Create'
+
         if comm:
             #TODO FIX THIS!
             organization = Organization.objects.get(place__slug=place, slug=comm)
             context['action_url'] = reverse('addlocation', args=[organization.place.slug, organization.slug,])
             context['organization'] = organization
+            context['coords'] = organization.center[0], organization.center[1]
             # self.form.fields['where'].initial = organization
         # context['is_admin'] = self.request.user.is_admin
         return context

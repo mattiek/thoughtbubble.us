@@ -4,7 +4,7 @@
 {% load widget_tweaks %}
 
 {% block title %}
-    Add a Feature
+    {{ dowhat }} a Feature
 {% endblock %}
 
 {% block head %}
@@ -12,10 +12,10 @@
     <!--[if lte IE 8]>
     <link href='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.ie.css' rel='stylesheet' />
   <![endif]-->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css' rel='stylesheet' />
+{#    <link rel="stylesheet" href="{{ STATIC_URL }}css/leaflet/leaflet.draw.css"/>#}
     <link rel="stylesheet" href="{{ STATIC_URL }}css/tb-addfeature.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}css/location/location-admin.css" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}icons/maki/maki-sprite.css" />
 {% endblock %}
 
 {% block bodyid %}location-form{% endblock %}
@@ -136,8 +136,18 @@
 {% endblock %}
 
 {% block footerscripts %}
+
+    <script type="text/javascript">
+        window.start_lng = {{ coords.0 }};
+        window.start_lat = {{ coords.1 }};
+        window.start_zoom = 15;
+
+    </script>
+
     <script src='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
-    <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>
+{#    <script src='{{ STATIC_URL }}js/leaflet/leaflet.draw.js'></script>#}
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js'></script>
+
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-feature.js"></script>
 
@@ -149,48 +159,50 @@
 
 
                 $.ajax({
-                    url: "/api/v1/organizations/.json?place={{ organization.place.id }}",
+                    url: "/api/v1/organizations/.json?org={{ organization.id }}",
                     dataType: "json",
                     success: function(d) {
-                        var hoods = L.geoJson(d,{
-                            style: function (feature) {
-                                return {stroke: false, fill: true};
-                            },
-                            onEachFeature: function (feature, layer) {
-                                neighborhoods[feature.id] = {layer: layer,
-                                    feature: feature};
-                            }
-                        }).addTo(map);
 
-                        map.fitBounds(neighborhoods[{{ organization.id }}].layer);
-                        hoods.eachLayer(function(e) {
-                            var marker = e;
-    //            var feature = marker.feature;
-    //            marker.setIcon(L.icon(feature.properties.icon));
-                        });
+                        var center = d.features[0].center.geometry.coordinates;
+
+{#                        TB.Map.get_map().setView([center[1], center[0]], 15);#}
+{#                        var hoods = L.geoJson(d,{#}
+{#                            style: function (feature) {#}
+{#                                return {stroke: false, fill: true};#}
+{#                            },#}
+{#                            onEachFeature: function (feature, layer) {#}
+{#                                neighborhoods[feature.id] = {layer: layer,#}
+{#                                    feature: feature};#}
+{#                            }#}
+{#                        }).addTo(map);#}
+
+{#                        map.fitBounds(neighborhoods[{{ organization.id }}].layer);#}
+{#                        hoods.eachLayer(function(e) {#}
+{#                            var marker = e;#}
+{#                        });#}
                     }
                 });
 
                 {% if form.latitude.value and form.longitude.value %}
-                    TB.Map.Draw.featureGroup.addLayer(L.mapbox.markerLayer({
-                        // this feature is in the GeoJSON format: see geojson.org
-                        // for the full specification
-                        type: 'Feature',
-                        geometry: {
-                            type: 'Point',
-                            // coordinates here are in longitude, latitude order because
-                            // x, y is the standard for GeoJSON and many formats
-                            coordinates: [{{ form.longitude.value }}, {{ form.latitude.value }}]
-                        },
-                        properties: {
-                            {#                    title: 'A Single Marker',#}
-                            {#                    description: 'Just one of me',#}
-                            // one can customize markers by adding simplestyle properties
-                            // http://mapbox.com/developers/simplestyle/
-                            {#                    'marker-size': 'large',#}
-                            {#                    'marker-color': '#f0a'#}
-                        }
-                    }));
+                    var circle_options = {
+                        color: '#fff',      // Stroke color
+                        opacity: 1,         // Stroke opacity
+                        weight: 10,         // Stroke weight
+                        fillColor: '#000',  // Fill color
+                        fillOpacity: 0.6    // Fill opacity
+                    };
+
+{#                    var circle_one = L.circle([{{ form.latitude.value }}, {{ form.longitude.value }}], 20, circle_options).addTo(TB.Map.featureGroup);#}
+{#                    TB.Map.Draw.featureGroup#}
+
+                    L.marker([{{ form.latitude.value }}, {{ form.longitude.value }}], {
+                        icon: L.mapbox.marker.icon({
+                            'marker-size': 'large',
+{#                            'marker-symbol': 'circle',#}
+                            'marker-color': '#fa0'
+                        })
+                    }).addTo(TB.Map.featureGroup);
+
                 {% endif %}
             });
 

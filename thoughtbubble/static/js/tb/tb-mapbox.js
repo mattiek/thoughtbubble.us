@@ -7,9 +7,9 @@ if ("undefined" === typeof TB) {
     TB.Map = (function(){
         var self = {}
         self.drawn_object = [];
-
-        self.default_lat =  39.961;
-        self.default_lng = -82.998;
+        self.default_lat =  window.start_lat|| 39.961;
+        self.default_lng =  window.start_lng || -82.998;
+        self.default_zoom =  window.start_zoom || 11;
 
         try {
             self.default_lat = region[1];
@@ -19,11 +19,12 @@ if ("undefined" === typeof TB) {
 
         }
 
-        self.default_zoom = 11;
+
         self.default_map = 'mattiej.map-5onab1gh';//'mlreed328.map-0chlhqvz';
         self.map;
         self.featureLayer = null;
         self.mapLayer = null;
+        self.featureGroup = null;
 
         var drawn_poly;
         var polyLineOptions = {
