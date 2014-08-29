@@ -53,7 +53,7 @@
     {% endblock %}
 </head>
 
-<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%}" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
+<body id="{% block bodyid %}{%endblock%}" class="{% block bodyclass %}{%endblock%} tbmobile" data-view="{% if not user.is_authenticated %}logged-out{% else %}logged-in{% endif %}">
 {% block slideoutnav %}
     <div class="snap-drawers">
         <div class="snap-drawer snap-drawer-left">
