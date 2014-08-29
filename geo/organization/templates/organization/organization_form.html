@@ -71,11 +71,10 @@
 
 
             {#    News #}
-        <div id="news">
-            <div class="label">news</div>
-            <a href="{{ organization.get_list_news_url }}" class="blue s-button">List News</a>
-            <a href="{{ organization.get_add_news_url }}" class="blue s-button">Add News</a>
-        </div>
+            <div id="news">
+                <div class="label">news</div>
+                <a href="{{ organization.get_list_news_url }}" class="blue s-button news">Manage News</a>
+            </div>
 
 
         {#    Pictures #}
@@ -102,6 +101,8 @@
             </div>
             <div class="clr"></div>
         </div>
+
+
 
 
         <input type="submit" class="admin-submit orange submit-all" value="update all"/>

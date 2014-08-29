@@ -1,13 +1,13 @@
 {% load thumbnail %}
 
-<ol class="slats">
+<ol class="slats swiper-wrapper">
 {% for news in news_feed %}
-    <li class="group">
+    <li class="group swiper-slide">
 {#        <a href="#">#}
             {% if news.img %}
                 <img src="{% thumbnail news.img 150x150 %}" alt="thumbnail" />
             {% endif %}
-            <h3>{{ news.name }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
+            <h3>{{ news.subject }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
             <p>{{ news.content|safe }}</p>
 {#        </a>#}
     </li>

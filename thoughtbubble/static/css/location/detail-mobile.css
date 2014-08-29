@@ -457,7 +457,6 @@ ol.slats {
 ol.slats li {
   margin: 0 0 10px 0;
   padding: 0 0 10px 0;
-  border-bottom: 1px solid #eee;
 }
 /* line 8, ../../scss/partials/_news_feed.scss */
 ol.slats li:last-child {
@@ -472,6 +471,7 @@ ol.slats li h3 {
   font-family: "Museo Sans", sans-serif;
   font-size: 19px;
   line-height: 19px;
+  margin: 0;
 }
 /* line 19, ../../scss/partials/_news_feed.scss */
 ol.slats li h3 .date {
@@ -492,13 +492,47 @@ ol.slats li p {
   color: #6c6d70;
   /* text color */
   font-family: "Helvetica";
-  font-size: 11px;
+  font-size: 14px;
 }
 /* line 43, ../../scss/partials/_news_feed.scss */
 ol.slats li p span.meta {
   display: block;
   font-size: 12px;
   color: #999;
+}
+
+/* line 54, ../../scss/partials/_news_feed.scss */
+#news a.changer {
+  display: inline-block;
+  height: 200px;
+  width: 40px;
+  vertical-align: top;
+  padding-top: 70px;
+}
+/* line 61, ../../scss/partials/_news_feed.scss */
+#news a.changer div {
+  width: 16px;
+  height: 27px;
+}
+/* line 67, ../../scss/partials/_news_feed.scss */
+#news a.changer.left-news div {
+  background: url('../../images/orange-arrow-left-desat.png?1409270424');
+}
+/* line 72, ../../scss/partials/_news_feed.scss */
+#news a.changer.left-news.has div {
+  background: url('../../images/orange-arrow-left.png?1409269968');
+}
+/* line 79, ../../scss/partials/_news_feed.scss */
+#news a.changer.right-news div {
+  background: url('../../images/orange-arrow-right-desat.png?1409270409');
+}
+/* line 84, ../../scss/partials/_news_feed.scss */
+#news a.changer.right-news.has div {
+  background: url('../../images/orange-arrow-right.png?1409269763');
+}
+/* line 90, ../../scss/partials/_news_feed.scss */
+#news div.swiper-container {
+  display: inline-block;
 }
 
 /* line 2, ../../scss/neat/grid/_grid.scss */

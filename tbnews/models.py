@@ -27,4 +27,5 @@ class NewsItem(TimeStampedModel):
 
     class Meta:
         verbose_name_plural = "News Items"
+        ordering = ["-created"]
 

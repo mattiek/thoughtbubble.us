@@ -382,3 +382,8 @@ input, textarea {
 h3 {
   margin-bottom: 20px;
 }
+
+/* line 222, ../../scss/news/add.scss */
+input, textarea {
+  width: 100%;
+}

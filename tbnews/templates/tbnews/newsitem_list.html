@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load classnames %}
 {% load widget_tweaks %}
+{% load thumbnail %}
 
 {% block title %}
     News List
@@ -8,9 +9,7 @@
 
 {% block head %}
 
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/chosen.css" />
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/idea/list.css" />
-    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/chosen.jquery.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/news/list.css" />
 {% endblock %}
 
 {% block bodyid %}news-item-list{% endblock %}
@@ -19,22 +18,34 @@
 {% endblock %}
 
 {% block content %}
+    <div id="news-wrapper">
     <h3>News for {{ obj.get_name }}</h3>
-    <a href="{% url 'add_news_item' kind obj_id%}" class="orange submit">Add</a>
-    {% for news in object_list %}
-        <h2>{{ news.subject }}</h2>
-        <p>{{ news.content }}</p>
-        <a href="{% url 'update_news_item' kind obj_id news.id %}">Update</a>
-        <form method="POST" action="{% url 'delete_news_item' kind obj_id news.id %}">
-            {% csrf_token %}
-            <input type="submit" class="btn btn-sm btn-danger" value="delete"></input>
-        </form>
-    {% endfor %}
 
+    {% if object_list %}
+
+        <ol class="slats">
+        {% for news in object_list %}
+            <li class="group">
+                <a href="#">
+                    <img src="{% thumbnail news.img 80x80 %}" alt="thumbnail" />
+                    <h3>{{ news.subject }}</h3>
+                    <p>{{ news.content }} <span class="meta">{{ news.timestamp }}</span></p>
+                </a>
+            </li>
+        <a class="buttonize orange update" href="{% url 'update_news_item' kind obj_id news.id %}">Update</a>
+        <form method="POST" class="delete-form" action="{% url 'delete_news_item' kind obj_id news.id %}">
+            {% csrf_token %}
+            <input type="submit" class="btn btn-sm btn-danger blue buttonize" value="Delete"></input>
+        </form>
+        {% endfor %}
+        </ol>
+       {% else %}
+        <p class="no-news">No news items. Why don't you try adding some?</p>
+    {% endif %}
+        <a href="{% url 'add_news_item' kind obj_id%}" class="orange submit add-news">Add News Item</a>
+    </div>
 {% endblock %}
 
 {% block footerscripts %}
-    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-fileinput.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
 {% endblock %}

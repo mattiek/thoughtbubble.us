@@ -4,7 +4,7 @@ ol.slats {
   li {
     margin: 0 0 10px 0;
     padding: 0 0 10px 0;
-    border-bottom: 1px solid #eee;
+    //border-bottom: 1px solid #eee;
     &:last-child {
       margin: 0;
       padding: 0;
@@ -15,7 +15,7 @@ ol.slats {
         @include museo;
         font-size: 19px;
         line-height: 19px;
-
+        margin: 0;
         .date {
           margin-left: 15px;
         }
@@ -37,7 +37,7 @@ ol.slats {
 
         color: #6c6d70; /* text color */
         font-family: "Helvetica";
-        font-size: 11px;
+        font-size: 14px;
 
 
         span.meta {
@@ -49,6 +49,49 @@ ol.slats {
   }
 }
 
+
+#news {
+  a.changer {
+    display: inline-block;
+    height: 200px;
+    width: 40px;
+    vertical-align: top;
+    padding-top: 70px;
+
+    div {
+      width: image-width('orange-arrow-left.png');
+      height:  image-height('orange-arrow-left.png');
+    }
+
+    &.left-news {
+      div {
+        background:image-url('orange-arrow-left-desat.png');
+      }
+
+      &.has {
+        div {
+          background:image-url('orange-arrow-left.png');
+        }
+      }
+    }
+
+    &.right-news {
+      div {
+        background:image-url('orange-arrow-right-desat.png');
+      }
+
+      &.has {
+        div {
+          background:image-url('orange-arrow-right.png');
+        }
+      }
+    }
+  }
+  div.swiper-container {
+    display: inline-block;
+
+  }
+}
 //@media screen and (max-width: 700px) {
 //  ol.slats li a {
 //    img {

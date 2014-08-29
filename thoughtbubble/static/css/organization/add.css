@@ -703,3 +703,9 @@ label[for=id_twitter_url] {
 label[for=id_linkedin_url] {
   background: url('../../images/small-blue-linkedin.png?1390687081') no-repeat;
 }
+
+/* line 457, ../../scss/organization/add.scss */
+.blue.s-button.news {
+  width: 200px;
+  margin: 20px 60px;
+}

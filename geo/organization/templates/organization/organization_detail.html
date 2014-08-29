@@ -88,8 +88,17 @@
             {% if news_feed %}
                 <div class="news-label small-heading">news</div>
                 <div id="news">
-
-                        {% include 'widgets/news_feed.html' %}
+                    <a class="changer left-news" href="#left-news">
+{#                        <img src="{{ STATIC_URL }}images/orange-arrow-left.png" alt=""/>#}
+                        <div></div>
+                    </a>
+                        <div class="swiper-container">
+                            {% include 'widgets/news_feed.html' %}
+                        </div>
+                    <a class="changer right-news" href="#right-news">
+                        <div></div>
+{#                        <img src="{{ STATIC_URL }}images/orange-arrow-right.png" alt=""/>#}
+                    </a>
                 </div>
             {% endif %}
         {% endwith %}
@@ -126,4 +135,5 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-fileinput.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-organization.js"></script>
 {% endblock %}
