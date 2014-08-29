@@ -66,6 +66,7 @@ ol.slats {
     &.left-news {
       div {
         background:image-url('orange-arrow-left-desat.png');
+        background: none;
       }
 
       &.has {
@@ -78,6 +79,7 @@ ol.slats {
     &.right-news {
       div {
         background:image-url('orange-arrow-right-desat.png');
+        background: none;
       }
 
       &.has {

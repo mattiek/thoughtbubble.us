@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/images/orange-arrow-left-desat.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/thoughtbubble/static/images/orange-arrow-right-desat.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
-    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271202533" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271308455" ignored="false" />
     <file path="/newsitem_list.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267111818" ignored="false" />
     <file path="/list.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267086977" ignored="false" />
     <file path="/add.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267475296" ignored="false" />
@@ -19,7 +20,7 @@
     <file path="/organization_detail.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409270648661" ignored="false" />
     <file path="/news_feed.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409268092738" ignored="false" />
     <file path="/tb-organization.js" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271169549" ignored="false" />
-    <file path="/_news_feed.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409270711689" ignored="false" />
+    <file path="/_news_feed.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271356701" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,19 +102,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tb-organization.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="tb-organization.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="893" selection-end="893" vertical-scroll-proportion="0.90032154">
+            <state line="28" column="9" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_news_feed.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_news_feed.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="49" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-9.181818">
+            <state line="81" column="25" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.9188712">
               <folding />
             </state>
           </provider>
@@ -183,8 +184,8 @@
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/organization/detail.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" />
         <option value="$PROJECT_DIR$/geo/organization/templates/organization/organization_detail.html" />
-        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" />
       </list>
     </option>
   </component>
@@ -1287,7 +1288,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-480" y="-1057" width="1920" height="1057" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1295,7 +1296,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3062967" sideWeight="0.6705324" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.256194" sideWeight="0.6937033" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.256194" sideWeight="0.6937033" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37886873" sideWeight="0.49920928" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3062967" sideWeight="0.3294676" order="8" side_tool="true" content_ui="tabs" />
@@ -1541,16 +1542,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="49" selection-start="1377" selection-end="1377" vertical-scroll-proportion="-9.181818">
+        <state line="28" column="9" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="893" selection-end="893" vertical-scroll-proportion="0.90032154">
+        <state line="81" column="25" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.9188712">
           <folding />
         </state>
       </provider>
