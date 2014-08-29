@@ -4,13 +4,18 @@
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail-mobile.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail-mobile.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js" afterPath="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
-    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271308455" ignored="false" />
+    <file path="/Dummy.txt" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409271366464" ignored="false" />
     <file path="/newsitem_list.html" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267111818" ignored="false" />
     <file path="/list.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267086977" ignored="false" />
     <file path="/add.scss" changelist="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" time="1409267475296" ignored="false" />
@@ -102,19 +107,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tb-organization.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="tb-organization.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="9" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+            <state line="29" column="55" selection-start="715" selection-end="715" vertical-scroll-proportion="0.7459807">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_news_feed.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_news_feed.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="25" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.9188712">
+            <state line="81" column="25" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-9.472727">
               <folding />
             </state>
           </provider>
@@ -184,8 +189,8 @@
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/organization/detail.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" />
         <option value="$PROJECT_DIR$/geo/organization/templates/organization/organization_detail.html" />
-        <option value="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js" />
       </list>
     </option>
   </component>
@@ -1542,16 +1547,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="9" selection-start="784" selection-end="784" vertical-scroll-proportion="0.0">
+        <state line="81" column="25" selection-start="1558" selection-end="1558" vertical-scroll-proportion="-9.472727">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/partials/_news_feed.scss">
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="25" selection-start="1554" selection-end="1554" vertical-scroll-proportion="0.9188712">
+        <state line="29" column="55" selection-start="715" selection-end="715" vertical-scroll-proportion="0.7459807">
           <folding />
         </state>
       </provider>

@@ -516,7 +516,6 @@ ol.slats li p span.meta {
 }
 /* line 67, ../../scss/partials/_news_feed.scss */
 #news a.changer.left-news div {
-  background: url('../../images/orange-arrow-left-desat.png?1409270424');
   background: none;
 }
 /* line 73, ../../scss/partials/_news_feed.scss */
@@ -525,7 +524,6 @@ ol.slats li p span.meta {
 }
 /* line 80, ../../scss/partials/_news_feed.scss */
 #news a.changer.right-news div {
-  background: url('../../images/orange-arrow-right-desat.png?1409270409');
   background: none;
 }
 /* line 86, ../../scss/partials/_news_feed.scss */

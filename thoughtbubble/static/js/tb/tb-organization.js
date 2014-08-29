@@ -14,7 +14,11 @@ $(function(){
         var $t = $(e.currentTarget);
         if ($t.hasClass('left-news')) {
             mySwiper.swipePrev();
-            $('.right-news').addClass('has');
+
+            if (($('.swiper-wrapper li').length > 1)) {
+                $('.right-news').addClass('has');
+            }
+
             if (mySwiper.activeIndex == 0) {
                 $('.left-news').removeClass('has');
             }
@@ -22,7 +26,10 @@ $(function(){
         }
         else {
             mySwiper.swipeNext();
-            $('.left-news').addClass('has');
+
+            if (($('.swiper-wrapper li').length > 1)) {
+                $('.left-news').addClass('has');
+            }
             if (mySwiper.activeIndex == ($('.swiper-wrapper li').length - 1)) {
                 $('.right-news').removeClass('has');
             }
