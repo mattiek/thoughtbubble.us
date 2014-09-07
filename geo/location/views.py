@@ -180,7 +180,7 @@ class LocationUpdate(UpdateView):
 
         # pics = dict([(x.ordering, x) for x in pics])
         # TODO: More elegant
-        pics = [form.cleaned_data.get('id_pic%s' % str(x + 1), None) for x in range(4)]
+        pics = [form.cleaned_data.get('pic%s' % str(x + 1), None) for x in range(4)]
         # prev_pic1 = pics.get(1,None)
         # prev_pic2 = pics.get(2,None)
         # prev_pic3 = pics.get(3,None)
