@@ -91,14 +91,19 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         if self.is_superuser:
             d = Organization.objects.all()
         else:
-            l = list(self.organizationcurator_set.all())
-            x = [i.organization_curator.all() for i in l]
+            list_of_curators = list(self.organizationcurator_set.all())
+            d = []
+            for i in list_of_curators:
+                for r in i.organization_curator.all():
+                    d.append(r)
 
-            # unravelling from a list
-            d = itertools.chain(*x)
-
-            if not len(d):
-                d = None
+            # x = [i.organization_curator.all() for i in list_of_curators]
+            #
+            # # unravelling from a list
+            # d = itertools.chain(*x)
+            #
+            # if not len(d):
+            #     d = None
 
         return d
 
