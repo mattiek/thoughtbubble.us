@@ -86,6 +86,29 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
         return self.get_social_account('linkedin')
 
 
+    def is_curator(self, org):
+        d = None
+        s = False
+        if self.is_superuser:
+            s = True
+        else:
+            list_of_curators = list(self.organizationcurator_set.all())
+            d = []
+            for i in list_of_curators:
+                for r in i.organization_curator.all():
+                    if r.pk == org.pk:
+                        return True
+
+                    # x = [i.organization_curator.all() for i in list_of_curators]
+                    #
+                    # # unravelling from a list
+                    # d = itertools.chain(*x)
+                    #
+                    # if not len(d):
+                    #     d = None
+
+        return s
+
     def get_curated_orgs(self):
         d = None
         if self.is_superuser:

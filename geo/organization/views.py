@@ -46,12 +46,25 @@ class OrganizationDetail(DetailView):
     def get_template_names(self):
         return self.request.device_template_dir + super(OrganizationDetail, self).get_template_names().pop()
 
+
+from django.shortcuts import get_object_or_404
+from django.core.exceptions import PermissionDenied
+
 class OrganizationUpdate(UpdateView):
     model = Organization
     form_class = OrganizationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'organization'
     # success_url = reverse_lazy('organization_detail')
+
+
+    def dispatch(self, request, *args, **kwargs):
+        org = get_object_or_404(self.model, slug=kwargs['organization'],  place__slug=kwargs['place'])
+        if not request.user.is_authenticated():
+            raise PermissionDenied
+        if not request.user.is_curator(org):
+            raise PermissionDenied
+        return super(OrganizationUpdate, self).dispatch(request,*args, **kwargs)
 
     def get_template_names(self):
         return self.request.device_template_dir + super(OrganizationUpdate, self).get_template_names().pop()

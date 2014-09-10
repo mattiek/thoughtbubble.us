@@ -142,12 +142,21 @@ class LocationDetail(DetailView):
     def get_template_names(self):
         return self.request.device_template_dir + super(LocationDetail, self).get_template_names().pop()
 
+from django.core.exceptions import PermissionDenied
 
 class LocationUpdate(UpdateView):
     model = Location
     form_class = LocationUpdateForm
     lookup_field = 'slug'
     lookup_url_kwarg = 'location'
+
+    def dispatch(self, request, *args, **kwargs):
+        loc = get_object_or_404(self.model, organization__slug=kwargs['organization'],  organization__place__slug=kwargs['place'], slug=kwargs['location'])
+        if not request.user.is_authenticated():
+            raise PermissionDenied
+        if not request.user.is_curator(loc.organization):
+            raise PermissionDenied
+        return super(LocationUpdate, self).dispatch(request,*args, **kwargs)
 
     def get_template_names(self):
         return self.request.device_template_dir + super(LocationUpdate, self).get_template_names().pop()
@@ -234,6 +243,14 @@ class LocationUpdate(UpdateView):
 class LocationCreate(CreateView):
     model = Location
     form_class = AddLocationForm
+
+    def dispatch(self, request, *args, **kwargs):
+        loc = get_object_or_404(self.model, organization__slug=kwargs['organization'],  organization__place__slug=kwargs['place'], slug=kwargs['location'])
+        if not request.user.is_authenticated():
+            raise PermissionDenied
+        if not request.user.is_curator(loc.organization):
+            raise PermissionDenied
+        return super(LocationCreate, self).dispatch(request,*args, **kwargs)
 
     def get_template_names(self):
         return self.request.device_template_dir + super(LocationCreate, self).get_template_names().pop()
