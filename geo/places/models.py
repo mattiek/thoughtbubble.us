@@ -88,7 +88,7 @@ class Place(models.Model):
             return 4
         elif self.population < 50000:
             return 5
-        elif self.population < 100000:
+        elif self.population < 70000:
             return 6
         else:
             return 7
