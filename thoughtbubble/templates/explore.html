@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="{{ STATIC_URL }}css/map/explore.css" />
     <script type="text/javascript">
-        var region = {{ request.session.region.capital.get_center.coordinates|safe }};
+        var region = {{ user_region.capital.get_center.coordinates|safe }};
     </script>
 {% endblock %}
 

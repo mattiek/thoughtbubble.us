@@ -28,7 +28,7 @@ class Region(models.Model):
     counties = models.ManyToManyField(County)
 
     def __unicode__(self):
-        return "%s Region" % self.name
+        return "%s Region (%s)" % (self.name, self.capital,)
 
 
 class Place(models.Model):

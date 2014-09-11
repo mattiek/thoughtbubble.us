@@ -134,6 +134,8 @@ class UserProfileForm(forms.Form):
     first_name = forms.CharField(max_length=50,required=False)
     last_name = forms.CharField(max_length=50,required=False)
     location = forms.CharField(max_length=50,required=False)
+    region = forms.ModelChoiceField(queryset=Region.objects.all(),required=False)
+
 
     def clean(self, *args, **kwargs):
         cleaned_data = super(UserProfileForm, self).clean()

@@ -136,6 +136,7 @@ class ThoughtbubbleUser(AbstractBaseUser, PermissionsMixin):
 
 
 
+from geo.places.models import Region
 
 class ThoughtbubbleUserProfile(models.Model):
     user = models.OneToOneField(ThoughtbubbleUser)
@@ -145,6 +146,8 @@ class ThoughtbubbleUserProfile(models.Model):
     profile_picture = models.ImageField(upload_to=path_and_rename('profiles', 'profile_picture'), null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
+
+    region = models.ForeignKey(Region, null=True, blank=True)
 
     def __unicode__(self):
         return "%s's profile" % (self.user.username,)

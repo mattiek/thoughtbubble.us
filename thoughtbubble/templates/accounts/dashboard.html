@@ -39,6 +39,9 @@
             <a id="cancel-button" class="buttonize blue" href="">cancel</a>
             <div class="user-info">
                 {{profile.first_name|default:"first"}} {{profile.last_name|default:"last"}} | {{profile.location|default:"unknown"}}
+                {% if profile.region %}
+                <br/>{{ profile.region }}
+                {% endif %}
             </div>
             <form id="update-info" action="" METHOD="POST">
                 {% csrf_token %}

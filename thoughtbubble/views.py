@@ -298,6 +298,7 @@ class MyConnectionsView(FormView):
                 profile.first_name = cleaned_data['first_name']
                 profile.last_name = cleaned_data['last_name']
                 profile.location = cleaned_data['location']
+                profile.region = cleaned_data['region']
                 profile.save()
                 return redirect('user_dashboard')
         else:

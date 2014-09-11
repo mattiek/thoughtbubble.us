@@ -202,6 +202,7 @@ TEMPLATE_CONTEXT_PROCESSORS = [
     'thoughtbubble.processors.login_form',
     'thoughtbubble.processors.domain_host',
     'thoughtbubble.processors.illustrations',
+    'thoughtbubble.processors.regionization',
     "allauth.account.context_processors.account",
     "allauth.socialaccount.context_processors.socialaccount",
     # 'social.apps.django_app.context_processors.backends',

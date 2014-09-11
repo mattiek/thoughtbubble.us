@@ -13,6 +13,15 @@ def domain_host(request):
 def illustrations(request):
     return {'illustrations': ['ship','trees','turbines']}
 
+
+def regionization(request):
+    r = None
+    if request.user and request.user.get_profile().region:
+        r = request.user.get_profile().region
+    elif request.session['region']:
+        r = request.session['region']
+    return {'user_region': r}
+
 # def exploring(request):
 #     city = request.session.get('exploring_city', None)
 #     state =  request.session.get('exploring_state', None)
