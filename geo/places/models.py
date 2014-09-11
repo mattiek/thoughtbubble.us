@@ -43,6 +43,7 @@ class Place(models.Model):
     elevation = models.IntegerField(default=0, null=True, blank=True)
     place_type = models.CharField(max_length=255, null=True, blank=True)
     population= models.IntegerField(default=0, null=True, blank=True)
+    priority = models.IntegerField(default=0, null=True, blank=True)
 
     #TODO: classification = models.IntegerField City or Neighborhood
     classification = models.CharField(max_length=20, choices=CLASSIFICATION_CHOICES, default=CLASSIFICATION_CHOICES.city)
@@ -64,6 +65,7 @@ class Place(models.Model):
         return "%s, %s" % (self.name, self.state_code)
 
     def save(self, *args, **kwargs):
+        self.priority = self.get_priority()
         super(Place, self).save(*args, **kwargs)
 
         if not self.geom and self.longitude and self.latitude:
@@ -73,6 +75,23 @@ class Place(models.Model):
         #     c = County.objects.get_or_create(name=self.county, state_code=self.state_code)[0]
         #     self.county_fk = c
 
+
+
+    def get_priority(self):
+        if self.population < 2000:
+            return 1
+        elif self.population < 4000:
+            return 2
+        elif self.population < 9000:
+            return 3
+        elif self.population < 20000:
+            return 4
+        elif self.population < 50000:
+            return 5
+        elif self.population < 100000:
+            return 6
+        else:
+            return 7
 
 
 

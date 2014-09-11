@@ -153,9 +153,31 @@ var getNeighborhoods = function() {
     var center = map.getCenter();
     var bounds = map.getBounds();
 
+    var zoomLevel = map.getZoom();
+
+    var priority = 7;
+
+
+    if (zoomLevel <= 6)
+        priority = 7
+    else if (zoomLevel <= 7)
+        priority = 6
+    else if (zoomLevel <= 8)
+        priority = 5
+    else if (zoomLevel <= 9)
+        priority = 4
+    else if (zoomLevel <= 10)
+        priority = 3
+    else if (zoomLevel <= 11)
+        priority = 2
+    else
+        priority = 1
+
+
+
     $.ajax({
 //        url: '/api/v1/places/.json?lat=' + center.lat + '&lng=' + center.lng,
-        url: '/api/v1/places/.json?bb=' + bounds.toBBoxString() + '&lat=' + center.lat + '&lng=' + center.lng,
+        url: '/api/v1/places/.json?bb=' + bounds.toBBoxString() + '&lat=' + center.lat + '&lng=' + center.lng + '&min_priority=' + priority,
         dataType: 'json',
         success: function load(d) {
             // Transform the regions to the centers

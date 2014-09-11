@@ -24,6 +24,7 @@ class PlacesViewset(viewsets.ModelViewSet):
         lat = self.request.GET.get('lat','')
         lng = self.request.GET.get('lng','')
         distance = self.request.GET.get('dist',10)
+        priority = self.request.GET.get('min_priority',5)
         pnt = Point(float(lng), float(lat))
 
         bb = self.request.GET.get('bb','')
@@ -51,7 +52,8 @@ class PlacesViewset(viewsets.ModelViewSet):
             # bounding_box = fromstr(poly_str)
 
 
-        return Place.objects.distance(pnt).order_by('distance').filter(geom__within=poly)[:50]
+        # return Place.objects.distance(pnt).order_by('distance').filter(geom__within=poly)[:50]
+        return Place.objects.filter(priority__gte=priority).distance(pnt).order_by('distance').filter(geom__within=poly)
 
 
 class PlacesList(ListView):
