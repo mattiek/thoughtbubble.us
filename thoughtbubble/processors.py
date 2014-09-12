@@ -16,7 +16,7 @@ def illustrations(request):
 
 def regionization(request):
     r = None
-    if request.user and request.user.get_profile().region:
+    if request.user.is_authenticated() and request.user.get_profile().region:
         r = request.user.get_profile().region
     elif request.session['region']:
         r = request.session['region']
