@@ -266,8 +266,7 @@
 {% endif %}
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        $(".share-fb").on("click", function(e) {
+        $(document).on("click",".share-fb", function(e) {
             e.preventDefault();
             var fbDataShareImage = $(this).attr("data-share-image");
             if (window.location.protocol == 'https:') {
@@ -283,6 +282,5 @@
                 picture: fbDataShareImage
             });
         });
-    });
 </script>
 </html>
