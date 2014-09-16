@@ -2,67 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="Share for fb">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thoughtbubble/static/images/eai-mobile-s2b1a8e7dad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/thoughtbubble/static/images/filtering-s20e78543db.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/339b72437d2ce7411e14fd556d72b2e9da226505/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/339b72437d2ce7411e14fd556d72b2e9da226505/%042.pngc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/931f07ad24a210ae4de9f796b508a82cbcefbaf1/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/931f07ad24a210ae4de9f796b508a82cbcefbaf1/%042.pngc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/cdad9d32c4565760d610342d11f132b94b275c96/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/cdad9d32c4565760d610342d11f132b94b275c96/%042.pngc" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/fc1ea915fd974433b7a2b8177f352b2ba8b251b5/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/fc1ea915fd974433b7a2b8177f352b2ba8b251b5/%042.pngc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/add-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/add-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/add-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/add-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/add-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/add-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/add-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/add-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/add.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/add.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/add.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/add.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/add.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/user/dashboard-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/user/dashboard-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/user/dashboard.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/user/dashboard.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/templates/accounts/dashboard.html" afterPath="$PROJECT_DIR$/thoughtbubble/templates/accounts/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/templates/mobile/accounts/dashboard.html" afterPath="$PROJECT_DIR$/thoughtbubble/templates/mobile/accounts/dashboard.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/detail-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/organization/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/place/detail.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/map/explore-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/map/explore-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/map/explore.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/map/explore.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/global-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/global-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/list-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/list-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/list-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/list-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/list-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/list-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/list.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/list.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/news/list.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/news/list.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/location-admin-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/location-admin-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/location/location-admin.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/location/location-admin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/location/templates/location/location_detail.html" afterPath="$PROJECT_DIR$/geo/location/templates/location/location_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/location/templates/mobile/location/location_detail.html" afterPath="$PROJECT_DIR$/geo/location/templates/mobile/location/location_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/organization/models.py" afterPath="$PROJECT_DIR$/geo/organization/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/places/models.py" afterPath="$PROJECT_DIR$/geo/places/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/navV2-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/navV2-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/navV2.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/navV2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" afterPath="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/mobile/tbnews/newsitem_list.html" afterPath="$PROJECT_DIR$/tbnews/templates/mobile/tbnews/newsitem_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" afterPath="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_detail.html" afterPath="$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geo/organization/templates/organization/organization_detail.html" afterPath="$PROJECT_DIR$/geo/organization/templates/organization/organization_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-addfeature-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-addfeature-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-addfeature.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-addfeature.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/contact/tb-contact.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/contact/tb-contact.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-explore.js" afterPath="$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-explore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-privacy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-sherlock-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-sherlock-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-sherlock.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-sherlock.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-signup-mobile.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-signup-mobile.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/tb-signup.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/tb-signup.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" afterPath="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" afterPath="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
@@ -77,7 +23,7 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/thoughtbubble@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1410830699239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thoughtbubble/static" />
+    <SUITE FILE_PATH="coverage/thoughtbubble@Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1410833302052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/thoughtbubble/static" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -134,51 +80,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="organization_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.625" vertical-offset="822" max-vertical-offset="1785">
-              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="organization_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9583335" vertical-offset="664" max-vertical-offset="1770">
-              <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="location_detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/geo/location/templates/location/location_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.291667" vertical-offset="356" max-vertical-offset="2265">
-              <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
+            <state vertical-scroll-proportion="-5.28" vertical-offset="381" max-vertical-offset="2265">
+              <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="location_detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/location/templates/mobile/location/location_detail.html">
+      <file leaf-file-name="idea_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9583335" vertical-offset="319" max-vertical-offset="2430">
-              <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
+            <state vertical-scroll-proportion="-3.4" vertical-offset="580" max-vertical-offset="3000">
+              <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="organization_application.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_application.html">
+      <file leaf-file-name="idea_detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.0" vertical-offset="807" max-vertical-offset="2220">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state vertical-scroll-proportion="-15.0" vertical-offset="360" max-vertical-offset="2925">
+              <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="idea_list.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ideation/idea/templates/idea/idea_list.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="600">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38745388" vertical-offset="90" max-vertical-offset="3030">
+              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -214,11 +160,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="news_feed.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news_feed.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2722323" vertical-offset="0" max-vertical-offset="551">
-              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -252,7 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/news/add.scss" />
         <option value="$PROJECT_DIR$/thoughtbubble/static/scss/news/list.scss" />
         <option value="$PROJECT_DIR$/tbnews/models.py" />
@@ -287,6 +232,9 @@
         <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
         <option value="$PROJECT_DIR$/tbnews/templates/mobile/tbnews/newsitem_list.html" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
+        <option value="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
+        <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
       </list>
     </option>
   </component>
@@ -376,7 +324,43 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -394,7 +378,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -402,7 +390,63 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="widgets" />
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobile" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="thoughtbubble" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ideation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,7 +542,7 @@
       <recent name="$PROJECT_DIR$/geo/places/templates" />
     </key>
   </component>
-  <component name="RunManager" selected="Django server.Unnamed">
+  <component name="RunManager" selected="Ruby.Unnamed">
     <configuration default="false" name="tb-coffee.sh" type="BashConfigurationType" factoryName="Bash" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="INTERPRETER_PATH" value="/bin/bash" />
@@ -1273,23 +1317,23 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35263702" sideWeight="0.67039406" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35336787" sideWeight="0.67039406" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37823835" sideWeight="0.49893504" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35263702" sideWeight="0.32960597" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36062175" sideWeight="0.50159746" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5788668" sideWeight="0.49973643" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17678382" sideWeight="0.6371398" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36091003" sideWeight="0.49840257" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36062175" sideWeight="0.49840257" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1312,11 +1356,10 @@
   <component name="VcsManagerConfiguration">
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fixes" />
-    <MESSAGE value="Fix ideas had to be in columbus?!" />
     <MESSAGE value="fix for place save" />
     <MESSAGE value="sherlock locations" />
     <MESSAGE value="thumbnails" />
@@ -1340,7 +1383,9 @@
     <MESSAGE value="Zoom priority -- REQUIRES RESAVE OF PLACES" />
     <MESSAGE value="is authenticated" />
     <MESSAGE value="Share for fb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Share for fb" />
+    <MESSAGE value="Line breaks in textfields&#10;dashboard corrections&#10;z-index in explore&#10;" />
+    <MESSAGE value="ideas now include linebreaks" />
+    <option name="LAST_COMMIT_MESSAGE" value="ideas now include linebreaks" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1390,35 +1435,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="690" max-vertical-offset="4395">
-          <caret line="46" column="29" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo/organization/templates/mobile/organization/organization_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1785">
-          <caret line="0" column="23" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/mobile/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="3300">
-          <caret line="55" column="91" selection-start-line="55" selection-start-column="91" selection-end-line="55" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/js/tb/tb-organization.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="9" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/geo/location/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="990" max-vertical-offset="2190">
@@ -1604,7 +1620,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1504" max-vertical-offset="3210">
           <caret line="194" column="0" selection-start-line="194" selection-start-column="0" selection-end-line="194" selection-end-column="0" />
           <folding>
-            <element signature="e#0#54#0" expanded="true" />
+            <element signature="e#0#54#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1646,7 +1662,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1697,14 +1713,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="6.7083335" vertical-offset="1331" max-vertical-offset="2160">
           <caret line="78" column="48" selection-start-line="78" selection-start-column="37" selection-end-line="78" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geo/location/templates/location/location_detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.291667" vertical-offset="356" max-vertical-offset="2265">
-          <caret line="37" column="55" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
           <folding />
         </state>
       </provider>
@@ -1775,8 +1783,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2722323" vertical-offset="0" max-vertical-offset="551">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="315">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geo/location/templates/location/location_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.28" vertical-offset="381" max-vertical-offset="2265">
+          <caret line="43" column="14" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideation/idea/templates/idea/idea_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="600">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.4" vertical-offset="580" max-vertical-offset="3000">
+          <caret line="50" column="21" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="360" max-vertical-offset="2925">
+          <caret line="48" column="68" selection-start-line="48" selection-start-column="68" selection-end-line="48" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38745388" vertical-offset="90" max-vertical-offset="3030">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
           <folding />
         </state>
       </provider>
