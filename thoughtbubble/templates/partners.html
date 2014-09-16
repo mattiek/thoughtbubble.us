@@ -27,7 +27,7 @@
 
 <ul id="partners-list">
 {% for partner in partners %}
-<li><span class="valign"></span><img src="{% thumbnail partner.logo 120x90 %}" alt=""/>
+<li><span class="valign"></span><a href="{{ partner.get_absolute_url }}"><img src="{% thumbnail partner.logo 120x90 %}" alt=""/><a/>
 {% endfor %}
 </ul>
 
