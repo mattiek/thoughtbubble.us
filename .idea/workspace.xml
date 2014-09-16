@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="Share for fb">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/339b72437d2ce7411e14fd556d72b2e9da226505/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/339b72437d2ce7411e14fd556d72b2e9da226505/%042.pngc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/931f07ad24a210ae4de9f796b508a82cbcefbaf1/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/931f07ad24a210ae4de9f796b508a82cbcefbaf1/%042.pngc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/cdad9d32c4565760d610342d11f132b94b275c96/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/cdad9d32c4565760d610342d11f132b94b275c96/%042.pngc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/fc1ea915fd974433b7a2b8177f352b2ba8b251b5/%042.pngc" afterPath="$PROJECT_DIR$/thoughtbubble/static/.sass-cache/fc1ea915fd974433b7a2b8177f352b2ba8b251b5/%042.pngc" />
+    <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" afterPath="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" afterPath="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="thoughtbubble.iws" />
@@ -123,8 +118,8 @@
       <file leaf-file-name="detail.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38745388" vertical-offset="90" max-vertical-offset="3030">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3030">
+              <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -232,9 +227,9 @@
         <option value="$PROJECT_DIR$/tbnews/templates/tbnews/newsitem_list.html" />
         <option value="$PROJECT_DIR$/tbnews/templates/mobile/tbnews/newsitem_list.html" />
         <option value="$PROJECT_DIR$/thoughtbubble/templates/widgets/news_feed.html" />
-        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
         <option value="$PROJECT_DIR$/ideation/idea/templates/idea/idea_detail.html" />
         <option value="$PROJECT_DIR$/ideation/idea/templates/mobile/idea/idea_detail.html" />
+        <option value="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
       </list>
     </option>
   </component>
@@ -1360,7 +1355,6 @@
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
-    <MESSAGE value="fix for place save" />
     <MESSAGE value="sherlock locations" />
     <MESSAGE value="thumbnails" />
     <MESSAGE value="organization" />
@@ -1385,7 +1379,8 @@
     <MESSAGE value="Share for fb" />
     <MESSAGE value="Line breaks in textfields&#10;dashboard corrections&#10;z-index in explore&#10;" />
     <MESSAGE value="ideas now include linebreaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="ideas now include linebreaks" />
+    <MESSAGE value="formatting for idea description" />
+    <option name="LAST_COMMIT_MESSAGE" value="formatting for idea description" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1823,8 +1818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38745388" vertical-offset="90" max-vertical-offset="3030">
-          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3030">
+          <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
       </provider>

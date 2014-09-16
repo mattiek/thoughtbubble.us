@@ -577,7 +577,7 @@ a.orange:hover {
   font-size: 38px / 2;
 }
 /* line 31, ../../scss/idea/detail.scss */
-#idea-wrapper b {
+#idea-wrapper #idea-description {
   color: #53b8d1;
   /* text color */
 }
