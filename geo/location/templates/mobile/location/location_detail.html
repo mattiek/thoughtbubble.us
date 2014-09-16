@@ -87,14 +87,14 @@
 {% block footerscripts %}
     <script src='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>#}
 {#    {% if organization %}#}
 
     <script type="text/javascript">
 
-
         $(document).ready(function() {
-            TB.Map.map().markerLayer.on('layeradd', function(e) {
+            var map = TB.Map.get_map();
+            TB.Map.featureLayer.on('layeradd', function(e) {
 
                 var marker = e.layer,
                         feature = marker.feature;
@@ -103,13 +103,14 @@
 
 
                 // http://leafletjs.com/reference.html#popup
-{#                marker.bindPopup(popupContent,{#}
-{#                    closeButton: false#}
-{#                });#}
+                {#                marker.bindPopup(popupContent,{#}
+                {#                    closeButton: false#}
+                {#                });#}
             });
 
-            TB.Map.map().setView([{{ location.get_latitude }},{{ location.get_longitude }}],15);
-            TB.Map.map().markerLayer.setGeoJSON({
+            map.setView([{{ location.get_latitude }},{{ location.get_longitude }}],15);
+
+            var map_features = {
                 // this feature is in the GeoJSON format: see geojson.org
                 // for the full specification
                 type: 'Feature',
@@ -120,9 +121,13 @@
                     coordinates: [{{ location.get_longitude }}, {{ location.get_latitude }}]
                 },
                 properties: {{ location.get_properties_json|safe }}
-            });
+            }
+
+            TB.Map.featureLayer.setGeoJSON(map_features);
+            {#            map.markerLayer.setGeoJSON();#}
 
         });
+
 
 
 

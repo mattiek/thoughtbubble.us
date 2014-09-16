@@ -84,7 +84,7 @@
 {% block footerscripts %}
     <script src='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.js'></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-mapbox.js"></script>
-    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>
+{#    <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-location.js"></script>#}
 {#    <script type="text/javascript" src="{{ STATIC_URL }}js/plugins/jquery.file-input.js"></script>#}
     <script type="text/javascript" src="{{ STATIC_URL }}js/tb/tb-listidea.js"></script>
 
@@ -159,7 +159,8 @@
 
 
         $(document).ready(function() {
-            TB.Map.map().markerLayer.on('layeradd', function(e) {
+            var map = TB.Map.get_map();
+            TB.Map.featureLayer.on('layeradd', function(e) {
 
                 var marker = e.layer,
                         feature = marker.feature;
@@ -173,8 +174,9 @@
 {#                });#}
             });
 
-            TB.Map.map().setView([{{ idea.get_latitude }},{{ idea.get_longitude }}],15);
-            TB.Map.map().markerLayer.setGeoJSON({
+            map.setView([{{ idea.get_latitude }},{{ idea.get_longitude }}],15);
+
+            var map_features = {
                 // this feature is in the GeoJSON format: see geojson.org
                 // for the full specification
                 type: 'Feature',
@@ -185,7 +187,9 @@
                     coordinates: [{{ idea.get_longitude }}, {{ idea.get_latitude }}]
                 },
                 properties: {{ idea.get_properties_json|safe }}
-            });
+            }
+
+            TB.Map.featureLayer.setGeoJSON(map_features);
 
         });
 
