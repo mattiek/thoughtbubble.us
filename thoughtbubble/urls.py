@@ -7,7 +7,7 @@ from filebrowser.sites import site
 
 from django.views.generic import RedirectView
 
-from views import MyConnectionsView, UserProfileFormView, ContactFormView
+from views import MyConnectionsView, UserProfileFormView, ContactFormView, PartnerView
 
 admin.autodiscover()
 
@@ -56,6 +56,7 @@ urlpatterns = patterns('',
     # url('', include('social.apps.django_app.urls', namespace='social')),
 
     url(r'^contact-us/?$', ContactFormView.as_view(), name='contact_form'),
+    url(r'^partners/?$', PartnerView.as_view(), name='partners'),
 
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

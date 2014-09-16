@@ -362,6 +362,17 @@ class UserProfileFormView(VanillaFormView,AjaxResponseMixin, JSONResponseMixin):
     def get_template_names(self):
         return self.request.device_template_dir + super(UserProfileFormView, self).get_template_names()
 
+from vanilla import TemplateView
+
+class PartnerView(TemplateView):
+    template_name = "partners.html"
+
+    def get_context_data(self, **kwargs):
+        d = super(PartnerView, self).get_context_data(**kwargs)
+
+        d['partners'] = Organization.objects.all()
+
+        return d
 
 from forms import ContactForm
 from django.core.mail import send_mail

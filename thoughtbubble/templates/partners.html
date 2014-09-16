@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load classnames %}
+{% load getdict %}
+{% load widget_tweaks %}
+{% load thumbnail %}
+
+{% block title %}
+    Partners
+{% endblock %}
+
+{% block head %}
+    <link href='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.css' rel='stylesheet' />
+    <!--[if lte IE 8]>
+    <link href='//api.tiles.mapbox.com/mapbox.js/v2.0.1/mapbox.ie.css' rel='stylesheet' />
+  <![endif]-->
+
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/partners.css"/>
+{% endblock %}
+
+{% block bodyid %}partners{% endblock %}
+
+{% block primarynav %}
+{% endblock %}
+
+{% block content %}
+<div id="page-wrapper">
+
+<ul id="partners-list">
+{% for partner in partners %}
+<li><span class="valign"></span><img src="{% thumbnail partner.logo 120x90 %}" alt=""/>
+{% endfor %}
+</ul>
+
+
+
+</div>
+
+{% endblock %}
+
+{% block footerscripts %}
+
+{% endblock %}

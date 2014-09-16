@@ -1,0 +1,21 @@
+#partners-list {
+  li {
+    display: inline-block;
+    margin-left: 20px;
+    width: 120px;
+    text-align: center;
+    margin-top: 20px;
+
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .valign {
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
