@@ -165,6 +165,7 @@ def addidea(request, place=None, organization=None, location=None):
         try:
             d['location'] = Location.objects.filter(organization__slug=organization)
             form.fields['content_object'].queryset = d['location']
+            form.fields['content_object'].initial = d['location'].filter(what_kind__name='organization')[0]
 
             # form.fields['content_object_place'].queryset = Place.objects.filter(slug__iexact=place)
             # form.fields['content_object_place'].initial = Place.objects.get(slug__iexact=place)
