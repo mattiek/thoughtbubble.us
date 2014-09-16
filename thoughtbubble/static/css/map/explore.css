@@ -536,7 +536,7 @@ h1, h2 {
 /* line 328, ../../scss/map/explore.scss */
 #compass-rose #compass-instructions {
   width: 160px;
-  height: 145px;
+  height: 175px;
   background-color: #ffffff;
   position: absolute;
   right: 16px;
@@ -577,8 +577,9 @@ h1, h2 {
 #compass-rose ul li {
   display: inline-block;
   margin-left: 10px;
+  margin-top: 5px;
 }
-/* line 374, ../../scss/map/explore.scss */
+/* line 375, ../../scss/map/explore.scss */
 #compass-rose ul img {
   vertical-align: text-bottom;
   margin-right: 5px;

@@ -328,7 +328,7 @@ var hideCompass = function() {
 }
 
 var showCompass = function() {
-    $('#compass-instructions').animate({width:160, height:145}, 250);
+    $('#compass-instructions').animate({width:160, height:175}, 250);
 }
 
 var hideZoomToMe = function() {
