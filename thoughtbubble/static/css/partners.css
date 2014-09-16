@@ -1,0 +1,21 @@
+/* line 2, ../scss/partners.scss */
+#partners-list li {
+  display: inline-block;
+  margin-left: 20px;
+  width: 120px;
+  text-align: center;
+  margin-top: 20px;
+}
+/* line 9, ../scss/partners.scss */
+#partners-list li img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 15, ../scss/partners.scss */
+#partners-list li .valign {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
