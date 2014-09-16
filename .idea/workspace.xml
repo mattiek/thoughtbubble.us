@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="">
+    <list default="true" id="ad975b14-0c6b-4945-b23e-3cc0b80dd8d8" name="Default" comment="formatting for idea description">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" afterPath="$PROJECT_DIR$/thoughtbubble/static/css/idea/detail.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" afterPath="$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -118,7 +118,7 @@
       <file leaf-file-name="detail.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3030">
+            <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3105">
               <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
               <folding />
             </state>
@@ -1818,7 +1818,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/thoughtbubble/static/scss/idea/detail.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3030">
+        <state vertical-scroll-proportion="0.6918819" vertical-offset="90" max-vertical-offset="3105">
           <caret line="31" column="36" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
           <folding />
         </state>
