@@ -253,6 +253,7 @@ def organization_signup(request):
             # create a new organization here
             organization = Organization()
             organization.title = cleaned_data['organization_name']
+            organization.set_center(cleaned_data['longitude'], cleaned_data['latitude'])
             curator = OrganizationCurator()
             curator.curator = user
             curator.save()

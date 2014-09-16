@@ -50,7 +50,7 @@
         });
 
         return {
-            "featureGroup"               : featureGroup
+            "featureGroup"               : TB.Map.featureGroup
         };
     }());
 

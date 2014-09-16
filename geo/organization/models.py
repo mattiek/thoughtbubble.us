@@ -15,6 +15,8 @@ from ideation.idea.models import Idea
 from tbnews.models import NewsItem
 from django.db.models import Q
 
+from django.contrib.gis.geos import Point
+
 #
 
 class OrganizationCuratorRole(models.Model):
@@ -95,6 +97,7 @@ class Organization(models.Model):
         # First try to see if we don't have a center, then set it by the geom's center
         if not self.center and self.geom:
             self.center = self.geom.centroid
+
         try:
             # Trying to see if we have a specialized location for the organization
             loc = self.location_set.get(what_kind__name='organization')
@@ -226,6 +229,9 @@ class Organization(models.Model):
             mapbox.append(geometry)
 
         return JSON.dumps(mapbox)
+
+    def set_center(self, longitude, latitude):
+        self.center = Point(longitude, latitude)
 
     def get_geometry(self):
         if self.geom:
@@ -363,6 +369,8 @@ class Organization(models.Model):
 
     def total_members(self):
         return self.members.all().count()
+
+
 
 
 

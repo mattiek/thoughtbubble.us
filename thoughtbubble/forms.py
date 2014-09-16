@@ -98,33 +98,36 @@ class OrganizationSignupForm(SignupForm):
     organization_alt_phone_number = forms.CharField(max_length=250, required=False, widget=forms.TextInput(attrs={'placeholder': 'organization alt phone number'}))
     organization_alt_contact_email = forms.CharField(max_length=250, required=False, widget=forms.TextInput(attrs={'placeholder': 'organization alt contact email'}))
 
-    organization_cc = forms.CharField(max_length=250,widget=forms.TextInput(attrs={'placeholder': 'credit card number'}))
-    organization_cc_name = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'name on card'}))
-    organization_expiry = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'expiration date'}))
-    organization_security = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'security code'}))
+    # organization_cc = forms.CharField(max_length=250,widget=forms.TextInput(attrs={'placeholder': 'credit card number'}))
+    # organization_cc_name = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'name on card'}))
+    # organization_expiry = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'expiration date'}))
+    # organization_security = forms.CharField(max_length=250, widget=forms.TextInput(attrs={'placeholder': 'security code'}))
+
+    latitude = forms.FloatField(widget=forms.HiddenInput(),error_messages={'required':'Your organization needs a location.'})
+    longitude = forms.FloatField(widget=forms.HiddenInput(),error_messages={'required':''})
 
     def clean(self, *args, **kwargs):
         cleaned_data = super(OrganizationSignupForm, self).clean()
 
-        organization_name = cleaned_data.get("organization_name")
-        organization_address = cleaned_data.get("organization_address")
-        organization_zipcode = cleaned_data.get("organization_zipcode")
-        organization_phone = cleaned_data.get("organization_phone")
-        organization_email = cleaned_data.get("organization_email")
+        # organization_name = cleaned_data.get("organization_name")
+        # organization_address = cleaned_data.get("organization_address")
+        # organization_zipcode = cleaned_data.get("organization_zipcode")
+        # organization_phone = cleaned_data.get("organization_phone")
+        # organization_email = cleaned_data.get("organization_email")
+        #
+        # organization_contact = cleaned_data.get("organization_contact")
+        # organization_phone_number = cleaned_data.get("organization_phone_number")
+        # organization_contact_email = cleaned_data.get("organization_contact_email")
+        #
+        # organization_alt_contact = cleaned_data.get("organization_alt_contact","")
+        # organization_alt_phone_number = cleaned_data.get("organization_alt_phone_number","")
+        # organization_alt_contact_email = cleaned_data.get("organization_alt_contact_email","")
 
-        organization_contact = cleaned_data.get("organization_contact")
-        organization_phone_number = cleaned_data.get("organization_phone_number")
-        organization_contact_email = cleaned_data.get("organization_contact_email")
 
-        organization_alt_contact = cleaned_data.get("organization_alt_contact","")
-        organization_alt_phone_number = cleaned_data.get("organization_alt_phone_number","")
-        organization_alt_contact_email = cleaned_data.get("organization_alt_contact_email","")
-
-
-        organization_cc = cleaned_data.get("organization_cc")
-        organization_cc_name = cleaned_data.get("organization_cc_name")
-        organization_cc_expiry = cleaned_data.get("organization_expiry")
-        organization_cc_security = cleaned_data.get("organization_security")
+        # organization_cc = cleaned_data.get("organization_cc")
+        # organization_cc_name = cleaned_data.get("organization_cc_name")
+        # organization_cc_expiry = cleaned_data.get("organization_expiry")
+        # organization_cc_security = cleaned_data.get("organization_security")
 
         cleaned_data = dict(cleaned_data.items() + self.files.items())
         return cleaned_data
