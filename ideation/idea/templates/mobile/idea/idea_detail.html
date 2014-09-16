@@ -44,7 +44,7 @@
             <p>When: <br/><b>{{ idea.what_for }}</b></p>
             <p>Idea by: <br/><b>{{ idea.user.username }}</b></p>
         </div>
-        <div class="r">We want <b>{{ idea.get_name }}</b></div>
+        <div class="r">{{ idea.get_wants }} <b>{{ idea.get_name }}</b></div>
         <div class="r">I imagine something like this:</div>
         <div id="idea-description">{{ idea.description|linebreaks }}</div>
         <div id="links" class="r">Links:

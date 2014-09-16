@@ -188,6 +188,11 @@ class Idea(models.Model):
             return location.latitude
 
 
+    def get_wants(self):
+        who_wants = "I want"
+        if self.support_count() > 1:
+                who_wants = "We want"
+        return who_wants
 
     def get_fb_sharing(self):
         who_wants = "I want"
