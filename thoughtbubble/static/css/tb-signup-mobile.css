@@ -19,13 +19,12 @@
 
 /* line 8, ../scss/tb-signup-mobile.scss */
 .submit {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -42,16 +41,15 @@
 }
 /* line 15, ../scss/tb-signup-mobile.scss */
 .submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 22, ../scss/tb-signup-mobile.scss */
@@ -64,10 +62,8 @@
 #id_profile_picture {
   width: 80px;
   height: 79px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
@@ -77,16 +73,14 @@
   margin: 0 auto 20px;
 }
 
-/* line 42, ../scss/tb-signup-mobile.scss */
+/* line 40, ../scss/tb-signup-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   width: 300px;
   height: 35px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
   /* text color */
@@ -123,7 +117,7 @@ input[type="text"] {
   margin-left: 15px;
 }
 
-/* line 78, ../scss/tb-signup-mobile.scss */
+/* line 77, ../scss/tb-signup-mobile.scss */
 #captcha-question,
 .terms-and-conditions {
   color: #727171;
@@ -149,7 +143,7 @@ input[type="text"] {
   max-height: 50px;
 }
 
-/* line 106, ../scss/tb-signup-mobile.scss */
+/* line 103, ../scss/tb-signup-mobile.scss */
 #id_organization_name,
 #id_organization_contact,
 #id_organization_alt_contact,
@@ -157,7 +151,7 @@ input[type="text"] {
   margin-top: 40px;
 }
 
-/* line 111, ../scss/tb-signup-mobile.scss */
+/* line 110, ../scss/tb-signup-mobile.scss */
 #id_organization_expiry,
 #id_organization_security {
   float: left;

@@ -121,6 +121,7 @@ class Place(models.Model):
         props['id'] = self.id
         props['explore'] = self.get_explore_link()
         props['title'] = self.name
+        props['featured'] = False
 
         props['orgs'] = filter(lambda x: x, [x.get_center() for x in self.organization_set.all()])
 

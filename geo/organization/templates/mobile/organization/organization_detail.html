@@ -65,7 +65,7 @@
 
     {#    About #}
             <div id="about" class="large-blue">
-                {{ organization.about }}
+                {{ organization.about|linebreaks }}
             </div>
 
         {% with fb=organization.get_fb_sharing twit=organization.get_twit_sharing id="about-sharing"%}

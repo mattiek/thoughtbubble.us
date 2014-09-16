@@ -38,13 +38,12 @@
 
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -57,34 +56,32 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 8, ../../scss/partials/_buttons.scss */
+/* line 7, ../../scss/partials/_buttons.scss */
 a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
 }
 /* line 12, ../../scss/partials/_buttons.scss */
 a.orange:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 17, ../../scss/partials/_buttons.scss */
 .blue {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
@@ -96,13 +93,12 @@ a.orange:hover {
 }
 /* line 19, ../../scss/partials/_buttons.scss */
 .blue:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
   background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
@@ -119,7 +115,7 @@ a.orange:hover {
   font-size: 11px;
 }
 
-/* line 3, ../../scss/partials/_chosen.scss */
+/* line 1, ../../scss/partials/_chosen.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {
@@ -166,9 +162,10 @@ a.orange:hover {
   clear: both;
 }
 
-/* line 50, filtering/*.png */
+/* line 56, filtering/*.png */
 .filtering-sprite, .chzn-container-single .chzn-single div b, .chzn-container-single .chzn-single.chzn-single-with-drop b {
-  background: url('../../images/filtering-s20e78543db.png') no-repeat;
+  background-image: url('../../images/filtering-s67220bb4e0.png');
+  background-repeat: no-repeat;
 }
 
 /* line 6, ../../scss/partials/_filtering.scss */
@@ -187,7 +184,7 @@ a.orange:hover {
   }
 }
 
-/* line 22, ../../scss/partials/_filtering.scss */
+/* line 18, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single,
 .chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default,
@@ -207,13 +204,13 @@ a.orange:hover {
 }
 /* line 34, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single div b {
-  background-position: 0 0;
+  background-position: 0 -7px;
   height: 7px;
   margin-top: 8px;
 }
 /* line 44, ../../scss/partials/_filtering.scss */
 .chzn-container-single .chzn-single.chzn-single-with-drop b {
-  background-position: 0 -7px;
+  background-position: 0 0;
 }
 
 /* line 53, ../../scss/partials/_filtering.scss */
@@ -246,20 +243,18 @@ a.orange:hover {
 }
 
 @media screen and (max-width: 480px) {
-  /* line 77, ../../scss/partials/_filtering.scss */
+  /* line 76, ../../scss/partials/_filtering.scss */
   .chzn-container-single .chzn-single,
   .chosen-container-single .chosen-single {
     background-image: none;
     background: #ffffff;
     border: 0px;
-    -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
-    -webkit-box-shadow: 0px 0px 5px white;
-    -moz-box-shadow: 0px 0px 5px white;
-    box-shadow: 0px 0px 5px white;
+    -moz-box-shadow: 0px 5px #FFF;
+    -webkit-box-shadow: 0px 5px #FFF;
+    box-shadow: 0px 5px #FFF;
     width: 100%;
   }
 }
@@ -288,15 +283,19 @@ a.orange:hover {
 
 /* line 19, ../../scss/contact/tb-contact.scss */
 input.submit {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: linear, bottom, #f3812b 0%, #f9a533 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2YzODEyYiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y5YTUzMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #f3812b), color-stop(100%, #f9a533));
+  background-image: -moz-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
+  background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
   border: none;
   color: #fff;
   /* text color */
@@ -310,15 +309,19 @@ input.submit {
 }
 /* line 27, ../../scss/contact/tb-contact.scss */
 input.submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: linear, bottom, #ff9666 0%, #ffb045 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjEuMCIgeDI9IjAuNSIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmOTY2NiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmYjA0NSIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 100%, 50% 0%, color-stop(0%, #ff9666), color-stop(100%, #ffb045));
+  background-image: -moz-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
+  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
 }
 
 /* line 33, ../../scss/contact/tb-contact.scss */
@@ -327,16 +330,14 @@ input.submit:hover {
   margin: 0 auto;
 }
 
-/* line 41, ../../scss/contact/tb-contact.scss */
+/* line 39, ../../scss/contact/tb-contact.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   width: 100%;
   height: 35px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
   /* text color */

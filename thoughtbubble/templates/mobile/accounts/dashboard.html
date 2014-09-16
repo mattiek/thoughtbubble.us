@@ -160,7 +160,7 @@
 
 {% if user.get_curated_orgs %}
     <div id="curator-admin">
-        <div class="user-info">Organizations Administrated</div>
+        <div class="user-info">Organizations Administered</div>
         {% for org in user.get_curated_orgs %}
             {% include 'organization/organization_admin_list.html' %}
         {% endfor %}

@@ -17,7 +17,7 @@
   clear: both;
 }
 
-/* line 7, ../scss/tb-privacy.scss */
+/* line 5, ../scss/tb-privacy.scss */
 h1,
 h2,
 h3 {
@@ -39,7 +39,7 @@ h3 {
   font-size: 18px;
 }
 
-/* line 24, ../scss/tb-privacy.scss */
+/* line 22, ../scss/tb-privacy.scss */
 h4,
 h5,
 h6 {
@@ -127,13 +127,12 @@ i {
 
 /* line 100, ../scss/tb-privacy.scss */
 .join-button a {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -152,16 +151,15 @@ i {
 }
 /* line 108, ../scss/tb-privacy.scss */
 .join-button a:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 /* line 113, ../scss/tb-privacy.scss */
 .join-button a:visited {

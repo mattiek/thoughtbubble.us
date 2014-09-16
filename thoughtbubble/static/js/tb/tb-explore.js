@@ -84,6 +84,7 @@ TB.Map.featureLayer.on('layeradd', function(e) {
 
     marker.setIcon(L.icon(feature.properties.icon));
 
+
     var popupContent;
     // Create custom popup content
     if (feature.properties.explore) {
@@ -92,6 +93,10 @@ TB.Map.featureLayer.on('layeradd', function(e) {
             '</a>';
     } else {
         popupContent = '<h3>' + feature.properties.title + '</h3>';
+    }
+
+    if (feature.properties.featured) {
+        marker.setZIndexOffset(10000);
     }
 
     // http://leafletjs.com/reference.html#popup

@@ -36,17 +36,15 @@
   clear: both;
 }
 
-/* line 6, ../../scss/partials/_inputs.scss */
+/* line 3, ../../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   background-color: white;
@@ -79,10 +77,8 @@ input[type="text"] {
 
 /* line 38, ../../scss/partials/_inputs.scss */
 textarea {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -113,13 +109,12 @@ textarea {
 
 /* line 14, ../../scss/idea/add-mobile.scss */
 .submit {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -135,16 +130,15 @@ textarea {
 }
 /* line 20, ../../scss/idea/add-mobile.scss */
 .submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 27, ../../scss/idea/add-mobile.scss */
@@ -162,10 +156,8 @@ textarea {
 #add-photo {
   width: 80px;
   height: 79px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
@@ -175,26 +167,22 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 51, ../../scss/idea/add-mobile.scss */
+/* line 49, ../../scss/idea/add-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
 
 /* line 58, ../../scss/idea/add-mobile.scss */
 textarea {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -233,7 +221,7 @@ form .row .row.second-row {
   width: 290px;
 }
 
-/* line 95, ../../scss/idea/add-mobile.scss */
+/* line 94, ../../scss/idea/add-mobile.scss */
 .chzn-container-single .chzn-default, .chzn-container-single .chzn-single, .chzn-container-single .chzn-drop .chzn-results li,
 .chzn-container-single .chosen-default, .chzn-container-single .chosen-single, .chzn-container-single .chosen-drop .chosen-results li,
 .chosen-container-single .chzn-default,
@@ -247,14 +235,14 @@ form .row .row.second-row {
   font-family: "Museo Sans", sans-serif;
   font-size: 15px;
 }
-/* line 100, ../../scss/idea/add-mobile.scss */
+/* line 99, ../../scss/idea/add-mobile.scss */
 .chzn-container-single .chzn-default,
 .chzn-container-single .chosen-default,
 .chosen-container-single .chzn-default,
 .chosen-container-single .chosen-default {
   color: #bbb;
 }
-/* line 104, ../../scss/idea/add-mobile.scss */
+/* line 103, ../../scss/idea/add-mobile.scss */
 .chzn-container-single .chzn-single div b,
 .chzn-container-single .chosen-single div b,
 .chosen-container-single .chzn-single div b,
@@ -265,7 +253,7 @@ form .row .row.second-row {
   background: url('../../images/orange-arrow.png?1378769738') no-repeat 0 6px;
 }
 
-/* line 113, ../../scss/idea/add-mobile.scss */
+/* line 112, ../../scss/idea/add-mobile.scss */
 .chzn-container,
 .chosen-container {
   margin-bottom: 15px;
@@ -293,7 +281,7 @@ form .row .row.second-row {
   width: 220px;
 }
 
-/* line 139, ../../scss/idea/add-mobile.scss */
+/* line 135, ../../scss/idea/add-mobile.scss */
 #id_what_kind,
 #id_content_object,
 #id_content_object_place,

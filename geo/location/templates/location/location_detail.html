@@ -35,7 +35,7 @@
         </div>
     </div>
 
-        <div class="about">{{ location.about }}</div>
+        <div class="about">{{ location.about|linebreaks }}</div>
     {% with fb=location.get_fb_sharing twit=location.get_twit_sharing linkedin=location.get_linkedin_sharing %}
         {% include "widgets/sharing.html" %}
     {% endwith %}

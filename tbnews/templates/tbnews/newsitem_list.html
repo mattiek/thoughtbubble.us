@@ -29,7 +29,7 @@
                 <a href="#">
                     <img src="{% thumbnail news.img 80x80 %}" alt="thumbnail" />
                     <h3>{{ news.subject }}</h3>
-                    <p>{{ news.content }} <span class="meta">{{ news.timestamp }}</span></p>
+                    <p>{{ news.content|linebreaks }} <span class="meta">{{ news.timestamp }}</span></p>
                 </a>
             </li>
         <a class="buttonize orange update" href="{% url 'update_news_item' kind obj_id news.id %}">Update</a>

@@ -34,10 +34,8 @@
   width: 576px;
   height: 113px;
   margin: 0 auto;
-  -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
+  -webkit-border-radius: 20px;
   border-radius: 20px;
   margin-bottom: 15px;
   background-image: -webkit-linear-gradient(left, #daf3f8 80%, #fef8ee 80%);
@@ -49,10 +47,8 @@
     width: 100%;
     background-image: none;
     background-color: #daf3f8;
-    -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
-    -ms-border-radius: 0px;
-    -o-border-radius: 0px;
+    -webkit-border-radius: 0px;
     border-radius: 0px;
   }
 }
@@ -234,7 +230,7 @@
   }
 }
 
-/* line 222, ../../scss/idea/_idea.scss */
+/* line 219, ../../scss/idea/_idea.scss */
 .supporting,
 .dislike,
 .commenting,
@@ -287,13 +283,12 @@ a.flag img {
 
 /* line 3, ../../scss/partials/_buttons.scss */
 a.orange {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -306,34 +301,32 @@ a.orange {
   /* text color */
   font-family: "Museo Sans", sans-serif;
 }
-/* line 8, ../../scss/partials/_buttons.scss */
+/* line 7, ../../scss/partials/_buttons.scss */
 a.orange.supporting.activated, a.orange.s-button.activated {
   color: #f9c98c;
   /* text color */
 }
 /* line 12, ../../scss/partials/_buttons.scss */
 a.orange:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 17, ../../scss/partials/_buttons.scss */
 .blue {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
   background-image: linear-gradient(to bottom, #8dd9f2 0%, #5fd2e7 28%, #30cae1 38%, #4cc6de 100%);
@@ -345,13 +338,12 @@ a.orange:hover {
 }
 /* line 19, ../../scss/partials/_buttons.scss */
 .blue:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(top, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
   background-image: linear-gradient(to bottom, #91def7 0%, #60dff4 28%, #35dff8 38%, #52e5fe 100%);
@@ -430,7 +422,7 @@ a.orange:hover {
   height: 15px;
 }
 
-/* line 3, ../../scss/partials/_chosen.scss */
+/* line 1, ../../scss/partials/_chosen.scss */
 .chosen-container-single .chosen-default,
 .chosen-container-single .chosen-single,
 .chosen-container-single .chosen-drop .chosen-results li {

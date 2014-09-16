@@ -8,7 +8,7 @@
                 <img src="{% thumbnail news.img 150x150 %}" alt="thumbnail" />
             {% endif %}
             <h3>{{ news.subject }} <span class="date">{{ news.date_created|date:"m.d.Y" }}</span></h3>
-            <p>{{ news.content|safe }}</p>
+            <p>{{ news.content|linebreaks }}</p>
 {#        </a>#}
     </li>
 {% endfor %}

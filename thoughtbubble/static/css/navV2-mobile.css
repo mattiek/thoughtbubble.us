@@ -1,11 +1,13 @@
-/* line 50, directional/*.png */
+/* line 56, directional/*.png */
 .directional-sprite {
-  background: url('../images/directional-sc2dbe3af58.png') no-repeat;
+  background-image: url('../images/directional-sc2dbe3af58.png');
+  background-repeat: no-repeat;
 }
 
-/* line 50, eai-mobile/*.png */
+/* line 56, eai-mobile/*.png */
 .eai-mobile-sprite, #primary-explore {
-  background: url('../images/eai-mobile-s2b1a8e7dad.png') no-repeat;
+  background-image: url('../images/eai-mobile-sf008e01965.png');
+  background-repeat: no-repeat;
 }
 
 /* line 2, ../scss/neat/grid/_grid.scss */
@@ -43,7 +45,7 @@
   background: url('../images/clean_textile.png?1390687091');
   background-size: 50%;
 }
-/* line 18, ../scss/bourbon/addons/_clearfix.scss */
+/* line 17, ../scss/bourbon/addons/_clearfix.scss */
 #wrapper:before, #wrapper:after {
   content: " ";
   display: table;
@@ -77,7 +79,7 @@
   margin: -8px 0 0 0;
 }
 
-/* line 51, ../scss/navV2-mobile.scss */
+/* line 50, ../scss/navV2-mobile.scss */
 #nav,
 #login-nav {
   color: #4585c3;
@@ -210,7 +212,7 @@
 
 /* line 186, ../scss/navV2-mobile.scss */
 #primary-explore {
-  background-position: 0 0;
+  background-position: 0 -67px;
   width: 181px;
   height: 34px;
   display: block;
@@ -246,7 +248,7 @@
   margin-left: 10px;
   padding-left: 10px;
 }
-/* line 230, ../scss/navV2-mobile.scss */
+/* line 229, ../scss/navV2-mobile.scss */
 #sub-footer ul li:first-child, #sub-footer ul li.second {
   border-left: none;
   padding-left: 0px;
@@ -263,13 +265,12 @@
 
 /* line 248, ../scss/navV2-mobile.scss */
 #footer {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   width: 100%;
   background-color: #49c3dd;
@@ -334,7 +335,7 @@
   text-align: center;
 }
 
-/* line 312, ../scss/navV2-mobile.scss */
+/* line 307, ../scss/navV2-mobile.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -401,7 +402,7 @@
 #update-avatar-overlay h4:last-child {
   margin-bottom: 35px;
 }
-/* line 351, ../scss/navV2-mobile.scss */
+/* line 349, ../scss/navV2-mobile.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -423,7 +424,7 @@
   text-align: center;
   line-height: 45px;
 }
-/* line 357, ../scss/navV2-mobile.scss */
+/* line 356, ../scss/navV2-mobile.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -552,7 +553,7 @@
   height: 30px;
   margin-bottom: 0px;
 }
-/* line 426, ../scss/navV2-mobile.scss */
+/* line 424, ../scss/navV2-mobile.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -573,10 +574,8 @@
 #update-avatar-overlay input[type="text"] {
   width: 300px;
   height: 45px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
@@ -592,13 +591,12 @@
   width: 300px;
   float: none;
   margin: 0 auto;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -615,16 +613,15 @@
 #dislike-overlay .submit:hover,
 #msg-overlay .submit:hover,
 #update-avatar-overlay .submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 /* line 445, ../scss/navV2-mobile.scss */
 #login-overlay .submit.large-text,
@@ -719,26 +716,23 @@ button.mfp-close:active {
   margin: 0px;
   top: 8px;
   right: 8px;
-  -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
   border-radius: 7px;
   border: 1px solid #cccccc;
   font-weight: 100;
   font-size: 24px;
 }
 
-/* line 536, ../scss/navV2-mobile.scss */
+/* line 535, ../scss/navV2-mobile.scss */
 .error-box,
 .message-box {
-  -webkit-border-radius: 1.2;
   -moz-border-radius: 1.2;
-  -ms-border-radius: 1.2;
-  -o-border-radius: 1.2;
+  -webkit-border-radius: 1.2;
   border-radius: 1.2;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #fff;
   /* layer fill content */

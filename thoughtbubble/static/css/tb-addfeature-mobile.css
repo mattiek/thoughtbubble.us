@@ -17,17 +17,15 @@
   clear: both;
 }
 
-/* line 6, ../scss/partials/_inputs.scss */
+/* line 3, ../scss/partials/_inputs.scss */
 input[type="password"],
 input[type="email"],
 input[type="url"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   background-color: white;
@@ -60,10 +58,8 @@ input[type="text"] {
 
 /* line 38, ../scss/partials/_inputs.scss */
 textarea {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
   min-height: 200px;
@@ -106,13 +102,12 @@ textarea {
 
 /* line 10, ../scss/tb-addfeature-mobile.scss */
 .submit {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -128,16 +123,15 @@ textarea {
 }
 /* line 17, ../scss/tb-addfeature-mobile.scss */
 .submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 23, ../scss/tb-addfeature-mobile.scss */
@@ -150,10 +144,8 @@ textarea {
 #add-photo {
   width: 80px;
   height: 79px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   margin-left: -100px;
@@ -163,26 +155,22 @@ textarea {
   background-position: 57px 57px;
 }
 
-/* line 43, ../scss/tb-addfeature-mobile.scss */
+/* line 41, ../scss/tb-addfeature-mobile.scss */
 input[type="password"],
 input[type="email"],
 input[type="text"] {
   /*width: 324px;*/
   height: 25px;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
 
 /* line 50, ../scss/tb-addfeature-mobile.scss */
 textarea {
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   font-family: "Museo Sans", sans-serif;
 }
@@ -191,10 +179,8 @@ textarea {
 .file-picker-input {
   width: 80px;
   height: 79px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   background-image: url('../images/add-photo.png?1390687046');
@@ -236,10 +222,8 @@ form .row .row.second-row {
   width: 24px;
   height: 24px;
   background-color: #49c5dd;
-  -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
   border-radius: 3px;
 }
 /* line 96, ../scss/tb-addfeature-mobile.scss */
@@ -270,7 +254,7 @@ form .row .row.second-row {
   display: none;
 }
 
-/* line 123, ../scss/tb-addfeature-mobile.scss */
+/* line 122, ../scss/tb-addfeature-mobile.scss */
 #long_label,
 #lat_label {
   line-height: 24px;
@@ -288,13 +272,12 @@ form .row .row.second-row {
 .save-edit-list a {
   height: 25px;
   width: 65px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -303,10 +286,8 @@ form .row .row.second-row {
   /* text color */
   font-family: "Museo Sans", sans-serif;
   display: block;
-  -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
   /* text color */
@@ -317,16 +298,15 @@ form .row .row.second-row {
 }
 /* line 146, ../scss/tb-addfeature-mobile.scss */
 .save-edit-list a:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 
 /* line 152, ../scss/tb-addfeature-mobile.scss */
@@ -343,7 +323,7 @@ form .row .row.second-row {
   float: right;
 }
 
-/* line 165, ../scss/tb-addfeature-mobile.scss */
+/* line 164, ../scss/tb-addfeature-mobile.scss */
 .news-text,
 .about-text {
   min-height: 77px;
@@ -355,15 +335,13 @@ form .row .row.second-row {
   width: 610px;
 }
 
-/* line 175, ../scss/tb-addfeature-mobile.scss */
+/* line 174, ../scss/tb-addfeature-mobile.scss */
 #add-news-image,
 .picture {
   width: 80px;
   height: 79px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   background-color: #dadbdc;
   background-image: url('../images/add-photo.png?1390687046');

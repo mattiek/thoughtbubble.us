@@ -188,6 +188,7 @@ class Organization(models.Model):
         props['explore'] = self.get_explore_link()
         props['title'] = self.title
         props['id'] = self.id
+        props['featured'] = True
         props['icon'] = {
             "iconUrl": "/static/images/large-featured-location.png",
             # "iconSize": [47, 60],
@@ -261,6 +262,7 @@ class Organization(models.Model):
                 'title': self.title,
                 'id': self.id,
                 'explore': self.get_explore_link(),
+                'featured': True,
                 'icon': {
                 "iconUrl": "/static/images/large-featured-location.png",
                 "iconSize": [35, 45],

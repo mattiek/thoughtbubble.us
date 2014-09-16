@@ -1,11 +1,13 @@
-/* line 50, directional/*.png */
+/* line 56, directional/*.png */
 .directional-sprite {
-  background: url('../images/directional-sc2dbe3af58.png') no-repeat;
+  background-image: url('../images/directional-sc2dbe3af58.png');
+  background-repeat: no-repeat;
 }
 
-/* line 50, eai/*.png */
+/* line 56, eai/*.png */
 .eai-sprite, #primary-explore, #primary-explore:hover {
-  background: url('../images/eai-s1228f0687c.png') no-repeat;
+  background-image: url('../images/eai-s1228f0687c.png');
+  background-repeat: no-repeat;
 }
 
 /* line 2, ../scss/neat/grid/_grid.scss */
@@ -43,7 +45,7 @@ body {
   background: url('../images/clean_textile.png?1390687091');
   background-size: 50%;
 }
-/* line 18, ../scss/bourbon/addons/_clearfix.scss */
+/* line 17, ../scss/bourbon/addons/_clearfix.scss */
 body:before, body:after {
   content: " ";
   display: table;
@@ -80,7 +82,7 @@ body:after {
   margin: -8px 0 0 0;
 }
 
-/* line 52, ../scss/navV2.scss */
+/* line 51, ../scss/navV2.scss */
 #nav,
 #login-nav {
   color: #4585c3;
@@ -103,7 +105,7 @@ body:after {
   margin-top: 75px;
 }
 @media screen and (max-width: 480px) {
-  /* line 52, ../scss/navV2.scss */
+  /* line 51, ../scss/navV2.scss */
   #nav,
   #login-nav {
     font-size: 12px;
@@ -218,6 +220,10 @@ body:after {
   display: block;
   margin: 44px auto 0;
 }
+/* line 59, ../../../../../../../../.rvm/gems/ruby-2.1.2@global/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+#primary-explore:hover, #primary-explore.eai-button-hover {
+  background-position: 0 0;
+}
 /* line 172, ../scss/navV2.scss */
 #primary-explore:hover {
   background-position: 0 0;
@@ -253,13 +259,12 @@ body:after {
 
 /* line 239, ../scss/navV2.scss */
 #footer {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   width: 100%;
   background-color: #49c3dd;
@@ -324,7 +329,7 @@ body:after {
   text-align: center;
 }
 
-/* line 303, ../scss/navV2.scss */
+/* line 298, ../scss/navV2.scss */
 #login-overlay,
 #logout-overlay,
 #join-overlay,
@@ -391,7 +396,7 @@ body:after {
 #update-avatar-overlay h4:last-child {
   margin-bottom: 35px;
 }
-/* line 342, ../scss/navV2.scss */
+/* line 340, ../scss/navV2.scss */
 #login-overlay #login-with-email,
 #login-overlay #join-organization,
 #login-overlay #join-email-account,
@@ -413,7 +418,7 @@ body:after {
   text-align: center;
   line-height: 45px;
 }
-/* line 348, ../scss/navV2.scss */
+/* line 347, ../scss/navV2.scss */
 #login-overlay #forgot-password,
 #login-overlay #create-an-account,
 #logout-overlay #forgot-password,
@@ -543,7 +548,7 @@ body:after {
   margin-bottom: 0px;
   color: #f02a2a;
 }
-/* line 418, ../scss/navV2.scss */
+/* line 416, ../scss/navV2.scss */
 #login-overlay input[type="password"],
 #login-overlay input[type="email"],
 #login-overlay input[type="text"],
@@ -564,10 +569,8 @@ body:after {
 #update-avatar-overlay input[type="text"] {
   width: 365px;
   height: 45px;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
   font-family: "Museo Sans", sans-serif;
   margin: 0 auto 10px;
@@ -583,13 +586,12 @@ body:after {
   width: 365px;
   float: none;
   margin: 0 auto;
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-image: -webkit-linear-gradient(bottom, #f3812b 0%, #f9a533 100%);
   background-image: linear-gradient(to top, #f3812b 0%, #f9a533 100%);
@@ -606,16 +608,15 @@ body:after {
 #dislike-overlay .submit:hover,
 #msg-overlay .submit:hover,
 #update-avatar-overlay .submit:hover {
-  -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -webkit-border-radius: 10px;
   border-radius: 10px;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
-  background-image: -webkit-linear-gradient(bottom, #ff9666 0%, #ffb045 100%);
-  background-image: linear-gradient(to top, #ff9666 0%, #ffb045 100%);
+  background-image: -webkit-linear-gradient(bottom, #FF9666 0%, #FFB045 100%);
+  background-image: linear-gradient(to top, #FF9666 0%, #FFB045 100%);
 }
 /* line 437, ../scss/navV2.scss */
 #login-overlay .submit.large-text,
@@ -710,26 +711,23 @@ button.mfp-close:active {
   margin: 0px;
   top: 8px;
   right: 8px;
-  -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  -webkit-border-radius: 7px;
   border-radius: 7px;
   border: 1px solid #cccccc;
   font-weight: 100;
   font-size: 24px;
 }
 
-/* line 528, ../scss/navV2.scss */
+/* line 527, ../scss/navV2.scss */
 .error-box,
 .message-box {
-  -webkit-border-radius: 1.2;
   -moz-border-radius: 1.2;
-  -ms-border-radius: 1.2;
-  -o-border-radius: 1.2;
+  -webkit-border-radius: 1.2;
   border-radius: 1.2;
-  -webkit-background-clip: padding;
   -moz-background-clip: padding;
+  -o-background-clip: padding-box;
+  -webkit-background-clip: padding;
   background-clip: padding-box;
   background-color: #fff;
   /* layer fill content */
