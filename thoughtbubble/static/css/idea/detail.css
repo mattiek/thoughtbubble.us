@@ -576,27 +576,33 @@ a.orange:hover {
   font-family: "Museo Sans", sans-serif;
   font-size: 38px / 2;
 }
-/* line 32, ../../scss/idea/detail.scss */
-#idea-wrapper #idea-description p {
+/* line 31, ../../scss/idea/detail.scss */
+#idea-wrapper #idea-description {
   color: #53b8d1;
   /* text color */
 }
+/* line 33, ../../scss/idea/detail.scss */
+#idea-wrapper #idea-description p {
+  color: #53b8d1;
+  /* text color */
+  font-size: 16px;
+}
 
-/* line 41, ../../scss/idea/detail.scss */
+/* line 43, ../../scss/idea/detail.scss */
 .row {
   margin-bottom: 5px;
 }
-/* line 43, ../../scss/idea/detail.scss */
+/* line 45, ../../scss/idea/detail.scss */
 .row.extrapad {
   margin-bottom: 20px;
 }
 
-/* line 49, ../../scss/idea/detail.scss */
+/* line 51, ../../scss/idea/detail.scss */
 .support-number {
   color: #f3812b;
 }
 
-/* line 53, ../../scss/idea/detail.scss */
+/* line 55, ../../scss/idea/detail.scss */
 #id_comment {
   border: 1px solid #d8f1f6;
   border-radius: 10px;
@@ -606,12 +612,12 @@ a.orange:hover {
   padding: 12px;
 }
 
-/* line 62, ../../scss/idea/detail.scss */
+/* line 64, ../../scss/idea/detail.scss */
 #form-comment {
   margin-top: 10px;
 }
 
-/* line 66, ../../scss/idea/detail.scss */
+/* line 68, ../../scss/idea/detail.scss */
 .news {
   color: #9d9d9d;
   /* text color */
@@ -619,24 +625,24 @@ a.orange:hover {
   font-size: 15px;
 }
 
-/* line 72, ../../scss/idea/detail.scss */
+/* line 74, ../../scss/idea/detail.scss */
 .dislike.blue {
   margin: 0 20px;
 }
 
-/* line 76, ../../scss/idea/detail.scss */
+/* line 78, ../../scss/idea/detail.scss */
 #comments {
   padding-top: 50px;
   clear: both;
 }
 
-/* line 82, ../../scss/idea/detail.scss */
+/* line 84, ../../scss/idea/detail.scss */
 i {
   background-image: url('../../images/white-star.png?1380669755');
   background-repeat: no-repeat;
 }
 
-/* line 90, ../../scss/idea/detail.scss */
+/* line 92, ../../scss/idea/detail.scss */
 .support-star-orange {
   width: 12px;
   height: 13px;
@@ -649,54 +655,54 @@ i {
   background-repeat: no-repeat;
 }
 
-/* line 103, ../../scss/idea/detail.scss */
+/* line 105, ../../scss/idea/detail.scss */
 .supporting .unsupported {
   display: block;
 }
-/* line 106, ../../scss/idea/detail.scss */
+/* line 108, ../../scss/idea/detail.scss */
 .supporting .supported {
   display: none;
 }
-/* line 112, ../../scss/idea/detail.scss */
+/* line 114, ../../scss/idea/detail.scss */
 .supporting.activated .unsupported {
   display: none;
 }
-/* line 115, ../../scss/idea/detail.scss */
+/* line 117, ../../scss/idea/detail.scss */
 .supporting.activated .supported {
   display: block;
 }
 
-/* line 121, ../../scss/idea/detail.scss */
+/* line 123, ../../scss/idea/detail.scss */
 .sharing {
   margin: 7px 0 0 0;
 }
 
-/* line 125, ../../scss/idea/detail.scss */
+/* line 127, ../../scss/idea/detail.scss */
 #support-this {
   float: right;
 }
 
-/* line 129, ../../scss/idea/detail.scss */
+/* line 131, ../../scss/idea/detail.scss */
 .r {
   margin-top: 20px;
 }
 
-/* line 133, ../../scss/idea/detail.scss */
+/* line 135, ../../scss/idea/detail.scss */
 #images {
   line-height: 80px;
 }
-/* line 136, ../../scss/idea/detail.scss */
+/* line 138, ../../scss/idea/detail.scss */
 #images img {
   max-width: 80px;
   vertical-align: middle;
 }
 
-/* line 142, ../../scss/idea/detail.scss */
+/* line 144, ../../scss/idea/detail.scss */
 #links {
   margin-bottom: 20px;
 }
 
-/* line 146, ../../scss/idea/detail.scss */
+/* line 148, ../../scss/idea/detail.scss */
 #idea-details {
   float: right;
   clear: both;
@@ -706,50 +712,50 @@ i {
   width: 223px;
   margin-left: 20px;
 }
-/* line 155, ../../scss/idea/detail.scss */
+/* line 157, ../../scss/idea/detail.scss */
 #idea-details img {
   float: left;
   margin-right: 10px;
   vertical-align: middle;
 }
-/* line 160, ../../scss/idea/detail.scss */
+/* line 162, ../../scss/idea/detail.scss */
 #idea-details img + b {
   margin-top: 4px;
 }
-/* line 166, ../../scss/idea/detail.scss */
+/* line 168, ../../scss/idea/detail.scss */
 #idea-details a, #idea-details b {
   line-height: 17px;
   display: block;
 }
-/* line 172, ../../scss/idea/detail.scss */
+/* line 174, ../../scss/idea/detail.scss */
 #idea-details p {
   margin: 10px 0px;
   font-size: 16px;
   line-height: 29px;
 }
-/* line 178, ../../scss/idea/detail.scss */
+/* line 180, ../../scss/idea/detail.scss */
 #idea-details::after {
   content: ' ';
   display: block;
 }
 
-/* line 184, ../../scss/idea/detail.scss */
+/* line 186, ../../scss/idea/detail.scss */
 #spacer {
   margin-bottom: 40px;
 }
-/* line 185, ../../scss/idea/detail.scss */
+/* line 187, ../../scss/idea/detail.scss */
 #spacer .clr {
   clear: both;
 }
 
-/* line 191, ../../scss/idea/detail.scss */
+/* line 193, ../../scss/idea/detail.scss */
 #map {
   margin-top: 20px;
   width: 100%;
   height: 265px;
 }
 
-/* line 197, ../../scss/idea/detail.scss */
+/* line 199, ../../scss/idea/detail.scss */
 a.logintocomment {
   width: auto;
   padding: 0 20px;
